@@ -24,32 +24,6 @@ The Grid Ad Banner will be place in the chosen position in every product browse 
 ![alt tag](https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDYvMDEvMTEvMDgvMDYvOTc0L1NjcmVlbl9TaG90XzIwMTZfMDZfMDFfYXRfMTEuMDMuMThfQU0ucG5nIl1d/Screen%20Shot%202016-06-01%20at%2011.03.18%20AM.png?sha=6b211be4b6b046e3)
 
 
-## Built With
-
-* JQuery
-
-## Version
-
-1.0.0.0
-
-## Authors
-
-* **Juan Manuel Rios Villanueva** - <!-- *Initial work* - [PurpleBooth](https://github.com/PurpleBooth) -->
-
-<!-- See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project. -->
-
-## License
-
-This project is licensed under C21stores.com<!--  - see the [LICENSE.md](LICENSE.md) file for details -->
-
-<!-- ## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
- -->
-
-
 
 
 ## DOUBLE GRID BROWSE AD BANNERS
@@ -84,7 +58,7 @@ This project is licensed under C21stores.com<!--  - see the [LICENSE.md](LICENSE
 
 ## Authors
 
-* **Juan Manuel Rios Villanueva** - <!-- *Initial work* - [PurpleBooth](https://github.com/PurpleBooth) -->
+* **Juan Manuel Rios Villanueva** - * 
 
 <!-- See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project. -->
 
