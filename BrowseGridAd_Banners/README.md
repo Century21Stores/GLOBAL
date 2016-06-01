@@ -1,17 +1,13 @@
 # BROWSE GRID AD BANNERS
 
-One Paragraph of project description goes here
+This is intend to be used to be able to add, globally, single grid and double grid ads.
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisities
+### Requisities
 
 What things you need to install the software and how to install them
 
 ```
-Give examples
+![alt tag](https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDYvMDEvMTEvMDgvMDYvOTc0L1NjcmVlbl9TaG90XzIwMTZfMDZfMDFfYXRfMTEuMDMuMThfQU0ucG5nIl1d/Screen%20Shot%202016-06-01%20at%2011.03.18%20AM.png?sha=6b211be4b6b046e3)
 ```
 
 ### Installing
