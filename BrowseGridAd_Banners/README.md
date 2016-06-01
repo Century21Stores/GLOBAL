@@ -6,7 +6,7 @@ The Grid Ad Banner will be place in the chosen position in every product browse 
 
 ### Using it
 
-1) Replace, as needed, the variables for: POSITION, IMAGE URL, CTA TEXT, CTA URL
+Replace, as needed, the variables for: POSITION, IMAGE URL, CTA TEXT, CTA URL
 
 ``` 
 	//POSITION
@@ -18,11 +18,6 @@ The Grid Ad Banner will be place in the chosen position in every product browse 
 	//CTA URL
 	var urlLINK = "Link URL goes here between colons";
 ```
-
-2) Place ALL code at the end of the "JAVASCRIPT" container in the "Page/LAYOUT" area of the ROR CMS:
-
-![alt tag](https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDYvMDEvMTEvMDgvMDYvOTc0L1NjcmVlbl9TaG90XzIwMTZfMDZfMDFfYXRfMTEuMDMuMThfQU0ucG5nIl1d/Screen%20Shot%202016-06-01%20at%2011.03.18%20AM.png?sha=6b211be4b6b046e3)
-
 
 
 
@@ -30,7 +25,7 @@ The Grid Ad Banner will be place in the chosen position in every product browse 
 
 ### Using it
 
-1) Replace, as needed, the variables for: POSITION, IMAGE URL, CTA TEXT, CTA URL. Position cannot be a multiple of 3 (ex. 3, 6, 9, 12, etc)
+Replace, as needed, the variables for: POSITION, IMAGE URL, CTA TEXT, CTA URL. Position cannot be a multiple of 3 (ex. 3, 6, 9, 12, etc)
 
 ``` 
 	//POSITION
@@ -43,7 +38,43 @@ The Grid Ad Banner will be place in the chosen position in every product browse 
 	var urlLINK = "Link URL goes here between colons";
 ```
 
-2) Place ALL code at the end of the "JAVASCRIPT" container in the "Page/LAYOUT" area of the ROR CMS:
+
+## ANY BROWSE GRID AD BANNERS
+
+### Using it
+
+Replace, as needed, the variables for: TYPE and POSITION, IMAGE URL, CTA TEXT, CTA URL for each of the Ads
+
+``` 
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType1 = 1;
+	var gaType2 = 2;
+
+	//POSITION
+	var pos1 = 3;
+	var pos2 = 7;
+
+	//IMAGE URL
+	var urlIMG1 = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDUvMjcvMDkvMDkvMzcvNjc4LzM3MHg1NTMuanBnIl1d/370x553.jpg?sha=cdce0addc7721d54";
+	var urlIMG2 = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDEvMjgvMTAvNDcvMDMvNTIyLzAyV2VlazNfQnJvd3NlR3JpZF9fRW5sYXJnZWRfaW1hZ2VzLmpwZyJdXQ/02Week3_BrowseGrid__Enlarged_images.jpg?sha=e2648a7818316693";
+
+	//LINK TEXT
+	var textLink1 = "SHOP NOW";
+	var textLink2 = "NOW SHOP";
+
+	//LINK URL
+	var urlLINK1 = "#1";
+	var urlLINK2 = "#2";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos1 = pos1-1;
+	var realPos2 = pos2-1;
+```
+
+
+## Where to Place the code
+Place ALL code at the end of the "JAVASCRIPT" container in the "Page/LAYOUT" area of the ROR CMS:
 
 ![alt tag](https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDYvMDEvMTEvMDgvMDYvOTc0L1NjcmVlbl9TaG90XzIwMTZfMDZfMDFfYXRfMTEuMDMuMThfQU0ucG5nIl1d/Screen%20Shot%202016-06-01%20at%2011.03.18%20AM.png?sha=6b211be4b6b046e3)
 
