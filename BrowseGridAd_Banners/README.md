@@ -1,5 +1,6 @@
 # BROWSE GRID AD BANNERS
-This is intend to be used to be able to add, globally, single grid and double grid ads.
+This is intended to be used to be able to add, globally, single grid and double grid ads.
+The Grid Ad Banner will be place in the chosen position in every product browse page at [www.c21stores.com](https://www.c21stores.com/) 
 
 ## SINGLE BROWSE GRID AD
 
