@@ -4,13 +4,21 @@ This is intend to be used to be able to add, globally, single grid and double gr
 
 ### Requisities
 
-What things you need to install the software and how to install them
+Replace, as needed, the variables for: POSITION, IMAGE URL, CTA TEXT, CTA URL
+
+``` 
+	//POSITION
+	var pos = 3;
+	//IMAGE URL
+	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDUvMjcvMDkvMDkvMzcvNjc4LzM3MHg1NTMuanBnIl1d/370x553.jpg?sha=cdce0addc7721d54";
+	//CTA TEXT
+	var textLink = "SHOP NOW";
+	//CTA URL
+	var urlLINK = "https://www.c21stores.com/pages/gift-cards";
+```
 
 ![alt tag](https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDYvMDEvMTEvMDgvMDYvOTc0L1NjcmVlbl9TaG90XzIwMTZfMDZfMDFfYXRfMTEuMDMuMThfQU0ucG5nIl1d/Screen%20Shot%202016-06-01%20at%2011.03.18%20AM.png?sha=6b211be4b6b046e3)
 
-```
-![alt tag](https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDYvMDEvMTEvMDgvMDYvOTc0L1NjcmVlbl9TaG90XzIwMTZfMDZfMDFfYXRfMTEuMDMuMThfQU0ucG5nIl1d/Screen%20Shot%202016-06-01%20at%2011.03.18%20AM.png?sha=6b211be4b6b046e3)
-```
 
 ### Installing
 
