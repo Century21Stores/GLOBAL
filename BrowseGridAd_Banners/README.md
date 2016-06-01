@@ -1,4 +1,3 @@
-# BROWSE GRID AD BANNERS
 This is intended to be used to be able to add, globally, single grid and double grid ads.
 The Grid Ad Banner will be place in the chosen position in every product browse page at [www.c21stores.com](https://www.c21stores.com/) 
 
@@ -25,7 +24,8 @@ Replace, as needed, the variables for: POSITION, IMAGE URL, CTA TEXT, CTA URL
 
 ### Using it
 
-Replace, as needed, the variables for: POSITION, IMAGE URL, CTA TEXT, CTA URL. Position cannot be a multiple of 3 (ex. 3, 6, 9, 12, etc)
+Replace, as needed, the variables for: POSITION, IMAGE URL, CTA TEXT, CTA URL. 
+*Position cannot be a multiple of 3 (ex. 3, 6, 9, 12, etc)
 
 ``` 
 	//POSITION
@@ -38,12 +38,35 @@ Replace, as needed, the variables for: POSITION, IMAGE URL, CTA TEXT, CTA URL. P
 	var urlLINK = "Link URL goes here between colons";
 ```
 
+## ANY GRID BROWSE AD BANNERS
 
-## ANY BROWSE GRID AD BANNERS
+### Using it
+
+Replace, as needed, the variables for: TYPE, POSITION, IMAGE URL, CTA TEXT, CTA URL. 
+*POSITION cannot be a multiple of 3 (ex. 3, 6, 9, 12, etc) on type 2 banners
+*TYPE can only be 1 or 2
+
+``` 
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = Position Number goes here;
+	//IMAGE URL
+	var urlIMG = "New URL goes here between colons";
+	//CTA TEXT
+	var textLink = "SHOP NOW";
+	//CTA URL
+	var urlLINK = "Link URL goes here between colons";
+```
+
+
+## MULTIPLE (2) BROWSE GRID AD BANNERS
 
 ### Using it
 
 Replace, as needed, the variables for: TYPE and POSITION, IMAGE URL, CTA TEXT, CTA URL for each of the Ads
+*POSITION cannot be a multiple of 3 (ex. 3, 6, 9, 12, etc) on type 2 banners
+*TYPE can only be 1 or 2
 
 ``` 
 	//GRID AD TYPE:  enter 1 or 2
