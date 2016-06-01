@@ -5,9 +5,9 @@ $(window).load(function() {
 	var pos = 3;
 	//IMAGE URL
 	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDUvMjcvMDkvMDkvMzcvNjc4LzM3MHg1NTMuanBnIl1d/370x553.jpg?sha=cdce0addc7721d54";
-	//LINK TEXT
+	//CTA TEXT
 	var textLink = "SHOP NOW";
-	//LINK URL
+	//CTA URL
 	var urlLINK = "https://www.c21stores.com/pages/gift-cards";
 	
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
