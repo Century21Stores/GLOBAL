@@ -25,7 +25,7 @@ Replace, as needed, the variables for: POSITION, IMAGE URL, CTA TEXT, CTA URL
 ### Using it
 
 Replace, as needed, the variables for: POSITION, IMAGE URL, CTA TEXT, CTA URL. 
-*Position cannot be a multiple of 3 (ex. 3, 6, 9, 12, etc)
+* Position cannot be a multiple of 3 (ex. 3, 6, 9, 12, etc)
 
 ``` 
 	//POSITION
@@ -43,8 +43,8 @@ Replace, as needed, the variables for: POSITION, IMAGE URL, CTA TEXT, CTA URL.
 ### Using it
 
 Replace, as needed, the variables for: TYPE, POSITION, IMAGE URL, CTA TEXT, CTA URL. 
-*POSITION cannot be a multiple of 3 (ex. 3, 6, 9, 12, etc) on type 2 banners
-*TYPE can only be 1 or 2
+* POSITION cannot be a multiple of 3 (ex. 3, 6, 9, 12, etc) on type 2 banners
+* TYPE can only be 1 or 2
 
 ``` 
 	//GRID AD TYPE:  enter 1 or 2
@@ -65,8 +65,8 @@ Replace, as needed, the variables for: TYPE, POSITION, IMAGE URL, CTA TEXT, CTA 
 ### Using it
 
 Replace, as needed, the variables for: TYPE and POSITION, IMAGE URL, CTA TEXT, CTA URL for each of the Ads
-*POSITION cannot be a multiple of 3 (ex. 3, 6, 9, 12, etc) on type 2 banners
-*TYPE can only be 1 or 2
+* POSITION cannot be a multiple of 3 (ex. 3, 6, 9, 12, etc) on type 2 banners
+* TYPE can only be 1 or 2
 
 ``` 
 	//GRID AD TYPE:  enter 1 or 2
