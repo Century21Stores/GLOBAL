@@ -59,12 +59,16 @@ i{
 .product-grid__cell--1 .product-grid-content-block{
     background-position: 50% 50%;
 }
-.product-grid-content-block{
+/*.product-grid-content-block{
     background-position: 0 0;
-}
-.product-grid-content-block p.content-block-content__action{
+}*/
+.product-grid__cell--1 .product-grid-content-block p.content-block-content__action{
 	margin:0 0 25%;
 	width:100%;
+}
+.product-grid__cell--2 .product-grid-content-block p.content-block-content__action{
+    margin:0;
+    width:100%;
 }
 .content-block-content__message h3.wysiwyg-font-size-large{
     font-size: 0.56em;

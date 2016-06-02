@@ -11,7 +11,7 @@ $(window).load(function() {
 
 	//IMAGE URL
 	var urlIMG1 = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDYvMDIvMTEvMjUvNTkvNTc4LzM3MHg1NTJndWlkZS5wbmciXV0/370x552guide.png?sha=7032ae83209d45c4";
-	var urlIMG2 = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDYvMDIvMTAvNDIvMDgvODYwLzc3MHg1NTJndWlkZS5wbmciXV0/770x552guide.png?sha=b782b9b665e393f0";
+	var urlIMG2 = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDYvMDIvMTIvMTcvMTMvNzczLzc3MHg1NTJfY2VudGVyX2d1aWRlLnBuZyJdXQ/770x552_center_guide.png?sha=b7923eb8b7f42946";
 
 	//LINK TEXT
 	var textLink1 = "SHOP NOW";
