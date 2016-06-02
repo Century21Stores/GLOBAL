@@ -4,7 +4,7 @@ $(window).load(function() {
 	//POSITION
 	var pos = 4;
 	//IMAGE URL
-	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDYvMDIvMTAvMTAvMzAvODIyLzc3MHg1NTIuanBnIl1d/770x552.jpg?sha=629d472eef8dbc37";
+	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDYvMDIvMTAvNDIvMDgvODYwLzc3MHg1NTJndWlkZS5wbmciXV0/770x552guide.png?sha=b782b9b665e393f0";
 	//CTA TEXT
 	var textLink = "SHOP NOW";
 	//CTA URL
