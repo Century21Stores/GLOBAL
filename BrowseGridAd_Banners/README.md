@@ -1,6 +1,13 @@
 This is intended to be used to be able to add, globally, single grid and double grid ads.
 The Grid Ad Banner will be place in the chosen position in every product browse page at [www.c21stores.com](https://www.c21stores.com/) 
 
+
+Color Legend
+Green Area - will be always safe for copy/text and image
+Blue Area - will is a place for image(if chosen). Take in consideration that  depending on screen resolutions, CTA might move a bit to that area. No place for copy/text
+Red Area - No place for copy/text, this will be hidden in some screen resolutions
+
+
 ## SINGLE GRID BROWSE AD BANNERS
 
 ### Using it
@@ -17,7 +24,19 @@ Replace, as needed, the variables for: POSITION, IMAGE URL, CTA TEXT, CTA URL
 	//CTA URL
 	var urlLINK = "Link URL goes here between colons";
 ```
+This grid-ad occupies 1 product cell.
+One option: Center-fixed
 
+####CENTER-FIXED: 
+For smaller screen resolutions, this grid-ad will respond being fixed to its center point.
+* Image size (pixels): 370 x 552 new size
+* Safe Area (green) : Centered after padding of 44px  on each of its left and right sides
+* CTA: 
+Text align: Centered only
+Vertically align: To the bottom with a max padding of 65px below.
+
+Creative Transparent Guide 
+![alt tag](https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDYvMDgvMTQvMTUvMjcvOTU3LzM3MHg1NTJndWlkZS5wbmciXV0/370x552guide.png?sha=d6f91024cbfa7d5a)
 
 
 ## DOUBLE GRID BROWSE AD BANNERS
