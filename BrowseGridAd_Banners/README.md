@@ -27,7 +27,7 @@ Replace, as needed, the variables for: POSITION, IMAGE URL, CTA TEXT, CTA URL
 This grid-ad occupies 1 product cell.
 One option: Center-fixed
 
-####CENTER-FIXED: 
+######CENTER-FIXED: 
 For smaller screen resolutions, this grid-ad will respond being fixed to its center point.
 * Image size (pixels): 370 x 552 new size
 * Safe Area (green) : Centered after padding of 44px  on each of its left and right sides
@@ -35,7 +35,7 @@ For smaller screen resolutions, this grid-ad will respond being fixed to its cen
 Text align: Centered only
 Vertically align: To the bottom with a max padding of 65px below.
 
-Creative Transparent Guide 
+
 ![alt tag](https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDYvMDgvMTQvMTUvMjcvOTU3LzM3MHg1NTJndWlkZS5wbmciXV0/370x552guide.png?sha=d6f91024cbfa7d5a)
 
 
