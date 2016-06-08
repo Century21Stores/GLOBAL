@@ -24,6 +24,8 @@ Replace, as needed, the variables for: POSITION, IMAGE URL, CTA TEXT, CTA URL
 	//CTA URL
 	var urlLINK = "Link URL goes here between colons";
 ```
+### Creative Documentation:
+
 This grid-ad occupies 1 product cell.
 One option: Center-fixed
 
@@ -57,6 +59,9 @@ Replace, as needed, the variables for: POSITION, IMAGE URL, CTA TEXT, CTA URL.
 	//CTA URL
 	var urlLINK = "Link URL goes here between colons";
 ```
+
+### Creative Documentation:
+
 This grid-ad occupies 2 product cells, and It cannot be place in any position multiple of 3  (ex: 3, 6, 9, 12…)
 Two Options: Left-fixed or Center-fixed
 
@@ -71,6 +76,16 @@ For smaller screen resolutions, this grid-ad will respond being fixed to its lef
 
 ![alt tag](https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDYvMDgvMTQvNDcvMzIvNzg5Lzc3MHg1NTJfbGVmdF9ndWlkZS5wbmciXV0/770x552_left_guide.png?sha=69c6287eb02c21ae)
 
+
+######CENTER-FIXED:
+For smaller screen resolutions, this grid-ad will respond being fixed to its center point.
+* Image size (pixels): 770 x 552  new size
+* Safe Area (green) : Centered after padding of 91px  on each of its left and right sides
+* CTA: 
+	* Text align: Center only
+	* Vertically align: To the bottom with a max padding of 36px below.
+
+![alt tag](https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDYvMDgvMTQvNTIvMDkvNjQ0Lzc3MHg1NTJfbGVmdF9ndWlkZS5wbmciXV0/770x552_left_guide.png?sha=28e2a906b8e9d8d5)
 
 ## ANY GRID BROWSE AD BANNERS
 
