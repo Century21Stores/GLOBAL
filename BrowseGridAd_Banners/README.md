@@ -34,6 +34,7 @@ For smaller screen resolutions, this grid-ad will respond being fixed to its cen
 * CTA: 
 Text align: Centered only
 Vertically align: To the bottom with a max padding of 65px below.
+* Live Sample: https://www.staging.c21.weblinc.com/categories/shoes-booties
 
 
 ![alt tag](https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDYvMDgvMTQvMTUvMjcvOTU3LzM3MHg1NTJndWlkZS5wbmciXV0/370x552guide.png?sha=d6f91024cbfa7d5a)
@@ -56,6 +57,18 @@ Replace, as needed, the variables for: POSITION, IMAGE URL, CTA TEXT, CTA URL.
 	//CTA URL
 	var urlLINK = "Link URL goes here between colons";
 ```
+This grid-ad occupies 2 product cells, and It cannot be place in any position multiple of 3  (ex: 3, 6, 9, 12…)
+Two Options: Left-fixed or Center-fixed
+
+######LEFT-FIXED: 
+For smaller screen resolutions, this grid-ad will respond being fixed to its left point.
+* Image size (pixels): 770 x 552  new size
+* Safe Area (green) : 584px from left side
+* CTA: 
+** Text align: Centered only
+** Vertically align: To the bottom with a max padding of 37px below.
+
+
 
 ## ANY GRID BROWSE AD BANNERS
 
