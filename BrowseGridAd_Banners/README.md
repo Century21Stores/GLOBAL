@@ -65,8 +65,8 @@ For smaller screen resolutions, this grid-ad will respond being fixed to its lef
 * Image size (pixels): 770 x 552  new size
 * Safe Area (green) : 584px from left side
 * CTA: 
-** Text align: Centered only
-** Vertically align: To the bottom with a max padding of 37px below.
+	* Text align: Centered only
+	* Vertically align: To the bottom with a max padding of 37px below.
 
 
 
