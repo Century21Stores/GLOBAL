@@ -63,9 +63,12 @@ i{
     background-position: 0 0;
 }
 .product-grid-content-block p.content-block-content__action{
-    margin:0 0 25%;
+    margin:0 0 13%;
     width:100%;
 }
+.jmrv-product-grid__cell--2 .product-grid-content-block p.content-block-content__action{
+    margin:0%;
+}   
 .content-block-content__message h3.wysiwyg-font-size-large{
     font-size: 0.56em;
     line-height: 1.3;

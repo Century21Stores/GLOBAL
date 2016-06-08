@@ -10,7 +10,7 @@ $(window).load(function() {
 	var pos2 = 7;
 
 	//IMAGE URL
-	var urlIMG1 = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDYvMDIvMTEvMjUvNTkvNTc4LzM3MHg1NTJndWlkZS5wbmciXV0/370x552guide.png?sha=7032ae83209d45c4";
+	var urlIMG1 = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDYvMDgvMTQvMTUvMjcvOTU3LzM3MHg1NTJndWlkZS5wbmciXV0/370x552guide.png?sha=d6f91024cbfa7d5a";
 	var urlIMG2 = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDYvMDIvMTIvMTcvMTMvNzczLzc3MHg1NTJfY2VudGVyX2d1aWRlLnBuZyJdXQ/770x552_center_guide.png?sha=b7923eb8b7f42946";
 
 	//LINK TEXT
