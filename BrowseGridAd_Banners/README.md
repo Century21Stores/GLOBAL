@@ -29,11 +29,11 @@ One option: Center-fixed
 
 ######CENTER-FIXED: 
 For smaller screen resolutions, this grid-ad will respond being fixed to its center point.
-* Image size (pixels): 370 x 552 new size
+* Image size (pixels): 370 x 552
 * Safe Area (green) : Centered after padding of 44px  on each of its left and right sides
 * CTA: 
-Text align: Centered only
-Vertically align: To the bottom with a max padding of 65px below.
+	* Text align: Centered only
+	* Vertically align: To the bottom with a max padding of 65px below.
 * Live Sample: https://www.staging.c21.weblinc.com/categories/shoes-booties
 
 
@@ -62,12 +62,14 @@ Two Options: Left-fixed or Center-fixed
 
 ######LEFT-FIXED: 
 For smaller screen resolutions, this grid-ad will respond being fixed to its left point.
-* Image size (pixels): 770 x 552  new size
+* Image size (pixels): 770 x 552
 * Safe Area (green) : 584px from left side
 * CTA: 
 	* Text align: Centered only
 	* Vertically align: To the bottom with a max padding of 37px below.
+* Live Sample: https://www.staging.c21.weblinc.com/categories/shoes-booties
 
+![alt tag](https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDYvMDgvMTQvNDcvMzIvNzg5Lzc3MHg1NTJfbGVmdF9ndWlkZS5wbmciXV0/770x552_left_guide.png?sha=69c6287eb02c21ae)
 
 
 ## ANY GRID BROWSE AD BANNERS
