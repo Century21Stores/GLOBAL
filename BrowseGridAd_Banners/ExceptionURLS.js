@@ -1,4 +1,4 @@
-// URLS EXCEPTIONS 
+// URLS EXCEPTIONS FOR BROWSE GRID ADD
 $(window).load(function() {
 
 var URLS = [ 
@@ -20,5 +20,5 @@ function exceptThisUR(params) {
 }
 
 });
-// END URLS EXCEPTIONS
+// END URLS EXCEPTIONS FOR BROWSE GRID ADD
 
