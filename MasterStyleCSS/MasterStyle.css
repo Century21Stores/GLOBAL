@@ -409,6 +409,18 @@ br{
     border: solid 1px;
 }
 
+/*SOLID WHITE CTA*/
+.jm-cta-solidWhite a{
+    background: white;
+    color: black;
+    border-color: white !important;
+}
+.jm-cta-solidWhite a:hover{
+    background: black;
+    color: white;
+    border-color: black !important;
+}
+
 
 /* BODONI LINE HEIGHT*/
 .content-block-content__message h2.wysiwyg-font-size-xx-large.wysiwyg-font-family-serif,
