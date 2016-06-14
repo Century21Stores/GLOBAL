@@ -56,7 +56,34 @@ $(window).load(function() {
 });
 // END ALL PAGES BROWSE GRID AD BANNER
 
-  
+// URLS EXCEPTIONS FOR BROWSE GRID ADD
+$(window).load(function() {
+
+var URLS = [ 
+'https://www.c21stores.com/categories/clearance-women',
+'https://www.c21stores.com/categories/clearance-shoes',
+'https://www.c21stores.com/categories/clearance-handbags-accessories',
+'https://www.c21stores.com/categories/clearance-men',
+'https://www.c21stores.com/categories/clearance-kids',
+'https://www.c21stores.com/categories/clearance-home'
+]; 
+
+exceptThisUR(URLS);
+
+function exceptThisUR(params) {
+  for (i=0; i<params.length; i++) {
+    console.log(params[i]);
+	if(window.location.href.indexOf(params[i]) > -1) {
+    	$('.product-grid__cell--1').fadeOut();    	
+    	// alert("your url contains the string "+params[i]);
+    }    
+  }
+}
+
+});
+// END URLS EXCEPTIONS FOR BROWSE GRID ADD
+
+
 
 
 // BEAUTY BROWSE GRID AD BANNER
