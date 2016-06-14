@@ -4,13 +4,13 @@ $(window).load(function() {
 	//GRID AD TYPE:  enter 1 or 2
 	var gaType = 1;
 	//POSITION
-	var pos = 3;
-	//IMAGE URL
-	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDYvMDgvMTQvMTUvMjcvOTU3LzM3MHg1NTJndWlkZS5wbmciXV0/370x552guide.png?sha=d6f91024cbfa7d5a";
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDYvMTQvMDkvMjgvMzAvNDkyLzA2V2VlazRfQnJvd3NlR3JpZEFkXzAxLmpwZyJdXQ/06Week4_BrowseGridAd_01.jpg?sha=0481a2b09dd54313";
 	//LINK TEXT
 	var textLink = "SHOP NOW";
 	//LINK URL
-	var urlLINK = "https://www.c21stores.com/pages/gift-cards";
+	var urlLINK = "https://www.c21stores.com/pages/clearance";
 	
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
@@ -30,7 +30,7 @@ $(window).load(function() {
 		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
 		'<div class="content-block-content__container content-block-content__container--center">'+
 		'<div class="content-block-content__message content-block-content__message--dark">'+
-		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide " href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
 		'</div>'+
 		'</div>'+
 		'</div>'+

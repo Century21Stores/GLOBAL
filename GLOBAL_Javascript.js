@@ -8,42 +8,54 @@ $( "a:contains('Clearance')" ).css( "color", "#EA2C3B" );
 
 // ALL PAGES BROWSE GRID AD BANNER
 $(window).load(function() {
-console.log($('.product-grid'));
-console.log($('.product-grid li:nth-of-type(13)'));
-	$(window).resize(function(){
-		AdClassAll();
-	});	
-$('.product-grid li:nth-of-type(13)').after(
-	'<li class="product-grid__cell product-grid__cell--1">'+
-	'<div class="product-grid-content-block" style="background-image: url(https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDUvMjUvMDkvMDcvMjEvNjY4LzA2V2VlazFfQnJvd3NlQmFubmVyQWRfTk9DVEEuanBnIl1d/06Week1_BrowseBannerAd_NOCTA.jpg?sha=58c14b840fe140ca);">'+
-	'<div class="product-grid-content-block__image"></div>'+
-	'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
-	'<div class="content-block-content__container content-block-content__container--center">'+
-	'<div class="content-block-content__message content-block-content__message--dark">'+
-	'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide " href="https://www.c21stores.com/pages/gift-cards">SHOP NOW</a></p>'+
-	'</div>'+
-	'</div>'+
-	'</div>'+
-	'</div>'+
-	'</li>'
-);
-	function AdClassAll(){
-		var newHeight1 = $('.product-grid li:nth-of-type(13)').height();
-		$('.product-grid li:nth-of-type(14)').height(newHeight1);
-	}AdClassAll();
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDYvMTQvMDkvMjgvMzAvNDkyLzA2V2VlazRfQnJvd3NlR3JpZEFkXzAxLmpwZyJdXQ/06Week4_BrowseGridAd_01.jpg?sha=0481a2b09dd54313";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/pages/clearance";
 	
-	//GRID AD BANNER GLOBAL EXCEPTION
-	if(window.location.href == "https://www.c21stores.com/categories/gifts-accessories" || 
-	window.location.href == "https://www.c21stores.com/categories/gifts-dress-shirts-ties" || 
-	window.location.href == "https://www.c21stores.com/categories/gifts-cologne" ||
-	window.location.href == "https://www.c21stores.com/categories/gifts-polos-shirts" ||
-	window.location.href == "https://www.c21stores.com/categories/gifts-tech"){
- 		$('.product-grid__cell--1').fadeOut();
-	}
-	//END GRID AD BANNER GLOBAL EXCEPTION
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function() {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single();	
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--dark">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
 	
+	function AdClassAll_Single(){
+		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
+		console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
+		console.log($('.product-grid li:nth-of-type(3)'));		
+		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
+	}AdClassAll_Single();
+
 });
-// DONE ALL PAGES BROWSE GRID AD BANNER
+// END ALL PAGES BROWSE GRID AD BANNER
+
   
 
 
