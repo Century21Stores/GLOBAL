@@ -657,6 +657,7 @@ br{
     right: 49.5%;
     left: auto;
     width: 100%;
+    z-index: 2;
 }
 .page-content .two-column-hero-content-block__image-container--right+.two-column-hero-content-block__text{
     left: initial;
