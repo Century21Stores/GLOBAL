@@ -52,6 +52,15 @@ i{
 /*     background: rgba(0, 128, 0, 0.09); */
     height: 100%;
 }
+#jm_img_anchor2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgba(255, 255, 255, 0);
+    width: 100%;
+/*     background: rgba(0, 128, 0, 0.09); */
+    height: 50%;
+}
 .content-block-content__action--button .button{
     position: relative;
     z-index: 3;
