@@ -1,10 +1,12 @@
-// MASTER SCRIPTING JUN 14th 2016
+// MASTER SCRIPTING JULY 06 2016
 // contact: jrios@c21stores.com
 
 // NAVIGATION COLORS
 $( "span:contains('Clearance')" ).css( "color", "#EA2C3B" );
 $( "a:contains('Clearance')" ).css( "color", "#EA2C3B" );
-
+$("body").on("mouseenter mouseleave", "a", function(){
+$( "span:contains('Clearance')" ).css( "color", "#EA2C3B" );
+});
 
 // ALL PAGES BROWSE GRID AD BANNER
 $(window).load(function() {
@@ -14,7 +16,7 @@ $(window).load(function() {
 	//POSITION
 	var pos = 14;
 	//IMAGE URL 370x552
-	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDYvMTQvMDkvMjgvMzAvNDkyLzA2V2VlazRfQnJvd3NlR3JpZEFkXzAxLmpwZyJdXQ/06Week4_BrowseGridAd_01.jpg?sha=0481a2b09dd54313";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDYvMzAvMDkvMzkvNTEvNzkwLzA2V2VlazVfQnJvd3NlR3JpZEFkXzAxLmpwZyJdXQ/06Week5_BrowseGridAd_01.jpg?sha=f73d222362b93d99";
 	//LINK TEXT
 	var textLink = "SHOP NOW";
 	//LINK URL
@@ -167,3 +169,23 @@ $(".view").one("click", "a[data-prop65]", function(e){
       var count = $('.product-grid__cell').length;
       $('.browsing-controls--top').append('<ul class="pagination"><li class="pagination__node pagination__node--showing">' + count + ' items</li></ul>');
     }
+
+// RELATED PRODUCTS
+if ($(window).width() >= 1050) {
+	// TO OPEN WIDGET
+	$('.br-sf-widget-merchant-qv a').click(function() {
+	    $('html, body').animate({
+        	scrollTop: $(".br-rp-qv-show").offset().top
+    	}, 500);
+    	$('.page-footer').animate({paddingTop: '+=36%'},500);  	
+	});
+
+	// TO CLOSE WIDGET
+	$('.br-sf-widget-merchant-popup-close a').click(function() {
+    	$('html, body').animate({
+	        scrollTop: $(".complimentary--bloomreach").offset().top
+    	}, 500);
+    	$('.page-footer').animate({paddingTop: '0'},500);  	    	
+	});
+}
+// END RELATED PRODUCTS
