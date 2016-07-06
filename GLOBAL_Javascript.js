@@ -177,7 +177,7 @@ if ($(window).width() >= 1050) {
 	    $('html, body').animate({
         	scrollTop: $(".br-rp-qv-show").offset().top
     	}, 500);
-    	$('.page-footer').animate({paddingTop: '+=36%'},500);  	
+    	$('.page-footer').animate({paddingTop: '+=43%'},500);  	
 	});
 
 	// TO CLOSE WIDGET
