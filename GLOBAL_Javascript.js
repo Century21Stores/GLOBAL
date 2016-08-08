@@ -1,4 +1,4 @@
-// MASTER SCRIPTING JULY 06 2016
+// MASTER SCRIPTING AUG 4th 2016
 // contact: jrios@c21stores.com
 
 // NAVIGATION COLORS
@@ -7,83 +7,6 @@ $( "a:contains('Clearance')" ).css( "color", "#EA2C3B" );
 $("body").on("mouseenter mouseleave", "a", function(){
 $( "span:contains('Clearance')" ).css( "color", "#EA2C3B" );
 });
-
-// ALL PAGES BROWSE GRID AD BANNER
-$(window).load(function() {
-
-	//GRID AD TYPE:  enter 1 or 2
-	var gaType = 1;
-	//POSITION
-	var pos = 14;
-	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDYvMzAvMDkvMzkvNTEvNzkwLzA2V2VlazVfQnJvd3NlR3JpZEFkXzAxLmpwZyJdXQ/06Week5_BrowseGridAd_01.jpg?sha=f73d222362b93d99";
-	//LINK TEXT
-	var textLink = "SHOP NOW";
-	//LINK URL
-	var urlLINK = "https://www.c21stores.com/pages/clearance";
-	
-	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
-	var FixHeights;
-	var realPos = pos-1;
-	window.onresize = function() {
-    	clearTimeout(FixHeights);
-    	FixHeights = setTimeout(function() {
-		// console.log('yay it works!');
-		AdClassAll_Single();	
-    	}, 100);
-	};
-
-	$('.product-grid li:nth-of-type('+ realPos +')').after(
-		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
-		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
-		'<div class="product-grid-content-block__image"></div>'+
-		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
-		'<div class="content-block-content__container content-block-content__container--center">'+
-		'<div class="content-block-content__message content-block-content__message--dark">'+
-		'<p class="jm-cta-solidWhite content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
-		'</div>'+
-		'</div>'+
-		'</div>'+
-		'</div>'+
-		'</li>'
-	);
-	
-	function AdClassAll_Single(){
-		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
-		console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
-		console.log($('.product-grid li:nth-of-type(3)'));		
-		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
-	}AdClassAll_Single();
-
-});
-// END ALL PAGES BROWSE GRID AD BANNER
-
-// URLS EXCEPTIONS FOR BROWSE GRID ADD
-$(window).load(function() {
-
-var URLS = [ 
-'https://www.c21stores.com/categories/clearance-women',
-'https://www.c21stores.com/categories/clearance-shoes',
-'https://www.c21stores.com/categories/clearance-handbags-accessories',
-'https://www.c21stores.com/categories/clearance-men',
-'https://www.c21stores.com/categories/clearance-kids',
-'https://www.c21stores.com/categories/clearance-home'
-]; 
-
-exceptThisUR(URLS);
-
-function exceptThisUR(params) {
-  for (i=0; i<params.length; i++) {
-    console.log(params[i]);
-	if(window.location.href.indexOf(params[i]) > -1) {
-    	$('.product-grid__cell--1').fadeOut();    	
-    	// alert("your url contains the string "+params[i]);
-    }    
-  }
-}
-
-});
-// END URLS EXCEPTIONS FOR BROWSE GRID ADD
 
 
 
@@ -189,3 +112,143 @@ if ($(window).width() >= 1050) {
 	});
 }
 // END RELATED PRODUCTS
+
+
+// ALL PAGES BEACH TOWEL GRID AD
+
+if((window.location.href.indexOf("https://www.c21stores.com/categories/mens-swim") > -1) || (window.location.href.indexOf("categories/women-swimsuits-cover-ups") > -1)) {
+
+$(window).load(function() {
+
+	//POSITION
+	var pos = 30;
+	//IMAGE URL
+	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDcvMTEvMTYvMTUvMjEvOTI5LzAxX0JlYWNoVG93ZWxzX0Jyb3dzZUdyaWRBZC5qcGciXV0/01_BeachTowels_BrowseGridAd.jpg?sha=4ed6aea51508cf6c";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/categories/home-towels?towel_type%5B%5D=beach";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function() {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single();	
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--1 jmrv-product-grid__cell--1">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--dark">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide " href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	function AdClassAll_Single(){
+		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
+		console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
+		console.log($('.product-grid li:nth-of-type(3)'));		
+		$('.jmrv-product-grid__cell--1').height(newHeight1);
+	}AdClassAll_Single();
+
+});
+
+}
+// END ALL PAGES BEACH TOWEL GRID AD
+
+//CLICKABLE IMAGES
+$(document).ready(function(){
+
+    $('.hero-content-block, .three-column-square-content-block__container, .large-square-plus-two-content-block__container--large-image, .large-square-plus-two-content-block__container--small-image, .large-square-plus-one-content-block__container--large-image, .two-column-square-content-block__container, .two-column-hero-content-block__container').each(function(){
+       var new_data= $('a', this).clone();
+       	new_data.attr("id", "jm_img_anchor");
+       	new_data.removeAttr("class");	
+    	new_data.appendTo(this);
+    });
+
+    $('.large-square-plus-one-content-block__text').each(function(){
+       var new_data= $('a', this).clone();
+       	new_data.attr("id", "jm_img_anchor2");
+       	new_data.removeAttr("class");	
+    	new_data.appendTo(this);
+    });
+});
+//END CLICKABLE IMAGES
+
+
+// ZERO SEARCH SCRIPT
+var search = $('#header-search-form .value').children().val().toLowerCase();
+// search = search.filter(Boolean)
+
+// HERE GOES THE ID of the Google Spreadsheet SUPPRESION LIST
+var spreadsheetID = "1vbPtdgK7tCk7Nl14rDzzqsmMG2Ii5-WakBueCwAeuQE";
+var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
+ 
+$.getJSON(url, function(data) { 
+	var entry = data.feed.entry;
+	var listArr = [];
+	var listArr2 = [];
+  
+  	//PUSH DATA FROM 2 COLUMNS TO 2 ARRAYS 
+  	$(entry).each(function(){
+  		listArr.push(this.gsx$suppressed.$t.toLowerCase());
+  		listArr2.push(this.gsx$suppressed2.$t.toLowerCase());
+  	});
+	
+	//COMBINE BOTH ARRAYS INTO ONE SINGLE ARRAY
+  	var listArrTotal = listArr.concat(listArr2);
+
+  	// CLEAR EMPTY ITEMS
+	listArr = listArr.filter(Boolean)
+	listArr2 = listArr2.filter(Boolean)
+	listArrTotal = listArrTotal.filter(Boolean)
+	
+	console.log(search);	
+  	console.log(listArr);
+  	console.log(listArr2);
+  	console.log(listArrTotal);
+	
+	designerList();	
+	function designerList(){
+		for (var z=0; z < search.length; z++){
+
+	 		if(arrayContains(listArrTotal, search)){
+				$('.page-content__wrapper').hide("fast");
+				$('.page-content').prepend(
+					'<div id="result">'+
+					'</div>'
+				);
+				$( "#result" ).load( "/pages/zero-search" );
+				console.log("din din din!!");				
+				break;				
+			}
+	
+		}
+	}
+});
+ 
+function arrayContains(a, obj) {
+    for (var i = 0; i < a.length; i++) {
+//         if (a[i] === obj) {
+//             return true;
+//         }
+        if (obj.includes(a[i])) {
+            return true;
+        }
+
+    }
+    return false;
+}
+// END ZERO SEARCH SCRIPT
+
