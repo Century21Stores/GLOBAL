@@ -1,4 +1,4 @@
-// MASTER SCRIPTING AUG 18th 2016
+// MASTER SCRIPTING AUG 22th 2016
 // contact: jrios@c21stores.com
 
 // NAVIGATION COLORS
@@ -261,96 +261,140 @@ function arrayContains(a, obj) {
 
 
 //SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 
-// ADDING ID FOR SORTING
 
-
-function sortingSizes() {
-
+function allSortingSizes(){
 
 
 $('.size-options__size-group').each(function() {
 
-	$('.size-options__size-group .size-options__size-label').each(function() {
-	    var currentElement = $(this);
-    	var value = currentElement.html();
-    	var newvalue = value.replace(/\s{2,}/g, ' ');
-	    $(currentElement).parents('li').attr('id', newvalue);
-	    console.log(newvalue); 
+
+	// ADDING ID TO NON NUMBERS SIZES
+	$(this).find('.size-options__size-label').each(function() {
+
+    	var currentElement = $(this);
+	    var value = currentElement.html();
+
+		if(value.indexOf("XS") >= 0){
+			$(currentElement).closest('li').attr('id', '2ws');    
+			console.log(value);console.log($(currentElement).closest('li').attr("id"));			
+		}
+		else if(value == "SM"){
+			$(currentElement).closest('li').attr('id', '3ws');
+			console.log(value);console.log($(currentElement).closest('li').attr("id"));			
+		}
+		else if(value == "MED"){
+			$(currentElement).closest('li').attr('id', '4ws');
+			console.log(value);console.log($(currentElement).closest('li').attr("id"));			
+		}
+		else if(value == "LRG"){
+			$(currentElement).closest('li').attr('id', '5ws');
+			console.log(value);console.log($(currentElement).closest('li').attr("id"));			
+		}
+		else if(value == "XL"){
+			$(currentElement).closest('li').attr('id', '6ws');
+			console.log(value);console.log($(currentElement).closest('li').attr("id"));			
+		}
+		else if(value == "XXL"){
+			$(currentElement).closest('li').attr('id', '7ws');
+			console.log(value);console.log($(currentElement).closest('li').attr("id"));			
+		}
+		else if(value == "3XL"){
+			$(currentElement).closest('li').attr('id', '8ws');
+			console.log(value);console.log($(currentElement).closest('li').attr("id"));
+		}
+		else if(value.indexOf("SHORT") >= 0){
+			console.log(value);
+			caldo = value.replace("SHORT", "1");
+			caldoTrim = caldo.replace(/\s/g, '');
+			console.log(caldoTrim);
+			$(currentElement).closest('li').attr('id', caldoTrim);
+			
+		}		
+		else if(value.indexOf("REG") >= 0){
+			console.log(value);
+			caldo = value.replace("REG", "2");
+			caldoTrim = caldo.replace(/\s/g, '');
+			console.log(caldoTrim);			
+			$(currentElement).closest('li').attr('id', caldoTrim);
+			
+		}		
+		else if(value.indexOf("LONG") >= 0){
+			console.log(value);
+			caldo = value.replace("LONG", "3");
+			caldoTrim = caldo.replace(/\s/g, '');
+			console.log(caldoTrim);
+			$(currentElement).closest('li').attr('id', caldoTrim);
+			
+		}		
+	
 	});
-	sortingTheList(this);
+
+	sortWeirdSizes(this);
+	sortingSizes(this);	
+	
 });
 
+//NON NUMBERS SORTING SIZES
+function sortWeirdSizes(weirdList){
 
-//SORTING
-function sortingTheList(listToSort){
-console.log(listToSort);
-var itemsList = $(listToSort).children();
-console.log(itemsList);
-
-	itemsList.sort(function (a, b) {
-    	return parseFloat(a.id) > parseFloat(b.id);
+	$(weirdList).find('li').sort(function (a, b) {
+	    return parseFloat(a.id) > parseFloat(b.id);
 	}).each(function () {
     	var elem = $(this);
 	    elem.remove();
-    	$(elem).appendTo(listToSort);
+    	$(elem).appendTo(weirdList);
 	});
+	
 }
 
 
+//NUMBERS SORTING SIZES
+function sortingSizes(numberSizes) {
+
+	$(numberSizes).each(function() {
+
+		$(this).find('.size-options__size-label').each(function() {
+	    	var currentElement = $(this);
+	    	var value = currentElement.html();
+	    	var newvalue = value.replace(/\s{2,}/g, ' ');
+		    $(currentElement).closest('li').attr('id', value);
+		    console.log(newvalue); 
+		});
+	
+		sortingTheList(this);
+	
+	});
 
 
-//TESTING SORTING SIZES
-$('.size-options__size-label').each(function() {
-    var currentElement = $(this);
-    var value = currentElement.html();
-if(value == "XS"){
-$(currentElement).parents('li').attr('id', '2ws');    
-console.log(value);
-}
-else if(value == "SM"){
-$(currentElement).parents('li').attr('id', '3ws');
-console.log(value);
-}
-else if(value == "MED"){
-$(currentElement).parents('li').attr('id', '4ws');
-console.log(value);
-}
-else if(value == "LRG"){
-$(currentElement).parents('li').attr('id', '5ws');
-console.log(value);
-}
-else if(value == "XL"){
-$(currentElement).parents('li').attr('id', '6ws');
-console.log(value);
-}
-else if(value == "XXL"){
-$(currentElement).parents('li').attr('id', '7ws');
-console.log(value);
-}
-else if(value == "3XL"){
-$(currentElement).parents('li').attr('id', '8ws');
-console.log(value);
-}
-});
-//SORTING
-$('.size-options__size-group li').sort(function (a, b) {
-    return parseInt(a.id) > parseInt(b.id);
-}).each(function () {
-    var elem = $(this);
-    elem.remove();
-    $(elem).appendTo('.size-options__size-group');
-});
+	//SORTING
+	function sortingTheList(listToSort){
+		console.log(listToSort);
+		var itemsList = $(listToSort).children();
+		console.log(itemsList);
 
+		itemsList.sort(function (a, b) {
+    		return parseFloat(a.id) > parseFloat(b.id);
+		}).each(function () {
+    		var elem = $(this);
+	    	elem.remove();
+	    	$(elem).appendTo(listToSort);
+		});
+	}
 
 
 }sortingSizes();
 
 
+
+}allSortingSizes();
+
 $(document).on( 'click', '.product-summary__quickview a', function(){
 	setTimeout(function() {   //calls click event after a certain time
-	   	sortingSizes();
+	   	allSortingSizes();
 		console.log('gua gua guacamole!');
 	}, 1000);
 	
 
 });
+
+// END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1
