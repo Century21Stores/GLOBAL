@@ -1,4 +1,4 @@
-// MASTER SCRIPTING AUG 22th 2016
+// MASTER SCRIPTING SEP 7th 2016
 // contact: jrios@c21stores.com
 
 // NAVIGATION COLORS
@@ -16,7 +16,8 @@ $( "span:contains('Clearance')" ).css( "color", "#EA2C3B" );
 $(window).load(function() {
 	var jm_p = $('.breadcrumbs__node-group span:nth-of-type(2) a');
 	var jm_cat = jm_p.html();
-// 	console.log(jm_cat);
+// 	console.log('worked! techGA');
+	console.log(jm_cat);
 
 	if(jm_cat === "Beauty"){
 		createAdBanner();
@@ -167,6 +168,8 @@ $(window).load(function() {
 }
 // END ALL PAGES BEACH TOWEL GRID AD
 
+
+
 //CLICKABLE IMAGES
 $(document).ready(function(){
 
@@ -251,9 +254,6 @@ function arrayContains(a, obj) {
     return false;
 }
 // END ZERO SEARCH SCRIPT
-
-
-
 
 
 
@@ -388,7 +388,7 @@ function sortingSizes(numberSizes) {
 
 }allSortingSizes();
 
-$(document).on( 'click', '.product-summary__quickview a', function(){
+$(document).on( 'click', '.product-summary__quickview a, .color-options__color-button', function(){
 	setTimeout(function() {   //calls click event after a certain time
 	   	allSortingSizes();
 		console.log('gua gua guacamole!');
@@ -398,3 +398,310 @@ $(document).on( 'click', '.product-summary__quickview a', function(){
 });
 
 // END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1
+
+
+
+
+// CREATING BROWSE GRID BANNERS BASED ON LOCATION -- CREATING BROWSE GRID BANNERS BASED ON LOCATION -- CREATING BROWSE GRID BANNERS BASED ON LOCATION -- CREATING BROWSE GRID BANNERS BASED ON LOCATION -- 
+$(window).load(function() {
+	var jm_p = $('.breadcrumbs__node-group span:nth-of-type(2) a');
+	var jm_p3 = $('.breadcrumbs__node-group span:nth-of-type(3)');	
+	var jm_cat = jm_p.html();
+	var jm_cat3 = jm_p3.html();	
+	var urlE1 = (window.location.href.indexOf("cashmere") > -1);
+	var urlEG1 = (
+		(window.location.href.indexOf("arrivals") > -1) ||
+		(window.location.href.indexOf("under") > -1) ||
+		(window.location.href.indexOf("edit") > -1) ||		
+		(window.location.href.indexOf("italian") > -1) ||
+		(window.location.href.indexOf("luxury") > -1) ||		
+		(window.location.href.indexOf("acne") > -1) ||
+		(window.location.href.indexOf("32agfsw") > -1) || //fendi
+		(window.location.href.indexOf("32aphw") > -1) || // hardy
+		(window.location.href.indexOf("32apshw") > -1)	//schouler
+	);
+
+ 	console.log(urlEG1);
+
+	if(jm_cat === "Tech"){
+		TechBrowseGA();
+	}
+	else if((jm_cat === "Shoes") && (!urlEG1)){
+		TallBootsBrowseGA();
+	}	
+	else if(jm_cat === "Kids"){
+		KidsBootsBrowseGA();
+	}
+	else if((jm_cat === "Women") && (jm_cat3 !== "Cashmere Shop")){
+		WomenCashemereBrowseGA();
+	}
+	else if((jm_cat === "Men") && (jm_cat3 !== "Cashmere Shop") && (!urlE1)){
+		MenCashemereBrowseGA();
+	}					
+	else{
+		return false;
+	}
+	
+// if (window.location.href.indexOf("?added-to-cart=555") > -1)
+
+	
+});
+
+
+
+// TECH BROWSE GRID AD BANNER
+function TechBrowseGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDgvMjkvMTQvMzAvMzMvOTg5LzA5V2VlazJfQnJvd3NlR3JpZEFkX3RlY2guanBnIl1d/09Week2_BrowseGridAd_tech.jpg?sha=02e557457c04427a";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/pages/clearance";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function() {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single();	
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--dark">'+
+// 		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	function AdClassAll_Single(){
+		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
+		console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
+		console.log($('.product-grid li:nth-of-type(3)'));		
+		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
+	}AdClassAll_Single();
+
+}
+// END TECH GRID AD BANNER
+
+
+
+// TALL BOOTS BROWSE GRID AD BANNER
+function TallBootsBrowseGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDgvMzEvMDkvMzEvMjkvNTMvMDFfMDlXZWVrMl9UQUxMQk9PVFMuanBnIl1d/01_09Week2_TALLBOOTS.jpg?sha=4dce37cb34724891";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/categories/shoes-boots?boots_type%5B%5D=tall";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function() {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single();	
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--light">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	function AdClassAll_Single(){
+		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
+		console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
+		console.log($('.product-grid li:nth-of-type(3)'));		
+		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
+	}AdClassAll_Single();
+
+}
+// END TALL BOOTS GRID AD BANNER
+
+
+
+// KIDS BOOTS BROWSE GRID AD BANNER
+function KidsBootsBrowseGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDgvMzEvMDkvMzAvMDIvNzQ3LzAxXzA5V2VlazJfa2lkcy5qcGciXV0/01_09Week2_kids.jpg?sha=a7d32b1c8cbbf117";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/categories/kids-cold-weather-shop?kids_category%5B%5D=girls+shoes&kids_category%5B%5D=boys+shoes";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function() {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single();	
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--light">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	function AdClassAll_Single(){
+		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
+		console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
+		console.log($('.product-grid li:nth-of-type(3)'));		
+		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
+	}AdClassAll_Single();
+
+}
+// END KIDS BOOTS GRID AD BANNER
+
+
+// WOMEN CASHMERE GA BROWSE GRID AD BANNER
+function WomenCashemereBrowseGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDkvMDEvMTIvNDkvNDYvNzMwLzAxXzlXZWVrMl9DQVNITUVSRV9BQ0MuanBnIl1d/01_9Week2_CASHMERE_ACC.jpg?sha=2066bb72e3fad7be";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/categories/women-cashmere-shop";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function() {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single();	
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--light">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	function AdClassAll_Single(){
+		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
+		console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
+		console.log($('.product-grid li:nth-of-type(3)'));		
+		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
+	}AdClassAll_Single();
+
+}
+// WOMEN GA BOOTS GRID AD BANNER
+
+
+// MEN CASHMERE GA BROWSE GRID AD BANNER
+function MenCashemereBrowseGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDkvMDEvMTIvNTQvMTUvMzAyLzAxXzA5V2VlazJfQ0FTSE1FUkUuanBnIl1d/01_09Week2_CASHMERE.jpg?sha=e3b785226530aded";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/categories/men-sweaters?sweater_style%5B%5D=cashmere";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function() {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single();	
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--light">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	function AdClassAll_Single(){
+		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
+		console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
+		console.log($('.product-grid li:nth-of-type(3)'));		
+		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
+	}AdClassAll_Single();
+
+}
+// MEN GA BOOTS GRID AD BANNER
+
