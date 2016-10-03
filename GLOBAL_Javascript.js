@@ -1,4 +1,4 @@
-// MASTER SCRIPTING SEP 7th 2016
+// MASTER SCRIPTING OCT 03 2016
 // contact: jrios@c21stores.com
 
 // NAVIGATION COLORS
@@ -400,6 +400,103 @@ $(document).on( 'click', '.product-summary__quickview a, .color-options__color-b
 // END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1
 
 
+
+
+// FIX MASTER COLLECTION SIZES
+function SizeMasterEliminator(){
+$('.product-detail-container--package .product-detail-container__child-product').each(function() {
+	var packageproduct = $(this).find('.size-options__size-group');
+	var countChildren = packageproduct.children().length;
+	console.log('Debugging Master Collections - Package Product Detail:');
+	console.log(packageproduct);
+	console.log(countChildren);	
+	if (countChildren == 1){
+		var parentOfsingle = packageproduct.parent()
+		console.log(parentOfsingle.find('.size-options__size-header'))
+		$('.size-options__size-header').hide();
+		//$(parentOfsingle).hide();
+		$('.product-details--package-child').addClass('jm-breath-children');
+	}
+});
+}SizeMasterEliminator();
+// END FIX MASTER COLLECTION SIZES
+
+// SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - 
+
+
+function allSortingMASTERSizes(){
+
+
+$( "div.product-detail-container__child-product" ).wrapAll( '<div class="jm_sorted_products"></div>');
+var soldOutPack = $('.product-detail-container--package .product-details__sold-out').closest('div .product-detail-container__child-product');
+soldOutPack.hide();
+
+$('.product-detail-container--package .jm_sorted_products').each(function() {
+
+
+	// ADDING ID TO NON NUMBERS SIZES
+	$(this).find('.size-options__size-label').each(function() {
+
+    	var currentElement = $(this);
+	    var value = currentElement.html();
+
+		if(value.indexOf("TWIN") >= 0){
+			$(currentElement).closest('div.product-detail-container__child-product').attr('data-sort', '1home');    
+			console.log('M' + value);console.log('M' + $(currentElement).closest('div.product-detail-container__child-product').attr("data-sort"));			
+		}
+		else if(value.indexOf("F/QN") >= 0){
+			$(currentElement).closest('div.product-detail-container__child-product').attr('data-sort', '2home');    
+			console.log('M' + value);console.log('M' + $(currentElement).closest('div.product-detail-container__child-product').attr("data-sort"));			
+		}
+		else if(value.indexOf("QUEEN") >= 0){
+			$(currentElement).closest('div.product-detail-container__child-product').attr('data-sort', '3home');
+			console.log('M' + value);console.log('M' + $(currentElement).closest('div.product-detail-container__child-product').attr("data-sort"));			
+		}		
+		else if(value.indexOf("KING") >= 0){
+			$(currentElement).closest('div.product-detail-container__child-product').attr('data-sort', '4home');    
+			console.log('M' + value);console.log('M' + $(currentElement).closest('div.product-detail-container__child-product').attr("data-sort"));			
+		}	
+	
+	});
+
+	//sortMasterWeirdSizes(this);
+// 	console.log('veritas' + this);
+// 	sortingSizes(this);	
+	
+});
+
+//NON NUMBERS SORTING SIZES
+function sortMasterWeirdSizes(weirdList){
+
+
+	$(weirdList).find('div.product-detail-container__child-product').sort(function (a, b) {
+	    return parseFloat($(a).attr('data-sort')) > parseFloat($(b).attr('data-sort'));
+	}).each(function () {
+    	var elem = $(this);
+	    elem.remove();
+    	$(elem).appendTo(weirdList);
+	});
+
+	
+}
+
+
+}allSortingMASTERSizes();
+
+// $(document).on( 'click', '.product-summary__quickview a', function(){
+// 	setTimeout(function() {   //calls click event after a certain time
+// 	   	allSortingSizes();
+// 		console.log('gua gua guacamole!');
+// 	}, 1000);
+// 	
+// 
+// });
+
+// END SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - 
+
+
+
+
 // MULTIPLE GRID AD BANNERS FOR W32 REFRESH
 
 // CREATING BROWSE GRID BANNERS BASED ON LOCATION -- CREATING BROWSE GRID BANNERS BASED ON LOCATION -- CREATING BROWSE GRID BANNERS BASED ON LOCATION -- CREATING BROWSE GRID BANNERS BASED ON LOCATION -- 
@@ -408,36 +505,101 @@ $(window).load(function() {
 	var jm_p3 = $('.breadcrumbs__node-group span:nth-of-type(3)');	
 	var jm_cat = jm_p.html();
 	var jm_cat3 = jm_p3.html();	
-	var urlE1 = (window.location.href.indexOf("cashmere") > -1);
-	var urlEG1 = (
+	var urlE1 = (window.location.href.indexOf("coats") > -1);
+	var urlEshoes = (
 		(window.location.href.indexOf("arrivals") > -1) ||
 		(window.location.href.indexOf("under") > -1) ||
 		(window.location.href.indexOf("edit") > -1) ||		
 		(window.location.href.indexOf("italian") > -1) ||
-		(window.location.href.indexOf("luxury") > -1) ||		
-		(window.location.href.indexOf("acne") > -1) ||
-		(window.location.href.indexOf("32agfsw") > -1) || //fendi
-		(window.location.href.indexOf("32aphw") > -1) || // hardy
-		(window.location.href.indexOf("32apshw") > -1)	//schouler
+		(window.location.href.indexOf("luxury") > -1) ||
+		(window.location.href.indexOf("35abla") > -1) || //Balenciaga
+		(window.location.href.indexOf("35achw") > -1) || // Chloé
+		(window.location.href.indexOf("35aguw") > -1) || //Gucci
+		(window.location.href.indexOf("ugg") > -1)	
 	);
-
- 	console.log(urlEG1);
+	var urlEhandbags = (
+		(window.location.href.indexOf("arrivals") > -1) ||
+		(window.location.href.indexOf("shop") > -1) ||
+		(window.location.href.indexOf("luxury") > -1) ||		
+		(window.location.href.indexOf("edit") > -1) ||
+		(window.location.href.indexOf("vintage") > -1) ||
+		(window.location.href.indexOf("35adww") > -1) || //Balenciaga
+		(window.location.href.indexOf("35avsw") > -1) //Versace
+	);	
+	var urlEkids = (
+		(window.location.href.indexOf("arrivals") > -1) ||
+		(window.location.href.indexOf("gifts") > -1) ||
+		(window.location.href.indexOf("essentials") > -1) ||		
+		(window.location.href.indexOf("shop") > -1) ||
+		(window.location.href.indexOf("occasion") > -1) ||		
+		(window.location.href.indexOf("disney") > -1) ||
+		(window.location.href.indexOf("shoes") > -1) ||		
+		(window.location.href.indexOf("toys") > -1)
+	);
+	var urlEmens = (
+		(window.location.href.indexOf("arrivals") > -1) ||
+		(window.location.href.indexOf("shop") > -1) ||
+		(window.location.href.indexOf("street") > -1) ||		
+		(window.location.href.indexOf("35aacm") > -1) || //acne
+		(window.location.href.indexOf("35ahwm") > -1) || //Hood By Air
+		(window.location.href.indexOf("35akpm") > -1) || // Kooples
+		(window.location.href.indexOf("35adtm") > -1) // YSL
+	);
+	var urlEcontemporary = (
+		(window.location.href.indexOf("arrivals") > -1) ||
+		(window.location.href.indexOf("shop") > -1) ||		
+		(window.location.href.indexOf("chic") > -1) || 
+		(window.location.href.indexOf("shoulder") > -1)
+	);		
+	var urlEmwomens = (
+		(window.location.href.indexOf("arrivals") > -1) ||
+		(window.location.href.indexOf("club") > -1) ||
+		(window.location.href.indexOf("shop") > -1) ||		
+		(window.location.href.indexOf("salon") > -1) || 
+		(window.location.href.indexOf("35aacw") > -1) || //acne
+		(window.location.href.indexOf("35aalw") > -1) || // alphamoment
+		(window.location.href.indexOf("designer") > -1) ||
+		(window.location.href.indexOf("35aemw") > -1) || //european must-haves
+		(window.location.href.indexOf("34ahnw") > -1) ||//Honeydew Bralettes & More
+		(window.location.href.indexOf("35alfw") > -1) ||//Lilly E Violetta & More Furs
+		(window.location.href.indexOf("35amrw") > -1) //Marni
+	);		
+ 	console.log(urlEshoes);
 
 	if(jm_cat === "Tech"){
 		TechBrowseGA();
 	}
-	else if((jm_cat === "Shoes") && (!urlEG1)){
-		TallBootsBrowseGA();
-	}	
-	else if(jm_cat === "Kids"){
-		KidsBootsBrowseGA();
+	else if((jm_cat === "Shoes") && (!urlEshoes)){
+// 		shoesApresSkiGA();
+		coldWeatherBootsGA();
 	}
-	else if((jm_cat === "Women") && (jm_cat3 !== "Cashmere Shop")){
-		WomenCashemereBrowseGA();
+	else if((jm_cat === "Handbags &amp; Accessories") && (!urlEhandbags)){
+		console.log("Breadcrumbs H&A");
+		handbagsApresSkiGA();
+	}			
+	else if((jm_cat === "Kids") && (!urlEkids)){
+		coldWeatherGA();
+// 		KidsSnowDaysGA();
 	}
-	else if((jm_cat === "Men") && (jm_cat3 !== "Cashmere Shop") && (!urlE1)){
-		MenCashemereBrowseGA();
-	}					
+	else if((jm_cat === "Contemporary") && (!urlEcontemporary)){
+// 		contemporaryApresSkiGA();
+		if(!urlE1){
+			contemporaryCoatGA();
+		}		
+	}
+	else if((jm_cat === "Women") && (!urlEmwomens)){
+// 		WomenApresSkiGA();
+		if(!urlE1){
+			womensCoatGA();
+		}
+	}
+	else if((jm_cat === "Men") && (!urlEmens)){
+// 		MenApresSkiGA();
+		if(!urlE1){
+			mensCoatGA();
+		}
+	}
+
 	else{
 		return false;
 	}
@@ -501,19 +663,20 @@ function TechBrowseGA() {
 
 
 
-// TALL BOOTS BROWSE GRID AD BANNER
-function TallBootsBrowseGA() {
+
+// KIDS SNOW DAYS GRID AD BANNER
+function KidsSnowDaysGA() {
 
 	//GRID AD TYPE:  enter 1 or 2
 	var gaType = 1;
 	//POSITION
-	var pos = 14;
+	var pos = 30;
 	//IMAGE URL 370x552
-	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDgvMzEvMDkvMzEvMjkvNTMvMDFfMDlXZWVrMl9UQUxMQk9PVFMuanBnIl1d/01_09Week2_TALLBOOTS.jpg?sha=4dce37cb34724891";
+	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDkvMjYvMTEvMDcvMTUvMTE5LzEwV2VlazFfQXByZXNTa2lfQkdBX0tfSU1HLmpwZyJdXQ/10Week1_ApresSki_BGA_K_IMG.jpg?sha=3772296bd3b7a355";
 	//LINK TEXT
 	var textLink = "SHOP NOW";
 	//LINK URL
-	var urlLINK = "https://www.c21stores.com/categories/shoes-boots?boots_type%5B%5D=tall";
+	var urlLINK = "#";
 	
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
@@ -549,23 +712,22 @@ function TallBootsBrowseGA() {
 	}AdClassAll_Single();
 
 }
-// END TALL BOOTS GRID AD BANNER
+// END KIDS SNOW DAYS GRID AD BANNER
 
 
-
-// KIDS BOOTS BROWSE GRID AD BANNER
-function KidsBootsBrowseGA() {
+// MEN APRES SKI GRID AD BANNER
+function MenApresSkiGA() {
 
 	//GRID AD TYPE:  enter 1 or 2
 	var gaType = 1;
 	//POSITION
-	var pos = 14;
+	var pos = 29;
 	//IMAGE URL 370x552
-	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDgvMzEvMDkvMzAvMDIvNzQ3LzAxXzA5V2VlazJfa2lkcy5qcGciXV0/01_09Week2_kids.jpg?sha=a7d32b1c8cbbf117";
+	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDkvMjYvMTIvNDcvNTMvNjU1LzEwV2VlazFfQXByZXNTa2lfQkdBX01fSU1HLmpwZyJdXQ/10Week1_ApresSki_BGA_M_IMG.jpg?sha=5d9529eb11724164";
 	//LINK TEXT
 	var textLink = "SHOP NOW";
 	//LINK URL
-	var urlLINK = "https://www.c21stores.com/categories/kids-cold-weather-shop?kids_category%5B%5D=girls+shoes&kids_category%5B%5D=boys+shoes";
+	var urlLINK = "#";
 	
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
@@ -601,22 +763,22 @@ function KidsBootsBrowseGA() {
 	}AdClassAll_Single();
 
 }
-// END KIDS BOOTS GRID AD BANNER
+// END MEN APRES SKI GRID AD BANNER
 
 
-// WOMEN CASHMERE GA BROWSE GRID AD BANNER
-function WomenCashemereBrowseGA() {
+// WOMEN APRES SKI GRID AD BANNER
+function WomenApresSkiGA() {
 
 	//GRID AD TYPE:  enter 1 or 2
 	var gaType = 1;
 	//POSITION
-	var pos = 14;
+	var pos = 29;
 	//IMAGE URL 370x552
-	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDkvMDEvMTIvNDkvNDYvNzMwLzAxXzlXZWVrMl9DQVNITUVSRV9BQ0MuanBnIl1d/01_9Week2_CASHMERE_ACC.jpg?sha=2066bb72e3fad7be";
+	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDkvMjcvMTIvNTYvMzgvMTM2LzEwV2VlazFfQXByZXNTa2lfQkdBX1dfSU1HLmpwZyJdXQ/10Week1_ApresSki_BGA_W_IMG.jpg?sha=8b6957e3411b02cb";
 	//LINK TEXT
 	var textLink = "SHOP NOW";
 	//LINK URL
-	var urlLINK = "https://www.c21stores.com/categories/women-cashmere-shop";
+	var urlLINK = "#";
 	
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
@@ -652,22 +814,22 @@ function WomenCashemereBrowseGA() {
 	}AdClassAll_Single();
 
 }
-// WOMEN GA BOOTS GRID AD BANNER
+// END WOMEN APRES SKI GRID AD BANNER
 
 
-// MEN CASHMERE GA BROWSE GRID AD BANNER
-function MenCashemereBrowseGA() {
+// CONTEMPORARY APRES SKI GRID AD BANNER
+function contemporaryApresSkiGA() {
 
 	//GRID AD TYPE:  enter 1 or 2
 	var gaType = 1;
 	//POSITION
-	var pos = 14;
+	var pos = 29;
 	//IMAGE URL 370x552
-	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDkvMDEvMTIvNTQvMTUvMzAyLzAxXzA5V2VlazJfQ0FTSE1FUkUuanBnIl1d/01_09Week2_CASHMERE.jpg?sha=e3b785226530aded";
+	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDkvMjcvMTIvNTYvMzgvMTM2LzEwV2VlazFfQXByZXNTa2lfQkdBX1dfSU1HLmpwZyJdXQ/10Week1_ApresSki_BGA_W_IMG.jpg?sha=8b6957e3411b02cb";
 	//LINK TEXT
 	var textLink = "SHOP NOW";
 	//LINK URL
-	var urlLINK = "https://www.c21stores.com/categories/men-sweaters?sweater_style%5B%5D=cashmere";
+	var urlLINK = "#";
 	
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
@@ -703,5 +865,519 @@ function MenCashemereBrowseGA() {
 	}AdClassAll_Single();
 
 }
-// MEN GA BOOTS GRID AD BANNER
+// END CONTEMPORARY APRES SKI GRID AD BANNER
 
+
+// SHOES APRES SKI GRID AD BANNER
+function shoesApresSkiGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 29;
+	//IMAGE URL 370x552
+	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDkvMjcvMTIvNTYvMzgvMTM2LzEwV2VlazFfQXByZXNTa2lfQkdBX1dfSU1HLmpwZyJdXQ/10Week1_ApresSki_BGA_W_IMG.jpg?sha=8b6957e3411b02cb";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "#";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function() {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single();	
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--light">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	function AdClassAll_Single(){
+		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
+		console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
+		console.log($('.product-grid li:nth-of-type(3)'));		
+		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
+	}AdClassAll_Single();
+
+}
+// END SHOES APRES SKI GRID AD BANNER
+
+
+// HANDBAGS APRES SKI GRID AD BANNER
+function handbagsApresSkiGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 30;
+	//IMAGE URL 370x552
+	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDkvMjcvMTQvMjIvMDEvMTg0LzEwV2VlazFfQXByZXNTa2lBY2Nlc3Nvcmllc19CR0FfV19JTUcuanBnIl1d/10Week1_ApresSkiAccessories_BGA_W_IMG.jpg?sha=7ce83edce565a1c9";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "#";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function() {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single();	
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--light">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	function AdClassAll_Single(){
+		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
+		console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
+		console.log($('.product-grid li:nth-of-type(3)'));		
+		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
+	}AdClassAll_Single();
+
+}
+// END HANDBAGS APRES SKI GRID AD BANNER
+
+
+// MENS COAT GRID AD BANNER
+function mensCoatGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDkvMjgvMTAvNTUvNTcvNzQwLzEwV2VlazFfQ29hdHNfQkdBX01fSU1HLmpwZyJdXQ/10Week1_Coats_BGA_M_IMG.jpg?sha=ec6aac753d89213e";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "#";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function() {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single();	
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--light">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	function AdClassAll_Single(){
+		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
+		console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
+		console.log($('.product-grid li:nth-of-type(3)'));		
+		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
+	}AdClassAll_Single();
+
+}
+// END MENS COAT GRID AD BANNER
+
+
+// MENS COAT GRID AD BANNER
+function mensCoatGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDkvMjgvMTAvNTUvNTcvNzQwLzEwV2VlazFfQ29hdHNfQkdBX01fSU1HLmpwZyJdXQ/10Week1_Coats_BGA_M_IMG.jpg?sha=ec6aac753d89213e";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/categories/men-coats-jackets";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function() {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single();	
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--light">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	function AdClassAll_Single(){
+		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
+		console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
+		console.log($('.product-grid li:nth-of-type(3)'));		
+		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
+	}AdClassAll_Single();
+
+}
+// END MENS COAT GRID AD BANNER
+
+
+// WOMENS COAT GRID AD BANNER
+function womensCoatGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDkvMjgvMTAvNTgvNTMvNDI3LzEwV2VlazFfQ29hdHNfQkdBX1dfSU1HLmpwZyJdXQ/10Week1_Coats_BGA_W_IMG.jpg?sha=a9078a2f780bf8c6";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/categories/women-coats";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function() {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single();	
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--light">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	function AdClassAll_Single(){
+		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
+		console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
+		console.log($('.product-grid li:nth-of-type(3)'));		
+		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
+	}AdClassAll_Single();
+
+}
+// END WOMENS COAT GRID AD BANNER
+
+// CONTEMPORARY COAT GRID AD BANNER
+function contemporaryCoatGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDkvMjgvMTAvNTgvNTMvNDI3LzEwV2VlazFfQ29hdHNfQkdBX1dfSU1HLmpwZyJdXQ/10Week1_Coats_BGA_W_IMG.jpg?sha=a9078a2f780bf8c6";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/categories/contemporary-coats";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function() {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single();	
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--light">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	function AdClassAll_Single(){
+		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
+		console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
+		console.log($('.product-grid li:nth-of-type(3)'));		
+		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
+	}AdClassAll_Single();
+
+}
+// END CONTEMPORARY COAT GRID AD BANNER
+
+
+
+// COLD WEATHER BOOTS GRID AD BANNER
+function coldWeatherBootsGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDkvMjgvMTIvNTMvNDAvMTMwLzEwV2VlazFfQ29sZFdlYXRoZXJCb290c19XX0lNRy5qcGciXV0/10Week1_ColdWeatherBoots_W_IMG.jpg?sha=4f2ab61c6fa82bc9";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/categories/shoes-cold-weather-rain?cold_weather_and_rain_type%5B%5D=cold+weather";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function() {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single();	
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--light">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	function AdClassAll_Single(){
+		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
+		console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
+		console.log($('.product-grid li:nth-of-type(3)'));		
+		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
+	}AdClassAll_Single();
+
+}
+// END COLD WEATHER BOOTS GRID AD BANNER
+
+
+// COLD WEATHER GRID AD BANNER
+function coldWeatherGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDkvMjgvMTMvMjMvNTgvNTAxLzEwV2VlazFfQ29sZFdlYXRoZXJTaG9wX0tfSU1HLmpwZyJdXQ/10Week1_ColdWeatherShop_K_IMG.jpg?sha=24d2c2491ddba587";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/categories/kids-cold-weather-shop";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function() {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single();	
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--light">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	function AdClassAll_Single(){
+		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
+		console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
+		console.log($('.product-grid li:nth-of-type(3)'));		
+		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
+	}AdClassAll_Single();
+
+}
+// END COLD WEATHER  GRID AD BANNER
+
+// ACQUISITION GRID AD BANNER
+function acquisitionGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 46;
+	//IMAGE URL 370x552
+	var urlIMG = "https://www.staging.c21.weblinc.com/media/W1siZiIsIjIwMTYvMDkvMTQvMTYvMzAvMTEvNTQ0LzAxXzA5V2VlazRfUExDQ19HcmlkLmpwZyJdXQ/01_09Week4_PLCC_Grid.jpg?sha=c46157fee129a1b1";
+	//LINK TEXT
+	var textLink = "LEARN MORE";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/pages/clearance";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function(e) {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single();	
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--dark">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	function AdClassAll_Single(){
+		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
+		console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
+		console.log($('.product-grid li:nth-of-type(3)'));		
+		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
+	}AdClassAll_Single();
+
+}
+// END ACQUISITION GRID AD BANNER
+
+
+// RETENTION GRID AD BANNER
+function retentionGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 46;
+	//IMAGE URL 370x552
+	var urlIMG = "https://www.staging.c21.weblinc.com/media/W1siZiIsIjIwMTYvMDkvMTQvMTYvMjkvMTkvNzc3LzA5V2VlazRfUExDQ19HcmlkX1JldGVudGlvbjIuanBnIl1d/09Week4_PLCC_Grid_Retention2.jpg?sha=68c4450c40899332";
+	//LINK TEXT
+	var textLink = "LEARN MORE";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/pages/clearance";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function(e) {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single();	
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--dark">'+
+		// '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	function AdClassAll_Single(){
+		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
+		console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
+		console.log($('.product-grid li:nth-of-type(3)'));		
+		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
+	}AdClassAll_Single();
+
+}
+// END RETENTION GRID AD BANNER
+
+
+//TEST COROMETRICS
+$( document ).ready(function() {
+	$('.br-sf-widget a').attr('name','BR_related_products').attr('categoryID','BR_related_productsID');
+});
