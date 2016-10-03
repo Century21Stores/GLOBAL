@@ -1377,6 +1377,20 @@ function retentionGA() {
 // END RETENTION GRID AD BANNER
 
 
+
+// SPECIAL SPLITTED HEADER
+if(window.location.href === "https://www.c21stores.com/"){
+	$(".page-layout").prepend(
+	'<section class="jm-special-splitHeader">'+
+	'<div class="jm_left">LEFT MESSAGE</div>'+
+	'<div class="jm_right">RIGHT MESSAGE</div>'+
+	'</section>'
+	);
+}
+// END SPECIAL SPLITTED HEADER
+
+
+
 //TEST COROMETRICS
 $( document ).ready(function() {
 	$('.br-sf-widget a').attr('name','BR_related_products').attr('categoryID','BR_related_productsID');
