@@ -1,13 +1,13 @@
-<!--  DOCUMENTATION TOURISM LANDING PAGE
+<!--  DOCUMENTATION HOLIDAY BIRD ON TOP NAV
  jrios@c21stores.com 
- 05262016  -->
+ 11032016  -->
 
-# TOURISM LANDING PAGE
+# HOLIDAY BIRD
 
-* Fully responsive site for Desktop, IPAD (both orientations) and MOBILE (both orientations)
+* Desktop Only
 
 Live sample:
-https://www.c21stores.com/pages/tourism
+https://www.c21stores.com/pages/hp7
 
 ## Creative reference
 Position 1
