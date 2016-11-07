@@ -1,5 +1,7 @@
 <style>
-
+.page-header__content{
+background: white;
+}
 .pollito_header{
 	display: none;
 }
@@ -57,7 +59,7 @@
     left: 7em;
     width: 50%;
     height: 61px;
-    background: url(https://www.c21stores.com/media/W1siZiIsIjIwMTYvMTAvMTQvMTQvNDEvMDUvODMxL0JJUkQyLmdpZiJdXQ/BIRD2.gif?sha=46737cc604c90655) no-repeat;
+    background: url(https://www.c21stores.com/media/W1siZiIsIjIwMTYvMTEvMDQvMTQvMDcvMTUvMzkwL0JJUkQyX2NvbXByZXNzLmdpZiJdXQ/BIRD2_compress.gif?sha=6680e1147cd115be) no-repeat;
     opacity: 1;
     z-index: 9999999999;
 	background-size: 100%; 
@@ -200,7 +202,7 @@
 <script>
 //PRE-Loading
 var PollitoGIF = new Image();
-PollitoGIF.src = 'https://www.c21stores.com/media/W1siZiIsIjIwMTYvMTAvMTQvMTQvNDEvMDUvODMxL0JJUkQyLmdpZiJdXQ/BIRD2.gif?sha=46737cc604c90655';
+PollitoGIF.src = 'https://www.c21stores.com/media/W1siZiIsIjIwMTYvMTEvMDQvMTQvMDcvMTUvMzkwL0JJUkQyX2NvbXByZXNzLmdpZiJdXQ/BIRD2_compress.gif?sha=6680e1147cd115be';
 
 
 
@@ -225,7 +227,7 @@ function GetIEVersion() {
 
 
 if (GetIEVersion() > 0){
-   alert("This is IE " + GetIEVersion());
+  // alert("This is IE " + GetIEVersion());
    pollitoEstatico();
 }
 else{
@@ -266,7 +268,7 @@ function pollitoVolador(){
 		});	    
 
 			setTimeout(function(){  
-				$("ul.primary-nav__nav-menu li:last-of-type > a, .pollito_header").hover(function(){
+				$("ul.primary-nav__nav-menu > li:last-of-type > a, .pollito_header").hover(function(){
 					$('.pollito_header').css("background", "url(https://www.c21stores.com/media/W1siZiIsIjIwMTYvMTAvMTQvMTQvNTcvMzAvOC9Qb2xsaXRvTG9va2luZ1JpZ2h0Ri5wbmciXV0/PollitoLookingRightF.png?sha=de6e01aa354c0880) no-repeat");
 					}, function(){
 					$('.pollito_header').css("background", "url(https://www.c21stores.com/media/W1siZiIsIjIwMTYvMTAvMTQvMTQvNTEvMTAvNzk4L1BvbGxpdG9TdGFuZGluZ0YucG5nIl1d/PollitoStandingF.png?sha=d5b067109e08fe8b) no-repeat");
@@ -297,12 +299,12 @@ function pollitoVolador(){
 
 function pollitoEstatico(){
 // 	console.log('Pollito: static!!');
-		$("ul.primary-nav__nav-menu li:last-of-type a").css("position","relative");
+		$("ul.primary-nav__nav-menu > li:last-of-type > a").css("position","relative");
 		$('ul.primary-nav__nav-menu li:last-of-type a').addClass('RedButton');
-		$("ul.primary-nav__nav-menu li:last-of-type a").append('<div class="pollito_header"></div>');
+		$("ul.primary-nav__nav-menu > li:last-of-type > a").append('<div class="pollito_header"></div>');
 		$( ".pollito_header" ).delay(1000).fadeIn(2000).addClass("fix-on-gifts");
 		// HOVER EFFECT
-		$("ul.primary-nav__nav-menu li:last-of-type > a, .pollito_header").hover(function(){
+		$("ul.primary-nav__nav-menu > li:last-of-type > a, .pollito_header").hover(function(){
 			$('.pollito_header').css("background", "url(https://www.c21stores.com/media/W1siZiIsIjIwMTYvMTAvMTQvMTQvNTcvMzAvOC9Qb2xsaXRvTG9va2luZ1JpZ2h0Ri5wbmciXV0/PollitoLookingRightF.png?sha=de6e01aa354c0880) no-repeat");
 			}, function(){
 			$('.pollito_header').css("background", "url(https://www.c21stores.com/media/W1siZiIsIjIwMTYvMTAvMTQvMTQvNTEvMTAvNzk4L1BvbGxpdG9TdGFuZGluZ0YucG5nIl1d/PollitoStandingF.png?sha=d5b067109e08fe8b) no-repeat");
