@@ -325,7 +325,11 @@ function ScrollitoPollito(ev){
 		return false;
 	}
 }
-window.onscroll=ScrollitoPollito;
+
+    $(window).scroll(function(){
+		ScrollitoPollito();
+    })
+// window.onscroll=ScrollitoPollito;
 
 
 
