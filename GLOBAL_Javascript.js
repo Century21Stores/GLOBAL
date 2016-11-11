@@ -1,4 +1,4 @@
-// MASTER SCRIPTING OCT 27 2016
+// MASTER SCRIPTING NOV 11 2016
 // contact: jrios@c21stores.com
 
 // NAVIGATION COLORS
@@ -8,53 +8,6 @@ $("body").on("mouseenter mouseleave", "a", function(){
 $( "span:contains('Clearance')" ).css( "color", "#EA2C3B" );
 });
 
-
-
-
-// BEAUTY BROWSE GRID AD BANNER
-
-$(window).load(function() {
-	var jm_p = $('.breadcrumbs__node-group span:nth-of-type(2) a');
-	var jm_cat = jm_p.html();
-// 	console.log('worked! techGA');
-	console.log(jm_cat);
-
-	if(jm_cat === "Beauty"){
-		createAdBanner();
-	}
-	else{
-		return false;
-	}
-
-	
-});
-	$(window).resize(function(){
-		AdClass();
-	});	
-	function createAdBanner(){
-		$('.product-grid li:nth-of-type(29)').after(
-			'<li class="product-grid__cell product-grid__cell--1">'+
-				'<div class="product-grid-content-block" style="background-image: url(https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDQvMjcvMTQvMjMvMDUvNDAzLzA1V2VlazFfR3JpZEFkX0JlYXV0eV9ub0NUQS5qcGciXV0/05Week1_GridAd_Beauty_noCTA.jpg?sha=4bbc8c08ee5111dc);">'+
-					'<div class="product-grid-content-block__image"></div>'+
-	 				'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
- 						'<div class="content-block-content__container content-block-content__container--center">'+
- 							'<div class="content-block-content__message content-block-content__message--dark">'+
-// 								'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide " href="https://www.c21stores.com/pages/gift-cards">&nbsp</a></p>'+
- 							'</div>'+
- 						'</div>'+
-					'</div>'+
-				'</div>'+
-			'</li>'
-		);
-		AdClass();
-	}
-	function AdClass(){
-// 		var newHeight1 = $('.product-grid li:nth-of-type(4)').height();
-// 		$('.product-grid li:nth-of-type(5)').height(newHeight1);
-		var newHeight2 = $('.product-grid li:nth-of-type(29)').height();
-		$('.product-grid li:nth-of-type(30)').height(newHeight2);
-	}	
-// END BEAUTY BROWSE GRID AD BANNER
 
 
 
@@ -133,13 +86,13 @@ $(window).load(function() {
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
-	window.onresize = function() {
-    	clearTimeout(FixHeights);
-    	FixHeights = setTimeout(function() {
-		// console.log('yay it works!');
-		AdClassAll_Single();	
-    	}, 100);
-	};
+// 	window.onresize = function() {
+//     	clearTimeout(FixHeights);
+//     	FixHeights = setTimeout(function() {
+// 		// console.log('yay it works!');
+// 		AdClassAll_Single2();	
+//     	}, 100);
+// 	};
 
 	$('.product-grid li:nth-of-type('+ realPos +')').after(
 		'<li class="product-grid__cell product-grid__cell--1 jmrv-product-grid__cell--1">'+
@@ -156,12 +109,12 @@ $(window).load(function() {
 		'</li>'
 	);
 	
-	function AdClassAll_Single(){
+	function AdClassAll_Single2(){
 		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
 		//console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
 		//console.log($('.product-grid li:nth-of-type(3)'));		
 		$('.jmrv-product-grid__cell--1').height(newHeight1);
-	}AdClassAll_Single();
+	}AdClassAll_Single2();
 
 });
 
@@ -192,7 +145,7 @@ $(document).ready(function(){
 
 
 // ZERO SEARCH SCRIPT
-var search = $('#header-search-form .value').children().val().toLowerCase();
+var search = $('#header-search-form .value').children().val().toString().toLowerCase();
 // search = search.filter(Boolean)
 
 // HERE GOES THE ID of the Google Spreadsheet SUPPRESION LIST
@@ -302,6 +255,35 @@ $('.size-options__size-group').each(function() {
 			$(currentElement).closest('li').attr('id', '8ws');
 			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
 		}
+		else if(value == "A"){
+			$(currentElement).closest('li').attr('id', '1A');
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
+		}		
+		else if(value == "B"){
+			$(currentElement).closest('li').attr('id', '2B');
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
+		}		
+		else if(value == "C"){
+			$(currentElement).closest('li').attr('id', '3C');
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
+		}		
+		else if(value == "D"){
+			$(currentElement).closest('li').attr('id', '4D');
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
+		}		
+		else if(value == "E"){
+			$(currentElement).closest('li').attr('id', '5E');
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
+		}		
+		else if(value == "F"){
+			$(currentElement).closest('li').attr('id', '6F');
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
+		}		
+		else if(value == "G"){
+			$(currentElement).closest('li').attr('id', '7G');
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
+		}		
+
 		else if(value.indexOf("SHORT") >= 0){
 			//console.log(value);
 			caldo = value.replace("SHORT", "1");
@@ -638,22 +620,10 @@ $(window).load(function() {
 	else{
 		return false;
 	}
-	
-// if (window.location.href.indexOf("?added-to-cart=555") > -1)
-	//CALL MATCH HEIGHT AFTER 2 SECONDS 
-	window.onresize = function() {
-    	clearTimeout(FixHeights);
-    	FixHeights = setTimeout(function() {
-		AdClassAll_Single();	
-    	}, 100);
-	};
-	function AdClassAll_height(){
-		setTimeout(function(){
-			var newHeightALL = $('.product-grid li:nth-of-type(5)').height();
-			$('.jmrv-product-grid__cell--1').height(newHeightALL);
-		},2000);			
-	}AdClassAll_height();
-		
+
+
+	fixingHeights();
+
 });
 
 
@@ -675,11 +645,11 @@ function TechBrowseGA() {
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
-	window.onresize = function() {
+	window.onresize = function(e) {
     	clearTimeout(FixHeights);
     	FixHeights = setTimeout(function() {
 		// console.log('yay it works!');
-		AdClassAll_Single();	
+		AdClassAll_Single(realPos, gaType);
     	}, 100);
 	};
 
@@ -698,17 +668,11 @@ function TechBrowseGA() {
 		'</li>'
 	);
 	
-	function AdClassAll_Single(){
-	setTimeout(function(){
-		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
-		//console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
-		//console.log($('.product-grid li:nth-of-type(3)'));		
-		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
-	},500);			
-	}AdClassAll_Single();	
-
+	AdClassAll_Single(realPos, gaType);
 }
 // END TECH GRID AD BANNER
+
+
 
 
 // BEAUTY GRID AD BANNER
@@ -728,11 +692,11 @@ function BeautyGA() {
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
-	window.onresize = function() {
+	window.onresize = function(e) {
     	clearTimeout(FixHeights);
     	FixHeights = setTimeout(function() {
 		// console.log('yay it works!');
-		AdClassAll_Single();	
+		AdClassAll_Single(realPos, gaType);
     	}, 100);
 	};
 
@@ -751,14 +715,7 @@ function BeautyGA() {
 		'</li>'
 	);	
 
-	function AdClassAll_Single(){
-	setTimeout(function(){
-		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
-		//console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
-		//console.log($('.product-grid li:nth-of-type(3)'));		
-		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
-	},500);			
-	}AdClassAll_Single();
+	AdClassAll_Single(realPos, gaType);
 	
 }
 // END BEAUTY GRID AD BANNER
@@ -783,11 +740,11 @@ function accessoriesFurShopGA() {
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
-	window.onresize = function() {
+	window.onresize = function(e) {
     	clearTimeout(FixHeights);
     	FixHeights = setTimeout(function() {
-		// console.log('yay it works!');
-		AdClassAll_Single();	
+		console.log('yay it works!');
+		AdClassAll_Single(realPos, gaType);
     	}, 100);
 	};
 
@@ -806,15 +763,7 @@ function accessoriesFurShopGA() {
 		'</li>'
 	);
 	
-	function AdClassAll_Single(){
-	setTimeout(function(){
-		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 1) + ')').height();
-		//console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
-		//console.log($('.product-grid li:nth-of-type(3)'));		
-		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
-	},1000);			
-	}AdClassAll_Single();
-
+	AdClassAll_Single(realPos, gaType);
 }
 // ACCESSORIES FUR SHOP GRID AD BANNER
 
@@ -836,11 +785,11 @@ function homedecorGA() {
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
-	window.onresize = function() {
+	window.onresize = function(e) {
     	clearTimeout(FixHeights);
     	FixHeights = setTimeout(function() {
 		// console.log('yay it works!');
-		AdClassAll_Single();	
+		AdClassAll_Single(realPos, gaType);
     	}, 100);
 	};
 
@@ -859,14 +808,7 @@ function homedecorGA() {
 		'</li>'
 	);
 	
-	function AdClassAll_Single(){
-	setTimeout(function(){
-		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
-		//console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
-		//console.log($('.product-grid li:nth-of-type(3)'));		
-		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
-	},1000);			
-	}AdClassAll_Single();
+	AdClassAll_Single(realPos, gaType);
 
 }
 // HOME DECOR GRID AD BANNER
@@ -889,11 +831,11 @@ function coldWeatherGA() {
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
-	window.onresize = function() {
+	window.onresize = function(e) {
     	clearTimeout(FixHeights);
     	FixHeights = setTimeout(function() {
 		// console.log('yay it works!');
-		AdClassAll_Single();	
+		AdClassAll_Single(realPos, gaType);
     	}, 100);
 	};
 
@@ -912,72 +854,12 @@ function coldWeatherGA() {
 		'</li>'
 	);
 
-	function AdClassAll_Single(){
-	setTimeout(function(){
-		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
-		//console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
-		//console.log($('.product-grid li:nth-of-type(3)'));		
-		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
-	},1000);			
-	}AdClassAll_Single();
+	AdClassAll_Single(realPos, gaType);
 		
 }
 
 
 // END KIDS COLD WEATHER  GRID AD BANNER
-
-
-// KIDS SNOW DAYS GRID AD BANNER
-function KidsSnowDaysGA() {
-
-	//GRID AD TYPE:  enter 1 or 2
-	var gaType = 1;
-	//POSITION
-	var pos = 30;
-	//IMAGE URL 370x552
-	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDkvMjYvMTEvMDcvMTUvMTE5LzEwV2VlazFfQXByZXNTa2lfQkdBX0tfSU1HLmpwZyJdXQ/10Week1_ApresSki_BGA_K_IMG.jpg?sha=3772296bd3b7a355";
-	//LINK TEXT
-	var textLink = "SHOP NOW";
-	//LINK URL
-	var urlLINK = "#";
-	
-	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
-	var FixHeights;
-	var realPos = pos-1;
-	window.onresize = function() {
-    	clearTimeout(FixHeights);
-    	FixHeights = setTimeout(function() {
-		// console.log('yay it works!');
-		AdClassAll_Single();	
-    	}, 100);
-	};
-
-	$('.product-grid li:nth-of-type('+ realPos +')').after(
-		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
-		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
-		'<div class="product-grid-content-block__image"></div>'+
-		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
-		'<div class="content-block-content__container content-block-content__container--center">'+
-		'<div class="content-block-content__message content-block-content__message--light">'+
-		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
-		'</div>'+
-		'</div>'+
-		'</div>'+
-		'</div>'+
-		'</li>'
-	);
-	
-	function AdClassAll_Single(){
-	setInterval(function(){
-		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
-		//console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
-		//console.log($('.product-grid li:nth-of-type(3)'));		
-		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
-	},500);			
-	}AdClassAll_Single();
-
-}
-// END KIDS SNOW DAYS GRID AD BANNER
 
 
 // MENS COAT GRID AD BANNER
@@ -997,11 +879,11 @@ function mensCoatGA() {
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
-	window.onresize = function() {
+	window.onresize = function(e) {
     	clearTimeout(FixHeights);
     	FixHeights = setTimeout(function() {
 		// console.log('yay it works!');
-		AdClassAll_Single();	
+		AdClassAll_Single(realPos, gaType);
     	}, 100);
 	};
 
@@ -1020,14 +902,7 @@ function mensCoatGA() {
 		'</li>'
 	);
 	
-	function AdClassAll_Single(){
-	setTimeout(function(){
-		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
-		//console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
-		//console.log($('.product-grid li:nth-of-type(3)'));		
-		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
-	},1000);			
-	}AdClassAll_Single();
+	AdClassAll_Single(realPos, gaType);
 
 }
 // END MENS COAT GRID AD BANNER
@@ -1051,11 +926,11 @@ function womensFurGA() {
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
-	window.onresize = function() {
+	window.onresize = function(e) {
     	clearTimeout(FixHeights);
     	FixHeights = setTimeout(function() {
 		// console.log('yay it works!');
-		AdClassAll_Single();	
+		AdClassAll_Single(realPos, gaType);
     	}, 100);
 	};
 
@@ -1074,14 +949,7 @@ function womensFurGA() {
 		'</li>'
 	);
 	
-	function AdClassAll_Single(){
-	setTimeout(function(){
-		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
-		//console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
-		//console.log($('.product-grid li:nth-of-type(3)'));		
-		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
-	},1000);			
-	}AdClassAll_Single();
+	AdClassAll_Single(realPos, gaType);
 
 }
 // END WOMENS FUR GRID AD BANNER
@@ -1103,11 +971,11 @@ function contemporaryFurGA() {
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
-	window.onresize = function() {
+	window.onresize = function(e) {
     	clearTimeout(FixHeights);
     	FixHeights = setTimeout(function() {
 		// console.log('yay it works!');
-		AdClassAll_Single();	
+		AdClassAll_Single(realPos, gaType);
     	}, 100);
 	};
 
@@ -1126,14 +994,7 @@ function contemporaryFurGA() {
 		'</li>'
 	);
 
-	function AdClassAll_Single(){
-	setTimeout(function(){
-		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
-		//console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
-		//console.log($('.product-grid li:nth-of-type(3)'));		
-		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
-	},1000);			
-	}AdClassAll_Single();
+	AdClassAll_Single(realPos, gaType);
 
 }
 // END CONTEMPORARY COAT GRID AD BANNER
@@ -1157,11 +1018,11 @@ function BootsGA() {
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
-	window.onresize = function() {
+	window.onresize = function(e) {
     	clearTimeout(FixHeights);
     	FixHeights = setTimeout(function() {
 		// console.log('yay it works!');
-		AdClassAll_Single();	
+		AdClassAll_Single(realPos, gaType);
     	}, 100);
 	};
 
@@ -1180,14 +1041,7 @@ function BootsGA() {
 		'</li>'
 	);
 	
-	function AdClassAll_Single(){
-	setTimeout(function(){
-		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
-		//console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
-		//console.log($('.product-grid li:nth-of-type(3)'));		
-		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
-	},1000);			
-	}AdClassAll_Single();
+	AdClassAll_Single(realPos, gaType);
 
 }
 // END BOOTS GRID AD BANNER
@@ -1210,11 +1064,11 @@ function giftsGA() {
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
-	window.onresize = function() {
+	window.onresize = function(e) {
     	clearTimeout(FixHeights);
     	FixHeights = setTimeout(function() {
 		// console.log('yay it works!');
-		AdClassAll_Single();	
+		AdClassAll_Single(realPos, gaType);
     	}, 100);
 	};
 
@@ -1233,14 +1087,7 @@ function giftsGA() {
 		'</li>'
 	);
 	
-	function AdClassAll_Single(){
-	setTimeout(function(){
-		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 1) + ')').height();
-		//console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
-		//console.log($('.product-grid li:nth-of-type(3)'));		
-		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
-	},1000);			
-	}AdClassAll_Single();
+	AdClassAll_Single(realPos, gaType);
 
 }
 // END GIFTS GRID AD BANNER
@@ -1268,7 +1115,7 @@ function acquisitionGA() {
     	clearTimeout(FixHeights);
     	FixHeights = setTimeout(function() {
 		// console.log('yay it works!');
-		AdClassAll_Single();	
+		AdClassAll_Single(realPos, gaType);
     	}, 100);
 	};
 
@@ -1290,15 +1137,7 @@ function acquisitionGA() {
 		'</li>'
 	);
 
-	function AdClassAll_Single(){
-	setTimeout(function(){
-		var newHeight1 = $GridAd.outerHeight();
-		//console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
-		//console.log($('.product-grid li:nth-of-type(3)'));		
-		$('.jmrv-product-grid__cell--'+ gaType).outerHeight(newHeight1);
-	},1000);			
-	}AdClassAll_Single();
-
+	AdClassAll_Single(realPos, gaType);
 
 }
 // END ACQUISITION GRID AD BANNER
@@ -1325,7 +1164,7 @@ function retentionGA() {
     	clearTimeout(FixHeights);
     	FixHeights = setTimeout(function() {
 		// console.log('yay it works!');
-		AdClassAll_Single();	
+		AdClassAll_Single(realPos, gaType);
     	}, 100);
 	};
 
@@ -1344,58 +1183,160 @@ function retentionGA() {
 		'</li>'
 	);
 	
-	function AdClassAll_Single(){
-	setTimeout(function(){
-		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
-		//console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
-		//console.log($('.product-grid li:nth-of-type(3)'));		
-		$('.jmrv-product-grid__cell--1').height(newHeight1);
-	},2000);			
-	}AdClassAll_Single();
+	AdClassAll_Single(realPos, gaType);
 
 }
 // END RETENTION GRID AD BANNER
 
-
-	
-
+// RESIZING GRID ADS
+	function AdClassAll_Single(realPos, gaType){
+	setTimeout(function(){
+		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
+		//console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
+		//console.log($('.product-grid li:nth-of-type(3)'));		
+		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
+	},1500);			
+	}	
+// END RESIZING GRID ADS
 
 
 // PROMOTIONAL DISCOUNTS HELPFUL MESSAGE
 
-	$('.cart-prices__label').eq(1).html(function(){
+// 	var testing123 = $('.cart-prices__value span').parent().parent().children('.cart-prices__label');
+// 	console.log(testing123);
+// 
+// // 	$('.cart-prices__label').eq(1).html(function(){
+// 	$(testing123).html(function(){		
+// 		console.log(this);
+// 		var promotion_message = $(this).html();
+// 		console.log('Promotion message: ' + promotion_message);
+// 		$('.cart-prices__label').each(function(i) {
+// 			filtered_promotion_message = promotion_message.match(/\{([^}]+)\}/)[1];
+// 		});	
+// 		var new_promotion_message = promotion_message.replace("{", " ").replace("}", " ").replace(filtered_promotion_message, " ");	
+// 
+// 		//console.log('Promotion message: ' + promotion_message);
+// 		//console.log('Filtered promotion message: ' + filtered_promotion_message);	
+// 		//console.log('New promotion message: ' + new_promotion_message);			
+// 
+// 
+// 	    return $(this).html().replace(promotion_message, new_promotion_message);
+// 	});
+
+
+
+
+
+
+
+
+// HEIGHT PRODUCT GRID EVEN
+function fixingHeights(){
+	setTimeout(function(){  
+		var gridAds	= [];
+		$("ul.product-grid").children().each(function(){
+			gridAds.push($(this).height());
+		// 	console.log("this is: " + $(this).outerHeight(true));
+		});
+		console.log(gridAds);
+		var maxHeight = Math.max.apply(Math, gridAds);
+		console.log(maxHeight);
 		
-		console.log(this);
-		var promotion_message = $(this).html();
-		console.log('Promotion message: ' + promotion_message);
-		$('.cart-prices__label').each(function(i) {
-			filtered_promotion_message = promotion_message.match(/\{([^}]+)\}/)[1];
-		});	
-		var new_promotion_message = promotion_message.replace("{", " ").replace("}", " ").replace(filtered_promotion_message, " ");	
+		$('.product-grid__cell').css('height',maxHeight);
+		
+	}, 1000);
+}
 
-		//console.log('Promotion message: ' + promotion_message);
-		//console.log('Filtered promotion message: ' + filtered_promotion_message);	
-		//console.log('New promotion message: ' + new_promotion_message);			
+	
 
 
-	    return $(this).html().replace(promotion_message, new_promotion_message);
-	});
+//AUDIO UGLY SWEATERS
+
+function uglySweaters(){
+
+	if(window.location.href.indexOf("https://www.c21stores.com/products/reindeer-holiday-sound-sweater") > -1){
+		//$('.product-details__sub-section--description').append(
+		//'<audio controls>'+
+		//	'<source src="horse.ogg" type="audio/ogg">'+
+		//	'<source src="horse.mp3" type="audio/mpeg">'+
+		//	'Your browser does not support the audio element.'+
+		//'</audio>'
+		//);
+	}
+	else if(window.location.href.indexOf("https://www.c21stores.com/products/elf-dj-holiday-sweater") > -1){
+		$('.product-details__sub-section--description').append(
+		'<audio controls>'+
+	//		'<source src="https://www.c21stores.com/media/W1siZiIsIjIwMTYvMTEvMDEvMTUvNDgvMzAvNDAyLzI0NzVfMDQ1Ny5tcDMiXV0/2475-0457.mp3?sha=e61c6cd697fad8e8" type="audio/ogg">'+
+			'<source src="https://www.c21stores.com/media/W1siZiIsIjIwMTYvMTEvMDEvMTUvNDgvMzAvNDAyLzI0NzVfMDQ1Ny5tcDMiXV0/2475-0457.mp3?sha=e61c6cd697fad8e8" type="audio/mpeg">'+
+			'Your browser does not support the audio element.'+
+		'</audio>'
+		);
+	}
+
+}uglySweaters();
 
 
+$(window).load(function() {
 
-//HEIGHT FIX
-$("ul.product-grid").children().each(function(){
-	console.log($(this).outerHeight(true));
+function uniqueClasses(){
+
+// 	setTimeout(function(){
+		$(".primary-nav__item-node, .primary-nav__nav-menu").hover(function(){
+		
+			$('.primary-nav__nav-menu').each(function() {
+				// ADDING ID NAVIGATION
+				$(this).find('.primary-nav__item-node, span').each(function() {
+
+					var currentElement = $(this);
+					var value = currentElement.html();
+					var classValue = value.replace(/[^A-Z0-9]/ig, "");
+					console.log(value);
+					console.log(classValue);
+					$(currentElement).addClass(classValue);    
+				});
+			});
+		});
+		
+		$('.secondary-nav__nav-menu').each(function() {
+			// ADDING ID NAVIGATION
+			$(this).find('.secondary-nav__item-node, span').each(function() {
+
+				var currentElement = $(this);
+				var value = currentElement.html();
+				var classValue = value.replace(/[^A-Z0-9]/ig, "");
+				console.log(value);
+				console.log(classValue);
+				$(currentElement).addClass(classValue);    
+			
+			});
+		});
+// 
+// 	},1000);
+
+}uniqueClasses();
+	
 });
 
 
 
+
+//QUANITY ADDING NUMBERS
+// function quantityMore(){
+// 
+// 	if((window.location.href.indexOf("https://www.c21stores.com/products/7-piece-beauty-collection-tote-bag-set") > -1) || (window.location.href.indexOf("https://www.c21stores.com/cart") > -1)){
+// 		console.log("hello hello hello is there anybody in there");
+// 		$('#quantitycatalog_product_9539-9049000').append(
+// 			'<option value="13">13</option>'
+// 		);	
+// 	}
+// 
+// }quantityMore();
 
 //TEST COROMETRICS
-$( document ).ready(function() {
-	$('.br-sf-widget a').attr('name','BR_related_products').attr('categoryID','BR_related_productsID');
-
-});
-
-
-
+// $( document ).ready(function() {
+// 	$('.br-sf-widget a').attr('name','BR_related_products').attr('categoryID','BR_related_productsID');
+// 
+// });
+// 
+// 
+// 
