@@ -1,4 +1,4 @@
-// MASTER SCRIPTING NOV 11 2016
+// MASTER SCRIPTING NOV 17 2016
 // contact: jrios@c21stores.com
 
 // NAVIGATION COLORS
@@ -561,22 +561,20 @@ $(window).load(function() {
 		(window.location.href.indexOf("39agdh") > -1) || // Godinger
 		(window.location.href.indexOf("38afbh") > -1)//Adler
 	);
+
 					
  	//console.log(urlEshoes);
 
 	if(jm_cat === "Tech"){
-		giftsGA();	
 		TechBrowseGA();
 	}
 	else if(jm_cat === "New + Now"){
-		giftsGA();
+// 		giftsGA();
 	}
 	else if(jm_cat === "Beauty"){
-		giftsGA();
 		BeautyGA();
 	}
 	else if(jm_cat === "Shoes"){
-		giftsGA();
 		if(!urlEshoes){
 			BootsGA();
 		}		
@@ -588,35 +586,33 @@ $(window).load(function() {
 		}
 	}			
 	else if(jm_cat === "Kids"){
-		giftsGA();
 		if(!urlEkids){
 			coldWeatherGA();
 		}				
 	}
 	else if(jm_cat === "Contemporary"){
-		giftsGA();
 		if(!urlEcontemporary){
 			contemporaryFurGA();
 		}
 	}
 	else if(jm_cat === "Women"){
-		giftsGA();
 		if(!urlEmwomens){
 			womensFurGA();
 		}		
 	}
 	else if(jm_cat === "Men"){
-		giftsGA();
 		if(!urlEmens){
 			mensCoatGA();
 		}
 	}
 	else if(jm_cat === "Home"){
-		giftsGA();
 		if(!urlEhome){
 			homedecorGA();
 		}
 	}
+	else if(jm_cat === "Gifts"){
+			giftsGA();
+	}	
 	else{
 		return false;
 	}
@@ -1053,13 +1049,13 @@ function giftsGA() {
 	//GRID AD TYPE:  enter 1 or 2
 	var gaType = 1;
 	//POSITION
-	var pos = 29;
+	var pos = 30;
 	//IMAGE URL 370x552
-	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMTAvMjgvMTMvMjcvNDMvODIvMDFfMTFXZWVrMV9CR19ob2xpZGF5LmpwZyJdXQ/01_11Week1_BG_holiday.jpg?sha=633617e481413aca";
+	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMTEvMTcvMTUvMDQvMjAvNTkyLzExV2VlazRfQkdfR2lmdENhcmQuanBnIl1d/11Week4_BG_GiftCard.jpg?sha=affce9ca49929153";
 	//LINK TEXT
 	var textLink = "SHOP GIFTS";
 	//LINK URL
-	var urlLINK = "https://www.c21stores.com/pages/gifts";
+	var urlLINK = "https://www.c21stores.com/categories/gift-card";
 	
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
