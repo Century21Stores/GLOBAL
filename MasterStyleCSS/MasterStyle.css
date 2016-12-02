@@ -1,21 +1,74 @@
-/* CSS MASTER STYLE JMRV 100316 */
+/* CSS MASTER STYLE JMRV 120216 */
 @import "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTUvMDkvMTgvMDgvNTYvNTEvNjg4L01hc3RlclN0eWxlM19MYW5kaW5nUGFnZTA3MTUuY3NzIl1d/MasterStyle3_LandingPage0715.css?sha=5a57837dcb4befbf";
 @import "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDEvMTMvMTIvNDQvMTAvODUzL01hc3RlclN0eWxlUmFpbHN2MS5jc3MiXV0/MasterStyleRailsv1.css?sha=f040002bd75aca28";
 
-/* PLCC HEADER HIDDEN*/
+
+/* PLCC HEADER HIDDEN 
 .branded-content-wrapper{
 	display: block;
     position: absolute;
     width: 100%;
     z-index: -999;
-	opacity:0;
+	
 }
+.branded-card-header.branded-card-header--active{
+    position: absolute;
+    z-index: -999;
+    bottom:0;
+    opacity:0;    
+}
+*/
 
 /* NEW FONTS */
 @font-face{
     font-family: "Jenna-Sue";
-    src: url('https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDMvMDMvMDgvNTYvMjEvNzI1L0plbm5hU3VlLnR0ZiJdXQ/JennaSue.ttf?sha=b93911ab19e3b116'),
-    url('https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDMvMDMvMDgvNTYvMjEvNzI1L0plbm5hU3VlLnR0ZiJdXQ/JennaSue.ttf?sha=b93911ab19e3b116'); /* IE */
+    src: url('https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDMvMDMvMDgvNTYvMjEvNzI1L0plbm5hU3VlLnR0ZiJdXQ/JennaSue.ttf?sha=b93911ab19e3b116'),
+    url('https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDMvMDMvMDgvNTYvMjEvNzI1L0plbm5hU3VlLnR0ZiJdXQ/JennaSue.ttf?sha=b93911ab19e3b116'); /* IE */
+}
+
+/* VIDEOS PDP */
+.jm-videoClick{
+    bottom: 4%;
+    left: 0;
+    position: absolute;
+    /* background: red; */
+    width: 100%;
+    height: 9%;
+    z-index: 999;
+	text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.jm-pdp-video-wrap{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    text-align: center;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.82);
+    right: 0;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    justify-content: center;
+    -ms-align-items: center;
+    -ms-justify-content: center;
+}
+.jm-videoClick img{
+	width: 9%;
+    padding: 0 0 0%;
+    display: block;
+    margin: 0% auto;
+}
+
+/* MASTERS IMAGES FIX */
+.jm-anchor-package{
+position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 100%;
 }
 
 /* MEGA MENUS FIX */
@@ -28,7 +81,9 @@
     text-rendering: optimizeLegibility;    
 }
 /* ---------- FIXES ---------- */
-
+.content-block-content__message>h3>u{
+   text-decoration: line-through;
+}
 /* Remove Bullets from All Product Copy Sub-Sections */
 .product-details__sub-section li {
   list-style-type: none;
@@ -123,7 +178,7 @@ i{
     right: 1%;
 }
 .br-sf-widget-merchant-popup-close a{
-    content: url(https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDUvMDUvMTAvMjAvMDQvNjc0L1NjcmVlbl9TaG90XzIwMTZfMDVfMDVfYXRfMTAuMjAuNDJfQU0ucG5nIl1d/Screen%20Shot%202016-05-05%20at%2010.20.42%20AM.png?sha=cb9d9cdc4ec33360);
+    content: url(https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDUvMDUvMTAvMjAvMDQvNjc0L1NjcmVlbl9TaG90XzIwMTZfMDVfMDVfYXRfMTAuMjAuNDJfQU0ucG5nIl1d/Screen%20Shot%202016-05-05%20at%2010.20.42%20AM.png?sha=cb9d9cdc4ec33360);
 }
 .br-sf-widget-merchant-popup-img{
     width: 44%;
@@ -313,7 +368,7 @@ br{
     margin-right:1%;
 }
 .navigation-content-block--tall-2-small .navigation-content-block__item--tall-image{
-    margin-right:3%;
+    margin-right:2.3%;
 }
 .navigation-content-block__item--tall-image{
     max-width: 210px;    
@@ -476,22 +531,31 @@ br{
 
 
 /* SPECIAL SPLITTED HEADER */
-.jm-special-splitHeader{
-	overflow:auto;
-}
-.jm-special-splitHeader div{
-    width: 50%;
+.jm-special-splitHeader div {
+    width: 100%;
     text-align: center;
-    float: left;
-    background: #dedede;
-    padding: 1.3% 0;    
+    background: #f6f5f5;
+    padding: 1.3% 0;
+    -ms-flex-align: center;
+    justify-content: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+.jm-special-splitHeader {
+    display: -ms-flexbox;
+    width: 100%;
+    font-size: 2.3vw;
+}
+.jm-special-splitHeader br{
+	display:block;
 }
 .jm-special-splitHeader div.jm_left{
-    background: #f5f5f5;
+    background: #f6f5f5;
+    display: block;
 }
-.jm-special-splitHeader div.jm_right{
 
-}
 
 @media screen and (min-width: 700px){
 /* GENERAL OVERWRITE */
@@ -499,7 +563,7 @@ br{
 /* BRING BACK SPACES TAKEN OUT ON MOBILE */
 br{
     display:block;
-display: -moz-box;
+	display: -moz-box;
 }
 
 .page-content{
@@ -510,6 +574,21 @@ display: -moz-box;
 .jm-byCategory-wrap{
     background: none;
     padding: 0;
+}
+
+/* SPECIAL SPLITTED HEADER */
+.jm-special-splitHeader{
+	display: table;
+    width: 100%;
+	font-size: 1.1vw;    
+}
+.jm-special-splitHeader div{
+	width: 50%;
+    display: table-cell;
+    vertical-align: middle;  
+}
+.jm-special-splitHeader div.jm_left{
+    display: table-cell;
 }
 
 /* ALL COPY BACK TO INITIAL*/
@@ -525,6 +604,7 @@ display: -moz-box;
 .page-content__main .two-column-hero-content-block{
     margin-bottom: 1%;
 }
+
 
 /* --------------- FONTS --------------- */
 
@@ -886,6 +966,12 @@ color:rgba(255, 255, 255, 0);
     background-repeat: no-repeat;	
 }
 
+/* FIX */
+
+.hero-content-block .content-block-content--left{
+	right: 0;
+}
+
 }
 
 @media screen and (min-width: 768px){
@@ -939,6 +1025,11 @@ color:rgba(255, 255, 255, 0);
 }
 .jm-breath-children .product-details__item-details{
 	border-color:#fdfdfd
+}
+
+/* SPECIAL SPLITTED HEADER */
+.jm-special-splitHeader{
+	font-size: 1em;    
 }
 
 }
@@ -1013,6 +1104,27 @@ color:rgba(255, 255, 255, 0);
 }
 .three-column-square-content-block {
     margin: 0 0 7%;
+}
+.two-column-square-content-block__image{
+	background-size: 100%;
+}
+.two-column-square-content-block{
+	padding:1.3% 0;
+}
+/* SPECIAL SPLITTED HEADER */
+.jm-special-splitHeader div.jm_right{
+    position: absolute;
+    width: 75.4%;
+    right: 0;
+    top: 1.6%;
+    z-index: -1;
+}
+/* TIGHING UP FONT SIZES */
+h3.wysiwyg-font-size-x-large{
+    font-size: 4vw !important;
+}
+.content-block-content__message h3.wysiwyg-font-size-large.wysiwyg-font-family-serif {
+    font-size: 4vw;
 }
 
 }
