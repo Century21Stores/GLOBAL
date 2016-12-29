@@ -1,4 +1,4 @@
-/* CSS MASTER STYLE JMRV 122716 */
+/* CSS MASTER STYLE JMRV 122916 */
 @import "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTUvMDkvMTgvMDgvNTYvNTEvNjg4L01hc3RlclN0eWxlM19MYW5kaW5nUGFnZTA3MTUuY3NzIl1d/MasterStyle3_LandingPage0715.css?sha=5a57837dcb4befbf";
 @import "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDEvMTMvMTIvNDQvMTAvODUzL01hc3RlclN0eWxlUmFpbHN2MS5jc3MiXV0/MasterStyleRailsv1.css?sha=f040002bd75aca28";
 
@@ -35,40 +35,44 @@
 .content-block-content__message u{
 	text-decoration: line-through;
 }
-/* VIDEOS PDP */
-.jm-videoClick{
-    bottom: 4%;
-    left: 0;
-    position: absolute;
-    /* background: red; */
+/* LIGHT BOXES */
+.jm_dark_lightBox{
+	display:none;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
     width: 100%;
-    height: 9%;
-    z-index: 999;
-	text-align: center;
-    margin: 0 auto;
-    cursor: pointer;
+    background: rgba(0, 0, 0, 0.83);
+    left: 0;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -webkit-box-flex;
+    align-items: center;
+-webkit-align-items: center;
+-ms-align-items: center;
+    justify-content: center;
+-webkit-justify-content: center;
+-ms-justify-content: center;
 }
-.jm-pdp-video-wrap{
+.jm_dark_lightBox_X{
     position: fixed;
     width: 100%;
+    top: 0;
+    left: 0;
     height: 100%;
-    bottom: 0;
-    text-align: center;
-    z-index: 9999;
-    background: rgba(0, 0, 0, 0.82);
-    right: 0;
-    -webkit-align-items: center;
-    -webkit-justify-content: center;
-    align-items: center;
-    justify-content: center;
-    -ms-align-items: center;
-    -ms-justify-content: center;
+/*     background: rgba(0, 128, 0, 0.55); */ /* TESTING AREA */
+ 	z-index: 2;
+	cursor: pointer; 	
 }
-.jm-videoClick img{
-	width: 9%;
-    padding: 0 0 0%;
-    display: block;
-    margin: 0% auto;
+.jm_lightbox_X{
+    z-index: 99;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 27%;
+    z-index: 1;    
 }
 
 /* MASTERS IMAGES FIX */
@@ -339,10 +343,17 @@ i{
 
 /* GENERAL OVERWRITE */
 
+/* ELIMINATING REPEAT BACKGROUND IMAGES */			
+.two-column-square-content-block__image{			
+	background-repeat: no-repeat;			
+}
+
+
 .jm-mobile section{
   	margin-bottom: 9%;
   	position: relative;
 }
+
 
 /* ELIMINATE SPACES ON MOBILE */
 br{
