@@ -118,9 +118,17 @@ position: absolute;
 i{
    -webkit-font-smoothing: antialiased;    
 }
-
-
 /* ---------- END FIXES ---------- */
+
+/* MULTIPLE CTAS */
+.content-block-content__message p:not(.content-block-content__action){
+	display:none;
+}
+.jm-multipleCTA-space a{
+	margin: 0 1% 3%;
+}
+/* END MULTIPLE CTAS */
+
 
 /* IMAGE CLICKABLE FIX */
 #jm_img_anchor{
@@ -576,6 +584,38 @@ br{
     display: block;
 }
 
+@media screen and (min-width: 470px){
+/* MULTIPLE CTAS */
+.jm-multipleCTA-space a{
+    margin: 0% 6% 2%;
+}
+/* END MULTIPLE CTAS */
+}
+
+@media screen and (min-width: 670px){
+/* MULTIPLE CTAS */
+.jm-multipleCTA-space a{
+margin: 0 1%;
+}
+.jm-multipleCTA-space a:first-of-type{
+	margin-left: 0;
+}
+.jm-multipleCTA-space a:last-of-type{
+	margin-right: 0;
+}
+.jm-multipleCTA-space4 a{
+    margin: 0% 6%;
+}
+
+.jm-multipleCTA-space5 a{
+    margin: 0% 4% 2%;
+}
+.jm-multipleCTA-space5 a:nth-of-type(4),
+.jm-multipleCTA-space5 a:nth-of-type(5) {
+    margin-bottom: 0%;
+}
+/* END MULTIPLE CTAS */
+}
 
 @media screen and (min-width: 700px){
 /* GENERAL OVERWRITE */
@@ -991,6 +1031,19 @@ color:rgba(255, 255, 255, 0);
 .hero-content-block .content-block-content--left{
 	right: 0;
 }
+
+
+/* MULTIPLE CTAS */
+.jm-multipleCTA-space4 a{
+    margin: 0% 1% 0%;
+}
+.jm-multipleCTA-space2 a{
+    margin: 0% 1.5% 0%;    
+}
+.hero-content-block .content-block-content__container--center .jm-multipleCTA-space a{
+    margin: 0% 1% 0%;
+}
+/* END MULTIPLE CTAS */
 
 }
 
