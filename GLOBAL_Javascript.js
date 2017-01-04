@@ -1,11 +1,11 @@
-// MASTER SCRIPTING JAN 4th 2017
+// MASTER SCRIPTING JAN 04 2017
 // contact: jrios@c21stores.com
 
 
 // FIREING FUNCTIONS
 document.addEventListener( "DOMContentLoaded", uniqueClasses, false );
 document.addEventListener( "DOMContentLoaded", pdpVideos, false );
-// document.addEventListener( "DOMContentLoaded", pdpTieredPrice, false );
+document.addEventListener( "DOMContentLoaded", pdpTieredPrice, false );
 document.addEventListener( "DOMContentLoaded", pdpKnivesPDF, false );
 
 
@@ -1360,29 +1360,31 @@ $(document).on( 'click', '.product-summary__quickview a', function(){
 				   	console.log(tieredPriceChildren);
 					if (tieredPriceChildren == 2){
 						console.log(tieredPriceChildren);
-						$('.product-details__attributes').addClass('jm-tieredAttributes-QV');
-						$('.product-details__price-group').addClass('jm-tieredContainer-QV');
-						$('.product-details__price-group > .product-details__price-row').addClass('jm-tieredContainer-row-QV');
-						$('.product-details__price-row > .product-details__price--regular').addClass('jm-tieredContainer-regular-QV');
-						$('.product-details__price-row > .product-details__price--sell').addClass('jm-tieredContainer-sell-QV');
-						$('.product-details__price-row > .product-details__price--msrp').addClass('jm-tieredContainer-msrp-QV');
-						$('.product-details__price-row > .product-details__price--percent-saved').addClass('jm-tieredContainer-percent-saved-QV');
+						$('.inline-quickview__content .product-details__attributes').addClass('jm-tieredAttributes-QV');
+						$('.inline-quickview__content .product-details__price-group').addClass('jm-tieredContainer-QV');
+						$('.inline-quickview__content .product-details__price-group > .product-details__price-row').addClass('jm-tieredContainer-row-QV');
+						$('.inline-quickview__content .product-details__price-row > .product-details__price--regular').addClass('jm-tieredContainer-regular-QV');
+						$('.inline-quickview__content .product-details__price-row > .product-details__price--sell').addClass('jm-tieredContainer-sell-QV');
+						$('.inline-quickview__content .product-details__price-row > .product-details__price--msrp').addClass('jm-tieredContainer-msrp-QV');
+						$('.inline-quickview__content .product-details__price-row > .product-details__price--percent-saved').addClass('jm-tieredContainer-percent-saved-QV');
+						$('.inline-quickview__content .product-details__badge-container').addClass('jm-product-details__badge-container-QV');
 					}
 
 				}
 				else if (window.location.href.indexOf("products") > -1){
 				   	console.log('quickview Hearts');
-					var tieredPriceChildren = document.getElementsByClassName("product-details__price-row")[1].childElementCount;;
+					var tieredPriceChildren = document.getElementsByClassName("product-details__price-row")[2].childElementCount;;
 				   	console.log(tieredPriceChildren);
 					if (tieredPriceChildren == 2){
 						console.log(tieredPriceChildren);
-						$('.product-details__attributes').addClass('jm-tieredAttributes-QV');
-						$('.product-details__price-group').addClass('jm-tieredContainer-QV');
-						$('.product-details__price-group > .product-details__price-row').addClass('jm-tieredContainer-row-QV');
-						$('.product-details__price-row > .product-details__price--regular').addClass('jm-tieredContainer-regular-QV');
-						$('.product-details__price-row > .product-details__price--sell').addClass('jm-tieredContainer-sell-QV');
-						$('.product-details__price-row > .product-details__price--msrp').addClass('jm-tieredContainer-msrp-QV');
-						$('.product-details__price-row > .product-details__price--percent-saved').addClass('jm-tieredContainer-percent-saved-QV');
+						$('.inline-quickview__content .product-details__attributes').addClass('jm-tieredAttributes-QV');
+						$('.inline-quickview__content .product-details__price-group').addClass('jm-tieredContainer-QV');
+						$('.inline-quickview__content .product-details__price-group > .product-details__price-row').addClass('jm-tieredContainer-row-QV');
+						$('.inline-quickview__content .product-details__price-row > .product-details__price--regular').addClass('jm-tieredContainer-regular-QV');
+						$('.inline-quickview__content .product-details__price-row > .product-details__price--sell').addClass('jm-tieredContainer-sell-QV');
+						$('.inline-quickview__content .product-details__price-row > .product-details__price--msrp').addClass('jm-tieredContainer-msrp-QV');
+						$('.inline-quickview__content .product-details__price-row > .product-details__price--percent-saved').addClass('jm-tieredContainer-percent-saved-QV');
+						$('.inline-quickview__content .product-details__badge-container').addClass('jm-product-details__badge-container-QV');
 					}
 
 				}
