@@ -1,5 +1,13 @@
-// MASTER SCRIPTING DEC 29 2016
+// MASTER SCRIPTING JAN 4th 2017
 // contact: jrios@c21stores.com
+
+
+// FIREING FUNCTIONS
+document.addEventListener( "DOMContentLoaded", uniqueClasses, false );
+document.addEventListener( "DOMContentLoaded", pdpVideos, false );
+// document.addEventListener( "DOMContentLoaded", pdpTieredPrice, false );
+document.addEventListener( "DOMContentLoaded", pdpKnivesPDF, false );
+
 
 // NAVIGATION COLORS
 $( "span:contains('Clearance')" ).css( "color", "#EA2C3B" );
@@ -1117,8 +1125,8 @@ function uglySweaters(){
 }uglySweaters();
 
 
-$(window).load(function() {
 
+// UNIQUE CLASSES NAMING FOR CATEGORIES
 function uniqueClasses(){
 
 // 	setTimeout(function(){
@@ -1154,9 +1162,9 @@ function uniqueClasses(){
 // 
 // 	},1000);
 
-}uniqueClasses();
+};
 	
-});
+// END UNIQUE CLASSES NAMING FOR CATEGORIES
 
 
 function bannersMassive(){
@@ -1172,7 +1180,6 @@ function bannersMassive(){
 
 
 // VIDEO PLCC JEWELRY
-$(window).load(function() {
 function pdpVideos(){
 
 	var jewelr_Pull_PI = $('.product-details__id span').text();
@@ -1233,6 +1240,7 @@ function pdpVideos(){
 	function togglitoPDPVideo(){
 		$("#playJV").click(function(){
 			$('#sticky-wrapper').css('z-index','9');
+			$('.page-content').css('z-index','999');			
 			$(".jm_dark_lightBox").fadeToggle(1300).css('display','flex').css('display','-ms-flexbox').css('display','-webkit-flex');
 		　　videoControl("playVideo"); 
 		});
@@ -1241,6 +1249,7 @@ function pdpVideos(){
 	function togglitoPDPVideoOUT(){
 		$("#stopJV").click(function(){
 			$('#sticky-wrapper').css('z-index','99');
+			$('.page-content').css('z-index','9');	
 			$(".jm_dark_lightBox").fadeToggle(1300).css('display','flex').css('display','-ms-flexbox').css('display','-webkit-flex');
 		　　videoControl("stopVideo");
 		});
@@ -1253,9 +1262,7 @@ function pdpVideos(){
 
 
 	
-}pdpVideos();
-
-});
+};
 
 // END VIDEO PLCC JEWELRY
 
@@ -1318,6 +1325,139 @@ if (hero_number_CTA > 1){
 
 
 
+
+// TIERED PRICING
+
+
+function pdpTieredPrice(){
+
+	if(window.location.href.indexOf("products") > -1){
+
+		var tieredPriceChildren = document.getElementsByClassName("product-details__price-row")[0].childElementCount;;
+		if (tieredPriceChildren == 2){
+			console.log(tieredPriceChildren);
+			$('.product-details__price-group').addClass('jm-tieredContainer');
+			$('.product-details__price-group > .product-details__price-row').addClass('jm-tieredContainer-row');
+			$('.product-details__price-row > .product-details__price--regular').addClass('jm-tieredContainer-regular');
+			$('.product-details__price-row > .product-details__price--sell').addClass('jm-tieredContainer-sell');
+			$('.product-details__price-row > .product-details__price--msrp').addClass('jm-tieredContainer-msrp');
+			$('.product-details__price-row > .product-details__price--percent-saved').addClass('jm-tieredContainer-percent-saved');						
+		}
+
+	}
+	
+};
+
+
+
+$(document).on( 'click', '.product-summary__quickview a', function(){
+	setTimeout(function() {   //calls click event after a certain time
+	   	console.log('quickview');
+			function quickViewTieredPrice(){
+
+				if((window.location.href.indexOf("categories") > -1) || (window.location.href.indexOf("hearts") > -1)){
+					var tieredPriceChildren = document.getElementsByClassName("product-details__price-row")[0].childElementCount;;
+				   	console.log(tieredPriceChildren);
+					if (tieredPriceChildren == 2){
+						console.log(tieredPriceChildren);
+						$('.product-details__attributes').addClass('jm-tieredAttributes-QV');
+						$('.product-details__price-group').addClass('jm-tieredContainer-QV');
+						$('.product-details__price-group > .product-details__price-row').addClass('jm-tieredContainer-row-QV');
+						$('.product-details__price-row > .product-details__price--regular').addClass('jm-tieredContainer-regular-QV');
+						$('.product-details__price-row > .product-details__price--sell').addClass('jm-tieredContainer-sell-QV');
+						$('.product-details__price-row > .product-details__price--msrp').addClass('jm-tieredContainer-msrp-QV');
+						$('.product-details__price-row > .product-details__price--percent-saved').addClass('jm-tieredContainer-percent-saved-QV');
+					}
+
+				}
+				else if (window.location.href.indexOf("products") > -1){
+				   	console.log('quickview Hearts');
+					var tieredPriceChildren = document.getElementsByClassName("product-details__price-row")[1].childElementCount;;
+				   	console.log(tieredPriceChildren);
+					if (tieredPriceChildren == 2){
+						console.log(tieredPriceChildren);
+						$('.product-details__attributes').addClass('jm-tieredAttributes-QV');
+						$('.product-details__price-group').addClass('jm-tieredContainer-QV');
+						$('.product-details__price-group > .product-details__price-row').addClass('jm-tieredContainer-row-QV');
+						$('.product-details__price-row > .product-details__price--regular').addClass('jm-tieredContainer-regular-QV');
+						$('.product-details__price-row > .product-details__price--sell').addClass('jm-tieredContainer-sell-QV');
+						$('.product-details__price-row > .product-details__price--msrp').addClass('jm-tieredContainer-msrp-QV');
+						$('.product-details__price-row > .product-details__price--percent-saved').addClass('jm-tieredContainer-percent-saved-QV');
+					}
+
+				}
+					
+			}quickViewTieredPrice();
+	}, 1000);
+	
+
+});
+// END TIERED PRICING
+
+
+// KNIVES PDF KNIVES PDF KNIVES PDF KNIVES PDF KNIVES PDF
+function pdpKnivesPDF(){
+
+
+	var wusthof_knives = $('.product-details__id span').text();
+// 	console.log(jewelr_Pull_PI);
+	var listWusthofKnives = [
+		'7086-3538000',
+		'7086-3260000',
+		'7029-6399000',
+		'7029-7030000',
+		'7086-0425000',
+		'7086-0483000',
+		'7086-1081000',
+		'7086-2086000',
+		'7086-3205000',
+		'7086-3260000',
+		'7086-3538000',
+		'7086-4456000',
+		'7086-9169000',
+		'7086-9537000'	
+		];
+// 	console.log(listVideoJewelry);
+
+	if(listWusthofKnives.indexOf(wusthof_knives) !== -1){
+// 	if(listWusthofKnives.includes(wusthof_knives)){
+		console.log("machete machete machete");
+		$('.product-details__description-body ul li:last-of-type').append(
+			//'<li><a href="https://www.c21stores.com/media/W1siZiIsIjIwMTYvMTIvMDcvMTYvMzEvMDUvMzQ0L1JpZ2h0X0tuaWZlX2Zvcl90aGVfUmlnaHRfSm9iLnBkZiJdXQ/Right%20Knife%20for%20the%20Right%20Job.pdf?sha=93adee9bf2f82289" target="_blank" style="text-decoration:none;">Guide: The Right Knife for the Right Job</a></li>'
+			'<li>To find the Right Knife for the Right Job, <a id="playPDF" href="#1">'+
+			'click here'+			
+			'</a></li>' +
+			'<div class="jm_dark_lightBox" id="jm_dark_lightBox" style="display:none;">'+
+			'<object style="width: 49%; height: 90%; z-index: 9999999; position: relative;" data="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTIvMDcvMTYvMzEvMDUvMzQ0L1JpZ2h0X0tuaWZlX2Zvcl90aGVfUmlnaHRfSm9iLnBkZiJdXQ/Right%20Knife%20for%20the%20Right%20Job.pdf?sha=93adee9bf2f82289" type="application/pdf" width="100%" height="100%">'+
+   				'<p>This browser does not support PDFs Viewer. Please download the PDF to view it: <a href="/pdf/sample-3pp.pdf">Download PDF</a>. <br/> or open the PDF <a href="https://www.c21stores.com/media/W1siZiIsIjIwMTYvMTIvMDcvMTYvMzEvMDUvMzQ0L1JpZ2h0X0tuaWZlX2Zvcl90aGVfUmlnaHRfSm9iLnBkZiJdXQ/Right%20Knife%20for%20the%20Right%20Job.pdf?sha=93adee9bf2f82289" target="_blank"> cLick here</a> </p>'+
+			'</object>'+
+			'<p style="position: absolute; top: 2%; right: 2%; font-size: 20px; font-weight: lighter;">X</p>'+
+			'<a id="stopPDF" class="jm_dark_lightBox_X"></a>'+			
+			'</div>'			
+		);		
+		function togglitoPDPPDF(){
+			$("#playPDF").click(function(){
+				$('#sticky-wrapper').css('z-index','9');
+				$('.page-content').css('z-index','999');
+				$(".jm_dark_lightBox").fadeToggle(1300).css('display','flex').css('display','-ms-flexbox').css('display','-webkit-flex').css('display','webkit-box-flex');
+			});
+						
+		}togglitoPDPPDF();
+		function togglitoPDPDPFOUT(){
+			$("#stopPDF").click(function(){
+				$('#sticky-wrapper').css('z-index','99');
+				$('.page-content').css('z-index','9');				
+				$(".jm_dark_lightBox").fadeToggle(800).css('display','flex').css('display','-ms-flexbox').css('display','-webkit-flex').css('display','webkit-box-flex');
+			});				
+		}togglitoPDPDPFOUT();
+
+	}
+
+	
+};
+// END KNIVES PDF KNIVES PDF KNIVES PDF KNIVES PDF KNIVES PDF
+
+
 //QUANITY ADDING NUMBERS
 // function quantityMore(){
 // 
@@ -1339,3 +1479,4 @@ if (hero_number_CTA > 1){
 // 
 // 
 
+console.log('all running');
