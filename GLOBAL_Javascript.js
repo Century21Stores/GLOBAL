@@ -766,7 +766,7 @@ function clearanceGA() {
 	//POSITION
 	var pos = 30;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTIvMjMvMTIvMDMvMTMvMjIvMDFfMTJXZWVrNV9CR19jbGVhcmFuY2UuanBnIl1d/01_12Week5_BG_clearance.jpg?sha=7de0ffeb8fed6cc7";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDEvMDUvMTUvNTYvMTQvNjE3LzAxXzAxV2VlazJfQkdfY2xlYXJhbmNlLmpwZyJdXQ/01_01Week2_BG_clearance.jpg?sha=068b14c5585163c9";
 	//LINK TEXT
 	var textLink = "SHOP NOW";
 	//LINK URL
