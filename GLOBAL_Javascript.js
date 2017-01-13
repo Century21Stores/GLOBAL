@@ -1,4 +1,5 @@
-// MASTER SCRIPTING JAN 04 2017
+// GA 90% ADDED
+// MASTER SCRIPTING JAN 13 2017
 // contact: jrios@c21stores.com
 
 
@@ -766,7 +767,7 @@ function clearanceGA() {
 	//POSITION
 	var pos = 30;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDEvMDUvMTUvNTYvMTQvNjE3LzAxXzAxV2VlazJfQkdfY2xlYXJhbmNlLmpwZyJdXQ/01_01Week2_BG_clearance.jpg?sha=068b14c5585163c9";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDEvMTMvMTEvNDgvNDAvOTAvMDFfMDFXZWVrM19CR19jbGVhcmFuY2UuanBnIl1d/01_01Week3_BG_clearance.jpg?sha=c994f041827ecf56";
 	//LINK TEXT
 	var textLink = "SHOP NOW";
 	//LINK URL
@@ -1282,8 +1283,8 @@ $('.hero-content-block, .banner-content-block').each(function(index){
 if (hero_number_CTA > 1){
 	console.log("multi multi");
     $(this).find('.content-block-content__message p:not(.content-block-content__action)').each(function(index){
-		var multi_CTA_text = $(this).html().split("-")[0];
-		var multi_CTA_url = $(this).html().split("-")[1].replace("<br>", "").replace(" ", "");
+		var multi_CTA_text = $(this).html().split("*")[0];
+		var multi_CTA_url = $(this).html().split("*")[1].replace("<br>", "").replace(" ", "");
 		var multi_CTA_wrap = $(this).parent();
 				
 		console.log(multi_CTA_url);
