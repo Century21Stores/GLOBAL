@@ -1,5 +1,5 @@
 // GA 90% ADDED
-// MASTER SCRIPTING JAN 13 2017
+// MASTER SCRIPTING JAN 20 2017
 // contact: jrios@c21stores.com
 
 
@@ -8,15 +8,6 @@ document.addEventListener( "DOMContentLoaded", uniqueClasses, false );
 document.addEventListener( "DOMContentLoaded", pdpVideos, false );
 document.addEventListener( "DOMContentLoaded", pdpTieredPrice, false );
 document.addEventListener( "DOMContentLoaded", pdpKnivesPDF, false );
-
-
-// NAVIGATION COLORS
-$( "span:contains('Clearance')" ).css( "color", "#EA2C3B" );
-$( "a:contains('Clearance')" ).css( "color", "#EA2C3B" );
-$("body").on("mouseenter mouseleave", "a", function(){
-$( "span:contains('Clearance')" ).css( "color", "#EA2C3B" );
-});
-
 
 
 
