@@ -1,5 +1,5 @@
-// SPRING GA W0317
-// MASTER SCRIPTING JAN 13 2017
+// LIGHT BOX PUSH FOR W0317
+// MASTER SCRIPTING FEB 13 2017
 // contact: jrios@c21stores.com
 
 
@@ -75,8 +75,8 @@ if ($(window).width() >= 1050) {
 
 
 //CLICKABLE IMAGES
-$(document).ready(function(){
-
+// $(document).ready(function(){
+function clonningClickEvent(){
     $('.hero-content-block, .three-column-square-content-block__container, .large-square-plus-two-content-block__container--large-image, .large-square-plus-two-content-block__container--small-image, .large-square-plus-one-content-block__container--large-image, .two-column-square-content-block__container, .two-column-hero-content-block__container, .jm-image-clickable').each(function(){
        var new_data= $('a:first-of-type', this).clone();
        	new_data.attr("id", "jm_img_anchor");
@@ -90,8 +90,8 @@ $(document).ready(function(){
        	new_data.removeAttr("class");	
     	new_data.appendTo(this);
     });
-   
-});
+}clonningClickEvent();   
+// });
 //END CLICKABLE IMAGES
 
 
@@ -1295,7 +1295,7 @@ function retentionGA() {
 	//POSITION
 	var pos = 46;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDkvMTQvMTYvMjkvMTkvNzc3LzA5V2VlazRfUExDQ19HcmlkX1JldGVudGlvbjIuanBnIl1d/09Week4_PLCC_Grid_Retention2.jpg?sha=68c4450c40899332";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDIvMTMvMTUvNTQvMTMvOTUzLzA5V2VlazRfUExDQ19HcmlkX1JldGVudGlvbjIuanBnIl1d/09Week4_PLCC_Grid_Retention2.jpg?sha=020b263e54ca1df2";
 	//LINK TEXT
 	var textLink = "LEARN MORE";
 	//LINK URL
@@ -1583,59 +1583,131 @@ function pdpVideos(){
 
 // MULTIPLE CTAS CONTENT BLOCKS
 $('.hero-content-block, .banner-content-block').each(function(index){
+	console.log("before multi multi");
 	console.log(this);
-
 	//MULTIPLE CTA HERO
 	var hero_number_CTA = $(this).find('.content-block-content__message').children('p').length;
 	var initial_CTA_class = $(this).find('.content-block-content__action a').attr('class');
+// 	var CTAtext = $(this).find('.content-block-content__message > p > a').html();
+	var CTAtext_URL = $(this).find('.content-block-content__message > p > a').attr('href');
+	console.log('URLs' + CTAtext_URL);
 	console.log(hero_number_CTA);
 // 	console.log(initial_CTA_class);	
 
+if(hero_number_CTA !=0 ){
+	var CTAtext = $(this).find('.content-block-content__message > p > a').html().toLowerCase();
+	// IF THERE IS MULTIPLE CTA
+	if (hero_number_CTA > 1){
+			$(this).find('.content-block-content__action').fadeIn(600);	
+			console.log("multi multi");
+			jm_hero_FirstCTA = $(this).find('.content-block-content__action a').eq(0);
+			jm_hero_FirstCTA_url = jm_hero_FirstCTA.attr('href');
+// 			console.log('this url ' + jm_hero_FirstCTA_url);
+			jm_hero_FirstCTA_text = jm_hero_FirstCTA.text().toLowerCase();
+			
+			if (jm_hero_FirstCTA_url.indexOf("#jmlb") > -1){
+				console.log('first is hidden');
+				jm_hero_FirstCTA.addClass('jm_bottom_lightbox').wrapInner( '<div class="jm_lightBox_CTA"></div>');
+				jm_hero_FirstCTA.addClass('JM_trigger_ligthBox');
+				console.log ('coming crispy' + $(this));
+					   	var new_data_lb = $('.jm_bottom_lightbox:first-of-type', this).clone();
+						new_data_lb.attr("id", "jm_img_anchor_LB");
+// 						new_data_lb.removeAttr("class");	
+						new_data_lb.appendTo(this);
+				$(this).find('.JM_trigger_ligthBox').hide(100);
+				console.log(jm_hero_FirstCTA);
+			}	
+			
+			
+			$(this).find('.content-block-content__message p:not(.content-block-content__action)').each(function(index){
+			multi_cta_copy = $(this).html();
+					console.log(multi_cta_copy);
 
-if (hero_number_CTA > 1){
-	console.log("multi multi");
-    $(this).find('.content-block-content__message p:not(.content-block-content__action)').each(function(index){
-		var multi_CTA_text = $(this).html().split("*")[0];
-		var multi_CTA_url = $(this).html().split("*")[1].replace("<br>", "").replace(" ", "");
-		var multi_CTA_wrap = $(this).parent();
+			if (multi_cta_copy.indexOf("*") > -1){
+				var multi_CTA_text = $(this).html().split("*")[0];
+				var multi_CTA_url = $(this).html().split("*")[1].replace("<br>", "").replace(" ", "");
+				var multi_CTA_wrap = $(this).parent();
 				
-		console.log(multi_CTA_url);
-// 		console.log($(this).html().split("-")[0]);
-// 		console.log($(this).html().split("-")[1]);		
-		
-		$(multi_CTA_wrap).find('.content-block-content__action').addClass("jm-multipleCTA-space").append(
-		'<a class="' + initial_CTA_class +'" href="' + multi_CTA_url + '">' + multi_CTA_text + '</a>'
-		)
-    });
-	
-	if(hero_number_CTA == 5){
-	    $(this).find('.content-block-content__action').addClass("jm-multipleCTA-space5");    
-		if ($(window).width() < 700) {
-			$(this).find('.hero-content-block__content-boundary, .content-block-content').css("min-height","171vw");
-		}	    
-	}
-	else if(hero_number_CTA == 4){
-	    $(this).find('.content-block-content__action').addClass("jm-multipleCTA-space4");
-	    $(this).find('.content-block-content__action').parent().eq(2).addClass("jm-multipleCTA-container");	    
-		if ($(window).width() < 700) {
-		    $(this).find('.hero-content-block__content-boundary, .content-block-content').css("min-height","160vw");
-		}
-	}	
-	else if(hero_number_CTA == 3){
-	    $(this).find('.content-block-content__action').addClass("jm-multipleCTA-space3");	
-		if ($(window).width() < 700) {
-		    $(this).find('.hero-content-block__content-boundary, .content-block-content').css("min-height","160vw");
-		}
-	}	
-	else if(hero_number_CTA == 2){
-	    $(this).find('.content-block-content__action').addClass("jm-multipleCTA-space2");
-	}			
-	$('.hero-content-block > a').hide();
-}
+					console.log(multi_CTA_url);
+										
+					$(multi_CTA_wrap).find('.content-block-content__action').addClass("jm-multipleCTA-space").append(
+						'<a class="' + initial_CTA_class +'" href="' + multi_CTA_url + '">' + multi_CTA_text + '</a>'					
+					)
 
+					
+// 					if (multi_CTA_url.indexOf("#jmlb") > -1){
+// 						console.log('first is hidden of Others');
+// 						multi_CTA_url.addClass('JM_trigger_ligthBox');
+// 					}	
+										
+			}
+			
+			});
+			if(hero_number_CTA == 5){
+				$(this).find('.content-block-content__action').addClass("jm-multipleCTA-space5");    
+				if ($(window).width() < 700) {
+					$(this).find('.hero-content-block__content-boundary, .content-block-content').css("min-height","171vw");
+				}	    
+			}
+			else if(hero_number_CTA == 4){
+				$(this).find('.content-block-content__action').addClass("jm-multipleCTA-space4");
+				$(this).find('.content-block-content__action').parent().eq(2).addClass("jm-multipleCTA-container");	    
+				if ($(window).width() < 700) {
+					$(this).find('.hero-content-block__content-boundary, .content-block-content').css("min-height","160vw");
+				}
+			}	
+			else if(hero_number_CTA == 3){
+				$(this).find('.content-block-content__action').addClass("jm-multipleCTA-space3");	
+				if ($(window).width() < 700) {
+					$(this).find('.hero-content-block__content-boundary, .content-block-content').css("min-height","160vw");
+				}
+			}	
+			else if(hero_number_CTA == 2){
+				$(this).find('.content-block-content__action').addClass("jm-multipleCTA-space2");
+			}			
+// 			$('.hero-content-block > a').hide();
+	
+	}	
+
+	// IF THERE IS ONE CTA WITH WORD LIGHTBOX LB
+	else if ((hero_number_CTA = 1) && (CTAtext_URL.indexOf("#jmlb") > -1)){	
+		console.log('unoLightBox!!');
+		$(this).find('.content-block-content__action').fadeIn(600);
+		$(this).find('a').addClass('JM_trigger_ligthBox').addClass('jm_show_important');
+// 		$(this).find('a').addClass('JM_trigger_ligthBox').addClass('jm_show_important').addClass('jm_bottom_lightbox').wrapInner( '<div class="jm_lightBox_CTA"></div>');
+
+		// IF THERE IS ONE CTA WITH WORD LIGHTBOX LB and ALSO HIDE
+		if ((hero_number_CTA = 1) && ( CTAtext.indexOf("jmhide") > -1)){	
+			console.log('unoHidden&LightBox!!');
+			$(this).find('.content-block-content__action').hide();
+		}
+		else if ((hero_number_CTA = 1) && ( CTAtext_URL.indexOf("#jmdetails") > -1)){			
+			$(this).find('a').addClass('JM_trigger_ligthBox').addClass('jm_show_important').addClass('jm_bottom_lightbox').wrapInner( '<div class="jm_lightBox_CTA"></div>');
+			$(this).find('.content-block-content').addClass('jmrv-desktop');
+		}
+		
+	}
+
+	// IF THERE IS ONE CTA WITH WORD HIDE
+	else if ((hero_number_CTA = 1) && ( CTAtext.indexOf("jmhide") > -1)){	
+		console.log('unohidden!!');
+		$(this).find('.content-block-content__action').hide();
+	}
+
+	// ELSE DISPLAY ALL CTAs
+	else{
+		$(this).find('.content-block-content__action').fadeIn(600);
+	};
+
+
+}
+	
+
+	$('.rich-text-content-block p:last-child').addClass('jm_X_Hero_lightBox');
+
+	
 });
 // END MULTIPLE CTAS CONTENT BLOCKS
-
 
 
 
@@ -1773,25 +1845,57 @@ function pdpKnivesPDF(){
 // END KNIVES PDF KNIVES PDF KNIVES PDF KNIVES PDF KNIVES PDF
 
 
-//QUANITY ADDING NUMBERS
-// function quantityMore(){
-// 
-// 	if((window.location.href.indexOf("https://www.c21stores.com/products/7-piece-beauty-collection-tote-bag-set") > -1) || (window.location.href.indexOf("https://www.c21stores.com/cart") > -1)){
-// 		console.log("hello hello hello is there anybody in there");
-// 		$('#quantitycatalog_product_9539-9049000').append(
-// 			'<option value="13">13</option>'
-// 		);	
-// 	}
-// 
-// }quantityMore();
+// ADDING CLASSES TO LPs BASED ON WIDTH AND NAMES
+function addingClass_LP_width(){ 
 
-//TEST COROMETRICS
-// $( document ).ready(function() {
-// 	$('.br-sf-widget a').attr('name','BR_related_products').attr('categoryID','BR_related_productsID');
-// 
-// });
-// 
-// 
-// 
+	//If there is  a Left Nav add class 1170 and name of LP
+	if($('.page-content__wrapper').find('div.page-content__aside').length == 1){
+		$('.view').addClass('jm_lp_1170');
+		nameLP = $('.view h1').html().toLowerCase();
+		$('.view').addClass('jm_lp_' + nameLP);
+	}
+	//If there is not Left Nav add class 1440
+	else{
+		$('.view').addClass('jm_lp_1440');
+	};
+	
+}
+// END ADDING CLASSES TO LPs BASED ON WIDTH AND NAMES
+
+
+// LIGHT BOX GENERAL
+function Lightbox_heroCTA(){
+
+    $('.rich-text-content-block').each(function() {
+    console.log("YEA YEA" +this);
+        var currentImage = $(this);
+        currentImage.wrap('<div class="jm_dark_lightBox" id="jm_dark_lightBox" style="display:none;"></div>');
+    });
+    
+}Lightbox_heroCTA();
+
+function Lightbox_heroCTA_ClickEvent(){
+	$(".JM_trigger_ligthBox").click(function(){
+		console.log('muaaaaaniii!!!');
+		// $(this).parent().next().addClass('jm_displayflex');
+		$(this).closest('div.hero-content-block').next().find('.rich-text-content-block').fadeIn(1000);
+		$(this).closest('div.hero-content-block').next().fadeIn(1000).addClass("jm_displayflex");
+		$(this).closest('div.hero-content-block').next().append(
+			'<p class="jm_dark_lightBox_X">X</p>'			
+		);
+		$(".jm_dark_lightBox_X").click(function(){
+			$(this).stop().parent().fadeOut(300);
+				
+		});
+		$(".jm_X_Hero_lightBox").click(function(){
+			$('.jm_displayflex').stop().fadeOut(300);
+				
+		});		
+	});
+}Lightbox_heroCTA_ClickEvent();
+
+
+// END LIGHT BOX GENERAL
+ 
 
 console.log('all running');
