@@ -1,5 +1,7 @@
+<script>
+
 // LIGHT BOX PUSH FOR W0317
-// MASTER SCRIPTING FEB 13 2017
+// MASTER SCRIPTING FEB 16 2017
 // contact: jrios@c21stores.com
 
 
@@ -502,7 +504,8 @@ $(window).load(function() {
 		(window.location.href.indexOf("arrivals") > -1) ||
 		(window.location.href.indexOf("gifts") > -1) ||
 		(window.location.href.indexOf("essentials") > -1) ||		
-		(window.location.href.indexOf("shop") > -1) ||
+		(window.location.href.indexOf("weather") > -1) ||
+		(window.location.href.indexOf("occasion") > -1) ||		
 		(window.location.href.indexOf("occasion") > -1) ||		
 		(window.location.href.indexOf("disney") > -1) ||	
 		(window.location.href.indexOf("toys") > -1)
@@ -590,17 +593,9 @@ $(window).load(function() {
 		}
 	}			
 	else if(jm_cat === "Kids"){
-		if(!urlEspecial){
-			if(!urlEkids){
-				if(!urlEspecial_Active){
-					getActiveKidGA();
-				}
-			}		
-// 			clearanceGA();
-		}
-		else{
-			getActiveKidGA();
-		}
+		if(!urlEkids){
+			kidsNewArrivalsGA();
+		}		
 	}
 	else if(jm_cat === "Contemporary"){		
 		if(!urlEcontemporary){
@@ -686,6 +681,51 @@ function freeShippingTechGA() {
 
 }
 // END TECH FREESHIPPING GRID AD BANNER
+
+// KIDS NEW ARRIVALS AD BANNER
+function kidsNewArrivalsGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDIvMTYvMTYvNDYvNTYvNTgyLzAxXzAyV2VlazNfQkdfbmV3YXJyaXZhbHNfa2lkcy5qcGciXV0/01_02Week3_BG_newarrivals_kids.jpg?sha=2f90be880b89d2f3";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/categories/kids-new-arrivals";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function(e) {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single(realPos, gaType);
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--light">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	AdClassAll_Single(realPos, gaType);
+
+}
+// END KIDS NEW ARRIVALS GRID AD BANNER
 
 // BEAUTY FREESHIPPING GRID AD BANNER
 function freeShippingBeautyGA() {
