@@ -1,9 +1,13 @@
-/* HOVER ADD TO BAG */
-/* CSS MASTER STYLE JMRV 012017 */
+/* LIGHT BOX PUSH FOR W03D */
+/* CSS MASTER STYLE JMRV 03132017 */
 @import "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTUvMDkvMTgvMDgvNTYvNTEvNjg4L01hc3RlclN0eWxlM19MYW5kaW5nUGFnZTA3MTUuY3NzIl1d/MasterStyle3_LandingPage0715.css?sha=5a57837dcb4befbf";
 @import "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDEvMTMvMTIvNDQvMTAvODUzL01hc3RlclN0eWxlUmFpbHN2MS5jc3MiXV0/MasterStyleRailsv1.css?sha=f040002bd75aca28";
 
 /* ..................... OVERWRITES .....................*/
+/*.branded-card-header{
+display:none !important;
+}*/
+
 .Clearance, .CLEARANCE{
     color: rgb(234, 44, 59) !important;
 }
@@ -11,6 +15,12 @@
 .inline-quickview__content .jm_button_message{
 	color: rgb(234, 44, 59) !important;
 	font-size: 0.62vw !important;
+}
+.inline-quickview__container{
+    margin: 6% 0 0;
+}
+div.view h1:first-child{
+margin: 0 0 2%;
 }
 /* END HOVER MESSAGE OVER ADD TO BAG  */
 /* ..................... END OVERWRITES ..................... */
@@ -56,11 +66,17 @@
     display: -ms-flexbox;
     display: -webkit-box-flex;
     align-items: center;
--webkit-align-items: center;
--ms-align-items: center;
+	-webkit-align-items: center;
+	-ms-align-items: center;
     justify-content: center;
--webkit-justify-content: center;
--ms-justify-content: center;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+}
+.jm_displayflex{
+     display: flex;
+     display: -webkit-flex;
+     display: -ms-flexbox;
+     display: -webkit-box-flex;
 }
 .jm_dark_lightBox_X{
     position: fixed;
@@ -79,6 +95,77 @@
     width: 100%;
     height: 27%;
     z-index: 1;    
+}
+#jm_img_anchor_LB{
+	display: flex !important;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: -webkit-box-flex !important;
+}
+.jm_X_Hero_lightBox{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    padding: 2%;
+    cursor: pointer;
+}
+.jm_bottom_lightbox{
+	background: none !important;
+	position: absolute !important;
+    bottom: -158% !important;
+    width: 100% !important;
+    height: 95% !important;
+    max-width: 100% !important;
+    left: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+	display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -webkit-box-flex;
+    align-items: center;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+    justify-content: center;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+}
+.jm_bottom_lightbox:hover{
+	background:none !important;
+}
+.jm_lightBox_CTA{
+	border-bottom: solid 2px;
+    padding: 0 0 0.5em;
+    font-size: 1.14em;
+}
+#jm_img_anchor_LB{
+	bottom: 3% !important;
+    height: auto !important;
+    text-transform: none;
+    font-size: 1em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+	opacity:1 !important;
+}
+
+/* RICH TEXT BOX AS LIGTHBOX */
+.rich-text-content-block{
+	position:relative;
+    padding: 2%;
+    z-index: 9;
+    width: 50%;
+ 	background: white;
+ 	display:none;    
+}
+.rich-text-content-block h2{
+    font-size: 14px;
+}
+.rich-text-content-block h3{
+    font-size: 13px;
+}
+.rich-text-content-block p{
+    font-size: 12.3px;
 }
 
 /* MASTERS IMAGES FIX */
@@ -179,7 +266,8 @@ i{
 /* ---------- END FIXES ---------- */
 
 /* MULTIPLE CTAS */
-.content-block-content__message p:not(.content-block-content__action){
+.content-block-content__message p:not(.content-block-content__action),
+.hero-content-block .content-block-content__action{
 	display:none;
 }
 .jm-multipleCTA-space a{
@@ -234,6 +322,10 @@ i{
 .content-block-content__message h3.wysiwyg-font-size-large{
     font-size: 0.56em;
     line-height: 1.3;
+}
+.product-grid__cell--1 .button,
+.product-grid__cell--2 .button{
+	z-index:1;
 }
 
 /* RELATED PRODUCTS WIDGET JMRV - Pushed 070516*/
@@ -699,7 +791,7 @@ margin: 0 1%;
     margin: 0% 6%;
 }
 
-.jm-multipleCTA-space5 a{
+div.hero-content-block .content-block-content__container--center .jm-multipleCTA-space5 a{
     margin: 0% 4% 2%;
 }
 .jm-multipleCTA-space5 a:nth-of-type(4),
@@ -1063,7 +1155,8 @@ br{
 }
 .content-block-content__message h3.wysiwyg-font-size-large{
 /*     font-size: 0.375em; */
-    font-size: 0.4em;    
+    font-size: 0.4em;
+    margin-bottom: 0;    
 }
 /* BODONI */
 .content-block-content__message h2.wysiwyg-font-size-large.wysiwyg-font-family-serif{
@@ -1071,6 +1164,7 @@ br{
 }
 .content-block-content__message h3.wysiwyg-font-size-large.wysiwyg-font-family-serif{
     font-size: 0.5em;
+    margin-bottom: 0;  
 }
 
 /* 
@@ -1102,17 +1196,15 @@ width:100%;
 height:100%;
 color:rgba(255, 255, 255, 0);
 }
-/* 
-.content-block-content__action .button{
-    position: relative;
-    z-index: 99;
-}
- */
 
+
+/* 
+W03
 .hero-content-block .content-block-content--right{
-/*     left: 50%; */
     left: 0%;    
 }
+*/
+
 /* LARGE PLUS ONE */
 .large-square-plus-one-content-block__image{
 	background-size:100%;
@@ -1120,10 +1212,28 @@ color:rgba(255, 255, 255, 0);
 }
 
 /* FIX */
-
+/* 
+W03 
 .hero-content-block .content-block-content--left{
 	right: 0;
 }
+
+*/
+
+/* FIX 1440 vs 1170 */
+div.hero-content-block .content-block-content--right {
+    left: 50%;
+}
+div.hero-content-block .content-block-content--left {
+    right: 50%;
+}
+.jm_lp_1170 > div.hero-content-block .content-block-content--right{
+    left: 0%;    
+}
+.jm_lp_1170 > div.hero-content-block .content-block-content--left{
+	right: 0;
+}
+
 
 
 /* MULTIPLE CTAS */
@@ -1270,6 +1380,10 @@ font-size: 1em;
 .jm-special-splitHeader{
 	font-size: 1em;    
 }
+/* MULTIPLE CTAs */
+div.hero-content-block .content-block-content__container--center .jm-multipleCTA-space5 a{
+    margin: 0% 1% 0%;
+}
 
 }
 
@@ -1391,8 +1505,32 @@ margin:0;
 .jm-tieredContainer{
     margin: 0 3% 0 0;
 }
-/* END TIERED PRICES */
 
+
+/* LIGHTBOX HERO - RICH TEXT */
+.rich-text-content-block h2{
+    font-size: 13px;
+}
+.rich-text-content-block h2{
+    font-size: 12px;
+}
+.rich-text-content-block p{
+    font-size: 11px;
+    display: block;
+    text-align: justify;
+}
+.rich-text-content-block {
+    position: relative;
+    padding: 7%;
+    width: 78%;
+}
+#jm_img_anchor_LB{
+    bottom: 33% !important;
+    font-size: 2.3vw;
+}
+#jm_img_anchor{
+	height:100% !important;
+}
 
 /* OVERWRITES */
 
