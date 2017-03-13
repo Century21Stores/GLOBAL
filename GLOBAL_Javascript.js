@@ -1,7 +1,5 @@
-<script>
-
-// LIGHT BOX PUSH FOR W0317
-// MASTER SCRIPTING FEB 16 2017
+// GA Wishi W0617
+// MASTER SCRIPTING MARCH 13 2017
 // contact: jrios@c21stores.com
 
 
@@ -10,6 +8,8 @@ document.addEventListener( "DOMContentLoaded", uniqueClasses, false );
 document.addEventListener( "DOMContentLoaded", pdpVideos, false );
 document.addEventListener( "DOMContentLoaded", pdpTieredPrice, false );
 document.addEventListener( "DOMContentLoaded", pdpKnivesPDF, false );
+document.addEventListener( "DOMContentLoaded", addingClass_LP_width, false );
+document.addEventListener( "DOMContentLoaded", name_taggingCoremetrics, false );
 
 // FIREING FUNCTIONS ON QUICK VIEW
 $(document).on( 'click', '.product-summary__quickview a', function(){
@@ -485,42 +485,33 @@ $(window).load(function() {
 		(window.location.href.indexOf("italian") > -1) ||
 		(window.location.href.indexOf("luxury") > -1) ||		
 		(window.location.href.indexOf("under") > -1) ||
-		(window.location.href.indexOf("3aggw") > -1) || //Golden
-		(window.location.href.indexOf("3ajsw") > -1) || // Joshua
-		(window.location.href.indexOf("madden") > -1)
+		(window.location.href.indexOf("7agrw") > -1) || //Golden
+		(window.location.href.indexOf("7arsw") > -1)
 	);
 	var urlEhandbags = (
 		(window.location.href.indexOf("arrivals") > -1) ||
 		(window.location.href.indexOf("luxury") > -1) ||		
-		(window.location.href.indexOf("edit") > -1) ||
-		(window.location.href.indexOf("fur") > -1) ||		
-		(window.location.href.indexOf("vintage") > -1) ||
-		(window.location.href.indexOf("40ainw") > -1) || //Invicta
-		(window.location.href.indexOf("40ajsw") > -1) || //Sander
-		(window.location.href.indexOf("40amiw") > -1) || //Missoni
-		(window.location.href.indexOf("40amow") > -1) //Moschino
+		(window.location.href.indexOf("7ablw") > -1) ||
+		(window.location.href.indexOf("7alcw") > -1) 
 	);	
 	var urlEkids = (
 		(window.location.href.indexOf("arrivals") > -1) ||
 		(window.location.href.indexOf("gifts") > -1) ||
 		(window.location.href.indexOf("essentials") > -1) ||		
-		(window.location.href.indexOf("weather") > -1) ||
-		(window.location.href.indexOf("occasion") > -1) ||		
 		(window.location.href.indexOf("occasion") > -1) ||		
 		(window.location.href.indexOf("disney") > -1) ||	
 		(window.location.href.indexOf("toys") > -1)
 	);
 	var urlEmens = (
 		(window.location.href.indexOf("arrivals") > -1) ||
-		(window.location.href.indexOf("cashmere") > -1) ||
-		(window.location.href.indexOf("focus") > -1) ||
 		(window.location.href.indexOf("style") > -1) ||
-		(window.location.href.indexOf("3aarm") > -1) || //armani
-		(window.location.href.indexOf("3absm") > -1) || //Sherman
-		(window.location.href.indexOf("3agvm") > -1) || //Gevinche
-		(window.location.href.indexOf("3ambm") > -1) || //Graham more
-		(window.location.href.indexOf("3avrm") > -1) || //Versace
-		(window.location.href.indexOf("3asam") > -1) // Sand
+		(window.location.href.indexOf("7abtm") > -1) || 
+		(window.location.href.indexOf("7addm") > -1) || 
+		(window.location.href.indexOf("7aznm") > -1) || 
+		(window.location.href.indexOf("7appm") > -1) || 
+		(window.location.href.indexOf("7ambm") > -1) || 
+		(window.location.href.indexOf("7avww") > -1) || 		
+		(window.location.href.indexOf("7arom") > -1)
 	);
 	var urlEcontemporary = (
 		(window.location.href.indexOf("arrivals") > -1) ||
@@ -530,19 +521,15 @@ $(window).load(function() {
 	var urlEmwomens = (
 		(window.location.href.indexOf("arrivals") > -1) ||
 		(window.location.href.indexOf("cashmere") > -1) ||
-		(window.location.href.indexOf("3amnw") > -1) || //manouch
-		(window.location.href.indexOf("3ankw") > -1) || //Nicholas K
-		(window.location.href.indexOf("3azdw") > -1) || //Zelda
-		(window.location.href.indexOf("3arcw") > -1) // Roberto Colina
+		(window.location.href.indexOf("7aoww") > -1) ||
+		(window.location.href.indexOf("7arow") > -1) ||
+		(window.location.href.indexOf("7atnw") > -1)
 	);
 	var urlEhome = (
 		(window.location.href.indexOf("essentials") > -1) ||
-		(window.location.href.indexOf("holiday") > -1) ||
-		(window.location.href.indexOf("seasonal") > -1) ||		
-		(window.location.href.indexOf("prep") > -1) || 
-		(window.location.href.indexOf("40ahbh") > -1) || //BOSS
-		(window.location.href.indexOf("39agdh") > -1) || // Godinger
-		(window.location.href.indexOf("38afbh") > -1)//Adler
+		(window.location.href.indexOf("exotic") > -1) ||	
+		(window.location.href.indexOf("gourmet") > -1) || 
+		(window.location.href.indexOf("7aibh") > -1)
 	);
 	var urlEbeauty = (
 		(window.location.href.indexOf("bvlgari") > -1) ||
@@ -558,6 +545,13 @@ $(window).load(function() {
 		(window.location.href.indexOf("jbl") > -1) || 
 		(window.location.href.indexOf("sonos") > -1)
 	);		
+	var urlEnewandnow = (
+		(window.location.href.indexOf("beats") > -1) ||
+		(window.location.href.indexOf("fitbit") > -1) ||
+		(window.location.href.indexOf("gopro") > -1) ||		
+		(window.location.href.indexOf("jbl") > -1) || 
+		(window.location.href.indexOf("sonos") > -1)
+	);			
 	var urlEspecial = (
 		(window.location.href.indexOf("clearance") > -1)
 	);	
@@ -570,31 +564,34 @@ $(window).load(function() {
 	if(jm_cat === "Tech"){
 		if(!urlEtech){
 			freeShippingTechGA();
+			WishiWankaGA();
 		}	
 	}
 	else if(jm_cat === "New + Now"){
-		if(!urlEspecial){
-// 			clearanceGA();
-		}		
+			WishiWankaGA();
 	}
 	else if(jm_cat === "Beauty"){
 		if(!urlEbeauty){
 			freeShippingBeautyGA();
+			WishiWankaGA();
 		}
 	}
 	else if(jm_cat === "Shoes"){
 		if(!urlEshoes){
 			newArrivalsShoesGA();
+			WishiWankaGA();
 		}
 	}
 	else if(jm_cat === "Handbags &amp; Accessories"){
 		if(!urlEhandbags){
 			newArrivalsHandbagsGA();
+			WishiWankaGA();
 		}
 	}			
 	else if(jm_cat === "Kids"){
 		if(!urlEkids){
 			kidsNewArrivalsGA();
+			WishiWankaGA();
 		}		
 	}
 	else if(jm_cat === "Contemporary"){		
@@ -605,6 +602,7 @@ $(window).load(function() {
 	else if(jm_cat === "Women"){
 			if(!urlEmwomens){
 				newArrivalsWomenGA();
+				WishiWankaGA();
 			}
 
 		else{
@@ -614,11 +612,12 @@ $(window).load(function() {
 	else if(jm_cat === "Men"){
 		if(!urlEmens){
 			newArrivalsMenGA();
+			WishiWankaGA();			
 		}
 	}
 	else if(jm_cat === "Home"){
 		if(!urlEspecial){
-// 			clearanceGA();
+			WishiWankaGA();
 		}
 
 	}
@@ -1093,18 +1092,18 @@ function giftsCardsGA() {
 
 
 // GIFTS CARDS GRID AD BANNER
-function giftsCardsGA2() {
+function WishiWankaGA() {
 
 	//GRID AD TYPE:  enter 1 or 2
 	var gaType = 1;
 	//POSITION
 	var pos = 30;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTEvMTcvMTUvMDQvMjAvNTkyLzExV2VlazRfQkdfR2lmdENhcmQuanBnIl1d/11Week4_BG_GiftCard.jpg?sha=affce9ca49929153";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDMvMDkvMTUvNTEvNDkvMjMxLzAxXzAzV2VlazNfV2lzaGlfQnJvd3NlR3JpZEFkLmpwZyJdXQ/01_03Week3_Wishi-BrowseGridAd.jpg?sha=a5182b3c2dd26d96";
 	//LINK TEXT
-	var textLink = "SHOP NOW";
+	var textLink = "LEARN MORE";
 	//LINK URL
-	var urlLINK = "https://www.c21stores.com/categories/gift-card";
+	var urlLINK = "https://www.c21stores.com/pages/wishi";
 	
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
@@ -1124,7 +1123,7 @@ function giftsCardsGA2() {
 		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
 		'<div class="content-block-content__container content-block-content__container--center">'+
 		'<div class="content-block-content__message content-block-content__message--light">'+
-		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
 		'</div>'+
 		'</div>'+
 		'</div>'+
@@ -1937,5 +1936,41 @@ function Lightbox_heroCTA_ClickEvent(){
 
 // END LIGHT BOX GENERAL
  
+// NAME TAGGING FOR LIVE COREMETRICS
+function name_taggingCoremetrics(){
 
-console.log('all running');
+    $('.hero-content-block, .three-column-square-content-block, .large-square-plus-one-content-block__container, .two-column-square-content-block, .jm-custom-hp > section').each(function() {
+		var asset_title = $(this).find('h2').text();
+		$(this).find('a').each(function() {
+			var asset_anchor = $(this).attr('href').replace('https://www.c21stores.com', '');
+			var anchor_id = $(this).attr('id');
+			if((anchor_id == 'jm_img_anchor') || (anchor_id == 'jm_img_anchor2')){
+				imageornot = 'IMG: '
+			}
+			else{
+				imageornot = 'CTA: '
+			};
+		    console.log("TITLE " + asset_title);
+		    console.log("ID: " + anchor_id);		    
+		    
+			if($(window).width() < 768) {
+			    console.log("MOBILE ANCHOR: " + imageornot + asset_anchor);
+			    $(this).attr('name', "MOBILE-" + imageornot + asset_anchor);
+			}
+			else if(($(window).width() > 768) && ($(window).width() < 1100)) {
+			    console.log("TABLET ANCHOR: " + imageornot + asset_anchor);							
+			    $(this).attr('name', "TABLET-: " + imageornot + asset_anchor);
+			}
+			else {
+			    console.log("DESKTOP ANCHOR: " + imageornot + asset_anchor);							
+			    $(this).attr('name', "DESKTOP-" + imageornot + asset_anchor);
+			};
+
+		    console.log("-----------");		    		
+	    });
+    });
+    
+}
+// END NAME TAGGING FOR LIVE COREMETRICS
+
+console.log('all running');</script>
