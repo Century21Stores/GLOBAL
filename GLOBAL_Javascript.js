@@ -1,4 +1,4 @@
-// New Reductions GA W10D
+// SPRING GA W11D
 // MASTER SCRIPTING APRIL 6TH 2017
 // contact: jrios@c21stores.com
 
@@ -563,12 +563,14 @@ $(window).load(function() {
 
 	if(jm_cat === "Tech"){
 		allSiteGA();
+		allSiteGA2();
 		if(!urlEtech){
 // 			WishiWankaGA();
 		}	
 	}
 	else if(jm_cat === "New + Now"){
 			allSiteGA();
+			allSiteGA2();			
 	}
 	else if(jm_cat === "Beauty"){
 		if(!urlEbeauty){
@@ -578,20 +580,23 @@ $(window).load(function() {
 	}
 	else if(jm_cat === "Shoes"){
 			allSiteGA();
+			allSiteGA2();			
 		if(!urlEshoes){
-			newArrivalsShoesGA();
+			//newArrivalsShoesGA();
 		}
 	}
 	else if(jm_cat === "Handbags &amp; Accessories"){
 			allSiteGA();
+			allSiteGA2();			
 		if(!urlEhandbags){
-			newArrivalsHandbagsGA();
+	//		newArrivalsHandbagsGA();
 		}
 	}			
 	else if(jm_cat === "Kids"){
 			allSiteGA();
+			allSiteGA2();			
 		if(!urlEkids){
-			kidsNewArrivalsGA();
+	//		kidsNewArrivalsGA();
 		}		
 	}
 	else if(jm_cat === "Contemporary"){		
@@ -601,24 +606,23 @@ $(window).load(function() {
 	}
 	else if(jm_cat === "Women"){
 			allSiteGA();
+			allSiteGA2();
 		if(!urlEmwomens){
-			newArrivalsWomenGA();
-		}
-
-		else{
-			getActiveWomenGA();		
+			//newArrivalsWomenGA();
 		}
 	}
 	else if(jm_cat === "Men"){
 			allSiteGA();
+			allSiteGA2();
 		if(!urlEmens){
-			newArrivalsMenGA();	
+			//newArrivalsMenGA();	
 		}
 	}
 	else if(jm_cat === "Home"){
 			allSiteGA();
+			allSiteGA2();
 		if(!urlEspecial){
-			WishiWankaGA();
+			//WishiWankaGA();
 		}
 
 	}
@@ -1061,7 +1065,7 @@ function allSiteGA2() {
 	//POSITION
 	var pos = 14;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDQvMDUvMTAvMzIvNTUvMzM2LzA0V2VlazFfQkdBX05ld1JlZF8wMS5qcGciXV0/04Week1_BGA_NewRed_01.jpg?sha=6dd0d96bafa3f0fe";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDQvMDQvMTAvNTcvNTQvODgvNFdlZWsyX0JHX3NwcmluZ19wcm9tb3Rpb24uanBnIl1d/4Week2_BG_spring_promotion.jpg?sha=52122429f14b188c";
 	//LINK TEXT
 	var textLink = "SHOP NOW";
 	//LINK URL
@@ -1085,7 +1089,7 @@ function allSiteGA2() {
 		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
 		'<div class="content-block-content__container content-block-content__container--center">'+
 		'<div class="content-block-content__message content-block-content__message--dark">'+
-		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+// 		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
 		'</div>'+
 		'</div>'+
 		'</div>'+
