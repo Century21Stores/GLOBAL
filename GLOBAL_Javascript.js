@@ -1,5 +1,5 @@
-// SPRING GA W11D
-// MASTER SCRIPTING APRIL 6TH 2017
+// Memorial day GA W17D UP
+// MASTER SCRIPTING MAY 17TH 8:50AM 2017
 // contact: jrios@c21stores.com
 
 
@@ -79,7 +79,7 @@ if ($(window).width() >= 1050) {
 //CLICKABLE IMAGES
 // $(document).ready(function(){
 function clonningClickEvent(){
-    $('.hero-content-block, .three-column-square-content-block__container, .large-square-plus-two-content-block__container--large-image, .large-square-plus-two-content-block__container--small-image, .large-square-plus-one-content-block__container--large-image, .two-column-square-content-block__container, .two-column-hero-content-block__container, .jm-image-clickable').each(function(){
+    $('.banner-content-block, .hero-content-block, .three-column-square-content-block__container, .large-square-plus-two-content-block__container--large-image, .large-square-plus-two-content-block__container--small-image, .large-square-plus-one-content-block__container--large-image, .two-column-square-content-block__container, .two-column-hero-content-block__container, .jm-image-clickable').each(function(){
        var new_data= $('a:first-of-type', this).clone();
        	new_data.attr("id", "jm_img_anchor");
        	new_data.removeAttr("class");	
@@ -562,15 +562,15 @@ $(window).load(function() {
  	//console.log(urlEshoes);
 
 	if(jm_cat === "Tech"){
-		allSiteGA();
-		allSiteGA2();
+//		allSiteGA29();
+		allSiteGA14();
 		if(!urlEtech){
 // 			WishiWankaGA();
 		}	
 	}
 	else if(jm_cat === "New + Now"){
-			allSiteGA();
-			allSiteGA2();			
+			allSiteGA29();
+		allSiteGA14();
 	}
 	else if(jm_cat === "Beauty"){
 		if(!urlEbeauty){
@@ -579,22 +579,22 @@ $(window).load(function() {
 		}
 	}
 	else if(jm_cat === "Shoes"){
-			allSiteGA();
-			allSiteGA2();			
+			allSiteGA29();
+			allSiteGA14();
 		if(!urlEshoes){
 			//newArrivalsShoesGA();
 		}
 	}
 	else if(jm_cat === "Handbags &amp; Accessories"){
-			allSiteGA();
-			allSiteGA2();			
+			allSiteGA29();
+			allSiteGA14();
 		if(!urlEhandbags){
 	//		newArrivalsHandbagsGA();
 		}
 	}			
 	else if(jm_cat === "Kids"){
-			allSiteGA();
-			allSiteGA2();			
+			allSiteGA29();
+			allSiteGA14();
 		if(!urlEkids){
 	//		kidsNewArrivalsGA();
 		}		
@@ -605,22 +605,22 @@ $(window).load(function() {
 		}
 	}
 	else if(jm_cat === "Women"){
-			allSiteGA();
-			allSiteGA2();
+			allSiteGA29();
+			allSiteGA14();
 		if(!urlEmwomens){
 			//newArrivalsWomenGA();
 		}
 	}
 	else if(jm_cat === "Men"){
-			allSiteGA();
-			allSiteGA2();
+			allSiteGA29();
+			allSiteGA14();
 		if(!urlEmens){
 			//newArrivalsMenGA();	
 		}
 	}
 	else if(jm_cat === "Home"){
-			allSiteGA();
-			allSiteGA2();
+			allSiteGA29();
+			allSiteGA14();
 		if(!urlEspecial){
 			//WishiWankaGA();
 		}
@@ -1009,10 +1009,54 @@ function freeShippingBeautyGA() {
 // END BEAUTY FREESHIPPING GRID AD BANNER
 
 
+// ALL SITE SPRIdG GRID AD BANNER
+function allSiteGA14() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDUvMTcvMDgvNDMvMDkvNTgxL21lbW9yaWFsX2RheV9ldmVudF8zMG9mZl80MG9mZi5qcGciXV0/memorial-day-event-30off-40off.jpg?sha=f395862dc06a484f";
+	//LINK TEXT
+	var textLink = "INFO/EXCLUSIONS";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/pages/double-points-info-exclusions";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function(e) {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single(realPos, gaType);
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--dark">'+
+// 		'<p class="content-block-content__action content-block-content__action--dark-text"><a target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	AdClassAll_Single(realPos, gaType);
+
+}
+// END ALL SITE SPRING GRID AD BANNER
 
 
 // ALL SITE NEW REDUCTION GRID AD BANNER
-function allSiteGA() {
+function allSiteGA29() {
 
 	//GRID AD TYPE:  enter 1 or 2
 	var gaType = 1;
@@ -1057,50 +1101,7 @@ function allSiteGA() {
 // END ALL SITE NEW REDUCTION GRID AD BANNER
 
 
-// ALL SITE SPRING GRID AD BANNER
-function allSiteGA2() {
 
-	//GRID AD TYPE:  enter 1 or 2
-	var gaType = 1;
-	//POSITION
-	var pos = 14;
-	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDQvMDQvMTAvNTcvNTQvODgvNFdlZWsyX0JHX3NwcmluZ19wcm9tb3Rpb24uanBnIl1d/4Week2_BG_spring_promotion.jpg?sha=52122429f14b188c";
-	//LINK TEXT
-	var textLink = "SHOP NOW";
-	//LINK URL
-	var urlLINK = "https://www.c21stores.com/pages/new-reductions";
-	
-	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
-	var FixHeights;
-	var realPos = pos-1;
-	window.onresize = function(e) {
-    	clearTimeout(FixHeights);
-    	FixHeights = setTimeout(function() {
-		// console.log('yay it works!');
-		AdClassAll_Single(realPos, gaType);
-    	}, 100);
-	};
-
-	$('.product-grid li:nth-of-type('+ realPos +')').after(
-		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
-		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
-		'<div class="product-grid-content-block__image"></div>'+
-		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
-		'<div class="content-block-content__container content-block-content__container--center">'+
-		'<div class="content-block-content__message content-block-content__message--dark">'+
-// 		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
-		'</div>'+
-		'</div>'+
-		'</div>'+
-		'</div>'+
-		'</li>'
-	);
-	
-	AdClassAll_Single(realPos, gaType);
-
-}
-// END ALL SITE SPRING GRID AD BANNER
 
 
 
@@ -1773,7 +1774,7 @@ function Lightbox_heroCTA_ClickEvent(){
 // NAME TAGGING FOR LIVE COREMETRICS
 function name_taggingCoremetrics(){
 
-    $('.hero-content-block, .three-column-square-content-block, .large-square-plus-one-content-block__container, .two-column-square-content-block, .jm-custom-hp > section').each(function() {
+    $('.hero-content-block, .three-column-square-content-block, .large-square-plus-one-content-block__container, .two-column-square-content-block, .banner-content-block, .jm-custom-hp > section').each(function() {
 		var asset_title = $(this).find('h2').text();
 		$(this).find('a').each(function() {
 			var asset_anchor = $(this).attr('href').replace('https://www.c21stores.com', '');
