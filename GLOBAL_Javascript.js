@@ -1,1641 +1,1919 @@
-/* COPY BLOCK SEO - PUSHED  */
-/* ALSO PASSWORD TEXT IN LOGIN PAGE DARKEN  */
-/* CSS MASTER STYLE JMRV 05092017 */
-@import "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTUvMDkvMTgvMDgvNTYvNTEvNjg4L01hc3RlclN0eWxlM19MYW5kaW5nUGFnZTA3MTUuY3NzIl1d/MasterStyle3_LandingPage0715.css?sha=5a57837dcb4befbf";
-@import "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDEvMTMvMTIvNDQvMTAvODUzL01hc3RlclN0eWxlUmFpbHN2MS5jc3MiXV0/MasterStyleRailsv1.css?sha=f040002bd75aca28";
+// DOUBLE GA W23A UP REVISED LYDIA JULY3RD
+// MASTER SCRIPTING JUN 27TH 8:50AM 2017
+// contact: jrios@c21stores.com
 
-/* ..................... OVERWRITES .....................*/
-/*.branded-card-header{
-display:none !important;
-}*/
 
-.Clearance, .CLEARANCE{
-    color: rgb(234, 44, 59) !important;
+// FIREING FUNCTIONS
+document.addEventListener( "DOMContentLoaded", uniqueClasses, false );
+document.addEventListener( "DOMContentLoaded", pdpVideos, false );
+document.addEventListener( "DOMContentLoaded", pdpTieredPrice, false );
+document.addEventListener( "DOMContentLoaded", pdpKnivesPDF, false );
+document.addEventListener( "DOMContentLoaded", addingClass_LP_width, false );
+document.addEventListener( "DOMContentLoaded", name_taggingCoremetrics, false );
+document.addEventListener( "DOMContentLoaded", copy_blocks_cloning, false );
+
+// FIREING FUNCTIONS ON QUICK VIEW
+$(document).on( 'click', '.product-summary__quickview a', function(){
+	setTimeout(function() {   //calls click event after a certain time
+		//Hover_message_Button();
+	}, 1000);
+});
+
+
+var PROP65_POPUP = Object.freeze({
+  "ceramic": '<img src="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDIvMDUvMTUvMDQvNDMvNjAzL1BPUFVQNjVfY2VyYW1pYy5qcGciXV0/POPUP65_ceramic.jpg?sha=2b607f152ba38a35">',
+  "crystal": '<img src="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDIvMDUvMTUvMDQvMjgvOTkvUE9QVVA2NV9DUllTVEFMLmpwZyJdXQ/POPUP65_CRYSTAL.jpg?sha=35ab82a8daefe08e">',
+  "handbags": '<img src="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDIvMDUvMTUvMDQvMDkvODczL1BPUFVQNjVfaGFuZGJhZ3MuanBnIl1d/POPUP65_handbags.jpg?sha=efb6ea04a14cf6f1">',
+  "handbags2": '<img src="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDIvMDUvMTUvMDIvNTAvNzQvUE9QVVA2NV9oYW5kYmFnczIuanBnIl1d/POPUP65_handbags2.jpg?sha=63d2ccf67b9e2709">',
+  "jewelry": '<img src="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDIvMDUvMTQvNDIvMzgvMTM2L1BPUFVQNjVfamV3ZWxyeS5qcGciXV0/POPUP65_jewelry.jpg?sha=61f06fe3b29da5b2">',
+  "wires": '<img src="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDIvMDUvMTQvNDEvMTYvODk3L1BPUFVQNjVfd2lyZXMuanBnIl1d/POPUP65_wires.jpg?sha=cff7d8ef9acc6328">'
+});
+function prop65(popup){
+  WEBLINC.dialog.create(PROP65_POPUP[popup], 
+    {
+      "uiDialogOptions": {
+        "close": function(){
+          $(".view").one("click", "a[data-prop65]", function(e){
+            var key = $(e.target).data("prop65");
+            prop65(key);
+            e.preventDefault();
+          });
+        }
+      }
+    }
+  );
 }
-/* HOVER MESSAGE OVER ADD TO BAG  */
-.inline-quickview__content .jm_button_message{
-	color: rgb(234, 44, 59) !important;
-	font-size: 0.62vw !important;
+$(".view").one("click", "a[data-prop65]", function(e){
+  var key = $(e.target).data("prop65");
+  prop65(key);
+  e.preventDefault();
+});
+
+// PAGINATION FIX
+    if ($('ul.pagination').length === 0){
+      var count = $('.product-grid__cell').length;
+      $('.browsing-controls--top').append('<ul class="pagination"><li class="pagination__node pagination__node--showing">' + count + ' items</li></ul>');
+    }
+
+// RELATED PRODUCTS
+if ($(window).width() >= 1050) {
+	// TO OPEN WIDGET
+	$('.br-sf-widget-merchant-qv a').click(function() {
+	    $('html, body').animate({
+        	scrollTop: $(".br-rp-qv-show").offset().top
+    	}, 500);
+    	$('.page-footer').animate({paddingTop: '+=43%'},500);  	
+	});
+
+	// TO CLOSE WIDGET
+	$('.br-sf-widget-merchant-popup-close a').click(function() {
+    	$('html, body').animate({
+	        scrollTop: $(".complimentary--bloomreach").offset().top
+    	}, 500);
+    	$('.page-footer').animate({paddingTop: '0'},500);  	    	
+	});
 }
-.inline-quickview__container{
-    margin: 6% 0 0;
+// END RELATED PRODUCTS
+
+
+
+//CLICKABLE IMAGES
+// $(document).ready(function(){
+function clonningClickEvent(){
+    $('.banner-content-block, .hero-content-block, .three-column-square-content-block__container, .large-square-plus-two-content-block__container--large-image, .large-square-plus-two-content-block__container--small-image, .large-square-plus-one-content-block__container--large-image, .two-column-square-content-block__container, .two-column-hero-content-block__container, .jm-image-clickable').each(function(){
+       var new_data= $('a:first-of-type', this).clone();
+       	new_data.attr("id", "jm_img_anchor");
+       	new_data.removeAttr("class");	
+    	new_data.appendTo(this);
+    });
+
+    $('.large-square-plus-one-content-block__text').each(function(){
+       var new_data= $('a', this).clone();
+       	new_data.attr("id", "jm_img_anchor2");
+       	new_data.removeAttr("class");	
+    	new_data.appendTo(this);
+    });
+}clonningClickEvent();   
+// });
+//END CLICKABLE IMAGES
+
+
+
+
+// ZERO SEARCH SCRIPT
+var search = $('#header-search-form .value').children().val().toString().toLowerCase();
+// search = search.filter(Boolean)
+
+// HERE GOES THE ID of the Google Spreadsheet SUPPRESION LIST
+var spreadsheetID = "1vbPtdgK7tCk7Nl14rDzzqsmMG2Ii5-WakBueCwAeuQE";
+var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
+ 
+$.getJSON(url, function(data) { 
+	var entry = data.feed.entry;
+	var listArr = [];
+	var listArr2 = [];
+  
+  	//PUSH DATA FROM 2 COLUMNS TO 2 ARRAYS 
+  	$(entry).each(function(){
+  		listArr.push(this.gsx$suppressed.$t.toLowerCase());
+  		listArr2.push(this.gsx$suppressed2.$t.toLowerCase());
+  	});
+	
+	//COMBINE BOTH ARRAYS INTO ONE SINGLE ARRAY
+  	var listArrTotal = listArr.concat(listArr2);
+
+  	// CLEAR EMPTY ITEMS
+	listArr = listArr.filter(Boolean)
+	listArr2 = listArr2.filter(Boolean)
+	listArrTotal = listArrTotal.filter(Boolean)
+	
+	//console.log(search);	
+  	//console.log(listArr);
+  	//console.log(listArr2);
+  	//console.log(listArrTotal);
+	
+	designerList();	
+	function designerList(){
+		for (var z=0; z < search.length; z++){
+
+	 		if(arrayContains(listArrTotal, search)){
+				$('.page-content__wrapper').hide("fast");
+				$('.page-content').prepend(
+					'<div id="result">'+
+					'</div>'
+				);
+				$( "#result" ).load( "/pages/zero-search" );
+				break;				
+			}	
+		}
+
+	 	if (window.location.href.indexOf("categories") > -1){
+	 		cat_Name = $('.view h1').html().toLowerCase();
+	 		console.log("Category Name: " + cat_Name);
+			for (var z=0; z < listArrTotal.length; z++){				
+				if(arrayContains(listArrTotal, cat_Name)){
+					console.log("search found!");
+// 					$('.page-content__wrapper').hide("fast");
+// 					$('.page-content').prepend(
+// 						'<div id="result">'+
+// 						'</div>'
+// 					);
+// 					$( "#result" ).load( "/pages/zero-search" );
+// 					break;				
+				}
+			}
+		}
+		function build_ZeroResultPage(){
+		
+		}
+		
+	}
+});
+ 
+function arrayContains(a, obj) {
+    for (var i = 0; i < a.length; i++) {
+//         if (a[i] === obj) {
+//             return true;
+//         }
+        if (obj.includes(a[i])) {
+            return true;
+        }
+
+    }
+    return false;
 }
+// END ZERO SEARCH SCRIPT
 
-/* END HOVER MESSAGE OVER ADD TO BAG  */
 
-/* LOGIN PAGE */
 
-.login-checkout p.login-checkout__forgot-password .text-button{
-    color: rgb(0, 0, 0);
-    text-rendering: optimizeLegibility;
-}
-/* END LOGIN PAGE */
 
-/* GRID ADS */
-.product-grid__cell--2 .product-grid-content-block{
-background-position: 50% 0;
-}
-/* END GRID ADS */
-/* ..................... END OVERWRITES ..................... */
 
-/* PLCC HEADER HIDDEN 
-.branded-content-wrapper{
-	display: block;
-    position: absolute;
-    width: 100%;
-    z-index: -999;
+
+//SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 
+
+function allSortingSizes(){
+
+
+$('.size-options__size-group').each(function() {
+
+
+	// ADDING ID TO NON NUMBERS SIZES
+	$(this).find('.size-options__size-label').each(function() {
+
+    	var currentElement = $(this);
+	    var value = currentElement.html();
+
+		if(value.indexOf("XS") >= 0){
+			$(currentElement).closest('li').attr('id', '2ws');    
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));			
+		}
+		else if(value == "SM"){
+			$(currentElement).closest('li').attr('id', '3ws');
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));			
+		}
+		else if(value == "MED"){
+			$(currentElement).closest('li').attr('id', '4ws');
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));			
+		}
+		else if(value == "LRG"){
+			$(currentElement).closest('li').attr('id', '5ws');
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));			
+		}
+		else if(value == "XL"){
+			$(currentElement).closest('li').attr('id', '6ws');
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));			
+		}
+		else if(value == "XXL"){
+			$(currentElement).closest('li').attr('id', '7ws');
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));			
+		}
+		else if(value == "3XL"){
+			$(currentElement).closest('li').attr('id', '8ws');
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
+		}
+		else if(value == "A"){
+			$(currentElement).closest('li').attr('id', '1A');
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
+		}		
+		else if(value == "B"){
+			$(currentElement).closest('li').attr('id', '2B');
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
+		}		
+		else if(value == "C"){
+			$(currentElement).closest('li').attr('id', '3C');
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
+		}		
+		else if(value == "D"){
+			$(currentElement).closest('li').attr('id', '4D');
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
+		}		
+		else if(value == "E"){
+			$(currentElement).closest('li').attr('id', '5E');
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
+		}		
+		else if(value == "F"){
+			$(currentElement).closest('li').attr('id', '6F');
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
+		}		
+		else if(value == "G"){
+			$(currentElement).closest('li').attr('id', '7G');
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
+		}		
+
+		else if(value.indexOf("SHORT") >= 0){
+			//console.log(value);
+			caldo = value.replace("SHORT", "1");
+			caldoTrim = caldo.replace(/\s/g, '');
+			//console.log(caldoTrim);
+			$(currentElement).closest('li').attr('id', caldoTrim);
+			
+		}		
+		else if(value.indexOf("REG") >= 0){
+			//console.log(value);
+			caldo = value.replace("REG", "2");
+			caldoTrim = caldo.replace(/\s/g, '');
+			//console.log(caldoTrim);			
+			$(currentElement).closest('li').attr('id', caldoTrim);
+			
+		}		
+		else if(value.indexOf("LONG") >= 0){
+			//console.log(value);
+			caldo = value.replace("LONG", "3");
+			caldoTrim = caldo.replace(/\s/g, '');
+			//console.log(caldoTrim);
+			$(currentElement).closest('li').attr('id', caldoTrim);
+			
+		}		
+	
+	});
+
+	sortWeirdSizes(this);
+	sortingSizes(this);	
+	
+});
+
+//NON NUMBERS SORTING SIZES
+function sortWeirdSizes(weirdList){
+
+	$(weirdList).find('li').sort(function (a, b) {
+	    return parseFloat(a.id) > parseFloat(b.id);
+	}).each(function () {
+    	var elem = $(this);
+	    elem.remove();
+    	$(elem).appendTo(weirdList);
+	});
 	
 }
-.branded-card-header.branded-card-header--active{
-    position: absolute;
-    z-index: -999;
-    bottom:0;
-    opacity:0;    
-}
-*/
-
-/* NEW FONTS */
-@font-face{
-    font-family: "Jenna-Sue";
-    src: url('https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDMvMDMvMDgvNTYvMjEvNzI1L0plbm5hU3VlLnR0ZiJdXQ/JennaSue.ttf?sha=b93911ab19e3b116'),
-    url('https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDMvMDMvMDgvNTYvMjEvNzI1L0plbm5hU3VlLnR0ZiJdXQ/JennaSue.ttf?sha=b93911ab19e3b116'); /* IE */
-}
 
 
-/* BIG CONTAINERS */
-.jm_lp_women, .jm_lp_shoes, .jm_lp_handbags, .jm_lp_beauty,
-.jm_lp_men, .jm_lp_kids, .jm_lp_home, .jm_lp_tech{
-	position:relative;
-/* 	padding: 0 0 111%;	 */
-}
-/* END BIG CONTAINERS */
+//NUMBERS SORTING SIZES
+function sortingSizes(numberSizes) {
+
+	$(numberSizes).each(function() {
+
+		$(this).find('.size-options__size-label').each(function() {
+	    	var currentElement = $(this);
+	    	var value = currentElement.html();
+	    	var newvalue = value.replace(/\s{2,}/g, ' ');
+		    $(currentElement).closest('li').attr('id', value);
+		    //console.log(newvalue); 
+		});
+	
+		sortingTheList(this);
+	
+	});
 
 
-/* LINE THROUGH FOR UNDERLINE */
-.content-block-content__message u{
-	text-decoration: line-through;
-}
-/* LIGHT BOXES */
-.jm_dark_lightBox{
-	display:none;
-    position: fixed;
-    top: 0;
-    z-index: 9999;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.83);
-    left: 0;
-    height: 100%;
-    display: flex;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: -webkit-box-flex;
-    align-items: center;
-	-webkit-align-items: center;
-	-ms-align-items: center;
-    justify-content: center;
-	-webkit-justify-content: center;
-	-ms-justify-content: center;
-}
-.jm_displayflex{
-     display: flex;
-     display: -webkit-flex;
-     display: -ms-flexbox;
-     display: -webkit-box-flex;
-}
-.jm_dark_lightBox_X{
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    height: 100%;
-/*     background: rgba(0, 128, 0, 0.55); */ /* TESTING AREA */
- 	z-index: 2;
-	cursor: pointer; 	
-}
-.jm_lightbox_X{
-    z-index: 99;
-    position: absolute;
-    bottom: 0%;
-    width: 100%;
-    height: 27%;
-    z-index: 1;    
-}
-#jm_img_anchor_LB{
-	display: flex !important;
-    display: -webkit-flex !important;
-    display: -ms-flexbox !important;
-    display: -webkit-box-flex !important;
-}
-.jm_X_Hero_lightBox{
-    position: absolute;
-    top: 0%;
-    right: 0%;
-    padding: 2%;
-    cursor: pointer;
-}
-.jm_bottom_lightbox{
-	background: none !important;
-	position: absolute !important;
-    bottom: -158% !important;
-    width: 100% !important;
-    height: 95% !important;
-    max-width: 100% !important;
-    left: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    border: none !important;
-	display: flex;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: -webkit-box-flex;
-    align-items: center;
-	-webkit-align-items: center;
-	-ms-align-items: center;
-    justify-content: center;
-	-webkit-justify-content: center;
-	-ms-justify-content: center;
-}
-.jm_bottom_lightbox:hover{
-	background:none !important;
-}
-.jm_lightBox_CTA{
-	border-bottom: solid 2px;
-    padding: 0 0 0.5em;
-    font-size: 1.14em;
-}
-#jm_img_anchor_LB{
-	bottom: 3% !important;
-    height: auto !important;
-    text-transform: none;
-    font-size: 1em;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-	opacity:1 !important;
-}
+	//SORTING
+	function sortingTheList(listToSort){
+		//console.log(listToSort);
+		var itemsList = $(listToSort).children();
+		//console.log(itemsList);
 
-/* RICH TEXT BOX AS LIGTHBOX */
-.rich-text-content-block{
-	position:relative;
-    padding: 2%;
-    z-index: 9;
-    width: 50%;
- 	background: white;
- 	display:none;    
-}
-.rich-text-content-block h2{
-    font-size: 14px;
-}
-.rich-text-content-block h3{
-    font-size: 13px;
-}
-.rich-text-content-block p{
-    font-size: 12.3px;
-}
-
-/* MASTERS IMAGES FIX */
-.jm-anchor-package{
-position: absolute;
-    top: 0;
-    width: 100%;
-    left: 0;
-    height: 100%;
-}
-
-/* SUCCESS MEESSAGE FIX */
-.page-messages{
-    opacity:1;   
-}
-.jm-center-my-content > .jm-message-wrap{
-	display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    height: 100%;
-    background: none;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-.jm-message-wrap .message--success{
-    z-index: 99999;
-    text-align: center;    
-}
-.jm-center-my-content{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-.clonemessage{
-    position: absolute;
-    top: 0;
-    opacity:1;
-}
-/* END SUCCESS MEESSAGE FIX */
+		itemsList.sort(function (a, b) {
+    		return parseFloat(a.id) > parseFloat(b.id);
+		}).each(function () {
+    		var elem = $(this);
+	    	elem.remove();
+	    	$(elem).appendTo(listToSort);
+		});
+	}
 
 
-/* MEGA MENUS FIX */
-.primary-nav__nav-content,
-.navigation-content-block{
-    max-width: 440px;
-}
-.navigation-content-block__text{
-    color: #636467;
-    text-rendering: optimizeLegibility;    
-}
-/* ---------- FIXES ---------- */
-.content-block-content__message>h3>u{
-   text-decoration: line-through;
-}
-/* Remove Bullets from All Product Copy Sub-Sections */
-.product-details__sub-section li {
-  list-style-type: none;
-}
-/* Suppress Sold Out Swatches from Displaying */
-.color-options__color--sold-out {
-  display: none;
-}
-/* Fix Inconsistent Shipping&Returns Copy Styling */
-.product-details__shipping_and_returns-body b {
-  font-size: 14px;
-  color: #000;
-  margin: 0 0 1.5em;
-}
-.page-footer{
-    position: relative;
-    z-index: 19;
-}
-i{
-   -webkit-font-smoothing: antialiased;    
-}
+}sortingSizes();
 
-/* TIERED PRICES */
 
-.jm-tieredContainer{
-    position: relative;
-    width: 50%;
-    padding: 2.4em 0;
-}
-.jm-tieredContainer-row{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-}
-.jm-tieredContainer-regular{
-	position: absolute;
-    top: 31%;
-    right: 0;
-}
-.jm-tieredContainer-sell{
-	position: absolute;
-    bottom: 0;
-    right: 0;
-}
-.jm-tieredContainer-msrp{
-    position: absolute;
-    top: 0;
-    right: 0.2em;
-}
-.jm-tieredContainer-percent-saved{
-    position: absolute;
-    bottom: 0;
-    right: 8em;
-}
-.product-detail-container--package .jm-tieredContainer-percent-saved{
-    right: 16em;   
-}
-.product-detail-container__child-product .jm-tieredContainer-percent-saved{
-    right: 8em;   
+
+}allSortingSizes();
+
+$(document).on( 'click', '.product-summary__quickview a, .color-options__color-button', function(){
+	setTimeout(function() {   //calls click event after a certain time
+	   	allSortingSizes();
+	}, 1000);
+	
+
+});
+
+// END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1 END SORTING 1
+
+
+
+
+// FIX MASTER COLLECTION SIZES
+function SizeMasterEliminator(){
+$('.product-detail-container--package .product-detail-container__child-product').each(function() {
+	var packageproduct = $(this).find('.size-options__size-group');
+	var countChildren = packageproduct.children().length;
+	//console.log('Debugging Master Collections - Package Product Detail:');
+	//console.log(packageproduct);
+	//console.log(countChildren);	
+	if (countChildren == 1){
+		var parentOfsingle = packageproduct.parent()
+		//console.log(parentOfsingle.find('.size-options__size-header'))
+		$('.size-options__size-header').hide();
+		//$(parentOfsingle).hide();
+		$('.product-details--package-child').addClass('jm-breath-children');
+	}
+});
+}SizeMasterEliminator();
+// END FIX MASTER COLLECTION SIZES
+
+
+// FIX MASTER COLLECTION IMAGES
+function imagesMasterPages(){
+
+$('.product-detail-container--package .product-detail-container__child-product').each(function() {
+	
+	var imageAnchor = $(this).find('.product-details__media').find('.product-details__primary-image:first').find('.product-details__primary-image-button').attr('href');;
+	console.log('working!!!');
+	console.log(imageAnchor);
+	$(this).find('.product-details__media').find('.product-details__primary-image:first').append('<a class="jm-anchor-package" href="' + imageAnchor + '"></a>');
+
+}); 
+
+}imagesMasterPages();
+// END FIX MASTER COLLECTION IMAGES
+
+
+// SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - 
+
+
+function allSortingMASTERSizes(){
+
+
+$( "div.product-detail-container__child-product" ).wrapAll( '<div class="jm_sorted_products"></div>');
+var soldOutPack = $('.product-detail-container--package .product-details__sold-out').closest('div .product-detail-container__child-product');
+soldOutPack.hide();
+
+$('.product-detail-container--package .jm_sorted_products').each(function() {
+
+	// ADDING ID TO NON NUMBERS SIZES
+	$(this).find('.size-options__size-label').each(function() {
+		console.log(this);
+    	var currentElement = $(this);
+	    var value = currentElement.html();
+
+		if(value.indexOf("TWIN") >= 0){
+			$(currentElement).closest('div.product-detail-container__child-product').attr('data-sort', '1home');    
+			//console.log('M' + value);console.log('M' + $(currentElement).closest('div.product-detail-container__child-product').attr("data-sort"));			
+		}
+		else if(value.indexOf("F/QN") >= 0){
+			$(currentElement).closest('div.product-detail-container__child-product').attr('data-sort', '2home');    
+			//console.log('M' + value);console.log('M' + $(currentElement).closest('div.product-detail-container__child-product').attr("data-sort"));			
+		}
+		else if(value.indexOf("QUEEN") >= 0){
+			$(currentElement).closest('div.product-detail-container__child-product').attr('data-sort', '3home');
+			//console.log('M' + value);console.log('M' + $(currentElement).closest('div.product-detail-container__child-product').attr("data-sort"));			
+		}		
+		else if(value.indexOf("KING") >= 0){
+			$(currentElement).closest('div.product-detail-container__child-product').attr('data-sort', '4home');    
+			//console.log('M' + value);console.log('M' + $(currentElement).closest('div.product-detail-container__child-product').attr("data-sort"));			
+		}	
+	
+	});
+
+	//sortMasterWeirdSizes(this);
+// 	console.log('veritas' + this);
+// 	sortingSizes(this);	
+	
+});
+
+
+
+//NON NUMBERS SORTING SIZES
+function sortMasterWeirdSizes(weirdList){
+
+
+	$(weirdList).find('div.product-detail-container__child-product').sort(function (a, b) {
+	    return parseFloat($(a).attr('data-sort')) > parseFloat($(b).attr('data-sort'));
+	}).each(function () {
+    	var elem = $(this);
+	    elem.remove();
+    	$(elem).appendTo(weirdList);
+	});
+
+	
 }
 
 
-/* END TIERED PRICES */
+}allSortingMASTERSizes();
 
-/* QUICKVIEW CONTAINER FIX */
-.inline-quickview__content{
-	max-width: 1100px;
-}
-/* END QUICKVIEW CONTAINER FIX */
+// $(document).on( 'click', '.product-summary__quickview a', function(){
+// 	setTimeout(function() {   //calls click event after a certain time
+// 	   	allSortingSizes();
+// 		console.log('gua gua guacamole!');
+// 	}, 1000);
+// 	
+// 
+// });
 
-
-/* ---------- END FIXES ---------- */
-
-/* MULTIPLE CTAS */
-.content-block-content__message p:not(.content-block-content__action),
-.hero-content-block .content-block-content__action{
-	display:none;
-}
-.jm-multipleCTA-space a{
-	margin: 0 1% 3%;
-}
-/* END MULTIPLE CTAS */
+// END SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - 
 
 
-/* IMAGE CLICKABLE FIX */
-#jm_img_anchor{
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: rgba(255, 255, 255, 0);
-    width: 100%;
-/*     background: rgba(0, 128, 0, 0.09); */
-    height: 100%;
-    opacity:0;
+
+
+// MULTIPLE GRID AD BANNERS FOR W32 REFRESH
+
+// CREATING BROWSE GRID BANNERS BASED ON LOCATION -- CREATING BROWSE GRID BANNERS BASED ON LOCATION -- CREATING BROWSE GRID BANNERS BASED ON LOCATION -- CREATING BROWSE GRID BANNERS BASED ON LOCATION -- 
+$(window).load(function() {
+	var jm_p = $('.breadcrumbs__node-group span:nth-of-type(2) a');
+	var jm_p3 = $('.breadcrumbs__node-group span:nth-of-type(3)');	
+	var jm_cat = jm_p.html();
+	var jm_cat3 = jm_p3.html();	
+	var urlEshoes = (
+		(window.location.href.indexOf("arrivals") > -1) ||
+		(window.location.href.indexOf("edit") > -1) ||		
+		(window.location.href.indexOf("italian") > -1) ||
+		(window.location.href.indexOf("luxury") > -1) ||		
+		(window.location.href.indexOf("under") > -1) ||
+		(window.location.href.indexOf("7agrw") > -1) || //Golden
+		(window.location.href.indexOf("7arsw") > -1)
+	);
+	var urlEhandbags = (
+		(window.location.href.indexOf("arrivals") > -1) ||
+		(window.location.href.indexOf("luxury") > -1) ||		
+		(window.location.href.indexOf("7ablw") > -1) ||
+		(window.location.href.indexOf("7alcw") > -1) 
+	);	
+	var urlEkids = (
+		(window.location.href.indexOf("arrivals") > -1) ||
+		(window.location.href.indexOf("gifts") > -1) ||
+		(window.location.href.indexOf("essentials") > -1) ||		
+		(window.location.href.indexOf("occasion") > -1) ||		
+		(window.location.href.indexOf("disney") > -1) ||	
+		(window.location.href.indexOf("toys") > -1)
+	);
+	var urlEmens = (
+		(window.location.href.indexOf("arrivals") > -1) ||
+		(window.location.href.indexOf("style") > -1) ||
+		(window.location.href.indexOf("7abtm") > -1) || 
+		(window.location.href.indexOf("7addm") > -1) || 
+		(window.location.href.indexOf("7aznm") > -1) || 
+		(window.location.href.indexOf("7appm") > -1) || 
+		(window.location.href.indexOf("7ambm") > -1) || 
+		(window.location.href.indexOf("7avww") > -1) || 		
+		(window.location.href.indexOf("7arom") > -1)
+	);
+	var urlEcontemporary = (
+		(window.location.href.indexOf("arrivals") > -1) ||
+		(window.location.href.indexOf("cashmere") > -1) ||
+		(window.location.href.indexOf("italian") > -1)
+	);		
+	var urlEmwomens = (
+		(window.location.href.indexOf("arrivals") > -1) ||
+		(window.location.href.indexOf("cashmere") > -1) ||
+		(window.location.href.indexOf("7aoww") > -1) ||
+		(window.location.href.indexOf("7arow") > -1) ||
+		(window.location.href.indexOf("7atnw") > -1)
+	);
+	var urlEhome = (
+		(window.location.href.indexOf("essentials") > -1) ||
+		(window.location.href.indexOf("exotic") > -1) ||	
+		(window.location.href.indexOf("gourmet") > -1) || 
+		(window.location.href.indexOf("7aibh") > -1)
+	);
+	var urlEbeauty = (
+		(window.location.href.indexOf("bvlgari") > -1) ||
+		(window.location.href.indexOf("klein") > -1) ||
+		(window.location.href.indexOf("elf") > -1) ||		
+		(window.location.href.indexOf("boss") > -1) || 
+		(window.location.href.indexOf("opi") > -1)
+	);	
+	var urlEtech = (
+		(window.location.href.indexOf("beats") > -1) ||
+		(window.location.href.indexOf("fitbit") > -1) ||
+		(window.location.href.indexOf("gopro") > -1) ||		
+		(window.location.href.indexOf("jbl") > -1) || 
+		(window.location.href.indexOf("sonos") > -1)
+	);		
+	var urlEnewandnow = (
+		(window.location.href.indexOf("beats") > -1) ||
+		(window.location.href.indexOf("fitbit") > -1) ||
+		(window.location.href.indexOf("gopro") > -1) ||		
+		(window.location.href.indexOf("jbl") > -1) || 
+		(window.location.href.indexOf("sonos") > -1)
+	);			
+	var urlEspecial = (
+		(window.location.href.indexOf("reduction") > -1)
+	);	
+// 	var urlEspecial_Active = (
+// 		(window.location.href.indexOf("active") > -1)
+// 	);	
+					
+ 	//console.log(urlEshoes);
+
+	if(jm_cat === "Tech"){
+//		allSiteGA29();
+		allSiteGA14();
+		if(!urlEtech){
+// 			WishiWankaGA();
+		}	
+	}
+	else if(jm_cat === "New + Now"){
+		//	allSiteGA29();
+		allSiteGA14();
+	}
+	else if(jm_cat === "Beauty"){
+		if(!urlEbeauty){
+			freeShippingBeautyGA();
+// 			WishiWankaGA();
+		}
+	}
+	else if(jm_cat === "Shoes"){
+		//	allSiteGA29();
+			allSiteGA14();
+		if(!urlEshoes){
+			//newArrivalsShoesGA();
+		}
+	}
+	else if(jm_cat === "Handbags &amp; Accessories"){
+			doubleHandbagsBGA();
+		//	allSiteGA29();
+			allSiteGA14();
+		if(!urlEhandbags){
+	//		newArrivalsHandbagsGA();
+		}
+	}			
+	else if(jm_cat === "Kids"){
+		//	allSiteGA29();
+			allSiteGA14();
+		if(!urlEkids){
+	//		kidsNewArrivalsGA();
+		}		
+	}
+	else if(jm_cat === "Contemporary"){		
+		if(!urlEcontemporary){
+			//newArrivalsContemporaryGA();
+		}
+	}
+	else if(jm_cat === "Women"){
+		//	allSiteGA29();
+			allSiteGA14();
+		if(!urlEmwomens){
+			//newArrivalsWomenGA();
+		}
+	}
+	else if(jm_cat === "Men"){
+		//	allSiteGA29();
+			allSiteGA14();
+		if(!urlEmens){
+			//newArrivalsMenGA();	
+		}
+	}
+	else if(jm_cat === "Home"){
+			doubleHomeBGA();
+		//	allSiteGA29();
+			allSiteGA14();
+		if(!urlEspecial){
+			//WishiWankaGA();
+		}
+
+	}
+	else if(jm_cat === "Clearance"){
+// 		giftsCardsGA2();
+	}	
+
+	else{
+		return false;
+	}
+
+
+	fixingHeights();
+
+});
+
+
+// NEW ARRIVAL HANDBAGS GRID AD BANNER
+function newArrivalsHandbagsGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDIvMDkvMTgvMDgvMzMvMjczLzAxXzAyV2VlazNfQkdfbmV3YXJyaXZhbHNfaGJhY2MuanBnIl1d/01_02Week3_BG_newarrivals_hbacc.jpg?sha=5162048e785ee68b";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/categories/handbags-accessories-new-arrivals";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function(e) {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single(realPos, gaType);
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--light">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	AdClassAll_Single(realPos, gaType);
+
 }
-#jm_img_anchor2{
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: rgba(255, 255, 255, 0);
-    width: 100%;
-/*     background: rgba(0, 128, 0, 0.09); */
-    height: 50%;
-    opacity:0;    
+// END NEW ARRIVAL HANDBAGS GRID AD BANNER
+
+
+
+// NEW ARRIVAL SHOES GRID AD BANNER
+function newArrivalsShoesGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDIvMDkvMTYvNTgvMjcvMTc5LzAxXzAyV2VlazNfQkdfbmV3YXJyaXZhbHNfc2hvZXMuanBnIl1d/01_02Week3_BG_newarrivals_shoes.jpg?sha=ae5d69fca57c52e4";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/categories/shoes-new-arrivals";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function(e) {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single(realPos, gaType);
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--light">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	AdClassAll_Single(realPos, gaType);
+
 }
-.content-block-content__action--button .button{
-    position: relative;
-    z-index: 3;
+// END NEW ARRIVAL SHOES GRID AD BANNER
+
+
+// NEW ARRIVAL WOMEN GRID AD BANNER
+function newArrivalsWomenGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDIvMDkvMTYvMzAvMTAvMzAvMDFfMDJXZWVrM19CR19uZXdhcnJpdmFsc193LmpwZyJdXQ/01_02Week3_BG_newarrivals_w.jpg?sha=ccec2a11387eca16";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/categories/women-new-arrivals";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function(e) {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single(realPos, gaType);
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--light">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	AdClassAll_Single(realPos, gaType);
+
 }
-.button:focus, .drawer .result-filters__toggle--link:focus, .button:hover, .drawer .result-filters__toggle--link:hover{
-    border-color: black !important
+// END NEW ARRIVAL WOMEN GRID AD BANNER
+
+// NEW ARRIVAL CONTEMPORARY GRID AD BANNER
+function newArrivalsContemporaryGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDIvMDkvMTYvMzUvNTEvMTMxLzAxXzAyV2VlazNfQkdfbmV3YXJyaXZhbHNfY29udGVtcC5qcGciXV0/01_02Week3_BG_newarrivals_contemp.jpg?sha=d7893cd80dc802dd";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/categories/contemporary-new-arrivals";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function(e) {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single(realPos, gaType);
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--light">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	AdClassAll_Single(realPos, gaType);
+
+}
+// END NEW ARRIVAL CONTEMPORARY GRID AD BANNER
+
+
+// NEW ARRIVAL MEN GRID AD BANNER
+function newArrivalsMenGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDIvMDkvMTYvNDAvMDMvNzYzLzAxXzAyV2VlazNfQkdfbmV3YXJyaXZhbHNfbWVucy5qcGciXV0/01_02Week3_BG_newarrivals_mens.jpg?sha=bec83828e9612298";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/categories/men-new-arrivals";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function(e) {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single(realPos, gaType);
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--light">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	AdClassAll_Single(realPos, gaType);
+
+}
+// END NEW ARRIVAL MEN GRID AD BANNER
+
+
+
+// KIDS NEW ARRIVALS AD BANNER
+function kidsNewArrivalsGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDIvMTYvMTYvNDYvNTYvNTgyLzAxXzAyV2VlazNfQkdfbmV3YXJyaXZhbHNfa2lkcy5qcGciXV0/01_02Week3_BG_newarrivals_kids.jpg?sha=2f90be880b89d2f3";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/categories/kids-new-arrivals";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function(e) {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single(realPos, gaType);
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--light">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	AdClassAll_Single(realPos, gaType);
+
+}
+// END KIDS NEW ARRIVALS GRID AD BANNER
+
+
+
+// GET ACTIVE WOMEN GRID AD BANNER
+function getActiveWomenGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTIvMjcvMTcvMDgvNDcvMzY1LzAxXzAxV2VlazFfQkdfd29tZW4uanBnIl1d/01_01Week1_BG_women.jpg?sha=dd501f6aa0b3bedb";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/categories/new-now-get-active-women";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function(e) {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single(realPos, gaType);
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--light">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	AdClassAll_Single(realPos, gaType);
+
+}
+// END GET ACTIVE WOMEN GRID AD BANNER
+
+// BEAUTY FREESHIPPING GRID AD BANNER
+function freeShippingBeautyGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDIvMTAvMTcvNTIvMjAvOTg1LzAyV2VlazNfQkdfbmV3YXJyaXZhbHNfYmVhdXR5LmpwZyJdXQ/02Week3_BG_newarrivals_beauty.jpg?sha=b53a81255c0bb59b";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/categories/women-new-arrivals";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function(e) {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single(realPos, gaType);
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--light">'+
+// 		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	AdClassAll_Single(realPos, gaType);
+
+}
+// END BEAUTY FREESHIPPING GRID AD BANNER
+
+
+// ALL SITE SPRIdG GRID AD BANNER
+function allSiteGA14() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDYvMjEvMTAvMDYvNDYvNjIyLzAxXzA2V2VlazA1X0JHLmpwZyJdXQ/01_06Week05_BG.jpg?sha=85bd51e9e0fbc87d";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/pages/clearance";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function(e) {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single(realPos, gaType);
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--dark">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+// 		'<p class="content-block-content__action content-block-content__action--dark-text"><a target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	AdClassAll_Single(realPos, gaType);
+
+}
+// END ALL SITE SPRING GRID AD BANNER
+
+
+// ALL SITE NEW REDUCTION GRID AD BANNER
+function allSiteGA29() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 29;
+	//IMAGE URL 370x552
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDQvMDUvMTAvMzIvNTUvMzM2LzA0V2VlazFfQkdBX05ld1JlZF8wMS5qcGciXV0/04Week1_BGA_NewRed_01.jpg?sha=6dd0d96bafa3f0fe";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/pages/new-reductions";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function(e) {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single(realPos, gaType);
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--dark">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	AdClassAll_Single(realPos, gaType);
+
+}
+// END ALL SITE NEW REDUCTION GRID AD BANNER
+
+
+
+
+
+
+
+
+// ACQUISITION GRID AD BANNER
+function acquisitionGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 46;
+	//IMAGE URL 370x552
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTAvMDYvMTYvMDAvNDQvMTUyLzA5V2VlazRfUExDQ19HcmlkX0lNRy5qcGciXV0/09Week4_PLCC_Grid_IMG.jpg?sha=db1dd8d42c58d407";
+	//LINK TEXT
+	var textLink = "LEARN MORE";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/instant_credit";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function(e) {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single(realPos, gaType);
+    	}, 100);
+	};
+
+
+	var $GridAd = $('.product-grid li:nth-of-type(3)');
+	
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--dark">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+
+	AdClassAll_Single(realPos, gaType);
+
+}
+// END ACQUISITION GRID AD BANNER
+
+
+
+
+
+// RETENTION GRID AD BANNER
+function retentionGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 46;
+	//IMAGE URL 370x552
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDIvMTMvMTUvNTQvMTMvOTUzLzA5V2VlazRfUExDQ19HcmlkX1JldGVudGlvbjIuanBnIl1d/09Week4_PLCC_Grid_Retention2.jpg?sha=020b263e54ca1df2";
+	//LINK TEXT
+	var textLink = "LEARN MORE";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/instant_credit";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function(e) {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single(realPos, gaType);
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--dark">'+
+		// '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	AdClassAll_Single(realPos, gaType);
+
+}
+// END RETENTION GRID AD BANNER
+
+
+// HOME BGA 2BLE
+function doubleHomeBGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 2;
+	//POSITION
+	var pos = 30;
+	//IMAGE URL 370x552
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDYvMjcvMTQvNDUvNDQvMjk5LzAwMl8wN1dlZWsxX0JHQV9TZWFzaWRlY2hpYy5qcGciXV0/002_07Week1_BGA_Seasidechic.jpg?sha=7d36724bde451c7d";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/categories/new-now-seaside-chic";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function(e) {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single(realPos, gaType);
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--dark">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a name="Seaside_Chick" class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+// 		'<p class="content-block-content__action content-block-content__action--dark-text"><a target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	AdClassAll_Single(realPos, gaType);
+
+}
+// END Handbags BGA 2BLE
+
+// HOME BGA 2BLE
+function doubleHandbagsBGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 2;
+	//POSITION
+	var pos = 30;
+	//IMAGE URL 370x552
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDYvMjcvMTUvMzIvNDQvMjgvMDAxXzA3V2VlazFfQkdBX0hvbGx5d29vZEdsYW0uanBnIl1d/001_07Week1_BGA_HollywoodGlam.jpg?sha=63d590bf70970f85";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/categories/new-now-hollywood-glam";
+	
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function(e) {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single(realPos, gaType);
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--dark">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a name="Hollywood_Glam" class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+// 		'<p class="content-block-content__action content-block-content__action--dark-text"><a target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+	
+	AdClassAll_Single(realPos, gaType);
+
+}
+// END Handbags BGA 2BLE
+
+// RESIZING GRID ADS
+	function AdClassAll_Single(realPos, gaType){
+	setTimeout(function(){
+		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
+		//console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
+		//console.log($('.product-grid li:nth-of-type(3)'));		
+		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
+	},1500);			
+	}	
+// END RESIZING GRID ADS
+
+
+// PROMOTIONAL DISCOUNTS HELPFUL MESSAGE
+
+// 	var testing123 = $('.cart-prices__value span').parent().parent().children('.cart-prices__label');
+// 	console.log(testing123);
+// 
+// // 	$('.cart-prices__label').eq(1).html(function(){
+// 	$(testing123).html(function(){		
+// 		console.log(this);
+// 		var promotion_message = $(this).html();
+// 		console.log('Promotion message: ' + promotion_message);
+// 		$('.cart-prices__label').each(function(i) {
+// 			filtered_promotion_message = promotion_message.match(/\{([^}]+)\}/)[1];
+// 		});	
+// 		var new_promotion_message = promotion_message.replace("{", " ").replace("}", " ").replace(filtered_promotion_message, " ");	
+// 
+// 		//console.log('Promotion message: ' + promotion_message);
+// 		//console.log('Filtered promotion message: ' + filtered_promotion_message);	
+// 		//console.log('New promotion message: ' + new_promotion_message);			
+// 
+// 
+// 	    return $(this).html().replace(promotion_message, new_promotion_message);
+// 	});
+
+
+
+
+
+
+
+
+// HEIGHT PRODUCT GRID EVEN
+function fixingHeights(){
+	setTimeout(function(){  
+		var gridAds	= [];
+		$("ul.product-grid").children().each(function(){
+			gridAds.push($(this).height());
+		// 	console.log("this is: " + $(this).outerHeight(true));
+		});
+		console.log(gridAds);
+		var maxHeight = Math.max.apply(Math, gridAds);
+		console.log(maxHeight);
+		
+		$('.product-grid__cell').css('height',maxHeight);
+		
+	}, 1000);
 }
 
-/* ADS BANNERS */
-.product-grid__cell--1 .product-grid-content-block{
-    background-position: 50% 50%;
-}
-.product-grid-content-block{
-    background-position: 0 0;
-}
-.product-grid-content-block p.content-block-content__action{
-    margin:0 0 13%;
-    width:100%;
-}
-.jmrv-product-grid__cell--2 .product-grid-content-block p.content-block-content__action{
-    margin:0%;
-}   
-.content-block-content__message h3.wysiwyg-font-size-large{
-    font-size: 0.56em;
-    line-height: 1.3;
-}
-.product-grid__cell--1 .button,
-.product-grid__cell--2 .button{
-	z-index:1;
-}
+	
 
-/* RELATED PRODUCTS WIDGET JMRV - Pushed 070516*/
-.br-rp-qv-show{
-    width: 100%;
-    bottom: 30%;
-    position: fixed;
-    left: 0;
-    z-index:99;
+
+//AUDIO UGLY SWEATERS
+
+function uglySweaters(){
+
+	if(window.location.href.indexOf("https://www.c21stores.com/products/reindeer-holiday-sound-sweater") > -1){
+		//$('.product-details__sub-section--description').append(
+		//'<audio controls>'+
+		//	'<source src="horse.ogg" type="audio/ogg">'+
+		//	'<source src="horse.mp3" type="audio/mpeg">'+
+		//	'Your browser does not support the audio element.'+
+		//'</audio>'
+		//);
+	}
+	else if(window.location.href.indexOf("https://www.c21stores.com/products/elf-dj-holiday-sweater") > -1){
+		$('.product-details__sub-section--description').append(
+		'<audio controls>'+
+	//		'<source src="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTEvMDEvMTUvNDgvMzAvNDAyLzI0NzVfMDQ1Ny5tcDMiXV0/2475-0457.mp3?sha=e61c6cd697fad8e8" type="audio/ogg">'+
+			'<source src="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTEvMDEvMTUvNDgvMzAvNDAyLzI0NzVfMDQ1Ny5tcDMiXV0/2475-0457.mp3?sha=e61c6cd697fad8e8" type="audio/mpeg">'+
+			'Your browser does not support the audio element.'+
+		'</audio>'
+		);
+	}
+
+}uglySweaters();
+
+
+
+// UNIQUE CLASSES NAMING FOR CATEGORIES
+function uniqueClasses(){
+
+// 	setTimeout(function(){
+		$(".primary-nav__menu-item, .primary-nav__item-node, .primary-nav__nav-menu").hover(function(){
+		
+			$('.primary-nav__nav-menu').each(function() {
+				// ADDING ID NAVIGATION
+				$(this).find('.primary-nav__item-node, span').each(function() {
+
+					var currentElement = $(this);
+					var value = currentElement.html();
+					var classValue = value.replace(/[^A-Z0-9]/ig, "");
+// 					console.log(value);
+// 					console.log(classValue);
+					$(currentElement).addClass(classValue);    
+				});
+			});
+		});
+		
+		$('.secondary-nav__nav-menu').each(function() {
+			// ADDING ID NAVIGATION
+			$(this).find('.secondary-nav__item-node, span').each(function() {
+
+				var currentElement = $(this);
+				var value = currentElement.html();
+				var classValue = value.replace(/[^A-Z0-9]/ig, "");
+// 				console.log(value);
+// 				console.log(classValue);
+				$(currentElement).addClass(classValue);    
+			
+			});
+		});
+		
+		
+				
+			$('.primary-nav__nav-menu').each(function() {
+				// ADDING ID NAVIGATION
+				$(this).find('.primary-nav__item-node, span').each(function() {
+
+					var currentElement = $(this);
+					var value = currentElement.html();
+					var classValue = value.replace(/[^A-Z0-9]/ig, "");
+// 					console.log(value);
+// 					console.log(classValue);
+					$(currentElement).addClass(classValue);    
+				});
+			});	
+		
+// 
+// 	},1000);
+
+};
+	
+// END UNIQUE CLASSES NAMING FOR CATEGORIES
+
+
+
+
+function bannersMassive(){
+	if((window.location.href.indexOf("cyber") > -1) && (window.location.href.indexOf("categories") > -1)){
+		console.log('banner Category');
+		$('.banner-content-block__large-image-container').css('background-image','url("https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTEvMjIvMTQvMjcvMzMvNzA5LzEyV2VlazFfQkJfQ3liZXIuanBnIl1d/12Week1_BB_Cyber.jpg?sha=a6bdf454a6ec6b1c")');
+	}
+	else{
+		return false;
+	}
+}bannersMassive();
+
+
+
+// VIDEO PLCC JEWELRY
+function pdpVideos(){
+
+	var jewelr_Pull_PI = $('.product-details__id span').text();
+	console.log(jewelr_Pull_PI);
+	var listVideoJewelry = [
+		'6612-0977',
+		'6612-1699',
+		'6612-4222',
+		'6613-0860',
+		'6613-4030',
+		'6613-9439',
+		'6614-0477', 
+		'6614-0557', 
+		'6614-1271', 
+		'6614-0254', 
+		'6614-6784', 
+		'6614-5188', 
+		'6614-1106', 
+		'6614-0251', 
+		'6614-2717', 
+		'6614-8996',
+		'953971CDC56614-51886614-89966614-0477',
+		'0DA56941B76614-27176614-05576614-0254',
+		'674E56A0B56614-67846614-1271',
+		'0FD847BFAC6614-02516614-1106'	
+		];
+	console.log(listVideoJewelry);
+// 	if(listVideoJewelry.includes(jewelr_Pull_PI)){
+
+	if(listVideoJewelry.indexOf(jewelr_Pull_PI) !== -1){
+
+
+	console.log('Video');
+	function createVideo(){
+		var placeVideoHere = document.getElementsByClassName('product-details__media')[0];
+		console.log(placeVideoHere);
+		$(placeVideoHere).prepend(
+			'<figure id="playJV" style="position: absolute; bottom: -5%; z-index: 999; text-align: center; width: 100%;"><a href="#1" style="display: block;width: 7%;margin: 0 48% -2% auto;">'+
+			'<img src="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTEvMjgvMTYvMzEvMjIvNTMzL3BsYXlidXR0b25fR3JleS5wbmciXV0/playbutton-Grey.png?sha=86cbf51c7b342695"/>'+			
+			'</a></figure>' +
+			'<div class="jm_dark_lightBox" id="jm_dark_lightBox" style="display:none;">'+
+			'<iframe style="position: relative; z-index: 99;" class="JewelryVideo" id="JewelryVideo" width="560" height="315" src="https://www.youtube.com/embed/UhdpwZAc0Yk?modestbranding=1&enablejsapi=1&amp;rel=0&amp;controls=0&amp;showinfo=0&amp;disablekb=1&amp;iv_load_policy=3&amp;nologo=1&amp;ps=docs&amp;showsearch=0" frameborder="0" allowfullscreen></iframe>'+
+			'<figure class="jm_lightbox_X" style="opacity: 0.6;">'+
+			'<img style="width: 38px; margin: 0 auto; display: block;" src="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTIvMDEvMTQvMDMvMzQvNDQ3L3BsYXllcl9zdG9wX3ZpZGVvX2J1dHRvbi5wbmciXV0/player-stop-video-button.png?sha=bf4dc632096fa32b"/>'+			
+			'</figure>'+
+			'<a id="stopJV" class="jm_dark_lightBox_X"></a>'+			
+			'</div>'			
+		);
+	}createVideo();
+
+
+	function videoControl(action){ 
+		var $playerWindow = $('#JewelryVideo')[0].contentWindow;
+		$playerWindow.postMessage('{"event":"command","func":"'+action+'","args":""}', '*');
+	}
+
+
+	function togglitoPDPVideo(){
+		$("#playJV").click(function(){
+			$('#sticky-wrapper').css('z-index','9');
+			$('.page-content').css('z-index','999');			
+			$(".jm_dark_lightBox").fadeToggle(1300).css('display','flex').css('display','-ms-flexbox').css('display','-webkit-flex');
+		　　videoControl("playVideo"); 
+		});
+						
+	}togglitoPDPVideo();
+	function togglitoPDPVideoOUT(){
+		$("#stopJV").click(function(){
+			$('#sticky-wrapper').css('z-index','99');
+			$('.page-content').css('z-index','9');	
+			$(".jm_dark_lightBox").fadeToggle(1300).css('display','flex').css('display','-ms-flexbox').css('display','-webkit-flex');
+		　　videoControl("stopVideo");
+		});
+						
+	}togglitoPDPVideoOUT();	
+
+
+
+};
+
+
+	
+};
+
+// END VIDEO PLCC JEWELRY
+
+
+
+// MULTIPLE CTAS CONTENT BLOCKS
+$('.hero-content-block, .banner-content-block').each(function(index){
+	console.log("before multi multi");
+	console.log(this);
+	//MULTIPLE CTA HERO
+	var hero_number_CTA = $(this).find('.content-block-content__message').children('p').length;
+	var initial_CTA_class = $(this).find('.content-block-content__action a').attr('class');
+// 	var CTAtext = $(this).find('.content-block-content__message > p > a').html();
+	var CTAtext_URL = $(this).find('.content-block-content__message > p > a').attr('href');
+	console.log('URLs' + CTAtext_URL);
+	console.log(hero_number_CTA);
+// 	console.log(initial_CTA_class);	
+
+if(hero_number_CTA !=0 ){
+	var CTAtext = $(this).find('.content-block-content__message > p > a').html().toLowerCase();
+	// IF THERE IS MULTIPLE CTA
+	if (hero_number_CTA > 1){
+			$(this).find('.content-block-content__action').fadeIn(600);	
+			console.log("multi multi");
+			jm_hero_FirstCTA = $(this).find('.content-block-content__action a').eq(0);
+			jm_hero_FirstCTA_url = jm_hero_FirstCTA.attr('href');
+// 			console.log('this url ' + jm_hero_FirstCTA_url);
+			jm_hero_FirstCTA_text = jm_hero_FirstCTA.text().toLowerCase();
+			
+			if (jm_hero_FirstCTA_url.indexOf("#jmlb") > -1){
+				console.log('first is hidden');
+				jm_hero_FirstCTA.addClass('jm_bottom_lightbox').wrapInner( '<div class="jm_lightBox_CTA"></div>');
+				jm_hero_FirstCTA.addClass('JM_trigger_ligthBox');
+				console.log ('coming crispy' + $(this));
+					   	var new_data_lb = $('.jm_bottom_lightbox:first-of-type', this).clone();
+						new_data_lb.attr("id", "jm_img_anchor_LB");
+// 						new_data_lb.removeAttr("class");	
+						new_data_lb.appendTo(this);
+				$(this).find('.JM_trigger_ligthBox').hide(100);
+				console.log(jm_hero_FirstCTA);
+			}	
+			
+			
+			$(this).find('.content-block-content__message p:not(.content-block-content__action)').each(function(index){
+			multi_cta_copy = $(this).html();
+					console.log(multi_cta_copy);
+
+			if (multi_cta_copy.indexOf("*") > -1){
+				var multi_CTA_text = $(this).html().split("*")[0];
+				var multi_CTA_url = $(this).html().split("*")[1].replace("<br>", "").replace(" ", "");
+				var multi_CTA_wrap = $(this).parent();
+				
+					console.log(multi_CTA_url);
+										
+					$(multi_CTA_wrap).find('.content-block-content__action').addClass("jm-multipleCTA-space").append(
+						'<a class="' + initial_CTA_class +'" href="' + multi_CTA_url + '">' + multi_CTA_text + '</a>'					
+					)
+
+					
+// 					if (multi_CTA_url.indexOf("#jmlb") > -1){
+// 						console.log('first is hidden of Others');
+// 						multi_CTA_url.addClass('JM_trigger_ligthBox');
+// 					}	
+										
+			}
+			
+			});
+			if(hero_number_CTA == 5){
+				$(this).find('.content-block-content__action').addClass("jm-multipleCTA-space5");    
+				if ($(window).width() < 700) {
+					$(this).find('.hero-content-block__content-boundary, .content-block-content').css("min-height","171vw");
+				}	    
+			}
+			else if(hero_number_CTA == 4){
+				$(this).find('.content-block-content__action').addClass("jm-multipleCTA-space4");
+				$(this).find('.content-block-content__action').parent().eq(2).addClass("jm-multipleCTA-container");	    
+				if ($(window).width() < 700) {
+					$(this).find('.hero-content-block__content-boundary, .content-block-content').css("min-height","160vw");
+				}
+			}	
+			else if(hero_number_CTA == 3){
+				$(this).find('.content-block-content__action').addClass("jm-multipleCTA-space3");	
+				if ($(window).width() < 700) {
+					$(this).find('.hero-content-block__content-boundary, .content-block-content').css("min-height","160vw");
+				}
+			}	
+			else if(hero_number_CTA == 2){
+				$(this).find('.content-block-content__action').addClass("jm-multipleCTA-space2");
+			}			
+// 			$('.hero-content-block > a').hide();
+	
+	}	
+
+	// IF THERE IS ONE CTA WITH WORD LIGHTBOX LB
+	else if ((hero_number_CTA = 1) && (CTAtext_URL.indexOf("#jmlb") > -1)){	
+		console.log('unoLightBox!!');
+		$(this).find('.content-block-content__action').fadeIn(600);
+		$(this).find('a').addClass('JM_trigger_ligthBox').addClass('jm_show_important');
+// 		$(this).find('a').addClass('JM_trigger_ligthBox').addClass('jm_show_important').addClass('jm_bottom_lightbox').wrapInner( '<div class="jm_lightBox_CTA"></div>');
+
+		// IF THERE IS ONE CTA WITH WORD LIGHTBOX LB and ALSO HIDE
+		if ((hero_number_CTA = 1) && ( CTAtext.indexOf("jmhide") > -1)){	
+			console.log('unoHidden&LightBox!!');
+			$(this).find('.content-block-content__action').hide();
+		}
+		else if ((hero_number_CTA = 1) && ( CTAtext_URL.indexOf("#jmdetails") > -1)){			
+			$(this).find('a').addClass('JM_trigger_ligthBox').addClass('jm_show_important').addClass('jm_bottom_lightbox').wrapInner( '<div class="jm_lightBox_CTA"></div>');
+			$(this).find('.content-block-content').addClass('jmrv-desktop');
+		}
+		
+	}
+
+	// IF THERE IS ONE CTA WITH WORD HIDE
+	else if ((hero_number_CTA = 1) && ( CTAtext.indexOf("jmhide") > -1)){	
+		console.log('unohidden!!');
+		$(this).find('.content-block-content__action').hide();
+	}
+
+	// ELSE DISPLAY ALL CTAs
+	else{
+		$(this).find('.content-block-content__action').fadeIn(600);
+	};
+
+
 }
-.br-sf-widget-merchant-popup-maincont{
-    width: 100%;
-    padding: 0%;
-    margin: 0 auto;
-    background: white;
-    position: relative;
+	
+
+	$('.rich-text-content-block p:last-child').addClass('jm_X_Hero_lightBox');
+
+	
+});
+// END MULTIPLE CTAS CONTENT BLOCKS
+
+
+
+// TIERED PRICING
+
+
+function pdpTieredPrice(){
+
+	if(window.location.href.indexOf("products") > -1){
+
+		var tieredPriceChildren = document.getElementsByClassName("product-details__price-row")[0].childElementCount;;
+		if (tieredPriceChildren == 2){
+			console.log(tieredPriceChildren);
+			$('.product-details__price-group').addClass('jm-tieredContainer');
+			$('.product-details__price-group > .product-details__price-row').addClass('jm-tieredContainer-row');
+			$('.product-details__price-row > .product-details__price--regular').addClass('jm-tieredContainer-regular');
+			$('.product-details__price-row > .product-details__price--sell').addClass('jm-tieredContainer-sell');
+			$('.product-details__price-row > .product-details__price--msrp').addClass('jm-tieredContainer-msrp');
+			$('.product-details__price-row > .product-details__price--percent-saved').addClass('jm-tieredContainer-percent-saved');						
+		}
+
+	}
+	
+};
+
+
+
+$(document).on( 'click', '.product-summary__quickview a', function(){
+	setTimeout(function() {   //calls click event after a certain time
+	   	console.log('quickview');
+			function quickViewTieredPrice(){
+
+				if((window.location.href.indexOf("categories") > -1) || (window.location.href.indexOf("hearts") > -1)){
+					var tieredPriceChildren = document.getElementsByClassName("product-details__price-row")[0].childElementCount;;
+				   	console.log(tieredPriceChildren);
+					if (tieredPriceChildren == 2){
+						console.log(tieredPriceChildren);
+						$('.inline-quickview__content .product-details__attributes').addClass('jm-tieredAttributes-QV');
+						$('.inline-quickview__content .product-details__price-group').addClass('jm-tieredContainer-QV');
+						$('.inline-quickview__content .product-details__price-group > .product-details__price-row').addClass('jm-tieredContainer-row-QV');
+						$('.inline-quickview__content .product-details__price-row > .product-details__price--regular').addClass('jm-tieredContainer-regular-QV');
+						$('.inline-quickview__content .product-details__price-row > .product-details__price--sell').addClass('jm-tieredContainer-sell-QV');
+						$('.inline-quickview__content .product-details__price-row > .product-details__price--msrp').addClass('jm-tieredContainer-msrp-QV');
+						$('.inline-quickview__content .product-details__price-row > .product-details__price--percent-saved').addClass('jm-tieredContainer-percent-saved-QV');
+						$('.inline-quickview__content .product-details__badge-container').addClass('jm-product-details__badge-container-QV');
+					}
+
+				}
+				else if (window.location.href.indexOf("products") > -1){
+				   	console.log('quickview Hearts');
+					var tieredPriceChildren = document.getElementsByClassName("product-details__price-row")[2].childElementCount;;
+				   	console.log(tieredPriceChildren);
+					if (tieredPriceChildren == 2){
+						console.log(tieredPriceChildren);
+						$('.inline-quickview__content .product-details__attributes').addClass('jm-tieredAttributes-QV');
+						$('.inline-quickview__content .product-details__price-group').addClass('jm-tieredContainer-QV');
+						$('.inline-quickview__content .product-details__price-group > .product-details__price-row').addClass('jm-tieredContainer-row-QV');
+						$('.inline-quickview__content .product-details__price-row > .product-details__price--regular').addClass('jm-tieredContainer-regular-QV');
+						$('.inline-quickview__content .product-details__price-row > .product-details__price--sell').addClass('jm-tieredContainer-sell-QV');
+						$('.inline-quickview__content .product-details__price-row > .product-details__price--msrp').addClass('jm-tieredContainer-msrp-QV');
+						$('.inline-quickview__content .product-details__price-row > .product-details__price--percent-saved').addClass('jm-tieredContainer-percent-saved-QV');
+						$('.inline-quickview__content .product-details__badge-container').addClass('jm-product-details__badge-container-QV');
+					}
+
+				}
+					
+			}quickViewTieredPrice();
+	}, 1000);
+	
+
+});
+// END TIERED PRICING
+
+
+// KNIVES PDF KNIVES PDF KNIVES PDF KNIVES PDF KNIVES PDF
+function pdpKnivesPDF(){
+
+
+	var wusthof_knives = $('.product-details__id span').text();
+// 	console.log(jewelr_Pull_PI);
+	var listWusthofKnives = [
+		'7086-3538000',
+		'7086-3260000',
+		'7029-6399000',
+		'7029-7030000',
+		'7086-0425000',
+		'7086-0483000',
+		'7086-1081000',
+		'7086-2086000',
+		'7086-3205000',
+		'7086-3260000',
+		'7086-3538000',
+		'7086-4456000',
+		'7086-9169000',
+		'7086-9537000'	
+		];
+// 	console.log(listVideoJewelry);
+
+	if(listWusthofKnives.indexOf(wusthof_knives) !== -1){
+// 	if(listWusthofKnives.includes(wusthof_knives)){
+		console.log("machete machete machete");
+		$('.product-details__description-body ul li:last-of-type').append(
+			//'<li><a href="https://www.c21stores.com/media/W1siZiIsIjIwMTYvMTIvMDcvMTYvMzEvMDUvMzQ0L1JpZ2h0X0tuaWZlX2Zvcl90aGVfUmlnaHRfSm9iLnBkZiJdXQ/Right%20Knife%20for%20the%20Right%20Job.pdf?sha=93adee9bf2f82289" target="_blank" style="text-decoration:none;">Guide: The Right Knife for the Right Job</a></li>'
+			'<li>To find the Right Knife for the Right Job, <a id="playPDF" href="#1">'+
+			'click here'+			
+			'</a></li>' +
+			'<div class="jm_dark_lightBox" id="jm_dark_lightBox" style="display:none;">'+
+			'<object style="width: 49%; height: 90%; z-index: 9999999; position: relative;" data="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTIvMDcvMTYvMzEvMDUvMzQ0L1JpZ2h0X0tuaWZlX2Zvcl90aGVfUmlnaHRfSm9iLnBkZiJdXQ/Right%20Knife%20for%20the%20Right%20Job.pdf?sha=93adee9bf2f82289" type="application/pdf" width="100%" height="100%">'+
+   				'<p>This browser does not support PDFs Viewer. Please download the PDF to view it: <a href="/pdf/sample-3pp.pdf">Download PDF</a>. <br/> or open the PDF <a href="https://www.c21stores.com/media/W1siZiIsIjIwMTYvMTIvMDcvMTYvMzEvMDUvMzQ0L1JpZ2h0X0tuaWZlX2Zvcl90aGVfUmlnaHRfSm9iLnBkZiJdXQ/Right%20Knife%20for%20the%20Right%20Job.pdf?sha=93adee9bf2f82289" target="_blank"> cLick here</a> </p>'+
+			'</object>'+
+			'<p style="position: absolute; top: 2%; right: 2%; font-size: 20px; font-weight: lighter;">X</p>'+
+			'<a id="stopPDF" class="jm_dark_lightBox_X"></a>'+			
+			'</div>'			
+		);		
+		function togglitoPDPPDF(){
+			$("#playPDF").click(function(){
+				$('#sticky-wrapper').css('z-index','9');
+				$('.page-content').css('z-index','999');
+				$(".jm_dark_lightBox").fadeToggle(1300).css('display','flex').css('display','-ms-flexbox').css('display','-webkit-flex').css('display','webkit-box-flex');
+			});
+						
+		}togglitoPDPPDF();
+		function togglitoPDPDPFOUT(){
+			$("#stopPDF").click(function(){
+				$('#sticky-wrapper').css('z-index','99');
+				$('.page-content').css('z-index','9');				
+				$(".jm_dark_lightBox").fadeToggle(800).css('display','flex').css('display','-ms-flexbox').css('display','-webkit-flex').css('display','webkit-box-flex');
+			});				
+		}togglitoPDPDPFOUT();
+
+	}
+
+	
+};
+// END KNIVES PDF KNIVES PDF KNIVES PDF KNIVES PDF KNIVES PDF
+
+
+// ADDING CLASSES TO LPs BASED ON WIDTH AND NAMES
+function addingClass_LP_width(){ 
+
+	//If there is  a Left Nav add class 1170 and name of LP
+	if($('.page-content__wrapper').find('div.page-content__aside').length == 1){
+		$('.view').addClass('jm_lp_1170');
+		nameLP = $('.view h1').html().toLowerCase().replace(/\s/g,'');
+		$('.view').addClass('jm_lp_' + nameLP);
+	}
+	//If there is not Left Nav add class 1440
+	else{
+		$('.view').addClass('jm_lp_1440');
+	};
+	
 }
-.br-sf-widget-merchant-popup-close{
-    position: absolute;
-    top: 2%;
-    right: 1%;
-}
-.br-sf-widget-merchant-popup-close a{
-    content: url(https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDUvMDUvMTAvMjAvMDQvNjc0L1NjcmVlbl9TaG90XzIwMTZfMDVfMDVfYXRfMTAuMjAuNDJfQU0ucG5nIl1d/Screen%20Shot%202016-05-05%20at%2010.20.42%20AM.png?sha=cb9d9cdc4ec33360);
-}
-.br-sf-widget-merchant-popup-img{
-    width: 44%;
-    display: inline-block;
-    float: left;
-    margin: 3%;
-}
-.br-sf-widget-copy{
-    width: 42%;
-    display: inline-block;
-    text-align: center;
-    margin: 17% 8% 17% 0%;
-}
-.br-sf-widget-merchant-popup-details{
-    overflow:auto;
-}
-.br-sf-widget-merchant-popup-brandname,
-.br-sf-widget-merchant-popup-title,
-.br-sf-widget-merchant-popup-desc,
-.br-sf-widget-merchant-popup-view{
-    width: 100%;
-}
-.br-sf-widget-merchant-popup-view a{
-    display: inline-block;
-    margin: 0;
-    padding: 15px 0;
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: bold;
-    line-height: 1;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    white-space: nowrap;
-    background: #c6c8ca;
-    border: 1px solid transparent;
-    cursor: pointer;
-    -webkit-transition: all 0.25s ease-out;
-    transition: all 0.25s ease-out;
-    width: 100%;
-    box-sizing: border-box;    
-}
-.br-sf-widget-merchant-popup-view a:hover{
-    background:black;
+// END ADDING CLASSES TO LPs BASED ON WIDTH AND NAMES
+
+
+// LIGHT BOX GENERAL
+function Lightbox_heroCTA(){
+
+    $('.rich-text-content-block').each(function() {
+    console.log("YEA YEA" +this);
+        var currentImage = $(this);
+        currentImage.wrap('<div class="jm_dark_lightBox" id="jm_dark_lightBox" style="display:none;"></div>');
+    });
+    
+}Lightbox_heroCTA();
+
+function Lightbox_heroCTA_ClickEvent(){
+	$(".JM_trigger_ligthBox").click(function(){
+		console.log('muaaaaaniii!!!');
+		// $(this).parent().next().addClass('jm_displayflex');
+		$(this).closest('div.hero-content-block').next().find('.rich-text-content-block').fadeIn(1000);
+		$(this).closest('div.hero-content-block').next().fadeIn(1000).addClass("jm_displayflex");
+		$(this).closest('div.hero-content-block').next().append(
+			'<p class="jm_dark_lightBox_X">X</p>'			
+		);
+		$(".jm_dark_lightBox_X").click(function(){
+			$(this).stop().parent().fadeOut(300);
+				
+		});
+		$(".jm_X_Hero_lightBox").click(function(){
+			$('.jm_displayflex').stop().fadeOut(300);
+				
+		});		
+	});
+}Lightbox_heroCTA_ClickEvent();
+
+
+// END LIGHT BOX GENERAL
+ 
+// NAME TAGGING FOR LIVE COREMETRICS
+function name_taggingCoremetrics(){
+
+    $('.hero-content-block, .three-column-square-content-block, .large-square-plus-one-content-block__container, .two-column-square-content-block, .banner-content-block, .jm-custom-hp > section').each(function() {
+		var asset_title = $(this).find('h2').text();
+		$(this).find('a').each(function() {
+			var asset_anchor = $(this).attr('href').replace('https://www.c21stores.com', '');
+			var anchor_id = $(this).attr('id');
+			if((anchor_id == 'jm_img_anchor') || (anchor_id == 'jm_img_anchor2')){
+				imageornot = 'IMG: '
+			}
+			else{
+				imageornot = 'CTA: '
+			};
+		    console.log("TITLE " + asset_title);
+		    console.log("ID: " + anchor_id);		    
+		    
+			if($(window).width() < 768) {
+			    console.log("MOBILE ANCHOR: " + imageornot + asset_anchor);
+			    $(this).attr('name', "MOBILE-" + imageornot + asset_anchor);
+			}
+			else if(($(window).width() > 768) && ($(window).width() < 1100)) {
+			    console.log("TABLET ANCHOR: " + imageornot + asset_anchor);							
+			    $(this).attr('name', "TABLET-: " + imageornot + asset_anchor);
+			}
+			else {
+			    console.log("DESKTOP ANCHOR: " + imageornot + asset_anchor);							
+			    $(this).attr('name', "DESKTOP-" + imageornot + asset_anchor);
+			};
+
+		    console.log("-----------");		    		
+	    });
+    });
     
 }
-.br-sf-widget-merchant-popup__sub-section-heading{
-    display: block;
-    margin: 0;
-    padding: 10px;
-    font-size: 16px;
-    font-style: italic;
-    font-family: BauerBodoniBT, Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
-    text-transform: capitalize;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: subpixel-antialiased;    
-}
-.br-sf-widget-merchant-popup-desc{
-    font-size: 12px;
-    width: 100%;
-    margin: 0 6% 3% 1%;
-    color: #949494;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: subpixel-antialiased;
-}
-.br-sf-widget-merchant-popup-title{
-    display: block;
-    margin-bottom: 1.5em;
-    color: #000000;
-    font-size: 21px;
-    font-family: BauerBodoniBT, Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
-    font-style: italic;
-    font-weight: normal;
-    letter-spacing: 1px;    
-}
-.br-sf-widget-merchant-popup-title a{
-    color: black;
-}
-.br-sf-widget-merchant-popup-title a:hover{
-    text-decoration: none;  
-}
-.br-sf-widget-merchant-popup-brandname a{
-    text-transform: uppercase;
-    color: black;
-    font-weight: bold;
-    font-size: 1.6em;
-    letter-spacing: 0.13em;
-}
-.br-sf-widget-merchant-popup-brandname a:hover{
-    text-decoration:none;
-}
-/* END RELATED PRODUCTS WIDGET */
-
-
-/* NOT PART OF  FIX */
-
-/* RELEASE BAR */
-.admin-toolbar__preview-bar{
-    display: block !important;
-    position: fixed;
-    bottom: 0;
-    width: 99%;
-    padding: 0.5% 0;
-    color: white;
-    letter-spacing: 0.2em;
-    font-size: 1.2em;
-    color: red;
-    background: #FFFFB4;
-}
-.admin-toolbar__preview-bar button{
-    cursor: pointer;
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-/* END RELEASE BAR */
-
-
-.jm-guide .button--alt{
-    background: #6E6ED4;
-    color: white;
-    border-color: #6E6ED4;
-}
-.jm-guide .button--alt:hover{
-    background: black;
-    border-color: black;
-}
-
-.jm-download-button{
-    background: #6E6ED4;
-    color: white;
-    border-color: #6E6ED4;
-}
-.jm-download-button:hover{
-    background: black;
-    border-color: black;
-}
-.jm-green{
-    color: #0A9E0A;
-}
-.jm-red{
-    color: red;
-}
-.jm-orange{
-    color: #FF7E1D;
-}
-/* END NOT PART OF FIX */
-
-
-/* GENERAL OVERWRITE */
-
-/* ELIMINATING REPEAT BACKGROUND IMAGES */			
-.two-column-square-content-block__image{			
-	background-repeat: no-repeat;			
-}
-
-
-.jm-mobile section{
-  	margin-bottom: 9%;
-  	position: relative;
-}
-
-
-/* ELIMINATE SPACES ON MOBILE */
-br{
-    display:none;
-}
-
-.grid__cell,
-.grid--2-at-medium>.grid__cell,
-.grid--2-at-medium>.grid__cell+.grid__cell{
-    margin-bottom: 3%;
-}
-.page-content__main *{
-    background-repeat: no-repeat;
-}
-.page-content{
-    padding: 0;
-}
-
-/* SHOP BY CATEGORY */
-.jm-byCategory-wrap{
-    background: #f6f5f5;
-    padding: 3% 0 1%;
-}
-.jm_lp .five-column-square-content-block{
-    background: #f6f5f5;
-}
-
-/* ------------------------------  CONTENT BLOCKS CONTAINERS  ------------------------------ */
-
-/*MEGAMENUS*/
-.navigation-content-block--2-small-tall .navigation-content-block__item--tall-image{
-    margin-right:1%;
-}
-.navigation-content-block--tall-2-small .navigation-content-block__item--tall-image{
-    margin-right:2.3%;
-}
-.navigation-content-block__item--tall-image{
-    max-width: 210px;    
-}
-
-
-/* ALL CONTENT BLOCK MOBILE*/
-.content-block-content__container--center,
-.content-block-content--top,
-.content-block-content--bottom{
-    bottom: 0;
-}
-
-/* CONTENT BLOCK SPACING MOBILE*/
-.hero-content-block,
-.two-column-hero-content-block{
-    margin-bottom: 3%;
-}
-.page-content__main .hero-content-block,
-.page-content__main .two-column-hero-content-block{
-    margin-bottom: 4%;
-}
-
-/* ALL COPY DOWN MOBILE*/
-.content-block-content__container{
-    background: white;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
-
-/* HALF HERO MOBILE */
-.two-column-hero-content-block__text .content-block-content__container{
-    position: relative;
-}
-.two-column-hero-content-block{
-    background-size:cover;
-    background-position: 0; 
-}
-
-/* TWO BLOCK SQUARE MOBILE */
-.two-column-square-content-block__text{
-    padding: 0;
-}
-
-/* THREE BLOCK SQUARE MOBILE */
-.three-column-square-content-block__dots{
-    margin: -5% 0 0;
-}
-
-.three-column-square-content-block__text{
-    min-height: auto;
-    padding: 0; 
-}
-
-
-/* THREE BLOCK SQUARE CTA*/
-.three-column-square-content-block .content-block-content__action,
-.three-column-square-content-block__container .content-block-content__action{
-    margin-top: 4.5%;
-}
-
-/* CTA */
-.button--wide{
-    -webkit-transition: all 0.25s ease-out !important;
-    transition: all 0.25s ease-out !important;
-}
-
-/* --------------- FONTS MOBILE --------------- */
-
-/* ALIGN */
-.content-block-content__container--left,
-.content-block-content__container--right,
-.two-column-square-content-block__text--left,
-.two-column-square-content-block__text--right,
-.three-column-square-content-block__text--left,
-.three-column-square-content-block__text--right{
-    text-align:center;
-}
-/* SPACING */
-.content-block-content__message {
-    padding: 5% 0% 3%;
-}
-
-/* HEADERS GOTHAM MOBILE */
-.content-block-content__message h2.wysiwyg-font-size-large,
-.content-block-content__message h2.wysiwyg-font-size-x-large,
-.content-block-content__message h2.wysiwyg-font-size-xx-large,
-.content-block-content__message h3.wysiwyg-font-size-xx-large{
-    letter-spacing: 0em;
-/*  font-size: 1.4em; */
-    font-size: 7vw;
-    margin:0;       
-}
-/* HEADERS BODONI MOBILE */
-.content-block-content__message h2.wysiwyg-font-size-large.wysiwyg-font-family-serif,
-.content-block-content__message h2.wysiwyg-font-size-x-large.wysiwyg-font-family-serif,
-.content-block-content__message h2.wysiwyg-font-size-xx-large.wysiwyg-font-family-serif,
-.content-block-content__message h3.wysiwyg-font-size-xx-large.wysiwyg-font-family-serif{
-    letter-spacing: 0.03em;
-/*  font-size: 1.5em; */
-    font-size: 9.3vw;       
-}
-
-/* HEADERS MOBILE */
-.content-block-content__message h2{
-    margin: 0 0 2.3vw;
-}
-.content-block-content__message h2.wysiwyg-font-family-serif{
-    margin: 0 0 0.6vw;
-}
-.content-block-content__message h3.wysiwyg-font-family-serif{
-    margin: 0 0 0.6vw;
-}
-.content-block-content__message h2:last-of-type {
-    margin-bottom: 0.33rem !important;    
-}
-
-/* SUB HEADERS MOBILE */
-.content-block-content__message h3.wysiwyg-font-size-large{
-    font-size: 3vw;
-}
-
-
-/* CTA */
-.content-block-content__action,
-.hero-content-block .content-block-content__action,
-.two-column-hero-content-block .content-block-content__action,
-.two-column-square-content-block .content-block-content__action{
-    margin: 4.5% 0 0;
-}
-
-.content-block-content__action .button {
-    font-size: 0.86em;
-    padding: 1em 0.2em;
-    width: 100%;
-    max-width: 143px;
-    border: solid 1px;
-}
-
-/*SOLID WHITE CTA*/
-.jm-cta-solidWhite a{
-    background: white;
-    color: black;
-    border-color: white !important;
-}
-.jm-cta-solidWhite a:hover{
-    background: black;
-    color: white;
-    border-color: black !important;
-}
-
-
-/* BODONI LINE HEIGHT*/
-.content-block-content__message h2.wysiwyg-font-size-xx-large.wysiwyg-font-family-serif,
-.content-block-content__message h2.wysiwyg-font-size-x-large.wysiwyg-font-family-serif,
-.content-block-content__message h2.wysiwyg-font-size-large.wysiwyg-font-family-serif{
-    line-height: 0.86;
-}
-
-
-/* SPECIAL SPLITTED HEADER */
-.jm-special-splitHeader div {
-    width: 100%;
-    text-align: center;
-    background: #f6f5f5;
-    padding: 1.3% 0;
-    -ms-flex-align: center;
-    justify-content: center;
-    align-items: center;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-}
-.jm-special-splitHeader {
-    display: -ms-flexbox;
-    width: 100%;
-    font-size: 2.3vw;
-}
-.jm-special-splitHeader br{
-	display:block;
-}
-.jm-special-splitHeader div.jm_left{
-    background: #f6f5f5;
-    display: block;
-}
-
-
-/* SPECIAL HEADER 1 */
-.jm-special-header-1 h3{
-    margin: 0;
-    font-weight: normal;
-    letter-spacing: 0.05em;
-    color: #403f3f;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    font-size: 3.1vw;
-    width: 82%;
-    margin: 0 auto;
-}
-.jm-special-header-1 a{
-    display: block;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-}
-.jm-special-header-1 {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.4vw;
-    padding: 2% 0;
-    background: #f6f5f5;
-    text-align: center;
-}
-
-/* COPY BLOCKS */	
-.jm-copy-block{			
-	position: absolute;			
-	bottom: 0;			
-	margin: 0 8% 11%;			
-	font-size: 1.77vw;			
-	border-bottom: solid 1px #eaeaea;			
-	padding: 0 0 7%;			
-}
-.view .jm-copy-block{
-	display:none;
-}
-.jm_copy_block_clone{
-	position:relative;
-}                        					
-/* END COPY BLOCKS */	
-
-
-@media screen and (min-width: 470px){
-/* MULTIPLE CTAS */
-.jm-multipleCTA-space a{
-    margin: 0% 6% 2%;
-}
-/* END MULTIPLE CTAS */
-}
-
-@media screen and (min-width: 670px){
-/* MULTIPLE CTAS */
-.jm-multipleCTA-space a{
-margin: 0 1%;
-}
-.jm-multipleCTA-space a:first-of-type{
-	margin-left: 0;
-}
-.jm-multipleCTA-space a:last-of-type{
-	margin-right: 0;
-}
-.jm-multipleCTA-space4 a{
-    margin: 0% 6%;
-}
-
-div.hero-content-block .content-block-content__container--center .jm-multipleCTA-space5 a{
-    margin: 0% 4% 2%;
-}
-.jm-multipleCTA-space5 a:nth-of-type(4),
-.jm-multipleCTA-space5 a:nth-of-type(5) {
-    margin-bottom: 0%;
-}
-/* END MULTIPLE CTAS */
-}
-
-@media screen and (min-width: 700px){
-/* GENERAL OVERWRITE */
-
-
-/* BRING BACK SPACES TAKEN OUT ON MOBILE */
-br{
-    display:block;
-	display: -moz-box;
-}
-
-.page-content{
-    padding: 10px 2%;
-}
-
-/* SHOP BY CATEGORY */
-.jm-byCategory-wrap{
-    background: none;
-    padding: 0;
-}
-
-/* SPECIAL SPLITTED HEADER */
-.jm-special-splitHeader{
-	display: table;
-    width: 100%;
-	font-size: 1.1vw;    
-}
-.jm-special-splitHeader div{
-	width: 50%;
-    display: table-cell;
-    vertical-align: middle;  
-}
-.jm-special-splitHeader div.jm_left{
-    display: table-cell;
-}
-
-/* ALL COPY BACK TO INITIAL*/
-.content-block-content__container{
-    position:relative;
-    background:none;
-    left: initial;
-    bottom: initial;            
-}
-
-/* ALL CONTENT BLOCK SPACING */
-.page-content__main .hero-content-block,
-.page-content__main .two-column-hero-content-block{
-    margin-bottom: 1%;
-}
-
-
-/* --------------- FONTS --------------- */
-
-/* ALIGN */
-.content-block-content__container--left,
-.two-column-square-content-block__text--left,
-.three-column-square-content-block__text--left{
-    text-align:left;
-    white-space: nowrap; /* Watch this */
-}
-.content-block-content__container--right,
-.two-column-square-content-block__text--right,
-.three-column-square-content-block__text--right{
-    text-align:right;
-    white-space: nowrap; /* Watch this */   
-}
-
-/* SPACING */
-.content-block-content__message {
-    padding: 5% 0% 2%;
-}
-
-/* SPACE BETWEEN CONTENT BLOCKS */
-.hero-content-block,
-.two-column-hero-content-block{
-    margin-bottom :1%;
-}
-
-/* TWO BLOCK SQUARE */
-.two-column-square-content-block__text{
-    padding: 0 1.4rem;
-}
-
-/* THREE BLOCK SQUARE */
-.three-column-square-content-block__text{
-    padding: 0 1.4rem;
-}
-
-/* MESSAGE CONTAINER */
-.content-block-content__message{
-    padding:0;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;    
-/* 
-    display: table-cell; ENABLES Aligment based on copy not container
-    width: auto;
- */
-}
-
-.content-block-content--right .content-block-content__message{
-/*  float: right; */
-}
-
-/* TOP RIGHT BOTTOM LEFT ALIGMENT CONTAINERS */
-/* SAFETY AREA, 50% OF THE CONTENT BLOCK WIDTH, IS NOT CHANGE  */
-.content-block-content--top{
-    padding-top: 5%;
-}
-.hero-content-block .content-block-content--right,
-.content-block-content--right{
-    padding-right: 5%;
-}
-
-.content-block-content--bottom{
-    padding-bottom: 5%;
-}
-.content-block-content--left{
-    padding-left: 5%;    
-}
-.content-block-content--center{
-/*  width: 45%; */
-    width: 100%;    
-    margin: 0 auto;
-}
-
-
-
-/* COPY - FONT */
-
-.content-block-content__message p, .content-block-content__message ul, .content-block-content__message ol{
-    font-size: 12px;
-    margin: 0 0 0.2em;  
-}
-.content-block-content__message h2:last-of-type {
-    margin-bottom: 1.2rem !important;    
-}
-
-.content-block-content__message h2.wysiwyg-font-size-xx-large,
-.content-block-content__message h2.wysiwyg-font-size-x-large,
-.content-block-content__message h2.wysiwyg-font-size-large,
-.content-block-content__message h2{
-    line-height: 0.78;
-    /* line-height: 0.9; */
-    letter-spacing: 0.01em;
-    margin: 0 -0.1em 0.1em -0.1em; /* line space between headers and left aligment*/
-/*     font-size: 1.45em; */
-}
-
-.content-block-content__message h2.wysiwyg-font-size-xx-large i, 
-.content-block-content__message h2.wysiwyg-font-size-x-large i,
-.content-block-content__message h2.wysiwyg-font-size-large i{
-    margin-right: 0.15em;
-}
-
-/* BODONI */
-.content-block-content__message h2.wysiwyg-font-size-xx-large.wysiwyg-font-family-serif,
-.content-block-content__message h2.wysiwyg-font-size-x-large.wysiwyg-font-family-serif,
-.content-block-content__message h2.wysiwyg-font-size-large.wysiwyg-font-family-serif{
-    line-height: 0.7;
-    letter-spacing: 0.05em;
-/*     margin: 0 -0.1em 0 0; */ /* line space between headers and left aligment*/
-    margin: 0.14em -0.1em 0 -0.07em; /* line space between headers and left aligment*/   
-/*     font-size: 1.45em; */
-}
-.content-block-content__message h2.wysiwyg-font-size-xx-large.wysiwyg-font-family-serif i,
-.content-block-content__message h2.wysiwyg-font-size-x-large.wysiwyg-font-family-serif i,
-.content-block-content__message h2.wysiwyg-font-size-large.wysiwyg-font-family-serif i{
-    margin-right: 0em;
-}
-
-.content-block-content__message h3.wysiwyg-font-size-xx-large,
-.content-block-content__message h3.wysiwyg-font-size-x-large,
-.content-block-content__message h3.wysiwyg-font-size-large,
-.content-block-content__message h3{
-    line-height: 1.23;
-    margin: 0 -0.1rem 0.23rem -0.067rem;
-    letter-spacing: 0.05em;
-/*     font-size: 0.305em; */
-/* font-weight: normal; */  /* THIS MAKES SUBCOPY DARKER/ HEAVIER */
-}
-
-/* BODONI */
-.content-block-content__message h3.wysiwyg-font-size-xx-large.wysiwyg-font-family-serif,
-.content-block-content__message h3.wysiwyg-font-size-x-large.wysiwyg-font-family-serif,
-.content-block-content__message h3.wysiwyg-font-size-large.wysiwyg-font-family-serif,
-.content-block-content__message h3.wysiwyg-font-family-serif{
-    line-height: 1.23;
-    margin: 0 0 0.23rem -0.03em;
-    letter-spacing: 0.05em;
-/*     font-size: 0.305em; */
-
-}
-
-
-/* TWO BLOCK HERO */
-.two-column-hero-content-block__text{
-/*  max-width: 50%; */
-    max-width: 50.5%;   
-}
-.two-column-hero-content-block .content-block-content{
-    margin:5%;
-}
-.two-column-hero-content-block__text .content-block-content--top,
-.two-column-hero-content-block__text .content-block-content--bottom,
-.two-column-hero-content-block__text .content-block-content--left,
-.two-column-hero-content-block__text .content-block-content--right{
-    padding:0;
-}
-.two-column-hero-content-block .content-block-content__action{
-    margin-top: 5%;
-}
-.two-column-hero-content-block__image-container,
-.two-column-hero-content-block__image-container--right{
-    width: 49.5%;
-}
-.page-content .two-column-hero-content-block__text{
-    /* width: 49.5%; */
-    width: 50.5%;    
-}
-.page-content .two-column-hero-content-block__image-container--left{
-    margin-right:0.5%;
-}
-.page-content .two-column-hero-content-block__text{
-/*  left: 50.5%; */
-    left: 49.5%;
-}
-.two-column-hero-content-block__image-container--right+.two-column-hero-content-block__text{
-    right: 49.5%;
-    left: auto;
-    width: 100%;
-    z-index: 2;
-}
-.page-content .two-column-hero-content-block__image-container--right+.two-column-hero-content-block__text{
-    left: initial;
-    right: 49.5%;
-}
-
-/* TWO BLOCK SQUARE */
-.three-column-square-content-block__text{
-    min-height: 33.33333%;
-}
-.two-column-square-content-block .content-block-content__action{
-    margin-top: 1.6em;
-}
-.two-column-square-content-block .content-block-content__message{
-    padding: 0;
-}
-.page-content .two-column-square-content-block .content-block-content__message{
-    padding: 0.3em 0 0.43em;
-}
-/* ONE PLUS ONE */
-.large-square-plus-one-content-block .content-block-content{
-    padding: 5%;
-}
-.large-square-plus-one-content-block .content-block-content--center{
-    width: 90%;
-}
-/* 
-.large-square-plus-one-content-block .content-block-content__action{
-    margin-top: 1.2rem !important;
-}
- */
-.large-square-plus-one-content-block .content-block-content__action{
-    margin-top: 2em;
-}
-
-/* ONE PLUS TWO */
-.large-square-plus-two-content-block .content-block-content{
-    padding: 5%;
-}
-.large-square-plus-two-content-block .content-block-content--center{
-    width: 90%;
-}
-.large-square-plus-two-content-block .content-block-content__message{
-    padding:0;
-}
-.large-square-plus-two-content-block .content-block-content__action{
-    margin-top: 2em !important;
-}
-.page-content .large-square-plus-two-content-block__container--small-image .content-block-content__action{
-    margin-top: 0.66rem !important;
-}
-.page-content .large-square-plus-two-content-block .content-block-content__message{
-    padding: 3% 0% 4%;
-}
-
-/* THREE BLOCK SQUARE */
-.three-column-square-content-block__text{
-    min-height: 23%;
-}
-.page-content .three-column-square-content-block__text{
-/*     padding: 1em 0 0; */
-    min-height: 29%;    
-}
-.page-content .content-block-content__message{
-/*     padding: 1% 0% 4%; */
-}
-.page-content .large-square-plus-one-content-block__image .content-block-content__message,
-.page-content .large-square-plus-two-content-block__container .content-block-content__message{
-    padding: 0%;
-}
-/* LARGE SQUARE PLUS 2 */
-.large-square-plus-two-content-block__container--large-image .content-block-content__message{
-    padding:0;
-}
-
-/* FIVE BLOCK SQUARE */
-.five-column-square-content-block .content-block-content__action{
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-}
-
-/* H1 - SH1 */
-
-/* GOTHAM */
-.content-block-content__message h2.wysiwyg-font-size-xx-large{
-    font-size: 1.4em;
-}
-.content-block-content__message h3.wysiwyg-font-size-xx-large{
-    font-size: 0.75em;
-}
-/* BODONI */
-.content-block-content__message h2.wysiwyg-font-size-xx-large.wysiwyg-font-family-serif{
-/*     font-size: 1.45em; */
-    font-size: 1.6em;    
-}
-.content-block-content__message h3.wysiwyg-font-size-xx-large.wysiwyg-font-family-serif{
-    font-size: 1em;
-}
-
-/* H2 - SH2 */
-
-/* GOTHAM */
-.content-block-content__message h2.wysiwyg-font-size-x-large{
-    font-size: 1.15em;
-}
-.content-block-content__message h3.wysiwyg-font-size-x-large{
-    font-size: 0.55em;
-}
-/* BODONI */
-.content-block-content__message h2.wysiwyg-font-size-x-large.wysiwyg-font-family-serif{
-    font-size: 1.33em;
-}
-.content-block-content__message h3.wysiwyg-font-size-x-large.wysiwyg-font-family-serif{
-    font-size: 0.75em;
-}
-
-/* H3 - SH3 */
-
-/* GOTHAM */
-.content-block-content__message h2.wysiwyg-font-size-large{
-    font-size: 0.9em;
-}
-.content-block-content__message h3.wysiwyg-font-size-large{
-/*     font-size: 0.375em; */
-    font-size: 0.4em;
-    margin-bottom: 0;    
-}
-/* BODONI */
-.content-block-content__message h2.wysiwyg-font-size-large.wysiwyg-font-family-serif{
-    font-size: 1.04em;
-}
-.content-block-content__message h3.wysiwyg-font-size-large.wysiwyg-font-family-serif{
-    font-size: 0.5em;
-    margin-bottom: 0;  
-}
-
-/* 
-.content-block-content__action .button{
-    font-size: 1em;
-}
- */
-
-.content-block-content__action--text a:hover{
-    border-color: #C1C1C1;
-}
-.button--alt-inverse:focus, .button--alt-inverse:hover{
-    border-color: white !important;
-}
-.two-column-square-content-block__text{
-    min-height: 20%;
-}
-/* 
-.content-block-content__message {
-    font-size: 4vw;
-}
- */
-
-#jmaId{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-color:rgba(255, 255, 255, 0);
-}
-
-
-/* 
-W03
-.hero-content-block .content-block-content--right{
-    left: 0%;    
-}
-*/
-
-/* LARGE PLUS ONE */
-.large-square-plus-one-content-block__image{
-	background-size:100%;
-    background-repeat: no-repeat;	
-}
-
-/* FIX */
-/* 
-W03 
-.hero-content-block .content-block-content--left{
-	right: 0;
-}
-
-*/
-
-/* FIX 1440 vs 1170 */
-div.hero-content-block .content-block-content--right {
-    left: 50%;
-}
-div.hero-content-block .content-block-content--left {
-    right: 50%;
-}
-.jm_lp_1170 > div.hero-content-block .content-block-content--right{
-    left: 0%;    
-}
-.jm_lp_1170 > div.hero-content-block .content-block-content--left{
-	right: 0;
-}
-
-
-
-/* MULTIPLE CTAS */
-.jm-multipleCTA-space4 a{
-    margin: 0% 1% 0%;
-}
-.jm-multipleCTA-space2 a{
-    margin: 0% 1.5% 0%;    
-}
-.hero-content-block .content-block-content__container--center .jm-multipleCTA-space a{
-    margin: 0% 1% 0%;
-}
-/* END MULTIPLE CTAS */
-
-
-/* TIERED PRICES QUICKLOOK */
-.jm-tieredAttributes-QV{
-	padding: 38px 0 0;
-    position: relative;
-}
-.jm-tieredContainer-QV{
-    margin: 0;
-}
-.jm-tieredContainer-QV div.jm-tieredContainer-row-QV:first-of-type{
-	position: absolute;
-    top: 27%;
-    right: -1%;
-}
-.jm-tieredContainer-regular-QV,
-.jm-tieredContainer-sell-QV{
-	display:block;
-}
-.jm-tieredContainer-regular-QV s{
-    font-size: 15.5px;
-    letter-spacing: 0.2em;
-}
-.jm-tieredContainer-sell-QV strong{
-	letter-spacing: 0.2em;
-}
-.jm-tieredContainer-msrp-QV{
-	display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-.jm-tieredContainer-percent-saved-QV{
-    display: block;
-    position: absolute;
-    right: -4%;
-    width: 47%;
-    text-align: left;
-    margin: 0;
-    bottom: 5%;
-}
-.jm-tieredContainer-regular{
-    font-size: 1.11em;
-}
-.jm-product-details__badge-container-QV{
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-/* END TIERED PRICES QUICKLOOK */
-
-/* SPECIAL HEADER 1 */
-.jm-special-header-1 {
-font-size: 1em;
-    padding: 0.63% 0;
-}
-.jm-special-header-1 h3{
-font-size: 1em;
-    width: 100%;
-}
-
-
-/* COPY BLOCK */
-.jm-copy-block{
-/*     margin: 12% 4%; */
-    font-size: 0.8em;
-    border-bottom: none;
-    padding: 0;    
-}
-.jm_copy_block_clone{
-	margin: 3% 11%;
-}
-/* END COPY BLOCK */
-
-
-
-}
-
-@media screen and (min-width: 768px){
-/* 
-.content-block-content__action .button{
-    font-size: 0.95em;
-    padding: 1em 1.8em;
-    width: 100%;
-    max-width: 156px; 
-    border: solid 2px;      
-}
- */
-/* POP UP FIX 
-.ui-dialog{
-    position: absolute;
-    z-index: 40;
-    padding: 20px 0;
-    outline: 0;
-    top: 23% !important;
-    width: 22% !important;
-    left: 40% !important;
-}
-*/
-
-
-/* SIZE GUIDE FIX */
-.ui-dialog--size-guide{
-    width: auto !important;	
-}
-
-
-}
-
-
-
-@media screen and (min-width: 768px) and (max-width: 1024px){ 
-.large-square-plus-two-content-block__container--small-image .content-block-content__message h2{
-	margin-bottom: 0.3rem !important;
-}
-
-}
-
-
-
-@media screen and (min-width: 1050px){
-/* Relative products */
-.br-rp-qv-show{
-    width: 100%;
-    bottom: initial;
-    position: absolute;
-    left: 0;
-    z-index:2;
-}
-.br-sf-widget-merchant-popup-maincont{
-    width: 95%;
-    padding:0;    
-}
-/* End Relative products */
-
-/* MASTER DETAIL PRODUCTS */
-.jm-breath-children{
-    padding: 5% 0;
-}
-.jm-breath-children .product-details__item-details{
-	border-color:#fdfdfd
-}
-
-/* SPECIAL SPLITTED HEADER */
-.jm-special-splitHeader{
-	font-size: 1em;    
-}
-/* MULTIPLE CTAs */
-div.hero-content-block .content-block-content__container--center .jm-multipleCTA-space5 a{
-    margin: 0% 1% 0%;
-}
-
-}
-
-@media screen and (min-width: 1200px){
-/* 
-.content-block-content__message {
-    font-size: 3.2vw;
-}
- */
-.br-sf-widget-merchant-popup-maincont{
-    width: 78%;
-}
+// END NAME TAGGING FOR LIVE COREMETRICS
 
 
-/* COPY BLOCK
-.jm-copy-block{
-	margin: 0 3%;
+// COPY BLOCKS CLONE FOR CATEGORY PAGES
+function copy_blocks_cloning(){
+	var copy_blocks_category = $('#jm_copy_block_clone').clone();
+	copy_blocks_category.addClass('jm_copy_block_clone');
+	$('.page-content').append(
+		copy_blocks_category
+	);
 }
- END COPY BLOCK */
+// END COPY BLOCKS CLONE FOR CATEGORY PAGES
 
 
-}
-
-@media screen and (min-width: 1280px){
-.content-block-content__message {
-    font-size: 3.2vw;
-}
-.content-block-content__action .button{
-    font-size: 0.95em;
-    padding: 1em 1.8em;
-    width: 100%;
-    max-width: 156px; 
-    border: solid 2px;      
-}
-/* Relative products */
-.br-sf-widget-merchant-popup-maincont{
-    width: 60%;
-    margin-top: 4.5em;
-}
-/* End Relative products */
-
-}
-
-@media screen and (min-width: 1500px){
-.content-block-content__message p, .content-block-content__message ul, .content-block-content__message ol{
-    font-size: 0.292em;
-}
-.content-block-content__message p{
-    font-size: 0.3em;
-    font-weight: lighter;
-    letter-spacing: 0.033em;
-}
-.five-column-square-content-block .content-block-content__message p{
-    font-weight: bold;
-}
-.content-block-content__message {
-    font-size: 48px;
-}
-
-}
-/* MOBILE OVERWRITES ONLY */
-@media screen and (max-width: 700px){
-.content-block-content__message--light{
-    color: black;
-}
-.button--alt-inverse{
-    color: black;
-    background: transparent;
-    border: 1px solid black;
-}
-.large-square-plus-two-content-block__container--small-image,
-.large-square-plus-one-content-block__container--small-image{
-	display:none;
-}
-.large-square-plus-one-content-block__container--large-image,
-.large-square-plus-two-content-block__container--large-image{
-    padding-bottom: 35%;
-}
-.three-column-square-content-block {
-    margin: 0 0 7%;
-}
-.two-column-square-content-block__image{
-	background-size: 100%;
-}
-.two-column-square-content-block{
-	padding:1.3% 0;
-}
-/* SPECIAL SPLITTED HEADER */
-.jm-special-splitHeader div.jm_right{
-    position: absolute;
-    width: 75.4%;
-    right: 0;
-    top: 1.6%;
-    z-index: -1;
-}
-/* TIGHING UP FONT SIZES */
-h3.wysiwyg-font-size-x-large{
-    font-size: 4vw !important;
-}
-.content-block-content__message h3.wysiwyg-font-size-large.wysiwyg-font-family-serif {
-    font-size: 4vw;
-}
-
-/* XTRA SPACE ON RIGHT FIX */
-.complimentary{
-margin:0;
-}
-.product-list__quantity{
-    margin: 0 0 6%;
-    float: none;
-}
-/* TIERED PRICES  */
-.jm-tieredContainer-sell,
-.jm-tieredContainer-percent-saved{
-	bottom: 7%;
-}
-.jm-tieredContainer-regular{
-	font-size: 12px;
-}
-.product-details--package-child .product-details__price{
-	font-size: 12px;
-}
-.product-detail-container__child-product .jm-tieredContainer-percent-saved{
-	right: 6em;
-    font-size: 11px;
-}
-.jm-tieredContainer{
-    margin: 0 3% 0 0;
-}
-
 
-/* LIGHTBOX HERO - RICH TEXT */
-.rich-text-content-block h2{
-    font-size: 13px;
-}
-.rich-text-content-block h2{
-    font-size: 12px;
-}
-.rich-text-content-block p{
-    font-size: 11px;
-    display: block;
-    text-align: justify;
-}
-.rich-text-content-block {
-    position: relative;
-    padding: 7%;
-    width: 78%;
-}
-#jm_img_anchor_LB{
-    bottom: 33% !important;
-    font-size: 2.3vw;
-}
-#jm_img_anchor{
-	height:100% !important;
-}
-
-/* OVERWRITES */
-
-/* HOVER MESSAGE OVER ADD TO BAG  */
-.jm_button_message{
-	width: 64%;
-	margin:0 auto;
-}
-/* END HOVER MESSAGE OVER ADD TO BAG  */
-
-/* END OVERWRITES */
-
-}
+console.log('all running');
