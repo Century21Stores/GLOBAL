@@ -1,5 +1,5 @@
-// DOUBLE GA W23A UP REVISED LYDIA JULY3RD
-// MASTER SCRIPTING JUN 27TH 8:50AM 2017
+// DOUBLE GA W26A
+// MASTER SCRIPTING JULY 17TH 3:50PM 2017
 // contact: jrios@c21stores.com
 
 
@@ -29,7 +29,7 @@ var PROP65_POPUP = Object.freeze({
   "wires": '<img src="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDIvMDUvMTQvNDEvMTYvODk3L1BPUFVQNjVfd2lyZXMuanBnIl1d/POPUP65_wires.jpg?sha=cff7d8ef9acc6328">'
 });
 function prop65(popup){
-  WEBLINC.dialog.create(PROP65_POPUP[popup], 
+  WEBLINC.dialog.create(PROP65_POPUP[popup],
     {
       "uiDialogOptions": {
         "close": function(){
@@ -62,7 +62,7 @@ if ($(window).width() >= 1050) {
 	    $('html, body').animate({
         	scrollTop: $(".br-rp-qv-show").offset().top
     	}, 500);
-    	$('.page-footer').animate({paddingTop: '+=43%'},500);  	
+    	$('.page-footer').animate({paddingTop: '+=43%'},500);
 	});
 
 	// TO CLOSE WIDGET
@@ -70,7 +70,7 @@ if ($(window).width() >= 1050) {
     	$('html, body').animate({
 	        scrollTop: $(".complimentary--bloomreach").offset().top
     	}, 500);
-    	$('.page-footer').animate({paddingTop: '0'},500);  	    	
+    	$('.page-footer').animate({paddingTop: '0'},500);
 	});
 }
 // END RELATED PRODUCTS
@@ -83,17 +83,17 @@ function clonningClickEvent(){
     $('.banner-content-block, .hero-content-block, .three-column-square-content-block__container, .large-square-plus-two-content-block__container--large-image, .large-square-plus-two-content-block__container--small-image, .large-square-plus-one-content-block__container--large-image, .two-column-square-content-block__container, .two-column-hero-content-block__container, .jm-image-clickable').each(function(){
        var new_data= $('a:first-of-type', this).clone();
        	new_data.attr("id", "jm_img_anchor");
-       	new_data.removeAttr("class");	
+       	new_data.removeAttr("class");
     	new_data.appendTo(this);
     });
 
     $('.large-square-plus-one-content-block__text').each(function(){
        var new_data= $('a', this).clone();
        	new_data.attr("id", "jm_img_anchor2");
-       	new_data.removeAttr("class");	
+       	new_data.removeAttr("class");
     	new_data.appendTo(this);
     });
-}clonningClickEvent();   
+}clonningClickEvent();
 // });
 //END CLICKABLE IMAGES
 
@@ -107,18 +107,18 @@ var search = $('#header-search-form .value').children().val().toString().toLower
 // HERE GOES THE ID of the Google Spreadsheet SUPPRESION LIST
 var spreadsheetID = "1vbPtdgK7tCk7Nl14rDzzqsmMG2Ii5-WakBueCwAeuQE";
 var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
- 
-$.getJSON(url, function(data) { 
+
+$.getJSON(url, function(data) {
 	var entry = data.feed.entry;
 	var listArr = [];
 	var listArr2 = [];
-  
-  	//PUSH DATA FROM 2 COLUMNS TO 2 ARRAYS 
+
+  	//PUSH DATA FROM 2 COLUMNS TO 2 ARRAYS
   	$(entry).each(function(){
   		listArr.push(this.gsx$suppressed.$t.toLowerCase());
   		listArr2.push(this.gsx$suppressed2.$t.toLowerCase());
   	});
-	
+
 	//COMBINE BOTH ARRAYS INTO ONE SINGLE ARRAY
   	var listArrTotal = listArr.concat(listArr2);
 
@@ -126,13 +126,13 @@ $.getJSON(url, function(data) {
 	listArr = listArr.filter(Boolean)
 	listArr2 = listArr2.filter(Boolean)
 	listArrTotal = listArrTotal.filter(Boolean)
-	
-	//console.log(search);	
+
+	//console.log(search);
   	//console.log(listArr);
   	//console.log(listArr2);
   	//console.log(listArrTotal);
-	
-	designerList();	
+
+	designerList();
 	function designerList(){
 		for (var z=0; z < search.length; z++){
 
@@ -143,14 +143,14 @@ $.getJSON(url, function(data) {
 					'</div>'
 				);
 				$( "#result" ).load( "/pages/zero-search" );
-				break;				
-			}	
+				break;
+			}
 		}
 
 	 	if (window.location.href.indexOf("categories") > -1){
 	 		cat_Name = $('.view h1').html().toLowerCase();
 	 		console.log("Category Name: " + cat_Name);
-			for (var z=0; z < listArrTotal.length; z++){				
+			for (var z=0; z < listArrTotal.length; z++){
 				if(arrayContains(listArrTotal, cat_Name)){
 					console.log("search found!");
 // 					$('.page-content__wrapper').hide("fast");
@@ -159,17 +159,17 @@ $.getJSON(url, function(data) {
 // 						'</div>'
 // 					);
 // 					$( "#result" ).load( "/pages/zero-search" );
-// 					break;				
+// 					break;
 				}
 			}
 		}
 		function build_ZeroResultPage(){
-		
+
 		}
-		
+
 	}
 });
- 
+
 function arrayContains(a, obj) {
     for (var i = 0; i < a.length; i++) {
 //         if (a[i] === obj) {
@@ -189,7 +189,7 @@ function arrayContains(a, obj) {
 
 
 
-//SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 
+//SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1 SORTING 1
 
 function allSortingSizes(){
 
@@ -204,28 +204,28 @@ $('.size-options__size-group').each(function() {
 	    var value = currentElement.html();
 
 		if(value.indexOf("XS") >= 0){
-			$(currentElement).closest('li').attr('id', '2ws');    
-			//console.log(value);console.log($(currentElement).closest('li').attr("id"));			
+			$(currentElement).closest('li').attr('id', '2ws');
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
 		}
 		else if(value == "SM"){
 			$(currentElement).closest('li').attr('id', '3ws');
-			//console.log(value);console.log($(currentElement).closest('li').attr("id"));			
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
 		}
 		else if(value == "MED"){
 			$(currentElement).closest('li').attr('id', '4ws');
-			//console.log(value);console.log($(currentElement).closest('li').attr("id"));			
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
 		}
 		else if(value == "LRG"){
 			$(currentElement).closest('li').attr('id', '5ws');
-			//console.log(value);console.log($(currentElement).closest('li').attr("id"));			
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
 		}
 		else if(value == "XL"){
 			$(currentElement).closest('li').attr('id', '6ws');
-			//console.log(value);console.log($(currentElement).closest('li').attr("id"));			
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
 		}
 		else if(value == "XXL"){
 			$(currentElement).closest('li').attr('id', '7ws');
-			//console.log(value);console.log($(currentElement).closest('li').attr("id"));			
+			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
 		}
 		else if(value == "3XL"){
 			$(currentElement).closest('li').attr('id', '8ws');
@@ -234,31 +234,31 @@ $('.size-options__size-group').each(function() {
 		else if(value == "A"){
 			$(currentElement).closest('li').attr('id', '1A');
 			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
-		}		
+		}
 		else if(value == "B"){
 			$(currentElement).closest('li').attr('id', '2B');
 			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
-		}		
+		}
 		else if(value == "C"){
 			$(currentElement).closest('li').attr('id', '3C');
 			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
-		}		
+		}
 		else if(value == "D"){
 			$(currentElement).closest('li').attr('id', '4D');
 			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
-		}		
+		}
 		else if(value == "E"){
 			$(currentElement).closest('li').attr('id', '5E');
 			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
-		}		
+		}
 		else if(value == "F"){
 			$(currentElement).closest('li').attr('id', '6F');
 			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
-		}		
+		}
 		else if(value == "G"){
 			$(currentElement).closest('li').attr('id', '7G');
 			//console.log(value);console.log($(currentElement).closest('li').attr("id"));
-		}		
+		}
 
 		else if(value.indexOf("SHORT") >= 0){
 			//console.log(value);
@@ -266,30 +266,30 @@ $('.size-options__size-group').each(function() {
 			caldoTrim = caldo.replace(/\s/g, '');
 			//console.log(caldoTrim);
 			$(currentElement).closest('li').attr('id', caldoTrim);
-			
-		}		
+
+		}
 		else if(value.indexOf("REG") >= 0){
 			//console.log(value);
 			caldo = value.replace("REG", "2");
 			caldoTrim = caldo.replace(/\s/g, '');
-			//console.log(caldoTrim);			
+			//console.log(caldoTrim);
 			$(currentElement).closest('li').attr('id', caldoTrim);
-			
-		}		
+
+		}
 		else if(value.indexOf("LONG") >= 0){
 			//console.log(value);
 			caldo = value.replace("LONG", "3");
 			caldoTrim = caldo.replace(/\s/g, '');
 			//console.log(caldoTrim);
 			$(currentElement).closest('li').attr('id', caldoTrim);
-			
-		}		
-	
+
+		}
+
 	});
 
 	sortWeirdSizes(this);
-	sortingSizes(this);	
-	
+	sortingSizes(this);
+
 });
 
 //NON NUMBERS SORTING SIZES
@@ -302,7 +302,7 @@ function sortWeirdSizes(weirdList){
 	    elem.remove();
     	$(elem).appendTo(weirdList);
 	});
-	
+
 }
 
 
@@ -316,11 +316,11 @@ function sortingSizes(numberSizes) {
 	    	var value = currentElement.html();
 	    	var newvalue = value.replace(/\s{2,}/g, ' ');
 		    $(currentElement).closest('li').attr('id', value);
-		    //console.log(newvalue); 
+		    //console.log(newvalue);
 		});
-	
+
 		sortingTheList(this);
-	
+
 	});
 
 
@@ -350,7 +350,7 @@ $(document).on( 'click', '.product-summary__quickview a, .color-options__color-b
 	setTimeout(function() {   //calls click event after a certain time
 	   	allSortingSizes();
 	}, 1000);
-	
+
 
 });
 
@@ -366,7 +366,7 @@ $('.product-detail-container--package .product-detail-container__child-product')
 	var countChildren = packageproduct.children().length;
 	//console.log('Debugging Master Collections - Package Product Detail:');
 	//console.log(packageproduct);
-	//console.log(countChildren);	
+	//console.log(countChildren);
 	if (countChildren == 1){
 		var parentOfsingle = packageproduct.parent()
 		//console.log(parentOfsingle.find('.size-options__size-header'))
@@ -383,19 +383,19 @@ $('.product-detail-container--package .product-detail-container__child-product')
 function imagesMasterPages(){
 
 $('.product-detail-container--package .product-detail-container__child-product').each(function() {
-	
+
 	var imageAnchor = $(this).find('.product-details__media').find('.product-details__primary-image:first').find('.product-details__primary-image-button').attr('href');;
 	console.log('working!!!');
 	console.log(imageAnchor);
 	$(this).find('.product-details__media').find('.product-details__primary-image:first').append('<a class="jm-anchor-package" href="' + imageAnchor + '"></a>');
 
-}); 
+});
 
 }imagesMasterPages();
 // END FIX MASTER COLLECTION IMAGES
 
 
-// SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - 
+// SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER -
 
 
 function allSortingMASTERSizes(){
@@ -414,28 +414,28 @@ $('.product-detail-container--package .jm_sorted_products').each(function() {
 	    var value = currentElement.html();
 
 		if(value.indexOf("TWIN") >= 0){
-			$(currentElement).closest('div.product-detail-container__child-product').attr('data-sort', '1home');    
-			//console.log('M' + value);console.log('M' + $(currentElement).closest('div.product-detail-container__child-product').attr("data-sort"));			
+			$(currentElement).closest('div.product-detail-container__child-product').attr('data-sort', '1home');
+			//console.log('M' + value);console.log('M' + $(currentElement).closest('div.product-detail-container__child-product').attr("data-sort"));
 		}
 		else if(value.indexOf("F/QN") >= 0){
-			$(currentElement).closest('div.product-detail-container__child-product').attr('data-sort', '2home');    
-			//console.log('M' + value);console.log('M' + $(currentElement).closest('div.product-detail-container__child-product').attr("data-sort"));			
+			$(currentElement).closest('div.product-detail-container__child-product').attr('data-sort', '2home');
+			//console.log('M' + value);console.log('M' + $(currentElement).closest('div.product-detail-container__child-product').attr("data-sort"));
 		}
 		else if(value.indexOf("QUEEN") >= 0){
 			$(currentElement).closest('div.product-detail-container__child-product').attr('data-sort', '3home');
-			//console.log('M' + value);console.log('M' + $(currentElement).closest('div.product-detail-container__child-product').attr("data-sort"));			
-		}		
+			//console.log('M' + value);console.log('M' + $(currentElement).closest('div.product-detail-container__child-product').attr("data-sort"));
+		}
 		else if(value.indexOf("KING") >= 0){
-			$(currentElement).closest('div.product-detail-container__child-product').attr('data-sort', '4home');    
-			//console.log('M' + value);console.log('M' + $(currentElement).closest('div.product-detail-container__child-product').attr("data-sort"));			
-		}	
-	
+			$(currentElement).closest('div.product-detail-container__child-product').attr('data-sort', '4home');
+			//console.log('M' + value);console.log('M' + $(currentElement).closest('div.product-detail-container__child-product').attr("data-sort"));
+		}
+
 	});
 
 	//sortMasterWeirdSizes(this);
 // 	console.log('veritas' + this);
-// 	sortingSizes(this);	
-	
+// 	sortingSizes(this);
+
 });
 
 
@@ -452,7 +452,7 @@ function sortMasterWeirdSizes(weirdList){
     	$(elem).appendTo(weirdList);
 	});
 
-	
+
 }
 
 
@@ -463,62 +463,62 @@ function sortMasterWeirdSizes(weirdList){
 // 	   	allSortingSizes();
 // 		console.log('gua gua guacamole!');
 // 	}, 1000);
-// 	
-// 
+//
+//
 // });
 
-// END SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - 
+// END SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER - SORTING MASTER -
 
 
 
 
 // MULTIPLE GRID AD BANNERS FOR W32 REFRESH
 
-// CREATING BROWSE GRID BANNERS BASED ON LOCATION -- CREATING BROWSE GRID BANNERS BASED ON LOCATION -- CREATING BROWSE GRID BANNERS BASED ON LOCATION -- CREATING BROWSE GRID BANNERS BASED ON LOCATION -- 
+// CREATING BROWSE GRID BANNERS BASED ON LOCATION -- CREATING BROWSE GRID BANNERS BASED ON LOCATION -- CREATING BROWSE GRID BANNERS BASED ON LOCATION -- CREATING BROWSE GRID BANNERS BASED ON LOCATION --
 $(window).load(function() {
 	var jm_p = $('.breadcrumbs__node-group span:nth-of-type(2) a');
-	var jm_p3 = $('.breadcrumbs__node-group span:nth-of-type(3)');	
+	var jm_p3 = $('.breadcrumbs__node-group span:nth-of-type(3)');
 	var jm_cat = jm_p.html();
-	var jm_cat3 = jm_p3.html();	
+	var jm_cat3 = jm_p3.html();
 	var urlEshoes = (
 		(window.location.href.indexOf("arrivals") > -1) ||
-		(window.location.href.indexOf("edit") > -1) ||		
+		(window.location.href.indexOf("edit") > -1) ||
 		(window.location.href.indexOf("italian") > -1) ||
-		(window.location.href.indexOf("luxury") > -1) ||		
+		(window.location.href.indexOf("luxury") > -1) ||
 		(window.location.href.indexOf("under") > -1) ||
 		(window.location.href.indexOf("7agrw") > -1) || //Golden
 		(window.location.href.indexOf("7arsw") > -1)
 	);
 	var urlEhandbags = (
 		(window.location.href.indexOf("arrivals") > -1) ||
-		(window.location.href.indexOf("luxury") > -1) ||		
+		(window.location.href.indexOf("luxury") > -1) ||
 		(window.location.href.indexOf("7ablw") > -1) ||
-		(window.location.href.indexOf("7alcw") > -1) 
-	);	
+		(window.location.href.indexOf("7alcw") > -1)
+	);
 	var urlEkids = (
 		(window.location.href.indexOf("arrivals") > -1) ||
 		(window.location.href.indexOf("gifts") > -1) ||
-		(window.location.href.indexOf("essentials") > -1) ||		
-		(window.location.href.indexOf("occasion") > -1) ||		
-		(window.location.href.indexOf("disney") > -1) ||	
+		(window.location.href.indexOf("essentials") > -1) ||
+		(window.location.href.indexOf("occasion") > -1) ||
+		(window.location.href.indexOf("disney") > -1) ||
 		(window.location.href.indexOf("toys") > -1)
 	);
 	var urlEmens = (
 		(window.location.href.indexOf("arrivals") > -1) ||
 		(window.location.href.indexOf("style") > -1) ||
-		(window.location.href.indexOf("7abtm") > -1) || 
-		(window.location.href.indexOf("7addm") > -1) || 
-		(window.location.href.indexOf("7aznm") > -1) || 
-		(window.location.href.indexOf("7appm") > -1) || 
-		(window.location.href.indexOf("7ambm") > -1) || 
-		(window.location.href.indexOf("7avww") > -1) || 		
+		(window.location.href.indexOf("7abtm") > -1) ||
+		(window.location.href.indexOf("7addm") > -1) ||
+		(window.location.href.indexOf("7aznm") > -1) ||
+		(window.location.href.indexOf("7appm") > -1) ||
+		(window.location.href.indexOf("7ambm") > -1) ||
+		(window.location.href.indexOf("7avww") > -1) ||
 		(window.location.href.indexOf("7arom") > -1)
 	);
 	var urlEcontemporary = (
 		(window.location.href.indexOf("arrivals") > -1) ||
 		(window.location.href.indexOf("cashmere") > -1) ||
 		(window.location.href.indexOf("italian") > -1)
-	);		
+	);
 	var urlEmwomens = (
 		(window.location.href.indexOf("arrivals") > -1) ||
 		(window.location.href.indexOf("cashmere") > -1) ||
@@ -528,38 +528,38 @@ $(window).load(function() {
 	);
 	var urlEhome = (
 		(window.location.href.indexOf("essentials") > -1) ||
-		(window.location.href.indexOf("exotic") > -1) ||	
-		(window.location.href.indexOf("gourmet") > -1) || 
+		(window.location.href.indexOf("exotic") > -1) ||
+		(window.location.href.indexOf("gourmet") > -1) ||
 		(window.location.href.indexOf("7aibh") > -1)
 	);
 	var urlEbeauty = (
 		(window.location.href.indexOf("bvlgari") > -1) ||
 		(window.location.href.indexOf("klein") > -1) ||
-		(window.location.href.indexOf("elf") > -1) ||		
-		(window.location.href.indexOf("boss") > -1) || 
+		(window.location.href.indexOf("elf") > -1) ||
+		(window.location.href.indexOf("boss") > -1) ||
 		(window.location.href.indexOf("opi") > -1)
-	);	
+	);
 	var urlEtech = (
 		(window.location.href.indexOf("beats") > -1) ||
 		(window.location.href.indexOf("fitbit") > -1) ||
-		(window.location.href.indexOf("gopro") > -1) ||		
-		(window.location.href.indexOf("jbl") > -1) || 
+		(window.location.href.indexOf("gopro") > -1) ||
+		(window.location.href.indexOf("jbl") > -1) ||
 		(window.location.href.indexOf("sonos") > -1)
-	);		
+	);
 	var urlEnewandnow = (
 		(window.location.href.indexOf("beats") > -1) ||
 		(window.location.href.indexOf("fitbit") > -1) ||
-		(window.location.href.indexOf("gopro") > -1) ||		
-		(window.location.href.indexOf("jbl") > -1) || 
+		(window.location.href.indexOf("gopro") > -1) ||
+		(window.location.href.indexOf("jbl") > -1) ||
 		(window.location.href.indexOf("sonos") > -1)
-	);			
+	);
 	var urlEspecial = (
 		(window.location.href.indexOf("reduction") > -1)
-	);	
+	);
 // 	var urlEspecial_Active = (
 // 		(window.location.href.indexOf("active") > -1)
-// 	);	
-					
+// 	);
+
  	//console.log(urlEshoes);
 
 	if(jm_cat === "Tech"){
@@ -567,7 +567,7 @@ $(window).load(function() {
 		allSiteGA14();
 		if(!urlEtech){
 // 			WishiWankaGA();
-		}	
+		}
 	}
 	else if(jm_cat === "New + Now"){
 		//	allSiteGA29();
@@ -593,15 +593,15 @@ $(window).load(function() {
 		if(!urlEhandbags){
 	//		newArrivalsHandbagsGA();
 		}
-	}			
+	}
 	else if(jm_cat === "Kids"){
 		//	allSiteGA29();
 			allSiteGA14();
 		if(!urlEkids){
 	//		kidsNewArrivalsGA();
-		}		
+		}
 	}
-	else if(jm_cat === "Contemporary"){		
+	else if(jm_cat === "Contemporary"){
 		if(!urlEcontemporary){
 			//newArrivalsContemporaryGA();
 		}
@@ -617,7 +617,7 @@ $(window).load(function() {
 		//	allSiteGA29();
 			allSiteGA14();
 		if(!urlEmens){
-			//newArrivalsMenGA();	
+			//newArrivalsMenGA();
 		}
 	}
 	else if(jm_cat === "Home"){
@@ -631,7 +631,7 @@ $(window).load(function() {
 	}
 	else if(jm_cat === "Clearance"){
 // 		giftsCardsGA2();
-	}	
+	}
 
 	else{
 		return false;
@@ -656,7 +656,7 @@ function newArrivalsHandbagsGA() {
 	var textLink = "SHOP NOW";
 	//LINK URL
 	var urlLINK = "https://www.c21stores.com/categories/handbags-accessories-new-arrivals";
-	
+
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
@@ -682,7 +682,7 @@ function newArrivalsHandbagsGA() {
 		'</div>'+
 		'</li>'
 	);
-	
+
 	AdClassAll_Single(realPos, gaType);
 
 }
@@ -703,7 +703,7 @@ function newArrivalsShoesGA() {
 	var textLink = "SHOP NOW";
 	//LINK URL
 	var urlLINK = "https://www.c21stores.com/categories/shoes-new-arrivals";
-	
+
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
@@ -729,7 +729,7 @@ function newArrivalsShoesGA() {
 		'</div>'+
 		'</li>'
 	);
-	
+
 	AdClassAll_Single(realPos, gaType);
 
 }
@@ -749,7 +749,7 @@ function newArrivalsWomenGA() {
 	var textLink = "SHOP NOW";
 	//LINK URL
 	var urlLINK = "https://www.c21stores.com/categories/women-new-arrivals";
-	
+
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
@@ -775,7 +775,7 @@ function newArrivalsWomenGA() {
 		'</div>'+
 		'</li>'
 	);
-	
+
 	AdClassAll_Single(realPos, gaType);
 
 }
@@ -794,7 +794,7 @@ function newArrivalsContemporaryGA() {
 	var textLink = "SHOP NOW";
 	//LINK URL
 	var urlLINK = "https://www.c21stores.com/categories/contemporary-new-arrivals";
-	
+
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
@@ -820,7 +820,7 @@ function newArrivalsContemporaryGA() {
 		'</div>'+
 		'</li>'
 	);
-	
+
 	AdClassAll_Single(realPos, gaType);
 
 }
@@ -840,7 +840,7 @@ function newArrivalsMenGA() {
 	var textLink = "SHOP NOW";
 	//LINK URL
 	var urlLINK = "https://www.c21stores.com/categories/men-new-arrivals";
-	
+
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
@@ -866,7 +866,7 @@ function newArrivalsMenGA() {
 		'</div>'+
 		'</li>'
 	);
-	
+
 	AdClassAll_Single(realPos, gaType);
 
 }
@@ -887,7 +887,7 @@ function kidsNewArrivalsGA() {
 	var textLink = "SHOP NOW";
 	//LINK URL
 	var urlLINK = "https://www.c21stores.com/categories/kids-new-arrivals";
-	
+
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
@@ -913,7 +913,7 @@ function kidsNewArrivalsGA() {
 		'</div>'+
 		'</li>'
 	);
-	
+
 	AdClassAll_Single(realPos, gaType);
 
 }
@@ -934,7 +934,7 @@ function getActiveWomenGA() {
 	var textLink = "SHOP NOW";
 	//LINK URL
 	var urlLINK = "https://www.c21stores.com/categories/new-now-get-active-women";
-	
+
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
@@ -960,7 +960,7 @@ function getActiveWomenGA() {
 		'</div>'+
 		'</li>'
 	);
-	
+
 	AdClassAll_Single(realPos, gaType);
 
 }
@@ -979,7 +979,7 @@ function freeShippingBeautyGA() {
 	var textLink = "SHOP NOW";
 	//LINK URL
 	var urlLINK = "https://www.c21stores.com/categories/women-new-arrivals";
-	
+
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
@@ -1005,7 +1005,7 @@ function freeShippingBeautyGA() {
 		'</div>'+
 		'</li>'
 	);
-	
+
 	AdClassAll_Single(realPos, gaType);
 
 }
@@ -1025,7 +1025,7 @@ function allSiteGA14() {
 	var textLink = "SHOP NOW";
 	//LINK URL
 	var urlLINK = "https://www.c21stores.com/pages/clearance";
-	
+
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
@@ -1052,7 +1052,7 @@ function allSiteGA14() {
 		'</div>'+
 		'</li>'
 	);
-	
+
 	AdClassAll_Single(realPos, gaType);
 
 }
@@ -1072,7 +1072,7 @@ function allSiteGA29() {
 	var textLink = "SHOP NOW";
 	//LINK URL
 	var urlLINK = "https://www.c21stores.com/pages/new-reductions";
-	
+
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
@@ -1098,7 +1098,7 @@ function allSiteGA29() {
 		'</div>'+
 		'</li>'
 	);
-	
+
 	AdClassAll_Single(realPos, gaType);
 
 }
@@ -1124,7 +1124,7 @@ function acquisitionGA() {
 	var textLink = "LEARN MORE";
 	//LINK URL
 	var urlLINK = "https://www.c21stores.com/instant_credit";
-	
+
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
@@ -1138,7 +1138,7 @@ function acquisitionGA() {
 
 
 	var $GridAd = $('.product-grid li:nth-of-type(3)');
-	
+
 	$('.product-grid li:nth-of-type('+ realPos +')').after(
 		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
 		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
@@ -1176,7 +1176,7 @@ function retentionGA() {
 	var textLink = "LEARN MORE";
 	//LINK URL
 	var urlLINK = "https://www.c21stores.com/instant_credit";
-	
+
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
@@ -1202,7 +1202,7 @@ function retentionGA() {
 		'</div>'+
 		'</li>'
 	);
-	
+
 	AdClassAll_Single(realPos, gaType);
 
 }
@@ -1217,12 +1217,12 @@ function doubleHomeBGA() {
 	//POSITION
 	var pos = 30;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDYvMjcvMTQvNDUvNDQvMjk5LzAwMl8wN1dlZWsxX0JHQV9TZWFzaWRlY2hpYy5qcGciXV0/002_07Week1_BGA_Seasidechic.jpg?sha=7d36724bde451c7d";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDcvMTcvMTQvNDgvMTcvMjMzLzAxXzA3V2VlazRfQkdBX1NtYWxsc3BhY2VzLmpwZyJdXQ/01_07Week4_BGA_Smallspaces.jpg?sha=887eced125c97155";
 	//LINK TEXT
 	var textLink = "SHOP NOW";
 	//LINK URL
-	var urlLINK = "https://www.c21stores.com/categories/new-now-seaside-chic";
-	
+	var urlLINK = "https://www.c21stores.com/categories/new-now-small-spaces";
+
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
@@ -1241,7 +1241,7 @@ function doubleHomeBGA() {
 		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
 		'<div class="content-block-content__container content-block-content__container--center">'+
 		'<div class="content-block-content__message content-block-content__message--dark">'+
-		'<p class="content-block-content__action content-block-content__action--button"><a name="Seaside_Chick" class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'<p class="content-block-content__action content-block-content__action--button"><a name="BGA_Small_Spaces" class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
 // 		'<p class="content-block-content__action content-block-content__action--dark-text"><a target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
 		'</div>'+
 		'</div>'+
@@ -1249,7 +1249,7 @@ function doubleHomeBGA() {
 		'</div>'+
 		'</li>'
 	);
-	
+
 	AdClassAll_Single(realPos, gaType);
 
 }
@@ -1268,7 +1268,7 @@ function doubleHandbagsBGA() {
 	var textLink = "SHOP NOW";
 	//LINK URL
 	var urlLINK = "https://www.c21stores.com/categories/new-now-hollywood-glam";
-	
+
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
 	var realPos = pos-1;
@@ -1295,7 +1295,7 @@ function doubleHandbagsBGA() {
 		'</div>'+
 		'</li>'
 	);
-	
+
 	AdClassAll_Single(realPos, gaType);
 
 }
@@ -1306,10 +1306,10 @@ function doubleHandbagsBGA() {
 	setTimeout(function(){
 		var newHeight1 = $('.product-grid li:nth-of-type('+ (realPos + 2) + ')').height();
 		//console.log($('.product-grid li:nth-of-type('+ (realPos + 2) + ')'));
-		//console.log($('.product-grid li:nth-of-type(3)'));		
+		//console.log($('.product-grid li:nth-of-type(3)'));
 		$('.jmrv-product-grid__cell--'+ gaType).height(newHeight1);
-	},1500);			
-	}	
+	},1500);
+	}
 // END RESIZING GRID ADS
 
 
@@ -1317,22 +1317,22 @@ function doubleHandbagsBGA() {
 
 // 	var testing123 = $('.cart-prices__value span').parent().parent().children('.cart-prices__label');
 // 	console.log(testing123);
-// 
+//
 // // 	$('.cart-prices__label').eq(1).html(function(){
-// 	$(testing123).html(function(){		
+// 	$(testing123).html(function(){
 // 		console.log(this);
 // 		var promotion_message = $(this).html();
 // 		console.log('Promotion message: ' + promotion_message);
 // 		$('.cart-prices__label').each(function(i) {
 // 			filtered_promotion_message = promotion_message.match(/\{([^}]+)\}/)[1];
-// 		});	
-// 		var new_promotion_message = promotion_message.replace("{", " ").replace("}", " ").replace(filtered_promotion_message, " ");	
-// 
+// 		});
+// 		var new_promotion_message = promotion_message.replace("{", " ").replace("}", " ").replace(filtered_promotion_message, " ");
+//
 // 		//console.log('Promotion message: ' + promotion_message);
-// 		//console.log('Filtered promotion message: ' + filtered_promotion_message);	
-// 		//console.log('New promotion message: ' + new_promotion_message);			
-// 
-// 
+// 		//console.log('Filtered promotion message: ' + filtered_promotion_message);
+// 		//console.log('New promotion message: ' + new_promotion_message);
+//
+//
 // 	    return $(this).html().replace(promotion_message, new_promotion_message);
 // 	});
 
@@ -1345,7 +1345,7 @@ function doubleHandbagsBGA() {
 
 // HEIGHT PRODUCT GRID EVEN
 function fixingHeights(){
-	setTimeout(function(){  
+	setTimeout(function(){
 		var gridAds	= [];
 		$("ul.product-grid").children().each(function(){
 			gridAds.push($(this).height());
@@ -1354,13 +1354,13 @@ function fixingHeights(){
 		console.log(gridAds);
 		var maxHeight = Math.max.apply(Math, gridAds);
 		console.log(maxHeight);
-		
+
 		$('.product-grid__cell').css('height',maxHeight);
-		
+
 	}, 1000);
 }
 
-	
+
 
 
 //AUDIO UGLY SWEATERS
@@ -1395,7 +1395,7 @@ function uniqueClasses(){
 
 // 	setTimeout(function(){
 		$(".primary-nav__menu-item, .primary-nav__item-node, .primary-nav__nav-menu").hover(function(){
-		
+
 			$('.primary-nav__nav-menu').each(function() {
 				// ADDING ID NAVIGATION
 				$(this).find('.primary-nav__item-node, span').each(function() {
@@ -1405,11 +1405,11 @@ function uniqueClasses(){
 					var classValue = value.replace(/[^A-Z0-9]/ig, "");
 // 					console.log(value);
 // 					console.log(classValue);
-					$(currentElement).addClass(classValue);    
+					$(currentElement).addClass(classValue);
 				});
 			});
 		});
-		
+
 		$('.secondary-nav__nav-menu').each(function() {
 			// ADDING ID NAVIGATION
 			$(this).find('.secondary-nav__item-node, span').each(function() {
@@ -1419,13 +1419,13 @@ function uniqueClasses(){
 				var classValue = value.replace(/[^A-Z0-9]/ig, "");
 // 				console.log(value);
 // 				console.log(classValue);
-				$(currentElement).addClass(classValue);    
-			
+				$(currentElement).addClass(classValue);
+
 			});
 		});
-		
-		
-				
+
+
+
 			$('.primary-nav__nav-menu').each(function() {
 				// ADDING ID NAVIGATION
 				$(this).find('.primary-nav__item-node, span').each(function() {
@@ -1435,15 +1435,15 @@ function uniqueClasses(){
 					var classValue = value.replace(/[^A-Z0-9]/ig, "");
 // 					console.log(value);
 // 					console.log(classValue);
-					$(currentElement).addClass(classValue);    
+					$(currentElement).addClass(classValue);
 				});
-			});	
-		
-// 
+			});
+
+//
 // 	},1000);
 
 };
-	
+
 // END UNIQUE CLASSES NAMING FOR CATEGORIES
 
 
@@ -1473,20 +1473,20 @@ function pdpVideos(){
 		'6613-0860',
 		'6613-4030',
 		'6613-9439',
-		'6614-0477', 
-		'6614-0557', 
-		'6614-1271', 
-		'6614-0254', 
-		'6614-6784', 
-		'6614-5188', 
-		'6614-1106', 
-		'6614-0251', 
-		'6614-2717', 
+		'6614-0477',
+		'6614-0557',
+		'6614-1271',
+		'6614-0254',
+		'6614-6784',
+		'6614-5188',
+		'6614-1106',
+		'6614-0251',
+		'6614-2717',
 		'6614-8996',
 		'953971CDC56614-51886614-89966614-0477',
 		'0DA56941B76614-27176614-05576614-0254',
 		'674E56A0B56614-67846614-1271',
-		'0FD847BFAC6614-02516614-1106'	
+		'0FD847BFAC6614-02516614-1106'
 		];
 	console.log(listVideoJewelry);
 // 	if(listVideoJewelry.includes(jewelr_Pull_PI)){
@@ -1500,20 +1500,20 @@ function pdpVideos(){
 		console.log(placeVideoHere);
 		$(placeVideoHere).prepend(
 			'<figure id="playJV" style="position: absolute; bottom: -5%; z-index: 999; text-align: center; width: 100%;"><a href="#1" style="display: block;width: 7%;margin: 0 48% -2% auto;">'+
-			'<img src="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTEvMjgvMTYvMzEvMjIvNTMzL3BsYXlidXR0b25fR3JleS5wbmciXV0/playbutton-Grey.png?sha=86cbf51c7b342695"/>'+			
+			'<img src="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTEvMjgvMTYvMzEvMjIvNTMzL3BsYXlidXR0b25fR3JleS5wbmciXV0/playbutton-Grey.png?sha=86cbf51c7b342695"/>'+
 			'</a></figure>' +
 			'<div class="jm_dark_lightBox" id="jm_dark_lightBox" style="display:none;">'+
 			'<iframe style="position: relative; z-index: 99;" class="JewelryVideo" id="JewelryVideo" width="560" height="315" src="https://www.youtube.com/embed/UhdpwZAc0Yk?modestbranding=1&enablejsapi=1&amp;rel=0&amp;controls=0&amp;showinfo=0&amp;disablekb=1&amp;iv_load_policy=3&amp;nologo=1&amp;ps=docs&amp;showsearch=0" frameborder="0" allowfullscreen></iframe>'+
 			'<figure class="jm_lightbox_X" style="opacity: 0.6;">'+
-			'<img style="width: 38px; margin: 0 auto; display: block;" src="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTIvMDEvMTQvMDMvMzQvNDQ3L3BsYXllcl9zdG9wX3ZpZGVvX2J1dHRvbi5wbmciXV0/player-stop-video-button.png?sha=bf4dc632096fa32b"/>'+			
+			'<img style="width: 38px; margin: 0 auto; display: block;" src="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTIvMDEvMTQvMDMvMzQvNDQ3L3BsYXllcl9zdG9wX3ZpZGVvX2J1dHRvbi5wbmciXV0/player-stop-video-button.png?sha=bf4dc632096fa32b"/>'+
 			'</figure>'+
-			'<a id="stopJV" class="jm_dark_lightBox_X"></a>'+			
-			'</div>'			
+			'<a id="stopJV" class="jm_dark_lightBox_X"></a>'+
+			'</div>'
 		);
 	}createVideo();
 
 
-	function videoControl(action){ 
+	function videoControl(action){
 		var $playerWindow = $('#JewelryVideo')[0].contentWindow;
 		$playerWindow.postMessage('{"event":"command","func":"'+action+'","args":""}', '*');
 	}
@@ -1522,28 +1522,28 @@ function pdpVideos(){
 	function togglitoPDPVideo(){
 		$("#playJV").click(function(){
 			$('#sticky-wrapper').css('z-index','9');
-			$('.page-content').css('z-index','999');			
+			$('.page-content').css('z-index','999');
 			$(".jm_dark_lightBox").fadeToggle(1300).css('display','flex').css('display','-ms-flexbox').css('display','-webkit-flex');
-		　　videoControl("playVideo"); 
+		　　videoControl("playVideo");
 		});
-						
+
 	}togglitoPDPVideo();
 	function togglitoPDPVideoOUT(){
 		$("#stopJV").click(function(){
 			$('#sticky-wrapper').css('z-index','99');
-			$('.page-content').css('z-index','9');	
+			$('.page-content').css('z-index','9');
 			$(".jm_dark_lightBox").fadeToggle(1300).css('display','flex').css('display','-ms-flexbox').css('display','-webkit-flex');
 		　　videoControl("stopVideo");
 		});
-						
-	}togglitoPDPVideoOUT();	
+
+	}togglitoPDPVideoOUT();
 
 
 
 };
 
 
-	
+
 };
 
 // END VIDEO PLCC JEWELRY
@@ -1561,19 +1561,19 @@ $('.hero-content-block, .banner-content-block').each(function(index){
 	var CTAtext_URL = $(this).find('.content-block-content__message > p > a').attr('href');
 	console.log('URLs' + CTAtext_URL);
 	console.log(hero_number_CTA);
-// 	console.log(initial_CTA_class);	
+// 	console.log(initial_CTA_class);
 
 if(hero_number_CTA !=0 ){
 	var CTAtext = $(this).find('.content-block-content__message > p > a').html().toLowerCase();
 	// IF THERE IS MULTIPLE CTA
 	if (hero_number_CTA > 1){
-			$(this).find('.content-block-content__action').fadeIn(600);	
+			$(this).find('.content-block-content__action').fadeIn(600);
 			console.log("multi multi");
 			jm_hero_FirstCTA = $(this).find('.content-block-content__action a').eq(0);
 			jm_hero_FirstCTA_url = jm_hero_FirstCTA.attr('href');
 // 			console.log('this url ' + jm_hero_FirstCTA_url);
 			jm_hero_FirstCTA_text = jm_hero_FirstCTA.text().toLowerCase();
-			
+
 			if (jm_hero_FirstCTA_url.indexOf("#jmlb") > -1){
 				console.log('first is hidden');
 				jm_hero_FirstCTA.addClass('jm_bottom_lightbox').wrapInner( '<div class="jm_lightBox_CTA"></div>');
@@ -1581,13 +1581,13 @@ if(hero_number_CTA !=0 ){
 				console.log ('coming crispy' + $(this));
 					   	var new_data_lb = $('.jm_bottom_lightbox:first-of-type', this).clone();
 						new_data_lb.attr("id", "jm_img_anchor_LB");
-// 						new_data_lb.removeAttr("class");	
+// 						new_data_lb.removeAttr("class");
 						new_data_lb.appendTo(this);
 				$(this).find('.JM_trigger_ligthBox').hide(100);
 				console.log(jm_hero_FirstCTA);
-			}	
-			
-			
+			}
+
+
 			$(this).find('.content-block-content__message p:not(.content-block-content__action)').each(function(index){
 			multi_cta_copy = $(this).html();
 					console.log(multi_cta_copy);
@@ -1596,69 +1596,69 @@ if(hero_number_CTA !=0 ){
 				var multi_CTA_text = $(this).html().split("*")[0];
 				var multi_CTA_url = $(this).html().split("*")[1].replace("<br>", "").replace(" ", "");
 				var multi_CTA_wrap = $(this).parent();
-				
+
 					console.log(multi_CTA_url);
-										
+
 					$(multi_CTA_wrap).find('.content-block-content__action').addClass("jm-multipleCTA-space").append(
-						'<a class="' + initial_CTA_class +'" href="' + multi_CTA_url + '">' + multi_CTA_text + '</a>'					
+						'<a class="' + initial_CTA_class +'" href="' + multi_CTA_url + '">' + multi_CTA_text + '</a>'
 					)
 
-					
+
 // 					if (multi_CTA_url.indexOf("#jmlb") > -1){
 // 						console.log('first is hidden of Others');
 // 						multi_CTA_url.addClass('JM_trigger_ligthBox');
-// 					}	
-										
+// 					}
+
 			}
-			
+
 			});
 			if(hero_number_CTA == 5){
-				$(this).find('.content-block-content__action').addClass("jm-multipleCTA-space5");    
+				$(this).find('.content-block-content__action').addClass("jm-multipleCTA-space5");
 				if ($(window).width() < 700) {
 					$(this).find('.hero-content-block__content-boundary, .content-block-content').css("min-height","171vw");
-				}	    
+				}
 			}
 			else if(hero_number_CTA == 4){
 				$(this).find('.content-block-content__action').addClass("jm-multipleCTA-space4");
-				$(this).find('.content-block-content__action').parent().eq(2).addClass("jm-multipleCTA-container");	    
+				$(this).find('.content-block-content__action').parent().eq(2).addClass("jm-multipleCTA-container");
 				if ($(window).width() < 700) {
 					$(this).find('.hero-content-block__content-boundary, .content-block-content').css("min-height","160vw");
 				}
-			}	
+			}
 			else if(hero_number_CTA == 3){
-				$(this).find('.content-block-content__action').addClass("jm-multipleCTA-space3");	
+				$(this).find('.content-block-content__action').addClass("jm-multipleCTA-space3");
 				if ($(window).width() < 700) {
 					$(this).find('.hero-content-block__content-boundary, .content-block-content').css("min-height","160vw");
 				}
-			}	
+			}
 			else if(hero_number_CTA == 2){
 				$(this).find('.content-block-content__action').addClass("jm-multipleCTA-space2");
-			}			
+			}
 // 			$('.hero-content-block > a').hide();
-	
-	}	
+
+	}
 
 	// IF THERE IS ONE CTA WITH WORD LIGHTBOX LB
-	else if ((hero_number_CTA = 1) && (CTAtext_URL.indexOf("#jmlb") > -1)){	
+	else if ((hero_number_CTA = 1) && (CTAtext_URL.indexOf("#jmlb") > -1)){
 		console.log('unoLightBox!!');
 		$(this).find('.content-block-content__action').fadeIn(600);
 		$(this).find('a').addClass('JM_trigger_ligthBox').addClass('jm_show_important');
 // 		$(this).find('a').addClass('JM_trigger_ligthBox').addClass('jm_show_important').addClass('jm_bottom_lightbox').wrapInner( '<div class="jm_lightBox_CTA"></div>');
 
 		// IF THERE IS ONE CTA WITH WORD LIGHTBOX LB and ALSO HIDE
-		if ((hero_number_CTA = 1) && ( CTAtext.indexOf("jmhide") > -1)){	
+		if ((hero_number_CTA = 1) && ( CTAtext.indexOf("jmhide") > -1)){
 			console.log('unoHidden&LightBox!!');
 			$(this).find('.content-block-content__action').hide();
 		}
-		else if ((hero_number_CTA = 1) && ( CTAtext_URL.indexOf("#jmdetails") > -1)){			
+		else if ((hero_number_CTA = 1) && ( CTAtext_URL.indexOf("#jmdetails") > -1)){
 			$(this).find('a').addClass('JM_trigger_ligthBox').addClass('jm_show_important').addClass('jm_bottom_lightbox').wrapInner( '<div class="jm_lightBox_CTA"></div>');
 			$(this).find('.content-block-content').addClass('jmrv-desktop');
 		}
-		
+
 	}
 
 	// IF THERE IS ONE CTA WITH WORD HIDE
-	else if ((hero_number_CTA = 1) && ( CTAtext.indexOf("jmhide") > -1)){	
+	else if ((hero_number_CTA = 1) && ( CTAtext.indexOf("jmhide") > -1)){
 		console.log('unohidden!!');
 		$(this).find('.content-block-content__action').hide();
 	}
@@ -1670,11 +1670,11 @@ if(hero_number_CTA !=0 ){
 
 
 }
-	
+
 
 	$('.rich-text-content-block p:last-child').addClass('jm_X_Hero_lightBox');
 
-	
+
 });
 // END MULTIPLE CTAS CONTENT BLOCKS
 
@@ -1695,11 +1695,11 @@ function pdpTieredPrice(){
 			$('.product-details__price-row > .product-details__price--regular').addClass('jm-tieredContainer-regular');
 			$('.product-details__price-row > .product-details__price--sell').addClass('jm-tieredContainer-sell');
 			$('.product-details__price-row > .product-details__price--msrp').addClass('jm-tieredContainer-msrp');
-			$('.product-details__price-row > .product-details__price--percent-saved').addClass('jm-tieredContainer-percent-saved');						
+			$('.product-details__price-row > .product-details__price--percent-saved').addClass('jm-tieredContainer-percent-saved');
 		}
 
 	}
-	
+
 };
 
 
@@ -1742,10 +1742,10 @@ $(document).on( 'click', '.product-summary__quickview a', function(){
 					}
 
 				}
-					
+
 			}quickViewTieredPrice();
 	}, 1000);
-	
+
 
 });
 // END TIERED PRICING
@@ -1771,7 +1771,7 @@ function pdpKnivesPDF(){
 		'7086-3538000',
 		'7086-4456000',
 		'7086-9169000',
-		'7086-9537000'	
+		'7086-9537000'
 		];
 // 	console.log(listVideoJewelry);
 
@@ -1781,41 +1781,41 @@ function pdpKnivesPDF(){
 		$('.product-details__description-body ul li:last-of-type').append(
 			//'<li><a href="https://www.c21stores.com/media/W1siZiIsIjIwMTYvMTIvMDcvMTYvMzEvMDUvMzQ0L1JpZ2h0X0tuaWZlX2Zvcl90aGVfUmlnaHRfSm9iLnBkZiJdXQ/Right%20Knife%20for%20the%20Right%20Job.pdf?sha=93adee9bf2f82289" target="_blank" style="text-decoration:none;">Guide: The Right Knife for the Right Job</a></li>'
 			'<li>To find the Right Knife for the Right Job, <a id="playPDF" href="#1">'+
-			'click here'+			
+			'click here'+
 			'</a></li>' +
 			'<div class="jm_dark_lightBox" id="jm_dark_lightBox" style="display:none;">'+
 			'<object style="width: 49%; height: 90%; z-index: 9999999; position: relative;" data="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTIvMDcvMTYvMzEvMDUvMzQ0L1JpZ2h0X0tuaWZlX2Zvcl90aGVfUmlnaHRfSm9iLnBkZiJdXQ/Right%20Knife%20for%20the%20Right%20Job.pdf?sha=93adee9bf2f82289" type="application/pdf" width="100%" height="100%">'+
    				'<p>This browser does not support PDFs Viewer. Please download the PDF to view it: <a href="/pdf/sample-3pp.pdf">Download PDF</a>. <br/> or open the PDF <a href="https://www.c21stores.com/media/W1siZiIsIjIwMTYvMTIvMDcvMTYvMzEvMDUvMzQ0L1JpZ2h0X0tuaWZlX2Zvcl90aGVfUmlnaHRfSm9iLnBkZiJdXQ/Right%20Knife%20for%20the%20Right%20Job.pdf?sha=93adee9bf2f82289" target="_blank"> cLick here</a> </p>'+
 			'</object>'+
 			'<p style="position: absolute; top: 2%; right: 2%; font-size: 20px; font-weight: lighter;">X</p>'+
-			'<a id="stopPDF" class="jm_dark_lightBox_X"></a>'+			
-			'</div>'			
-		);		
+			'<a id="stopPDF" class="jm_dark_lightBox_X"></a>'+
+			'</div>'
+		);
 		function togglitoPDPPDF(){
 			$("#playPDF").click(function(){
 				$('#sticky-wrapper').css('z-index','9');
 				$('.page-content').css('z-index','999');
 				$(".jm_dark_lightBox").fadeToggle(1300).css('display','flex').css('display','-ms-flexbox').css('display','-webkit-flex').css('display','webkit-box-flex');
 			});
-						
+
 		}togglitoPDPPDF();
 		function togglitoPDPDPFOUT(){
 			$("#stopPDF").click(function(){
 				$('#sticky-wrapper').css('z-index','99');
-				$('.page-content').css('z-index','9');				
+				$('.page-content').css('z-index','9');
 				$(".jm_dark_lightBox").fadeToggle(800).css('display','flex').css('display','-ms-flexbox').css('display','-webkit-flex').css('display','webkit-box-flex');
-			});				
+			});
 		}togglitoPDPDPFOUT();
 
 	}
 
-	
+
 };
 // END KNIVES PDF KNIVES PDF KNIVES PDF KNIVES PDF KNIVES PDF
 
 
 // ADDING CLASSES TO LPs BASED ON WIDTH AND NAMES
-function addingClass_LP_width(){ 
+function addingClass_LP_width(){
 
 	//If there is  a Left Nav add class 1170 and name of LP
 	if($('.page-content__wrapper').find('div.page-content__aside').length == 1){
@@ -1827,7 +1827,7 @@ function addingClass_LP_width(){
 	else{
 		$('.view').addClass('jm_lp_1440');
 	};
-	
+
 }
 // END ADDING CLASSES TO LPs BASED ON WIDTH AND NAMES
 
@@ -1840,7 +1840,7 @@ function Lightbox_heroCTA(){
         var currentImage = $(this);
         currentImage.wrap('<div class="jm_dark_lightBox" id="jm_dark_lightBox" style="display:none;"></div>');
     });
-    
+
 }Lightbox_heroCTA();
 
 function Lightbox_heroCTA_ClickEvent(){
@@ -1850,22 +1850,22 @@ function Lightbox_heroCTA_ClickEvent(){
 		$(this).closest('div.hero-content-block').next().find('.rich-text-content-block').fadeIn(1000);
 		$(this).closest('div.hero-content-block').next().fadeIn(1000).addClass("jm_displayflex");
 		$(this).closest('div.hero-content-block').next().append(
-			'<p class="jm_dark_lightBox_X">X</p>'			
+			'<p class="jm_dark_lightBox_X">X</p>'
 		);
 		$(".jm_dark_lightBox_X").click(function(){
 			$(this).stop().parent().fadeOut(300);
-				
+
 		});
 		$(".jm_X_Hero_lightBox").click(function(){
 			$('.jm_displayflex').stop().fadeOut(300);
-				
-		});		
+
+		});
 	});
 }Lightbox_heroCTA_ClickEvent();
 
 
 // END LIGHT BOX GENERAL
- 
+
 // NAME TAGGING FOR LIVE COREMETRICS
 function name_taggingCoremetrics(){
 
@@ -1881,25 +1881,25 @@ function name_taggingCoremetrics(){
 				imageornot = 'CTA: '
 			};
 		    console.log("TITLE " + asset_title);
-		    console.log("ID: " + anchor_id);		    
-		    
+		    console.log("ID: " + anchor_id);
+
 			if($(window).width() < 768) {
 			    console.log("MOBILE ANCHOR: " + imageornot + asset_anchor);
 			    $(this).attr('name', "MOBILE-" + imageornot + asset_anchor);
 			}
 			else if(($(window).width() > 768) && ($(window).width() < 1100)) {
-			    console.log("TABLET ANCHOR: " + imageornot + asset_anchor);							
+			    console.log("TABLET ANCHOR: " + imageornot + asset_anchor);
 			    $(this).attr('name', "TABLET-: " + imageornot + asset_anchor);
 			}
 			else {
-			    console.log("DESKTOP ANCHOR: " + imageornot + asset_anchor);							
+			    console.log("DESKTOP ANCHOR: " + imageornot + asset_anchor);
 			    $(this).attr('name', "DESKTOP-" + imageornot + asset_anchor);
 			};
 
-		    console.log("-----------");		    		
+		    console.log("-----------");
 	    });
     });
-    
+
 }
 // END NAME TAGGING FOR LIVE COREMETRICS
 
