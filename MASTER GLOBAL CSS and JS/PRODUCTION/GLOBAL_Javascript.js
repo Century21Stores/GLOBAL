@@ -1,5 +1,5 @@
-// FANREEL PDPs
-// MASTER SCRIPTING JULY 27TH 10:58AM 2017
+// THUMBNAIL DUPLICATION
+// MASTER SCRIPTING JULY 31TH 2:45PM 2017
 // contact: jrios@c21stores.com
 
 
@@ -12,6 +12,7 @@ document.addEventListener( "DOMContentLoaded", addingClass_LP_width, false );
 document.addEventListener( "DOMContentLoaded", name_taggingCoremetrics, false );
 document.addEventListener( "DOMContentLoaded", copy_blocks_cloning, false );
 document.addEventListener( "DOMContentLoaded", Curalate_PDP, false );
+document.addEventListener( "DOMContentLoaded", thumbnails_duplicat_fix, false );
 
 // FIREING FUNCTIONS ON QUICK VIEW
 $(document).on( 'click', '.product-summary__quickview a', function(){
@@ -1974,6 +1975,45 @@ function Curalate_PDP(callback){
 	}
 }
 // END CURALATE
+
+
+// THUMBNAIL DUPLICATION
+function thumbnails_duplicat_fix(){
+	arrayimgsrc = [];
+	$( ".product-details__alternate-image-button-image" ).each(function( index ) {
+		URLs = $( this ).attr('src').split("/")[6];
+		arrayimgsrc.push(URLs);
+	  console.log( index + ": " + URLs);
+	});
+	console.log(arrayimgsrc);
+
+
+	//var sorted_arr = arrayimgsrc.slice().sort();
+	var results = [];
+	for (var i = 0; i < arrayimgsrc.length - 1; i++) {
+	    if (arrayimgsrc[i + 1] == arrayimgsrc[i]) {
+	        results.push(arrayimgsrc[i] + " posicion " +i);
+					actual_position = i +1;
+					$('.product-details__alternate-image-group > div .slick-track div:nth-of-type('+ actual_position +')').hide();
+	    }
+	}
+
+	for(i=0;i<=results.length;i++){
+		console.log(results[i]);
+	};
+
+};
+
+	$(document.body).on('click', '.color-options__color-button' ,function(){
+	// $('.product-details--clothing .color-options__color-button').change(function(){
+		setTimeout(function(){
+			thumbnails_duplicat_fix();
+			console.log('doing doing');
+		},1000);
+	});
+
+
+// END THUMBNAIL DUPLICATION
 
 
 console.log('all running');
