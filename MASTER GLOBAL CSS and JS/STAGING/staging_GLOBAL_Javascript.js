@@ -1296,7 +1296,7 @@ function pdpVideos(){
 
 
 // MULTIPLE CTAS CONTENT BLOCKS
-$('.hero-content-block, .banner-content-block, .jm-make-ligthbox').each(function(index){
+$('.hero-content-block, .banner-content-block').each(function(index){
 	thereIsCTAs = $(this).find('a').text();
 	console.log('ctas????' + $(this).find('a').text());
 	console.log(thereIsCTAs);
@@ -1343,9 +1343,9 @@ $('.hero-content-block, .banner-content-block, .jm-make-ligthbox').each(function
 					console.log(multi_cta_copy);
 
 			if (multi_cta_copy.indexOf("*") > -1){
-				var multi_CTA_text = $(this).html().split("*")[0];
-				var multi_CTA_url = $(this).html().split("*")[1].replace("<br>", "").replace(" ", "");
-				var multi_CTA_wrap = $(this).parent();
+				multi_CTA_text = $(this).html().split("*")[0];
+				multi_CTA_url = $(this).html().split("*")[1].replace("<br>", "").replace(" ", "");
+				multi_CTA_wrap = $(this).parent();
 
 					console.log(multi_CTA_url);
 
@@ -1354,10 +1354,10 @@ $('.hero-content-block, .banner-content-block, .jm-make-ligthbox').each(function
 					)
 
 
-// 					if (multi_CTA_url.indexOf("#jmlb") > -1){
-// 						console.log('first is hidden of Others');
-// 						multi_CTA_url.addClass('JM_trigger_ligthBox');
-// 					}
+					// if (multi_CTA_url.indexOf("#jmlb") > -1){
+					// 	console.log('first is hidden of Others');
+					// 	$(multi_CTA_url).addClass('JM_trigger_ligthBox');
+					// }
 
 			}
 
@@ -1434,21 +1434,7 @@ $('.hero-content-block, .banner-content-block, .jm-make-ligthbox').each(function
 });
 // END MULTIPLE CTAS CONTENT BLOCKS
 
-// SINGLE LIGHTBOX MESSAGE
-// var jm_lightbox_url = jm_hero_FirstCTA.attr('href');
-// if (jm_hero_FirstCTA_url.indexOf("#jmlb") > -1){
-// 	console.log('first is hidden');
-// 	jm_hero_FirstCTA.addClass('jm_bottom_lightbox').wrapInner( '<div class="jm_lightBox_CTA"></div>');
-// 	jm_hero_FirstCTA.addClass('JM_trigger_ligthBox');
-// 	console.log ('coming crispy' + $(this));
-// 				var new_data_lb = $('.jm_bottom_lightbox:first-of-type', this).clone();
-// 			new_data_lb.attr("id", "jm_img_anchor_LB");
-// // 						new_data_lb.removeAttr("class");
-// 			new_data_lb.appendTo(this);
-// 	$(this).find('.JM_trigger_ligthBox').hide(100);
-// 	console.log(jm_hero_FirstCTA);
-// }
-// END SINGLE LIGHTBOX MESSAGE
+
 
 
 // TIERED PRICING
