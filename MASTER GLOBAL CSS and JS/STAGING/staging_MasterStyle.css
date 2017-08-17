@@ -1,5 +1,5 @@
 /* STAGING CSS */
-/* Currently Multiple CTAs Banners  08.15.17*/
+/* Currently Multiple CTAs Banners  08.17.17*/
 /* Past: CURALATE and COPY BLOCKS 06.05.17 */
 
 .drawer--active{
@@ -774,7 +774,8 @@ br{
 .hero-content-block .content-block-content__action,
 .two-column-hero-content-block .content-block-content__action,
 .two-column-square-content-block .content-block-content__action{
-    margin: 4.5% 0 0;
+    /*margin: 4.5% 0 0;*/
+    margin: 3.5% 0 0;
 }
 
 .content-block-content__action .button {
@@ -1345,7 +1346,17 @@ div.hero-content-block .content-block-content--left {
 	right: 0;
 }
 
+/* BANNERS CONTENT BLOCKS */
+.banner-content-block__large-image-container{
+  background-size: conver;
+  background-position: 50% 0;
+  max-height: 493px;
+}
+.page-content .banner-content-block__large-image-container{
+  max-height: 100%;
+}
 
+/* END BANNERS CONTENT BLOCKS */
 
 /* MULTIPLE CTAS */
 .jm-multipleCTA-space4 a{
@@ -1488,9 +1499,14 @@ font-size: 1em;
     margin-bottom: 0% !important;
 }
 
-}
 .banner-content-block .content-block-content__message h3.wysiwyg-font-size-large{
+  margin-bottom: 1%;
+}
+.page-content .banner-content-block .content-block-content__message h3.wysiwyg-font-size-large{
   margin-bottom: 2%;
+}
+.banner-content-block .content-block-content--center .content-block-content__container--center .content-block-content__action--button{
+  margin: 0;
 }
 /* END MULTIPLE BANNERS CTAs */
 
