@@ -1,6 +1,6 @@
-/* FIX CONTENT BLOCKS  and LIGHTBOX button on Mobile PREPARING FOR BANNER- PUSHED  */
+/* MASTER CSS PROD - PUSHED  08.29.17 */
 /* ALSO FANREEL CURALATE HP - gallery - PDP & 5 CTAs FIX  */
-/* CSS MASTER STYLE JMRV 08222017 */
+/* CSS MASTER STYLE JMRV  */
 @import "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTUvMDkvMTgvMDgvNTYvNTEvNjg4L01hc3RlclN0eWxlM19MYW5kaW5nUGFnZTA3MTUuY3NzIl1d/MasterStyle3_LandingPage0715.css?sha=5a57837dcb4befbf";
 @import "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDEvMTMvMTIvNDQvMTAvODUzL01hc3RlclN0eWxlUmFpbHN2MS5jc3MiXV0/MasterStyleRailsv1.css?sha=f040002bd75aca28";
 
@@ -8,7 +8,15 @@
 /*.branded-card-header{
 display:none !important;
 }*/
-
+.drawer--active{
+    z-index: 99999999999999;
+}
+.complimentary{
+	margin:0;
+}
+.page-content--browse .banner-content-block > a{
+	display: none;
+}
 
 
 /* ... CURALATE ... */
@@ -197,8 +205,8 @@ background-position: 50% 0;
 }
 .jm_lightBox_CTA{
 	border-bottom: solid 2px;
-    padding: 0 0 0.5em;
-    font-size: 2vw;
+	padding: 0 0 0.5em;
+	font-size: 2vw;
 }
 #jm_img_anchor_LB{
 	bottom: 3% !important;
@@ -769,8 +777,8 @@ br{
 .hero-content-block .content-block-content__action,
 .two-column-hero-content-block .content-block-content__action,
 .two-column-square-content-block .content-block-content__action{
-// margin: 4.5% 0 0;
-margin: 3.5% 0 0;
+	/*margin: 4.5% 0 0;*/
+	margin: 3.5% 0 0;
 }
 
 .content-block-content__action .button {
@@ -922,9 +930,9 @@ br{
 	display: -moz-box;
 }
 
-.page-content{
+/*.page-content{
     padding: 10px 2%;
-}
+}*/
 
 /* SHOP BY CATEGORY */
 .jm-byCategory-wrap{
@@ -1031,13 +1039,13 @@ br{
     padding-left: 5%;
 }
 .content-block-content--center{
-  width: 45%;
-    margin: 0 auto;
+	width: 45%;
+  margin: 0 auto;
 }
 
-.page-content__main .content-block-content--center{
+/*.page-content__main .content-block-content--center{
   width: 100%;
-}
+}*/
 
 .jmrv-product-grid__cell--1 .content-block-content--center{
     width: 100%;
@@ -1350,6 +1358,17 @@ div.hero-content-block .content-block-content--left {
 	right: 0;
 }
 
+/* BANNERS CONTENT BLOCKS */
+.banner-content-block__large-image-container{
+  background-size: conver;
+  background-position: 50% 0;
+  max-height: 493px;
+}
+.page-content .banner-content-block__large-image-container{
+  max-height: 100%;
+}
+
+/* END BANNERS CONTENT BLOCKS */
 
 
 /* MULTIPLE CTAS */
@@ -1442,6 +1461,70 @@ font-size: 1em;
 .jm_lightBox_CTA{
     font-size: 1vw;
 }
+
+
+
+/* MULTIPLE BANNERS CTAs */
+.banner-content-block .jm-multipleCTA-content-wrap .content-block-content--center{
+    width: 90%;
+}
+.banner-content-block .jm-multipleCTA-content-wrap .content-block-content--left,
+.banner-content-block .jm-multipleCTA-content-wrap .content-block-content--right{
+    width: 45%;
+}
+.banner-content-block .jm-multipleCTA-content-wrap .content-block-content--right{
+    margin: 0 0 0 auto;
+}
+.banner-content-block .jm-multipleCTA-content-wrap .content-block-content--left .jm-multipleCTA-space a{
+  float: left;
+}
+
+.banner-content-block .jm-multipleCTA-content-wrap .content-block-content--right .jm-multipleCTA-space a{
+  float: right;
+}
+.page-content--browse .banner-content-block .jm-multipleCTA-content-wrap .jm-multipleCTA-space a{
+  padding: 0.8em 1.4em;
+  border: 1px solid;
+  font-size: 0.77em;
+}
+.banner-content-block .jm-multipleCTA-content-wrap .content-block-content--left .jm-multipleCTA-space a,
+.banner-content-block .jm-multipleCTA-content-wrap .content-block-content--right .jm-multipleCTA-space a{
+    margin: 1%;
+}
+.banner-content-block .jm-multipleCTA-content-wrap .content-block-content--left .jm-multipleCTA-space a:nth-of-type(1),
+.banner-content-block .jm-multipleCTA-content-wrap .content-block-content--left .jm-multipleCTA-space a:nth-of-type(3),
+.banner-content-block .jm-multipleCTA-content-wrap .content-block-content--left .jm-multipleCTA-space a:nth-of-type(5){
+  margin-left: 0 !important;
+}
+.banner-content-block .jm-multipleCTA-content-wrap .content-block-content--right .jm-multipleCTA-space a:nth-of-type(1),
+.banner-content-block .jm-multipleCTA-content-wrap .content-block-content--right .jm-multipleCTA-space a:nth-of-type(3),
+.banner-content-block .jm-multipleCTA-content-wrap .content-block-content--right .jm-multipleCTA-space a:nth-of-type(5){
+  margin-right: 0 !important;
+}
+.banner-content-block .jm-multipleCTA-content-wrap .content-block-content--bottom .jm-multipleCTA-space2 a{
+    margin-bottom: 0% !important;
+}
+.banner-content-block .jm-multipleCTA-content-wrap .content-block-content--bottom .jm-multipleCTA-space3 a:nth-of-type(3),
+.banner-content-block .jm-multipleCTA-content-wrap .content-block-content--bottom .jm-multipleCTA-space4 a:nth-of-type(3),
+.banner-content-block .jm-multipleCTA-content-wrap .content-block-content--bottom .jm-multipleCTA-space4 a:nth-of-type(4),
+.banner-content-block .jm-multipleCTA-content-wrap .content-block-content--bottom .jm-multipleCTA-space5 a:nth-of-type(5),
+.banner-content-block .jm-multipleCTA-content-wrap .content-block-content--bottom .jm-multipleCTA-space6 a:nth-of-type(5)
+.banner-content-block .jm-multipleCTA-content-wrap .content-block-content--bottom .jm-multipleCTA-space6 a:nth-of-type(6){
+    margin-bottom: 0% !important;
+}
+
+.banner-content-block .content-block-content__message h3.wysiwyg-font-size-large{
+  margin-bottom: 1%;
+}
+.page-content .banner-content-block .content-block-content__message h3.wysiwyg-font-size-large{
+  margin-bottom: 2%;
+}
+.banner-content-block .content-block-content--center .content-block-content__container--center .content-block-content__action--button{
+  margin: 0;
+}
+/* END MULTIPLE BANNERS CTAs */
+
+
 
 
 
@@ -1632,9 +1715,6 @@ h3.wysiwyg-font-size-x-large{
 }
 
 /* XTRA SPACE ON RIGHT FIX */
-.complimentary{
-margin:0;
-}
 .product-list__quantity{
     margin: 0 0 6%;
     float: none;

@@ -1371,29 +1371,33 @@ $('.hero-content-block, .banner-content-block').each(function(index){
 			}
 			if(hero_number_CTA == 5){
 				$(this).find('.content-block-content__action').addClass("jm-multipleCTA-space5");
-				$(this).find('.content-block-content').parent().addClass("jm-multipleCTA-content-wrap");
+				$('.jm-multipleCTA-space5').parent().parent().parent().parent().find('.content-block-content--center').css('width','100%');
+				//$(this).find('.content-block-content').parent().addClass("jm-multipleCTA-content-wrap");
 				if ($(window).width() < 700) {
 					$(this).find('.hero-content-block__content-boundary, .content-block-content').css("min-height","171vw");
 				}
 			}
 			else if(hero_number_CTA == 4){
 				$(this).find('.content-block-content__action').addClass("jm-multipleCTA-space4");
-				$(this).find('.content-block-content').parent().addClass("jm-multipleCTA-content-wrap");
+				//$(this).find('.content-block-content').parent().addClass("jm-multipleCTA-content-wrap");
 				$(this).find('.content-block-content__action').parent().eq(2).addClass("jm-multipleCTA-container");
+				$('.jm-multipleCTA-space4').parent().parent().parent().parent().find('.content-block-content--center').css('width','100%');
 				if ($(window).width() < 700) {
 					$(this).find('.hero-content-block__content-boundary, .content-block-content').css("min-height","160vw");
 				}
 			}
 			else if(hero_number_CTA == 3){
 				$(this).find('.content-block-content__action').addClass("jm-multipleCTA-space3");
-				$(this).find('.content-block-content').parent().addClass("jm-multipleCTA-content-wrap");
+				//$(this).find('.content-block-content').parent().addClass("jm-multipleCTA-content-wrap");
+				$('.jm-multipleCTA-space3').parent().parent().parent().parent().find('.content-block-content--center').css('width','100%');
 				if ($(window).width() < 700) {
 					$(this).find('.hero-content-block__content-boundary, .content-block-content').css("min-height","160vw");
 				}
 			}
 			else if(hero_number_CTA == 2){
 				$(this).find('.content-block-content__action').addClass("jm-multipleCTA-space2");
-				$(this).find('.content-block-content').parent().addClass("jm-multipleCTA-content-wrap");
+				//$(this).find('.content-block-content').parent().addClass("jm-multipleCTA-content-wrap");
+				$('.jm-multipleCTA-space2').parent().parent().parent().parent().find('.content-block-content--center').css('width','100%');
 			}
 // 			$('.hero-content-block > a').hide();
 
@@ -1635,7 +1639,7 @@ function addingClass_LP_width(){
 	//If there is  a Left Nav add class 1170 and name of LP
 	if($('.page-content__wrapper').find('div.page-content__aside').length == 1){
 		$('.view').addClass('jm_lp_1170');
-		nameLP = $('.view h1').html().toLowerCase();
+		nameLP = $('.view h1').html().toLowerCase().replace(/\s/g,'');;
 		$('.view').addClass('jm_lp_' + nameLP);
 	}
 	//If there is not Left Nav add class 1440
@@ -1686,7 +1690,7 @@ function Lightbox_heroCTA_ClickEvent(){
 // NAME TAGGING FOR LIVE COREMETRICS
 function name_taggingCoremetrics(){
 
-    $('.hero-content-block, .three-column-square-content-block, .large-square-plus-one-content-block__container, .two-column-square-content-block, .jm-custom-hp > section').each(function() {
+    $('.hero-content-block, .three-column-square-content-block, .large-square-plus-one-content-block__container, .two-column-square-content-block, .banner-content-block, .jm-custom-hp > section').each(function() {
 		var asset_title = $(this).find('h2').text();
 		$(this).find('a').each(function() {
 			var asset_anchor = $(this).attr('href').replace('https://www.c21stores.com', '');

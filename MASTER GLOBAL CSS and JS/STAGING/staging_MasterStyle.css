@@ -1,10 +1,7 @@
 /* STAGING CSS */
-/* Currently Multiple CTAs Banners  08.17.17*/
-/* Past: CURALATE and COPY BLOCKS 06.05.17 */
+/* Currently Multiple CTAs Banners  08.29.17 */
+/* Past: CURALATE and COPY BLOCKS 08.17.17 */
 
-.drawer--active{
-    z-index: 99999999999999;
-}
 
 /*body{
     -moz-transform: scaleX(-1);
@@ -26,7 +23,9 @@
 /*.branded-card-header{
 display:none !important;
 }*/
-
+.drawer--active{
+    z-index: 99999999999999;
+}
 
 /* ... CURALATE ... */
 .page-content--product{
@@ -35,7 +34,7 @@ display:none !important;
 .jm-curalate-container{
     width: 100%;
     background: #f6f5f5;
-    padding: 3% 0;
+    /*padding: 3% 0;*/
 }
 .complimentary{
 	margin:0;
@@ -57,6 +56,7 @@ display:none !important;
     background: #f6f5f5;
     font-size: 0.97em;
     letter-spacing: 0.05em;
+    padding: 0 0 3%;
 }
 
 /* ... END CURALATE ... */
@@ -73,12 +73,22 @@ display:none !important;
 .inline-quickview__container{
     margin: 6% 0 0;
 }
+
+/* END HOVER MESSAGE OVER ADD TO BAG  */
+
+/* LOGIN PAGE */
+
 .login-checkout p.login-checkout__forgot-password .text-button{
     color: rgb(0, 0, 0);
     text-rendering: optimizeLegibility;
 }
+/* END LOGIN PAGE */
 
-/* END HOVER MESSAGE OVER ADD TO BAG  */
+/* GRID ADS */
+.product-grid__cell--2 .product-grid-content-block{
+background-position: 50% 0;
+}
+/* END GRID ADS */
 /* ..................... END OVERWRITES ..................... */
 
 /* PLCC HEADER HIDDEN
@@ -108,7 +118,7 @@ display:none !important;
 .jm_lp_women, .jm_lp_shoes, .jm_lp_handbags, .jm_lp_beauty,
 .jm_lp_men, .jm_lp_kids, .jm_lp_home, .jm_lp_tech{
 	position:relative;
-	padding: 0 0 111%;
+	/*padding: 0 0 111%;*/
 }
 /* END BIG CONTAINERS */
 
@@ -201,9 +211,9 @@ display:none !important;
 	background:none !important;
 }
 .jm_lightBox_CTA{
-	border-bottom: solid 2px;
-    padding: 0 0 0.5em;
-    font-size: 1.14em;
+  border-bottom: solid 2px;
+  padding: 0 0 0.5em;
+  font-size: 2vw;
 }
 #jm_img_anchor_LB{
 	bottom: 3% !important;
@@ -875,8 +885,11 @@ br{
     border-bottom: solid 1px #eaeaea;
     padding: 0 0 7%;
 }
-.browsing-controls{
-padding: 0 0 7em;
+.view .jm-copy-block{
+	display:none;
+}
+.jm_copy_block_clone{
+	position:relative;
 }
 /* END COPY BLOCKS */
 
@@ -1032,11 +1045,20 @@ br{
     padding-left: 5%;
 }
 .content-block-content--center{
-/*  width: 45%; */
-    width: 100%;
+  width: 45%;
+    /*width: 100%;*/
     margin: 0 auto;
 }
+/*.page-content__main .content-block-content--center{
+  width: 100%;
+}
+.jm_lp_1440 .page-content__main .content-block-content--center{
+  width: 45%;
+}*/
 
+.jmrv-product-grid__cell--1 .content-block-content--center{
+    width: 100%;
+}
 
 
 /* COPY - FONT */
@@ -1431,23 +1453,20 @@ font-size: 1em;
 }
 
 
-/* BIG CONTAINERS */
-.jm_lp_women, .jm_lp_shoes, .jm_lp_handbags, .jm_lp_beauty,
-.jm_lp_men, .jm_lp_kids, .jm_lp_home, .jm_lp_tech{
-	padding: 0 0 41em;
-}
-/* END BIG CONTAINERS */
 
 /* COPY BLOCK */
 .jm-copy-block{
-    margin: 12% 4%;
+    /*margin: 12% 4%;*/
     font-size: 0.8em;
     border-bottom: none;
     padding: 0;
 }
 /* END COPY BLOCK */
 
-
+/* LIGHT BOX */
+.jm_lightBox_CTA{
+    font-size: 1vw;
+}
 
 
 /* MULTIPLE BANNERS CTAs */
@@ -1544,6 +1563,13 @@ font-size: 1em;
 
 }
 
+@media screen and (min-width: 860px){
+
+div.hero-content-block .content-block-content__container--center .jm-multipleCTA-space5 a{
+    margin: 0% 1% 2%;
+}
+
+}
 
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
@@ -1598,20 +1624,16 @@ div.hero-content-block .content-block-content__container--center .jm-multipleCTA
 .br-sf-widget-merchant-popup-maincont{
     width: 78%;
 }
-
-/* BIG CONTAINERS */
-.jm_lp_women, .jm_lp_shoes, .jm_lp_handbags, .jm_lp_beauty,
-.jm_lp_men, .jm_lp_kids, .jm_lp_home, .jm_lp_tech{
-    padding: 0 0 26em;
+.jm_lightBox_CTA{
+    font-size: 0.9em;
 }
-/* END BIG CONTAINERS */
 
 
-/* COPY BLOCK */
+ /*COPY BLOCK
 .jm-copy-block{
 	margin: 0 3%;
-}
-/* END COPY BLOCK */
+}*/
+ END COPY BLOCK
 
 }
 
@@ -1741,7 +1763,8 @@ margin:0;
     width: 78%;
 }
 #jm_img_anchor_LB{
-    bottom: 33% !important;
+    /*bottom: 33% !important;*/
+    bottom: 17% !important;
     font-size: 2.3vw;
 }
 #jm_img_anchor{
