@@ -1398,7 +1398,7 @@ $('.hero-content-block, .banner-content-block').each(function(index){
 			});
 			if(hero_number_CTA == 5){
 				$(this).find('.content-block-content__action').addClass("jm-multipleCTA-space5");
-                                $('.jm-multipleCTA-space5').parent().parent().parent().parent().find('.content-block-content--center').css('width','100%');
+        $('.jm-multipleCTA-space5').parent().parent().parent().parent().find('.content-block-content--center').css('width','100%');
 				if ($(window).width() < 700) {
 					$(this).find('.hero-content-block__content-boundary, .content-block-content').css("min-height","171vw");
 				}
@@ -1426,11 +1426,11 @@ $('.hero-content-block, .banner-content-block').each(function(index){
 	}
 
 	// IF THERE IS ONE CTA WITH WORD LIGHTBOX LB
-	else if ((hero_number_CTA = 1) && (CTAtext_URL.indexOf("#jmlb") > -1)){
+	else if ((hero_number_CTA = 1) && (CTAtext_URL.indexOf("jmlb") > -1)){
 		console.log('unoLightBox!!');
 		$(this).find('.content-block-content__action').fadeIn(600);
 		$(this).find('a').addClass('JM_trigger_ligthBox').addClass('jm_show_important');
-// 		$(this).find('a').addClass('JM_trigger_ligthBox').addClass('jm_show_important').addClass('jm_bottom_lightbox').wrapInner( '<div class="jm_lightBox_CTA"></div>');
+		//$(this).find('a').addClass('JM_trigger_ligthBox').addClass('jm_show_important').addClass('jm_bottom_lightbox').wrapInner( '<div class="jm_lightBox_CTA"></div>');
 
 		// IF THERE IS ONE CTA WITH WORD LIGHTBOX LB and ALSO HIDE
 		if ((hero_number_CTA = 1) && ( CTAtext.indexOf("jmhide") > -1)){
