@@ -13,6 +13,11 @@ document.addEventListener( "DOMContentLoaded", name_taggingCoremetrics, false );
 //document.addEventListener( "DOMContentLoaded", copy_blocks_cloning, false );
 document.addEventListener( "DOMContentLoaded", Curalate_PDP, false );
 document.addEventListener( "DOMContentLoaded", thumbnails_duplicat_fix, false );
+document.addEventListener( "DOMContentLoaded", zero_results_search, false );
+document.addEventListener( "DOMContentLoaded", vip_shopping, false );
+
+
+
 
 // FIREING FUNCTIONS ON QUICK VIEW
 $(document).on( 'click', '.product-summary__quickview a', function(){
@@ -103,91 +108,97 @@ function clonningClickEvent(){
 
 
 // ZERO SEARCH SCRIPT
-if( ($('#header-search-form .value').length) != 0){
+function zero_results_search(){
+if (window.location.href.indexOf("vip") === -1){
 
-var search = $('#header-search-form .value').children().val().toString().toLowerCase();
-// search = search.filter(Boolean)
+	if( ($('#header-search-form .value').length) != 0){
 
-// HERE GOES THE ID of the Google Spreadsheet SUPPRESION LIST
-var spreadsheetID = "1vbPtdgK7tCk7Nl14rDzzqsmMG2Ii5-WakBueCwAeuQE";
-var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
+	var search = $('#header-search-form .value').children().val().toString().toLowerCase();
+	// search = search.filter(Boolean)
 
-$.getJSON(url, function(data) {
-	var entry = data.feed.entry;
-	var listArr = [];
-	var listArr2 = [];
+	// HERE GOES THE ID of the Google Spreadsheet SUPPRESION LIST
+	var spreadsheetID = "1vbPtdgK7tCk7Nl14rDzzqsmMG2Ii5-WakBueCwAeuQE";
+	var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
 
-  	//PUSH DATA FROM 2 COLUMNS TO 2 ARRAYS
-  	$(entry).each(function(){
-  		listArr.push(this.gsx$suppressed.$t.toLowerCase());
-  		listArr2.push(this.gsx$suppressed2.$t.toLowerCase());
-  	});
+	$.getJSON(url, function(data) {
+		var entry = data.feed.entry;
+		var listArr = [];
+		var listArr2 = [];
 
-	//COMBINE BOTH ARRAYS INTO ONE SINGLE ARRAY
-  	var listArrTotal = listArr.concat(listArr2);
+	  	//PUSH DATA FROM 2 COLUMNS TO 2 ARRAYS
+	  	$(entry).each(function(){
+	  		listArr.push(this.gsx$suppressed.$t.toLowerCase());
+	  		listArr2.push(this.gsx$suppressed2.$t.toLowerCase());
+	  	});
 
-  	// CLEAR EMPTY ITEMS
-	listArr = listArr.filter(Boolean)
-	listArr2 = listArr2.filter(Boolean)
-	listArrTotal = listArrTotal.filter(Boolean)
+		//COMBINE BOTH ARRAYS INTO ONE SINGLE ARRAY
+	  	var listArrTotal = listArr.concat(listArr2);
 
-	//console.log(search);
-  	//console.log(listArr);
-  	//console.log(listArr2);
-  	//console.log(listArrTotal);
+	  	// CLEAR EMPTY ITEMS
+		listArr = listArr.filter(Boolean)
+		listArr2 = listArr2.filter(Boolean)
+		listArrTotal = listArrTotal.filter(Boolean)
 
-	designerList();
-	function designerList(){
-		for (var z=0; z < search.length; z++){
+		//console.log(search);
+	  	//console.log(listArr);
+	  	//console.log(listArr2);
+	  	//console.log(listArrTotal);
 
-	 		if(arrayContains(listArrTotal, search)){
-				$('.page-content__wrapper').hide("fast");
-				$('.page-content').prepend(
-					'<div id="result">'+
-					'</div>'
-				);
-				$( "#result" ).load( "/pages/zero-search" );
-				break;
-			}
-		}
+		designerList();
+		function designerList(){
+			for (var z=0; z < search.length; z++){
 
-	 	if (window.location.href.indexOf("categories") > -1){
-	 		cat_Name = $('.view h1').html().toLowerCase();
-	 		console.log("Category Name: " + cat_Name);
-			for (var z=0; z < listArrTotal.length; z++){
-				if(arrayContains(listArrTotal, cat_Name)){
-					console.log("search found!");
-// 					$('.page-content__wrapper').hide("fast");
-// 					$('.page-content').prepend(
-// 						'<div id="result">'+
-// 						'</div>'
-// 					);
-// 					$( "#result" ).load( "/pages/zero-search" );
-// 					break;
+		 		if(arrayContains(listArrTotal, search)){
+					$('.page-content__wrapper').hide("fast");
+					$('.page-content').prepend(
+						'<div id="result">'+
+						'</div>'
+					);
+					$( "#result" ).load( "/pages/zero-search" );
+					break;
 				}
 			}
-		}
-		function build_ZeroResultPage(){
+
+		 	if (window.location.href.indexOf("categories") > -1){
+		 		cat_Name = $('.view h1').html().toLowerCase();
+		 		console.log("Category Name: " + cat_Name);
+				for (var z=0; z < listArrTotal.length; z++){
+					if(arrayContains(listArrTotal, cat_Name)){
+						console.log("search found!");
+	// 					$('.page-content__wrapper').hide("fast");
+	// 					$('.page-content').prepend(
+	// 						'<div id="result">'+
+	// 						'</div>'
+	// 					);
+	// 					$( "#result" ).load( "/pages/zero-search" );
+	// 					break;
+					}
+				}
+			}
+			function build_ZeroResultPage(){
+
+			}
 
 		}
+	});
+
+	function arrayContains(a, obj) {
+	    for (var i = 0; i < a.length; i++) {
+	//         if (a[i] === obj) {
+	//             return true;
+	//         }
+	        if (obj.includes(a[i])) {
+	            return true;
+	        }
+
+	    }
+	    return false;
+	}
 
 	}
-});
-
-function arrayContains(a, obj) {
-    for (var i = 0; i < a.length; i++) {
-//         if (a[i] === obj) {
-//             return true;
-//         }
-        if (obj.includes(a[i])) {
-            return true;
-        }
-
-    }
-    return false;
-}
 
 }
+};
 // END ZERO SEARCH SCRIPT
 
 
@@ -1802,5 +1813,27 @@ function thumbnails_duplicat_fix(){
 
 
 
+// VIP SHOPPING
+function vip_shopping(){
+	if (window.location.href.indexOf("vip") > -1){
+		vip_cat_Name_array = $('.view h1').html().split('-');
+		vip_cat_Name_array.shift();
+		vip_new_name = [];
+		console.log('VIP CATEGORY NAME: ' + vip_cat_Name_array);
+		for (i = 0; i < vip_cat_Name_array.length; i++) {
+		    console.log("numero:" + i + "item: " + vip_cat_Name_array[i]);
+				vip_new_name.push(vip_cat_Name_array[i]);
+				vip_new_name.push(' ');
+		}
+
+		// vip_new_name = $.each(vip_cat_Name_array, function(i,val) {
+	  //   return (i + val);
+		// });
+		$('.view h1').html(vip_new_name).css("text-transform","capitalize")
+		$('.view h1').delay(5000).css("opacity","1");
+		console.log('VIP NEW NAME: ' + vip_new_name);
+	}
+};
+// END VIP SHOPPING
 
 console.log('all running');
