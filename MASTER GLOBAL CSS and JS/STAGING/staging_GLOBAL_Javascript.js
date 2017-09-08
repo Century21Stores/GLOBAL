@@ -1,6 +1,6 @@
 // STAGING
-/* CURRENTLY Fanreel PDPs 060517 */
-/*  NON CTA LIGHT BOX HERO CLICKABLE ADDED 012317 */
+/* CURRENTLY Fanreel PDPs 09.07.17 */
+/* OLD: Fanreel PDPs NON CTA LIGHT BOX HERO CLICKABLE ADDED 08.29.17 */
 
 
 // MASTER SCRIPTING JAN 20 2017
@@ -1372,14 +1372,14 @@ $('.hero-content-block, .banner-content-block').each(function(index){
 			if(hero_number_CTA == 5){
 				$(this).find('.content-block-content__action').addClass("jm-multipleCTA-space5");
 				$('.jm-multipleCTA-space5').parent().parent().parent().parent().find('.content-block-content--center').css('width','100%');
-				//$(this).find('.content-block-content').parent().addClass("jm-multipleCTA-content-wrap");
+				$(this).find('.content-block-content').parent().addClass("jm-multipleCTA-content-wrap");
 				if ($(window).width() < 700) {
 					$(this).find('.hero-content-block__content-boundary, .content-block-content').css("min-height","171vw");
 				}
 			}
 			else if(hero_number_CTA == 4){
 				$(this).find('.content-block-content__action').addClass("jm-multipleCTA-space4");
-				//$(this).find('.content-block-content').parent().addClass("jm-multipleCTA-content-wrap");
+				$(this).find('.content-block-content').parent().addClass("jm-multipleCTA-content-wrap");
 				$(this).find('.content-block-content__action').parent().eq(2).addClass("jm-multipleCTA-container");
 				$('.jm-multipleCTA-space4').parent().parent().parent().parent().find('.content-block-content--center').css('width','100%');
 				if ($(window).width() < 700) {
@@ -1388,7 +1388,7 @@ $('.hero-content-block, .banner-content-block').each(function(index){
 			}
 			else if(hero_number_CTA == 3){
 				$(this).find('.content-block-content__action').addClass("jm-multipleCTA-space3");
-				//$(this).find('.content-block-content').parent().addClass("jm-multipleCTA-content-wrap");
+				$(this).find('.content-block-content').parent().addClass("jm-multipleCTA-content-wrap");
 				$('.jm-multipleCTA-space3').parent().parent().parent().parent().find('.content-block-content--center').css('width','100%');
 				if ($(window).width() < 700) {
 					$(this).find('.hero-content-block__content-boundary, .content-block-content').css("min-height","160vw");
@@ -1396,7 +1396,7 @@ $('.hero-content-block, .banner-content-block').each(function(index){
 			}
 			else if(hero_number_CTA == 2){
 				$(this).find('.content-block-content__action').addClass("jm-multipleCTA-space2");
-				//$(this).find('.content-block-content').parent().addClass("jm-multipleCTA-content-wrap");
+				$(this).find('.content-block-content').parent().addClass("jm-multipleCTA-content-wrap");
 				$('.jm-multipleCTA-space2').parent().parent().parent().parent().find('.content-block-content--center').css('width','100%');
 			}
 // 			$('.hero-content-block > a').hide();
@@ -1725,6 +1725,111 @@ function name_taggingCoremetrics(){
 // END NAME TAGGING FOR LIVE COREMETRICS
 
 
+
+// COPY BLOCKS CLONE FOR CATEGORY PAGES
+function copy_blocks_cloning(){
+	var copy_blocks_category = $('#jm_copy_block_clone').clone();
+	copy_blocks_category.addClass('jm_copy_block_clone');
+	$('.page-content').append(
+		copy_blocks_category
+	);
+}
+// END COPY BLOCKS CLONE FOR CATEGORY PAGES
+
+
+
+// CURALATE
+function Curalate_PDP(callback){
+
+	if (window.location.href.indexOf("products") > -1){
+
+		thisproductID = digitalData.product[0].productInfo.productID;
+		// 	console.log(thisproductID);
+		//LOADING SCRIPT
+		jQuery.loadScript = function (url, callback) {
+			jQuery.ajax({
+				url: url,
+				dataType: 'script',
+				success: callback,
+				async: true
+			});
+		}
+
+
+		//Loading Script
+		//$.loadScript('//d116tqlcqfmz3v.cloudfront.net/pizza-40/gallery.js', function(){
+		$.loadScript('//d116tqlcqfmz3v.cloudfront.net/century21-1169/carousel.js', function(){
+			//Call after script loaded
+	    	//Curalate.FanReels.Gallery.init({ code: "pizza" });
+	    	Curalate.FanReels.Carousel.init({ code: "century21",  productId: thisproductID});
+		});
+
+		$('.page-content__wrapper').after(
+			//'<h2 class="jm-curalate-pdp-title">#C21STYLE</h2>'+
+			//'<p class="jm-curalate-pdp-sub-copy">Shop our Instagram and show us your latest loves.</p>'+
+			'<div id="curalate-fan-reel-wrapper"></div>'
+		);
+
+
+		//Inject Element
+		$('#curalate-fan-reel-wrapper').wrap( "<div class='jm-curalate-container'></div>" );
+		//	window.onload = function () { console.log('este es:' + $('.curalate-thumbs').children().length);}
+			$(window).load(function() {
+				console.log('# of Instagram posts link to this product: ' + $('.curalate-thumbs').children().length);
+				if($('.curalate-thumbs').children().length >= 6){
+					$('.page-content__wrapper').after(
+						'<h2 class="jm-curalate-pdp-title">#C21STORES</h2>'+
+						'<p class="jm-curalate-pdp-sub-copy">Shop our Instagram and show us your latest loves.</p>'
+					);
+				}
+
+			});
+	}
+}
+// END CURALATE
+
+
+
+// THUMBNAIL DUPLICATION
+function thumbnails_duplicat_fix(){
+	arrayimgsrc = [];
+	$( ".product-details__alternate-image-button-image" ).each(function( index ) {
+		URLs = $( this ).attr('src').split("/")[6];
+		arrayimgsrc.push(URLs);
+	  console.log( index + ": " + URLs);
+	});
+	console.log(arrayimgsrc);
+
+
+	//var sorted_arr = arrayimgsrc.slice().sort();
+	var results = [];
+	for (var i = 0; i < arrayimgsrc.length - 1; i++) {
+	    if (arrayimgsrc[i + 1] == arrayimgsrc[i]) {
+	        results.push(arrayimgsrc[i] + " posicion " +i);
+					actual_position = i +1;
+					$('.product-details__alternate-image-group > div .slick-track div:nth-of-type('+ actual_position +')').hide();
+	    }
+	}
+
+	for(i=0;i<=results.length;i++){
+		console.log(results[i]);
+	};
+
+};
+
+	$(document.body).on('click', '.color-options__color-button' ,function(){
+	// $('.product-details--clothing .color-options__color-button').change(function(){
+		setTimeout(function(){
+			thumbnails_duplicat_fix();
+			console.log('doing doing');
+		},1000);
+	});
+
+
+// END THUMBNAIL DUPLICATION
+
+
+
 // CONTACT PAGE MESSAGE
 if (window.location.href.indexOf("contact") > -1){
 		$('.page-messages').clone().appendTo('body').addClass('clonemessage');
@@ -1740,49 +1845,19 @@ console.log('all running');
 
 
 
-// Curalate
-
-
-if (window.location.href.indexOf("products") > -1){
-
-	thisproductID = digitalData.product[0].productInfo.productID;
-// 	console.log(thisproductID);
-	//LOADING SCRIPT
-	jQuery.loadScript = function (url, callback) {
-		jQuery.ajax({
-			url: url,
-			dataType: 'script',
-			success: callback,
-			async: true
-		});
-	}
-
-	//Inject Element
-	$('.page-content__wrapper').after(
-		'<h2 class="jm-curalate-pdp-title">#C21STYLE</h2>'+
-		'<p class="jm-curalate-pdp-sub-copy">Shop our Instagram and show us your latest loves.</p>'+
-		'<div id="curalate-fan-reel-wrapper"></div>'
-	);
-	//Loading Script
-	//$.loadScript('//d116tqlcqfmz3v.cloudfront.net/pizza-40/gallery.js', function(){
-	$.loadScript('//d116tqlcqfmz3v.cloudfront.net/century21-1169/carousel.js', function(){
-		//Call after script loaded
-    	//Curalate.FanReels.Gallery.init({ code: "pizza" });
-    	Curalate.FanReels.Carousel.init({ code: "century21",  productId: thisproductID});
-	});
-
-
-	$('#curalate-fan-reel-wrapper').wrap( "<div class='jm-curalate-container'></div>" );
-
-
-}
-
-
-
-
-
+//IFRAME
 $(window).load(function() {
 var iframe = document.getElementById('livechat-compact-view');
 var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
 innerDoc.getElementById('content-container').className = "be-still";
 });
+
+
+
+
+// JOIN US MESSAGE
+//$('.utility-menu').prepend('<li class="utility-menu__menu-item jm-join-us animated pulse box-wrapper"><a class="waggle" href="https://www.c21stores.com/pages/careers">Now Hiring</a></li>');
+
+//setTimeout(function(){
+//$('.jm-join-us').css("display","inline-block");
+//},3000);
