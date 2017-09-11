@@ -8,6 +8,7 @@
 
 
 // FIREING FUNCTIONS
+document.addEventListener( "DOMContentLoaded", adquisition_rotating_message, false );
 document.addEventListener( "DOMContentLoaded", uniqueClasses, false );
 document.addEventListener( "DOMContentLoaded", pdpVideos, false );
 document.addEventListener( "DOMContentLoaded", pdpTieredPrice, false );
@@ -1861,3 +1862,32 @@ innerDoc.getElementById('content-container').className = "be-still";
 //setTimeout(function(){
 //$('.jm-join-us').css("display","inline-block");
 //},3000);
+
+function adquisition_rotating_message(){
+
+	var rotatingMessages = [
+		'<a href="#">FREE SHIPPING ON ORDERS $75+</a>',
+		'<a class="jm-button-hover" href="/pages/careers" target="_blank">WE’RE HIRING! APPLY NOW</a>'
+	];
+
+ function rotatingMessage(e) {
+        var msg = rotatingMessages.shift();
+        rotatingMessages.push(msg);
+        $("div.jm-shipping-plcc").html(msg);
+    };
+
+		// var jmtimer = setInterval( rotatingMessage, 3000);
+    window.setInterval(function(e){
+			rotatingMessage();
+
+			// $('.jm-shipping-plcc a').hover(function(e){
+			// 		clearInterval(jmtimer);
+			// }, function(e){
+			// 		jmtimer = setInterval( rotatingMessage, 3000);
+			// });
+
+    }, 3000);
+
+
+
+}

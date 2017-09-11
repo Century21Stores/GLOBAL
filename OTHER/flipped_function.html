@@ -1,0 +1,50 @@
+<!-- METHOD 1 -->
+<div id="output">WE’RE HIRING! <a href="#2">APPLY NOW</a></div>
+<script>
+var rotatingMessages = [
+'<a href="#">FREE SHIPPING ON ORDERS $75+</a>',
+'WE’RE HIRING! <a href="#2">APPLY NOW</a>'
+];
+
+$(document).ready(function () {
+    function rotatingMessage(e) {
+        var msg = rotatingMessages.shift();
+        rotatingMessages.push(msg);
+        $("div#output").html(msg);
+    };
+    window.setInterval(function(e){
+      rotatingMessage(e);
+    }, 5000);
+});
+
+</script>
+
+
+
+
+
+
+
+
+<!-- METHOD 2 -->
+
+<section class="jm-header-content">
+<!-- <div>zero</div> -->
+<div>one</div>
+<div style="display:none;">two</div>
+</section>
+<script>
+  var flipped = false;
+  function headerFlip(){
+    var flips = $(".jm-header-content").children();
+    if (flipped) {
+      flips.eq(1).fadeOut(function(){flips.eq(0).fadeIn(function(){flipped = false;});});
+    }
+    else {
+      flips.eq(0).fadeOut(function(){flips.eq(1).fadeIn(function(){flipped = true;});});
+    }
+  }
+   window.addEventListener("DOMContentLoaded", function(){
+     setInterval('headerFlip()', 1269);
+   });
+</script>
