@@ -1,18 +1,15 @@
 /* STAGING CSS */
-/* Currently Multiple CTAs Banners  08.29.17 */
-/* Past: CURALATE and COPY BLOCKS 08.17.17 */
+/* Currently Rotating Global Banner 09.13.17*/
+/* Past: Multiple CTAs Banners  08.29.17 */
 .jm-button-header{
-background:#f5f5f5;
+  background:#f5f5f5;
 }
 
-.jm-shipping-plcc{
-    min-height: 9em;
-}
-.jm-button-hover:hover{
-background: black;
-    color: white !important;
-text-decoration:none;
-}
+/*.jm-button-hover:hover{
+  background: black;
+  color: white !important;
+  text-decoration:none;
+}*/
 /*body{
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
@@ -100,6 +97,13 @@ background-position: 50% 0;
 }
 /* END GRID ADS */
 /* ..................... END OVERWRITES ..................... */
+
+/* PLCC HEADER */
+.jm-button-header{
+  background:#f5f5f5;
+}
+/* END PLCC HEADER  */
+
 
 /* PLCC HEADER HIDDEN
 .branded-content-wrapper{
