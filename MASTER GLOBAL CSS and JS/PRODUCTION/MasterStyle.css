@@ -1,5 +1,5 @@
-/* MASTER CSS PROD - PUSHED  08.29.17 */
-/* ALSO FANREEL CURALATE HP - gallery - PDP & 5 CTAs FIX  */
+/* MASTER CSS PROD - ROTATING GLOBAL BANNER  09.12.17 */
+/* PAST:  FANREEL CURALATE HP - gallery - PDP & 5 CTAs FIX  08.29.17*/
 /* CSS MASTER STYLE JMRV  */
 @import "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTUvMDkvMTgvMDgvNTYvNTEvNjg4L01hc3RlclN0eWxlM19MYW5kaW5nUGFnZTA3MTUuY3NzIl1d/MasterStyle3_LandingPage0715.css?sha=5a57837dcb4befbf";
 @import "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDEvMTMvMTIvNDQvMTAvODUzL01hc3RlclN0eWxlUmFpbHN2MS5jc3MiXV0/MasterStyleRailsv1.css?sha=f040002bd75aca28";
@@ -77,11 +77,29 @@ display:none !important;
 /* END LOGIN PAGE */
 
 /* GRID ADS */
+.product-grid__cell--1 .content-block-content--center{
+  width:100%;
+}
 .product-grid__cell--2 .product-grid-content-block{
-background-position: 50% 0;
+  background-position: 50% 0;
 }
 /* END GRID ADS */
 /* ..................... END OVERWRITES ..................... */
+
+/* PLCC HEADER */
+.jm-button-header{
+  background:#f5f5f5;
+}
+
+/*.jm-shipping-plcc{
+  min-height: 9em;
+}*/
+.jm-button-hover:hover{
+  background: black;
+  color: white !important;
+  text-decoration:none;
+}
+/* END PLCC HEADER  */
 
 /* PLCC HEADER HIDDEN
 .branded-content-wrapper{

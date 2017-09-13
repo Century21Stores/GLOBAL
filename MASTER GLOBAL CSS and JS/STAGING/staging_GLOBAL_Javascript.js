@@ -8,7 +8,9 @@
 
 
 // FIREING FUNCTIONS
+document.addEventListener( "DOMContentLoaded", denied_rotating_message, false );
 document.addEventListener( "DOMContentLoaded", adquisition_rotating_message, false );
+document.addEventListener( "DOMContentLoaded", retention_rotating_message, false );
 document.addEventListener( "DOMContentLoaded", uniqueClasses, false );
 document.addEventListener( "DOMContentLoaded", pdpVideos, false );
 document.addEventListener( "DOMContentLoaded", pdpTieredPrice, false );
@@ -1866,28 +1868,80 @@ innerDoc.getElementById('content-container').className = "be-still";
 function adquisition_rotating_message(){
 
 	var rotatingMessages = [
-		'<a href="#">FREE SHIPPING ON ORDERS $75+</a>',
+		'<a href="https://www.c21stores.com/pages/shipping-information">FREE SHIPPING ON ORDERS $75+</a>',
 		'<a class="jm-button-hover" href="/pages/careers" target="_blank">WE’RE HIRING! APPLY NOW</a>'
 	];
 
- function rotatingMessage(e) {
+ 		function rotatingMessage(e) {
         var msg = rotatingMessages.shift();
         rotatingMessages.push(msg);
-        $("div.jm-shipping-plcc").html(msg);
-    };
+        $("div.jm-shipping-plcc-acquisition").html(msg);
 
-		// var jmtimer = setInterval( rotatingMessage, 3000);
-    window.setInterval(function(e){
-			rotatingMessage();
+				$('.jm-shipping-plcc-acquisition a').hover(function(e){
+					$('a.Shoes').css('background','red');
+						clearInterval(jmtimer);
+				}, function(e){
+					$('a.Shoes').css('background','blue');
+						jmtimer = setInterval( rotatingMessage, 2300);
+				});
 
-			// $('.jm-shipping-plcc a').hover(function(e){
-			// 		clearInterval(jmtimer);
-			// }, function(e){
-			// 		jmtimer = setInterval( rotatingMessage, 3000);
-			// });
+		};
 
-    }, 3000);
+		var jmtimer = setInterval( rotatingMessage, 2300);
+
+};
+
+function retention_rotating_message(er){
+
+	var rotatingMessagesR = [
+		'<a href="https://www.c21stores.com/pages/shipping-information">PREMIER CREDIT CARD: FREE SHIPPING ON ORDERS $50+ <br/>ELITE CREDIT CARD: FREE SHIPPING ON ALL ORDERS</a>',
+		'<a class="jm-button-hover" href="/pages/careers" target="_blank">WE’RE HIRING! APPLY NOW</a>'
+	];
+
+ 		function rotatingMessageR(er) {
+        var msgR = rotatingMessagesR.shift();
+        rotatingMessagesR.push(msgR);
+        $("div.jm-shipping-plcc-retention").html(msgR);
+
+				$('.jm-shipping-plcc-retention a').hover(function(er){
+					$('a.Shoes').css('background','green');
+						clearInterval(jmtimerR);
+				}, function(er){
+					$('a.Shoes').css('background','blue');
+						jmtimerR = setInterval( rotatingMessageR, 2300);
+				});
+
+		};
+
+		var jmtimerR = setInterval( rotatingMessageR, 2300);
+
+};
 
 
+// GLOBAL HEADER ROTATING MESSAGE DENIED
+function denied_rotating_message(ed){
 
-}
+	var rotatingMessagesD = [
+		'<a href="https://www.c21stores.com/pages/shipping-information">FREE SHIPPING ON ORDERS $75+</a>',
+		'<a class="jm-button-hover" href="/pages/careers" target="_blank">WE’RE HIRING! APPLY NOW</a>'
+	];
+
+ 		function rotatingMessageD(ed) {
+        var msgD = rotatingMessagesD.shift();
+        rotatingMessagesD.push(msgD);
+        $("div.jm-shipping-plcc-solo").html(msgD);
+
+				$('.jm-shipping-plcc-solo a').hover(function(ed){
+					//$('a.Shoes').css('background','green');
+						clearInterval(jmtimerD);
+				}, function(ed){
+					//$('a.Shoes').css('background','blue');
+						jmtimerD = setInterval( rotatingMessageD, 2300);
+				});
+
+		};
+
+		var jmtimerD = setInterval( rotatingMessageD, 2300);
+
+};
+//END GLOBAL HEADER ROTATING MESSAGE DENIED

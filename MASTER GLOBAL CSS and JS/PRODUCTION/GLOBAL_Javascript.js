@@ -1,16 +1,19 @@
-// JS MASTER - Multiple CTA Banners 08.29.17
-// PAST: Curalate PDP and Home Page - 08.10.17
+// JS PROD MASTER - Rotating Message & Baby essential GA fix - 09.12.17
+// PAST: HOME Browse Grid Ad Multiple CTA Banners - 09.05.17
 // jrios@c21stores.com
 
 
 // FIREING FUNCTIONS
+document.addEventListener( "DOMContentLoaded", denied_rotating_message, false );
+document.addEventListener( "DOMContentLoaded", adquisition_rotating_message, false );
+document.addEventListener( "DOMContentLoaded", retention_rotating_message, false );
 document.addEventListener( "DOMContentLoaded", uniqueClasses, false );
 document.addEventListener( "DOMContentLoaded", pdpVideos, false );
 document.addEventListener( "DOMContentLoaded", pdpTieredPrice, false );
 document.addEventListener( "DOMContentLoaded", pdpKnivesPDF, false );
 document.addEventListener( "DOMContentLoaded", addingClass_LP_width, false );
 document.addEventListener( "DOMContentLoaded", name_taggingCoremetrics, false );
-//document.addEventListener( "DOMContentLoaded", copy_blocks_cloning, false );
+document.addEventListener( "DOMContentLoaded", copy_blocks_cloning, false );
 document.addEventListener( "DOMContentLoaded", Curalate_PDP, false );
 document.addEventListener( "DOMContentLoaded", thumbnails_duplicat_fix, false );
 document.addEventListener( "DOMContentLoaded", zero_results_search, false );
@@ -513,12 +516,12 @@ $(window).load(function() {
 		(window.location.href.indexOf("7alcw") > -1)
 	);
 	var urlEkids = (
-		(window.location.href.indexOf("arrivals") > -1) ||
-		(window.location.href.indexOf("gifts") > -1) ||
-		(window.location.href.indexOf("essentials") > -1) ||
-		(window.location.href.indexOf("occasion") > -1) ||
-		(window.location.href.indexOf("disney") > -1) ||
-		(window.location.href.indexOf("toys") > -1)
+		//(window.location.href.indexOf("arrivals") > -1) ||
+		//(window.location.href.indexOf("gifts") > -1) ||
+		//(window.location.href.indexOf("essentials") > -1) ||
+		//(window.location.href.indexOf("occasion") > -1) ||
+		//(window.location.href.indexOf("disney") > -1) ||
+		(window.location.href.indexOf("baby-essentials") > -1)
 	);
 	var urlEmens = (
 		(window.location.href.indexOf("arrivals") > -1) ||
@@ -614,9 +617,8 @@ $(window).load(function() {
 	else if(jm_cat === "Kids"){
 		//	allSiteGA29();
 		//	allSiteGA14();
-			backToCoolGA();
 		if(!urlEkids){
-	//		kidsNewArrivalsGA();
+			babyEssentialsGA();
 		}
 	}
 	else if(jm_cat === "Contemporary"){
@@ -647,6 +649,12 @@ $(window).load(function() {
 		}
 
 	}
+	else if(jm_cat === "Private Access Shopping"){
+		console.log(jm_cat3);
+		if(jm_cat3 == "Clothing"){
+			console.log('uiiii');
+		}
+	}
 	else if(jm_cat === "Clearance"){
 // 		giftsCardsGA2();
 	}
@@ -665,18 +673,18 @@ $(window).load(function() {
 
 
 // KIDS NEW ARRIVALS AD BANNER
-function backToCoolGA() {
+function babyEssentialsGA() {
 
 	//GRID AD TYPE:  enter 1 or 2
 	var gaType = 1;
 	//POSITION
 	var pos = 14;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDcvMjgvMDkvNTQvMTcvNTYzLzAxXzA4V2VlazFfQnJvd3NlR3JpZEFkLmpwZyJdXQ/01_08Week1_BrowseGridAd.jpg?sha=dde8bc3bcf82247c";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDkvMDEvMDkvMDIvMzcvOTIxLzAxXzA5V2VlazJfQnJvd3NlR3JpZEFkLmpwZyJdXQ/01_09Week2_BrowseGridAd.jpg?sha=88945d04e2e80e5c";
 	//LINK TEXT
 	var textLink = "SHOP NOW";
 	//LINK URL
-	var urlLINK = "https://www.c21stores.com/categories/new-now-back-to-cool";
+	var urlLINK = "https://www.c21stores.com/categories/kids-baby-essentials";
 
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
@@ -1005,13 +1013,13 @@ function doubleHomeBGA() {
 	//GRID AD TYPE:  enter 1 or 2
 	var gaType = 2;
 	//POSITION
-	var pos = 30;
+	var pos = 29;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDcvMTcvMTQvNDgvMTcvMjMzLzAxXzA3V2VlazRfQkdBX1NtYWxsc3BhY2VzLmpwZyJdXQ/01_07Week4_BGA_Smallspaces.jpg?sha=887eced125c97155";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDkvMDUvMTYvMjQvMjQvMTc3LzAxXzA5V2VlazNfQkdBX05vcmRpYy5qcGciXV0/01_09Week3_BGA_Nordic.jpg?sha=0ef89982cd713452";
 	//LINK TEXT
 	var textLink = "SHOP NOW";
 	//LINK URL
-	var urlLINK = "https://www.c21stores.com/categories/new-now-small-spaces";
+	var urlLINK = "https://www.c21stores.com/categories/new-now-home-nordic-hygge";
 
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
@@ -1031,7 +1039,7 @@ function doubleHomeBGA() {
 		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
 		'<div class="content-block-content__container content-block-content__container--center">'+
 		'<div class="content-block-content__message content-block-content__message--dark">'+
-		'<p class="content-block-content__action content-block-content__action--button"><a name="BGA_Small_Spaces" class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'<p class="content-block-content__action content-block-content__action--button"><a name="BGA_Small_Spaces" class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
 // 		'<p class="content-block-content__action content-block-content__action--dark-text"><a target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
 		'</div>'+
 		'</div>'+
@@ -1816,9 +1824,11 @@ function thumbnails_duplicat_fix(){
 // VIP SHOPPING
 function vip_shopping(){
 	if (window.location.href.indexOf("vip") > -1){
+		//lp & category name
 		vip_cat_Name_array = $('.view h1').html().split('-');
 		vip_cat_Name_array.shift();
 		vip_new_name = [];
+
 		console.log('VIP CATEGORY NAME: ' + vip_cat_Name_array);
 		for (i = 0; i < vip_cat_Name_array.length; i++) {
 		    console.log("numero:" + i + "item: " + vip_cat_Name_array[i]);
@@ -1826,14 +1836,123 @@ function vip_shopping(){
 				vip_new_name.push(' ');
 		}
 
-		// vip_new_name = $.each(vip_cat_Name_array, function(i,val) {
-	  //   return (i + val);
-		// });
+		// URL value - actual and fake
+		vipURL = window.location.href.split('/');
+		lastVipURL = vipURL[vipURL.length - 1].split('-');
+		lastVipURL.shift();
+		new_lastVipURL = [];
+		new_lastVipURL.push('/private-access');
+		for (i = 0; i < lastVipURL.length; i++) {
+		    // console.log("numero:" + i + "item: " + lastVipURL[i]);
+				new_lastVipURL.push('-');
+				new_lastVipURL.push(vip_cat_Name_array[i]);
+		}
+
+		history.pushState(null, null, new_lastVipURL.join(""));
+
 		$('.view h1').html(vip_new_name).css("text-transform","capitalize")
 		$('.view h1').delay(5000).css("opacity","1");
+
+
 		console.log('VIP NEW NAME: ' + vip_new_name);
+
+		// URL name update
+		console.log("LAST URL ACTUAL : " + lastVipURL);
+		console.log("FAKE LAST URL ACTUAL : " + new_lastVipURL);
+		console.log("FAKE ACTUAL : " + vipURL);
+
+
 	}
+
 };
 // END VIP SHOPPING
+
+
+// GLOBAL HEADER ROTATING MESSAGE ADQUISITION
+function adquisition_rotating_message(){
+
+	var rotatingMessages = [
+		'<a href="https://www.c21stores.com/pages/shipping-information">FREE SHIPPING ON ORDERS $75+</a>',
+		'<a class="jm-button-hover" href="/pages/careers" target="_blank">WE’RE HIRING! APPLY NOW</a>'
+	];
+
+ 		function rotatingMessage(e) {
+        var msg = rotatingMessages.shift();
+        rotatingMessages.push(msg);
+        $("div.jm-shipping-plcc-acquisition").html(msg);
+
+				$('.jm-shipping-plcc-acquisition a').hover(function(e){
+					//$('a.Shoes').css('background','red');
+						clearInterval(jmtimer);
+				}, function(e){
+					//$('a.Shoes').css('background','blue');
+						jmtimer = setInterval( rotatingMessage, 2300);
+				});
+
+		};
+
+		var jmtimer = setInterval( rotatingMessage, 2300);
+
+};
+// END GLOBAL HEADER ROTATING MESSAGE ADQUISITION
+
+// GLOBAL HEADER ROTATING MESSAGE RETENTION
+function retention_rotating_message(er){
+
+	var rotatingMessagesR = [
+		'<a href="https://www.c21stores.com/pages/shipping-information">PREMIER CREDIT CARD: FREE SHIPPING ON ORDERS $50+ <br/>ELITE CREDIT CARD: FREE SHIPPING ON ALL ORDERS</a>',
+		'<a class="jm-button-hover" href="/pages/careers" target="_blank">WE’RE HIRING! APPLY NOW</a>'
+	];
+
+ 		function rotatingMessageR(er) {
+        var msgR = rotatingMessagesR.shift();
+        rotatingMessagesR.push(msgR);
+        $("div.jm-shipping-plcc-retention").html(msgR);
+
+				$('.jm-shipping-plcc-retention a').hover(function(er){
+					//$('a.Shoes').css('background','green');
+						clearInterval(jmtimerR);
+				}, function(er){
+					//$('a.Shoes').css('background','blue');
+						jmtimerR = setInterval( rotatingMessageR, 2300);
+				});
+
+		};
+
+		var jmtimerR = setInterval( rotatingMessageR, 2300);
+
+};
+//END GLOBAL HEADER ROTATING MESSAGE RETENTION
+
+
+// GLOBAL HEADER ROTATING MESSAGE DENIED
+function denied_rotating_message(ed){
+
+	var rotatingMessagesD = [
+		'<a href="https://www.c21stores.com/pages/shipping-information">FREE SHIPPING ON ORDERS $75+</a>',
+		'<a class="jm-button-hover" href="/pages/careers" target="_blank">WE’RE HIRING! APPLY NOW</a>'
+	];
+
+ 		function rotatingMessageD(ed) {
+        var msgD = rotatingMessagesD.shift();
+        rotatingMessagesD.push(msgD);
+        $("div.jm-shipping-plcc-solo").html(msgD);
+
+				$('.jm-shipping-plcc-solo a').hover(function(ed){
+					//$('a.Shoes').css('background','green');
+						clearInterval(jmtimerD);
+				}, function(ed){
+					//$('a.Shoes').css('background','blue');
+						jmtimerD = setInterval( rotatingMessageD, 2300);
+				});
+
+		};
+
+		var jmtimerD = setInterval( rotatingMessageD, 2300);
+
+};
+//END GLOBAL HEADER ROTATING MESSAGE DENIED
+
+
 
 console.log('all running');
