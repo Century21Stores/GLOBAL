@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA W36 A - 09.28.17
+// JS PROD MASTER - BGA W36 A and D - 09.28.17
 // PAST: Rotating Message, Multiple CTA Banners - 09.12.17
 // jrios@c21stores.com
 
@@ -678,7 +678,7 @@ function babyEssentialsGA() {
 	//GRID AD TYPE:  enter 1 or 2
 	var gaType = 1;
 	//POSITION
-	var pos = 14;
+	var pos = 30;
 	//IMAGE URL 370x552
 	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDkvMDEvMDkvMDIvMzcvOTIxLzAxXzA5V2VlazJfQnJvd3NlR3JpZEFkLmpwZyJdXQ/01_09Week2_BrowseGridAd.jpg?sha=88945d04e2e80e5c";
 	//LINK TEXT
@@ -724,7 +724,7 @@ function kidsColdWeatherGA() {
 	//GRID AD TYPE:  enter 1 or 2
 	var gaType = 1;
 	//POSITION
-	var pos = 14;
+	var pos = 30;
 	//IMAGE URL 370x552
 	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDkvMjgvMTUvMDEvMzcvOTYxLzAxXzEwV2VlazFfQnJvd3NlR3JpZEFkLmpwZyJdXQ/01_10Week1_BrowseGridAd.jpg?sha=799b7a0317e35a5d";
 	//LINK TEXT
