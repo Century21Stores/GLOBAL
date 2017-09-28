@@ -1,5 +1,5 @@
-// JS PROD MASTER - Rotating Message & Baby essential GA fix - 09.12.17
-// PAST: HOME Browse Grid Ad Multiple CTA Banners - 09.05.17
+// JS PROD MASTER - BGA W36 A - 09.28.17
+// PAST: Rotating Message, Multiple CTA Banners - 09.12.17
 // jrios@c21stores.com
 
 
@@ -520,8 +520,8 @@ $(window).load(function() {
 		//(window.location.href.indexOf("gifts") > -1) ||
 		//(window.location.href.indexOf("essentials") > -1) ||
 		//(window.location.href.indexOf("occasion") > -1) ||
-		//(window.location.href.indexOf("disney") > -1) ||
-		(window.location.href.indexOf("baby-essentials") > -1)
+		(window.location.href.indexOf("infant") > -1) ||
+		(window.location.href.indexOf("cold-weather") > -1)
 	);
 	var urlEmens = (
 		(window.location.href.indexOf("arrivals") > -1) ||
@@ -618,7 +618,7 @@ $(window).load(function() {
 		//	allSiteGA29();
 		//	allSiteGA14();
 		if(!urlEkids){
-			babyEssentialsGA();
+			kidsColdWeatherGA();
 		}
 	}
 	else if(jm_cat === "Contemporary"){
@@ -672,7 +672,7 @@ $(window).load(function() {
 
 
 
-// KIDS NEW ARRIVALS AD BANNER
+// KIDS BABY ESSENTIALS AD BANNER
 function babyEssentialsGA() {
 
 	//GRID AD TYPE:  enter 1 or 2
@@ -715,8 +715,53 @@ function babyEssentialsGA() {
 	AdClassAll_Single(realPos, gaType);
 
 }
-// END KIDS NEW ARRIVALS GRID AD BANNER
+// END KIDS BABY ESSENTIALS GRID AD BANNER
 
+
+// KIDS COLD WEATHER AD BANNER
+function kidsColdWeatherGA() {
+
+	//GRID AD TYPE:  enter 1 or 2
+	var gaType = 1;
+	//POSITION
+	var pos = 14;
+	//IMAGE URL 370x552
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDkvMjgvMTUvMDEvMzcvOTYxLzAxXzEwV2VlazFfQnJvd3NlR3JpZEFkLmpwZyJdXQ/01_10Week1_BrowseGridAd.jpg?sha=799b7a0317e35a5d";
+	//LINK TEXT
+	var textLink = "SHOP NOW";
+	//LINK URL
+	var urlLINK = "https://www.c21stores.com/categories/kids-cold-weather-shop";
+
+	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+	var FixHeights;
+	var realPos = pos-1;
+	window.onresize = function(e) {
+    	clearTimeout(FixHeights);
+    	FixHeights = setTimeout(function() {
+		// console.log('yay it works!');
+		AdClassAll_Single(realPos, gaType);
+    	}, 100);
+	};
+
+	$('.product-grid li:nth-of-type('+ realPos +')').after(
+		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+		'<div class="product-grid-content-block__image"></div>'+
+		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+		'<div class="content-block-content__container content-block-content__container--center">'+
+		'<div class="content-block-content__message content-block-content__message--light">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</li>'
+	);
+
+	AdClassAll_Single(realPos, gaType);
+
+}
+// END KIDS COLD WEATHER GRID AD BANNER
 
 
 // GET ACTIVE WOMEN GRID AD BANNER
