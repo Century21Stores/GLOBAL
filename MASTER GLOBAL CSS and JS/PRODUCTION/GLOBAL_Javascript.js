@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA W36 A - 09.28.17
+// JS PROD MASTER - BGA W36 C - 10.03.17
 // PAST: Rotating Message, Multiple CTA Banners - 09.12.17
 // jrios@c21stores.com
 
@@ -583,15 +583,15 @@ $(window).load(function() {
  	//console.log(urlEshoes);
 
 	if(jm_cat === "Tech"){
-//		allSiteGA29();
+		allSiteGA29();
 		//allSiteGA14();
 		if(!urlEtech){
 // 			WishiWankaGA();
 		}
 	}
 	else if(jm_cat === "New + Now"){
-		//	allSiteGA29();
-		//allSiteGA14();
+			allSiteGA29();
+			//allSiteGA14();
 	}
 	else if(jm_cat === "Beauty"){
 		if(!urlEbeauty){
@@ -600,25 +600,25 @@ $(window).load(function() {
 		}
 	}
 	else if(jm_cat === "Shoes"){
-		//	allSiteGA29();
-		//	allSiteGA14();
+			allSiteGA29();
+			//allSiteGA14();
 		if(!urlEshoes){
 			//newArrivalsShoesGA();
 		}
 	}
 	else if(jm_cat === "Handbags &amp; Accessories"){
 		//doubleHandbagsBGA();
-		//	allSiteGA29();
-		//	allSiteGA14();
+			allSiteGA29();
+			//allSiteGA14();
 		if(!urlEhandbags){
 	//		newArrivalsHandbagsGA();
 		}
 	}
 	else if(jm_cat === "Kids"){
-		//	allSiteGA29();
-		//	allSiteGA14();
+			allSiteGA29();
+			//allSiteGA14();
 		if(!urlEkids){
-			kidsColdWeatherGA();
+			//kidsColdWeatherGA();
 		}
 	}
 	else if(jm_cat === "Contemporary"){
@@ -627,23 +627,23 @@ $(window).load(function() {
 		}
 	}
 	else if(jm_cat === "Women"){
-		//	allSiteGA29();
-		//	allSiteGA14();
+			allSiteGA29();
+			//allSiteGA14();
 		if(!urlEmwomens){
 			//newArrivalsWomenGA();
 		}
 	}
 	else if(jm_cat === "Men"){
-		//	allSiteGA29();
-		//	allSiteGA14();
+			allSiteGA29();
+			//allSiteGA14();
 		if(!urlEmens){
 			//newArrivalsMenGA();
 		}
 	}
 	else if(jm_cat === "Home"){
 			doubleHomeBGA();
-		//	allSiteGA29();
-		//	allSiteGA14();
+			allSiteGA29();
+			//allSiteGA14();
 		if(!urlEspecial){
 			//WishiWankaGA();
 		}
@@ -863,7 +863,7 @@ function allSiteGA14() {
 	//POSITION
 	var pos = 14;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDgvMDgvMDkvNTcvMDkvOTg3LzAxXzA4V2VlazNfMnhfQkcuanBnIl1d/01_08Week3_2x_BG.jpg?sha=9cd3cbf0600e0b91";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDkvMjgvMTUvMzgvMzQvMTU1L0Jyb3dzZUdyaWRfQ29sdW1idXNEYXkuanBnIl1d/BrowseGrid_ColumbusDay.jpg?sha=02fb2acedddacf7a";
 	//LINK TEXT
 	var textLink = "INFO/EXCLUSIONS";
 	//LINK URL
@@ -888,7 +888,7 @@ function allSiteGA14() {
 		'<div class="content-block-content__container content-block-content__container--center">'+
 		'<div class="content-block-content__message content-block-content__message--dark">'+
 		// '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
-		'<p class="content-block-content__action content-block-content__action--dark-text"><a target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		// '<p class="content-block-content__action content-block-content__action--dark-text"><a target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
 		'</div>'+
 		'</div>'+
 		'</div>'+
@@ -910,7 +910,7 @@ function allSiteGA29() {
 	//POSITION
 	var pos = 29;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDQvMDUvMTAvMzIvNTUvMzM2LzA0V2VlazFfQkdBX05ld1JlZF8wMS5qcGciXV0/04Week1_BGA_NewRed_01.jpg?sha=6dd0d96bafa3f0fe";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTAvMDMvMTQvMTMvNDAvOTI2LzAxXzExV2VlazRfQkdBZF9OZXdfUmVkdWN0aW9ucy5qcGciXV0/01_11Week4_BGAd_New_Reductions.jpg?sha=af187fa1753b2350";
 	//LINK TEXT
 	var textLink = "SHOP NOW";
 	//LINK URL
@@ -934,7 +934,7 @@ function allSiteGA29() {
 		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
 		'<div class="content-block-content__container content-block-content__container--center">'+
 		'<div class="content-block-content__message content-block-content__message--dark">'+
-		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
 		'</div>'+
 		'</div>'+
 		'</div>'+
