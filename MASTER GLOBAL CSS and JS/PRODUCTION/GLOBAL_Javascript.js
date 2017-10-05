@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA W36 D - 10.03.17
+// JS PROD MASTER - BGA W37B - 10.05.17
 // PAST: Rotating Message, Multiple CTA Banners - 09.12.17
 // jrios@c21stores.com
 
@@ -584,14 +584,14 @@ $(window).load(function() {
 
 	if(jm_cat === "Tech"){
 		allSiteGA29();
-		allSiteGA14();
+		//allSiteGA14();
 		if(!urlEtech){
 // 			WishiWankaGA();
 		}
 	}
 	else if(jm_cat === "New + Now"){
 			allSiteGA29();
-			allSiteGA14();
+			//allSiteGA14();
 	}
 	else if(jm_cat === "Beauty"){
 		if(!urlEbeauty){
@@ -602,7 +602,7 @@ $(window).load(function() {
 	}
 	else if(jm_cat === "Shoes"){
 			allSiteGA29();
-			allSiteGA14();
+			//allSiteGA14();
 		if(!urlEshoes){
 			//newArrivalsShoesGA();
 		}
@@ -610,14 +610,14 @@ $(window).load(function() {
 	else if(jm_cat === "Handbags &amp; Accessories"){
 		//doubleHandbagsBGA();
 			allSiteGA29();
-			allSiteGA14();
+			//allSiteGA14();
 		if(!urlEhandbags){
 	//		newArrivalsHandbagsGA();
 		}
 	}
 	else if(jm_cat === "Kids"){
 			allSiteGA29();
-			allSiteGA14();
+			//allSiteGA14();
 		if(!urlEkids){
 			//kidsColdWeatherGA();
 		}
@@ -629,22 +629,22 @@ $(window).load(function() {
 	}
 	else if(jm_cat === "Women"){
 			allSiteGA29();
-			allSiteGA14();
+			//allSiteGA14();
 		if(!urlEmwomens){
 			//newArrivalsWomenGA();
 		}
 	}
 	else if(jm_cat === "Men"){
 			allSiteGA29();
-			allSiteGA14();
+			//allSiteGA14();
 		if(!urlEmens){
 			//newArrivalsMenGA();
 		}
 	}
 	else if(jm_cat === "Home"){
-			//doubleHomeBGA();
+			doubleHomeBGA();
 			allSiteGA29();
-			allSiteGA14();
+			//allSiteGA14();
 		if(!urlEspecial){
 			//WishiWankaGA();
 		}
@@ -1059,7 +1059,7 @@ function doubleHomeBGA() {
 	//GRID AD TYPE:  enter 1 or 2
 	var gaType = 2;
 	//POSITION
-	var pos = 29;
+	var pos = 14;
 	//IMAGE URL 370x552
 	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDkvMDUvMTYvMjQvMjQvMTc3LzAxXzA5V2VlazNfQkdBX05vcmRpYy5qcGciXV0/01_09Week3_BGA_Nordic.jpg?sha=0ef89982cd713452";
 	//LINK TEXT
