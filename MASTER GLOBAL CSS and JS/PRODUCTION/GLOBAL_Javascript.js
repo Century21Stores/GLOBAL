@@ -619,7 +619,7 @@ $(window).load(function() {
 			allSiteGA29();
 			//allSiteGA14();
 		if(!urlEkids){
-			//kidsColdWeatherGA();
+			kidsColdWeatherGA();
 		}
 	}
 	else if(jm_cat === "Contemporary"){
