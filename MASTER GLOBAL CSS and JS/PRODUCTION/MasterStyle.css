@@ -418,6 +418,7 @@ i{
 /* ADS BANNERS */
 .product-grid__cell--1 .product-grid-content-block{
     background-position: 50% 50%;
+    background-size: contain;
 }
 .product-grid-content-block{
     background-position: 0 0;
