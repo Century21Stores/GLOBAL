@@ -1,5 +1,5 @@
-/* PROD CSS - ROTATING GLOBAL BANNER  09.12.17 */
-/* PAST:  FANREEL CURALATE HP - gallery - PDP & 5 CTAs FIX  08.29.17*/
+/* PROD CSS - BROWSE BANNERS  10.12.17 */
+/* PAST:  ROTATING GLOBAL BANNER  09.12.17 */
 /* CSS MASTER STYLE JMRV  */
 @import "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTUvMDkvMTgvMDgvNTYvNTEvNjg4L01hc3RlclN0eWxlM19MYW5kaW5nUGFnZTA3MTUuY3NzIl1d/MasterStyle3_LandingPage0715.css?sha=5a57837dcb4befbf";
 @import "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDEvMTMvMTIvNDQvMTAvODUzL01hc3RlclN0eWxlUmFpbHN2MS5jc3MiXV0/MasterStyleRailsv1.css?sha=f040002bd75aca28";
@@ -17,7 +17,9 @@ display:none !important;
 .page-content--browse .banner-content-block > a{
 	display: none;
 }
-
+.banner-content-block{
+  display:none;
+}
 
 /* ... CURALATE ... */
 .page-content--product{
