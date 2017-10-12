@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA W37B - 10.05.17
+// JS PROD MASTER - Banners when Blank - BGA W37D - 11.12.17
 // PAST: Rotating Message, Multiple CTA Banners - 09.12.17
 // jrios@c21stores.com
 
@@ -18,8 +18,7 @@ document.addEventListener( "DOMContentLoaded", Curalate_PDP, false );
 document.addEventListener( "DOMContentLoaded", thumbnails_duplicat_fix, false );
 document.addEventListener( "DOMContentLoaded", zero_results_search, false );
 document.addEventListener( "DOMContentLoaded", vip_shopping, false );
-
-
+document.addEventListener( "DOMContentLoaded", show_banner_when_not_blank, false );
 
 
 // FIREING FUNCTIONS ON QUICK VIEW
@@ -584,14 +583,14 @@ $(window).load(function() {
 
 	if(jm_cat === "Tech"){
 		allSiteGA29();
-		//allSiteGA14();
+		allSiteGA14();
 		if(!urlEtech){
 // 			WishiWankaGA();
 		}
 	}
 	else if(jm_cat === "New + Now"){
 			allSiteGA29();
-			//allSiteGA14();
+			allSiteGA14();
 	}
 	else if(jm_cat === "Beauty"){
 		if(!urlEbeauty){
@@ -602,7 +601,7 @@ $(window).load(function() {
 	}
 	else if(jm_cat === "Shoes"){
 			allSiteGA29();
-			//allSiteGA14();
+			allSiteGA14();
 		if(!urlEshoes){
 			//newArrivalsShoesGA();
 		}
@@ -610,16 +609,16 @@ $(window).load(function() {
 	else if(jm_cat === "Handbags &amp; Accessories"){
 		//doubleHandbagsBGA();
 			allSiteGA29();
-			//allSiteGA14();
+			allSiteGA14();
 		if(!urlEhandbags){
 	//		newArrivalsHandbagsGA();
 		}
 	}
 	else if(jm_cat === "Kids"){
 			allSiteGA29();
-			//allSiteGA14();
+			allSiteGA14();
 		if(!urlEkids){
-			kidsColdWeatherGA();
+			//kidsColdWeatherGA();
 		}
 	}
 	else if(jm_cat === "Contemporary"){
@@ -629,22 +628,22 @@ $(window).load(function() {
 	}
 	else if(jm_cat === "Women"){
 			allSiteGA29();
-			//allSiteGA14();
+			allSiteGA14();
 		if(!urlEmwomens){
 			//newArrivalsWomenGA();
 		}
 	}
 	else if(jm_cat === "Men"){
 			allSiteGA29();
-			//allSiteGA14();
+			allSiteGA14();
 		if(!urlEmens){
 			//newArrivalsMenGA();
 		}
 	}
 	else if(jm_cat === "Home"){
-			doubleHomeBGA();
+			//doubleHomeBGA();
 			allSiteGA29();
-			//allSiteGA14();
+			allSiteGA14();
 		if(!urlEspecial){
 			//WishiWankaGA();
 		}
@@ -864,7 +863,8 @@ function allSiteGA14() {
 	//POSITION
 	var pos = 14;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDkvMjgvMTUvMzgvMzQvMTU1L0Jyb3dzZUdyaWRfQ29sdW1idXNEYXkuanBnIl1d/BrowseGrid_ColumbusDay.jpg?sha=02fb2acedddacf7a";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTAvMTEvMTAvMDQvMjkvNjM3L0dBdGhpcy5wbmciXV0/GAthis.png?sha=38f618cbe847fc22";
+
 	//LINK TEXT
 	var textLink = "INFO/EXCLUSIONS";
 	//LINK URL
@@ -888,8 +888,8 @@ function allSiteGA14() {
 		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
 		'<div class="content-block-content__container content-block-content__container--center">'+
 		'<div class="content-block-content__message content-block-content__message--dark">'+
-		// '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
-		// '<p class="content-block-content__action content-block-content__action--dark-text"><a target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+	 	'<p class="content-block-content__action content-block-content__action--dark-text"><a target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
 		'</div>'+
 		'</div>'+
 		'</div>'+
@@ -1999,6 +1999,14 @@ function denied_rotating_message(ed){
 };
 //END GLOBAL HEADER ROTATING MESSAGE DENIED
 
-
+// GWP Banners
+function show_banner_when_not_blank(){
+	var Banner_pankeke = $('.banner-content-block__large-image-container').css('background-image');
+	if (Banner_pankeke.indexOf("GWPblank") === -1){
+		console.log(Banner_pankeke.indexOf("GWPblank") >= 0);
+		$('.banner-content-block').show(600);
+	};
+};
+// END GWP Banners
 
 console.log('all running');
