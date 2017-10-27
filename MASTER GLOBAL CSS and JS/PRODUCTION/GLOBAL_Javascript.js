@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA W38A - Banners when Blank - 11.12.17
+// JS PROD MASTER - FOOTER COPY SEO - Banners when Blank FIX - 10.25.17
 // PAST: Rotating Message, Multiple CTA Banners - 09.12.17
 // jrios@c21stores.com
 
@@ -19,6 +19,7 @@ document.addEventListener( "DOMContentLoaded", thumbnails_duplicat_fix, false );
 document.addEventListener( "DOMContentLoaded", zero_results_search, false );
 document.addEventListener( "DOMContentLoaded", vip_shopping, false );
 document.addEventListener( "DOMContentLoaded", show_banner_when_not_blank, false );
+document.addEventListener( "DOMContentLoaded", seoCopyLineFooter, false );
 
 
 // FIREING FUNCTIONS ON QUICK VIEW
@@ -594,7 +595,7 @@ $(window).load(function() {
 	}
 	else if(jm_cat === "Beauty"){
 		if(!urlEbeauty){
-			freeShippingBeautyGA();
+			//freeShippingBeautyGA();
 			allSiteGA29();
 // 			WishiWankaGA();
 		}
@@ -2004,9 +2005,17 @@ function show_banner_when_not_blank(){
 	var Banner_pankeke = $('.banner-content-block__large-image-container').css('background-image');
 	if (Banner_pankeke.indexOf("GWPblank") === -1){
 		console.log(Banner_pankeke.indexOf("GWPblank") >= 0);
-		$('.banner-content-block').show(600);
+		$('.banner-content-block').show(100);
 	};
 };
 // END GWP Banners
+
+// SEO COPY AT FOOTER - NYC BEST SECRET
+function seoCopyLineFooter(){
+
+	$('.jm_copy_block_clone').before("<h3 style='text-align: center;margin:0;'>NEW YORK'S BEST KEPT SECRET</h3>");
+
+}
+// END SEO COPY AT FOOTER - NYC BEST SECRET
 
 console.log('all running');
