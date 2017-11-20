@@ -1,0 +1,81 @@
+<!-- GWP BANNERS WOMEN - W43A-->
+
+<script>
+
+
+// W25A DOUBLE GWP
+//GWPwomen_image_banner =  'https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDcvMjUvMTEvNTQvNTMvNDUwLzA4V2VlazFfQkJfV29tZW5zQmVhdXR5R1dQLmpwZyJdXQ/08Week1_BB_WomensBeautyGWP.jpg?sha=9ad1bb799d46f45e';
+
+//GWPwomen_header = 'FREE GIFTS!';
+
+//GWPwomen_the_gift1 =  'RECEIVE A <b>5-PIECE BRUSH SET</b>';
+//GWPwomen_the_spend1 =  'WITH ANY $50+ BEAUTY PURCHASE.*';
+//GWPwomen_end_date1 = '';
+
+
+//GWPwomen_the_gift2 =  'RECEIVE A <b>5-PIECE BRUSH SET & LIP GLOSS PALETTE</b>';
+//GWPwomen_the_spend2 =  'WITH ANY $75+ BEAUTY PURCHASE.*';
+//GWPwomen_end_date2 = '*Online only. Now through 08/13. While supplies last.';
+
+// W35A
+GWPwomen_image_banner =  'https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTEvMTQvMTcvMDQvMzcvMTMxLzExV2VlazRfQkJfV29tZW5zQmVhdXR5X0dXUC5qcGciXV0/11Week4_BB_WomensBeauty_GWP.jpg?sha=21b9c885ead8797a';
+
+GWPwomen_header = 'FREE GIFTS!';
+
+GWPwomen_the_gift1 =  'RECEIVE A <b>5-PIECE BRUSH SET</b>';
+GWPwomen_the_spend1 =  'WITH ANY $50+ BEAUTY PURCHASE.*';
+GWPwomen_end_date1 = '';
+
+
+GWPwomen_the_gift2 =  'RECEIVE A <b>5-PIECE BRUSH SET & KEEP CALM GORGEOUS BAG</b>';
+GWPwomen_the_spend2 =  'WITH ANY $75+ BEAUTY PURCHASE.*';
+GWPwomen_end_date2 = '*Online only. Now through 11/26. While supplies last.';
+
+// .............. CODE THAT MAKES IT HAPPEN .....................
+
+if((window.location.href.indexOf("beauty") > -1) && (window.location.href.indexOf("women") > -1) || (window.location.href.indexOf("beauty") > -1) && (window.location.href.indexOf("makeup") > -1) || (window.location.href.indexOf("beauty") > -1) && (window.location.href.indexOf("skincare") > -1) ) {
+  function GWPbannersMassive_Women(){
+    var urlfor_womenGWP = (
+      //(window.location.href.indexOf("new-arrivals") > -1) ||
+      (window.location.href.indexOf("gifts-beauty-fragrance") > -1) ||
+      (window.location.href.indexOf("beauty-bvlgari") > -1) ||
+      (window.location.href.indexOf("beauty-elf") > -1) ||
+      (window.location.href.indexOf("beauty-gift-sets-men") > -1) ||
+      (window.location.href.indexOf("beauty-bonus") > -1) ||
+      (window.location.href.indexOf("beauty-hugo-boss") > -1) ||
+      (window.location.href.indexOf("beauty-opi") > -1) ||
+      (window.location.href.indexOf("beauty-calvin-klein") > -1)||
+//       (window.location.href.indexOf("beauty-makeup") > -1) ||
+      (window.location.href.indexOf("beauty-mens-fragrances-new-arrivals") > -1) ||
+      (window.location.href.indexOf("beauty-mens-fragrances-best-sellers") > -1) ||
+      (window.location.href.indexOf("beauty-mens-fragrances-gift-sets") > -1) ||
+      (window.location.href.indexOf("beauty-mens-fragrances") > -1)||
+      (window.location.href.indexOf("beauty-3-2499") > -1)
+//       (window.location.href == "https://www.c21stores.com/categories/beauty-womens-fragrances")
+    );
+      if(!urlfor_womenGWP){
+        console.log('GWP banner womens');
+        $('.banner-content-block__large-image-container').css('background-image','url('+ GWPwomen_image_banner +')');
+
+        $('.jm-GWP-beauty-Women').find('header > span').html(GWPwomen_header);
+
+        $('.jm-GWP-beauty-Women').find('h3.jm-first > span').html(GWPwomen_the_gift1 + '<br/>' + GWPwomen_the_spend1 + '<br/>');
+        $('.jm-GWP-beauty-Women').find('p.jm-first > span').html(GWPwomen_end_date1);
+
+        $('.jm-GWP-beauty-Women').find('h3.jm-second > span').html(GWPwomen_the_gift2 + '<br/>' + GWPwomen_the_spend2);
+        $('.jm-GWP-beauty-Women').find('p.jm-second > span').html(GWPwomen_end_date2);
+
+
+      	$('.jm-GWP-beauty-Women').children().each(function () {
+			       //console.log('hijos: '+ this);
+			    $(this).find('span:empty').parent().hide(); // "this" is the current element in the loop
+        });
+
+      };
+
+  }GWPbannersMassive_Women();
+
+}
+
+
+</script>
