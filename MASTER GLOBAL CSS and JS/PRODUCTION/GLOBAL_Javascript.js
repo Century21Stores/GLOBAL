@@ -1,5 +1,5 @@
-// JS PROD MASTER - FOOTER COPY SEO - Banners when Blank FIX - 10.25.17
-// PAST: Rotating Message, Multiple CTA Banners - 09.12.17
+// JS PROD MASTER - PROMO HELP MESSAGE - BGA W43A - - 11.23.17
+// PAST:  Banners when Blank FIX, Rotating Message, Multiple CTA Banners - 09.12.17
 // jrios@c21stores.com
 
 
@@ -20,6 +20,7 @@ document.addEventListener( "DOMContentLoaded", zero_results_search, false );
 document.addEventListener( "DOMContentLoaded", vip_shopping, false );
 document.addEventListener( "DOMContentLoaded", show_banner_when_not_blank, false );
 document.addEventListener( "DOMContentLoaded", seoCopyLineFooter, false );
+document.addEventListener( "DOMContentLoaded", promo_Code_custom, false );
 
 
 // FIREING FUNCTIONS ON QUICK VIEW
@@ -547,9 +548,7 @@ $(window).load(function() {
 		(window.location.href.indexOf("7atnw") > -1)
 	);
 	var urlEhome = (
-		(window.location.href.indexOf("essentials") > -1) ||
-		(window.location.href.indexOf("exotic") > -1) ||
-		(window.location.href.indexOf("gourmet") > -1) ||
+		(window.location.href.indexOf("home-seasonal-settings") > -1) ||
 		(window.location.href.indexOf("7aibh") > -1)
 	);
 	var urlEbeauty = (
@@ -583,43 +582,44 @@ $(window).load(function() {
  	//console.log(urlEshoes);
 
 	if(jm_cat === "Tech"){
-		allSiteGA29();
-		//allSiteGA14();
+		//allSiteGA29();
+		allSiteGA14();
 		if(!urlEtech){
 // 			WishiWankaGA();
 		}
 	}
 	else if(jm_cat === "New + Now"){
-			allSiteGA29();
-			//allSiteGA14();
+			//allSiteGA29();
+			allSiteGA14();
 	}
 	else if(jm_cat === "Beauty"){
 		if(!urlEbeauty){
 			//freeShippingBeautyGA();
-			allSiteGA29();
+			allSiteGA14();
+			//allSiteGA29();
 // 			WishiWankaGA();
 		}
 	}
 	else if(jm_cat === "Shoes"){
-			allSiteGA29();
-			//allSiteGA14();
+			//allSiteGA29();
+			allSiteGA14();
 		if(!urlEshoes){
 			//newArrivalsShoesGA();
 		}
 	}
 	else if(jm_cat === "Handbags &amp; Accessories"){
 		//doubleHandbagsBGA();
-			allSiteGA29();
-			//allSiteGA14();
+			//allSiteGA29();
+			allSiteGA14();
 		if(!urlEhandbags){
 	//		newArrivalsHandbagsGA();
 		}
 	}
 	else if(jm_cat === "Kids"){
-			allSiteGA29();
-			//allSiteGA14();
+			//allSiteGA29();
+			allSiteGA14();
 		if(!urlEkids){
-			kidsColdWeatherGA();
+			//kidsColdWeatherGA();
 		}
 	}
 	else if(jm_cat === "Contemporary"){
@@ -628,24 +628,24 @@ $(window).load(function() {
 		}
 	}
 	else if(jm_cat === "Women"){
-			allSiteGA29();
-			//allSiteGA14();
+			//allSiteGA29();
+			allSiteGA14();
 		if(!urlEmwomens){
 			//newArrivalsWomenGA();
 		}
 	}
 	else if(jm_cat === "Men"){
-			allSiteGA29();
-			//allSiteGA14();
+			//allSiteGA29();
+			allSiteGA14();
 		if(!urlEmens){
 			//newArrivalsMenGA();
 		}
 	}
 	else if(jm_cat === "Home"){
+			//allSiteGA29();
+			allSiteGA14();
+		if(!urlEhome){
 			doubleHomeBGA();
-			allSiteGA29();
-			//allSiteGA14();
-		if(!urlEspecial){
 			//WishiWankaGA();
 		}
 
@@ -864,12 +864,12 @@ function allSiteGA14() {
 	//POSITION
 	var pos = 14;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTAvMTEvMTAvMDQvMjkvNjM3L0dBdGhpcy5wbmciXV0/GAthis.png?sha=38f618cbe847fc22";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTEvMTYvMTYvMjMvNTYvMTIzLzAwMV8xMVdlZWs0X0JHLmpwZyJdXQ/001_11Week4_BG.jpg?sha=4c7b58d8fdbfdb1d";
 
 	//LINK TEXT
-	var textLink = "INFO/EXCLUSIONS";
+	var textLink = "SHOP NOW";
 	//LINK URL
-	var urlLINK = "https://www.c21stores.com/pages/double-points-info-exclusions";
+	var urlLINK = "https://www.c21stores.com/pages/cyber-specials";
 
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
@@ -889,8 +889,10 @@ function allSiteGA14() {
 		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
 		'<div class="content-block-content__container content-block-content__container--center">'+
 		'<div class="content-block-content__message content-block-content__message--dark">'+
-		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
-	 	'<p class="content-block-content__action content-block-content__action--dark-text"><a target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		//'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+	 	//'<p class="content-block-content__action content-block-content__action--dark-text"><a target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'<div class="content-block-content__message content-block-content__message--dark">'+
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
 		'</div>'+
 		'</div>'+
 		'</div>'+
@@ -1054,19 +1056,19 @@ function retentionGA() {
 // END RETENTION GRID AD BANNER
 
 
-// HOME BGA 2BLE
+// HOME BGA 2BLE SEASONAL SETTINGS
 function doubleHomeBGA() {
 
 	//GRID AD TYPE:  enter 1 or 2
 	var gaType = 2;
 	//POSITION
-	var pos = 14;
+	var pos = 29;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDkvMDUvMTYvMjQvMjQvMTc3LzAxXzA5V2VlazNfQkdBX05vcmRpYy5qcGciXV0/01_09Week3_BGA_Nordic.jpg?sha=0ef89982cd713452";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTAvMjcvMTQvMjkvNDQvNTQ1LzAxXzExV2VlazFfQkdBX1NlYXNvbmFsX1NldHRpbmcuanBnIl1d/01_11Week1_BGA_Seasonal_Setting.jpg?sha=4c2e6e38376d0a56";
 	//LINK TEXT
 	var textLink = "SHOP NOW";
 	//LINK URL
-	var urlLINK = "https://www.c21stores.com/categories/new-now-home-nordic-hygge";
+	var urlLINK = "https://www.c21stores.com/categories/home-seasonal-settings";
 
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
@@ -1098,7 +1100,7 @@ function doubleHomeBGA() {
 	AdClassAll_Single(realPos, gaType);
 
 }
-// END Handbags BGA 2BLE
+//END HOME BGA 2BLE SEASONAL SETTINGS
 
 // HOME BGA 2BLE
 function doubleHandbagsBGA() {
@@ -1302,7 +1304,7 @@ function bannersMassive(){
 	else{
 		return false;
 	}
-}bannersMassive();
+}//bannersMassive();
 
 
 
@@ -1417,7 +1419,7 @@ $('.hero-content-block, .banner-content-block').each(function(index){
 
 	// IF THERE IS MULTIPLE CTA
 	if (hero_number_CTA > 1){
-			$(this).find('.content-block-content__action').fadeIn(600);
+			$(this).find('.content-block-content__action').fadeIn(100);
 			console.log("multi multi");
 			jm_hero_FirstCTA = $(this).find('.content-block-content__action a').eq(0);
 			jm_hero_FirstCTA_url = jm_hero_FirstCTA.attr('href');
@@ -1530,7 +1532,7 @@ $('.hero-content-block, .banner-content-block').each(function(index){
 
 	// ELSE DISPLAY ALL CTAs
 	else{
-		$(this).find('.content-block-content__action').fadeIn(600);
+		$(this).find('.content-block-content__action').fadeIn(100);
 	};
 
 	$('.rich-text-content-block p:last-child').addClass('jm_X_Hero_lightBox');
@@ -1545,7 +1547,7 @@ $('.hero-content-block, .banner-content-block').each(function(index){
 
 function pdpTieredPrice(){
 
-	if(window.location.href.indexOf("products") > -1){
+	if((window.location.href.indexOf("products") > -1) && ($('.product-details__price-row') > -1)){
 
 		var tieredPriceChildren = document.getElementsByClassName("product-details__price-row")[0].childElementCount;;
 		if (tieredPriceChildren == 2){
@@ -2002,11 +2004,13 @@ function denied_rotating_message(ed){
 
 // GWP Banners
 function show_banner_when_not_blank(){
-	var Banner_pankeke = $('.banner-content-block__large-image-container').css('background-image');
-	if (Banner_pankeke.indexOf("GWPblank") === -1){
-		console.log(Banner_pankeke.indexOf("GWPblank") >= 0);
-		$('.banner-content-block').show(100);
-	};
+	if (window.location.href.indexOf("categories") > -1){
+		var Banner_pankeke = $('.banner-content-block__large-image-container').css('background-image');
+		if (Banner_pankeke.indexOf("GWPblank") === -1){
+			console.log(Banner_pankeke.indexOf("GWPblank") >= 0);
+			$('.banner-content-block').show(100);
+		};
+	}
 };
 // END GWP Banners
 
@@ -2017,5 +2021,20 @@ function seoCopyLineFooter(){
 
 }
 // END SEO COPY AT FOOTER - NYC BEST SECRET
+
+// PROMO CODE HELP MESSAGE
+function promo_Code_custom(){
+	$("div.cart-prices__label").each(function(){
+		if ($(this).text().indexOf('{') > -1){
+			var s = $(this).text();
+			s = s.substring(0, s.indexOf('{'));
+			$(this).html(s);
+			$(this).parent().css('display','table');
+			console.log($(this).text());
+			console.log(s);
+		}
+	});
+}
+// END PROMO CODE HELP MESSAGE
 
 console.log('all running');
