@@ -1,0 +1,65 @@
+<!-- GWP BANNERS MEN W43A-->
+
+<script>
+
+
+// W25A SINGLE GWP
+//GWPimage_banner =  'https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDkvMjIvMTQvMjIvMzQvNDMzLzA5V2VlazVfQkJfTWVuc0JlYXV0eV9HV1AuanBnIl1d/09Week5_BB_MensBeauty_GWP.jpg?sha=e68ee83e4ca192c1';
+
+//GWPmen_header = 'FREE GIFTS!';
+
+//GWPmen_the_gift1 =  'RECEIVE A <b>MILAGU 4-PIECE ESSENTIAL KIT</b>';
+//GWPmen_the_spend1 =  'WITH ANY $50+ BEAUTY PURCHASE.*';
+//GWPmen_end_date1 = '';
+
+
+//GWPmen_the_gift2 =  'RECEIVE A <b>MILAGU 4-PIECE ESSENTIAL KIT & EAU DE TOILETTE SPRAY</b>';
+//GWPmen_the_spend2 =  'WITH ANY $75+ BEAUTY PURCHASE.*';
+//GWPmen_end_date2 = '*Online only. Now through 08/13. While supplies last.';
+
+// W41A
+GWPimage_banner =  'https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTEvMDkvMTYvMjAvMzAvNzI5LzExV2VlazJfQkJfTWVuc0JlYXV0eV9HV1AuanBnIl1d/11Week2_BB_MensBeauty_GWP.jpg?sha=7663778204aca6ba';
+
+GWPmen_header = 'FREE GIFTS!';
+
+GWPmen_the_gift1 =  'RECEIVE A <b> 4-PIECE ESSENTIAL KIT</b>';
+GWPmen_the_spend1 =  'WITH ANY $50+ MEN"S BEAUTY PURCHASE.*';
+GWPmen_end_date1 = '*Online only. Now through 11/27. While supplies last.';
+
+
+// .............. CODE THAT MAKES IT HAPPEN .....................
+
+
+if((window.location.href.indexOf("beauty-mens") > -1) || ((window.location.href.indexOf("beauty-gift-sets-men") > -1))) {
+  function GWPbannersMassive_Men(){
+    var urlfor_menGWP = (
+      (window.location.href.indexOf("exception") > -1)
+//      (window.location.href == "https://www.c21stores.com/categories/beauty-mens-fragrances")||
+
+    );
+      if(!urlfor_menGWP){
+        console.log('GWP banner mens');
+        $('.banner-content-block__large-image-container').css('background-image','url('+ GWPimage_banner +')');
+
+        $('.jm-GWP-beauty-men').find('header > span').html(GWPmen_header);
+
+        $('.jm-GWP-beauty-men').find('h3.jm-first > span').html(GWPmen_the_gift1 + '<br/>' + GWPmen_the_spend1 + '<br/>');
+        $('.jm-GWP-beauty-men').find('p.jm-first > span').html(GWPmen_end_date1);
+
+        $('.jm-GWP-beauty-men').find('h3.jm-second > span').html(GWPmen_the_gift2 + '<br/>' + GWPmen_the_spend2);
+        $('.jm-GWP-beauty-men').find('p.jm-second > span').html(GWPmen_end_date2);
+
+
+      	$('.jm-GWP-beauty-men').children().each(function () {
+			       //console.log('hijos: '+ this);
+			    $(this).find('span:empty').parent().hide(); // "this" is the current element in the loop
+        });
+
+      };
+
+  }GWPbannersMassive_Men();
+
+}
+
+
+</script>
