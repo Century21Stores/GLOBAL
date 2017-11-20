@@ -1,4 +1,4 @@
-<!-- GWP BANNERS WOMEN - W43A-->
+<!-- GWP BANNERS WOMEN W44B 11.20.17-->
 
 <script>
 
@@ -17,19 +17,19 @@
 //GWPwomen_the_spend2 =  'WITH ANY $75+ BEAUTY PURCHASE.*';
 //GWPwomen_end_date2 = '*Online only. Now through 08/13. While supplies last.';
 
-// W35A
-GWPwomen_image_banner =  'https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTEvMTQvMTcvMDQvMzcvMTMxLzExV2VlazRfQkJfV29tZW5zQmVhdXR5X0dXUC5qcGciXV0/11Week4_BB_WomensBeauty_GWP.jpg?sha=21b9c885ead8797a';
+// W44B
+GWPwomen_image_banner =  'https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTEvMjAvMTQvNTIvMzEvODg1LzAwXzEyV2VlazFfQkJfV29tZW5zQmVhdXR5X0dXUC5qcGciXV0/00_12Week1_BB_WomensBeauty_GWP.jpg?sha=ed5c95410cdb44bd';
 
 GWPwomen_header = 'FREE GIFTS!';
 
-GWPwomen_the_gift1 =  'RECEIVE A <b>5-PIECE BRUSH SET</b>';
+GWPwomen_the_gift1 =  'RECEIVE A <b>4-PIECE HAND CREAM SET</b>';
 GWPwomen_the_spend1 =  'WITH ANY $50+ BEAUTY PURCHASE.*';
 GWPwomen_end_date1 = '';
 
 
-GWPwomen_the_gift2 =  'RECEIVE A <b>5-PIECE BRUSH SET & KEEP CALM GORGEOUS BAG</b>';
+GWPwomen_the_gift2 =  'RECEIVE A <b>4-PIECE HAND CREAM SET & UMBRELLA</b>';
 GWPwomen_the_spend2 =  'WITH ANY $75+ BEAUTY PURCHASE.*';
-GWPwomen_end_date2 = '*Online only. Now through 11/26. While supplies last.';
+GWPwomen_end_date2 = '*Online only. Now through 12/3. While supplies last.';
 
 // .............. CODE THAT MAKES IT HAPPEN .....................
 
