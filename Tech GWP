@@ -1,0 +1,75 @@
+  <!-- GWP BANNERS TECH 11.20.17 - Juan-->
+
+<script>
+
+
+// W25A
+// GWPtech_image_banner =  'https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDcvMjUvMTQvMTkvMjgvOTk1LzA4V2VlazFfQkJfVGVjaF9HV1AuanBnIl0sWyJwIiwib3B0aW0iXV0/08Week1_BB_Tech_GWP.jpg?sha=d1c9d8495f064011';
+// 
+// GWPtech_header = 'FREE GIFTS!';
+// 
+// GWPtech_the_gift1 =  'RECEIVE A <b>BLACK & WHITE SMARTPHONE POWER BOOST</b>';
+// GWPtech_the_spend1 =  'WITH ANY $50+ BEAUTY PURCHASE.*';
+// GWPtech_end_date1 = '*Online only. Now through 08/13. While supplies last.';
+
+
+
+// W43A
+GWPtech_image_banner =  'https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTEvMjAvMTMvNTIvMjEvNzM1LzExV2VlazRfQkJfVGVjaF9HV1AuanBnIl1d/11Week4_BB_Tech_GWP.jpg?sha=f09eb5b346d7cdf9';
+
+GWPtech_header = 'FREE GIFTS!';
+
+GWPtech_the_gift1 =  'RECEIVE A <b>PORTABLE POWER BANK</b>';
+GWPtech_the_spend1 =  'WITH ANY $50+ TECH PURCHASE.*';
+GWPtech_end_date1 = '*Online only. Now through 11/26. While supplies last. Excludes Bose.';
+
+// .............. CODE THAT MAKES IT HAPPEN .....................
+
+if((window.location.href.indexOf("tech") > -1)) {
+  function GWPbannersMassive_Tech(){
+    var urlfor_techGWP = (
+      //(window.location.href.indexOf("new-arrivals") > -1) ||
+      (window.location.href.indexOf("gifts-beauty-fragrance") > -1) ||
+      (window.location.href.indexOf("beauty-bvlgari") > -1) ||
+      (window.location.href.indexOf("bose") > -1) ||
+    	(window.location.href.indexOf("gifts") > -1) ||
+      (window.location.href.indexOf("toys") > -1) ||
+      (window.location.href.indexOf("beauty-gift-sets-men") > -1) ||
+      (window.location.href.indexOf("beauty-bonus") > -1) ||
+      (window.location.href.indexOf("beauty-hugo-boss") > -1) ||
+      (window.location.href.indexOf("beauty-opi") > -1) ||
+      (window.location.href.indexOf("beauty-calvin-klein") > -1)||
+//       (window.location.href.indexOf("beauty-makeup") > -1) ||
+      (window.location.href.indexOf("beauty-mens-fragrances-new-arrivals") > -1) ||
+      (window.location.href.indexOf("beauty-mens-fragrances-best-sellers") > -1) ||
+      (window.location.href.indexOf("beauty-mens-fragrances-gift-sets") > -1) ||
+      (window.location.href.indexOf("beauty-mens-fragrances") > -1)||
+      (window.location.href.indexOf("beauty-3-2499") > -1)
+//       (window.location.href == "https://www.c21stores.com/categories/beauty-womens-fragrances")
+    );
+      if(!urlfor_techGWP){
+        console.log('GWP banner tech');
+        $('.banner-content-block__large-image-container').css('background-image','url('+ GWPtech_image_banner +')');
+
+        $('.jm-GWP-tech').find('header > span').html(GWPtech_header);
+
+        $('.jm-GWP-tech').find('h3.jm-first > span').html(GWPtech_the_gift1 + '<br/>' + GWPtech_the_spend1 + '<br/>');
+        $('.jm-GWP-tech').find('p.jm-first > span').html(GWPtech_end_date1);
+
+        $('.jm-GWP-tech').find('h3.jm-second > span').html(GWPtech_the_gift2 + '<br/>' + GWPtech_the_spend2);
+        $('.jm-GWP-tech').find('p.jm-second > span').html(GWPtech_end_date2);
+
+
+      	$('.jm-GWP-tech').children().each(function () {
+			       //console.log('hijos: '+ this);
+			    $(this).find('span:empty').parent().hide(); // "this" is the current element in the loop
+        });
+
+      };
+
+  }GWPbannersMassive_Tech();
+
+}
+
+
+</script>
