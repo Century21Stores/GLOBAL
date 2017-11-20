@@ -1,4 +1,4 @@
-// JS PROD MASTER - PROMO HELP MESSAGE - BGA W43A - - 11.23.17
+// JS PROD MASTER - PROMO HELP MESSAGE - BGA W43C - - 11.23.17
 // PAST:  Banners when Blank FIX, Rotating Message, Multiple CTA Banners - 09.12.17
 // jrios@c21stores.com
 
@@ -860,16 +860,16 @@ function freeShippingBeautyGA() {
 function allSiteGA14() {
 
 	//GRID AD TYPE:  enter 1 or 2
-	var gaType = 1;
+	var gaType = 2;
 	//POSITION
 	var pos = 14;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTEvMTYvMTYvMjMvNTYvMTIzLzAwMV8xMVdlZWs0X0JHLmpwZyJdXQ/001_11Week4_BG.jpg?sha=4c7b58d8fdbfdb1d";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTEvMjAvMTQvMjQvMzQvMjg2LzAwMl8xMVdlZWsxX0JHQV9CbGFja0tfRnJpZGF5LmdpZiJdXQ/002_11Week1_BGA_BlackK_Friday.gif?sha=d8dd57537efd7bf6";
 
 	//LINK TEXT
-	var textLink = "SHOP NOW";
+	var textLink = "INFO/EXCLUSIONS";
 	//LINK URL
-	var urlLINK = "https://www.c21stores.com/pages/cyber-specials";
+	var urlLINK = "https://www.c21stores.com/pages/info-exclusions-black-friday";
 
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
@@ -890,9 +890,8 @@ function allSiteGA14() {
 		'<div class="content-block-content__container content-block-content__container--center">'+
 		'<div class="content-block-content__message content-block-content__message--dark">'+
 		//'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
-	 	//'<p class="content-block-content__action content-block-content__action--dark-text"><a target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
-		'<div class="content-block-content__message content-block-content__message--dark">'+
-		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+	 	'<p class="content-block-content__action content-block-content__action--dark-text"><a style="color:white; border-color: white;" target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		//'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
 		'</div>'+
 		'</div>'+
 		'</div>'+
