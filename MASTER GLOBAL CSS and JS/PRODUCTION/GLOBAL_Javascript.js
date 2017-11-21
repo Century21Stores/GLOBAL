@@ -1,4 +1,4 @@
-// JS PROD MASTER - PROMO HELP MESSAGE - BGA W43C fix - 11.21.17
+// JS PROD MASTER - PROMO HELP MESSAGE - BGA W44A - - 11.21.17
 // PAST:  Banners when Blank FIX, Rotating Message, Multiple CTA Banners - 09.12.17
 // jrios@c21stores.com
 
@@ -864,12 +864,12 @@ function allSiteGA14() {
 	//POSITION
 	var pos = 14;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTEvMjEvMTQvNDAvMDYvNDEyLzAwMl8xMVdlZWsxX0JHQV9CbGFja0tfRnJpZGF5LmdpZiJdXQ/002_11Week1_BGA_BlackK_Friday.gif?sha=db0179348bac770c";
+	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTcvMTEvMjEvMTQvNTMvMDUvNTUzLzAwM18xMVdlZWsxX0JHQV9DeWJlck1vbmRheS5qcGciXV0/003_11Week1_BGA_CyberMonday.jpg?sha=d8a818044b290557";
 
 	//LINK TEXT
 	var textLink = "INFO/EXCLUSIONS";
 	//LINK URL
-	var urlLINK = "https://www.c21stores.com/pages/info-exclusions-black-friday";
+	var urlLINK = "https://www.c21stores.com/pages/info-exclusions-cyber-monday";
 
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
