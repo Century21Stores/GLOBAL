@@ -1,4 +1,4 @@
-// JS PROD MASTER - PROMO HELP MESSAGE - BGA W44A - - 11.21.17
+// JS PROD MASTER - PROMO HELP MESSAGE - BGA W44A DOWN - 11.27.17
 // PAST:  Banners when Blank FIX, Rotating Message, Multiple CTA Banners - 09.12.17
 // jrios@c21stores.com
 
@@ -21,7 +21,7 @@ document.addEventListener( "DOMContentLoaded", vip_shopping, false );
 document.addEventListener( "DOMContentLoaded", show_banner_when_not_blank, false );
 document.addEventListener( "DOMContentLoaded", seoCopyLineFooter, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom, false );
-
+document.addEventListener( "DOMContentLoaded", promo_Code_custom_productLevel, false );
 
 // FIREING FUNCTIONS ON QUICK VIEW
 $(document).on( 'click', '.product-summary__quickview a', function(){
@@ -583,26 +583,26 @@ $(window).load(function() {
 
 	if(jm_cat === "Tech"){
 		//allSiteGA29();
-		allSiteGA14();
+		//allSiteGA14();
 		if(!urlEtech){
 // 			WishiWankaGA();
 		}
 	}
 	else if(jm_cat === "New + Now"){
 			//allSiteGA29();
-			allSiteGA14();
+			//allSiteGA14();
 	}
 	else if(jm_cat === "Beauty"){
 		if(!urlEbeauty){
 			//freeShippingBeautyGA();
-			allSiteGA14();
+			//allSiteGA14();
 			//allSiteGA29();
 // 			WishiWankaGA();
 		}
 	}
 	else if(jm_cat === "Shoes"){
 			//allSiteGA29();
-			allSiteGA14();
+			//allSiteGA14();
 		if(!urlEshoes){
 			//newArrivalsShoesGA();
 		}
@@ -610,14 +610,14 @@ $(window).load(function() {
 	else if(jm_cat === "Handbags &amp; Accessories"){
 		//doubleHandbagsBGA();
 			//allSiteGA29();
-			allSiteGA14();
+			//allSiteGA14();
 		if(!urlEhandbags){
 	//		newArrivalsHandbagsGA();
 		}
 	}
 	else if(jm_cat === "Kids"){
 			//allSiteGA29();
-			allSiteGA14();
+			//allSiteGA14();
 		if(!urlEkids){
 			//kidsColdWeatherGA();
 		}
@@ -629,21 +629,21 @@ $(window).load(function() {
 	}
 	else if(jm_cat === "Women"){
 			//allSiteGA29();
-			allSiteGA14();
+			//allSiteGA14();
 		if(!urlEmwomens){
 			//newArrivalsWomenGA();
 		}
 	}
 	else if(jm_cat === "Men"){
 			//allSiteGA29();
-			allSiteGA14();
+			//allSiteGA14();
 		if(!urlEmens){
 			//newArrivalsMenGA();
 		}
 	}
 	else if(jm_cat === "Home"){
 			//allSiteGA29();
-			allSiteGA14();
+			//allSiteGA14();
 		if(!urlEhome){
 			doubleHomeBGA();
 			//WishiWankaGA();
@@ -2035,5 +2035,18 @@ function promo_Code_custom(){
 	});
 }
 // END PROMO CODE HELP MESSAGE
+
+// PROMO CODE HELP MESSAGE CYBER MONDAY ONLY
+function promo_Code_custom_productLevel(){
+	$("span.table__price-label").each(function(){
+			if ($(this).text().indexOf('{') > -1){
+				var spl = $(this).text();
+				spl = spl.substring(0, spl.indexOf('{'));
+				console.log($(this).html(spl));
+			}
+	});
+}
+// END PROMO CODE HELP MESSAGE CYBER MONDAY ONLY
+
 
 console.log('all running');
