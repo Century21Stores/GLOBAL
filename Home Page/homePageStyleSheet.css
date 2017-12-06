@@ -1,3 +1,5 @@
+/*W45D Home Page Banner*/
+
 .jm-divider{
 font-family: BauerBodoniBT, Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
     text-align: center;
@@ -19,18 +21,45 @@ font-size: 11vw;
 font-size: 3vw;
     margin: 0 0 1em;
 }
-/* HIDE PLCC HEADER
+ /*HIDE PLCC HEADER */
 .branded-card-header{
 opacity:0;
 height:0;
 padding: 0 !important;
-}*/
+}
 section.branded-card-header--active{
 display:block !important;
 }
 /*  END HIDE PLCC HEADER */
 
 
+/* HOME PAGE TOP BANNER */
+.jm-home-page-header{
+  background: #000000;
+  text-align: center;
+  padding: 1% 0;
+}
+.jm-home-page-header h3{
+  color: white;
+  margin: 0;
+  font-size: 1.7em;
+  letter-spacing: 0.02em;
+  font-weight: normal;
+}
+.jm-home-page-header p{
+  color: white;
+  margin: 0;
+  font-size: 1.3em;
+  letter-spacing: 0.05em;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.jm-home-page-header a{
+  color: white !important;
+  border-color: white !important;
+}
+/* END HOME PAGE TOP BANNER */
 
 
 @media screen and (min-width: 700px){
@@ -78,17 +107,27 @@ font-size: 10em;
 }
 
 @media (max-width:700px) {
-.jm-special-header-1{
-    position: absolute;
-    right: 0;
-    background: none !important;
-    width: 81%;
-    z-index: 999;
+/* HOME PAGE TOP BANNER */
+.jm-home-page-header{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 79%;
+  font-size: 1.5vw;
+  padding: 0.5vw 0;
+  z-index: 33;
 }
-.jm-special-header-1 h3{
-font-size: 10px !important;
+.jm-home-page-header h3{
+  font-size: 10px;
+  letter-spacing: 0.1em;
 }
-
+.jm-home-page-header a.jm-mobile-HPheader-cta{
+  font-size: 8px !important;
+}
+.jm-home-page-header p.jm-mobile-HPheader-l1{
+  font-size: 10px;
+}
+/* END HOME PAGE TOP BANNER */
 .jm_lightBox_CTA{
 color:white;
 }

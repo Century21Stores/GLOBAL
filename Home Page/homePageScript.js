@@ -1,3 +1,5 @@
+// W45D Home Page Banner
+
 $(document).ready(function(){
     $('.jm-HomePage5 .jm-cloneIt, .jmrv-hp3 .jm-cloneIt').each(function(){
      var new_data = $(this).find('*').filter('.jm-toClone').clone();
@@ -14,15 +16,13 @@ console.log(new_data);
 
 
 // SPECIAL HEADER 1
-//$('.branded-card-header').after(
-//	'<section class="jm-special-header-1">'+
-	//'<a href="/pages/shipping-information">'+
-//	'<h3>SELECT LOCATIONS CLOSED SUNDAY <b><a href="http://locations.c21stores.com/?" target="_blanck"> FIND A STORE</a></b></h3>'
-	//'<p>Ground Shipping: Wednesday, December 14 by 8pm</p>'+
-	//'<p>3-day Shipping: Wednesday, December 14</p>'+
-	//'<p>Overnight Shipping: Sunday, December 18</p>'+
-	//'</a></section>'
-//);
+$('.branded-card-header').after(
+	'<section class="jm-home-page-header">'+
+	'<p class="jm-mobile-HPheader-l1">Gift shopping?</p>'+
+	'<h3>Get it there in time for the holidays!<span class="jm-asterisk">*</span></h3>'+
+	'<p class="content-block-content__action content-block-content__action--dark-text"><a class="text jm-mobile-HPheader-cta" href="https://www.c21stores.com/pages/shipping-information">LEARN MORE</a></p>'+
+	'</section>'
+);
 
 
 // VIDEO TO PLAY ON SCROLL
