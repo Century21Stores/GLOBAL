@@ -1,4 +1,4 @@
-// W45D Home Page Banner Hanukkah - Last day for Next-Day Shipping
+// W45E Gift shopping? - Get it there in time for the holidays!* - JuanMa 12.07.17
 
 $(document).ready(function(){
     $('.jm-HomePage5 .jm-cloneIt, .jmrv-hp3 .jm-cloneIt').each(function(){
@@ -13,13 +13,11 @@ console.log(new_data);
 
 
 
-
-
 // SPECIAL HEADER 1
 $('.branded-card-header').after(
 	'<section class="jm-home-page-header">'+
-	'<p class="jm-mobile-HPheader-l1">Ship gifts in time for Hanukkah</p>'+
-	'<h3><b>Last day</b> for <b>Next-Day Shipping!<span class="jm-asterisk">*</span></b></h3>'+
+	'<p class="jm-mobile-HPheader-l1">Gift shopping?</p>'+
+	'<h3><b>Get it there in time for the holidays!<span class="jm-asterisk">*</span></b></h3>'+
 	'<p class="content-block-content__action content-block-content__action--dark-text"><a class="text jm-mobile-HPheader-cta" href="https://www.c21stores.com/pages/shipping-information">LEARN MORE</a></p>'+
   '<p class="jm-desktop jm-HPH-fine-print"><span class="jm-asterisk">*</span>Dates vary by location.</span></p>'+
   '</section>'
