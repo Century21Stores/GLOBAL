@@ -1,4 +1,4 @@
-// W45E Gift shopping? - Get it there in time for the holidays!* - JuanMa 12.07.17
+// W46A Ship gifts in time for Christmas - Last chance for Standard & 3-Day Shipping!* - JuanMa 12.07.17
 
 $(document).ready(function(){
     $('.jm-HomePage5 .jm-cloneIt, .jmrv-hp3 .jm-cloneIt').each(function(){
@@ -16,8 +16,8 @@ console.log(new_data);
 // SPECIAL HEADER 1
 $('.branded-card-header').after(
 	'<section class="jm-home-page-header">'+
-	'<p class="jm-mobile-HPheader-l1">Gift shopping?</p>'+
-	'<h3>Get it there in time for the holidays!<span class="jm-asterisk">*</span></h3>'+
+	'<p class="jm-mobile-HPheader-l1">Ship gifts in time for Christmas</p>'+
+	'<h3>Last chance for Standard & 3-Day Shipping!<span class="jm-asterisk">*</span></h3>'+
 	'<p class="content-block-content__action content-block-content__action--dark-text"><a class="text jm-mobile-HPheader-cta" href="https://www.c21stores.com/pages/shipping-information">LEARN MORE</a></p>'+
   '<p class="jm-desktop jm-HPH-fine-print"><span class="jm-asterisk">*</span>Dates vary by location.</span></p>'+
   '</section>'
