@@ -1,4 +1,4 @@
-/*W45D Home Page Banner*/
+/* W45D Home Page Banner Hanukkah - Last day for Next-Day Shipping - JuanMa*/
 
 .jm-divider{
 font-family: BauerBodoniBT, Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
@@ -23,9 +23,9 @@ font-size: 3vw;
 }
  /*HIDE PLCC HEADER */
 .branded-card-header{
-opacity:0;
-height:0;
-padding: 0 !important;
+  opacity:0;
+  height:0;
+  padding: 0 !important;
 }
 section.branded-card-header--active{
 display:block !important;
@@ -38,6 +38,7 @@ display:block !important;
   background: #000000;
   text-align: center;
   padding: 1% 0;
+  position: relative;
 }
 .jm-home-page-header h3{
   color: white;
@@ -92,6 +93,13 @@ font-size: 10vw;
 }
 .jm-divider-subcopy{
     font-size: 1.7vw;
+}
+p.jm-HPH-fine-print{
+  position: absolute;
+  bottom: 8%;
+  right: 1%;
+  font-size: 0.9em;
+  letter-spacing: 0;
 }
 
 }

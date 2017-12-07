@@ -1,4 +1,4 @@
-// W45D Home Page Banner Hanukkah - Last day for Next-Day Shipping
+// W45D Home Page Banner Hanukkah - Last day for Next-Day Shipping - JuanMa
 
 $(document).ready(function(){
     $('.jm-HomePage5 .jm-cloneIt, .jmrv-hp3 .jm-cloneIt').each(function(){
@@ -21,7 +21,8 @@ $('.branded-card-header').after(
 	'<p class="jm-mobile-HPheader-l1">Ship gifts in time for Hanukkah</p>'+
 	'<h3>Last day for Next-Day Shipping!<span class="jm-asterisk">*</span></h3>'+
 	'<p class="content-block-content__action content-block-content__action--dark-text"><a class="text jm-mobile-HPheader-cta" href="https://www.c21stores.com/pages/shipping-information">LEARN MORE</a></p>'+
-	'</section>'
+  '<p class="jm-desktop jm-HPH-fine-print"><span class="jm-asterisk">*</span>Dates vary by location.</span></p>'+
+  '</section>'
 );
 
 
