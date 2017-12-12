@@ -1,4 +1,4 @@
-// W46A Ship gifts in time for Christmas - Last chance for Standard & 3-Day Shipping!* - JuanMa 12.07.17
+// W47A Video Scrolling Fix - Ship gifts in time for Christmas - Last chance for Standard & 3-Day Shipping!* - JuanMa 12.12.17
 
 $(document).ready(function(){
     $('.jm-HomePage5 .jm-cloneIt, .jmrv-hp3 .jm-cloneIt').each(function(){
