@@ -776,11 +776,11 @@ function menGA14() {
 	//POSITION
 	var pos = 14;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTIvMDYvMTEvMzgvMTMvODY2LzAxXzEyV2VlazNfQkdBX0dXUC5qcGciXV0/01_12Week3_BGA_GWP.jpg?sha=6492e6cafb73ab38";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTIvMTIvMTEvMDgvMTAvOTk0LzAxXzEyV2VlazRfQkdBX0dXUC5qcGciXV0/01_12Week4_BGA_GWP.jpg?sha=d74e92706f493840";
 	//LINK TEXT
 	var textLink = "SHOP NOW";
 	//LINK URL
-	var urlLINK = "https://www.c21stores.com/categories/46ainm";
+	var urlLINK = "https://www.c21stores.com/categories/men-watches";
 
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
