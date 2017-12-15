@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA W46A - 12.11.17
+// JS PROD MASTER - BGA W47A - 12.14.17
 // PAST:  PROMO HELP MESSAGE - 11.27.17
 // jrios@c21stores.com
 
@@ -533,7 +533,6 @@ $(window).load(function() {
 		(window.location.href.indexOf("men-sunglasses") > -1) ||
 		(window.location.href.indexOf("men-ties") > -1) ||
 		(window.location.href.indexOf("men-umbrellas") > -1) ||
-		(window.location.href.indexOf("men-watches") > -1) ||
 		(window.location.href.indexOf("men-wallets") > -1) ||
 		(window.location.href.indexOf("men-shop-all-accessories") > -1)
 	);
@@ -613,7 +612,7 @@ $(window).load(function() {
 		//doubleHandbagsBGA();
 			//allSiteGA29();
 			//allSiteGA14();
-			handbagsGA();
+			//handbagsGA();
 		if(!urlEhandbags){
 	//		handbagsGA();
 		}
