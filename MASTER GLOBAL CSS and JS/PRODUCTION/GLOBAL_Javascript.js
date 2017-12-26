@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA W47A - 12.14.17
+// JS PROD MASTER - BGA W47G - 12.14.17
 // PAST:  PROMO HELP MESSAGE - 11.27.17
 // jrios@c21stores.com
 
@@ -511,9 +511,7 @@ $(window).load(function() {
 		(window.location.href.indexOf("7arsw") > -1)
 	);
 	var urlEhandbags = (
-		(window.location.href.indexOf("arrivals") > -1) ||
-		(window.location.href.indexOf("luxury") > -1) ||
-		(window.location.href.indexOf("7ablw") > -1) ||
+		(window.location.href.indexOf("handbags-accessories-watches") > -1) ||
 		(window.location.href.indexOf("7alcw") > -1)
 	);
 	var urlEkids = (
@@ -584,26 +582,26 @@ $(window).load(function() {
 
 	if(jm_cat === "Tech"){
 		//allSiteGA29();
-		//allSiteGA14();
+		allSiteGA14();
 		if(!urlEtech){
 // 			WishiWankaGA();
 		}
 	}
 	else if(jm_cat === "New + Now"){
 			//allSiteGA29();
-			//allSiteGA14();
+			allSiteGA14();
 	}
 	else if(jm_cat === "Beauty"){
 		if(!urlEbeauty){
-			freeShippingBeautyGA();
-			//allSiteGA14();
+			//freeShippingBeautyGA();
+			allSiteGA14();
 			//allSiteGA29();
 // 			WishiWankaGA();
 		}
 	}
 	else if(jm_cat === "Shoes"){
 			//allSiteGA29();
-			//allSiteGA14();
+			allSiteGA14();
 		if(!urlEshoes){
 			//newArrivalsShoesGA();
 		}
@@ -611,15 +609,15 @@ $(window).load(function() {
 	else if(jm_cat === "Handbags &amp; Accessories"){
 		//doubleHandbagsBGA();
 			//allSiteGA29();
-			//allSiteGA14();
+			allSiteGA14();
 			//handbagsGA();
 		if(!urlEhandbags){
-	//		handbagsGA();
+			handbagsGA();
 		}
 	}
 	else if(jm_cat === "Kids"){
 			//allSiteGA29();
-			//allSiteGA14();
+			allSiteGA14();
 		if(!urlEkids){
 			//kidsColdWeatherGA();
 		}
@@ -631,23 +629,23 @@ $(window).load(function() {
 	}
 	else if(jm_cat === "Women"){
 			//allSiteGA29();
-			//allSiteGA14();
+			allSiteGA14();
 		if(!urlEmwomens){
 			//newArrivalsWomenGA();
 		}
 	}
 	else if(jm_cat === "Men"){
 			//allSiteGA29();
-			//allSiteGA14();
+			allSiteGA14();
 		if(urlEmens){
-			menGA14();
+			menGA30();
 		}
 	}
 	else if(jm_cat === "Home"){
 			//allSiteGA29();
-			//allSiteGA14();
+			allSiteGA14();
 		if(!urlEhome){
-			doubleHomeBGA();
+			//doubleHomeBGA();
 			//WishiWankaGA();
 		}
 
@@ -768,14 +766,14 @@ function kidsColdWeatherGA() {
 
 
 // MENS FOOTBALL GRID AD BANNER
-function menGA14() {
+function menGA30() {
 
 	//GRID AD TYPE:  enter 1 or 2
 	var gaType = 1;
 	//POSITION
-	var pos = 14;
+	var pos = 30;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTIvMTIvMTEvMDgvMTAvOTk0LzAxXzEyV2VlazRfQkdBX0dXUC5qcGciXV0/01_12Week4_BGA_GWP.jpg?sha=d74e92706f493840";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTIvMTUvMTEvMzgvMzQvNTAxLzAxXzEyV2VlazRfQkdBX0dXUC5qcGciXV0/01_12Week4_BGA_GWP.jpg?sha=c7ff7e56ff3cb376";
 	//LINK TEXT
 	var textLink = "SHOP NOW";
 	//LINK URL
@@ -818,13 +816,13 @@ function handbagsGA() {
 	//GRID AD TYPE:  enter 1 or 2
 	var gaType = 1;
 	//POSITION
-	var pos = 14;
+	var pos = 29;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTIvMDYvMTEvMzgvMTMvODY2LzAxXzEyV2VlazNfQkdBX0dXUC5qcGciXV0/01_12Week3_BGA_GWP.jpg?sha=6492e6cafb73ab38";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTIvMTUvMTEvMzgvMzQvNTAxLzAxXzEyV2VlazRfQkdBX0dXUC5qcGciXV0/01_12Week4_BGA_GWP.jpg?sha=c7ff7e56ff3cb376";
 	//LINK TEXT
 	var textLink = "SHOP NOW";
 	//LINK URL
-	var urlLINK = "https://www.c21stores.com/categories/46ainw";
+	var urlLINK = "https://www.c21stores.com/categories/handbags-accessories-watches";
 
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
@@ -908,16 +906,16 @@ function freeShippingBeautyGA() {
 function allSiteGA14() {
 
 	//GRID AD TYPE:  enter 1 or 2
-	var gaType = 2;
+	var gaType = 1;
 	//POSITION
 	var pos = 14;
 	//IMAGE URL 370x552
-	var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTcvMTEvMjEvMTQvNTMvMDUvNTUzLzAwM18xMVdlZWsxX0JHQV9DeWJlck1vbmRheS5qcGciXV0/003_11Week1_BGA_CyberMonday.jpg?sha=d8a818044b290557";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTIvMTUvMTAvNDEvNDMvNTQxLzEyV2VlazVfQkdBX0NsZWFyYW5jZS5naWYiXV0/12Week5_BGA_Clearance.gif?sha=d9a41b7ba05e49d7";
 
 	//LINK TEXT
-	var textLink = "INFO/EXCLUSIONS";
+	var textLink = "SHOP NOW";
 	//LINK URL
-	var urlLINK = "https://www.c21stores.com/pages/info-exclusions-cyber-monday";
+	var urlLINK = "https://www.c21stores.com/pages/clearance";
 
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
@@ -937,8 +935,8 @@ function allSiteGA14() {
 		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
 		'<div class="content-block-content__container content-block-content__container--center">'+
 		'<div class="content-block-content__message content-block-content__message--dark">'+
-		//'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
-	 	'<p class="content-block-content__action content-block-content__action--dark-text"><a style="color:white; border-color: white;" target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+	 	//'<p class="content-block-content__action content-block-content__action--dark-text"><a style="color:white; border-color: white;" target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
 		//'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
 		'</div>'+
 		'</div>'+
