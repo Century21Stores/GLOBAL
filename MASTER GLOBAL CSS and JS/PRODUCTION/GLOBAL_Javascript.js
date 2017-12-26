@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA W47G - 12.14.17
+// JS PROD MASTER - BGA W49F - 12.26.17
 // PAST:  PROMO HELP MESSAGE - 11.27.17
 // jrios@c21stores.com
 
@@ -910,7 +910,7 @@ function allSiteGA14() {
 	//POSITION
 	var pos = 14;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTIvMTUvMTAvNDEvNDMvNTQxLzEyV2VlazVfQkdBX0NsZWFyYW5jZS5naWYiXV0/12Week5_BGA_Clearance.gif?sha=d9a41b7ba05e49d7";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTIvMjYvMTUvMTkvMjAvMjEvMDAxXzAxV2VlazFfQkdBX0NsZWFyYW5jZV84NS5naWYiXV0/001_01Week1_BGA_Clearance_85.gif?sha=6ff668f53a80c47c";
 
 	//LINK TEXT
 	var textLink = "SHOP NOW";
