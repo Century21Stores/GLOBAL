@@ -1,6 +1,5 @@
-// STAGING
-/* CURRENTLY Fanreel PDPs 09.07.17 */
-/* OLD: Fanreel PDPs NON CTA LIGHT BOX HERO CLICKABLE ADDED 08.29.17 */
+// STAGING - Promo Help message 11.07.17
+// OLD: Fanreel PDPs NON CTA LIGHT BOX HERO CLICKABLE ADDED 08.29.17
 
 
 // MASTER SCRIPTING JAN 20 2017
@@ -18,6 +17,9 @@ document.addEventListener( "DOMContentLoaded", pdpKnivesPDF, false );
 document.addEventListener( "DOMContentLoaded", Hover_message_Button, false );
 document.addEventListener( "DOMContentLoaded", addingClass_LP_width, false );
 document.addEventListener( "DOMContentLoaded", name_taggingCoremetrics, false );
+document.addEventListener( "DOMContentLoaded", seoCopyLineFooter, false );
+document.addEventListener( "DOMContentLoaded", promo_Code_custom, false );
+document.addEventListener( "DOMContentLoaded", live_chat_message, false );
 
 
 // FIREING FUNCTIONS ON QUICK VIEW
@@ -1869,19 +1871,22 @@ function adquisition_rotating_message(){
 
 	var rotatingMessages = [
 		'<a href="https://www.c21stores.com/pages/shipping-information">FREE SHIPPING ON ORDERS $75+</a>',
+		'<a href="#">GET $10 BACK</a>',
 		'<a class="jm-button-hover" href="/pages/careers" target="_blank">WE’RE HIRING! APPLY NOW</a>'
 	];
 
  		function rotatingMessage(e) {
-        var msg = rotatingMessages.shift();
+
+				var msg = rotatingMessages.shift();
         rotatingMessages.push(msg);
+
         $("div.jm-shipping-plcc-acquisition").html(msg);
 
 				$('.jm-shipping-plcc-acquisition a').hover(function(e){
-					$('a.Shoes').css('background','red');
+					//$('a.Shoes').css('background','red');
 						clearInterval(jmtimer);
 				}, function(e){
-					$('a.Shoes').css('background','blue');
+					//$('a.Shoes').css('background','blue');
 						jmtimer = setInterval( rotatingMessage, 2300);
 				});
 
@@ -1895,6 +1900,7 @@ function retention_rotating_message(er){
 
 	var rotatingMessagesR = [
 		'<a href="https://www.c21stores.com/pages/shipping-information">PREMIER CREDIT CARD: FREE SHIPPING ON ORDERS $50+ <br/>ELITE CREDIT CARD: FREE SHIPPING ON ALL ORDERS</a>',
+		'<a href="#">GET $10 BACK</a>',
 		'<a class="jm-button-hover" href="/pages/careers" target="_blank">WE’RE HIRING! APPLY NOW</a>'
 	];
 
@@ -1904,10 +1910,10 @@ function retention_rotating_message(er){
         $("div.jm-shipping-plcc-retention").html(msgR);
 
 				$('.jm-shipping-plcc-retention a').hover(function(er){
-					$('a.Shoes').css('background','green');
+					//$('a.Shoes').css('background','green');
 						clearInterval(jmtimerR);
 				}, function(er){
-					$('a.Shoes').css('background','blue');
+					//$('a.Shoes').css('background','blue');
 						jmtimerR = setInterval( rotatingMessageR, 2300);
 				});
 
@@ -1923,6 +1929,7 @@ function denied_rotating_message(ed){
 
 	var rotatingMessagesD = [
 		'<a href="https://www.c21stores.com/pages/shipping-information">FREE SHIPPING ON ORDERS $75+</a>',
+		'<a href="#">GET $10 BACK</a>',
 		'<a class="jm-button-hover" href="/pages/careers" target="_blank">WE’RE HIRING! APPLY NOW</a>'
 	];
 
@@ -1945,3 +1952,37 @@ function denied_rotating_message(ed){
 
 };
 //END GLOBAL HEADER ROTATING MESSAGE DENIED
+
+
+
+function seoCopyLineFooter(){
+
+	$('.jm_copy_block_clone').after("<h3 style='text-align: center;margin=0;'>NEW YORK'S BEST KEPT SECRET</h3>");
+
+}
+
+
+
+// CUSTOM MESSAGE CODE PROMO
+function promo_Code_custom(){
+	$("div.cart-prices__label").each(function(){
+		if ($(this).text().indexOf('{') > -1){
+			var s = $(this).text();
+			s = s.substring(0, s.indexOf('{'));
+			$(this).html(s);
+			$(this).parent().show();
+			console.log($(this).text());
+			console.log(s);
+		}
+	});
+}
+// END CUSTOM MESSAGE CODE PROMO
+
+
+// LIVE CHAT CUSTOM MESSAGE
+function live_chat_message(){
+	setTimeout(function(){
+		$('#livechat-full').prepend("<div class='jm-livechat-message'>Our Call Center will be closed on Monday, 12/25/17 in observance of Christmas Day and on Monday, 1/1/18 in observance of New Year's day</div>");
+	}, 1000);
+}
+// END LIVE CHAT CUSTOM MESSAGE

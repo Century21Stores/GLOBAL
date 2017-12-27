@@ -4,9 +4,9 @@
 
 
 // FIREING FUNCTIONS
-document.addEventListener( "DOMContentLoaded", denied_rotating_message, false );
-document.addEventListener( "DOMContentLoaded", adquisition_rotating_message, false );
-document.addEventListener( "DOMContentLoaded", retention_rotating_message, false );
+//document.addEventListener( "DOMContentLoaded", denied_rotating_message, false );
+//document.addEventListener( "DOMContentLoaded", adquisition_rotating_message, false );
+//document.addEventListener( "DOMContentLoaded", retention_rotating_message, false );
 document.addEventListener( "DOMContentLoaded", uniqueClasses, false );
 document.addEventListener( "DOMContentLoaded", pdpVideos, false );
 document.addEventListener( "DOMContentLoaded", pdpTieredPrice, false );
