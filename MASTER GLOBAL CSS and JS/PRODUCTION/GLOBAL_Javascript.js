@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA W49F - 12.26.17
+// JS PROD MASTER - BGA and Live Chat Message W49F - 12.27.17
 // PAST:  PROMO HELP MESSAGE - 11.27.17
 // jrios@c21stores.com
 
@@ -22,6 +22,7 @@ document.addEventListener( "DOMContentLoaded", show_banner_when_not_blank, false
 document.addEventListener( "DOMContentLoaded", seoCopyLineFooter, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom_productLevel, false );
+document.addEventListener( "DOMContentLoaded", live_chat_message, false );
 
 // FIREING FUNCTIONS ON QUICK VIEW
 $(document).on( 'click', '.product-summary__quickview a', function(){
@@ -2093,6 +2094,15 @@ function promo_Code_custom_productLevel(){
 	});
 }
 // END PROMO CODE HELP MESSAGE CYBER MONDAY ONLY
+
+
+// LIVE CHAT CUSTOM MESSAGE
+function live_chat_message(){
+	setTimeout(function(){
+		$('#livechat-full').prepend("<div class='jm-livechat-message'>Our Call Center will be closed on Monday, 12/25/17 in observance of Christmas Day and on Monday, 1/1/18 in observance of New Year's day</div>");
+	}, 1000);
+}
+// END LIVE CHAT CUSTOM MESSAGE
 
 
 console.log('all running');

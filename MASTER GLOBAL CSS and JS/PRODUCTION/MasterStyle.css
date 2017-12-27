@@ -1,5 +1,6 @@
-/* PROD CSS - BROWSE BANNERS FIX 11.27.17 */
-/* PAST:  ROTATING GLOBAL BANNER  09.12.17 */
+/* PROD CSS - LIVE CHAT MESSAGE FIX 12.27.17 */
+/* PAST:  ROTATING GLOBAL BANNER - BROWSE BANNERS 11.27.17 */
+
 /* CSS MASTER STYLE JMRV  */
 @import "https://www.c21stores.com/media/W1siZiIsIjIwMTUvMDkvMTgvMDgvNTYvNTEvNjg4L01hc3RlclN0eWxlM19MYW5kaW5nUGFnZTA3MTUuY3NzIl1d/MasterStyle3_LandingPage0715.css?sha=5a57837dcb4befbf";
 @import "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDEvMTMvMTIvNDQvMTAvODUzL01hc3RlclN0eWxlUmFpbHN2MS5jc3MiXV0/MasterStyleRailsv1.css?sha=f040002bd75aca28";
@@ -15,11 +16,39 @@ display:none !important;
 }
 /* END SHIPPING */
 
+
+/* LIVE CHAT MESSAGE */
+#livechat-full{
+  overflow: initial !important;
+}
+.jm-livechat-message{
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  position: absolute;
+  top: 21.8vw;
+  left: 0%;
+  width: 88%;
+  margin: 0 auto;
+  background: #333333;
+  color: white;
+  text-align: center;
+  z-index: 99999;
+  font-size: 2.4vw;
+  padding: 3vw 6%;
+}
+/* END LIVE CHAT MESSAGE */
+
+
+
 a.Gifts,
 .Gifts{
   color:#e32026;
 }
-
+.jm_video_OnScroll{
+  border: none;
+}
 #promo_code_form .inline-form__support-text{
 display:none;
 }
@@ -450,7 +479,7 @@ i{
 /* ADS BANNERS */
 .product-grid__cell--1 .product-grid-content-block{
     background-position: 50% 50%;
-    background-size: contain;
+    background-size: cover;
 }
 .product-grid-content-block{
     background-position: 0 0;
@@ -965,6 +994,15 @@ div.hero-content-block .content-block-content__container--center .jm-multipleCTA
 @media screen and (min-width: 700px){
 /* GENERAL OVERWRITE */
 
+/* LIVE CHAT MESSAGE */
+.jm-livechat-message{
+  top: -13%;
+  left: 5.5%;
+  width: 77%;
+  font-size: 0.6em;
+  padding: 2% 6%;  
+}
+/* END LIVE CHAT MESSAGE */
 
 
 /* BRING BACK SPACES TAKEN OUT ON MOBILE */
