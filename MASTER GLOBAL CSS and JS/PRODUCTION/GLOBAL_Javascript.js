@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA W47G - 12.14.17
+// JS PROD MASTER - BGA and Live Chat Message W49F - 12.26.17
 // PAST:  PROMO HELP MESSAGE - 11.27.17
 // jrios@c21stores.com
 
@@ -9,6 +9,7 @@
 //document.addEventListener( "DOMContentLoaded", retention_rotating_message, false );
 document.addEventListener( "DOMContentLoaded", uniqueClasses, false );
 document.addEventListener( "DOMContentLoaded", pdpVideos, false );
+document.addEventListener( "DOMContentLoaded", pdpTieredPrice, false );
 document.addEventListener( "DOMContentLoaded", pdpKnivesPDF, false );
 document.addEventListener( "DOMContentLoaded", addingClass_LP_width, false );
 document.addEventListener( "DOMContentLoaded", name_taggingCoremetrics, false );
@@ -21,8 +22,7 @@ document.addEventListener( "DOMContentLoaded", show_banner_when_not_blank, false
 document.addEventListener( "DOMContentLoaded", seoCopyLineFooter, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom_productLevel, false );
-document.addEventListener( "DOMContentLoaded", live_chat_message, false );
-document.addEventListener( "DOMContentLoaded", pdpTieredPrice, false );
+//document.addEventListener( "DOMContentLoaded", live_chat_message, false );
 
 // FIREING FUNCTIONS ON QUICK VIEW
 $(document).on( 'click', '.product-summary__quickview a', function(){
@@ -911,7 +911,7 @@ function allSiteGA14() {
 	//POSITION
 	var pos = 14;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTIvMTUvMTAvNDEvNDMvNTQxLzEyV2VlazVfQkdBX0NsZWFyYW5jZS5naWYiXV0/12Week5_BGA_Clearance.gif?sha=d9a41b7ba05e49d7";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTIvMjYvMTUvMTkvMjAvMjEvMDAxXzAxV2VlazFfQkdBX0NsZWFyYW5jZV84NS5naWYiXV0/001_01Week1_BGA_Clearance_85.gif?sha=6ff668f53a80c47c";
 
 	//LINK TEXT
 	var textLink = "SHOP NOW";
@@ -1595,7 +1595,6 @@ function pdpTieredPrice(){
 
 	//if((window.location.href.indexOf("products") > -1) && ($('.product-details__price-row') > -1)){
 	if(window.location.href.indexOf("products") > -1){	
-	console.log('tiered pricing will do');
 		var tieredPriceChildren = document.getElementsByClassName("product-details__price-row")[0].childElementCount;;
 		if (tieredPriceChildren == 2){
 			console.log(tieredPriceChildren);
@@ -2095,6 +2094,7 @@ function promo_Code_custom_productLevel(){
 	});
 }
 // END PROMO CODE HELP MESSAGE CYBER MONDAY ONLY
+
 
 // LIVE CHAT CUSTOM MESSAGE
 function live_chat_message(){

@@ -6,7 +6,7 @@
 @import "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDEvMTMvMTIvNDQvMTAvODUzL01hc3RlclN0eWxlUmFpbHN2MS5jc3MiXV0/MasterStyleRailsv1.css?sha=f040002bd75aca28";
 
 /* ..................... OVERWRITES .....................*/
-/* SHIPPING */
+/* SHIPPING 
 #shipping_method_id{
   pointer-events: none
 }
@@ -14,7 +14,8 @@
 #shipping_method_id option:nth-of-type(3){
 display:none !important;
 }
-/* END SHIPPING */
+ END SHIPPING */
+
 
 
 /* LIVE CHAT MESSAGE */
@@ -49,9 +50,9 @@ a.Gifts,
 .jm_video_OnScroll{
   border: none;
 }
-#promo_code_form .inline-form__support-text{
+/*#promo_code_form .inline-form__support-text{
 display:none;
-}
+}*/
 .cart-prices__group{
 display:none;
 }
@@ -123,9 +124,9 @@ display:none !important;
 	color: rgb(234, 44, 59) !important;
 	font-size: 0.62vw !important;
 }
-.inline-quickview__container{
+/*.inline-quickview__container{
     margin: 6% 0 0;
-}
+}*/
 
 /* END HOVER MESSAGE OVER ADD TO BAG  */
 
@@ -272,6 +273,8 @@ display:none !important;
 }
 .jm_bottom_lightbox:hover{
 	background:none !important;
+    border-color: #8a8a8a;
+    color: #868686;
 }
 .jm_lightBox_CTA{
 	border-bottom: solid 2px;
