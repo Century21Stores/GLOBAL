@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA and Live Chat Message W49F - 12.26.17
+// JS PROD MASTER - BGA and Live Chat Message down and BGA HB and Men- 01.10.18
 // PAST:  PROMO HELP MESSAGE - 11.27.17
 // jrios@c21stores.com
 
@@ -613,7 +613,7 @@ $(window).load(function() {
 			allSiteGA14();
 			//handbagsGA();
 		if(!urlEhandbags){
-			handbagsGA();
+			//handbagsGA();
 		}
 	}
 	else if(jm_cat === "Kids"){
@@ -639,7 +639,7 @@ $(window).load(function() {
 			//allSiteGA29();
 			allSiteGA14();
 		if(urlEmens){
-			menGA30();
+			//menGA30();
 		}
 	}
 	else if(jm_cat === "Home"){
