@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA and Live Chat Message down and BGA HB and Men- 01.10.18
+// JS PROD MASTER - BGA 90% - 01.10.18
 // PAST:  PROMO HELP MESSAGE - 11.27.17
 // jrios@c21stores.com
 
@@ -911,7 +911,7 @@ function allSiteGA14() {
 	//POSITION
 	var pos = 14;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTIvMjYvMTUvMTkvMjAvMjEvMDAxXzAxV2VlazFfQkdBX0NsZWFyYW5jZV84NS5naWYiXV0/001_01Week1_BGA_Clearance_85.gif?sha=6ff668f53a80c47c";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDEvMTAvMTAvNTQvMjgvMzIxLzAxXzFXZWVrM19CR0FfQ2xlYXJhbmNlLmdpZiJdXQ/01_1Week3_BGA_Clearance.gif?sha=6477c29910574d83";
 
 	//LINK TEXT
 	var textLink = "SHOP NOW";
@@ -936,9 +936,9 @@ function allSiteGA14() {
 		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
 		'<div class="content-block-content__container content-block-content__container--center">'+
 		'<div class="content-block-content__message content-block-content__message--dark">'+
-		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		//'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
 	 	//'<p class="content-block-content__action content-block-content__action--dark-text"><a style="color:white; border-color: white;" target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
-		//'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
 		'</div>'+
 		'</div>'+
 		'</div>'+
