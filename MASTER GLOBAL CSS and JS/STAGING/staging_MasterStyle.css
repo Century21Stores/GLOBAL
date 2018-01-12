@@ -1,8 +1,39 @@
-/* STAGING CSS */
-/* Currently Rotating Global Banner 09.13.17*/
-/* Past: Multiple CTAs Banners  08.29.17 */
-.jm-button-header{
-  background:#f5f5f5;
+/* STAGING CSS - Shipping Message 01.12.18 */
+/* Past: Currently Rotating Global Banner 09.13.17 */
+
+#livechat-full{
+    overflow: initial !important;
+}
+.jm-livechat-message{
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    position: absolute;
+    top: -13%;
+    left: 5.5%;
+    width: 77%;
+    margin: 0 auto;
+    background: #333333;
+    color: white;
+    text-align: center; 
+    font-size: 0.6em;
+    z-index: 99999;
+    padding: 2% 6%;
+}
+.jm-shipping-message{
+    font-size: 0.8em;
+    color: gray;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    width: 100%;
+    margin: 4% 0;
+    text-align: center;
+}
+
+
+.page-footer__logo{
+    background: url(https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTAvMTgvMTUvMzgvNDUvNDM4L0MyMWxvZ29fUkVEX1NUT1JFU19UYWdMaW5lLnN2ZyJdXQ/C21logo_RED_STORES_TagLine.svg?sha=9be2ef95d0cdf011) no-repeat;
 }
 
 /*.jm-button-hover:hover{
@@ -22,21 +53,34 @@
 */
 
 
-
 @import "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTUvMDkvMTgvMDgvNTYvNTEvNjg4L01hc3RlclN0eWxlM19MYW5kaW5nUGFnZTA3MTUuY3NzIl1d/MasterStyle3_LandingPage0715.css?sha=5a57837dcb4befbf";
 @import "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDEvMTMvMTIvNDQvMTAvODUzL01hc3RlclN0eWxlUmFpbHN2MS5jc3MiXV0/MasterStyleRailsv1.css?sha=f040002bd75aca28";
+
 
 /* ..................... OVERWRITES .....................*/
 /*.branded-card-header{
 display:none !important;
 }*/
+/*
+.cart__aside .inline-form__support-text{
+display:none;
+}
+*/
+.cart-prices__group{
+display:none;
+}
+.cart-prices__group--subtotal,
+.cart-prices__group--total,
+.cart-prices__group--savings {
+display:table;
+}
 .drawer--active{
     z-index: 99999999999999;
 }
 
 /* ... CURALATE ... */
 .page-content--product{
-	padding: 0 !important;
+    padding: 0 !important;
 }
 .jm-curalate-container{
     width: 100%;
@@ -44,7 +88,7 @@ display:none !important;
     /*padding: 3% 0;*/
 }
 .complimentary{
-	margin:0;
+    margin:0;
 }
 .page-content--product .page-content__wrapper{
     margin: 0 auto 3%;
@@ -52,13 +96,13 @@ display:none !important;
 
 /* PDPs */
 .jm-curalate-pdp-title{
-	text-align: center;
+    text-align: center;
     background: #f6f5f5;
     margin: 0;
     padding: 3% 0 0;
 }
 .jm-curalate-pdp-sub-copy{
- 	text-align: center;
+    text-align: center;
     margin: 0;
     background: #f6f5f5;
     font-size: 0.97em;
@@ -74,8 +118,8 @@ display:none !important;
 }
 /* HOVER MESSAGE OVER ADD TO BAG  */
 .inline-quickview__content .jm_button_message{
-	color: rgb(234, 44, 59) !important;
-	font-size: 0.62vw !important;
+    color: rgb(234, 44, 59) !important;
+    font-size: 0.62vw !important;
 }
 .inline-quickview__container{
     margin: 6% 0 0;
@@ -107,7 +151,7 @@ background-position: 50% 0;
 
 /* PLCC HEADER HIDDEN
 .branded-content-wrapper{
-	display: block;
+    display: block;
     position: absolute;
     width: 100%;
     z-index: -999;
@@ -131,19 +175,19 @@ background-position: 50% 0;
 /* BIG CONTAINERS */
 .jm_lp_women, .jm_lp_shoes, .jm_lp_handbags, .jm_lp_beauty,
 .jm_lp_men, .jm_lp_kids, .jm_lp_home, .jm_lp_tech{
-	position:relative;
-	/*padding: 0 0 111%;*/
+    position:relative;
+    /*padding: 0 0 111%;*/
 }
 /* END BIG CONTAINERS */
 
 
 /* LINE THROUGH FOR UNDERLINE */
 .content-block-content__message u{
-	text-decoration: line-through;
+    text-decoration: line-through;
 }
 /* LIGHT BOXES */
 .jm_dark_lightBox{
-	display:none;
+    display:none;
     position: fixed;
     top: 0;
     z-index: 9999;
@@ -156,11 +200,11 @@ background-position: 50% 0;
     display: -ms-flexbox;
     display: -webkit-box-flex;
     align-items: center;
-	-webkit-align-items: center;
-	-ms-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
     justify-content: center;
-	-webkit-justify-content: center;
-	-ms-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
 }
 .jm_displayflex{
      display: flex;
@@ -175,8 +219,8 @@ background-position: 50% 0;
     left: 0;
     height: 100%;
 /*     background: rgba(0, 128, 0, 0.55); */ /* TESTING AREA */
- 	z-index: 2;
-	cursor: pointer;
+    z-index: 2;
+    cursor: pointer;
 }
 .jm_lightbox_X{
     z-index: 99;
@@ -187,7 +231,7 @@ background-position: 50% 0;
     z-index: 1;
 }
 #jm_img_anchor_LB{
-	display: flex !important;
+    display: flex !important;
     display: -webkit-flex !important;
     display: -ms-flexbox !important;
     display: -webkit-box-flex !important;
@@ -200,8 +244,8 @@ background-position: 50% 0;
     cursor: pointer;
 }
 .jm_bottom_lightbox{
-	background: none !important;
-	position: absolute !important;
+    background: none !important;
+    position: absolute !important;
     bottom: -158% !important;
     width: 100% !important;
     height: 95% !important;
@@ -210,19 +254,19 @@ background-position: 50% 0;
     margin: 0 !important;
     padding: 0 !important;
     border: none !important;
-	display: flex;
+    display: flex;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: -webkit-box-flex;
     align-items: center;
-	-webkit-align-items: center;
-	-ms-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
     justify-content: center;
-	-webkit-justify-content: center;
-	-ms-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
 }
 .jm_bottom_lightbox:hover{
-	background:none !important;
+    background:none !important;
 }
 .jm_lightBox_CTA{
   border-bottom: solid 2px;
@@ -230,23 +274,23 @@ background-position: 50% 0;
   font-size: 2vw;
 }
 #jm_img_anchor_LB{
-	bottom: 3% !important;
+    bottom: 3% !important;
     height: auto !important;
     text-transform: none;
     font-size: 1em;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-	opacity:1 !important;
+    opacity:1 !important;
 }
 
 /* RICH TEXT BOX AS LIGTHBOX */
 .rich-text-content-block{
-	position:relative;
+    position:relative;
     padding: 2%;
     z-index: 9;
     width: 50%;
- 	background: white;
- 	display:none;
+    background: white;
+    display:none;
 }
 .rich-text-content-block h2{
     font-size: 14px;
@@ -272,7 +316,7 @@ position: absolute;
     opacity:1;
 }
 .jm-center-my-content > .jm-message-wrap{
-	display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
@@ -349,12 +393,12 @@ i{
     height: 100%;
 }
 .jm-tieredContainer-regular{
-	position: absolute;
+    position: absolute;
     top: 31%;
     right: 0;
 }
 .jm-tieredContainer-sell{
-	position: absolute;
+    position: absolute;
     bottom: 0;
     right: 0;
 }
@@ -380,7 +424,7 @@ i{
 
 /* QUICKVIEW CONTAINER FIX */
 .inline-quickview__content{
-	max-width: 1100px;
+    max-width: 1100px;
 }
 /* END QUICKVIEW CONTAINER FIX */
 
@@ -390,10 +434,10 @@ i{
 /* MULTIPLE CTAS */
 .content-block-content__message p:not(.content-block-content__action),
 .hero-content-block .content-block-content__action{
-	display:none;
+    display:none;
 }
 .jm-multipleCTA-space a{
-	margin: 0 1% 3%;
+    margin: 0 1% 3%;
 }
 /* END MULTIPLE CTAS */
 
@@ -447,7 +491,7 @@ i{
 }
 .product-grid__cell--1 .button,
 .product-grid__cell--2 .button{
-	z-index:1;
+    z-index:1;
 }
 
 /* RELATED PRODUCTS WIDGET JMRV - Pushed 070516*/
@@ -625,13 +669,13 @@ i{
 
 /* ELIMINATING REPEAT BACKGROUND IMAGES */
 .two-column-square-content-block__image{
-	background-repeat: no-repeat;
+    background-repeat: no-repeat;
 }
 
 
 .jm-mobile section{
-  	margin-bottom: 9%;
-  	position: relative;
+    margin-bottom: 9%;
+    position: relative;
 }
 
 
@@ -850,7 +894,7 @@ br{
     font-size: 2.3vw;
 }
 .jm-special-splitHeader br{
-	display:block;
+    display:block;
 }
 .jm-special-splitHeader div.jm_left{
     background: #f6f5f5;
@@ -900,10 +944,10 @@ br{
     padding: 0 0 7%;
 }
 .view .jm-copy-block{
-	display:none;
+    display:none;
 }
 .jm_copy_block_clone{
-	position:relative;
+    position:relative;
 }
 /* END COPY BLOCKS */
 
@@ -921,10 +965,10 @@ br{
 margin: 0 1%;
 }
 .jm-multipleCTA-space a:first-of-type{
-	margin-left: 0;
+    margin-left: 0;
 }
 .jm-multipleCTA-space a:last-of-type{
-	margin-right: 0;
+    margin-right: 0;
 }
 .jm-multipleCTA-space4 a{
     margin: 0% 6%;
@@ -947,7 +991,7 @@ div.hero-content-block .content-block-content__container--center .jm-multipleCTA
 /* BRING BACK SPACES TAKEN OUT ON MOBILE */
 br{
     display:block;
-	display: -moz-box;
+    display: -moz-box;
 }
 /*
 .page-content{
@@ -962,12 +1006,12 @@ br{
 
 /* SPECIAL SPLITTED HEADER */
 .jm-special-splitHeader{
-	display: table;
+    display: table;
     width: 100%;
-	font-size: 1.1vw;
+    font-size: 1.1vw;
 }
 .jm-special-splitHeader div{
-	width: 50%;
+    width: 50%;
     display: table-cell;
     vertical-align: middle;
 }
@@ -1355,7 +1399,7 @@ W03
 
 /* LARGE PLUS ONE */
 .large-square-plus-one-content-block__image{
-	background-size:100%;
+    background-size:100%;
     background-repeat: no-repeat;
 }
 
@@ -1363,7 +1407,7 @@ W03
 /*
 W03
 .hero-content-block .content-block-content--left{
-	right: 0;
+    right: 0;
 }
 
 */
@@ -1379,7 +1423,7 @@ div.hero-content-block .content-block-content--left {
     left: 0%;
 }
 .jm_lp_1170 > div.hero-content-block .content-block-content--left{
-	right: 0;
+    right: 0;
 }
 
 /* BANNERS CONTENT BLOCKS */
@@ -1409,30 +1453,30 @@ div.hero-content-block .content-block-content--left {
 
 /* TIERED PRICES QUICKLOOK */
 .jm-tieredAttributes-QV{
-	padding: 38px 0 0;
+    padding: 38px 0 0;
     position: relative;
 }
 .jm-tieredContainer-QV{
     margin: 0;
 }
 .jm-tieredContainer-QV div.jm-tieredContainer-row-QV:first-of-type{
-	position: absolute;
+    position: absolute;
     top: 27%;
     right: -1%;
 }
 .jm-tieredContainer-regular-QV,
 .jm-tieredContainer-sell-QV{
-	display:block;
+    display:block;
 }
 .jm-tieredContainer-regular-QV s{
     font-size: 15.5px;
     letter-spacing: 0.2em;
 }
 .jm-tieredContainer-sell-QV strong{
-	letter-spacing: 0.2em;
+    letter-spacing: 0.2em;
 }
 .jm-tieredContainer-msrp-QV{
-	display: block;
+    display: block;
     position: absolute;
     top: 0;
     right: 0;
@@ -1588,7 +1632,7 @@ div.hero-content-block .content-block-content__container--center .jm-multipleCTA
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
 .large-square-plus-two-content-block__container--small-image .content-block-content__message h2{
-	margin-bottom: 0.3rem !important;
+    margin-bottom: 0.3rem !important;
 }
 
 }
@@ -1615,12 +1659,12 @@ div.hero-content-block .content-block-content__container--center .jm-multipleCTA
     padding: 5% 0;
 }
 .jm-breath-children .product-details__item-details{
-	border-color:#fdfdfd
+    border-color:#fdfdfd
 }
 
 /* SPECIAL SPLITTED HEADER */
 .jm-special-splitHeader{
-	font-size: 1em;
+    font-size: 1em;
 }
 /* MULTIPLE CTAs */
 div.hero-content-block .content-block-content__container--center .jm-multipleCTA-space5 a{
@@ -1645,7 +1689,7 @@ div.hero-content-block .content-block-content__container--center .jm-multipleCTA
 
  /*COPY BLOCK
 .jm-copy-block{
-	margin: 0 3%;
+    margin: 0 3%;
 }*/
  END COPY BLOCK
 
@@ -1700,7 +1744,7 @@ div.hero-content-block .content-block-content__container--center .jm-multipleCTA
 }
 .large-square-plus-two-content-block__container--small-image,
 .large-square-plus-one-content-block__container--small-image{
-	display:none;
+    display:none;
 }
 .large-square-plus-one-content-block__container--large-image,
 .large-square-plus-two-content-block__container--large-image{
@@ -1710,10 +1754,10 @@ div.hero-content-block .content-block-content__container--center .jm-multipleCTA
     margin: 0 0 7%;
 }
 .two-column-square-content-block__image{
-	background-size: 100%;
+    background-size: 100%;
 }
 .two-column-square-content-block{
-	padding:1.3% 0;
+    padding:1.3% 0;
 }
 /* SPECIAL SPLITTED HEADER */
 .jm-special-splitHeader div.jm_right{
@@ -1742,16 +1786,16 @@ margin:0;
 /* TIERED PRICES  */
 .jm-tieredContainer-sell,
 .jm-tieredContainer-percent-saved{
-	bottom: 7%;
+    bottom: 7%;
 }
 .jm-tieredContainer-regular{
-	font-size: 12px;
+    font-size: 12px;
 }
 .product-details--package-child .product-details__price{
-	font-size: 12px;
+    font-size: 12px;
 }
 .product-detail-container__child-product .jm-tieredContainer-percent-saved{
-	right: 6em;
+    right: 6em;
     font-size: 11px;
 }
 .jm-tieredContainer{
@@ -1782,7 +1826,7 @@ margin:0;
     font-size: 2.3vw;
 }
 #jm_img_anchor{
-	height:100% !important;
+    height:100% !important;
 }
 
 /* CURALATE */
@@ -1795,8 +1839,8 @@ margin:0;
 
 /* HOVER MESSAGE OVER ADD TO BAG  */
 .jm_button_message{
-	width: 64%;
-	margin:0 auto;
+    width: 64%;
+    margin:0 auto;
 }
 /* END HOVER MESSAGE OVER ADD TO BAG  */
 

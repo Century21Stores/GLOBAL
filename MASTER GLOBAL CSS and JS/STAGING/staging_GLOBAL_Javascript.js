@@ -1,4 +1,4 @@
-// STAGING - Promo Help message 11.07.17
+// STAGING - Promo Help message 01.12.17
 // OLD: Fanreel PDPs NON CTA LIGHT BOX HERO CLICKABLE ADDED 08.29.17
 
 
@@ -19,7 +19,8 @@ document.addEventListener( "DOMContentLoaded", addingClass_LP_width, false );
 document.addEventListener( "DOMContentLoaded", name_taggingCoremetrics, false );
 document.addEventListener( "DOMContentLoaded", seoCopyLineFooter, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom, false );
-document.addEventListener( "DOMContentLoaded", live_chat_message, false );
+document.addEventListener( "DOMContentLoaded", shipping_Message, false );
+//document.addEventListener( "DOMContentLoaded", live_chat_message, false );
 
 
 // FIREING FUNCTIONS ON QUICK VIEW
@@ -1986,3 +1987,20 @@ function live_chat_message(){
 	}, 1000);
 }
 // END LIVE CHAT CUSTOM MESSAGE
+
+
+
+// SHIPPING MESSAGE SHOPPING CART
+
+function shipping_Message(){
+	var jmprice = $('.cart-prices__group--subtotal > .cart-prices__value').html().replace("$", "");
+	console.log(jmprice);
+	// if($('.checkout-step-summary div:nth-of-type(1) > h2').text() == "Shipping Options"){
+	 	if(jmprice >= 50){
+	 		$('#estimate_shipping_form').after(
+	 	     '<p class="jm-shipping-message">Signature required to receive orders<br/> of $500 or more.<\/p>'
+	 	   	);  
+	 	}
+	// }
+}
+// END SHIPPING MESSAGE SHOPPING CART
