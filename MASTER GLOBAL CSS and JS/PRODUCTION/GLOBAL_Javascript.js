@@ -613,7 +613,7 @@ $(window).load(function() {
 			allSiteGA14();
 			//handbagsGA();
 		if(!urlEhandbags){
-			//handbagsGA();
+			handbagsGA();
 		}
 	}
 	else if(jm_cat === "Kids"){
@@ -639,7 +639,7 @@ $(window).load(function() {
 			//allSiteGA29();
 			allSiteGA14();
 		if(urlEmens){
-			//menGA30();
+			menGA30();
 		}
 	}
 	else if(jm_cat === "Home"){
@@ -774,11 +774,11 @@ function menGA30() {
 	//POSITION
 	var pos = 30;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTIvMTUvMTEvMzgvMzQvNTAxLzAxXzEyV2VlazRfQkdBX0dXUC5qcGciXV0/01_12Week4_BGA_GWP.jpg?sha=c7ff7e56ff3cb376";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDEvMTcvMTAvMTMvMjIvNDQ1LzAwMV9XZWVrM19CR0FfR1dQLmpwZyJdXQ/001_Week3_BGA_GWP.jpg?sha=3764e2e0bea739cd";
 	//LINK TEXT
 	var textLink = "SHOP NOW";
 	//LINK URL
-	var urlLINK = "https://www.c21stores.com/categories/men-watches";
+	var urlLINK = "https://www.c21stores.com/categories/men-watches?designer%5B%5D=invicta";
 
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
@@ -819,7 +819,7 @@ function handbagsGA() {
 	//POSITION
 	var pos = 29;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTIvMTUvMTEvMzgvMzQvNTAxLzAxXzEyV2VlazRfQkdBX0dXUC5qcGciXV0/01_12Week4_BGA_GWP.jpg?sha=c7ff7e56ff3cb376";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDEvMTcvMTAvMTMvMjIvNDQ1LzAwMV9XZWVrM19CR0FfR1dQLmpwZyJdXQ/001_Week3_BGA_GWP.jpg?sha=3764e2e0bea739cd";
 	//LINK TEXT
 	var textLink = "SHOP NOW";
 	//LINK URL
