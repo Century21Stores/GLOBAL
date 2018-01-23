@@ -24,6 +24,14 @@ document.addEventListener( "DOMContentLoaded", promo_Code_custom, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom_productLevel, false );
 //document.addEventListener( "DOMContentLoaded", live_chat_message, false );
 
+
+// If on search
+if (window.location.href.indexOf("search") > -1){
+	console.log('searchie');
+};
+
+
+
 // FIREING FUNCTIONS ON QUICK VIEW
 $(document).on( 'click', '.product-summary__quickview a', function(){
 	setTimeout(function() {   //calls click event after a certain time
@@ -112,7 +120,7 @@ function clonningClickEvent(){
 
 // ZERO SEARCH SCRIPT
 function zero_results_search(){
-if (window.location.href.indexOf("vip") === -1){
+
 
 	if( ($('#header-search-form .value').length) != 0){
 
@@ -203,7 +211,6 @@ if (window.location.href.indexOf("vip") === -1){
 
 	}
 
-}
 };
 // END ZERO SEARCH SCRIPT
 
