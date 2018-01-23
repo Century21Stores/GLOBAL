@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA 90% - 01.10.18
+// JS PROD MASTER - Zero results page  & BGA 90% - 01.23.18
 // PAST:  PROMO HELP MESSAGE - 11.27.17
 // jrios@c21stores.com
 
@@ -110,8 +110,6 @@ function clonningClickEvent(){
 //END CLICKABLE IMAGES
 
 
-
-
 // ZERO SEARCH SCRIPT
 function zero_results_search(){
 if (window.location.href.indexOf("vip") === -1){
@@ -144,16 +142,19 @@ if (window.location.href.indexOf("vip") === -1){
 		listArr2 = listArr2.filter(Boolean)
 		listArrTotal = listArrTotal.filter(Boolean)
 
-		//console.log(search);
-	  	//console.log(listArr);
-	  	//console.log(listArr2);
-	  	//console.log(listArrTotal);
+		//console.log(search.valueOf());
+	  	//console.log("lsit arr: " + listArr);
+	  	//console.log("lsit arr2: " + listArr2);
+	  	console.log(listArrTotal);
 
 		designerList();
 		function designerList(){
-			for (var z=0; z < search.length; z++){
+			for (var z=0; z < listArrTotal.length; z++){
+				console.log(z + " -> " + listArrTotal[z]);
+				console.log();
 
-		 		if(arrayContains(listArrTotal, search)){
+		 		//if(arrayContains(listArrTotal, search.valueOf())){
+		 		if(listArrTotal.includes(search.valueOf())){	
 					$('.page-content__wrapper').hide("fast");
 					$('.page-content').prepend(
 						'<div id="result">'+
