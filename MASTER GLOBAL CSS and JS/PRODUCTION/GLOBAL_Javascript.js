@@ -1,4 +1,4 @@
-// JS PROD MASTER - Zero results page  & BGA 90% - 01.23.18
+// JS PROD MASTER - Zero results page  & BGA W53 - 01.24.18
 // PAST:  PROMO HELP MESSAGE - 11.27.17
 // jrios@c21stores.com
 
@@ -621,7 +621,7 @@ $(window).load(function() {
 			allSiteGA14();
 			//handbagsGA();
 		if(!urlEhandbags){
-			handbagsGA();
+			//handbagsGA();
 		}
 	}
 	else if(jm_cat === "Kids"){
@@ -647,15 +647,15 @@ $(window).load(function() {
 			//allSiteGA29();
 			allSiteGA14();
 		if(urlEmens){
-			menGA30();
+			//menGA30();
 		}
 	}
 	else if(jm_cat === "Home"){
 			//allSiteGA29();
 			allSiteGA14();
+			homeGA30();
 		if(!urlEhome){
-			//doubleHomeBGA();
-			//WishiWankaGA();
+			//doubleHomeBGA();			
 		}
 
 	}
@@ -820,18 +820,18 @@ function menGA30() {
 // END MENS FOOTBALL GRID AD BANNER
 
 // HANDBAGS & ACCESSORIES FOOTBALL GRID AD BANNER
-function handbagsGA() {
+function homeGA30() {
 
 	//GRID AD TYPE:  enter 1 or 2
 	var gaType = 1;
 	//POSITION
 	var pos = 29;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDEvMTcvMTAvMTMvMjIvNDQ1LzAwMV9XZWVrM19CR0FfR1dQLmpwZyJdXQ/001_Week3_BGA_GWP.jpg?sha=3764e2e0bea739cd";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDEvMjQvMTUvMjMvNDEvMTE0LzAxXzAxV2VlazVfQkdBX0VtZXJhbGRCbHVzaC5qcGciXV0/01_01Week5_BGA_EmeraldBlush.jpg?sha=759388a04807d739";
 	//LINK TEXT
 	var textLink = "SHOP NOW";
 	//LINK URL
-	var urlLINK = "https://www.c21stores.com/categories/handbags-accessories-watches";
+	var urlLINK = "https://www.c21stores.com/categories/new-now-emerald-blush";
 
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
