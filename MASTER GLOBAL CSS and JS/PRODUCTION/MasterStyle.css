@@ -1,5 +1,5 @@
-/* PROD CSS - LIVE CHAT MESSAGE FIX 12.27.17 */
-/* PAST:  ROTATING GLOBAL BANNER - BROWSE BANNERS 11.27.17 */
+/* PROD CSS - HOVER BUTTON JUMPING FIX 01.26.18 jrios */
+/* PAST: LIVE CHAT MESSAGE FIX 12.27.17 */
 
 /* CSS MASTER STYLE JMRV  */
 @import "https://www.c21stores.com/media/W1siZiIsIjIwMTUvMDkvMTgvMDgvNTYvNTEvNjg4L01hc3RlclN0eWxlM19MYW5kaW5nUGFnZTA3MTUuY3NzIl1d/MasterStyle3_LandingPage0715.css?sha=5a57837dcb4befbf";
@@ -1708,6 +1708,19 @@ div.hero-content-block .content-block-content__container--center .jm-multipleCTA
 .jm_lightBox_CTA{
     font-size: 0.9em;
 }
+
+/* ADD TO BAG MESSAGE */
+.jm_button_message{
+    position: absolute;
+    bottom: 11%;
+    width: 100%;
+}
+.product-details__add-to-cart-form{
+    position: relative;
+}
+
+/* END ADD TO BAG MESSAGE */
+
 
 /* COPY BLOCK
 .jm-copy-block{
