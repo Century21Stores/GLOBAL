@@ -1,5 +1,5 @@
 // JS PROD MASTER - Zero results page  & BGA W53 - 01.24.18
-// PAST:  PROMO HELP MESSAGE - 11.27.17
+// PAST:  HOVER ADD TO BUTTON MSG - 11.27.17
 // jrios@c21stores.com
 
 
@@ -22,6 +22,7 @@ document.addEventListener( "DOMContentLoaded", show_banner_when_not_blank, false
 document.addEventListener( "DOMContentLoaded", seoCopyLineFooter, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom_productLevel, false );
+document.addEventListener( "DOMContentLoaded", Hover_message_Button, false );
 //document.addEventListener( "DOMContentLoaded", live_chat_message, false );
 
 
@@ -2111,6 +2112,65 @@ function live_chat_message(){
 	}, 1000);
 }
 // END LIVE CHAT CUSTOM MESSAGE
+
+
+// HOVER MESSAGE ADD TO BAG BUTTON
+
+
+function Hover_message_Button(){
+
+		$('.product-details__add-to-cart-form > section').after(
+			'<div class="jm_button_message" style="display:none; font-size: 14px; color: #e21f26; padding: 0 0 5%; text-rendering: optimizeLegibility; -webkit-transition: width 2s; transition: width 2s;">' +
+			'<b>SHIPPING NOTICE:</b> This Item Will Ship By <b>2/11</b>' +
+			'</div>'
+		);
+
+
+if ($(window).width() >= 700){
+	Hover_message_Button_desktop();
+}
+else{
+	Hover_message_Button_mobile();
+}
+	function Hover_message_Button_desktop(){
+
+		var check_button =  $('.button--with-arrow').attr("value");
+		if(check_button == "add_to_cart"){
+			$('.button--with-arrow, .jm_button_message').hover(
+			   function () {
+				  $('.jm_button_message').stop().fadeIn();
+			   },
+
+			   function () {
+				  $('.jm_button_message').stop().fadeOut();
+			   }
+			);
+
+		}
+	};
+	function Hover_message_Button_mobile(){
+		console.log('mobile');
+		$(window).scroll(function() {
+			var $rightPlace_button = $(".product-details__add-to-cart-action");
+			var actual_height = $(window).height();
+
+
+			window_offset_button = $rightPlace_button.offset().top - $(window).scrollTop();
+
+// 			console.log(actual_height);
+// 			console.log(window_offset_button);
+
+			if((window_offset_button < actual_height)){
+			  $('.jm_button_message').fadeIn(1000);
+			}
+			else{
+			  return false;
+			}
+		});
+
+	};
+};
+// END HOVER MESSAGE ADD TO BAG BUTTON
 
 
 console.log('all running');
