@@ -2126,7 +2126,7 @@ function Hover_message_Button(){
 		);
 
 
-if ($(window).width() >= 700){
+if ($(window).width() >= 1000){
 	Hover_message_Button_desktop();
 }
 else{
