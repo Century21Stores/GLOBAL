@@ -629,7 +629,7 @@ $(window).load(function() {
 			//allSiteGA29();
 			allSiteGA14();
 		if(!urlEkids){
-			//kidsColdWeatherGA();
+			//kidsGA14();
 		}
 	}
 	else if(jm_cat === "Contemporary"){
@@ -682,55 +682,8 @@ $(window).load(function() {
 
 
 
-
-// KIDS BABY ESSENTIALS AD BANNER
-function babyEssentialsGA() {
-
-	//GRID AD TYPE:  enter 1 or 2
-	var gaType = 1;
-	//POSITION
-	var pos = 14;
-	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDkvMDEvMDkvMDIvMzcvOTIxLzAxXzA5V2VlazJfQnJvd3NlR3JpZEFkLmpwZyJdXQ/01_09Week2_BrowseGridAd.jpg?sha=88945d04e2e80e5c";
-	//LINK TEXT
-	var textLink = "SHOP NOW";
-	//LINK URL
-	var urlLINK = "https://www.c21stores.com/categories/kids-baby-essentials";
-
-	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
-	var FixHeights;
-	var realPos = pos-1;
-	window.onresize = function(e) {
-    	clearTimeout(FixHeights);
-    	FixHeights = setTimeout(function() {
-		// console.log('yay it works!');
-		AdClassAll_Single(realPos, gaType);
-    	}, 100);
-	};
-
-	$('.product-grid li:nth-of-type('+ realPos +')').after(
-		'<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
-		'<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
-		'<div class="product-grid-content-block__image"></div>'+
-		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
-		'<div class="content-block-content__container content-block-content__container--center">'+
-		'<div class="content-block-content__message content-block-content__message--light">'+
-		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
-		'</div>'+
-		'</div>'+
-		'</div>'+
-		'</div>'+
-		'</li>'
-	);
-
-	AdClassAll_Single(realPos, gaType);
-
-}
-// END KIDS BABY ESSENTIALS GRID AD BANNER
-
-
-// KIDS COLD WEATHER AD BANNER
-function kidsColdWeatherGA() {
+// KIDS 14
+function kidsGA14() {
 
 	//GRID AD TYPE:  enter 1 or 2
 	var gaType = 1;
@@ -742,6 +695,9 @@ function kidsColdWeatherGA() {
 	var textLink = "SHOP NOW";
 	//LINK URL
 	var urlLINK = "https://www.c21stores.com/categories/kids-cold-weather-shop";
+	//TAG
+	var gaTag = "GA_coldWeather";
+
 
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
@@ -761,7 +717,7 @@ function kidsColdWeatherGA() {
 		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
 		'<div class="content-block-content__container content-block-content__container--center">'+
 		'<div class="content-block-content__message content-block-content__message--light">'+
-		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag +'" class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
 		'</div>'+
 		'</div>'+
 		'</div>'+
@@ -772,7 +728,7 @@ function kidsColdWeatherGA() {
 	AdClassAll_Single(realPos, gaType);
 
 }
-// END KIDS COLD WEATHER GRID AD BANNER
+// END KIDS 14
 
 
 // MENS FOOTBALL GRID AD BANNER
@@ -833,6 +789,8 @@ function homeGA30() {
 	var textLink = "SHOP NOW";
 	//LINK URL
 	var urlLINK = "https://www.c21stores.com/categories/new-now-emerald-blush";
+	//TAG
+	var gaTag = "GA_emeraldBlush";
 
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
@@ -852,7 +810,7 @@ function homeGA30() {
 		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
 		'<div class="content-block-content__container content-block-content__container--center">'+
 		'<div class="content-block-content__message content-block-content__message--light">'+
-		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag + '" class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
 		'</div>'+
 		'</div>'+
 		'</div>'+
@@ -921,11 +879,11 @@ function allSiteGA14() {
 	var pos = 14;
 	//IMAGE URL 370x552
 	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDEvMTAvMTAvNTQvMjgvMzIxLzAxXzFXZWVrM19CR0FfQ2xlYXJhbmNlLmdpZiJdXQ/01_1Week3_BGA_Clearance.gif?sha=6477c29910574d83";
-
 	//LINK TEXT
 	var textLink = "SHOP NOW";
 	//LINK URL
 	var urlLINK = "https://www.c21stores.com/pages/clearance";
+	var gaTag = "GA_clearance90";
 
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
@@ -947,7 +905,7 @@ function allSiteGA14() {
 		'<div class="content-block-content__message content-block-content__message--dark">'+
 		//'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
 	 	//'<p class="content-block-content__action content-block-content__action--dark-text"><a style="color:white; border-color: white;" target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
-		'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag +'" class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
 		'</div>'+
 		'</div>'+
 		'</div>'+
