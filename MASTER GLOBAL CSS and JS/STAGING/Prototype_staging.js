@@ -1289,7 +1289,7 @@ function pdpVideos(){
 
 
 // MULTIPLE CTAS CONTENT BLOCKS
-$('.hero-content-block, .banner-content-block').each(function(index){
+$('.hero-content-block, .banner-content-block, .two-column-square-content-block').each(function(index){
 			console.log("before multi multi");
 	console.log(this);
 	//MULTIPLE CTA HERO

@@ -22,7 +22,7 @@ document.addEventListener( "DOMContentLoaded", show_banner_when_not_blank, false
 document.addEventListener( "DOMContentLoaded", seoCopyLineFooter, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom_productLevel, false );
-document.addEventListener( "DOMContentLoaded", Hover_message_Button, false );
+//document.addEventListener( "DOMContentLoaded", Hover_message_Button, false );
 //document.addEventListener( "DOMContentLoaded", live_chat_message, false );
 
 
@@ -151,7 +151,7 @@ function zero_results_search(){
 		listArr2 = listArr2.filter(Boolean)
 		listArrTotal = listArrTotal.filter(Boolean)
 
-		//console.log(search.valueOf());
+		console.log(search.valueOf());
 	  	//console.log("lsit arr: " + listArr);
 	  	//console.log("lsit arr2: " + listArr2);
 	  	console.log(listArrTotal);
@@ -162,8 +162,8 @@ function zero_results_search(){
 				console.log(z + " -> " + listArrTotal[z]);
 				console.log();
 
-		 		//if(arrayContains(listArrTotal, search.valueOf())){
-		 		if(listArrTotal.includes(search.valueOf())){	
+		 		if(arrayContains(listArrTotal, search.valueOf())){
+		 		//if(listArrTotal.includes(search.valueOf())){	
 					$('.page-content__wrapper').hide("fast");
 					$('.page-content').prepend(
 						'<div id="result">'+
