@@ -1,5 +1,5 @@
-// JS PROD MASTER - Zero results page  & BGA W53 - 01.24.18
-// PAST:  HOVER ADD TO BUTTON MSG - 11.27.17
+// JS PROD MASTER - Shipping msj over 500 - 02.06.18
+// PAST:  Zero results page  & BGA W53 - 01.24.18
 // jrios@c21stores.com
 
 
@@ -22,6 +22,7 @@ document.addEventListener( "DOMContentLoaded", show_banner_when_not_blank, false
 document.addEventListener( "DOMContentLoaded", seoCopyLineFooter, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom_productLevel, false );
+document.addEventListener( "DOMContentLoaded", shipping_Message, false );
 //document.addEventListener( "DOMContentLoaded", Hover_message_Button, false );
 //document.addEventListener( "DOMContentLoaded", live_chat_message, false );
 
@@ -2130,6 +2131,21 @@ else{
 };
 // END HOVER MESSAGE ADD TO BAG BUTTON
 
+
+// SHIPPING MESSAGE SHOPPING CART
+
+function shipping_Message(){
+	var jmprice = $('.cart-prices__group--subtotal > .cart-prices__value').html().replace("$", "");
+	console.log(jmprice);
+	// if($('.checkout-step-summary div:nth-of-type(1) > h2').text() == "Shipping Options"){
+	 	if(jmprice >= 500){
+	 		$('#estimate_shipping_form').after(
+	 	     '<p class="jm-shipping-message">Signature required to receive orders<br/> of $500 or more.<\/p>'
+	 	   	);  
+	 	}
+	// }
+}
+// END SHIPPING MESSAGE SHOPPING CART
 
 console.log('all running');
 

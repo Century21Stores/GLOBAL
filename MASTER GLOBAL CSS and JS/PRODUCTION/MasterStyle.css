@@ -41,7 +41,17 @@ display:none !important;
 }
 /* END LIVE CHAT MESSAGE */
 
-
+/* SHIPPING MESSAGE CART */
+.jm-shipping-message{
+    font-size: 0.8em;
+    color: gray;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    width: 100%;
+    margin: 4% 0;
+    text-align: center;
+}
+/* END SHIPPING MESSAGE CART */
 
 a.Gifts,
 .Gifts{
