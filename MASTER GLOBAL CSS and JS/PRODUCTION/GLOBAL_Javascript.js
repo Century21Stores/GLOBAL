@@ -1,4 +1,4 @@
-// JS PROD MASTER - Shipping msj over 500 - 02.06.18
+// JS PROD MASTER - Shipping msj over 500 Global Ad W02 - 02.09.18
 // PAST:  Zero results page  & BGA W53 - 01.24.18
 // jrios@c21stores.com
 
@@ -873,7 +873,7 @@ function freeShippingBeautyGA() {
 // END BEAUTY FREESHIPPING GRID AD BANNER
 
 
-// ALL SITE SPRIdG GRID AD BANNER
+// ALL SITE 14 GRID AD BANNER
 function allSiteGA14() {
 
 	//GRID AD TYPE:  enter 1 or 2
@@ -881,12 +881,12 @@ function allSiteGA14() {
 	//POSITION
 	var pos = 14;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDEvMTAvMTAvNTQvMjgvMzIxLzAxXzFXZWVrM19CR0FfQ2xlYXJhbmNlLmdpZiJdXQ/01_1Week3_BGA_Clearance.gif?sha=6477c29910574d83";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDIvMDkvMTAvMDQvNTQvOTg3LzAxXzJXZWVrMl9CR0FfUFJFU19NLmpwZyJdXQ/01_2Week2_BGA_PRES_M.jpg?sha=cec61dd121e8f8ba";
 	//LINK TEXT
 	var textLink = "SHOP NOW";
 	//LINK URL
 	var urlLINK = "https://www.c21stores.com/pages/clearance";
-	var gaTag = "GA_clearance90";
+	var gaTag = "GA_Loyalty_FEV";
 
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
