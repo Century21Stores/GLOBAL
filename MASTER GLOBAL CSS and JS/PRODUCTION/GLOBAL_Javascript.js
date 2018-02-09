@@ -22,16 +22,18 @@ document.addEventListener( "DOMContentLoaded", show_banner_when_not_blank, false
 document.addEventListener( "DOMContentLoaded", seoCopyLineFooter, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom_productLevel, false );
-document.addEventListener( "DOMContentLoaded", shipping_Message, false );
 //document.addEventListener( "DOMContentLoaded", Hover_message_Button, false );
 //document.addEventListener( "DOMContentLoaded", live_chat_message, false );
 
 
 // If on search
-if (window.location.href.indexOf("search") > -1){
+if(window.location.href === "https://www.c21stores.com/cart"){
+	console.log('jm shopping cart');	
+	document.addEventListener( "DOMContentLoaded", shipping_Message, false );	
+}
+else if (window.location.href.indexOf("search") > -1){
 	console.log('searchie');
 };
-
 
 
 // FIREING FUNCTIONS ON QUICK VIEW

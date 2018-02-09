@@ -1,0 +1,606 @@
+<!-- ROTATING GLOBAL - LOYALTY 02.07.18 -->
+<style>
+.jm-just-numbers{
+    display: inline-block;
+    width: 23em;
+}
+.jm-rotating-wrap{
+    overflow: auto;
+    width: 40%;
+    margin: 0 auto; 
+}
+.jm-branded-card-header--active-hide{
+    display:none !important;
+}
+  .jm-top-free{
+    font-family: Gotham,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 3.4vw;
+    letter-spacing: 0.1em;
+  }
+  .jm-top-free a {
+    color: #000;
+  }
+  .jm-top-free strong span{
+    font-weight: lighter;
+  }
+.jm-xxoff{
+    font-size: 1.4em;
+}
+  .jm-top-free b {
+    display: none;
+  }
+.jmrv-desktop-global-banner{
+    display:none;
+    text-align: center;
+}
+/* MEMORIAL */
+.jm-promopage{
+    background:#e21f26;
+    /*background-color:#000000;*/
+/* background: rgb(126,194,51); */
+    padding: 0.4% 0;
+    display:none;
+}
+.jmrv-mobile-globalBanner br{
+    display:block;
+}
+.jm-promopage h3{
+    color:white;
+    margin: 0;
+/*     font-weight: lighter; */
+    font-family: Gotham-light, "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 1.6em;
+    text-rendering: optimizeLegibility;
+/*     -webkit-font-smoothing: antialiased;   */
+}
+.jm-promopage h3 span{
+background: #ffffff;
+/*      color: #CF2228; */
+/*  color: #436200; */
+    color: #e21f26;
+    /*color: #000000;*/
+    font-weight: bold;
+    padding: 0 1%;
+    display: inline-block;
+    margin: 0.4% 0 0.2%;
+    font-weight: bold;
+    letter-spacing: 0.07em;
+}
+
+.jm-promopage p{
+    color: white;
+    line-height: 1.3;
+    text-transform: none;
+    margin: 0 auto;
+    font-weight: normal;
+    display: none;
+    position: fixed;
+    height: 100%;
+    z-index: 99999;
+    /*background-color: #000000;*/
+    background: #e21f26;
+    /* background: rgb(126,194,51); */
+    font-size: 200%;
+    padding: 25% 10%;
+    width: 80%;
+    left: 0;
+    text-align: justify;
+}
+#jm-details{
+ -ms-transform: rotate(0deg); /* IE 9 */
+    -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+    -webkit-transition: all 1s; /* Safari */
+    transition: all 1s;
+font-size: 3em;
+    line-height: 0.5;
+    font-weight: 100;
+    margin: 0.2em 0 0;
+    cursor: pointer;
+}
+#jm-details img{
+    -webkit-transition: all 1s; /* Safari */
+    transition: all 1s;
+}
+.IsGoingDown{
+ -ms-transform: rotate(180deg) !important; /* IE 9 */
+    -webkit-transform: rotate(180deg) !important; /* Chrome, Safari, Opera */
+    transform: rotate(180deg) !important;
+    line-height: 0.5 !important;
+    margin: 0 0 0.3em !important;
+}
+.jm-promopage{
+    font-size: 5.5px;
+}
+span.jm-asterisk{
+    background: none !important;
+    color: white !important;
+    padding: 0% !important;
+    font-weight: lighter;
+}
+span.jm-asterisk2{
+    vertical-align: super;
+    font-size: 0.61em;
+    color: #000000 !important;
+}
+span.jm-asterisk{
+    font-size: 1em;
+    font-weight: lighter !important;
+    letter-spacing: -1px !important;
+}
+.jm-extra-info{
+    margin: 5% 0;
+    display: block;
+}
+
+.slideDown{
+    animation: slideDown 7.5s linear infinite 0s;
+    -ms-animation: slideDown 7.5s linear infinite 0s;
+    -webkit-animation: slideDown 7.5s linear infinite 0s;
+    visibility: visible !important;
+    transition-delay: 1s;
+}
+
+@keyframes slideDown {
+    0% { opacity: 0; }
+    5% { opacity: 0; transform: translateY(-50px); }
+    10% { opacity: 1; transform: translateY(0px); }
+    25% { opacity: 1; transform: translateY(0px); }
+    30% { opacity: 0; transform: translateY(50px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@-moz-keyframes slideDown{
+    0% { opacity: 0; }
+    5% { opacity: 0; -moz-transform: translateY(-50px); }
+    10% { opacity: 1; -moz-transform: translateY(0px); }
+    25% { opacity: 1; -moz-transform: translateY(0px); }
+    30% { opacity: 0; -moz-transform: translateY(50px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@-webkit-keyframes slideDown{
+    0% { opacity: 0; }
+    5% { opacity: 0; -webkit-transform: translateY(-50px); }
+    10% { opacity: 1; -webkit-transform: translateY(0px); }
+    25% { opacity: 1; -webkit-transform: translateY(0px); }
+    30% { opacity: 0; -webkit-transform: translateY(50px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@-ms-keyframes slideDown{
+    0% { opacity: 0; }
+    5% { opacity: 0; -ms-transform: translateY(-50px); }
+    10% { opacity: 1; -ms-transform: translateY(0px); }
+    25% { opacity: 1; -ms-transform: translateY(0px); }
+    30% { opacity: 0; -ms-transform: translateY(50px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+.slideDown{
+    position: relative;
+}
+span.jm-online-only{
+    position: absolute;
+    top: -3%;
+    right: 33%;
+    color:white !important;
+    background: none !important;
+    font-weight: normal;
+    font-size: 1.05em;
+    text-transform: uppercase;
+    letter-spacing: 0.15em
+}
+h3.jm-free-shipping{
+  -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.05em;
+    font-size: 1.3em;
+    font-weight: bold !important;
+}
+
+/* .......... TaBLEt SCREENS .......... */
+@media (min-width:640px) {
+.jm-promopage p{
+    padding:12% 2%;
+}
+
+
+}
+
+/* .......... TaBLEt SCREENS .......... */
+@media (min-width:700px) {
+.jmrv-desktop-global-banner{
+    display:block;
+}
+.jmrv-mobile-globalBanner{
+    display:none;
+}
+.jm-promopage{
+font-size: 0.6em;
+}
+
+    .jm-top-free{
+      font-size: 157%;
+      /*background-color: #C6C8CA;*/
+            background-color: #000000;
+    }
+    .jm-top-free a{
+      color: #fff;
+    }
+    .jm-top-free b {
+      display: inline;
+    }
+.jm-promopage p{
+    color: white;
+    line-height: 1.3;
+    text-transform: none;
+    margin: 0 auto;
+    font-weight: normal;
+    display: none;
+    position: relative;
+    height: auto;
+    z-index: 99999;
+   background: #e21f26;
+     /*background-color: #000000;*/
+/*  background: rgb(126,194,51); */
+    font-size: 1.05em;
+    padding: 0%;
+    width: 100%;
+    left: 0;
+    max-width: 1100px;
+    left: 0;
+    max-width: 1100px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    padding: 0.5% 0px;
+}
+.jm-shipping-plcc-acquisition-mobile + .html-content-block{
+    display: none;
+}
+
+.jm-promopage h3{
+    font-weight: lighter;
+}
+.jm-promopage > h3:nth-of-type(1){
+    font-size: 1vw;
+}
+.jm-3-columns div{
+    display: inline-block;
+    padding: 0 1%;
+    border-right: 1px solid white;
+}
+.jm-3-columns div:last-of-type{
+    border-right: none;
+}
+.jm-3-columns div h3{
+    line-height: 1;
+}
+.jm-3-columns div h3.jm-subheader{
+    font-size: 1.2em;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+}
+.slideDown{
+    padding: 0.57% 0;
+}
+.jm-initial-message-wrap{
+      padding: 0.6% 0;
+}
+
+.jm-rotating-wrap{
+    width: 87%;
+}
+
+}
+/* .......... BIGGER SCREENS .......... */
+@media (min-width:1280px) {
+.jm-promopage p{
+    width:50%;
+}
+.jm-rotating-wrap{
+    font-size: 1.13em;
+    width: 91em;
+}
+.jm-promopage > h3:nth-of-type(1){
+    font-size: 1.5em;
+}
+
+}
+
+@media (max-width:700px) {
+#jm-details,
+.jm-shipping-plcc-acquisition-mobile,
+.jm-shipping-plcc-retention-mobile{
+    display:none;
+}
+.jmrv-mobile-globalBanner{
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 75%;
+    text-align: center;
+    z-index: 99999;
+}
+.jm-promopage {
+    padding: 2.4% 0;
+}
+.jm-promopage *{
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+.jm-3-columns span{
+    width: 100%;
+    display: block;
+}
+.jm-promopage h3{
+    font-size: 2.34vw;
+}
+.jm-rotating-wrap{
+    width: 100%;    
+}
+.jm-just-numbers{
+    width: initial;
+}
+
+}
+
+</style>
+<!-- <h3 class="jm-top-free"><a href='/pages/shipping-information'><strong>FREE SHIPPING <span>ON ORDERS $75+</span></a></strong></h3> -->
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(window).load(function() {
+
+ if((window.location.href == "https://www.c21stores.com/") || (window.location.href == "https://www.c21stores.com/#jmlb #jmdetails") || (window.location.href == "https://www.c21stores.com/pages/memday2017") || (window.location.href == "https://www.c21stores.com/pages/springpromo17#") || (window.location.href.indexOf("https://www.c21stores.com/?") > -1)){
+ $('.jm-promopage').hide();
+ $('.jm-top-free').show();
+ $('.branded-card-header--active').removeClass('jm-branded-card-header--active-hide');
+ }
+ else{
+ showGlobalBanner();
+ $('.jm-top-free').hide();
+ $('.jm-promopage').show();
+ $('.branded-card-header--active').addClass('jm-branded-card-header--active-hide');
+ }
+
+$("#jm-details, .jm-promopage h3, .jmrv-close-mobile, .jm-promopage p").click(function() {
+    showDetails();
+    $(".jm-promopage p").slideToggle();
+});
+function showGlobalBanner(){
+    $('.branded-card-header').after(
+
+        '<div class="jmrv-mobile jmrv-mobile-globalBanner">'+
+            '<div class="jm-promopage">'+
+            '<h3><span>LOYALTY AND C21STATUS CREDIT CARD MEMBERS</span></h3>'+
+            '<div class="jm-rotating-wrap">'+
+                '<section class="jm-3-columns jm-initial-message-wrap jm-just-numbers" style="text-align: right; margin-right: 0.5%;">'+
+                    '<div>'+
+                        '<h3>SPEND</h3>'+
+                    '</div>'+
+                '</section>'+
+                '<section class="jm-3-columns jm-initial-message-wrap jm-a jm-just-numbers" style="width: 8em;">'+
+                    '<div>'+
+                        '<h3> <b class="jm-xxoff">$125 </b></h3>'+
+                    '</div>'+
+                '</section>'+
+                '<section class="jm-3-columns jm-initial-message-wrap jm-just-numbers" style="width: 13em;">'+
+                    '<div>'+
+                        '<h3>EARN UP TO</h3>'+
+                    '</div>'+
+                '</section>'+           
+                '<section class="jm-3-columns jm-initial-message-wrap jm-b jm-just-numbers" style="width: 6em;">'+
+                    '<div>'+
+                        '<h3><b class="jm-xxoff">$10 </b></h3>'+
+                    '</div>'+
+                '</section>'+
+                '<section class="jm-3-columns jm-initial-message-wrap jm-just-numbers" style="text-align: left;">'+
+                    '<div>'+
+                        '<h3><b class="jm-xxoff"><span class="jm-asterisk">**</span> </b></h3>'+
+                    '</div>'+
+                '</section>'+               
+            '</div>'+           
+                // '<h3 class="jm-mobile-promos"><b>$30 OFF</b> $150 PURCHASE | <b>$40 OFF</b> $200 PURCHASE<span class="jm-asterisk">*</span></h3>'+
+                '<div id="jm-details"><img alt="info and exclisions" src="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDUvMjAvMTIvMDgvMDMvNDE0L2Fycm93LnBuZyJdXQ/arrow.png?sha=db29f10880a0363a"/></div>'+
+                    '<p>'+
+                    '<span class="jm-3-columns">'+
+                        '<span>ONLINE ONLY | <b>FREE SHIPPING</b>***</span>'+
+                    '</span><br/><br/>'+
+                    '<span class="jm-3-columns">'+
+                        '<span><b>**VALUE REPRESENTS ELITE STATUS EARNINGS</b></span>'+
+                        // '<span><b>4</b> POINTS/$1 <br/>PREMIER CARDHOLDERS</span>'+
+                        // '<span><b>8</b> POINTS/$1 <br/>ELITE CARDHOLDERS</span>'+
+                    '</span>'+
+                    '*This rewards program is provided by Century 21 Department Stores, and its terms may change at any time. For Full Rewards Terms and Conditions, please see WWW.C21STORES.COM/C21STATUS-TERMS. Reward Dollars are good for in-store & online merchandise only. Reward Dollars have no cash value and may not be redeemed for purchase of gift cards or for select licensed and leased departments. Exclusions apply. **Spend $1,500 or more in a rolling 12 month period to qualify as an Elite cardholder. ***Elite C21STATUS members get free shipping on all orders, Premier C21STATUS members: on orders $50 and over, Red Loyalty members: on orders $75 and over. C21STATUS Credit Card usage is required for Elite and Premier members. See WWW.C21STORES.COM for more details. †Subject to credit approval. Offer valid with the use of the C21STATUS Credit Card on the day you are approved. The discount does not apply to prior purchases, gift cards, services or select licensed or leased departments. Exclusions may vary, visit WWW.C21STORES.COM for details. The C21STATUS Credit Card is issued by Comenity Capital Bank.'+
+                    '</p>'+
+                '</div>'+
+        '</div>'+
+
+        '<div class="jmrv-desktop jmrv-desktop-global-banner">'+
+            '<div class="jm-promopage">'+
+            // '<h3><span>LOYALTY AND C21STATUS CREDIT CARD MEMBERS | <b> EARN REWARDS EVERY TIME THEY SHOP</b></span></h3>'+
+            '<h3>LOYALTY AND C21STATUS CREDIT CARD MEMBERS</h3>'+
+            '<div class="jm-rotating-wrap">'+
+                '<section class="jm-3-columns jm-initial-message-wrap jm-just-numbers" style="text-align: right; margin-right: 0.5%;width: 8em;">'+
+                    '<div>'+
+                        '<h3>SPEND</h3>'+
+                    '</div>'+
+                '</section>'+
+                '<section class="jm-3-columns jm-initial-message-wrap jm-a jm-just-numbers" style="width: 8em;">'+
+                    '<div>'+
+                        '<h3> <b class="jm-xxoff">$125 </b></h3>'+
+                    '</div>'+
+                '</section>'+
+                '<section class="jm-3-columns jm-initial-message-wrap jm-just-numbers" style="width: 12em;">'+
+                    '<div>'+
+                        '<h3>EARN UP TO</h3>'+
+                    '</div>'+
+                '</section>'+           
+                '<section class="jm-3-columns jm-initial-message-wrap jm-b jm-just-numbers" style="width: 6em;text-align: right;">'+
+                    '<div>'+
+                        '<h3><b class="jm-xxoff">$10 </b></h3>'+
+                    '</div>'+
+                '</section>'+
+                '<section class="jm-3-columns jm-initial-message-wrap jm-just-numbers" style="width: 2em;">'+
+                    '<div>'+
+                        '<h3><b class="jm-xxoff"><span class="jm-asterisk">**</span> </b></h3>'+
+                    '</div>'+
+                '</section>'+
+                '<section class="jm-3-columns jm-initial-message-wrap jm-just-numbers" style="text-align: center;width: 15em;">'+
+                    '<div>'+
+                        '<h3>+ FREE SHIPPING</span></h3>'+
+                    '</div>'+
+                '</section>'+                               
+            '</div>'+
+            '<h3 class="jm-free-shipping"><span class="jm-asterisk">**</span>VALUE REPRESENTS ELITE STATUS EARNINGS</h3>'+
+            // '<h3 class="jm-free-shipping"><b>+ FREE SHIPPING <span class="jm-online-only">Online Only</span></b></h3>'+
+            '<div id="jm-details"><img alt="info and exclisions" src="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTEvMTQvMTIvNDgvMzcvNDQxL2Fycm93LnBuZyJdXQ/arrow.png?sha=faf8101d40a0af30"/></div>'+
+            '<p>*This rewards program is provided by Century 21 Department Stores, and its terms may change at any time. For Full Rewards Terms and Conditions, please see WWW.C21STORES.COM/C21STATUS-TERMS. Reward Dollars are good for in-store & online merchandise only. Reward Dollars have no cash value and may not be redeemed for purchase of gift cards or for select licensed and leased departments. Exclusions apply. **Spend $1,500 or more in a rolling 12 month period to qualify as an Elite cardholder. ***Elite C21STATUS members get free shipping on all orders, Premier C21STATUS members: on orders $50 and over, Red Loyalty members: on orders $75 and over. C21STATUS Credit Card usage is required for Elite and Premier members. See WWW.C21STORES.COM for more details. †Subject to credit approval. Offer valid with the use of the C21STATUS Credit Card on the day you are approved. The discount does not apply to prior purchases, gift cards, services or select licensed or leased departments. Exclusions may vary, visit WWW.C21STORES.COM for details. The C21STATUS Credit Card is issued by Comenity Capital Bank.</p>'+
+            '</div>'+
+        '</div>'
+    );
+}
+
+
+// GLOBAL HEADER ROTATING MESSAGE DESKTOP
+
+// <span class="jm-asterisk jm-asterisk">**</span>
+function global_rotating_message(){
+
+    var rotatingMessages = [
+        '<section class="jm-3-columns slideDown"><div><h3> <b class="jm-xxoff">$250 </b></h3></div></section>',
+        '<section class="jm-3-columns slideDown"><div><h3> <b class="jm-xxoff">$500 </b></h3></div></section>',
+        '<section class="jm-3-columns slideDown"><div><h3> <b class="jm-xxoff">$1000 </b></h3></div></section>',
+        '<section class="jm-3-columns slideDown"><div><h3> <b class="jm-xxoff">$1250 </b></h3></div></section>',
+        '<section class="jm-3-columns slideDown"><div><h3> <b class="jm-xxoff">$125 </b></h3></div></section>',
+        
+    ];
+
+    var rotatingMessages2 = [
+        '<section class="jm-3-columns slideDown"><div><h3> <b class="jm-xxoff">$20 </b></h3></div></section>',
+        '<section class="jm-3-columns slideDown"><div><h3> <b class="jm-xxoff">$40 </b></h3></div></section>',
+        '<section class="jm-3-columns slideDown"><div><h3> <b class="jm-xxoff">$80 </b></h3></div></section>',
+        '<section class="jm-3-columns slideDown"><div><h3> <b class="jm-xxoff">$100 </b></h3></div></section>',
+        '<section class="jm-3-columns slideDown"><div><h3> <b class="jm-xxoff">$10 </b></h3></div></section>',
+        
+    ];  
+
+        function rotatingMessage(e) {
+
+                var msg = rotatingMessages.shift();
+                rotatingMessages.push(msg);
+
+        $(".jmrv-desktop-global-banner section.jm-a").html(msg);
+
+                $('.jm-shipping-plcc-acquisition a').hover(function(e){
+                    //$('a.Shoes').css('background','red');
+                        clearInterval(jmtimer);
+                }, function(e){
+                    //$('a.Shoes').css('background','blue');
+                        jmtimer = setInterval( rotatingMessage, 2300);
+                });
+
+        };
+
+        function rotatingMessage2(e) {
+
+                var msg = rotatingMessages2.shift();
+                rotatingMessages2.push(msg);
+
+        $(".jmrv-desktop-global-banner section.jm-b").html(msg);
+
+                $('.jm-shipping-plcc-acquisition a').hover(function(e){
+                    //$('a.Shoes').css('background','red');
+                        clearInterval(jmtimer);
+                }, function(e){
+                    //$('a.Shoes').css('background','blue');
+                        jmtimer = setInterval( rotatingMessage2, 2300);
+                });
+
+        };
+
+        var jmtimer = setInterval( rotatingMessage, 2100);
+        var jmtimer = setInterval( rotatingMessage2, 2100);
+
+}global_rotating_message();
+
+
+//END GLOBAL HEADER ROTATING MESSAGE DESKTOP
+
+
+// GLOBAL HEADER ROTATING MESSAGE MOBILE
+function global_rotating_message_mobile(){
+
+
+    var rotatingMessages = [
+        '<section class="jm-3-columns slideDown"><div><h3> <b class="jm-xxoff">$250 </b></h3></div></section>',
+        '<section class="jm-3-columns slideDown"><div><h3> <b class="jm-xxoff">$500 </b></h3></div></section>',
+        '<section class="jm-3-columns slideDown"><div><h3> <b class="jm-xxoff">$1000 </b></h3></div></section>',
+        '<section class="jm-3-columns slideDown"><div><h3> <b class="jm-xxoff">$1250 </b></h3></div></section>',
+        '<section class="jm-3-columns slideDown"><div><h3> <b class="jm-xxoff">$125 </b></h3></div></section>',
+        
+    ];
+
+    var rotatingMessages2 = [
+        '<section class="jm-3-columns slideDown"><div><h3> <b class="jm-xxoff">$20</b></h3></div></section>',
+        '<section class="jm-3-columns slideDown"><div><h3> <b class="jm-xxoff">$40 </b></h3></div></section>',
+        '<section class="jm-3-columns slideDown"><div><h3> <b class="jm-xxoff">$80 </b></h3></div></section>',
+        '<section class="jm-3-columns slideDown"><div><h3> <b class="jm-xxoff">$100 </b></h3></div></section>',
+        '<section class="jm-3-columns slideDown"><div><h3> <b class="jm-xxoff">$10 </b></h3></div></section>',
+        
+    ];  
+
+        function rotatingMessage(e) {
+
+                var msg = rotatingMessages.shift();
+                rotatingMessages.push(msg);
+
+        $(".jmrv-mobile-globalBanner section.jm-a").html(msg);
+
+                $('.jm-shipping-plcc-acquisition a').hover(function(e){
+                    //$('a.Shoes').css('background','red');
+                        clearInterval(jmtimer);
+                }, function(e){
+                    //$('a.Shoes').css('background','blue');
+                        jmtimer = setInterval( rotatingMessage, 2300);
+                });
+
+        };
+
+        function rotatingMessage2(e) {
+
+                var msg = rotatingMessages2.shift();
+                rotatingMessages2.push(msg);
+
+        $(".jmrv-mobile-globalBanner section.jm-b").html(msg);
+
+                $('.jm-shipping-plcc-acquisition a').hover(function(e){
+                    //$('a.Shoes').css('background','red');
+                        clearInterval(jmtimer);
+                }, function(e){
+                    //$('a.Shoes').css('background','blue');
+                        jmtimer = setInterval( rotatingMessage2, 2300);
+                });
+
+        };
+
+        var jmtimer = setInterval( rotatingMessage, 2300);
+        var jmtimer = setInterval( rotatingMessage2, 2300);
+
+}global_rotating_message_mobile();
+
+
+//END GLOBAL HEADER ROTATING MESSAGE MOBILE
+
+
+
+function showDetails(){
+    $("#jm-details img").toggleClass("IsGoingDown");
+}
+
+});
+</script>
