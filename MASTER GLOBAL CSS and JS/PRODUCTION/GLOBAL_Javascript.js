@@ -1,4 +1,4 @@
-// JS PROD MASTER - Shipping msj over 500 Global Ad W02 - 02.09.18
+// JS PROD MASTER - Shipping msj over 500 Grid Ad W02 - 02.09.18
 // PAST:  Zero results page  & BGA W53 - 01.24.18
 // jrios@c21stores.com
 
@@ -881,11 +881,11 @@ function allSiteGA14() {
 	//POSITION
 	var pos = 14;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDIvMDkvMTAvMDQvNTQvOTg3LzAxXzJXZWVrMl9CR0FfUFJFU19NLmpwZyJdXQ/01_2Week2_BGA_PRES_M.jpg?sha=cec61dd121e8f8ba";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDIvMDkvMTEvMjIvMjcvMTA0LzAxXzJXZWVrMl9CR0FfUFJFU19NLmpwZyJdXQ/01_2Week2_BGA_PRES_M.jpg?sha=6fc8c0fad3490898";
 	//LINK TEXT
-	var textLink = "SHOP NOW";
+	var textLink = "INFO/EXCLUSIONS";
 	//LINK URL
-	var urlLINK = "https://www.c21stores.com/pages/clearance";
+	var urlLINK = "https://www.c21stores.com/pages/loyalty-c21status-members-info-exclusions";
 	var gaTag = "GA_Loyalty_FEV";
 
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
@@ -906,9 +906,9 @@ function allSiteGA14() {
 		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
 		'<div class="content-block-content__container content-block-content__container--center">'+
 		'<div class="content-block-content__message content-block-content__message--dark">'+
-		//'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
-	 	//'<p class="content-block-content__action content-block-content__action--dark-text"><a style="color:white; border-color: white;" target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
-		'<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag +'" class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		// '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+	 	'<p class="content-block-content__action content-block-content__action--light-text"><a style="color:white; border-color: white;" target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		// '<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag +'" class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
 		'</div>'+
 		'</div>'+
 		'</div>'+
