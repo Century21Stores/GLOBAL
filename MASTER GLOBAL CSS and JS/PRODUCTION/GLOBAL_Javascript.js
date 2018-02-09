@@ -881,7 +881,7 @@ function allSiteGA14() {
 	//POSITION
 	var pos = 14;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDIvMDkvMTEvMjIvMjcvMTA0LzAxXzJXZWVrMl9CR0FfUFJFU19NLmpwZyJdXQ/01_2Week2_BGA_PRES_M.jpg?sha=6fc8c0fad3490898";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDIvMDkvMTYvMDcvMDMvNzczLzAxXzJXZWVrMl9CR0FfUFJFU19NLmpwZyJdXQ/01_2Week2_BGA_PRES_M.jpg?sha=90a8332aa791e488";
 	//LINK TEXT
 	var textLink = "INFO/EXCLUSIONS";
 	//LINK URL
