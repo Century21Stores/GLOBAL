@@ -16,7 +16,10 @@ display:none !important;
 }
  END SHIPPING */
 
-
+/* QuickLook size selections FIX*/
+.inline-quickview__container .ui-menu-item{
+    font-size:12px;
+}
 
 /* LIVE CHAT MESSAGE */
 #livechat-full{
