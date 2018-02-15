@@ -1,4 +1,4 @@
-// JS PROD MASTER - Shipping msj over 500 - LIVE CHAT MSJ PRESIDENT DAY - 02.15.18
+// JS PROD MASTER - Shipping msj over 500 - LIVE CHAT MSJ PRESIDENT DAY OFF - Clearance BGA up - 02.15.18
 // PAST:  Zero results page  & BGA W53 - 01.24.18
 // jrios@c21stores.com
 
@@ -22,7 +22,7 @@ document.addEventListener( "DOMContentLoaded", show_banner_when_not_blank, false
 document.addEventListener( "DOMContentLoaded", seoCopyLineFooter, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom_productLevel, false );
-document.addEventListener( "DOMContentLoaded", live_chat_message, false );
+//document.addEventListener( "DOMContentLoaded", live_chat_message, false );
 //document.addEventListener( "DOMContentLoaded", Hover_message_Button, false );
 
 
@@ -596,26 +596,26 @@ $(window).load(function() {
 
 	if(jm_cat === "Tech"){
 		//allSiteGA29();
-		allSiteGA14();
+		//allSiteGA14();
 		if(!urlEtech){
 // 			WishiWankaGA();
 		}
 	}
 	else if(jm_cat === "New + Now"){
 			//allSiteGA29();
-			allSiteGA14();
+			//allSiteGA14();
 	}
 	else if(jm_cat === "Beauty"){
 		if(!urlEbeauty){
 			//freeShippingBeautyGA();
-			allSiteGA14();
+			//allSiteGA14();
 			//allSiteGA29();
 // 			WishiWankaGA();
 		}
 	}
 	else if(jm_cat === "Shoes"){
 			//allSiteGA29();
-			allSiteGA14();
+			//allSiteGA14();
 		if(!urlEshoes){
 			//newArrivalsShoesGA();
 		}
@@ -623,7 +623,7 @@ $(window).load(function() {
 	else if(jm_cat === "Handbags &amp; Accessories"){
 		//doubleHandbagsBGA();
 			//allSiteGA29();
-			allSiteGA14();
+			//allSiteGA14();
 			//handbagsGA();
 		if(!urlEhandbags){
 			//handbagsGA();
@@ -631,7 +631,7 @@ $(window).load(function() {
 	}
 	else if(jm_cat === "Kids"){
 			//allSiteGA29();
-			allSiteGA14();
+			//allSiteGA14();
 		if(!urlEkids){
 			//kidsGA14();
 		}
@@ -643,21 +643,21 @@ $(window).load(function() {
 	}
 	else if(jm_cat === "Women"){
 			//allSiteGA29();
-			allSiteGA14();
+			//allSiteGA14();
 		if(!urlEmwomens){
 			//newArrivalsWomenGA();
 		}
 	}
 	else if(jm_cat === "Men"){
 			//allSiteGA29();
-			allSiteGA14();
+			//allSiteGA14();
 		if(urlEmens){
 			//menGA30();
 		}
 	}
 	else if(jm_cat === "Home"){
 			//allSiteGA29();
-			allSiteGA14();
+			//allSiteGA14();
 			homeGA30();
 		if(!urlEhome){
 			//doubleHomeBGA();			
@@ -882,11 +882,11 @@ function allSiteGA14() {
 	//POSITION
 	var pos = 14;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDIvMDkvMTYvMDcvMDMvNzczLzAxXzJXZWVrMl9CR0FfUFJFU19NLmpwZyJdXQ/01_2Week2_BGA_PRES_M.jpg?sha=90a8332aa791e488";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDEvMTAvMTAvNTQvMjgvMzIxLzAxXzFXZWVrM19CR0FfQ2xlYXJhbmNlLmdpZiJdXQ/01_1Week3_BGA_Clearance.gif?sha=6477c29910574d83";
 	//LINK TEXT
-	var textLink = "INFO/EXCLUSIONS";
+	var textLink = "SHOP NOW";
 	//LINK URL
-	var urlLINK = "https://www.c21stores.com/pages/loyalty-c21status-members-info-exclusions";
+	var urlLINK = "https://www.c21stores.com/pages/clearance";
 	var gaTag = "GA_Loyalty_FEV";
 
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
@@ -908,8 +908,8 @@ function allSiteGA14() {
 		'<div class="content-block-content__container content-block-content__container--center">'+
 		'<div class="content-block-content__message content-block-content__message--dark">'+
 		// '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
-	 	'<p class="content-block-content__action content-block-content__action--light-text"><a style="color:white; border-color: white;" target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
-		// '<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag +'" class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+	 	//'<p class="content-block-content__action content-block-content__action--light-text"><a style="color:white; border-color: white;" target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag +'" class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
 		'</div>'+
 		'</div>'+
 		'</div>'+
