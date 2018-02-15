@@ -1,4 +1,4 @@
-// JS PROD MASTER - Shipping msj over 500 Grid Ad W02 - 02.09.18
+// JS PROD MASTER - Shipping msj over 500 - LIVE CHAT MSJ PRESIDENT DAY - 02.15.18
 // PAST:  Zero results page  & BGA W53 - 01.24.18
 // jrios@c21stores.com
 
@@ -22,8 +22,9 @@ document.addEventListener( "DOMContentLoaded", show_banner_when_not_blank, false
 document.addEventListener( "DOMContentLoaded", seoCopyLineFooter, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom_productLevel, false );
+document.addEventListener( "DOMContentLoaded", live_chat_message, false );
 //document.addEventListener( "DOMContentLoaded", Hover_message_Button, false );
-//document.addEventListener( "DOMContentLoaded", live_chat_message, false );
+
 
 
 // If on search
@@ -2069,7 +2070,7 @@ function promo_Code_custom_productLevel(){
 // LIVE CHAT CUSTOM MESSAGE
 function live_chat_message(){
 	setTimeout(function(){
-		$('#livechat-full').prepend("<div class='jm-livechat-message'>Our Call Center will be closed on Monday, 12/25/17 in observance of Christmas Day and on Monday, 1/1/18 in observance of New Year's day</div>");
+		$('#livechat-full').prepend("<div class='jm-livechat-message'>Our Call Center will be closed on Monday, 02/19/17 in observance of Presidents Day.</div>");
 	}, 1000);
 }
 // END LIVE CHAT CUSTOM MESSAGE
