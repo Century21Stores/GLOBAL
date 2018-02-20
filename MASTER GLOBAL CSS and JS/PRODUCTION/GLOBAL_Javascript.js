@@ -1,5 +1,5 @@
-// JS PROD MASTER - Shipping msj over 500 - LIVE CHAT MSJ PRESIDENT DAY OFF - Clearance BGA up - 02.15.18
-// PAST:  Zero results page  & BGA W53 - 01.24.18
+// JS PROD MASTER - BGA tracking test - LIVE CHAT MSJ PRESIDENT DAY OFF - Clearance BGA up - 02.20.18
+// PAST:  Shipping msj over 500 - Zero results page  & BGA W53 - 01.24.18
 // jrios@c21stores.com
 
 
@@ -792,7 +792,7 @@ function homeGA30() {
 	//LINK TEXT
 	var textLink = "SHOP NOW";
 	//LINK URL
-	var urlLINK = "https://www.c21stores.com/categories/new-now-emerald-blush";
+	var urlLINK = "https://www.c21stores.com/categories/new-now-emerald-blush?bga=bga_test_name&gal=add_this-location";
 	//TAG
 	var gaTag = "GA_emeraldBlush";
 
