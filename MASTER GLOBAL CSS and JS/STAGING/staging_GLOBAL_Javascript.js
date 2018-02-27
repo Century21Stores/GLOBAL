@@ -1,4 +1,4 @@
-// STAGING - Promo Help message 01.12.17
+// STAGING - Promo Help message 02.27.17
 // OLD: Fanreel PDPs NON CTA LIGHT BOX HERO CLICKABLE ADDED 08.29.17
 
 
@@ -1838,11 +1838,12 @@ function thumbnails_duplicat_fix(){
 
 // CONTACT PAGE MESSAGE
 if (window.location.href.indexOf("contact") > -1){
-		$('.page-messages').clone().appendTo('body').addClass('clonemessage');
+		$('.page-messages').clone().appendTo('.page-content--contact').addClass('clonemessage');
 		$('.page-messages').addClass('jm-center-my-content');
 		$('.message__type').css('top','19px');
 		$('.page-messages').stop().wrapInner( $( "<div class='jm-message-wrap'></div>" )).delay(3500).fadeOut();
 		$(".message--success > .message__text").html('Thanks! We’ve received your message <br/> and will respond as soon as possible.');
+		$('div.page-content--contact > .jm-center-my-content').css('display','block !important');
 
 }
 

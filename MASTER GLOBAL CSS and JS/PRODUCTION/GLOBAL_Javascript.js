@@ -2150,6 +2150,21 @@ function shipping_Message(){
 }
 // END SHIPPING MESSAGE SHOPPING CART
 
+
+
+// CONTACT PAGE MESSAGE
+if (window.location.href.indexOf("contact") > -1){
+		$('.page-messages').clone().appendTo('.page-content--contact').addClass('clonemessage');
+		$('.page-messages').addClass('jm-center-my-content');
+		$('.message__type').css('top','19px');
+		$('.page-messages').stop().wrapInner( $( "<div class='jm-message-wrap'></div>" )).delay(3500).fadeOut();
+		$(".message--success > .message__text").html('Thanks! We’ve received your message <br/> and will respond as soon as possible.');
+		$('div.page-content--contact > .jm-center-my-content').css('display','block !important');
+
+}
+// END CONTACT PAGE MESSAGE
+
+
 console.log('all running');
 
 
