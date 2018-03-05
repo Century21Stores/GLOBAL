@@ -780,21 +780,21 @@ function menGA30() {
 }
 // END MENS FOOTBALL GRID AD BANNER
 
-// HANDBAGS & ACCESSORIES FOOTBALL GRID AD BANNER
+// HOME CATEGORY POS 2 GRID AD BANNER
 function homeGA30() {
 
 	//GRID AD TYPE:  enter 1 or 2
-	var gaType = 1;
+	var gaType = 2;
 	//POSITION
 	var pos = 29;
 	//IMAGE URL 370x552
-	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDEvMjQvMTUvMjMvNDEvMTE0LzAxXzAxV2VlazVfQkdBX0VtZXJhbGRCbHVzaC5qcGciXV0/01_01Week5_BGA_EmeraldBlush.jpg?sha=759388a04807d739";
+	var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDMvMDIvMTEvMjcvMTYvNi8wMV9NRURJVEFUSVZFX0Jyb3dzZUdyaWRBZC5qcGciXV0/01_MEDITATIVE_BrowseGridAd.jpg?sha=77691885adb694e2";
 	//LINK TEXT
 	var textLink = "SHOP NOW";
 	//LINK URL
-	var urlLINK = "https://www.c21stores.com/categories/new-now-emerald-blush?bga=bga_test_name&gal=add_this-location";
+	var urlLINK = "https://www.c21stores.com/categories/new-now-meditative-mood?bga=meditative_mood&gal=pos30";
 	//TAG
-	var gaTag = "GA_emeraldBlush";
+	var gaTag = "GA_meditativeMood";
 
 	// WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
 	var FixHeights;
@@ -814,7 +814,7 @@ function homeGA30() {
 		'<div class="content-block-content content-block-content--center content-block-content--bottom">'+
 		'<div class="content-block-content__container content-block-content__container--center">'+
 		'<div class="content-block-content__message content-block-content__message--light">'+
-		'<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag + '" class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+		'<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag + '" class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
 		'</div>'+
 		'</div>'+
 		'</div>'+
@@ -825,7 +825,7 @@ function homeGA30() {
 	AdClassAll_Single(realPos, gaType);
 
 }
-// END HANDBAGS & ACCESSORIES FOOTBALL GRID AD BANNER
+// HOME CATEGORY POS 2 GRID AD BANNER
 
 
 // BEAUTY FREESHIPPING GRID AD BANNER
@@ -2153,15 +2153,15 @@ function shipping_Message(){
 
 
 // CONTACT PAGE MESSAGE
-if (window.location.href.indexOf("contact") > -1){
-		$('.page-messages').clone().appendTo('.page-content--contact').addClass('clonemessage');
-		$('.page-messages').addClass('jm-center-my-content');
-		$('.message__type').css('top','19px');
-		$('.page-messages').stop().wrapInner( $( "<div class='jm-message-wrap'></div>" )).delay(3500).fadeOut();
-		$(".message--success > .message__text").html('Thanks! We’ve received your message <br/> and will respond as soon as possible.');
-		$('div.page-content--contact > .jm-center-my-content').css('display','block !important');
+// if (window.location.href.indexOf("contact") > -1){
+// 		$('.page-messages').clone().appendTo('.page-content--contact').addClass('clonemessage');
+// 		$('.page-messages').addClass('jm-center-my-content');
+// 		$('.message__type').css('top','19px');
+// 		$('.page-messages').stop().wrapInner( $( "<div class='jm-message-wrap'></div>" )).delay(3500).fadeOut();
+// 		$(".message--success > .message__text").html('Thanks! We’ve received your message <br/> and will respond as soon as possible.');
+// 		$('div.page-content--contact > .jm-center-my-content').css('display','block !important');
 
-}
+// }
 // END CONTACT PAGE MESSAGE
 
 
