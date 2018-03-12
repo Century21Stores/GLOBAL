@@ -1,4 +1,4 @@
-/* PROD CSS - HOVER ADD TO BAG BUTTON JUMPING FIX 01.26.18 jrios */
+/* PROD CSS - HOVER ADD TO BAG BUTTON JUMPING FIX + WISH LIST button  03.05.18 jrios */
 /* PAST: LIVE CHAT MESSAGE FIX 12.27.17 */
 
 /* CSS MASTER STYLE JMRV  */
@@ -1731,7 +1731,9 @@ div.hero-content-block .content-block-content__container--center .jm-multipleCTA
 .product-details__add-to-cart-form{
     position: relative;
 }
-
+.product-details__add-to-wish-list-action button{
+    position: relative;
+}
 /* END ADD TO BAG MESSAGE */
 
 
