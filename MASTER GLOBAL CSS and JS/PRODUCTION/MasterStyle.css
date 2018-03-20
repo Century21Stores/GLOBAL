@@ -1,5 +1,5 @@
-/* PROD CSS - HOVER ADD TO BAG BUTTON JUMPING FIX + WISH LIST button  03.05.18 jrios */
-/* PAST: LIVE CHAT MESSAGE FIX 12.27.17 */
+/* PROD CSS - Default Banner CTA width increased from 156px to 165px  03.16.18 jrios */
+/* PAST: HOVER ADD TO BAG BUTTON JUMPING FIX + WISH LIST button  03.05.18 jrios */
 
 /* CSS MASTER STYLE JMRV  */
 @import "https://www.c21stores.com/media/W1siZiIsIjIwMTUvMDkvMTgvMDgvNTYvNTEvNjg4L01hc3RlclN0eWxlM19MYW5kaW5nUGFnZTA3MTUuY3NzIl1d/MasterStyle3_LandingPage0715.css?sha=5a57837dcb4befbf";
@@ -1754,7 +1754,7 @@ div.hero-content-block .content-block-content__container--center .jm-multipleCTA
     font-size: 0.95em;
     padding: 1em 1.8em;
     width: 100%;
-    max-width: 156px;
+    max-width: 165px; /*max-width: 156px;*/
     border: solid 2px;
 }
 /* Relative products */
