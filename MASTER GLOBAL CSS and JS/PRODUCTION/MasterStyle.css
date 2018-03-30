@@ -7,8 +7,9 @@
 
 .jmrv-desktop-global-banner,
 .jmrv-mobile-global-banner,{
-display:none !important;
+    display:none !important;
 }
+
 /* ..................... OVERWRITES .....................*/
 /* SHIPPING 
 #shipping_method_id{
