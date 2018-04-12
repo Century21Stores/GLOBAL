@@ -61,10 +61,11 @@ display:none !important;
 }
 /* END SHIPPING MESSAGE CART */
 
-a.Gifts,
+/*a.Gifts,
 .Gifts{
   color:#e32026;
-}
+}*/
+
 .jm_video_OnScroll{
   border: none;
 }
