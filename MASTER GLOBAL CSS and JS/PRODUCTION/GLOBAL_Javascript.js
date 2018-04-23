@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA W10A tracking test - LIVE CHAT MSJ PRESIDENT DAY OFF - Clearance BGA up - 02.20.18
+// JS PROD MASTER - BGA W12A tracking test - LIVE CHAT MSJ PRESIDENT DAY OFF - Clearance BGA up - 02.20.18
 // PAST:  Shipping msj over 500 - Zero results page  & BGA W53 - 01.24.18
 // jrios@c21stores.com
 
@@ -520,10 +520,19 @@ $(window).load(function() {
         //(window.location.href.indexOf("edit") > -1) ||
         (window.location.href.indexOf("7arsw") > -1)
     );
+    var urlEshoes2 = (
+        (window.location.href.indexOf("sandals") > -1) ||
+        //(window.location.href.indexOf("edit") > -1) ||
+        (window.location.href.indexOf("sneakers") > -1)
+    );    
     var urlEhandbags = (
         (window.location.href.indexOf("arrivals") > -1) ||
         (window.location.href.indexOf("7alcw") > -1)
     );
+    var urlEhandbags2 = (
+        (window.location.href.indexOf("luxury") > -1) ||
+        (window.location.href.indexOf("sunglasses") > -1)
+    );    
     var urlEkids = (
         //(window.location.href.indexOf("arrivals") > -1) ||
         //(window.location.href.indexOf("gifts") > -1) ||
@@ -549,6 +558,11 @@ $(window).load(function() {
         (window.location.href.indexOf("7arow") > -1) ||
         (window.location.href.indexOf("7atnw") > -1)
     );
+    var urlEmwomens2 = (
+        (window.location.href.indexOf("dresses") > -1) ||
+        //(window.location.href.indexOf("cashmere") > -1) ||
+        (window.location.href.indexOf("swimsuits") > -1)
+    );    
     var urlEhome = (
         (window.location.href.indexOf("arrivals") > -1) ||
         (window.location.href.indexOf("7aibh") > -1)
@@ -614,6 +628,10 @@ $(window).load(function() {
           shoesGA14();
             //newArrivalsShoesGA();
         }
+        if(!urlEshoes2){
+          shoesGA30();
+            //newArrivalsShoesGA();
+        }
     }
     else if(jm_cat === "Handbags &amp; Accessories"){
         //doubleHandbagsBGA();
@@ -622,6 +640,9 @@ $(window).load(function() {
             //handbagsGA();
         if(!urlEhandbags){
             hbGA14();
+        }
+        if(!urlEhandbags2){
+            hbGA30();
         }
     }
     else if(jm_cat === "Kids"){
@@ -639,6 +660,9 @@ $(window).load(function() {
     else if(jm_cat === "Women"){
             //allSiteGA29();
             //allSiteGA14();
+        if(!urlEmwomens2){
+          womenGA30();
+        }
         if(!urlEmwomens){
           womenGA14();
         }
@@ -778,6 +802,55 @@ function womenGA14() {
 }
 // END WOMENS 14 NEW ARRIVALS
 
+
+
+// WOMENS 30 WITH THE BAND
+function womenGA30() {
+
+    //GRID AD TYPE:  enter 1 or 2
+    var gaType = 2;
+    //POSITION
+    var pos = 28;
+    //IMAGE URL 370x552
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDQvMTkvMTUvMTcvMzgvNDA1LzAxXzA0V2VlazNfQkdBX1dpdGh0aGVCYW5kLmpwZyJdXQ/01_04Week3_BGA_WiththeBand.jpg?sha=db6d8d2fd5ea8f04";
+    //LINK TEXT
+    var textLink = "SHOP NOW";
+    //LINK URL
+    var urlLINK = "https://www.c21stores.com/categories/new-now-with-the-band?bga=women_with_the_band_W12&gal=pos30";
+
+    // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+    var FixHeights;
+    var realPos = pos-1;
+    window.onresize = function(e) {
+        clearTimeout(FixHeights);
+        FixHeights = setTimeout(function() {
+        // console.log('yay it works!');
+        AdClassAll_Single(realPos, gaType);
+        }, 100);
+    };
+
+    $('.product-grid li:nth-of-type('+ realPos +')').after(
+        '<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+        '<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+        '<div class="product-grid-content-block__image"></div>'+
+        '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+        '<div class="content-block-content__container content-block-content__container--center">'+
+        '<div class="content-block-content__message content-block-content__message--light">'+
+        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '</div>'+
+        '</div>'+
+        '</div>'+
+        '</div>'+
+        '</li>'
+    );
+
+    AdClassAll_Single(realPos, gaType);
+
+}
+// END WOMENS 30 WITH THE BAND
+
+
+
 // MENS 14 - NEW ARRIVALS
 function menGA14() {
 
@@ -869,6 +942,53 @@ function shoesGA14() {
 }
 // END SHOES 14 - NEW ARRIVALS
 
+
+// SHOES SHOES 30 - SLIDE IN
+function shoesGA30() {
+
+    //GRID AD TYPE:  enter 1 or 2
+    var gaType = 2;
+    //POSITION
+    var pos = 28;
+    //IMAGE URL 370x552
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDQvMTkvMTUvMzcvNDkvOTMwLzAxXzA0V2VlazNfQkdBX1NsaWRlc0Zvb3RiZWRzLmpwZyJdXQ/01_04Week3_BGA_SlidesFootbeds.jpg?sha=549bf51ddc44c8c4";
+    //LINK TEXT
+    var textLink = "SHOP NOW";
+    //LINK URL
+    var urlLINK = "https://www.c21stores.com/categories/new-now-slide-in?bga=shoes_slide_in_W12&gal=pos28";
+
+    // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+    var FixHeights;
+    var realPos = pos-1;
+    window.onresize = function(e) {
+        clearTimeout(FixHeights);
+        FixHeights = setTimeout(function() {
+        // console.log('yay it works!');
+        AdClassAll_Single(realPos, gaType);
+        }, 100);
+    };
+
+    $('.product-grid li:nth-of-type('+ realPos +')').after(
+        '<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+        '<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+        '<div class="product-grid-content-block__image"></div>'+
+        '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+        '<div class="content-block-content__container content-block-content__container--center">'+
+        '<div class="content-block-content__message content-block-content__message--light">'+
+        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '</div>'+
+        '</div>'+
+        '</div>'+
+        '</div>'+
+        '</li>'
+    );
+
+    AdClassAll_Single(realPos, gaType);
+
+}
+// END SHOES 30 - SLIDE IN
+
+
 // HB 14 - NEW ARRIVALS
 function hbGA14() {
 
@@ -913,6 +1033,54 @@ function hbGA14() {
 
 }
 // END HB 14 - NEW ARRIVALS
+
+
+
+// HB 30 - WAIST PACK
+function hbGA30() {
+
+    //GRID AD TYPE:  enter 1 or 2
+    var gaType = 2;
+    //POSITION
+    var pos = 28;
+    //IMAGE URL 370x552
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDQvMTkvMTYvMjQvMTIvNjc5LzAxXzA0V2VlazNfQkdBX1dhaXN0QmFncy5qcGciXV0/01_04Week3_BGA_WaistBags.jpg?sha=a14d19db3a512b50";
+    //LINK TEXT
+    var textLink = "SHOP NOW";
+    //LINK URL
+    var urlLINK = "https://www.c21stores.com/categories/new-now-the-waist-pack?bga=hb_waist_pack_W12&gal=pos30";
+
+    // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+    var FixHeights;
+    var realPos = pos-1;
+    window.onresize = function(e) {
+        clearTimeout(FixHeights);
+        FixHeights = setTimeout(function() {
+        // console.log('yay it works!');
+        AdClassAll_Single(realPos, gaType);
+        }, 100);
+    };
+
+    $('.product-grid li:nth-of-type('+ realPos +')').after(
+        '<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+        '<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+        '<div class="product-grid-content-block__image"></div>'+
+        '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+        '<div class="content-block-content__container content-block-content__container--center">'+
+        '<div class="content-block-content__message content-block-content__message--light">'+
+        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '</div>'+
+        '</div>'+
+        '</div>'+
+        '</div>'+
+        '</li>'
+    );
+
+    AdClassAll_Single(realPos, gaType);
+
+}
+// END HB 30 - WAIST PACK
+
 
 
 // HOME 14 - NEW ARRIVALS
