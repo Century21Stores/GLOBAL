@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA W12A tracking test - LIVE CHAT MSJ PRESIDENT DAY OFF - Clearance BGA up - 02.20.18
+// JS PROD MASTER - BGA W14A tracking test - 05.04.18
 // PAST:  Shipping msj over 500 - Zero results page  & BGA W53 - 01.24.18
 // jrios@c21stores.com
 
@@ -541,8 +541,17 @@ $(window).load(function() {
         (window.location.href.indexOf("arrivals") > -1) ||
         (window.location.href.indexOf("kids-girls-infant") > -1)
     );
+    var urlEkids2 = (
+        (window.location.href.indexOf("boys") > -1) ||
+        (window.location.href.indexOf("kids-girls-infant") > -1)
+    );    
     var urlEmens = (
         (window.location.href.indexOf("arrivals") > -1) ||
+        //(window.location.href.indexOf("men-wallets") > -1) ||
+        (window.location.href.indexOf("testmen-shop-all-accessories") > -1)
+    );
+    var urlEmens2 = (
+        (window.location.href.indexOf("tiki") > -1) ||
         //(window.location.href.indexOf("men-wallets") > -1) ||
         (window.location.href.indexOf("testmen-shop-all-accessories") > -1)
     );
@@ -648,6 +657,9 @@ $(window).load(function() {
     else if(jm_cat === "Kids"){
             //allSiteGA29();
             //allSiteGA14();
+        if(!urlEkids2){
+            kidsGA30();
+        }
         if(!urlEkids){
             kidsGA14();
         }
@@ -670,9 +682,12 @@ $(window).load(function() {
     else if(jm_cat === "Men"){
             //allSiteGA29();
             //allSiteGA14();
+        if(!urlEmens2){
+            menGA30();
+        }
         if(!urlEmens){
             menGA14();
-        }
+        }        
     }
     else if(jm_cat === "Home"){
             //allSiteGA29();
@@ -757,6 +772,54 @@ function kidsGA14() {
 // END KIDS 14 - NEW ARRIVALS
 
 
+// KIDS 30 - SORBET SHADES
+function kidsGA30() {
+
+    //GRID AD TYPE:  enter 1 or 2
+    var gaType = 1;
+    //POSITION
+    var pos = 28;
+    //IMAGE URL 370x552
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDUvMDQvMTMvMTYvMjAvMzQzLzAxXzVXZWVlazFfQkdBX1NPUkJFVC5qcGciXV0/01_5Weeek1_BGA_SORBET.jpg?sha=615914ef5a3091a1";
+    //LINK TEXT
+    var textLink = "SHOP NOW";
+    //LINK URL
+    var urlLINK = "https://www.c21stores.com/categories/kids-sorbet-shades?bga=kids_girls_sorbet_shades_w14&gal=pos14";
+    //TAG
+    var gaTag = "GA_SorbetShades14";
+
+
+    // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+    var FixHeights;
+    var realPos = pos-1;
+    window.onresize = function(e) {
+        clearTimeout(FixHeights);
+        FixHeights = setTimeout(function() {
+        // console.log('yay it works!');
+        AdClassAll_Single(realPos, gaType);
+        }, 100);
+    };
+
+    $('.product-grid li:nth-of-type('+ realPos +')').after(
+        '<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+        '<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+        '<div class="product-grid-content-block__image"></div>'+
+        '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+        '<div class="content-block-content__container content-block-content__container--center">'+
+        '<div class="content-block-content__message content-block-content__message--light">'+
+        '<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag +'" class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '</div>'+
+        '</div>'+
+        '</div>'+
+        '</div>'+
+        '</li>'
+    );
+
+    AdClassAll_Single(realPos, gaType);
+
+}
+// END KIDS 30 - SORBET SHADES
+
 // WOMENS 14 NEW ARRIVALS
 function womenGA14() {
 
@@ -804,7 +867,7 @@ function womenGA14() {
 
 
 
-// WOMENS 30 WITH THE BAND
+// WOMENS 30 EVERYTHING COLOR
 function womenGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
@@ -812,11 +875,11 @@ function womenGA30() {
     //POSITION
     var pos = 28;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDQvMTkvMTUvMTcvMzgvNDA1LzAxXzA0V2VlazNfQkdBX1dpdGh0aGVCYW5kLmpwZyJdXQ/01_04Week3_BGA_WiththeBand.jpg?sha=db6d8d2fd5ea8f04";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDUvMDQvMTIvNTUvMzAvMjkvMDFfMDVXZWVrMV9CR0FfV09tbmlUcmVuZC5qcGciXV0/01_05Week1_BGA_WOmniTrend.jpg?sha=b2c35613db4f9e06";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/categories/new-now-with-the-band?bga=women_with_the_band_W12&gal=pos30";
+    var urlLINK = "https://www.c21stores.com/categories/new-now-everything-color?bga=women_everythin_color_W14&gal=pos30";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
@@ -836,7 +899,7 @@ function womenGA30() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--light">'+
-        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
@@ -847,7 +910,7 @@ function womenGA30() {
     AdClassAll_Single(realPos, gaType);
 
 }
-// END WOMENS 30 WITH THE BAND
+// END WOMENS 30 EVERYTHING COLOR
 
 
 
@@ -895,6 +958,55 @@ function menGA14() {
 
 }
 // END MENS 14 - NEW ARRIVALS
+
+
+
+
+// MENS 30 - NEW ARRIVALS
+function menGA30() {
+
+    //GRID AD TYPE:  enter 1 or 2
+    var gaType = 2;
+    //POSITION
+    var pos = 28;
+    //IMAGE URL 370x552
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDUvMDQvMTMvMDUvMDcvNDY3LzAxXzA1V2VlazFfQkdBX01PbW5pVHJlbmQuanBnIl1d/01_05Week1_BGA_MOmniTrend.jpg?sha=459ae355e006110a";
+    //LINK TEXT
+    var textLink = "SHOP NOW";
+    //LINK URL
+    var urlLINK = "https://www.c21stores.com/categories/new-now-men-tiki-chic?bga=tiki_chic_W14&gal=pos30";
+
+    // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+    var FixHeights;
+    var realPos = pos-1;
+    window.onresize = function(e) {
+        clearTimeout(FixHeights);
+        FixHeights = setTimeout(function() {
+        // console.log('yay it works!');
+        AdClassAll_Single(realPos, gaType);
+        }, 100);
+    };
+
+    $('.product-grid li:nth-of-type('+ realPos +')').after(
+        '<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+        '<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+        '<div class="product-grid-content-block__image"></div>'+
+        '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+        '<div class="content-block-content__container content-block-content__container--center">'+
+        '<div class="content-block-content__message content-block-content__message--light">'+
+        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '</div>'+
+        '</div>'+
+        '</div>'+
+        '</div>'+
+        '</li>'
+    );
+
+    AdClassAll_Single(realPos, gaType);
+
+}
+// END MENS 30 - NEW ARRIVALS
+
 
 
 // SHOES 14 - NEW ARRIVALS
