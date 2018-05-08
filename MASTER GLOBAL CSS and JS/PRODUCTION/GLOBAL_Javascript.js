@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA W14A tracking test - 05.04.18
+// JS PROD MASTER - BGA W14A updated - 05.07.18
 // PAST:  Shipping msj over 500 - Zero results page  & BGA W53 - 01.24.18
 // jrios@c21stores.com
 
@@ -542,6 +542,7 @@ $(window).load(function() {
         (window.location.href.indexOf("kids-girls-infant") > -1)
     );
     var urlEkids2 = (
+        (window.location.href.indexOf("kids-girls-shoes") > -1) ||
         (window.location.href.indexOf("boys") > -1) ||
         (window.location.href.indexOf("kids-girls-infant") > -1)
     );    
@@ -651,7 +652,7 @@ $(window).load(function() {
             hbGA14();
         }
         if(!urlEhandbags2){
-            hbGA30();
+            //hbGA30();
         }
     }
     else if(jm_cat === "Kids"){
