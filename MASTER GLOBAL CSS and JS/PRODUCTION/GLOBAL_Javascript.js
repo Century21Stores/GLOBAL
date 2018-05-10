@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA W14A updated - 05.07.18
+// JS PROD MASTER - BGA W15A updated - 05.07.18
 // PAST:  Shipping msj over 500 - Zero results page  & BGA W53 - 01.24.18
 // jrios@c21stores.com
 
@@ -553,7 +553,7 @@ $(window).load(function() {
     );
     var urlEmens2 = (
         (window.location.href.indexOf("tiki") > -1) ||
-        //(window.location.href.indexOf("men-wallets") > -1) ||
+        (window.location.href.indexOf("mens-swim") > -1) ||
         (window.location.href.indexOf("testmen-shop-all-accessories") > -1)
     );
     var urlEcontemporary = (
@@ -697,7 +697,7 @@ $(window).load(function() {
         if(!urlEhome){
             homeGA14();
             if(!urlEhome2){
-                homeGA30();
+                //homeGA30();
             }
         }
 
