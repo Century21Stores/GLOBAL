@@ -1926,7 +1926,7 @@ function pdpVideos(){
 
 
 // MULTIPLE CTAS CONTENT BLOCKS
-$('.hero-content-block, .banner-content-block, .jm-make-ligthbox').each(function(index){
+$('.hero-content-block, .banner-content-block, .jm-make-ligthbox, .two-column-square-content-block__container').each(function(index){
     thereIsCTAs = $(this).find('a').text();
     console.log('ctas????' + $(this).find('a').text());
     console.log(thereIsCTAs);
