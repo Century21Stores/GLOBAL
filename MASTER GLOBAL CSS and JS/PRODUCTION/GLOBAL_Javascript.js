@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA W15A updated - 05.07.18
+// JS PROD MASTER - BGA W16D PLCC updated - 05.16.18
 // PAST:  Shipping msj over 500 - Zero results page  & BGA W53 - 01.24.18
 // jrios@c21stores.com
 
@@ -1485,7 +1485,6 @@ function allSiteGA29() {
 
 
 
-
 // ACQUISITION GRID AD BANNER
 function acquisitionGA() {
 
@@ -1494,11 +1493,15 @@ function acquisitionGA() {
     //POSITION
     var pos = 46;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTAvMDYvMTYvMDAvNDQvMTUyLzA5V2VlazRfUExDQ19HcmlkX0lNRy5qcGciXV0/09Week4_PLCC_Grid_IMG.jpg?sha=db1dd8d42c58d407";
+    // var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTAvMDYvMTYvMDAvNDQvMTUyLzA5V2VlazRfUExDQ19HcmlkX0lNRy5qcGciXV0/09Week4_PLCC_Grid_IMG.jpg?sha=db1dd8d42c58d407";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDUvMTYvMTIvMTkvMDYvOTUwLzAxX01lbW9yaWFsRGF5X0JHQUQuanBnIl1d/01_MemorialDay_BGAD.jpg?sha=18a51d44e4066cec";
     //LINK TEXT
-    var textLink = "APPLY NOW";
+    // var textLink = "APPLY NOW";
+    var textLink = "LEARN MORE";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/instant_credit/apply";
+    // var urlLINK = "https://www.c21stores.com/instant_credit/apply";
+    var urlLINK = "https://www.c21stores.com/instant_credit";
+
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
@@ -1521,7 +1524,7 @@ function acquisitionGA() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--dark">'+
-        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
@@ -1536,21 +1539,21 @@ function acquisitionGA() {
 
 
 
-
-
 // RETENTION GRID AD BANNER
 function retentionGA() {
 
     //GRID AD TYPE:  enter 1 or 2
-    var gaType = 1;
+    var gaType = 2;
     //POSITION
-    var pos = 46;
+    // var pos = 44;
+    var pos = 41;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDIvMTMvMTUvNTQvMTMvOTUzLzA5V2VlazRfUExDQ19HcmlkX1JldGVudGlvbjIuanBnIl1d/09Week4_PLCC_Grid_Retention2.jpg?sha=020b263e54ca1df2";
+    // var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDIvMTMvMTUvNTQvMTMvOTUzLzA5V2VlazRfUExDQ19HcmlkX1JldGVudGlvbjIuanBnIl1d/09Week4_PLCC_Grid_Retention2.jpg?sha=020b263e54ca1df2";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDUvMTYvMTIvMzMvMTkvNjkwLzAxX09NMThfbWVtb3JpYWxkYXlfQkdBX3Byb21vX01lbWJlcnMuanBnIl1d/01_OM18_memorialday_BGA_promo-Members.jpg?sha=7155f9cdbbc6829a";
     //LINK TEXT
-    var textLink = "LEARN MORE";
+    var textLink = "INFO/EXCLUSIONS";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/instant_credit";
+    var urlLINK = "https://www.c21stores.com/pages/double-points-info-exclusions";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
@@ -1570,7 +1573,7 @@ function retentionGA() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--dark">'+
-        // '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a target="_blank" class="button button--alt-inverse button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
