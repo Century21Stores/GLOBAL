@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA W16D PLCC updated - 05.16.18
+// JS PROD MASTER - BGA W17A live Chat Memorial Day message - 05.16.18
 // PAST:  Shipping msj over 500 - Zero results page  & BGA W53 - 01.24.18
 // jrios@c21stores.com
 
@@ -22,7 +22,7 @@ document.addEventListener( "DOMContentLoaded", show_banner_when_not_blank, false
 document.addEventListener( "DOMContentLoaded", seoCopyLineFooter, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom_productLevel, false );
-//document.addEventListener( "DOMContentLoaded", live_chat_message, false );
+document.addEventListener( "DOMContentLoaded", live_chat_message, false );
 //document.addEventListener( "DOMContentLoaded", Hover_message_Button, false );
 
 
@@ -2584,7 +2584,7 @@ function promo_Code_custom_productLevel(){
 // LIVE CHAT CUSTOM MESSAGE
 function live_chat_message(){
     setTimeout(function(){
-        $('#livechat-full').prepend("<div class='jm-livechat-message'>Our Call Center will be closed on Monday, 02/19/17 in observance of Presidents Day.</div>");
+        $('#livechat-full').prepend("<div class='jm-livechat-message'>Our Call Center will be closed on Monday, 02/28/17 in observance of Memorial Day.</div>");
     }, 1000);
 }
 // END LIVE CHAT CUSTOM MESSAGE
