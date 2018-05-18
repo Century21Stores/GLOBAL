@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA W17A Live Chat Message (check BGAs) - 05.18.18
+// JS PROD MASTER - BGA W17A Live Chat Message (check BGAs update2) - 05.18.18
 // PAST:  Shipping msj over 500 - Zero results page  & BGA W53 - 01.24.18
 // jrios@c21stores.com
 
