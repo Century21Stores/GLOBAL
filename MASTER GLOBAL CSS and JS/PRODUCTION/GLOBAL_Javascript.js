@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA W16A updated - 05.18.18
+// JS PROD MASTER - BGA W16D PLCC updated2 - 05.18.18
 // PAST:  Shipping msj over 500 - Zero results page  & BGA W53 - 01.24.18
 // jrios@c21stores.com
 
@@ -624,7 +624,7 @@ $(window).load(function() {
     }
     else if(jm_cat === "Beauty"){
         if(!urlEbeauty){
-          beautyGA14();
+          beautyGA30();
             //freeShippingBeautyGA();
             //allSiteGA14();
             //allSiteGA29();
@@ -697,7 +697,7 @@ $(window).load(function() {
         if(!urlEhome){
             homeGA14();
             if(!urlEhome2){
-                homeGA30();
+                //homeGA30();
             }
         }
 
@@ -1243,6 +1243,7 @@ function homeGA14() {
 }
 // END HOME 14 - NEW ARRIVALS
 
+
 // HOME 30 - SHORE STYLE
 function homeGA30() {
 
@@ -1291,8 +1292,9 @@ function homeGA30() {
 // END HOME 30 - SHORE STYLE
 
 
-// BEAUTY 14 - FREE SHIPPING
-function beautyGA14() {
+
+// BEAUTY 30
+function beautyGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
     var gaType = 1;
@@ -1303,7 +1305,7 @@ function beautyGA14() {
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/categories/home-new-arrivals?bga=beauty_freeshipping_w10&gal=pos14";
+    var urlLINK = "https://www.c21stores.com/categories/home-new-arrivals?bga=home_newarrivals_w10&gal=pos14";
     //TAG
     var gaTag = "GA_home_newarrivals";
 
@@ -1336,53 +1338,8 @@ function beautyGA14() {
     AdClassAll_Single(realPos, gaType);
 
 }
-// END BEAUTY 14 - FREE SHIPPING
+// END BEAUTY 30 
 
-
-// BEAUTY FREESHIPPING GRID AD BANNER
-function freeShippingBeautyGA() {
-
-    //GRID AD TYPE:  enter 1 or 2
-    var gaType = 1;
-    //POSITION
-    var pos = 14;
-    //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTIvMDYvMTEvMjkvMTkvOTA0LzAyXzEyV2VlazNfQnJvd3NlR3JpZEFkLmpwZyJdXQ/02_12Week3_BrowseGridAd.jpg?sha=26c0bbe31d8bb61b";
-    //LINK TEXT
-    var textLink = "SHOP NOW";
-    //LINK URL
-    var urlLINK = "https://www.c21stores.com/categories/women-new-arrivals";
-
-    // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
-    var FixHeights;
-    var realPos = pos-1;
-    window.onresize = function(e) {
-        clearTimeout(FixHeights);
-        FixHeights = setTimeout(function() {
-        // console.log('yay it works!');
-        AdClassAll_Single(realPos, gaType);
-        }, 100);
-    };
-
-    $('.product-grid li:nth-of-type('+ realPos +')').after(
-        '<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
-        '<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
-        '<div class="product-grid-content-block__image"></div>'+
-        '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
-        '<div class="content-block-content__container content-block-content__container--center">'+
-        '<div class="content-block-content__message content-block-content__message--light">'+
-//      '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
-        '</div>'+
-        '</div>'+
-        '</div>'+
-        '</div>'+
-        '</li>'
-    );
-
-    AdClassAll_Single(realPos, gaType);
-
-}
-// END BEAUTY FREESHIPPING GRID AD BANNER
 
 
 // ALL SITE 14 GRID AD BANNER
@@ -1446,7 +1403,7 @@ function allSiteGA29() {
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/pages/new-reductions";
+    var urlLINK = "https://www.c21stores.com/pages/new-reductions?bga=new_reduction_w10&gal=pos30";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
@@ -1485,7 +1442,6 @@ function allSiteGA29() {
 
 
 
-
 // ACQUISITION GRID AD BANNER
 function acquisitionGA() {
 
@@ -1494,11 +1450,15 @@ function acquisitionGA() {
     //POSITION
     var pos = 46;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTAvMDYvMTYvMDAvNDQvMTUyLzA5V2VlazRfUExDQ19HcmlkX0lNRy5qcGciXV0/09Week4_PLCC_Grid_IMG.jpg?sha=db1dd8d42c58d407";
+    // var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTAvMDYvMTYvMDAvNDQvMTUyLzA5V2VlazRfUExDQ19HcmlkX0lNRy5qcGciXV0/09Week4_PLCC_Grid_IMG.jpg?sha=db1dd8d42c58d407";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDUvMTYvMTIvMTkvMDYvOTUwLzAxX01lbW9yaWFsRGF5X0JHQUQuanBnIl1d/01_MemorialDay_BGAD.jpg?sha=18a51d44e4066cec";
     //LINK TEXT
-    var textLink = "APPLY NOW";
+    // var textLink = "APPLY NOW";
+    var textLink = "LEARN MORE";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/instant_credit/apply";
+    // var urlLINK = "https://www.c21stores.com/instant_credit/apply";
+    var urlLINK = "https://www.c21stores.com/instant_credit?bga=acquisition_plcc_w16&gal=pos45";
+
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
@@ -1521,7 +1481,7 @@ function acquisitionGA() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--dark">'+
-        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
@@ -1536,21 +1496,21 @@ function acquisitionGA() {
 
 
 
-
-
 // RETENTION GRID AD BANNER
 function retentionGA() {
 
     //GRID AD TYPE:  enter 1 or 2
-    var gaType = 1;
+    var gaType = 2;
     //POSITION
-    var pos = 46;
+    // var pos = 44;
+    var pos = 41;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDIvMTMvMTUvNTQvMTMvOTUzLzA5V2VlazRfUExDQ19HcmlkX1JldGVudGlvbjIuanBnIl1d/09Week4_PLCC_Grid_Retention2.jpg?sha=020b263e54ca1df2";
+    // var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDIvMTMvMTUvNTQvMTMvOTUzLzA5V2VlazRfUExDQ19HcmlkX1JldGVudGlvbjIuanBnIl1d/09Week4_PLCC_Grid_Retention2.jpg?sha=020b263e54ca1df2";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDUvMTYvMTIvMzMvMTkvNjkwLzAxX09NMThfbWVtb3JpYWxkYXlfQkdBX3Byb21vX01lbWJlcnMuanBnIl1d/01_OM18_memorialday_BGA_promo-Members.jpg?sha=7155f9cdbbc6829a";
     //LINK TEXT
-    var textLink = "LEARN MORE";
+    var textLink = "INFO/EXCLUSIONS";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/instant_credit";
+    var urlLINK = "https://www.c21stores.com/pages/double-points-info-exclusions?bga=retention_plcc_w16&gal=pos45";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
@@ -1570,7 +1530,7 @@ function retentionGA() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--dark">'+
-        // '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a target="_blank" class="button button--alt-inverse button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
