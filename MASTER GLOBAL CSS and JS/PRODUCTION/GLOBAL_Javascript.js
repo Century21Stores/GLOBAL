@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA W17A live Chat Memorial Day message - 05.16.18
+// JS PROD MASTER - BGA W16A updated - 05.18.18
 // PAST:  Shipping msj over 500 - Zero results page  & BGA W53 - 01.24.18
 // jrios@c21stores.com
 
@@ -22,7 +22,7 @@ document.addEventListener( "DOMContentLoaded", show_banner_when_not_blank, false
 document.addEventListener( "DOMContentLoaded", seoCopyLineFooter, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom_productLevel, false );
-document.addEventListener( "DOMContentLoaded", live_chat_message, false );
+//document.addEventListener( "DOMContentLoaded", live_chat_message, false );
 //document.addEventListener( "DOMContentLoaded", Hover_message_Button, false );
 
 
@@ -578,7 +578,7 @@ $(window).load(function() {
         (window.location.href.indexOf("7aibh") > -1)
     );
     var urlEhome2 = (
-        (window.location.href.indexOf("duvets") > -1) ||
+        (window.location.href.indexOf("shore-style") > -1) ||
         (window.location.href.indexOf("7aibh") > -1)
     );
     var urlEbeauty = (
@@ -697,7 +697,7 @@ $(window).load(function() {
         if(!urlEhome){
             homeGA14();
             if(!urlEhome2){
-                //homeGA30();
+                homeGA30();
             }
         }
 
@@ -963,7 +963,7 @@ function menGA14() {
 
 
 
-// MENS 30 - NEW ARRIVALS
+// MENS 30 - TIKI CHIC
 function menGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
@@ -1006,7 +1006,7 @@ function menGA30() {
     AdClassAll_Single(realPos, gaType);
 
 }
-// END MENS 30 - NEW ARRIVALS
+// END MENS 30 - TIKI CHIC
 
 
 
@@ -1243,7 +1243,7 @@ function homeGA14() {
 }
 // END HOME 14 - NEW ARRIVALS
 
-// HOME 30 - TIKI CHIC
+// HOME 30 - SHORE STYLE
 function homeGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
@@ -1251,13 +1251,13 @@ function homeGA30() {
     //POSITION
     var pos = 29;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDQvMDYvMDIvMDAvMjkvMjg5LzAxXzA0V2VlazFfQkdBX0FMT0hBLmpwZyJdXQ/01_04Week1_BGA_ALOHA.jpg?sha=fc33be5613f296ad";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDUvMTgvMTIvNTEvMzEvMzA5LzAxXzA1V2VlazNfQkdBX0hvbWVfT21uaV9UcmVuZC5qcGciXV0/01-05Week3_BGA_Home-Omni-Trend.jpg?sha=7e32c63724ccf85e";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/categories/new-now-tiki-chic?bga=home_tiki-chic_w10&gal=pos30";
+    var urlLINK = "https://www.c21stores.com/categories/new-now-shore-style?bga=home_shore_style_w16&gal=pos30";
     //TAG
-    var gaTag = "GA_home_newarrivals";
+    var gaTag = "GA_home_shore_style_w16";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
@@ -1288,10 +1288,10 @@ function homeGA30() {
     AdClassAll_Single(realPos, gaType);
 
 }
-// END HOME 30 - TIKI CHIC
+// END HOME 30 - SHORE STYLE
 
 
-// BEAUTY 14 - GWP
+// BEAUTY 14 - FREE SHIPPING
 function beautyGA14() {
 
     //GRID AD TYPE:  enter 1 or 2
@@ -1303,7 +1303,7 @@ function beautyGA14() {
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/categories/home-new-arrivals?bga=home_newarrivals_w10&gal=pos14";
+    var urlLINK = "https://www.c21stores.com/categories/home-new-arrivals?bga=beauty_freeshipping_w10&gal=pos14";
     //TAG
     var gaTag = "GA_home_newarrivals";
 
@@ -1336,7 +1336,7 @@ function beautyGA14() {
     AdClassAll_Single(realPos, gaType);
 
 }
-// END BEAUTY 14 - GWP
+// END BEAUTY 14 - FREE SHIPPING
 
 
 // BEAUTY FREESHIPPING GRID AD BANNER
@@ -1485,6 +1485,7 @@ function allSiteGA29() {
 
 
 
+
 // ACQUISITION GRID AD BANNER
 function acquisitionGA() {
 
@@ -1493,15 +1494,11 @@ function acquisitionGA() {
     //POSITION
     var pos = 46;
     //IMAGE URL 370x552
-    // var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTAvMDYvMTYvMDAvNDQvMTUyLzA5V2VlazRfUExDQ19HcmlkX0lNRy5qcGciXV0/09Week4_PLCC_Grid_IMG.jpg?sha=db1dd8d42c58d407";
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDUvMTYvMTIvMTkvMDYvOTUwLzAxX01lbW9yaWFsRGF5X0JHQUQuanBnIl1d/01_MemorialDay_BGAD.jpg?sha=18a51d44e4066cec";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTAvMDYvMTYvMDAvNDQvMTUyLzA5V2VlazRfUExDQ19HcmlkX0lNRy5qcGciXV0/09Week4_PLCC_Grid_IMG.jpg?sha=db1dd8d42c58d407";
     //LINK TEXT
-    // var textLink = "APPLY NOW";
-    var textLink = "LEARN MORE";
+    var textLink = "APPLY NOW";
     //LINK URL
-    // var urlLINK = "https://www.c21stores.com/instant_credit/apply";
-    var urlLINK = "https://www.c21stores.com/instant_credit";
-
+    var urlLINK = "https://www.c21stores.com/instant_credit/apply";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
@@ -1524,7 +1521,7 @@ function acquisitionGA() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--dark">'+
-        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
@@ -1539,21 +1536,21 @@ function acquisitionGA() {
 
 
 
+
+
 // RETENTION GRID AD BANNER
 function retentionGA() {
 
     //GRID AD TYPE:  enter 1 or 2
-    var gaType = 2;
+    var gaType = 1;
     //POSITION
-    // var pos = 44;
-    var pos = 41;
+    var pos = 46;
     //IMAGE URL 370x552
-    // var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDIvMTMvMTUvNTQvMTMvOTUzLzA5V2VlazRfUExDQ19HcmlkX1JldGVudGlvbjIuanBnIl1d/09Week4_PLCC_Grid_Retention2.jpg?sha=020b263e54ca1df2";
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDUvMTYvMTIvMzMvMTkvNjkwLzAxX09NMThfbWVtb3JpYWxkYXlfQkdBX3Byb21vX01lbWJlcnMuanBnIl1d/01_OM18_memorialday_BGA_promo-Members.jpg?sha=7155f9cdbbc6829a";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDIvMTMvMTUvNTQvMTMvOTUzLzA5V2VlazRfUExDQ19HcmlkX1JldGVudGlvbjIuanBnIl1d/09Week4_PLCC_Grid_Retention2.jpg?sha=020b263e54ca1df2";
     //LINK TEXT
-    var textLink = "INFO/EXCLUSIONS";
+    var textLink = "LEARN MORE";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/pages/double-points-info-exclusions";
+    var urlLINK = "https://www.c21stores.com/instant_credit";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
@@ -1573,7 +1570,7 @@ function retentionGA() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--dark">'+
-        '<p class="content-block-content__action content-block-content__action--button"><a target="_blank" class="button button--alt-inverse button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        // '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
@@ -2584,7 +2581,7 @@ function promo_Code_custom_productLevel(){
 // LIVE CHAT CUSTOM MESSAGE
 function live_chat_message(){
     setTimeout(function(){
-        $('#livechat-full').prepend("<div class='jm-livechat-message'>Our Call Center will be closed on Monday, 02/28/17 in observance of Memorial Day.</div>");
+        $('#livechat-full').prepend("<div class='jm-livechat-message'>Our Call Center will be closed on Monday, 02/19/17 in observance of Presidents Day.</div>");
     }, 1000);
 }
 // END LIVE CHAT CUSTOM MESSAGE
