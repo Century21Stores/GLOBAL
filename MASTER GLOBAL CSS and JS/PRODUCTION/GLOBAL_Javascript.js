@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA W17A Live Chat Message (check BGAs update3) - 05.24.18
+// JS PROD MASTER - BGA W17B PLCC down - 05.24.18
 // PAST:  Shipping msj over 500 - Zero results page  & BGA W53 - 01.24.18
 // jrios@c21stores.com
 
@@ -22,7 +22,7 @@ document.addEventListener( "DOMContentLoaded", show_banner_when_not_blank, false
 document.addEventListener( "DOMContentLoaded", seoCopyLineFooter, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom_productLevel, false );
-document.addEventListener( "DOMContentLoaded", live_chat_message, false );
+//document.addEventListener( "DOMContentLoaded", live_chat_message, false );
 //document.addEventListener( "DOMContentLoaded", Hover_message_Button, false );
 
 
@@ -1450,14 +1450,14 @@ function acquisitionGA() {
     //POSITION
     var pos = 46;
     //IMAGE URL 370x552
-    // var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTAvMDYvMTYvMDAvNDQvMTUyLzA5V2VlazRfUExDQ19HcmlkX0lNRy5qcGciXV0/09Week4_PLCC_Grid_IMG.jpg?sha=db1dd8d42c58d407";
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDUvMjQvMDgvNTgvNDAvNTAzLzAxX01lbW9yaWFsRGF5X0JHQURfTm9ubWVtYmVycy5qcGciXV0/01_MemorialDay_BGAD-Nonmembers.jpg?sha=eab84959f2dcf735";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTAvMDYvMTYvMDAvNDQvMTUyLzA5V2VlazRfUExDQ19HcmlkX0lNRy5qcGciXV0/09Week4_PLCC_Grid_IMG.jpg?sha=db1dd8d42c58d407";
+    // var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDUvMjQvMDgvNTgvNDAvNTAzLzAxX01lbW9yaWFsRGF5X0JHQURfTm9ubWVtYmVycy5qcGciXV0/01_MemorialDay_BGAD-Nonmembers.jpg?sha=eab84959f2dcf735";
     //LINK TEXT
-    // var textLink = "APPLY NOW";
-    var textLink = "LEARN MORE";
+    var textLink = "APPLY NOW";
+    // var textLink = "LEARN MORE";
     //LINK URL
-    // var urlLINK = "https://www.c21stores.com/instant_credit/apply";
-    var urlLINK = "https://www.c21stores.com/instant_credit?bga=acquisition_plcc_w16&gal=pos45";
+    var urlLINK = "https://www.c21stores.com/instant_credit/apply?bga=acquisition_plcc_w17B&gal=pos45";
+    // var urlLINK = "https://www.c21stores.com/instant_credit?bga=acquisition_plcc_w16&gal=pos45";
 
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
@@ -1481,7 +1481,7 @@ function acquisitionGA() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--dark">'+
-        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
@@ -1505,12 +1505,12 @@ function retentionGA() {
     // var pos = 44;
     var pos = 41;
     //IMAGE URL 370x552
-    // var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDIvMTMvMTUvNTQvMTMvOTUzLzA5V2VlazRfUExDQ19HcmlkX1JldGVudGlvbjIuanBnIl1d/09Week4_PLCC_Grid_Retention2.jpg?sha=020b263e54ca1df2";
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDUvMjQvMDkvMTYvMjIvNDUvMDFfT00xOF9tZW1vcmlhbGRheV9CR0FfcHJvbW8uanBnIl1d/01_OM18_memorialday_BGA_promo.jpg?sha=6f7241e3efa45488";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMDIvMTMvMTUvNTQvMTMvOTUzLzA5V2VlazRfUExDQ19HcmlkX1JldGVudGlvbjIuanBnIl1d/09Week4_PLCC_Grid_Retention2.jpg?sha=020b263e54ca1df2";
+    // var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDUvMjQvMDkvMTYvMjIvNDUvMDFfT00xOF9tZW1vcmlhbGRheV9CR0FfcHJvbW8uanBnIl1d/01_OM18_memorialday_BGA_promo.jpg?sha=6f7241e3efa45488";
     //LINK TEXT
     var textLink = "INFO/EXCLUSIONS";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/pages/double-points-info-exclusions?bga=retention_plcc_w16&gal=pos45";
+    var urlLINK = "https://www.c21stores.com/pages/double-points-info-exclusions?bga=retention_plcc_w17B&gal=pos45";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
@@ -2541,7 +2541,7 @@ function promo_Code_custom_productLevel(){
 // LIVE CHAT CUSTOM MESSAGE
 function live_chat_message(){
     setTimeout(function(){
-        $('#livechat-full').prepend("<div class='jm-livechat-message'>Our Call Center will be closed on Monday, 05/28/18 in observance of Memorial Day.</div>");
+        $('#livechat-full').prepend("<div class='jm-livechat-message'>Our Call Center will be closed on Monday, 02/19/17 in observance of Presidents Day.</div>");
     }, 1000);
 }
 // END LIVE CHAT CUSTOM MESSAGE
