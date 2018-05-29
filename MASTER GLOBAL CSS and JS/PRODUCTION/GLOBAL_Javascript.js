@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA W17B PLCC down - 05.24.18
+// JS PROD MASTER - BGA W17B PLCC down - retention BGA bug - 05.29.18
 // PAST:  Shipping msj over 500 - Zero results page  & BGA W53 - 01.24.18
 // jrios@c21stores.com
 
@@ -1500,7 +1500,7 @@ function acquisitionGA() {
 function retentionGA() {
 
     //GRID AD TYPE:  enter 1 or 2
-    var gaType = 2;
+    var gaType = 1;
     //POSITION
     // var pos = 44;
     var pos = 41;
@@ -1530,7 +1530,7 @@ function retentionGA() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--dark">'+
-        '<p class="content-block-content__action content-block-content__action--button"><a style="font-size:0.87em;" target="_blank" class="button button--alt-inverse button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        // '<p class="content-block-content__action content-block-content__action--button"><a style="font-size:0.87em;" target="_blank" class="button button--alt button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
