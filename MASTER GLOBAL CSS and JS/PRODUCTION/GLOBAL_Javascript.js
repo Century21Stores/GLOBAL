@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA W17B PLCC down - retention BGA bug - 05.29.18
+// JS PROD MASTER - BGA W18A down - 05.30.18
 // PAST:  Shipping msj over 500 - Zero results page  & BGA W53 - 01.24.18
 // jrios@c21stores.com
 
@@ -638,10 +638,9 @@ $(window).load(function() {
           shoesGA14();
             //newArrivalsShoesGA();
         }
-        if(!urlEshoes2){
-          shoesGA30();
-            //newArrivalsShoesGA();
-        }
+        // if(!urlEshoes2){
+        //   shoesGA30();
+        // }
     }
     else if(jm_cat === "Handbags &amp; Accessories"){
         //doubleHandbagsBGA();
@@ -658,9 +657,9 @@ $(window).load(function() {
     else if(jm_cat === "Kids"){
             //allSiteGA29();
             //allSiteGA14();
-        if(!urlEkids2){
-            kidsGA30();
-        }
+        // if(!urlEkids2){
+        //     kidsGA30();
+        // }
         if(!urlEkids){
             kidsGA14();
         }
@@ -673,9 +672,9 @@ $(window).load(function() {
     else if(jm_cat === "Women"){
             //allSiteGA29();
             //allSiteGA14();
-        if(!urlEmwomens2){
-          womenGA30();
-        }
+        // if(!urlEmwomens2){
+        //   womenGA30();
+        // }
         if(!urlEmwomens){
           womenGA14();
         }
@@ -683,9 +682,9 @@ $(window).load(function() {
     else if(jm_cat === "Men"){
             //allSiteGA29();
             //allSiteGA14();
-        if(!urlEmens2){
-            menGA30();
-        }
+        // if(!urlEmens2){
+        //     menGA30();
+        // }
         if(!urlEmens){
             menGA14();
         }        
@@ -773,7 +772,7 @@ function kidsGA14() {
 // END KIDS 14 - NEW ARRIVALS
 
 
-// KIDS 30 - SORBET SHADES
+// KIDS 30 - null
 function kidsGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
@@ -819,7 +818,7 @@ function kidsGA30() {
     AdClassAll_Single(realPos, gaType);
 
 }
-// END KIDS 30 - SORBET SHADES
+// END KIDS 30 - null
 
 // WOMENS 14 NEW ARRIVALS
 function womenGA14() {
@@ -868,7 +867,7 @@ function womenGA14() {
 
 
 
-// WOMENS 30 EVERYTHING COLOR
+// WOMENS 30 - null
 function womenGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
@@ -911,7 +910,7 @@ function womenGA30() {
     AdClassAll_Single(realPos, gaType);
 
 }
-// END WOMENS 30 EVERYTHING COLOR
+// END WOMENS 30 - null
 
 
 
@@ -963,7 +962,7 @@ function menGA14() {
 
 
 
-// MENS 30 - TIKI CHIC
+// MENS 30 - null
 function menGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
@@ -1006,7 +1005,7 @@ function menGA30() {
     AdClassAll_Single(realPos, gaType);
 
 }
-// END MENS 30 - TIKI CHIC
+// END MENS 30 - null
 
 
 
@@ -1056,7 +1055,7 @@ function shoesGA14() {
 // END SHOES 14 - NEW ARRIVALS
 
 
-// SHOES SHOES 30 - SLIDE IN
+// SHOES SHOES 30 - null
 function shoesGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
@@ -1099,7 +1098,7 @@ function shoesGA30() {
     AdClassAll_Single(realPos, gaType);
 
 }
-// END SHOES 30 - SLIDE IN
+// END SHOES 30 - null
 
 
 // HB 14 - NEW ARRIVALS
