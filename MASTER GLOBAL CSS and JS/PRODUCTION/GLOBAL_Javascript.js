@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA W18A down - 05.30.18
+// JS PROD MASTER - console.log fix and pagination ficx removed - 06.12.18
 // PAST:  Shipping msj over 500 - Zero results page  & BGA W53 - 01.24.18
 // jrios@c21stores.com
 
@@ -34,8 +34,10 @@ if(window.location.href === "https://www.c21stores.com/cart"){
 }
 else if (window.location.href.indexOf("search") > -1){
     console.log('searchie');
+}
+else if (window.location.href.indexOf("/users/account/edit") > -1){
+    console.log('my account edit');
 };
-
 
 // FIREING FUNCTIONS ON QUICK VIEW
 $(document).on( 'click', '.product-summary__quickview a', function(){
@@ -75,10 +77,10 @@ $(".view").one("click", "a[data-prop65]", function(e){
 });
 
 // PAGINATION FIX
-    if ($('ul.pagination').length === 0){
-      var count = $('.product-grid__cell').length;
-      $('.browsing-controls--top').append('<ul class="pagination"><li class="pagination__node pagination__node--showing">' + count + ' items</li></ul>');
-    }
+    // if ($('ul.pagination').length === 0){
+    //   var count = $('.product-grid__cell').length;
+    //   $('.browsing-controls--top').append('<ul class="pagination"><li class="pagination__node pagination__node--showing">' + count + ' items</li></ul>');
+    // }
 
 // RELATED PRODUCTS
 if ($(window).width() >= 1050) {
@@ -155,16 +157,16 @@ function zero_results_search(){
         listArr2 = listArr2.filter(Boolean)
         listArrTotal = listArrTotal.filter(Boolean)
 
-        console.log(search.valueOf());
+        //console.log(search.valueOf());
         //console.log("lsit arr: " + listArr);
         //console.log("lsit arr2: " + listArr2);
-        console.log(listArrTotal);
+        //console.log(listArrTotal);
 
         designerList();
         function designerList(){
             for (var z=0; z < listArrTotal.length; z++){
-                console.log(z + " -> " + listArrTotal[z]);
-                console.log();
+                //console.log(z + " -> " + listArrTotal[z]);
+                //console.log();
 
                 if(arrayContains(listArrTotal, search.valueOf())){
                 //if(listArrTotal.includes(search.valueOf())){
@@ -180,10 +182,10 @@ function zero_results_search(){
 
             if (window.location.href.indexOf("categories") > -1){
                 cat_Name = $('.view h1').html().toLowerCase();
-                console.log("Category Name: " + cat_Name);
+                //console.log("Category Name: " + cat_Name);
                 for (var z=0; z < listArrTotal.length; z++){
                     if(arrayContains(listArrTotal, cat_Name)){
-                        console.log("search found!");
+                        //console.log("search found!");
     //                  $('.page-content__wrapper').hide("fast");
     //                  $('.page-content').prepend(
     //                      '<div id="result">'+
@@ -420,8 +422,8 @@ function imagesMasterPages(){
 $('.product-detail-container--package .product-detail-container__child-product').each(function() {
 
     var imageAnchor = $(this).find('.product-details__media').find('.product-details__primary-image:first').find('.product-details__primary-image-button').attr('href');;
-    console.log('working!!!');
-    console.log(imageAnchor);
+    //console.log('working!!!');
+    //console.log(imageAnchor);
     $(this).find('.product-details__media').find('.product-details__primary-image:first').append('<a class="jm-anchor-package" href="' + imageAnchor + '"></a>');
 
 });
@@ -444,7 +446,7 @@ $('.product-detail-container--package .jm_sorted_products').each(function() {
 
     // ADDING ID TO NON NUMBERS SIZES
     $(this).find('.size-options__size-label').each(function() {
-        console.log(this);
+        //console.log(this);
         var currentElement = $(this);
         var value = currentElement.html();
 
@@ -702,9 +704,9 @@ $(window).load(function() {
 
     }
     else if(jm_cat === "Private Access Shopping"){
-        console.log(jm_cat3);
+        //console.log(jm_cat3);
         if(jm_cat3 == "Clothing"){
-            console.log('uiiii');
+            //console.log('uiiii');
         }
     }
     else if(jm_cat === "Clearance"){
@@ -1685,9 +1687,9 @@ function fixingHeights(){
             gridAds.push($(this).height());
         //  console.log("this is: " + $(this).outerHeight(true));
         });
-        console.log(gridAds);
+        //console.log(gridAds);
         var maxHeight = Math.max.apply(Math, gridAds);
-        console.log(maxHeight);
+        //console.log(maxHeight);
 
         $('.product-grid__cell').css('height',maxHeight);
 
@@ -1785,7 +1787,7 @@ function uniqueClasses(){
 
 function bannersMassive(){
     if((window.location.href.indexOf("cyber") > -1) && (window.location.href.indexOf("categories") > -1)){
-        console.log('banner Category');
+        //console.log('banner Category');
         $('.banner-content-block__large-image-container').css('background-image','url("https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTEvMjIvMTQvMjcvMzMvNzA5LzEyV2VlazFfQkJfQ3liZXIuanBnIl1d/12Week1_BB_Cyber.jpg?sha=a6bdf454a6ec6b1c")');
     }
     else{
@@ -1799,7 +1801,7 @@ function bannersMassive(){
 function pdpVideos(){
 
     var jewelr_Pull_PI = $('.product-details__id span').text();
-    console.log(jewelr_Pull_PI);
+    //console.log(jewelr_Pull_PI);
     var listVideoJewelry = [
         '6612-0977',
         '6612-1699',
@@ -1822,16 +1824,16 @@ function pdpVideos(){
         '674E56A0B56614-67846614-1271',
         '0FD847BFAC6614-02516614-1106'
         ];
-    console.log(listVideoJewelry);
+    //console.log(listVideoJewelry);
 //  if(listVideoJewelry.includes(jewelr_Pull_PI)){
 
     if(listVideoJewelry.indexOf(jewelr_Pull_PI) !== -1){
 
 
-    console.log('Video');
+    //console.log('Video');
     function createVideo(){
         var placeVideoHere = document.getElementsByClassName('product-details__media')[0];
-        console.log(placeVideoHere);
+        //console.log(placeVideoHere);
         $(placeVideoHere).prepend(
             '<figure id="playJV" style="position: absolute; bottom: -5%; z-index: 999; text-align: center; width: 100%;"><a href="#1" style="display: block;width: 7%;margin: 0 48% -2% auto;">'+
             '<img src="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTEvMjgvMTYvMzEvMjIvNTMzL3BsYXlidXR0b25fR3JleS5wbmciXV0/playbutton-Grey.png?sha=86cbf51c7b342695"/>'+
@@ -1887,56 +1889,56 @@ function pdpVideos(){
 // MULTIPLE CTAS CONTENT BLOCKS
 $('.hero-content-block, .banner-content-block, .jm-make-ligthbox, .two-column-square-content-block__container').each(function(index){
     thereIsCTAs = $(this).find('a').text();
-    console.log('ctas????' + $(this).find('a').text());
-    console.log(thereIsCTAs);
+    //console.log('ctas????' + $(this).find('a').text());
+    //console.log(thereIsCTAs);
     if(thereIsCTAs == '') {
         return true;
     }
-    console.log("before multi multi");
-    console.log(this);
+    //console.log("before multi multi");
+    //console.log(this);
     //MULTIPLE CTA HERO
     var hero_number_CTA = $(this).find('.content-block-content__message').children('p').length;
     var initial_CTA_class = $(this).find('.content-block-content__action a').attr('class');
     var CTAtext = $(this).find('.content-block-content__message > p > a').html().toLowerCase();
     var CTAtext_URL = $(this).find('.content-block-content__message > p > a').attr('href');
-    console.log('URLs' + CTAtext_URL);
-    console.log(hero_number_CTA);
+    //console.log('URLs' + CTAtext_URL);
+    //console.log(hero_number_CTA);
 //  console.log(initial_CTA_class);
 
 
     // IF THERE IS MULTIPLE CTA
     if (hero_number_CTA > 1){
             $(this).find('.content-block-content__action').fadeIn(100);
-            console.log("multi multi");
+            //console.log("multi multi");
             jm_hero_FirstCTA = $(this).find('.content-block-content__action a').eq(0);
             jm_hero_FirstCTA_url = jm_hero_FirstCTA.attr('href');
 //          console.log('this url ' + jm_hero_FirstCTA_url);
             jm_hero_FirstCTA_text = jm_hero_FirstCTA.text().toLowerCase();
 
             if (jm_hero_FirstCTA_url.indexOf("#jmlb") > -1){
-                console.log('first is hidden');
+                //console.log('first is hidden');
                 jm_hero_FirstCTA.addClass('jm_bottom_lightbox').wrapInner( '<div class="jm_lightBox_CTA"></div>');
                 jm_hero_FirstCTA.addClass('JM_trigger_ligthBox');
-                console.log ('coming crispy' + $(this));
+                //console.log ('coming crispy' + $(this));
                         var new_data_lb = $('.jm_bottom_lightbox:first-of-type', this).clone();
                         new_data_lb.attr("id", "jm_img_anchor_LB");
 //                      new_data_lb.removeAttr("class");
                         new_data_lb.appendTo(this);
                 $(this).find('.JM_trigger_ligthBox').hide(100);
-                console.log(jm_hero_FirstCTA);
+                //console.log(jm_hero_FirstCTA);
             }
 
 
             $(this).find('.content-block-content__message p:not(.content-block-content__action)').each(function(index){
             multi_cta_copy = $(this).html();
-                    console.log(multi_cta_copy);
+                    //console.log(multi_cta_copy);
 
             if (multi_cta_copy.indexOf("*") > -1){
                 var multi_CTA_text = $(this).html().split("*")[0];
                 var multi_CTA_url = $(this).html().split("*")[1].replace("<br>", "").replace(" ", "");
                 var multi_CTA_wrap = $(this).parent();
 
-                    console.log(multi_CTA_url);
+                    //console.log(multi_CTA_url);
 
                     $(multi_CTA_wrap).find('.content-block-content__action').addClass("jm-multipleCTA-space").append(
                         '<a class="' + initial_CTA_class +'" href="' + multi_CTA_url + '">' + multi_CTA_text + '</a>'
@@ -1994,14 +1996,14 @@ $('.hero-content-block, .banner-content-block, .jm-make-ligthbox, .two-column-sq
 
     // IF THERE IS ONE CTA WITH WORD LIGHTBOX LB
     else if ((hero_number_CTA = 1) && (CTAtext_URL.indexOf("jmlb") > -1)){
-        console.log('unoLightBox!!');
+        //console.log('unoLightBox!!');
         $(this).find('.content-block-content__action').fadeIn(600);
         $(this).find('a').addClass('JM_trigger_ligthBox').addClass('jm_show_important');
         //$(this).find('a').addClass('JM_trigger_ligthBox').addClass('jm_show_important').addClass('jm_bottom_lightbox').wrapInner( '<div class="jm_lightBox_CTA"></div>');
 
         // IF THERE IS ONE CTA WITH WORD LIGHTBOX LB and ALSO HIDE
         if ((hero_number_CTA = 1) && ( CTAtext.indexOf("jmhide") > -1)){
-            console.log('unoHidden&LightBox!!');
+            //console.log('unoHidden&LightBox!!');
             $(this).find('.content-block-content__action').hide();
         }
         else if ((hero_number_CTA = 1) && ( CTAtext_URL.indexOf("#jmdetails") > -1)){
@@ -2013,7 +2015,7 @@ $('.hero-content-block, .banner-content-block, .jm-make-ligthbox, .two-column-sq
 
     // IF THERE IS ONE CTA WITH WORD HIDE
     else if ((hero_number_CTA = 1) && ( CTAtext.indexOf("jmhide") > -1)){
-        console.log('unohidden!!');
+        //console.log('unohidden!!');
         $(this).find('.content-block-content__action').hide();
     }
 
@@ -2038,7 +2040,7 @@ function pdpTieredPrice(){
     if(window.location.href.indexOf("products") > -1){
         var tieredPriceChildren = document.getElementsByClassName("product-details__price-row")[0].childElementCount;;
         if (tieredPriceChildren == 2){
-            console.log(tieredPriceChildren);
+            //console.log(tieredPriceChildren);
             $('.product-details__price-group').addClass('jm-tieredContainer');
             $('.product-details__price-group > .product-details__price-row').addClass('jm-tieredContainer-row');
             $('.product-details__price-row > .product-details__price--regular').addClass('jm-tieredContainer-regular');
@@ -2055,14 +2057,14 @@ function pdpTieredPrice(){
 
 $(document).on( 'click', '.product-summary__quickview a', function(){
     setTimeout(function() {   //calls click event after a certain time
-        console.log('quickview');
+        //console.log('quickview');
             function quickViewTieredPrice(){
 
                 if((window.location.href.indexOf("categories") > -1) || (window.location.href.indexOf("hearts") > -1)){
                     var tieredPriceChildren = document.getElementsByClassName("product-details__price-row")[0].childElementCount;;
-                    console.log(tieredPriceChildren);
+                    //console.log(tieredPriceChildren);
                     if (tieredPriceChildren == 2){
-                        console.log(tieredPriceChildren);
+                        //console.log(tieredPriceChildren);
                         $('.inline-quickview__content .product-details__attributes').addClass('jm-tieredAttributes-QV');
                         $('.inline-quickview__content .product-details__price-group').addClass('jm-tieredContainer-QV');
                         $('.inline-quickview__content .product-details__price-group > .product-details__price-row').addClass('jm-tieredContainer-row-QV');
@@ -2075,11 +2077,11 @@ $(document).on( 'click', '.product-summary__quickview a', function(){
 
                 }
                 else if (window.location.href.indexOf("products") > -1){
-                    console.log('quickview Hearts');
+                    //console.log('quickview Hearts');
                     var tieredPriceChildren = document.getElementsByClassName("product-details__price-row")[2].childElementCount;;
-                    console.log(tieredPriceChildren);
+                    //console.log(tieredPriceChildren);
                     if (tieredPriceChildren == 2){
-                        console.log(tieredPriceChildren);
+                        //console.log(tieredPriceChildren);
                         $('.inline-quickview__content .product-details__attributes').addClass('jm-tieredAttributes-QV');
                         $('.inline-quickview__content .product-details__price-group').addClass('jm-tieredContainer-QV');
                         $('.inline-quickview__content .product-details__price-group > .product-details__price-row').addClass('jm-tieredContainer-row-QV');
@@ -2126,7 +2128,7 @@ function pdpKnivesPDF(){
 
     if(listWusthofKnives.indexOf(wusthof_knives) !== -1){
 //  if(listWusthofKnives.includes(wusthof_knives)){
-        console.log("machete machete machete");
+        //console.log("machete machete machete");
         $('.product-details__description-body ul li:last-of-type').append(
             //'<li><a href="https://www.c21stores.com/media/W1siZiIsIjIwMTYvMTIvMDcvMTYvMzEvMDUvMzQ0L1JpZ2h0X0tuaWZlX2Zvcl90aGVfUmlnaHRfSm9iLnBkZiJdXQ/Right%20Knife%20for%20the%20Right%20Job.pdf?sha=93adee9bf2f82289" target="_blank" style="text-decoration:none;">Guide: The Right Knife for the Right Job</a></li>'
             '<li>To find the Right Knife for the Right Job, <a id="playPDF" href="#1">'+
@@ -2185,7 +2187,7 @@ function addingClass_LP_width(){
 function Lightbox_heroCTA(){
 
     $('.rich-text-content-block').each(function() {
-    console.log("YEA YEA" +this);
+    //console.log("YEA YEA" +this);
         var currentImage = $(this);
         currentImage.wrap('<div class="jm_dark_lightBox" id="jm_dark_lightBox" style="display:none;"></div>');
     });
@@ -2194,7 +2196,7 @@ function Lightbox_heroCTA(){
 
 function Lightbox_heroCTA_ClickEvent(){
     $(".JM_trigger_ligthBox").click(function(){
-        console.log('muaaaaaniii!!!');
+        //console.log('muaaaaaniii!!!');
         // $(this).parent().next().addClass('jm_displayflex');
         $(this).closest('div.hero-content-block').next().find('.rich-text-content-block').fadeIn(1000);
         $(this).closest('div.hero-content-block').next().fadeIn(1000).addClass("jm_displayflex");
@@ -2229,23 +2231,23 @@ function name_taggingCoremetrics(){
             else{
                 imageornot = 'CTA: '
             };
-            console.log("TITLE " + asset_title);
-            console.log("ID: " + anchor_id);
+            //console.log("TITLE " + asset_title);
+            //console.log("ID: " + anchor_id);
 
             if($(window).width() < 768) {
-                console.log("MOBILE ANCHOR: " + imageornot + asset_anchor);
+                //console.log("MOBILE ANCHOR: " + imageornot + asset_anchor);
                 $(this).attr('name', "MOBILE-" + imageornot + asset_anchor);
             }
             else if(($(window).width() > 768) && ($(window).width() < 1100)) {
-                console.log("TABLET ANCHOR: " + imageornot + asset_anchor);
+                //console.log("TABLET ANCHOR: " + imageornot + asset_anchor);
                 $(this).attr('name', "TABLET-: " + imageornot + asset_anchor);
             }
             else {
-                console.log("DESKTOP ANCHOR: " + imageornot + asset_anchor);
+                //console.log("DESKTOP ANCHOR: " + imageornot + asset_anchor);
                 $(this).attr('name', "DESKTOP-" + imageornot + asset_anchor);
             };
 
-            console.log("-----------");
+            //console.log("-----------");
         });
     });
 
@@ -2302,7 +2304,7 @@ function Curalate_PDP(callback){
         $('#curalate-fan-reel-wrapper').wrap( "<div class='jm-curalate-container'></div>" );
         //  window.onload = function () { console.log('este es:' + $('.curalate-thumbs').children().length);}
             $(window).load(function() {
-                console.log('# of Instagram posts link to this product: ' + $('.curalate-thumbs').children().length);
+                //console.log('# of Instagram posts link to this product: ' + $('.curalate-thumbs').children().length);
                 if($('.curalate-thumbs').children().length >= 6){
                     $('.page-content__wrapper').after(
                         '<h2 class="jm-curalate-pdp-title">#C21STORES</h2>'+
@@ -2323,9 +2325,9 @@ function thumbnails_duplicat_fix(){
     $( ".product-details__alternate-image-button-image" ).each(function( index ) {
         URLs = $( this ).attr('src').split("/")[6];
         arrayimgsrc.push(URLs);
-      console.log( index + ": " + URLs);
+      //console.log( index + ": " + URLs);
     });
-    console.log(arrayimgsrc);
+    //console.log(arrayimgsrc);
 
 
     //var sorted_arr = arrayimgsrc.slice().sort();
@@ -2339,7 +2341,7 @@ function thumbnails_duplicat_fix(){
     }
 
     for(i=0;i<=results.length;i++){
-        console.log(results[i]);
+       //console.log(results[i]);
     };
 
 };
@@ -2348,7 +2350,7 @@ function thumbnails_duplicat_fix(){
     // $('.product-details--clothing .color-options__color-button').change(function(){
         setTimeout(function(){
             thumbnails_duplicat_fix();
-            console.log('doing doing');
+            //console.log('doing doing');
         },1000);
     });
 
@@ -2365,7 +2367,7 @@ function vip_shopping(){
         vip_cat_Name_array.shift();
         vip_new_name = [];
 
-        console.log('VIP CATEGORY NAME: ' + vip_cat_Name_array);
+        //console.log('VIP CATEGORY NAME: ' + vip_cat_Name_array);
         for (i = 0; i < vip_cat_Name_array.length; i++) {
             console.log("numero:" + i + "item: " + vip_cat_Name_array[i]);
                 vip_new_name.push(vip_cat_Name_array[i]);
@@ -2390,12 +2392,12 @@ function vip_shopping(){
         $('.view h1').delay(5000).css("opacity","1");
 
 
-        console.log('VIP NEW NAME: ' + vip_new_name);
+        //console.log('VIP NEW NAME: ' + vip_new_name);
 
         // URL name update
-        console.log("LAST URL ACTUAL : " + lastVipURL);
-        console.log("FAKE LAST URL ACTUAL : " + new_lastVipURL);
-        console.log("FAKE ACTUAL : " + vipURL);
+        //console.log("LAST URL ACTUAL : " + lastVipURL);
+        //console.log("FAKE LAST URL ACTUAL : " + new_lastVipURL);
+        //console.log("FAKE ACTUAL : " + vipURL);
 
 
     }
@@ -2494,7 +2496,7 @@ function show_banner_when_not_blank(){
     if (window.location.href.indexOf("categories") > -1){
         var Banner_pankeke = $('.banner-content-block__large-image-container').css('background-image');
         if (Banner_pankeke.indexOf("GWPblank") === -1){
-            console.log(Banner_pankeke.indexOf("GWPblank") >= 0);
+            //console.log(Banner_pankeke.indexOf("GWPblank") >= 0);
             $('.banner-content-block').show(100);
         };
     }
@@ -2517,8 +2519,8 @@ function promo_Code_custom(){
             s = s.substring(0, s.indexOf('{'));
             $(this).html(s);
             $(this).parent().css('display','table');
-            console.log($(this).text());
-            console.log(s);
+            //console.log($(this).text());
+            //console.log(s);
         }
     });
 }
@@ -2530,7 +2532,7 @@ function promo_Code_custom_productLevel(){
             if ($(this).text().indexOf('{') > -1){
                 var spl = $(this).text();
                 spl = spl.substring(0, spl.indexOf('{'));
-                console.log($(this).html(spl));
+                //console.log($(this).html(spl));
             }
     });
 }
@@ -2581,7 +2583,7 @@ else{
         }
     };
     function Hover_message_Button_mobile(){
-        console.log('mobile');
+        //console.log('mobile');
         $(window).scroll(function() {
             var $rightPlace_button = $(".product-details__add-to-cart-action");
             var actual_height = $(window).height();
@@ -2609,7 +2611,7 @@ else{
 
 function shipping_Message(){
     var jmprice = $('.cart-prices__group--subtotal > .cart-prices__value').html().replace("$", "");
-    console.log(jmprice);
+    //console.log(jmprice);
     // if($('.checkout-step-summary div:nth-of-type(1) > h2').text() == "Shipping Options"){
         if(jmprice >= 500){
             $('#estimate_shipping_form').after(

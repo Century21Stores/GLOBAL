@@ -61,10 +61,10 @@ $(".view").one("click", "a[data-prop65]", function(e){
 });
 
 // PAGINATION FIX
-    if ($('ul.pagination').length === 0){
-      var count = $('.product-grid__cell').length;
-      $('.browsing-controls--top').append('<ul class="pagination"><li class="pagination__node pagination__node--showing">' + count + ' items</li></ul>');
-    }
+    // if ($('ul.pagination').length === 0){
+    //   var count = $('.product-grid__cell').length;
+    //   $('.browsing-controls--top').append('<ul class="pagination"><li class="pagination__node pagination__node--showing">' + count + ' items</li></ul>');
+    // }
 
 // RELATED PRODUCTS
 if ($(window).width() >= 1050) {
