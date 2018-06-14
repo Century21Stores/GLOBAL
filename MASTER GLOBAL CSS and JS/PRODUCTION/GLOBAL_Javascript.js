@@ -1,4 +1,4 @@
-// JS PROD MASTER -  clearance 20A - 06.14.18
+// JS PROD MASTER -  clearance 20A and fix banners bug - 06.14.18
 // PAST:  console.log fix and pagination ficx removed - 01.24.18
 // jrios@c21stores.com
 
@@ -1351,8 +1351,8 @@ function allSiteGA14() {
 
     var breacrumb2 = $('.breadcrumbs__node-group span:nth-of-type(2) a').text().toLowerCase();
     var breacrumb3 = $('.breadcrumbs__node-group span:nth-of-type(3)').text().toLowerCase();
-    console.log('top nav: ' + breacrumb2);
-    console.log('top nav2: ' + breacrumb3);
+    //console.log('top nav: ' + breacrumb2);
+    //console.log('top nav2: ' + breacrumb3);
     //GRID AD TYPE:  enter 1 or 2
     var gaType = 1;
     //POSITION
@@ -2500,7 +2500,7 @@ function denied_rotating_message(ed){
 
 // GWP Banners
 function show_banner_when_not_blank(){
-    // while($('.banner-content-block').length != 0){
+    if($('.banner-content-block').length != 0){
 
         if (window.location.href.indexOf("categories") > -1){
             var Banner_pankeke = $('.banner-content-block__large-image-container').css('background-image');
@@ -2509,7 +2509,7 @@ function show_banner_when_not_blank(){
                 $('.banner-content-block').show(100);
             };
         }
-    // }
+     }
 };
 // END GWP Banners
 
