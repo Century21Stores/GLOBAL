@@ -1,5 +1,5 @@
-// JS PROD MASTER - console.log fix and pagination ficx removed - 06.12.18
-// PAST:  Shipping msj over 500 - Zero results page  & BGA W53 - 01.24.18
+// JS PROD MASTER -  clearance 20A - 06.14.18
+// PAST:  console.log fix and pagination ficx removed - 01.24.18
 // jrios@c21stores.com
 
 
@@ -625,21 +625,22 @@ $(window).load(function() {
             //allSiteGA14();
     }
     else if(jm_cat === "Beauty"){
-        if(!urlEbeauty){
-          beautyGA30();
+        allSiteGA14();
+        // if(!urlEbeauty){
+          // beautyGA30();
             //freeShippingBeautyGA();
             //allSiteGA14();
             //allSiteGA29();
 //          WishiWankaGA();
-        }
+        //}
     }
     else if(jm_cat === "Shoes"){
             //allSiteGA29();
-            //allSiteGA14();
-        if(!urlEshoes){
-          shoesGA14();
-            //newArrivalsShoesGA();
-        }
+            allSiteGA14();
+        // if(!urlEshoes){
+        //   shoesGA14();
+        //    newArrivalsShoesGA();
+        // }
         // if(!urlEshoes2){
         //   shoesGA30();
         // }
@@ -647,14 +648,14 @@ $(window).load(function() {
     else if(jm_cat === "Handbags &amp; Accessories"){
         //doubleHandbagsBGA();
             //allSiteGA29();
-            //allSiteGA14();
+            allSiteGA14();
             //handbagsGA();
-        if(!urlEhandbags){
-            hbGA14();
-        }
-        if(!urlEhandbags2){
+        // if(!urlEhandbags){
+        //     hbGA14();
+        // }
+        //if(!urlEhandbags2){
             //hbGA30();
-        }
+        //}
     }
     else if(jm_cat === "Kids"){
             //allSiteGA29();
@@ -662,24 +663,25 @@ $(window).load(function() {
         // if(!urlEkids2){
         //     kidsGA30();
         // }
-        if(!urlEkids){
-            kidsGA14();
-        }
+        allSiteGA14();
+        // if(!urlEkids){
+        //     kidsGA14();
+        // }
     }
     else if(jm_cat === "Contemporary"){
         if(!urlEcontemporary){
             //newArrivalsContemporaryGA();
         }
     }
-    else if(jm_cat === "Women"){
+    else if((jm_cat === "Women") || (jm_cat === "The Dress Shop")){
             //allSiteGA29();
-            //allSiteGA14();
+            allSiteGA14();
         // if(!urlEmwomens2){
         //   womenGA30();
         // }
-        if(!urlEmwomens){
-          womenGA14();
-        }
+        // if(!urlEmwomens){
+        //   womenGA14();
+        // }
     }
     else if(jm_cat === "Men"){
             //allSiteGA29();
@@ -687,20 +689,21 @@ $(window).load(function() {
         // if(!urlEmens2){
         //     menGA30();
         // }
-        if(!urlEmens){
-            menGA14();
-        }        
+        allSiteGA14();
+        // if(!urlEmens){
+        //     menGA14();
+        // }        
     }
     else if(jm_cat === "Home"){
             //allSiteGA29();
             //allSiteGA14();
-
-        if(!urlEhome){
-            homeGA14();
-            if(!urlEhome2){
-                //homeGA30();
-            }
-        }
+        allSiteGA14();
+        // if(!urlEhome){
+        //     homeGA14();
+        //     if(!urlEhome2){
+        //         //homeGA30();
+        //     }
+        // }
 
     }
     else if(jm_cat === "Private Access Shopping"){
@@ -1346,17 +1349,21 @@ function beautyGA30() {
 // ALL SITE 14 GRID AD BANNER
 function allSiteGA14() {
 
+    var breacrumb2 = $('.breadcrumbs__node-group span:nth-of-type(2) a').text().toLowerCase();
+    var breacrumb3 = $('.breadcrumbs__node-group span:nth-of-type(3)').text().toLowerCase();
+    console.log('top nav: ' + breacrumb2);
+    console.log('top nav2: ' + breacrumb3);
     //GRID AD TYPE:  enter 1 or 2
     var gaType = 1;
     //POSITION
     var pos = 14;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDEvMTAvMTAvNTQvMjgvMzIxLzAxXzFXZWVrM19CR0FfQ2xlYXJhbmNlLmdpZiJdXQ/01_1Week3_BGA_Clearance.gif?sha=6477c29910574d83";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDYvMTIvMTQvMTMvMjIvNDY3LzAxXzA2V2VlazAzX0JHLmpwZyJdXQ/01_06Week03_BG.jpg?sha=1668bdcb6da92172";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/pages/clearance";
-    var gaTag = "GA_Loyalty_FEV";
+    var urlLINK = "https://www.c21stores.com/pages/clearance?bga=clearance75_"+breacrumb2+"-"+breacrumb3+"_w20&gal=pos14";
+    var gaTag = "GA_clearance_75_2018";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
@@ -1378,7 +1385,7 @@ function allSiteGA14() {
         '<div class="content-block-content__message content-block-content__message--dark">'+
         // '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         //'<p class="content-block-content__action content-block-content__action--light-text"><a style="color:white; border-color: white;" target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
-        '<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag +'" class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag +'" class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
@@ -2493,13 +2500,16 @@ function denied_rotating_message(ed){
 
 // GWP Banners
 function show_banner_when_not_blank(){
-    if (window.location.href.indexOf("categories") > -1){
-        var Banner_pankeke = $('.banner-content-block__large-image-container').css('background-image');
-        if (Banner_pankeke.indexOf("GWPblank") === -1){
-            //console.log(Banner_pankeke.indexOf("GWPblank") >= 0);
-            $('.banner-content-block').show(100);
-        };
-    }
+    // while($('.banner-content-block').length != 0){
+
+        if (window.location.href.indexOf("categories") > -1){
+            var Banner_pankeke = $('.banner-content-block__large-image-container').css('background-image');
+            if (Banner_pankeke.indexOf("GWPblank") === -1){
+                //console.log(Banner_pankeke.indexOf("GWPblank") >= 0);
+                $('.banner-content-block').show(100);
+            };
+        }
+    // }
 };
 // END GWP Banners
 
