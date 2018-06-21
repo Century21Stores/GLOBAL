@@ -166,6 +166,11 @@ display:none !important;
   background-position: 50% 0;
 }
 /* END GRID ADS */
+
+/* SEARCH HIDDING */
+.page-content--search .page-content__main{
+    opacity: 0;
+}
 /* ..................... END OVERWRITES ..................... */
 
 /* PLCC HEADER */

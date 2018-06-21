@@ -1,5 +1,5 @@
-// JS PROD MASTER -  clearance 20A and fix banners bug & Pagination is Back - 06.18.18
-// PAST:  console.log fix and pagination ficx removed - 01.24.18
+// JS PROD MASTER -  clearance 20A and fix banners bug & Pagination is Back  -&- Designer Suppression List  - 06.21.18
+// PAST:  console.log fix and pagination fix removed - 01.24.18
 // jrios@c21stores.com
 
 
@@ -196,9 +196,6 @@ function zero_results_search(){
                     }
                 }
             }
-            function build_ZeroResultPage(){
-
-            }
 
         }
     });
@@ -219,6 +216,17 @@ function zero_results_search(){
     }
 
 };
+
+function build_searchResults(){
+setTimeout(function(){
+    if($('section.jm-zerosearch').length === 0){
+        $('.page-content--search .page-content__main').css('opacity','1');
+        console.log('NO PANEL');
+    }
+}, 500);        
+
+}build_searchResults();
+
 // END ZERO SEARCH SCRIPT
 
 
