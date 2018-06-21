@@ -1,4 +1,4 @@
-// JS PROD MASTER -  clearance 20A and fix banners bug & Pagination is Back  -&- Designer Suppression List  - 06.21.18
+// JS PROD MASTER -  clearance 20A and fix banners bug & Pagination is Back  -&- suppresion list panel solution 3  - 06.21.18
 // PAST:  console.log fix and pagination fix removed - 01.24.18
 // jrios@c21stores.com
 
@@ -142,11 +142,13 @@ function zero_results_search(){
         var entry = data.feed.entry;
         var listArr = [];
         var listArr2 = [];
+        var listArr3 = [];
 
         //PUSH DATA FROM 2 COLUMNS TO 2 ARRAYS
         $(entry).each(function(){
             listArr.push(this.gsx$suppressed.$t.toLowerCase());
             listArr2.push(this.gsx$suppressed2.$t.toLowerCase());
+            listArr3.push(this.gsx$funkymonkeys.$t.toLowerCase());
         });
 
         //COMBINE BOTH ARRAYS INTO ONE SINGLE ARRAY
@@ -155,12 +157,14 @@ function zero_results_search(){
         // CLEAR EMPTY ITEMS
         listArr = listArr.filter(Boolean)
         listArr2 = listArr2.filter(Boolean)
+        listArr3 = listArr3.filter(Boolean)
         listArrTotal = listArrTotal.filter(Boolean)
 
         //console.log(search.valueOf());
         //console.log("lsit arr: " + listArr);
         //console.log("lsit arr2: " + listArr2);
         //console.log(listArrTotal);
+        console.log(listArr3);
 
         designerList();
         function designerList(){
@@ -168,7 +172,7 @@ function zero_results_search(){
                 //console.log(z + " -> " + listArrTotal[z]);
                 //console.log();
 
-                if(arrayContains(listArrTotal, search.valueOf())){
+                if( (arrayContains(listArrTotal, search.valueOf())) || (listArr3.includes(search.valueOf())) ){
                 //if(listArrTotal.includes(search.valueOf())){
                     $('.page-content__wrapper').hide("fast");
                     $('.page-content').prepend(
