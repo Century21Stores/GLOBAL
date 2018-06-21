@@ -1,4 +1,4 @@
-/* PROD CSS -  Logo alignment at the footer fix  - 06.20.18 jrios */
+/* PROD CSS -  Logo alignment at the footer fix  - 06.21.18 jrios */
 /* PAST: Shipping restrictions to only regular shipping is on - Banner CTA width increased from 156px to 165px  03.16.18 jrios */
 
 /* CSS MASTER STYLE JMRV  */
@@ -84,7 +84,7 @@ display:table;
 
 .page-footer__logo{
     background: url(https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTcvMTAvMTgvMTUvMzgvNDUvNDM4L0MyMWxvZ29fUkVEX1NUT1JFU19UYWdMaW5lLnN2ZyJdXQ/C21logo_RED_STORES_TagLine.svg?sha=9be2ef95d0cdf011) no-repeat;
-    width: 33%;    
+    width: 122px;    
 }
 /*.branded-card-header{
 display:none !important;
@@ -1902,6 +1902,12 @@ h3.wysiwyg-font-size-x-large{
     margin:0 auto;
 }
 /* END HOVER MESSAGE OVER ADD TO BAG  */
+
+/* LOGO FOOTER */
+.page-footer__logo{
+    width: 33%;  
+}
+/* END LOGO FOOTER */
 
 /* END OVERWRITES */
 
