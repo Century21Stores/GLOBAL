@@ -2535,7 +2535,7 @@ function seoCopyLineFooter(){
 
 // PROMO CODE HELP MESSAGE
 function promo_Code_custom(){
-    $("div.cart-prices__label").each(function(){
+    $("div.cart-prices__label, .table__price").each(function(){
         if ($(this).text().indexOf('{') > -1){
             var s = $(this).text();
             s = s.substring(0, s.indexOf('{'));
