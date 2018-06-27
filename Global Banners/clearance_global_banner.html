@@ -1,0 +1,47 @@
+<!-- CLEARANCE BANNERS 75% GLOBAL 22A - JMRV - 06.27.18 -->
+
+<script>
+
+
+// W22A
+GWPimage_banner =  'https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDYvMDcvMTEvMDUvMDYvNzg1LzA2V2VlazNfQkJfQ2xlYXJhbmNlLmpwZyJdXQ/06Week3_BB_Clearance.jpg?sha=fafb91012da672ff';
+CLEARANCE_h2 = 'ONLINE & IN-STORE';
+CLEARANCE_header = 'CLEARANCE';
+CLEARANCE_value = 'UP TO 75% OFF';
+
+
+// .............. CODE THAT MAKES IT HAPPEN .....................
+
+if(window.location.href.indexOf("clearance") > -1) {
+  function GWPbannersMassive(){
+    var urlforCLEARANCE = (
+      (window.location.href.indexOf("gifts-beauty-fragrance") > -1) ||
+      (window.location.href.indexOf("beauty-bvlgari") > -1) ||
+      (window.location.href.indexOf("beauty-elf") > -1) ||
+      (window.location.href.indexOf("beauty-gift-sets-men") > -1) ||
+      (window.location.href.indexOf("beauty-bonus") > -1) ||
+      (window.location.href.indexOf("beauty-hugo-boss") > -1) ||
+      (window.location.href.indexOf("beauty-opi") > -1) ||
+      (window.location.href.indexOf("beauty-calvin-klein") > -1)||
+      (window.location.href.indexOf("beauty-makeup") > -1) ||
+      (window.location.href.indexOf("beauty-mens-fragrances-new-arrivals") > -1) ||
+      (window.location.href.indexOf("beauty-mens-fragrances-best-sellers") > -1) ||
+      (window.location.href.indexOf("beauty-mens-fragrances-gift-sets") > -1) ||
+      (window.location.href.indexOf("beauty-mens-fragrances") > -1) ||
+      (window.location.href.indexOf("beauty-3-2499") > -1) ||
+      (window.location.href == "https://www.c21stores.com/categories/beauty-womens-fragrances")
+    );
+      if(!urlforCLEARANCE){
+      console.log('Clearance banner');
+        $('.banner-content-block__large-image-container').css('background-image','url('+ GWPimage_banner +')');
+        $('.jm-W36-banner').find('h2').html(CLEARANCE_h2);
+        $('.jm-W36-banner').find('header').html(CLEARANCE_header);
+        $('.jm-W36-banner').find('h3').html(CLEARANCE_value);
+
+      };
+
+  }GWPbannersMassive();
+
+}
+
+</script>
