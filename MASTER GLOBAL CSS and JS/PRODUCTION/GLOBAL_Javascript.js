@@ -1,4 +1,4 @@
-// JS PROD MASTER -  clearance 22A BGA extra 20%  - 06.25.18
+// JS PROD MASTER -  clearance 22A BGA extra 20%  & message cart promos - 06.28.18
 // PAST:  clearance 20A and fix banners bug & Pagination is Back  -&- suppresion list panel solution 3 - 06.21.18
 // jrios@c21stores.com
 
