@@ -46,7 +46,6 @@ $(document).on( 'click', '.product-summary__quickview a', function(){
     }, 1000);
 });
 
-
 var PROP65_POPUP = Object.freeze({
   "ceramic": '<img src="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDIvMDUvMTUvMDQvNDMvNjAzL1BPUFVQNjVfY2VyYW1pYy5qcGciXV0/POPUP65_ceramic.jpg?sha=2b607f152ba38a35">',
   "crystal": '<img src="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDIvMDUvMTUvMDQvMjgvOTkvUE9QVVA2NV9DUllTVEFMLmpwZyJdXQ/POPUP65_CRYSTAL.jpg?sha=35ab82a8daefe08e">',
@@ -637,7 +636,7 @@ $(window).load(function() {
             //allSiteGA14();
     }
     else if(jm_cat === "Beauty"){
-        allSiteGA14();
+        //allSiteGA14();
         // if(!urlEbeauty){
           // beautyGA30();
             //freeShippingBeautyGA();
