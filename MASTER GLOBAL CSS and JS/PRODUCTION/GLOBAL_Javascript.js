@@ -1,4 +1,4 @@
-// JS PROD MASTER - Live Chat Message 4th July    - 07.02.18
+// JS PROD MASTER - Clearance 85% BGA W23A - JMRV- 07.03.18
 // PAST:  clearance 22A BGA extra 20% -&- fix banners bug & Pagination is Back  -&- suppresion list panel solution 3  -&- message cart promos - 06.28.18
 // jrios@c21stores.com
 
@@ -22,7 +22,7 @@ document.addEventListener( "DOMContentLoaded", show_banner_when_not_blank, false
 document.addEventListener( "DOMContentLoaded", seoCopyLineFooter, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom_productLevel, false );
-document.addEventListener( "DOMContentLoaded", live_chat_message, false );
+//document.addEventListener( "DOMContentLoaded", live_chat_message, false );
 //document.addEventListener( "DOMContentLoaded", Hover_message_Button, false );
 
 
@@ -1369,12 +1369,12 @@ function allSiteGA14() {
     //POSITION
     var pos = 14;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDYvMjUvMTAvNTkvMDAvMzg0LzAxXzA2V2VlazA1X0JHXzIuanBnIl1d/01_06Week05_BG_2.jpg?sha=d9ccdb64c10dbd83";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDcvMDMvMDgvNTkvMTEvNzA3LzAxXzA3V2VlazAxX0JHLmpwZyJdXQ/01_07Week01_BG.jpg?sha=5e49898d405ee268";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/pages/clearance?bga=clearancextra20_"+breacrumb2+"-"+breacrumb3+"_w20&gal=pos14";
-    var gaTag = "GA_clearance_xtra20_2018";
+    var urlLINK = "https://www.c21stores.com/pages/clearance?bga=clearance85"+breacrumb2+"-"+breacrumb3+"_w23&gal=pos14";
+    var gaTag = "GA_clearance_85_2018";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
