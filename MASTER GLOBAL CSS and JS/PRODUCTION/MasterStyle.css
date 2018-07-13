@@ -1,4 +1,4 @@
-/* PROD CSS -  Logo alignment at the footer fix  -&- suppresion list panel - 06.21.18 jrios */
+/* PROD CSS -  Logo alignment at the footer fix  -&- suppresion list panel -&- W23 -&- 07.05.18 jrios */
 /* PAST: Shipping restrictions to only regular shipping is on - Banner CTA width increased from 156px to 165px  03.16.18 jrios */
 
 /* CSS MASTER STYLE JMRV  */
@@ -11,7 +11,7 @@
 }
 
 /* ..................... OVERWRITES .....................*/
-/* SHIPPING */
+/* SHIPPING 
 #shipping_method_id{
   pointer-events: none
 }
@@ -19,7 +19,7 @@
 #shipping_method_id option:nth-of-type(3){
 display:none !important;
 }
-/* END SHIPPING */
+ END SHIPPING */
 
 /* QuickLook size selections FIX*/
 .inline-quickview__container .ui-menu-item{
@@ -305,6 +305,7 @@ display:none !important;
     border-bottom: solid 2px;
     padding: 0 0 0.5em;
     font-size: 2vw;
+    color: white;
 }
 #jm_img_anchor_LB{
     bottom: 3% !important;
@@ -1028,7 +1029,7 @@ div.hero-content-block .content-block-content__container--center .jm-multipleCTA
   left: 5.5%;
   width: 77%;
   font-size: 0.6em;
-  padding: 2% 6%;  
+  padding: 5% 6%;  
 }
 /* END LIVE CHAT MESSAGE */
 
@@ -1886,7 +1887,7 @@ h3.wysiwyg-font-size-x-large{
 }
 #jm_img_anchor_LB{
     /*bottom: 33% !important;*/
-        bottom: 17% !important;
+        bottom: 20% !important;
     font-size: 2.3vw;
 }
 #jm_img_anchor{

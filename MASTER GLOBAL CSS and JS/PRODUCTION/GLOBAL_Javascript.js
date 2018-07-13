@@ -1,4 +1,4 @@
-// JS PROD MASTER - Clearance 85% BGA W23A - JMRV- 07.03.18
+// JS PROD MASTER - Clearance 85% BGA W23A -&- BGA W24A - JMRV- 07.12.18
 // PAST:  clearance 22A BGA extra 20% -&- fix banners bug & Pagination is Back  -&- suppresion list panel solution 3  -&- message cart promos - 06.28.18
 // jrios@c21stores.com
 
@@ -709,12 +709,13 @@ $(window).load(function() {
             //allSiteGA29();
             //allSiteGA14();
         allSiteGA14();
-        // if(!urlEhome){
+         if(!urlEhome){
+                homeGA30();
         //     homeGA14();
         //     if(!urlEhome2){
         //         //homeGA30();
         //     }
-        // }
+        }
 
     }
     else if(jm_cat === "Private Access Shopping"){
@@ -1267,13 +1268,13 @@ function homeGA30() {
     //POSITION
     var pos = 29;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDUvMTgvMTIvNTEvMzEvMzA5LzAxXzA1V2VlazNfQkdBX0hvbWVfT21uaV9UcmVuZC5qcGciXV0/01-05Week3_BGA_Home-Omni-Trend.jpg?sha=7e32c63724ccf85e";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDcvMTIvMTMvMTcvNDUvOTMwLzAwXzA3V2VlazJfQkdBX2tpZHNiZWRyb29tLmpwZyJdXQ/00_07Week2_BGA_kidsbedroom.jpg?sha=60ca0e6ca2921cf6";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/categories/new-now-shore-style?bga=home_shore_style_w16&gal=pos30";
+    var urlLINK = "https://www.c21stores.com/categories/bedroom-must-haves?bga=home_must_haves-w24_18&gal=pos30";
     //TAG
-    var gaTag = "GA_home_shore_style_w16";
+    var gaTag = "GA_home_must_haves-w24_18";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
@@ -1917,7 +1918,8 @@ $('.hero-content-block, .banner-content-block, .jm-make-ligthbox, .two-column-sq
     //MULTIPLE CTA HERO
     var hero_number_CTA = $(this).find('.content-block-content__message').children('p').length;
     var initial_CTA_class = $(this).find('.content-block-content__action a').attr('class');
-    var CTAtext = $(this).find('.content-block-content__message > p > a').html().toLowerCase();
+    // var CTAtext = $(this).find('.content-block-content__message > p > a').html().toLowerCase();
+    var CTAtext = $(this).find('.content-block-content__message > p > a').html();
     var CTAtext_URL = $(this).find('.content-block-content__message > p > a').attr('href');
     //console.log('URLs' + CTAtext_URL);
     //console.log(hero_number_CTA);
@@ -2006,7 +2008,7 @@ $('.hero-content-block, .banner-content-block, .jm-make-ligthbox, .two-column-sq
             else if(hero_number_CTA == 2){
                 $(this).find('.content-block-content__action').addClass("jm-multipleCTA-space2");
                 $(this).find('.content-block-content').parent().addClass("jm-multipleCTA-content-wrap");
-                $('.jm-multipleCTA-space2').parent().parent().parent().parent().find('.content-block-content--center').css('width','100%');
+                $('.jm-multipleCTA-space2').parent().parent().parent().parent().find('.content-block-content--center').css('width','90%');
             }
 //          $('.hero-content-block > a').hide();
 
