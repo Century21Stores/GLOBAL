@@ -1,4 +1,4 @@
-// JS PROD MASTER - Clearance 85% BGA W23A -&- BGA W24A - JMRV- 07.12.18
+// JS PROD MASTER - Clearance 85% BGA W23A -&- BGA W24A - JMRV- 07.13.18
 // PAST:  clearance 22A BGA extra 20% -&- fix banners bug & Pagination is Back  -&- suppresion list panel solution 3  -&- message cart promos - 06.28.18
 // jrios@c21stores.com
 
@@ -551,8 +551,8 @@ $(window).load(function() {
         //(window.location.href.indexOf("gifts") > -1) ||
         //(window.location.href.indexOf("essentials") > -1) ||
         //(window.location.href.indexOf("occasion") > -1) ||
-        (window.location.href.indexOf("arrivals") > -1) ||
-        (window.location.href.indexOf("kids-girls-infant") > -1)
+        (window.location.href.indexOf("must-haves") > -1) ||
+        (window.location.href.indexOf("jm-test") > -1)
     );
     var urlEkids2 = (
         (window.location.href.indexOf("kids-girls-shoes") > -1) ||
@@ -587,8 +587,8 @@ $(window).load(function() {
         (window.location.href.indexOf("swimsuits") > -1)
     );    
     var urlEhome = (
-        (window.location.href.indexOf("arrivals") > -1) ||
-        (window.location.href.indexOf("7aibh") > -1)
+        (window.location.href.indexOf("must-haves") > -1) ||
+        (window.location.href.indexOf("jm-test") > -1)
     );
     var urlEhome2 = (
         (window.location.href.indexOf("shore-style") > -1) ||
@@ -675,9 +675,10 @@ $(window).load(function() {
         //     kidsGA30();
         // }
         allSiteGA14();
-        // if(!urlEkids){
-        //     kidsGA14();
-        // }
+        if(!urlEkids){
+            kidsGA30();
+        //    kidsGA14();
+        }
     }
     else if(jm_cat === "Contemporary"){
         if(!urlEcontemporary){
@@ -789,21 +790,21 @@ function kidsGA14() {
 // END KIDS 14 - NEW ARRIVALS
 
 
-// KIDS 30 - null
+// KIDS 30 - Bedroom must haves - ends 8.19.18
 function kidsGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
-    var gaType = 1;
+    var gaType = 2;
     //POSITION
-    var pos = 28;
+    var pos = 29;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDUvMDQvMTMvMTYvMjAvMzQzLzAxXzVXZWVlazFfQkdBX1NPUkJFVC5qcGciXV0/01_5Weeek1_BGA_SORBET.jpg?sha=615914ef5a3091a1";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDcvMTMvMDkvMTYvNDEvNjQ0LzAxXzA3V2VlazJfQkdBX2tpZHNiZWRyb29tLmpwZyJdXQ/01_07Week2_BGA_kidsbedroom.jpg?sha=837966eaa7c1dba6";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/categories/kids-sorbet-shades?bga=kids_girls_sorbet_shades_w14&gal=pos14";
+    var urlLINK = "https://www.c21stores.com/categories/bedroom-must-haves?bga=kids-bedroom_must_haves-w24-18&gal=pos30";
     //TAG
-    var gaTag = "GA_SorbetShades14";
+    var gaTag = "GA_kidsbedroommusthaves_W24_18";
 
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
@@ -1268,11 +1269,11 @@ function homeGA30() {
     //POSITION
     var pos = 29;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDcvMTIvMTMvMTcvNDUvOTMwLzAwXzA3V2VlazJfQkdBX2tpZHNiZWRyb29tLmpwZyJdXQ/00_07Week2_BGA_kidsbedroom.jpg?sha=60ca0e6ca2921cf6";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDcvMTMvMDkvMDAvMTEvODkyLzAxXzA3V2VlazJfQkdBX2NlbGVzdGlhbG1vb2QuanBnIl1d/01_07Week2_BGA_celestialmood.jpg?sha=d8d7b99487a3bba8";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/categories/bedroom-must-haves?bga=home_must_haves-w24_18&gal=pos30";
+    var urlLINK = "https://www.c21stores.com/categories/new-now-celestial-mood?bga=home-celestial_mood-w24_18&gal=pos30";
     //TAG
     var gaTag = "GA_home_must_haves-w24_18";
 
@@ -1294,7 +1295,7 @@ function homeGA30() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--light">'+
-        '<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag + '" class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag + '" class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
