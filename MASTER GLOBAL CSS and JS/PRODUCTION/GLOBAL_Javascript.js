@@ -1,4 +1,4 @@
-// JS PROD MASTER - Clearance XTRA 30 BGA W25A -&- BGA W25A - JMRV- 07.18.18
+// JS PROD MASTER - Clearance 90% BGA W26A -&- BGA W26A - JMRV- 07.26.18
 // PAST:  clearance 22A BGA extra 20% -&- fix banners bug & Pagination is Back  -&- suppresion list panel solution 3  -&- message cart promos - 06.28.18
 // jrios@c21stores.com
 
@@ -1371,12 +1371,12 @@ function allSiteGA14() {
     //POSITION
     var pos = 14;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDcvMTgvMTMvMjMvMjEvODE4LzAxXzA3V2VlazNfQkcuanBnIl1d/01_07Week3_BG.jpg?sha=60aa1ec3ac18dbe7";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDcvMjYvMTYvMzUvMjMvNTY4LzAxXzA3V2VlazA0X0JHLmpwZyJdXQ/01_07Week04_BG.jpg?sha=7c884877dbdaea65";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/pages/clearance?bga=clearance_xtra_30_"+breacrumb2+"-"+breacrumb3+"_w25&gal=pos14";
-    var gaTag = "GA_clearance_85_2018";
+    var urlLINK = "https://www.c21stores.com/pages/clearance?bga=clearance_90_"+breacrumb2+"-"+breacrumb3+"_w26A&gal=pos14";
+    var gaTag = "GA_clearance_90_2018";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
