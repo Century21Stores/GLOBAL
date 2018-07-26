@@ -550,7 +550,7 @@ $(window).load(function() {
         //(window.location.href.indexOf("arrivals") > -1) ||
         //(window.location.href.indexOf("gifts") > -1) ||
         //(window.location.href.indexOf("essentials") > -1) ||
-        //(window.location.href.indexOf("occasion") > -1) ||
+        (window.location.href.indexOf("infant") > -1) ||
         (window.location.href.indexOf("must-haves") > -1) ||
         (window.location.href.indexOf("jm-test") > -1)
     );
