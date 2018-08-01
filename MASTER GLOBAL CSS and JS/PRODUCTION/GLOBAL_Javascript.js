@@ -1,5 +1,5 @@
-// JS PROD MASTER - Clearance 90% BGA W26A -&- BGA W26A -  JMRV- 07.30.18
-// PAST:  clearance 22A BGA extra 20% -&- fix banners bug & Pagination is Back  -&- suppresion list panel solution 3  -&- message cart promos - 06.28.18
+// JS PROD MASTER - BGA W27  -  JMRV- 08.01.18
+// PAST: Clearance 90% BGA W26A -&- BGA W26A  -&- fix banners bug & Pagination is Back  -&- suppresion list panel solution 3  -&- message cart promos - 07.30.18
 // jrios@c21stores.com
 
 
@@ -589,6 +589,7 @@ $(window).load(function() {
     var urlEhome = (
         (window.location.href.indexOf("must-haves") > -1) ||
         (window.location.href.indexOf("home-bath-accessories") > -1) ||
+        (window.location.href.indexOf("shop-all") > -1) ||
         (window.location.href.indexOf("home-comforters-duvets-quilts") > -1) ||
         (window.location.href.indexOf("jm-test") > -1)
     );
@@ -792,7 +793,7 @@ function kidsGA14() {
 // END KIDS 14 - NEW ARRIVALS
 
 
-// KIDS 30 - Bedroom must haves - ends 8.19.18
+// KIDS 30 - Back To Cool - ends 9.08.18
 function kidsGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
@@ -800,13 +801,13 @@ function kidsGA30() {
     //POSITION
     var pos = 29;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDcvMTMvMDkvMTYvNDEvNjQ0LzAxXzA3V2VlazJfQkdBX2tpZHNiZWRyb29tLmpwZyJdXQ/01_07Week2_BGA_kidsbedroom.jpg?sha=837966eaa7c1dba6";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDgvMDEvMTEvNDMvNDYvODQ0LzAxXzA4V2VlazFfQkdBX0JBQ0tUT0NPT0wuanBnIl1d/01_08Week1_BGA_BACKTOCOOL.jpg?sha=561bf2f714b74f5e";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/categories/bedroom-must-haves?bga=kids-bedroom_must_haves-w24-18&gal=pos30";
+    var urlLINK = "https://www.c21stores.com/categories/new-now-back-to-cool?bga=kids-back_to_cool-w27-18&gal=pos30";
     //TAG
-    var gaTag = "GA_kidsbedroommusthaves_W24_18";
+    var gaTag = "GA_kidsbacktocool_W27_18";
 
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
@@ -827,7 +828,7 @@ function kidsGA30() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--light">'+
-        '<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag +'" class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag +'" class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
@@ -838,7 +839,8 @@ function kidsGA30() {
     AdClassAll_Single(realPos, gaType);
 
 }
-// END KIDS 30 - null
+// END KIDS 30 - Back To Cool - ends 9.08.18
+
 
 // WOMENS 14 NEW ARRIVALS
 function womenGA14() {
