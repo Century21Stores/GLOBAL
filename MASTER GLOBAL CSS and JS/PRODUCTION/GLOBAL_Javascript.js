@@ -1,4 +1,4 @@
-// JS PROD MASTER - Clearance 90% BGA W26A -&- BGA W26A - JMRV- 07.26.18
+// JS PROD MASTER - Clearance 90% BGA W26A -&- BGA W26A -  JMRV- 07.30.18
 // PAST:  clearance 22A BGA extra 20% -&- fix banners bug & Pagination is Back  -&- suppresion list panel solution 3  -&- message cart promos - 06.28.18
 // jrios@c21stores.com
 
@@ -588,6 +588,8 @@ $(window).load(function() {
     );    
     var urlEhome = (
         (window.location.href.indexOf("must-haves") > -1) ||
+        (window.location.href.indexOf("home-bath-accessories") > -1) ||
+        (window.location.href.indexOf("home-comforters-duvets-quilts") > -1) ||
         (window.location.href.indexOf("jm-test") > -1)
     );
     var urlEhome2 = (
@@ -1261,7 +1263,7 @@ function homeGA14() {
 // END HOME 14 - NEW ARRIVALS
 
 
-// HOME 30 - SHORE STYLE
+// HOME 30 - CELESTIAL MOOD
 function homeGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
@@ -1306,7 +1308,7 @@ function homeGA30() {
     AdClassAll_Single(realPos, gaType);
 
 }
-// END HOME 30 - SHORE STYLE
+// END HOME 30 - CELESTIAL MOOD
 
 
 
