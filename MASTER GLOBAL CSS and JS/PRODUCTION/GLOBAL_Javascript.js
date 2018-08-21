@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA W27  -  JMRV- 08.01.18
+// JS PROD MASTER - W29 clearance down -&- removing kids BGA -&- new on campus home BGA now is global -  JMRV- 08.16.18
 // PAST: Clearance 90% BGA W26A -&- BGA W26A  -&- fix banners bug & Pagination is Back  -&- suppresion list panel solution 3  -&- message cart promos - 07.30.18
 // jrios@c21stores.com
 
@@ -551,6 +551,8 @@ $(window).load(function() {
         //(window.location.href.indexOf("gifts") > -1) ||
         //(window.location.href.indexOf("essentials") > -1) ||
         (window.location.href.indexOf("back-to-cool") > -1) ||
+        (window.location.href.indexOf("kids-girls-shoes") > -1) ||
+        (window.location.href.indexOf("kids-boys-shoes") > -1) ||
         (window.location.href.indexOf("infant") > -1) ||
         (window.location.href.indexOf("jm-test") > -1)
     );
@@ -587,9 +589,7 @@ $(window).load(function() {
         (window.location.href.indexOf("swimsuits") > -1)
     );    
     var urlEhome = (
-        (window.location.href.indexOf("must-haves") > -1) ||
-        (window.location.href.indexOf("home-bath-accessories") > -1) ||
-        (window.location.href.indexOf("shop-all") > -1) ||
+        (window.location.href.indexOf("new-on-campus") > -1) ||
         (window.location.href.indexOf("home-comforters-duvets-quilts") > -1) ||
         (window.location.href.indexOf("jm-test") > -1)
     );
@@ -650,7 +650,7 @@ $(window).load(function() {
     }
     else if(jm_cat === "Shoes"){
             //allSiteGA29();
-            allSiteGA14();
+            //allSiteGA14();
         // if(!urlEshoes){
         //   shoesGA14();
         //    newArrivalsShoesGA();
@@ -662,7 +662,7 @@ $(window).load(function() {
     else if(jm_cat === "Handbags &amp; Accessories"){
         //doubleHandbagsBGA();
             //allSiteGA29();
-            allSiteGA14();
+            //allSiteGA14();
             //handbagsGA();
         // if(!urlEhandbags){
         //     hbGA14();
@@ -677,7 +677,7 @@ $(window).load(function() {
         // if(!urlEkids2){
         //     kidsGA30();
         // }
-        allSiteGA14();
+        //allSiteGA14();
         if(!urlEkids){
             kidsGA30();
         //    kidsGA14();
@@ -690,7 +690,7 @@ $(window).load(function() {
     }
     else if((jm_cat === "Women") || (jm_cat === "The Dress Shop")){
             //allSiteGA29();
-            allSiteGA14();
+          //  allSiteGA14();
         // if(!urlEmwomens2){
         //   womenGA30();
         // }
@@ -704,7 +704,7 @@ $(window).load(function() {
         // if(!urlEmens2){
         //     menGA30();
         // }
-        allSiteGA14();
+        //allSiteGA14();
         // if(!urlEmens){
         //     menGA14();
         // }        
@@ -712,7 +712,7 @@ $(window).load(function() {
     else if(jm_cat === "Home"){
             //allSiteGA29();
             //allSiteGA14();
-        allSiteGA14();
+        //allSiteGA14();
          if(!urlEhome){
                 homeGA30();
         //     homeGA14();
@@ -1273,13 +1273,13 @@ function homeGA30() {
     //POSITION
     var pos = 29;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDcvMTMvMDkvMDAvMTEvODkyLzAxXzA3V2VlazJfQkdBX2NlbGVzdGlhbG1vb2QuanBnIl1d/01_07Week2_BGA_celestialmood.jpg?sha=d8d7b99487a3bba8";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDcvMzAvMDgvNTkvMDkvNzk1LzAxXzA4V2VlazFfQkdBX2NlbGVzdGlhbG1vb2QuanBnIl1d/01_08Week1_BGA_celestialmood.jpg?sha=4ad797cce9e5baba";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/categories/new-now-celestial-mood?bga=home-celestial_mood-w24_18&gal=pos30";
+    var urlLINK = "https://www.c21stores.com/categories/new-on-campus?bga=new-on-campus-w29_18&gal=pos30";
     //TAG
-    var gaTag = "GA_home_must_haves-w24_18";
+    var gaTag = "GA_new_on_campus-w29_18";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
