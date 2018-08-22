@@ -1,5 +1,5 @@
-// JS PROD MASTER - W29 clearance down -&- removing kids BGA -&- new on campus home BGA now is global -  JMRV- 08.16.18
-// PAST: Clearance 90% BGA W26A -&- BGA W26A  -&- fix banners bug & Pagination is Back  -&- suppresion list panel solution 3  -&- message cart promos - 07.30.18
+// JS PROD MASTER - PLCC W30D BGA and global banner - JMRV- 08.22.18
+// PAST: W29 clearance down -&- removing kids BGA -&- new on campus home BGA now is global -  JMRV- 08.16.18
 // jrios@c21stores.com
 
 
@@ -1475,14 +1475,14 @@ function acquisitionGA() {
     //POSITION
     var pos = 46;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTAvMDYvMTYvMDAvNDQvMTUyLzA5V2VlazRfUExDQ19HcmlkX0lNRy5qcGciXV0/09Week4_PLCC_Grid_IMG.jpg?sha=db1dd8d42c58d407";
-    // var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDUvMjQvMDgvNTgvNDAvNTAzLzAxX01lbW9yaWFsRGF5X0JHQURfTm9ubWVtYmVycy5qcGciXV0/01_MemorialDay_BGAD-Nonmembers.jpg?sha=eab84959f2dcf735";
+    //var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTAvMDYvMTYvMDAvNDQvMTUyLzA5V2VlazRfUExDQ19HcmlkX0lNRy5qcGciXV0/09Week4_PLCC_Grid_IMG.jpg?sha=db1dd8d42c58d407";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDgvMjIvMTAvMTQvMTEvNjIxLzAxXzA4V2VlazRfQkcuanBnIl1d/01_08Week4_BG.jpg?sha=d27aebaf35983486";
     //LINK TEXT
     var textLink = "APPLY NOW";
     // var textLink = "LEARN MORE";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/instant_credit/apply?bga=acquisition_plcc_w17B&gal=pos45";
-    // var urlLINK = "https://www.c21stores.com/instant_credit?bga=acquisition_plcc_w16&gal=pos45";
+    //var urlLINK = "https://www.c21stores.com/instant_credit/apply?bga=acquisition_plcc_w17B&gal=pos45";
+    var urlLINK = "https://www.c21stores.com/instant_credit?bga=acquisition_xtra20_plcc_w30D&gal=pos45";
 
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
@@ -1506,7 +1506,7 @@ function acquisitionGA() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--dark">'+
-        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
@@ -2664,6 +2664,14 @@ function shipping_Message(){
 // }
 // END CONTACT PAGE MESSAGE
 
+// PLCC 20% RED
+console.log($("h2.branded-card-header__heading[2]"));
+ setTimeout(function(){ 
+    $("h2.branded-card-header__heading:contains('SAVE 20%')").html(function(_, html) {
+       return  html.replace(/(SAVE 20%)/g, '<span class="smallcaps">$1</span>')
+    });
+}, 3000);
+// END PLCC 20% RED
 
 console.log('all running');
 
