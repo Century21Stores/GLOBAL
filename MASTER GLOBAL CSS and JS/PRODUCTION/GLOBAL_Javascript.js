@@ -1,4 +1,4 @@
-// JS PROD MASTER - PLCC W30D BGA and global banner - JMRV- 08.22.18
+// JS PROD MASTER - PLCC W30D BGA and global banner -&- Second Tagline: AFFORD TO LOOK GREAT ANYTIME  - JMRV- 08.23.18
 // PAST: W29 clearance down -&- removing kids BGA -&- new on campus home BGA now is global -  JMRV- 08.16.18
 // jrios@c21stores.com
 
@@ -2535,6 +2535,7 @@ function show_banner_when_not_blank(){
 function seoCopyLineFooter(){
 
     $('.jm_copy_block_clone').before("<h3 style='text-align: center;margin:0;'>NEW YORK'S BEST KEPT SECRET</h3>");
+    $('.jm_copy_block_clone').after("<h3 style='text-align: center;margin:0 0 3%;'>AFFORD TO LOOK GREAT ANYTIME</h3>");
 
 }
 // END SEO COPY AT FOOTER - NYC BEST SECRET
