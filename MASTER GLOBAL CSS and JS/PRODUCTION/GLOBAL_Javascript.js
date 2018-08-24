@@ -1,4 +1,4 @@
-// JS PROD MASTER - PLCC W30D BGA and global banner -&- Second Tagline: AFFORD TO LOOK GREAT ANYTIME  - JMRV- 08.23.18
+// JS PROD MASTER - PLCC W30D BGA and global banner -&- Second Tagline: AFFORD TO LOOK GREAT ANYTIME -&- BGA update  - JMRV- 08.24.18
 // PAST: W29 clearance down -&- removing kids BGA -&- new on campus home BGA now is global -  JMRV- 08.16.18
 // jrios@c21stores.com
 
@@ -589,6 +589,7 @@ $(window).load(function() {
         (window.location.href.indexOf("swimsuits") > -1)
     );    
     var urlEhome = (
+        (window.location.href.indexOf("home-bath-accessories") > -1) ||
         (window.location.href.indexOf("new-on-campus") > -1) ||
         (window.location.href.indexOf("home-comforters-duvets-quilts") > -1) ||
         (window.location.href.indexOf("jm-test") > -1)
