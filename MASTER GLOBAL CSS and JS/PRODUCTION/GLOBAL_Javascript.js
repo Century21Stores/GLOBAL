@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA FALL REFRESH - W31B  - JMRV- 08.31.18
+// JS PROD MASTER - BGA FALL REFRESH UPDATE- W31B  - JMRV- 09.06.18
 // PAST: PLCC W30D BGA and global banner -&- Second Tagline: AFFORD TO LOOK GREAT ANYTIME -&- BGA update  - JMRV- 08.24.18
 // jrios@c21stores.com
 
@@ -608,6 +608,7 @@ $(window).load(function() {
     var urlEmwomens2 = (
         (window.location.href.indexOf("women-coats") > -1) ||
         (window.location.href.indexOf("women-jeans") > -1) ||
+        (window.location.href.indexOf("women-swimsuits-cover-ups") > -1) ||
         (window.location.href.indexOf("women-sweaters") > -1)
     );    
     var urlEhome = (
@@ -622,7 +623,7 @@ $(window).load(function() {
         (window.location.href.indexOf("home-table-linens") > -1) || // because global
         (window.location.href.indexOf("home-shop-all-dining-entertaining") > -1) || // because global
         (window.location.href.indexOf("new-on-campus") > -1) || //because global
-        (window.location.href.indexOf("7aibh") > -1)
+        (window.location.href.indexOf("home-sheets-pillowcases") > -1)
     );
     var urlEbeauty = (
         //(window.location.href.indexOf("bvlgari") > -1) ||
@@ -923,7 +924,7 @@ function womenGA14() {
 
 
 
-// WOMENS 30
+// WOMENS 30 - WILD WEST
 function womenGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
