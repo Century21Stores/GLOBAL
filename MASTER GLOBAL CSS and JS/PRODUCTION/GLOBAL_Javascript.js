@@ -2796,12 +2796,12 @@ function shipping_Message(){
 // END CONTACT PAGE MESSAGE
 
 // PLCC 20% RED
-console.log($("h2.branded-card-header__heading[2]"));
- setTimeout(function(){ 
-    $("h2.branded-card-header__heading:contains('SAVE 20%')").html(function(_, html) {
-       return  html.replace(/(SAVE 20%)/g, '<span class="smallcaps">$1</span>')
-    });
-}, 3000);
+// console.log($("h2.branded-card-header__heading[2]"));
+// setTimeout(function(){ 
+//     $("h2.branded-card-header__heading:contains('SAVE 20%')").html(function(_, html) {
+//        return  html.replace(/(SAVE 20%)/g, '<span class="smallcaps">$1</span>')
+//     });
+// }, 3000);
 // END PLCC 20% RED
 
 console.log('all running');
