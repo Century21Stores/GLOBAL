@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA FALL REFRESH UPDATE- W31B  - JMRV- 09.06.18
+// JS PROD MASTER - BGA FALL REFRESH UPDATE- W31B  - JMRV- 09.07.18
 // PAST: PLCC W30D BGA and global banner -&- Second Tagline: AFFORD TO LOOK GREAT ANYTIME -&- BGA update  - JMRV- 08.24.18
 // jrios@c21stores.com
 
@@ -596,7 +596,10 @@ $(window).load(function() {
     );
     var urlEjeanswomensHidden = (
         (window.location.href.indexOf("/women-jeans") > -1)
-    );   
+    );
+    var urlEcoatsmensHidden = (
+        (window.location.href.indexOf("/men-coats-jackets") > -1)
+    );       
     var urlEcoatswomensHidden = (
         (window.location.href.indexOf("women-coats") > -1)
     );    
@@ -705,7 +708,7 @@ $(window).load(function() {
         // }
         //allSiteGA14();
         if(!urlEkids){
-            kidsGA30();
+            //kidsGA30();
             kidsGA14();
         }
     }
@@ -743,6 +746,9 @@ $(window).load(function() {
              if(urlEjeansmensHidden){
                 menjeansHGA30();
             }
+            else if(urlEcoatsmensHidden){
+                mencoatsHGA30();
+            }            
          }        
     }
     else if(jm_cat === "Home"){
@@ -1078,6 +1084,53 @@ function menjeansHGA30() {
     var textLink = "SHOP NOW";
     //LINK URL
     var urlLINK = "https://www.c21stores.com/categories/men-sweaters?bga=men_knit_list_from_"+ jm_cat_slug + "_w31&gal=pos28";
+
+    // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+    var FixHeights;
+    var realPos = pos-1;
+    window.onresize = function(e) {
+        clearTimeout(FixHeights);
+        FixHeights = setTimeout(function() {
+        // console.log('yay it works!');
+        AdClassAll_Single(realPos, gaType);
+        }, 100);
+    };
+
+    $('.product-grid li:nth-of-type('+ realPos +')').after(
+        '<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+        '<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+        '<div class="product-grid-content-block__image"></div>'+
+        '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+        '<div class="content-block-content__container content-block-content__container--center">'+
+        '<div class="content-block-content__message content-block-content__message--light">'+
+        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '</div>'+
+        '</div>'+
+        '</div>'+
+        '</div>'+
+        '</li>'
+    );
+
+    AdClassAll_Single(realPos, gaType);
+
+}
+// END MENS JEANS HIDDEN 30
+
+
+
+// MENS JEANS HIDDEN 30
+function mencoatsHGA30() {
+
+    //GRID AD TYPE:  enter 1 or 2
+    var gaType = 2;
+    //POSITION
+    var pos = 28;
+    //IMAGE URL 370x552
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDkvMDcvMTUvMjcvMzAvNTEwLzAxXzA5V2VlazFfQkdBX1NVSVRTLmpwZyJdXQ/01_09Week1_BGA_SUITS.jpg?sha=a59735d713a3856b";
+    //LINK TEXT
+    var textLink = "SHOP NOW";
+    //LINK URL
+    var urlLINK = "https://www.c21stores.com/categories/men-hats-scarves-gloves?bga=men_cool_elements_from_"+ jm_cat_slug + "_w3&gal=pos28";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
