@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA FALL REFRESH UPDATE- W31B  - JMRV- 09.07.18
+// JS PROD MASTER - BGA FALL REFRESH UPDATE- W31B  - JMRV- 09.11.18
 // PAST: PLCC W30D BGA and global banner -&- Second Tagline: AFFORD TO LOOK GREAT ANYTIME -&- BGA update  - JMRV- 08.24.18
 // jrios@c21stores.com
 
@@ -165,7 +165,7 @@ function zero_results_search(){
         //console.log("lsit arr: " + listArr);
         //console.log("lsit arr2: " + listArr2);
         //console.log(listArrTotal);
-        console.log(listArr3);
+        //console.log(listArr3);
 
         designerList();
         function designerList(){
@@ -226,7 +226,7 @@ function build_searchResults(){
 setTimeout(function(){
     if($('section.jm-zerosearch').length === 0){
         $('.page-content--search .page-content__main').css('opacity','1');
-        console.log('NO PANEL');
+        // console.log('NO PANEL');
     }
 }, 500);        
 
@@ -533,7 +533,7 @@ $(window).load(function() {
     jm_h1_title = $('.view h1').html().toLowerCase().replace(/'/g,"").replace(/ /g,"_");
     jm_cat_URL = window.location.href;
     jm_cat_slug = jm_cat_URL.substr(jm_cat_URL.lastIndexOf('/') + 1);
-    console.log(jm_h1_title);
+    //console.log(jm_h1_title);
     var urlEshoes = (
         (window.location.href.indexOf("arrivals") > -1) ||
         //(window.location.href.indexOf("edit") > -1) ||
@@ -2804,11 +2804,11 @@ function shipping_Message(){
 // }, 3000);
 // END PLCC 20% RED
 
-console.log('all running');
+console.log('All running | Not chocarreros');
 
 
 var t1 = performance.now();
-console.log("Call to run all script " + (t1 - t0) + " milliseconds.")
+console.log("Amount it took to run additional scripts: " + (t1 - t0) + " milliseconds.")
 
 
 var timerStart = Date.now();
