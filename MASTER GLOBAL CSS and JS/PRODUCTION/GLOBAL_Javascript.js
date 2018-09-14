@@ -1,4 +1,4 @@
-// JS PROD MASTER - BGA FALL REFRESH UPDATE- W31B  - JMRV- 09.11.18
+// JS PROD MASTER - W33 BGA -&- BGA FALL REFRESH UPDATE- W31B  - JMRV- 09.14.18
 // PAST: PLCC W30D BGA and global banner -&- Second Tagline: AFFORD TO LOOK GREAT ANYTIME -&- BGA update  - JMRV- 08.24.18
 // jrios@c21stores.com
 
@@ -540,7 +540,8 @@ $(window).load(function() {
         (window.location.href.indexOf("7arsw") > -1)
     );
     var urlEshoes2 = (
-        (window.location.href.indexOf("sandals") > -1) ||
+        (window.location.href.indexOf("shoes-boots") > -1) ||
+        (window.location.href.indexOf("shoes-luxury-designer") > -1) ||        
         //(window.location.href.indexOf("edit") > -1) ||
         (window.location.href.indexOf("sneakers") > -1)
     );    
@@ -685,9 +686,9 @@ $(window).load(function() {
          if(!urlEshoes){
            shoesGA14();
          }
-        // if(!urlEshoes2){
-        //   shoesGA30();
-        // }
+         if(!urlEshoes2){
+           shoesGA30();
+         }
     }
     else if(jm_cat === "Handbags &amp; Accessories"){
             //allSiteGA29();
@@ -1303,7 +1304,7 @@ function shoesGA14() {
 // END SHOES 14
 
 
-// SHOES SHOES 30
+// SHOES SHOES 30 - WILD WEST
 function shoesGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
@@ -1311,11 +1312,11 @@ function shoesGA30() {
     //POSITION
     var pos = 28;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDQvMTkvMTUvMzcvNDkvOTMwLzAxXzA0V2VlazNfQkdBX1NsaWRlc0Zvb3RiZWRzLmpwZyJdXQ/01_04Week3_BGA_SlidesFootbeds.jpg?sha=549bf51ddc44c8c4";
+    var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTgvMDkvMTQvMTEvMTMvNDEvODA4LzAxXzA5V2VlazNfQkdBX1dJTERXRVNULmpwZyJdXQ/01_09Week3_BGA_WILDWEST.jpg?sha=3995c05f8e6e417b";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/categories/new-now-slide-in?bga=shoes_slide_in_W12&gal=pos28";
+    var urlLINK = "https://www.c21stores.com/categories/new-now-wild-west?bga=shoes_wild_west_from_"+ jm_cat_slug + "_w31&gal=pos28";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
@@ -1335,7 +1336,7 @@ function shoesGA30() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--light">'+
-        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
