@@ -1,5 +1,5 @@
-/* PROD CSS -  Logo alignment at the footer fix  -&- suppresion list panel -&- Global Banner off W26A - 07.25.18 jrios */
-/* PAST: Shipping restrictions to only regular shipping is on - Banner CTA width increased from 156px to 165px  03.16.18 jrios */
+/* PROD CSS -  Shipping options update W32D - 09.13.18 JMRV */
+/* PAST: Logo alignment at the footer fix  -&- suppresion list panel -&- Global Banner off W26A - 07.25.18 jrios */
 
 /* CSS MASTER STYLE JMRV  */
 /*@import "https://www.c21stores.com/media/W1siZiIsIjIwMTUvMDkvMTgvMDgvNTYvNTEvNjg4L01hc3RlclN0eWxlM19MYW5kaW5nUGFnZTA3MTUuY3NzIl1d/MasterStyle3_LandingPage0715.css?sha=5a57837dcb4befbf";*/
@@ -11,15 +11,15 @@
 }
  */
 /* ..................... OVERWRITES .....................*/
-/* SHIPPING 
-#shipping_method_id{
+/* SHIPPING
+/*#shipping_method_id{
   pointer-events: none
 }
-#shipping_method_id option:nth-of-type(2),
+#shipping_method_id option:nth-of-type(2)
 #shipping_method_id option:nth-of-type(3){
 display:none !important;
 }
- END SHIPPING */
+END SHIPPING */
 
 /* QuickLook size selections FIX*/
 .inline-quickview__container .ui-menu-item{
