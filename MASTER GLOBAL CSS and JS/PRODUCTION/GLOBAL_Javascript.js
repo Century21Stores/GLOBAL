@@ -1,4 +1,4 @@
-// JS PROD MASTER - W33 BGA -&- BGA FALL REFRESH UPDATE- W31B  - JMRV- 09.14.18
+// JS PROD MASTER - W33 BGA wild west down -&- BGA FALL REFRESH UPDATE- W31B  - JMRV- 09.18.18
 // PAST: PLCC W30D BGA and global banner -&- Second Tagline: AFFORD TO LOOK GREAT ANYTIME -&- BGA update  - JMRV- 08.24.18
 // jrios@c21stores.com
 
@@ -686,9 +686,9 @@ $(window).load(function() {
          if(!urlEshoes){
            shoesGA14();
          }
-         if(!urlEshoes2){
-           shoesGA30();
-         }
+         //if(!urlEshoes2){
+           //shoesGA30();
+         //}
     }
     else if(jm_cat === "Handbags &amp; Accessories"){
             //allSiteGA29();
