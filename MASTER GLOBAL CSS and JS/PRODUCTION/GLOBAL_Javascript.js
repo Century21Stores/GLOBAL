@@ -1,4 +1,4 @@
-// JS PROD MASTER - W33 BGA wild west down -&- BGA FALL REFRESH UPDATE- W31B  - JMRV- 09.18.18
+// JS PROD MASTER - W34 BGA varsity style -&- BGA FALL REFRESH UPDATE- W31B  - JMRV- 09.20.18
 // PAST: PLCC W30D BGA and global banner -&- Second Tagline: AFFORD TO LOOK GREAT ANYTIME -&- BGA update  - JMRV- 08.24.18
 // jrios@c21stores.com
 
@@ -559,7 +559,7 @@ $(window).load(function() {
         (window.location.href.indexOf("kids-girls-shoes") > -1) ||
         (window.location.href.indexOf("kids-boys-shoes") > -1) ||
         (window.location.href.indexOf("infant") > -1) ||
-        (window.location.href.indexOf("jm-test") > -1)
+        (window.location.href.indexOf("bedroom-must-haves") > -1)
     );
     var urlEkids2 = (
         (window.location.href.indexOf("kids-girls-shoes") > -1) ||
@@ -572,9 +572,9 @@ $(window).load(function() {
         (window.location.href.indexOf("testmen-shop-all-accessories") > -1)
     );
     var urlEmens2 = (
-        (window.location.href.indexOf("tiki") > -1) ||
-        (window.location.href.indexOf("mens-swim") > -1) ||
-        (window.location.href.indexOf("testmen-shop-all-accessories") > -1)
+        (window.location.href.indexOf("men-coats-jackets") > -1) ||
+        (window.location.href.indexOf("men-dress-shirts") > -1) ||
+        (window.location.href.indexOf("men-jeans") > -1)
     );
     var urlEcontemporary = (
         (window.location.href.indexOf("arrivals") > -1) ||
@@ -709,7 +709,7 @@ $(window).load(function() {
         // }
         //allSiteGA14();
         if(!urlEkids){
-            //kidsGA30();
+            kidsGA30();
             kidsGA14();
         }
     }
@@ -738,9 +738,9 @@ $(window).load(function() {
     else if((jm_cat === "Men") || (urlEmensHidden)){
             //allSiteGA29();
             //allSiteGA14();
-        // if(!urlEmens2){
-        //     menGA30();
-        // }
+        if(!urlEmens2){
+             menGA30();
+        }
         //allSiteGA14();
          if(!urlEmens){
              menGA14();
@@ -835,19 +835,19 @@ function kidsGA14() {
 // END KIDS 14
 
 
-// KIDS 30 - Back To Cool
+// KIDS 30 - VARSITY STYLE
 function kidsGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
     var gaType = 2;
     //POSITION
-    var pos = 29;
+    var pos = 28;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDgvMDEvMTEvNDMvNDYvODQ0LzAxXzA4V2VlazFfQkdBX0JBQ0tUT0NPT0wuanBnIl1d/01_08Week1_BGA_BACKTOCOOL.jpg?sha=561bf2f714b74f5e";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDkvMjAvMTMvNDgvNTgvMTI0LzA5V2VlazRfQkdBX1ZhcnNpdHlfU3R5bGVfMi5qcGciXV0/09Week4_BGA_Varsity_Style_2.jpg?sha=0b3d8ed2534c1693";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/categories/new-now-back-to-cool?bga=kids-back_to_cool-w27-18&gal=pos30";
+    var urlLINK = "https://www.c21stores.com/categories/new-now-varsity-style?bga=kids-varsity_style_from_"+ jm_cat_slug + "_w34&gal=pos28";
     //TAG
     var gaTag = "GA_kidsbacktocool_W27_18";
 
@@ -870,7 +870,7 @@ function kidsGA30() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--light">'+
-        '<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag +'" class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag +'" class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
@@ -1026,7 +1026,7 @@ function menGA14() {
 
 
 
-// MENS 30
+// MENS 30 - New Retro Replay
 function menGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
@@ -1034,11 +1034,11 @@ function menGA30() {
     //POSITION
     var pos = 28;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDUvMDQvMTMvMDUvMDcvNDY3LzAxXzA1V2VlazFfQkdBX01PbW5pVHJlbmQuanBnIl1d/01_05Week1_BGA_MOmniTrend.jpg?sha=459ae355e006110a";
+    var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTgvMDkvMjAvMTQvMTIvNTAvNzMxLzA5V2VlazRfQkdBX1JldHJvX1JlcGxheV8yLmpwZyJdXQ/09Week4_BGA_Retro-Replay_2.jpg?sha=7718648527e9dc24";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/categories/new-now-men-tiki-chic?bga=tiki_chic_W14&gal=pos30";
+    var urlLINK = "https://www.c21stores.com/categories/new-now-retro-replay?bga=men_newnow_retro_replay_from_"+ jm_cat_slug + "_w34&gal=pos28";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
@@ -1058,7 +1058,7 @@ function menGA30() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--light">'+
-        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a style="background:white; color:black !important" class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
