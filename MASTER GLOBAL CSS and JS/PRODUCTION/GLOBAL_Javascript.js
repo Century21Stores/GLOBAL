@@ -1,4 +1,4 @@
-// JS PROD MASTER - W34 BGA varsity style -&- BGA FALL REFRESH UPDATE- W31B  - JMRV- 09.20.18
+// JS PROD MASTER - W35A BGA -&- varsity style -&- BGA FALL REFRESH UPDATE- W31B  - JMRV- 09.26.18
 // PAST: PLCC W30D BGA and global banner -&- Second Tagline: AFFORD TO LOOK GREAT ANYTIME -&- BGA update  - JMRV- 08.24.18
 // jrios@c21stores.com
 
@@ -672,13 +672,13 @@ $(window).load(function() {
     }
     else if(jm_cat === "Beauty"){
         //allSiteGA14();
-        // if(!urlEbeauty){
-          // beautyGA30();
+        if(!urlEbeauty){
+            beautyGA30();
             //freeShippingBeautyGA();
             //allSiteGA14();
             //allSiteGA29();
 //          WishiWankaGA();
-        //}
+        }
     }
     else if(jm_cat === "Shoes"){
             //allSiteGA29();
@@ -1491,7 +1491,7 @@ function homeGA14() {
 // END HOME 14
 
 
-// HOME 30 - MIXED METALS
+// HOME 30 - MODERN FARMHOUSE
 function homeGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
@@ -1499,11 +1499,11 @@ function homeGA30() {
     //POSITION
     var pos = 28;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDgvMzEvMDkvNTkvMjMvNzY4LzAxXzA5V2VlazFfQkdBX01JWEVETUVUQUwuanBnIl1d/01_09Week1_BGA_MIXEDMETAL.jpg?sha=e63f3afb11578231";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDkvMjYvMTEvMjkvNTAvNTI0LzA5V2VlazVfQkdBX0Zhcm1ob3VzZV8yLmpwZyJdXQ/09Week5_BGA_Farmhouse_2.jpg?sha=ee90e79b522c5cb2";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/categories/mixed-metals?bga=mixed_metals_from_"+ jm_cat_slug + "_w31&gal=pos28";
+    var urlLINK = "https://www.c21stores.com/categories/new-now-modern-farmhouse?bga=modern_farmhouse_from_"+ jm_cat_slug + "_w35&gal=pos28";
     //TAG
     var gaTag = "GA_new_on_campus-w29_18";
 
@@ -1525,7 +1525,7 @@ function homeGA30() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--light">'+
-        '<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag + '" class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag + '" class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
@@ -1540,15 +1540,15 @@ function homeGA30() {
 
 
 
-// BEAUTY 30
+// BEAUTY 30 - FREE GIFTS + FREE SHIPPING
 function beautyGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
-    var gaType = 1;
+    var gaType = 2;
     //POSITION
-    var pos = 30;
+    var pos = 28;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDQvMDYvMDIvMDgvNTMvMzk3LzA0V2VlazFfQkdBX0JFQVVUWS5qcGciXV0/04Week1_BGA_BEAUTY.jpg?sha=eec3817e0df0a42e";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDkvMjYvMTAvMDEvMzcvNTA1LzA5X1dlZWs1X0JHQV9CRUFVVFlHV1AuanBnIl1d/09_Week5_BGA_BEAUTYGWP.jpg?sha=543cdd27c7c3fd49";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
@@ -1585,7 +1585,7 @@ function beautyGA30() {
     AdClassAll_Single(realPos, gaType);
 
 }
-// END BEAUTY 30 
+// END BEAUTY 30 - FREE GIFTS + FREE SHIPPING
 
 
 
