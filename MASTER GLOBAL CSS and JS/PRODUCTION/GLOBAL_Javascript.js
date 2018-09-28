@@ -1,4 +1,4 @@
-// JS PROD MASTER - W35A BGA -&- varsity style -&- BGA FALL REFRESH UPDATE- W31B  - JMRV- 09.26.18
+// JS PROD MASTER - W35D ligthbox fix -&- varsity style -&- BGA FALL REFRESH UPDATE- W31B  - JMRV- 09.26.18
 // PAST: PLCC W30D BGA and global banner -&- Second Tagline: AFFORD TO LOOK GREAT ANYTIME -&- BGA update  - JMRV- 08.24.18
 // jrios@c21stores.com
 
@@ -109,7 +109,7 @@ if ($(window).width() >= 1050) {
 // $(document).ready(function(){
 function clonningClickEvent(){
     $('.banner-content-block, .hero-content-block, .three-column-square-content-block__container, .large-square-plus-two-content-block__container--large-image, .large-square-plus-two-content-block__container--small-image, .large-square-plus-one-content-block__container--large-image, .two-column-square-content-block__container, .two-column-hero-content-block__container, .jm-image-clickable').each(function(){
-       var new_data= $('a:first-of-type', this).clone();
+        var new_data= $('a:first-of-type', this).clone();
         new_data.attr("id", "jm_img_anchor");
         new_data.removeAttr("class");
         new_data.appendTo(this);
@@ -2068,7 +2068,7 @@ $('.hero-content-block, .banner-content-block, .jm-make-ligthbox, .two-column-sq
             //console.log("multi multi");
             jm_hero_FirstCTA = $(this).find('.content-block-content__action a').eq(0);
             jm_hero_FirstCTA_url = jm_hero_FirstCTA.attr('href');
-//          console.log('this url ' + jm_hero_FirstCTA_url);
+            // console.log('this url ' + jm_hero_FirstCTA_url);
             jm_hero_FirstCTA_text = jm_hero_FirstCTA.text().toLowerCase();
 
             if (jm_hero_FirstCTA_url.indexOf("#jmlb") > -1){
@@ -2099,12 +2099,28 @@ $('.hero-content-block, .banner-content-block, .jm-make-ligthbox, .two-column-sq
                     $(multi_CTA_wrap).find('.content-block-content__action').addClass("jm-multipleCTA-space").append(
                         '<a class="' + initial_CTA_class +'" href="' + multi_CTA_url + '">' + multi_CTA_text + '</a>'
                     )
+                    console.log(this);
+                  if (multi_CTA_url.indexOf("#jmlb") > -1){
+                        $('a').click( function() { 
+                            if((window.location.href.indexOf("#jmlb") > -1) && ($(this).text() == 'INFO/EXCLUSIONS')) {
+                                console.log('clicked'); 
+                                console.log(this);
+                                console.log($(this).text());
+                                $(this).addClass('JM_trigger_ligthBox');
+                                $(this).closest('div.hero-content-block').next().fadeIn(1000).addClass("jm_displayflex");
+                                $(".jm_dark_lightBox, .rich-text-content-block").fadeIn();
+                                $(".jm_dark_lightBox").click(function(){
+                                    $('.jm_displayflex').stop().fadeOut(300);
 
+                                });
+                                $(".jm_X_Hero_lightBox").click(function(){
+                                    $('.jm_displayflex').stop().fadeOut(300);
 
-//                  if (multi_CTA_url.indexOf("#jmlb") > -1){
-//                      console.log('first is hidden of Others');
+                                });                                
+                            }
+                        });
 //                      multi_CTA_url.addClass('JM_trigger_ligthBox');
-//                  }
+                  }
 
             }
 
@@ -2144,7 +2160,7 @@ $('.hero-content-block, .banner-content-block, .jm-make-ligthbox, .two-column-sq
             else if(hero_number_CTA == 2){
                 $(this).find('.content-block-content__action').addClass("jm-multipleCTA-space2");
                 $(this).find('.content-block-content').parent().addClass("jm-multipleCTA-content-wrap");
-                $('.jm-multipleCTA-space2').parent().parent().parent().parent().find('.content-block-content--center').css('width','90%');
+                $('.jm-multipleCTA-space2').parent().parent().parent().parent().find('.content-block-content--center').css('width','100%');
             }
 //          $('.hero-content-block > a').hide();
 
