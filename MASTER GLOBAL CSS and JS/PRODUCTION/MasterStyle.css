@@ -338,12 +338,18 @@ figure{
 }
 .rich-text-content-block h2{
     font-size: 14px;
+    text-rendering: optimizeLegibility;    
+    -webkit-font-smoothing: auto;
 }
 .rich-text-content-block h3{
     font-size: 13px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: auto;
 }
 .rich-text-content-block p{
     font-size: 12.3px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: auto;
 }
 
 /* MASTERS IMAGES FIX */
