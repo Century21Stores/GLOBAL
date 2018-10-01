@@ -1,4 +1,4 @@
-// JS PROD MASTER - W35D ligthbox fix -&- varsity style -&- BGA FALL REFRESH UPDATE- W31B  - JMRV- 09.26.18
+// JS PROD MASTER - W35D ligthbox fix -&- varsity style -&- BGA FALL REFRESH UPDATE- W31B  - JMRV- 09.28.18
 // PAST: PLCC W30D BGA and global banner -&- Second Tagline: AFFORD TO LOOK GREAT ANYTIME -&- BGA update  - JMRV- 08.24.18
 // jrios@c21stores.com
 
@@ -661,17 +661,17 @@ $(window).load(function() {
 
     if(jm_cat === "Tech"){
         //allSiteGA29();
-        //allSiteGA14();
+        allSiteGA14();
         if(!urlEtech){
 //          WishiWankaGA();
         }
     }
     else if(jm_cat === "New + Now"){
             //allSiteGA29();
-            //allSiteGA14();
+            allSiteGA14();
     }
     else if(jm_cat === "Beauty"){
-        //allSiteGA14();
+        allSiteGA14();
         if(!urlEbeauty){
             beautyGA30();
             //freeShippingBeautyGA();
@@ -682,9 +682,9 @@ $(window).load(function() {
     }
     else if(jm_cat === "Shoes"){
             //allSiteGA29();
-            //allSiteGA14();
+            allSiteGA14();
          if(!urlEshoes){
-           shoesGA14();
+           //shoesGA14(); NEW ARRIVALS
          }
          //if(!urlEshoes2){
            //shoesGA30();
@@ -692,10 +692,10 @@ $(window).load(function() {
     }
     else if(jm_cat === "Handbags &amp; Accessories"){
             //allSiteGA29();
-            //allSiteGA14();
+            allSiteGA14();
             //handbagsGA();
          if(!urlEhandbags){
-             hbGA14();
+             //hbGA14(); NEW ARRIVALS
          }
         //if(!urlEhandbags2){
             //hbGA30();
@@ -703,14 +703,14 @@ $(window).load(function() {
     }
     else if(jm_cat === "Kids"){
             //allSiteGA29();
-            //allSiteGA14();
+            allSiteGA14();
         // if(!urlEkids2){
         //     kidsGA30();
         // }
         //allSiteGA14();
         if(!urlEkids){
             kidsGA30();
-            kidsGA14();
+            //kidsGA14(); NEW ARRIVALS
         }
     }
     else if(jm_cat === "Contemporary"){
@@ -720,12 +720,12 @@ $(window).load(function() {
     }
     else if((jm_cat === "Women") || (urlEwomensHidden)){
             //allSiteGA29();
-          //  allSiteGA14();
+            allSiteGA14();
          if(!urlEmwomens2){        
              womenGA30();   
          }
         if(!urlEmwomens){
-            womenGA14();
+            // womenGA14();  NEW ARRIVALS
         
             if(urlEcoatswomensHidden){
                 womencoatsHGA30();
@@ -741,9 +741,9 @@ $(window).load(function() {
         if(!urlEmens2){
              menGA30();
         }
-        //allSiteGA14();
+        allSiteGA14();
          if(!urlEmens){
-             menGA14();
+             //menGA14(); NEW ARRIVALS
              if(urlEjeansmensHidden){
                 menjeansHGA30();
             }
@@ -754,10 +754,10 @@ $(window).load(function() {
     }
     else if(jm_cat === "Home"){
             //allSiteGA29();
-            //allSiteGA14();
+            allSiteGA14();
         //allSiteGA14();
          if(!urlEhome){
-                homeGA14();
+                //homeGA14();
             if(!urlEhome2){
                homeGA30();
              }
@@ -1589,7 +1589,7 @@ function beautyGA30() {
 
 
 
-// ALL SITE 14 GRID AD BANNER
+// ALL SITE 14 GRID AD BANNER - $21 CENTURYCASH
 function allSiteGA14() {
 
     var breacrumb2 = $('.breadcrumbs__node-group span:nth-of-type(2) a').text().toLowerCase();
@@ -1601,12 +1601,12 @@ function allSiteGA14() {
     //POSITION
     var pos = 14;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDcvMjYvMTYvMzUvMjMvNTY4LzAxXzA3V2VlazA0X0JHLmpwZyJdXQ/01_07Week04_BG.jpg?sha=7c884877dbdaea65";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDkvMjgvMTEvNTcvNTQvNzg2L09NMThfQ29sdW1idXNkYXlfQkdBX3Byb21vYi5wbmciXV0/OM18_Columbusday_BGA_promob.png?sha=560b781ef7003cd9";
     //LINK TEXT
-    var textLink = "SHOP NOW";
+    var textLink = "SIGN UP: IT'S FREE!";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/pages/clearance?bga=clearance_90_"+breacrumb2+"-"+breacrumb3+"_w26A&gal=pos14";
-    var gaTag = "GA_clearance_90_2018";
+    var urlLINK = "https://www.c21stores.com/users/account/edit?edit_section=c21status&bga=centurycash_join_from_"+ jm_cat_slug + "_w35&gal=pos14";
+    var gaTag = "GA_centurycash_2018";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
@@ -1627,8 +1627,8 @@ function allSiteGA14() {
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--dark">'+
         // '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
-        //'<p class="content-block-content__action content-block-content__action--light-text"><a style="color:white; border-color: white;" target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
-        '<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag +'" class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--light-text"><a style="color:white;border-color: white;font-size: 1.8em;letter-spacing: 0;line-height: 1.2;padding: 0;" target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        // '<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag +'" class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
@@ -2836,7 +2836,3 @@ $(document).ready(function() {
 $(window).load(function() {
     console.log("Time until everything loaded: ", (Date.now()-timerStart)/1000);
 });
-    
-
-
-
