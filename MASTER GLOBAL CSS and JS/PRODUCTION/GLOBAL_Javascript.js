@@ -1,4 +1,4 @@
-// JS PROD MASTER - W35D ligthbox fix -&- varsity style -&- BGA FALL REFRESH UPDATE- W31B  - JMRV- 09.28.18
+// JS PROD MASTER - W35D ligthbox fix -&- varsity style -&- BGA FALL REFRESH UPDATE- W31B  - JMRV- 10.01.18
 // PAST: PLCC W30D BGA and global banner -&- Second Tagline: AFFORD TO LOOK GREAT ANYTIME -&- BGA update  - JMRV- 08.24.18
 // jrios@c21stores.com
 
@@ -2100,27 +2100,27 @@ $('.hero-content-block, .banner-content-block, .jm-make-ligthbox, .two-column-sq
                         '<a class="' + initial_CTA_class +'" href="' + multi_CTA_url + '">' + multi_CTA_text + '</a>'
                     )
                     console.log(this);
-                  if (multi_CTA_url.indexOf("#jmlb") > -1){
-                        $('a').click( function() { 
-                            if((window.location.href.indexOf("#jmlb") > -1) && ($(this).text() == 'INFO/EXCLUSIONS')) {
-                                console.log('clicked'); 
-                                console.log(this);
-                                console.log($(this).text());
-                                $(this).addClass('JM_trigger_ligthBox');
-                                $(this).closest('div.hero-content-block').next().fadeIn(1000).addClass("jm_displayflex");
-                                $(".jm_dark_lightBox, .rich-text-content-block").fadeIn();
-                                $(".jm_dark_lightBox").click(function(){
-                                    $('.jm_displayflex').stop().fadeOut(300);
+//                   if (multi_CTA_url.indexOf("#jmlb") > -1){
+//                         $('a').click( function() { 
+//                             if((window.location.href.indexOf("#jmlb") > -1) && ($(this).text() == 'INFO/EXCLUSIONS')) {
+//                                 console.log('clicked'); 
+//                                 console.log(this);());
 
-                                });
-                                $(".jm_X_Hero_lightBox").click(function(){
-                                    $('.jm_displayflex').stop().fadeOut(300);
+//                                 console.log($(this).text//                                 $(this).addClass('JM_trigger_ligthBox');
+//                                 $(this).closest('div.hero-content-block').next().fadeIn(1000).addClass("jm_displayflex");
+//                                 $(".jm_dark_lightBox, .rich-text-content-block").fadeIn();
+//                                 $(".jm_dark_lightBox").click(function(){
+//                                     $('.jm_displayflex').stop().fadeOut(300);
 
-                                });                                
-                            }
-                        });
-//                      multi_CTA_url.addClass('JM_trigger_ligthBox');
-                  }
+//                                 });
+//                                 $(".jm_X_Hero_lightBox").click(function(){
+//                                     $('.jm_displayflex').stop().fadeOut(300);
+
+//                                 });                                
+//                             }
+//                         });
+// //                      multi_CTA_url.addClass('JM_trigger_ligthBox');
+//                   }
 
             }
 
