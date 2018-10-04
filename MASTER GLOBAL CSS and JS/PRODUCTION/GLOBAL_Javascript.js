@@ -1,5 +1,5 @@
-// JS PROD MASTER - W35D ligthbox fix -&- varsity style -&- BGA FALL REFRESH UPDATE- W31B  - JMRV- 10.01.18
-// PAST: PLCC W30D BGA and global banner -&- Second Tagline: AFFORD TO LOOK GREAT ANYTIME -&- BGA update  - JMRV- 08.24.18
+// JS PROD MASTER - W36B BGA centurycash down, new arrivals back up  - JMRV- 10.04.18
+// PAST: W35D ligthbox fix -&- varsity style -&- BGA FALL REFRESH UPDATE- W31B  - JMRV- 10.01.18
 // jrios@c21stores.com
 
 
@@ -661,30 +661,30 @@ $(window).load(function() {
 
     if(jm_cat === "Tech"){
         //allSiteGA29();
-        allSiteGA14();
+        //allSiteGA14();
         if(!urlEtech){
 //          WishiWankaGA();
         }
     }
     else if(jm_cat === "New + Now"){
             //allSiteGA29();
-            allSiteGA14();
+            //allSiteGA14();
     }
     else if(jm_cat === "Beauty"){
-        allSiteGA14();
+        //allSiteGA14();
         if(!urlEbeauty){
             beautyGA30();
             //freeShippingBeautyGA();
-            //allSiteGA14();
+            ////allSiteGA14();
             //allSiteGA29();
 //          WishiWankaGA();
         }
     }
     else if(jm_cat === "Shoes"){
             //allSiteGA29();
-            allSiteGA14();
+            //allSiteGA14();
          if(!urlEshoes){
-           //shoesGA14(); NEW ARRIVALS
+           shoesGA14(); //NEW ARRIVALS
          }
          //if(!urlEshoes2){
            //shoesGA30();
@@ -692,10 +692,10 @@ $(window).load(function() {
     }
     else if(jm_cat === "Handbags &amp; Accessories"){
             //allSiteGA29();
-            allSiteGA14();
+            //allSiteGA14();
             //handbagsGA();
          if(!urlEhandbags){
-             //hbGA14(); NEW ARRIVALS
+             hbGA14(); //NEW ARRIVALS
          }
         //if(!urlEhandbags2){
             //hbGA30();
@@ -703,14 +703,14 @@ $(window).load(function() {
     }
     else if(jm_cat === "Kids"){
             //allSiteGA29();
-            allSiteGA14();
+            //allSiteGA14();
         // if(!urlEkids2){
         //     kidsGA30();
         // }
-        //allSiteGA14();
+        ////allSiteGA14();
         if(!urlEkids){
             kidsGA30();
-            //kidsGA14(); NEW ARRIVALS
+            kidsGA14();// NEW ARRIVALS
         }
     }
     else if(jm_cat === "Contemporary"){
@@ -720,12 +720,12 @@ $(window).load(function() {
     }
     else if((jm_cat === "Women") || (urlEwomensHidden)){
             //allSiteGA29();
-            allSiteGA14();
+            //allSiteGA14();
          if(!urlEmwomens2){        
              womenGA30();   
          }
         if(!urlEmwomens){
-            // womenGA14();  NEW ARRIVALS
+             womenGA14();//  NEW ARRIVALS
         
             if(urlEcoatswomensHidden){
                 womencoatsHGA30();
@@ -737,13 +737,13 @@ $(window).load(function() {
     }
     else if((jm_cat === "Men") || (urlEmensHidden)){
             //allSiteGA29();
-            //allSiteGA14();
+            ////allSiteGA14();
         if(!urlEmens2){
              menGA30();
         }
-        allSiteGA14();
+        //allSiteGA14();
          if(!urlEmens){
-             //menGA14(); NEW ARRIVALS
+             menGA14(); //NEW ARRIVALS
              if(urlEjeansmensHidden){
                 menjeansHGA30();
             }
@@ -754,8 +754,8 @@ $(window).load(function() {
     }
     else if(jm_cat === "Home"){
             //allSiteGA29();
-            allSiteGA14();
-        //allSiteGA14();
+            //allSiteGA14();
+        ////allSiteGA14();
          if(!urlEhome){
                 //homeGA14();
             if(!urlEhome2){
@@ -2099,7 +2099,7 @@ $('.hero-content-block, .banner-content-block, .jm-make-ligthbox, .two-column-sq
                     $(multi_CTA_wrap).find('.content-block-content__action').addClass("jm-multipleCTA-space").append(
                         '<a class="' + initial_CTA_class +'" href="' + multi_CTA_url + '">' + multi_CTA_text + '</a>'
                     )
-                    console.log(this);
+                    //console.log(this);
 //                   if (multi_CTA_url.indexOf("#jmlb") > -1){
 //                         $('a').click( function() { 
 //                             if((window.location.href.indexOf("#jmlb") > -1) && ($(this).text() == 'INFO/EXCLUSIONS')) {
