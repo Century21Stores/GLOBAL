@@ -1,4 +1,4 @@
-/* PROD CSS -  Global Split Banner ON W36B -&- Shipping options update W32D - 09.27.18 JMRV */
+/* PROD CSS -  Global Split Banner ON W36B -&- GWP fix mobile aligmnet -&- Shipping options update W32D - 09.27.18 JMRV */
 /* PAST: Logo alignment at the footer fix  -&- suppresion list panel -&- Global Banner off W26A - 07.25.18 jrios */
 
 /* CSS MASTER STYLE JMRV  */
@@ -8,8 +8,8 @@
 /* Turning off PLCC split banner
 .branded-card-header{
     display:none !important;
-}
-*/
+}*/
+
 
 /* ..................... OVERWRITES .....................*/
 /* SHIPPING
@@ -26,6 +26,13 @@ END SHIPPING */
 .inline-quickview__container .ui-menu-item{
     font-size:12px;
 }
+
+/* GWP BANNERS */
+.jm-GWP{
+    text-align: center;    
+}
+
+/* END GWP BANNERS */
 
 /* LIVE CHAT MESSAGE */
 #livechat-full{
