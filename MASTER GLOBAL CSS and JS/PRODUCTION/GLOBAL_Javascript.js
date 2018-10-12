@@ -1,4 +1,4 @@
-// JS PROD MASTER - W36B BGA centurycash down, new arrivals back up  - JMRV- 10.04.18
+// JS PROD MASTER - W37A BGA up and beauty gift down - centurycash down, new arrivals back up  - JMRV- 10.09.18
 // PAST: W35D ligthbox fix -&- varsity style -&- BGA FALL REFRESH UPDATE- W31B  - JMRV- 10.01.18
 // jrios@c21stores.com
 
@@ -673,7 +673,7 @@ $(window).load(function() {
     else if(jm_cat === "Beauty"){
         //allSiteGA14();
         if(!urlEbeauty){
-            beautyGA30();
+            //beautyGA30();
             //freeShippingBeautyGA();
             ////allSiteGA14();
             //allSiteGA29();
@@ -686,9 +686,9 @@ $(window).load(function() {
          if(!urlEshoes){
            shoesGA14(); //NEW ARRIVALS
          }
-         //if(!urlEshoes2){
-           //shoesGA30();
-         //}
+         if(!urlEshoes2){
+           shoesGA30();
+         }
     }
     else if(jm_cat === "Handbags &amp; Accessories"){
             //allSiteGA29();
@@ -1312,11 +1312,11 @@ function shoesGA30() {
     //POSITION
     var pos = 28;
     //IMAGE URL 370x552
-    var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTgvMDkvMTQvMTEvMTMvNDEvODA4LzAxXzA5V2VlazNfQkdBX1dJTERXRVNULmpwZyJdXQ/01_09Week3_BGA_WILDWEST.jpg?sha=3995c05f8e6e417b";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTAvMTIvMTAvNTEvNTQvNTkyLzAxXzEwV2VlazJfQkdBX0JJS0VSQ0hJQ19XLmpwZyJdXQ/01_10Week2_BGA_BIKERCHIC_W.jpg?sha=4089c8d7df22d278";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/categories/new-now-wild-west?bga=shoes_wild_west_from_"+ jm_cat_slug + "_w31&gal=pos28";
+    var urlLINK = "https://www.c21stores.com/categories/new-now-biker-chic?bga=new_now_biker_chick_from_"+ jm_cat_slug + "_w37&gal=pos28";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
