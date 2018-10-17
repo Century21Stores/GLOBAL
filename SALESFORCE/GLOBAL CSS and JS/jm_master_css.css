@@ -1,0 +1,9 @@
+/* OVERWRITE */
+.jm-landing-page header{
+	position: initial;
+}
+.jm-landing-page img{
+	display: block;
+	width: 100%;
+}
+/* END OVERWRITE */
