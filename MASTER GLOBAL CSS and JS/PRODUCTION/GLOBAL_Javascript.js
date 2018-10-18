@@ -1,5 +1,5 @@
-// JS PROD MASTER - W37A BGA up and beauty gift down - centurycash down, new arrivals back up  - JMRV- 10.09.18
-// PAST: W35D ligthbox fix -&- varsity style -&- BGA FALL REFRESH UPDATE- W31B  - JMRV- 10.01.18
+// JS PROD MASTER - W38A BGA - JMRV- 10.18.18
+// PAST: beauty gift down - centurycash down, new arrivals back up - &- W35D ligthbox fix -&- varsity style -&- BGA FALL REFRESH UPDATE - JMRV- 10.09.18
 // jrios@c21stores.com
 
 
@@ -616,9 +616,8 @@ $(window).load(function() {
         (window.location.href.indexOf("women-sweaters") > -1)
     );    
     var urlEhome = (
-        (window.location.href.indexOf("home-bath-accessories") > -1) ||
-        (window.location.href.indexOf("home-comforters-duvets-quilts") > -1) ||
-        (window.location.href.indexOf("new-arrivals") > -1)
+        (window.location.href.indexOf("home-fall-harvest") > -1) ||
+        (window.location.href.indexOf("new-arrivals-test") > -1)
     );
     var urlEhome2 = (
         (window.location.href.indexOf("home-dinnerware-flatware") > -1) || // because global
@@ -757,7 +756,7 @@ $(window).load(function() {
             //allSiteGA14();
         ////allSiteGA14();
          if(!urlEhome){
-                //homeGA14();
+                homeGA14();
             if(!urlEhome2){
                homeGA30();
              }
@@ -931,7 +930,7 @@ function womenGA14() {
 
 
 
-// WOMENS 30 - WILD WEST
+// WOMENS 30 - WARM & COZY
 function womenGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
@@ -939,11 +938,11 @@ function womenGA30() {
     //POSITION
     var pos = 28;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDgvMzEvMTAvMTQvNDIvNDQxLzAxXzA5V2VlazFfQkdBX0RSRVNTU0hJUlRTLmpwZyJdXQ/01_09Week1_BGA_DRESSSHIRTS.jpg?sha=4f9b7176251e2c3b";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTAvMTgvMTQvMTYvMjUvODg5LzEwV2VlazNfQkdBX3dhcm1hbmRjb3p5XzIuanBnIl1d/10Week3_BGA_warmandcozy_2.jpg?sha=898cf186601808c5";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL    
-    var urlLINK = "https://www.c21stores.com/categories/new-now-wild-west?bga=wild_west_from_"+ jm_cat_slug + "_w31&gal=pos28";
+    var urlLINK = "https://www.c21stores.com/categories/new-now-warm-cozy?bga=home_warm_and_cozy_from_"+ jm_cat_slug + "_w38&gal=pos28";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
@@ -963,7 +962,7 @@ function womenGA30() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--light">'+
-        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a style="background: white; color:black !important" class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
@@ -1443,19 +1442,19 @@ function hbGA30() {
 // END HB 30
 
 
-// HOME 14
+// HOME 14 - FALL HARVEST
 function homeGA14() {
 
     //GRID AD TYPE:  enter 1 or 2
-    var gaType = 1;
+    var gaType = 2;
     //POSITION
     var pos = 14;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDgvMzAvMTQvMjUvNTEvOTA2LzAxXzA5V2VlazFfQkdBX05BX0hPTUUuanBnIl1d/01_09Week1_BGA_NA_HOME.jpg?sha=62c8e4dcd9a585aa";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTAvMTgvMTQvMjkvMjYvMjM3LzEwV2VlazNfQkdBX2ZhbGxoYXJ2ZXN0XzIuanBnIl1d/10Week3_BGA_fallharvest_2.jpg?sha=809dadf57070b8ee";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/categories/home-new-arrivals?bga=home_new_arrivals__from_"+ jm_cat_slug + "_w31&gal=pos14";
+    var urlLINK = "https://www.c21stores.com/categories/home-fall-harvest?bga=home_fall_harvest__from_"+ jm_cat_slug + "_w38&gal=pos14";
     //TAG
     var gaTag = "GA_home_newarrivals";
 
