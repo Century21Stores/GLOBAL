@@ -625,7 +625,7 @@ $(window).load(function() {
         (window.location.href.indexOf("home-serveware") > -1) || // because global
         (window.location.href.indexOf("home-table-linens") > -1) || // because global
         (window.location.href.indexOf("home-shop-all-dining-entertaining") > -1) || // because global
-        (window.location.href.indexOf("new-on-campus") > -1) || //because global
+        (window.location.href.indexOf("home-bath-accessories") > -1) || //because global
         (window.location.href.indexOf("home-sheets-pillowcases") > -1)
     );
     var urlEbeauty = (
