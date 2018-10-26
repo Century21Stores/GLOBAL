@@ -2680,8 +2680,9 @@ function show_banner_when_not_blank(){
 // SEO COPY AT FOOTER - NYC BEST SECRET
 function seoCopyLineFooter(){
 
-    $('.jm_copy_block_clone').before("<h3 style='text-align: center;margin:0;'>NEW YORK'S BEST KEPT SECRET</h3>");
-    $('.jm_copy_block_clone').after("<h3 style='text-align: center;margin:0 0 3%;'>AFFORD TO LOOK GREAT ANYTIME</h3>");
+    $('.jm_copy_block_clone').prepend("<h3 class='jm_trademark'>NEW YORK'S BEST KEPT SECRET</h3>");
+    $('.jm_copy_block_clone').prepend("<h3 class='jm_trademark'>AFFORD TO LOOK GREAT ANYTIME</h3>");
+    $('.jm_copy_block_clone').prepend("<h3 class='jm_trademark'>DEAL OF THE CENTURY</h3>");
 
 }
 // END SEO COPY AT FOOTER - NYC BEST SECRET
