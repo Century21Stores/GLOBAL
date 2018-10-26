@@ -1,4 +1,4 @@
-// JS PROD MASTER - W38A BGA - JMRV- 10.18.18
+// JS PROD MASTER - W39A BGA - JMRV- 10.18.18
 // PAST: beauty gift down - centurycash down, new arrivals back up - &- W35D ligthbox fix -&- varsity style -&- BGA FALL REFRESH UPDATE - JMRV- 10.09.18
 // jrios@c21stores.com
 
@@ -629,11 +629,11 @@ $(window).load(function() {
         (window.location.href.indexOf("home-sheets-pillowcases") > -1)
     );
     var urlEbeauty = (
-        //(window.location.href.indexOf("bvlgari") > -1) ||
-        //(window.location.href.indexOf("klein") > -1) ||
+        (window.location.href.indexOf("beauty-gift-sets") > -1) ||
+        (window.location.href.indexOf("beauty-makeup") > -1) ||
         //(window.location.href.indexOf("elf") > -1) ||
         //(window.location.href.indexOf("boss") > -1) ||
-        (window.location.href.indexOf("test") > -1)
+        (window.location.href.indexOf("beauty-skincare") > -1)
     );
     var urlEtech = (
         (window.location.href.indexOf("beats") > -1) ||
@@ -660,18 +660,18 @@ $(window).load(function() {
 
     if(jm_cat === "Tech"){
         //allSiteGA29();
-        //allSiteGA14();
+        allSiteGA14();
         if(!urlEtech){
 //          WishiWankaGA();
         }
     }
     else if(jm_cat === "New + Now"){
             //allSiteGA29();
-            //allSiteGA14();
+            allSiteGA14();
     }
     else if(jm_cat === "Beauty"){
-        //allSiteGA14();
-        if(!urlEbeauty){
+        allSiteGA14();
+        if(!urlEbeauty){            
             //beautyGA30();
             //freeShippingBeautyGA();
             ////allSiteGA14();
@@ -681,9 +681,9 @@ $(window).load(function() {
     }
     else if(jm_cat === "Shoes"){
             //allSiteGA29();
-            //allSiteGA14();
+            allSiteGA14();
          if(!urlEshoes){
-           shoesGA14(); //NEW ARRIVALS
+           //shoesGA14(); //NEW ARRIVALS
          }
          if(!urlEshoes2){
            shoesGA30();
@@ -691,10 +691,9 @@ $(window).load(function() {
     }
     else if(jm_cat === "Handbags &amp; Accessories"){
             //allSiteGA29();
-            //allSiteGA14();
-            //handbagsGA();
+            allSiteGA14();
          if(!urlEhandbags){
-             hbGA14(); //NEW ARRIVALS
+             //hbGA14(); //NEW ARRIVALS
          }
         //if(!urlEhandbags2){
             //hbGA30();
@@ -702,14 +701,14 @@ $(window).load(function() {
     }
     else if(jm_cat === "Kids"){
             //allSiteGA29();
-            //allSiteGA14();
+            allSiteGA14();
         // if(!urlEkids2){
         //     kidsGA30();
         // }
         ////allSiteGA14();
         if(!urlEkids){
             kidsGA30();
-            kidsGA14();// NEW ARRIVALS
+            //kidsGA14();// NEW ARRIVALS
         }
     }
     else if(jm_cat === "Contemporary"){
@@ -719,12 +718,12 @@ $(window).load(function() {
     }
     else if((jm_cat === "Women") || (urlEwomensHidden)){
             //allSiteGA29();
-            //allSiteGA14();
+            allSiteGA14();
          if(!urlEmwomens2){        
              womenGA30();   
          }
         if(!urlEmwomens){
-             womenGA14();//  NEW ARRIVALS
+             //womenGA14();//  NEW ARRIVALS
         
             if(urlEcoatswomensHidden){
                 womencoatsHGA30();
@@ -736,13 +735,13 @@ $(window).load(function() {
     }
     else if((jm_cat === "Men") || (urlEmensHidden)){
             //allSiteGA29();
-            ////allSiteGA14();
+            allSiteGA14();
         if(!urlEmens2){
              menGA30();
         }
         //allSiteGA14();
          if(!urlEmens){
-             menGA14(); //NEW ARRIVALS
+             //menGA14(); //NEW ARRIVALS
              if(urlEjeansmensHidden){
                 menjeansHGA30();
             }
@@ -754,9 +753,9 @@ $(window).load(function() {
     else if(jm_cat === "Home"){
             //allSiteGA29();
             //allSiteGA14();
-        ////allSiteGA14();
+            allSiteGA14();
          if(!urlEhome){
-                homeGA14();
+                //homeGA14();
             if(!urlEhome2){
                homeGA30();
              }
@@ -1600,12 +1599,12 @@ function allSiteGA14() {
     //POSITION
     var pos = 14;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDkvMjgvMTEvNTcvNTQvNzg2L09NMThfQ29sdW1idXNkYXlfQkdBX3Byb21vYi5wbmciXV0/OM18_Columbusday_BGA_promob.png?sha=560b781ef7003cd9";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTAvMjYvMTIvMTcvMzAvOTIxLzEwV2VlZWs0X0JHQV9HSUZUTU9SRV8yLmpwZyJdXQ/10Weeek4_BGA_GIFTMORE_2.jpg?sha=65772cd4c378dc15";
     //LINK TEXT
-    var textLink = "SIGN UP: IT'S FREE!";
+    var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/users/account/edit?edit_section=c21status&bga=centurycash_join_from_"+ jm_cat_slug + "_w35&gal=pos14";
-    var gaTag = "GA_centurycash_2018";
+    var urlLINK = "https://www.c21stores.com/pages/gifts?bga=gifts2018_from_"+ jm_cat_slug + "_w39&gal=pos14";
+    var gaTag = "GA_gifts_2018";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
@@ -1625,8 +1624,8 @@ function allSiteGA14() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--dark">'+
-        // '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
-        '<p class="content-block-content__action content-block-content__action--light-text"><a style="color:white;border-color: white;font-size: 1.8em;letter-spacing: 0;line-height: 1.2;padding: 0;" target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        //'<p class="content-block-content__action content-block-content__action--light-text"><a style="color:white;border-color: white;font-size: 1.8em;letter-spacing: 0;line-height: 1.2;padding: 0;" target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         // '<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag +'" class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
