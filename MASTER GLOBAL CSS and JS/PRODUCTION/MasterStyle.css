@@ -1,5 +1,5 @@
-/* PROD CSS -  Global Split Banner ON W39A  -&- Trademark -&- GWP fix mobile aligmnet -&- Shipping options update W32D - 09.27.18 JMRV */
-/* PAST: Logo alignment at the footer fix  -&- suppresion list panel -&- Global Banner off W26A - 07.25.18 jrios */
+/* PROD CSS -  W39D Gift to red - 11.01.18 JMRV */
+/* PAST: Global Split Banner ON W39A  -&- Trademark -&- GWP fix mobile aligmnet -&- Shipping options update W32D - 09.27.18 JMRV */
 
 /* CSS MASTER STYLE JMRV  */
 /*@import "https://www.c21stores.com/media/W1siZiIsIjIwMTUvMDkvMTgvMDgvNTYvNTEvNjg4L01hc3RlclN0eWxlM19MYW5kaW5nUGFnZTA3MTUuY3NzIl1d/MasterStyle3_LandingPage0715.css?sha=5a57837dcb4befbf";*/
@@ -21,6 +21,10 @@
 display:none !important;
 }
 END SHIPPING */
+
+.Gifts{
+    color: #e11e26 !important;
+}
 
 .jm_trademark{
    width: 33%;
