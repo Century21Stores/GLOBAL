@@ -705,7 +705,6 @@ $(window).load(function() {
         ////allSiteGA14();
         if(!urlEkids){
             //kidsGA30();
-            //kidsGA14();// NEW ARRIVALS
         }
     }
     else if(jm_cat === "Contemporary"){
@@ -720,7 +719,7 @@ $(window).load(function() {
              //womenGA30();   WARM AND COZY
          }
         if(!urlEmwomens){
-             //womenGA14();//  NEW ARRIVALS
+             //womenGA14();
         
             if(urlEcoatswomensHidden){
                 allSiteGA28();
@@ -740,7 +739,7 @@ $(window).load(function() {
         //}
         //allSiteGA14();
          if(!urlEmens){
-             //menGA14(); //NEW ARRIVALS
+             //menGA14(); 
              if(urlEjeansmensHidden){
                 //menjeansHGA30(); //KNIT LIST
                 allSiteGA28();

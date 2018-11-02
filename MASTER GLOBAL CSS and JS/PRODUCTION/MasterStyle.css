@@ -22,7 +22,7 @@ display:none !important;
 }
 END SHIPPING */
 
-.Gifts{
+.primary-nav__nav-menu > .primary-nav__menu-item .Gifts{
     color: #e11e26 !important;
 }
 
