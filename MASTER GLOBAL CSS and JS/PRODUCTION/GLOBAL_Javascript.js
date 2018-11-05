@@ -1,4 +1,4 @@
-// JS PROD MASTER - W40A BGA - JMRV- 11.01.18
+// JS PROD MASTER - W40A BGA - JMRV- 11.05.18
 // PAST: beauty gift down - centurycash down, new arrivals back up - &- W35D ligthbox fix -&- varsity style -&- BGA FALL REFRESH UPDATE - JMRV- 10.09.18
 // jrios@c21stores.com
 
@@ -721,14 +721,14 @@ $(window).load(function() {
         if(!urlEmwomens){
              //womenGA14();
         
-            if(urlEcoatswomensHidden){
-                allSiteGA28();
+            //if(urlEcoatswomensHidden){
+               // allSiteGA28();
                 //womencoatsHGA30(); //BOOT UP
-            }
-            else if(urlEjeanswomensHidden){
-                allSiteGA28();
+            //}
+            //else if(urlEjeanswomensHidden){
+                //allSiteGA28();
                 //womenjeansHGA30(); //KNIT LIST
-            }
+            //}
         }
     }
     else if((jm_cat === "Men") || (urlEmensHidden)){
@@ -740,14 +740,14 @@ $(window).load(function() {
         //allSiteGA14();
          if(!urlEmens){
              //menGA14(); 
-             if(urlEjeansmensHidden){
+            //if(urlEjeansmensHidden){
                 //menjeansHGA30(); //KNIT LIST
-                allSiteGA28();
-            }
-            else if(urlEcoatsmensHidden){
-                allSiteGA28();
+                //allSiteGA28();
+            //}
+            //else if(urlEcoatsmensHidden){
+                //allSiteGA28();
                 //mencoatsHGA30();  // COOL ELEMENTS
-            }            
+            //}            
          }        
     }
     else if(jm_cat === "Home"){
