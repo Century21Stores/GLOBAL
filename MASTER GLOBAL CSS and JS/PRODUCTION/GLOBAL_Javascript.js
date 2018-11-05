@@ -541,7 +541,7 @@ $(window).load(function() {
     );
     var urlEshoes2 = (
         (window.location.href.indexOf("shoes-boots") > -1) ||
-        (window.location.href.indexOf("shoes-luxury-designer") > -1) ||        
+        //(window.location.href.indexOf("shoes-luxury-designer") > -1) ||        
         //(window.location.href.indexOf("edit") > -1) ||
         (window.location.href.indexOf("sneakers") > -1)
     );    
@@ -612,7 +612,7 @@ $(window).load(function() {
     var urlEmwomens2 = (
         (window.location.href.indexOf("women-coats") > -1) ||
         (window.location.href.indexOf("women-jeans") > -1) ||
-        (window.location.href.indexOf("women-swimsuits-cover-ups") > -1) ||
+        //(window.location.href.indexOf("women-swimsuits-cover-ups") > -1) ||
         (window.location.href.indexOf("women-sweaters") > -1)
     );    
     var urlEhome = (
@@ -630,7 +630,7 @@ $(window).load(function() {
     );
     var urlEbeauty = (
         (window.location.href.indexOf("beauty-gift-sets") > -1) ||
-        (window.location.href.indexOf("beauty-makeup") > -1) ||
+        //(window.location.href.indexOf("beauty-makeup") > -1) ||
         //(window.location.href.indexOf("elf") > -1) ||
         //(window.location.href.indexOf("boss") > -1) ||
         (window.location.href.indexOf("beauty-skincare") > -1)
