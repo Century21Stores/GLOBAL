@@ -1,4 +1,4 @@
-// JS PROD MASTER - W40A BGA - JMRV- 11.05.18
+// JS PROD MASTER - W41A BGA - JMRV- 11.07.18
 // PAST: beauty gift down - centurycash down, new arrivals back up - &- W35D ligthbox fix -&- varsity style -&- BGA FALL REFRESH UPDATE - JMRV- 10.09.18
 // jrios@c21stores.com
 
@@ -630,9 +630,8 @@ $(window).load(function() {
     );
     var urlEbeauty = (
         (window.location.href.indexOf("beauty-gift-sets") > -1) ||
-        //(window.location.href.indexOf("beauty-makeup") > -1) ||
-        //(window.location.href.indexOf("elf") > -1) ||
-        //(window.location.href.indexOf("boss") > -1) ||
+        (window.location.href.indexOf("beauty-makeup") > -1) ||
+        (window.location.href.indexOf("beauty-korean-beauty") > -1) ||
         (window.location.href.indexOf("beauty-skincare") > -1)
     );
     var urlEtech = (
@@ -669,11 +668,13 @@ $(window).load(function() {
             allSiteGA28();
             allSiteGA14();
     }
-    else if(jm_cat === "Beauty"){
-        allSiteGA14();
+    else if(jm_cat === "Beauty"){        
         if(!urlEbeauty){            
             beautyGA30();
-            //allSiteGA14();
+            allSiteGA14();
+        }
+        else{            
+            beautyGA14();
         }
     }
     else if(jm_cat === "Shoes"){            
@@ -1538,7 +1539,7 @@ function homeGA30() {
 
 
 
-// BEAUTY 30 - FREE SHIPPING
+// BEAUTY 30 - 
 function beautyGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
@@ -1583,7 +1584,55 @@ function beautyGA30() {
     AdClassAll_Single(realPos, gaType);
 
 }
-// END BEAUTY 30 - FREE GIFTS + FREE SHIPPING
+// END BEAUTY 30
+
+
+// BEAUTY 14 - FREE SHIPPING
+function beautyGA14() {
+
+    //GRID AD TYPE:  enter 1 or 2
+    var gaType = 1;
+    //POSITION
+    var pos = 14;
+    //IMAGE URL 370x552
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTEvMDEvMTIvMDgvMzMvMTczLzExV2VlazFfQkdBX0JFQVVUWS5qcGciXV0/11Week1_BGA_BEAUTY.jpg?sha=b99e8b32cf58347d";
+    //LINK TEXT
+    var textLink = "SHOP NOW";
+    //LINK URL
+    var urlLINK = "https://www.c21stores.com/categories/home-new-arrivals?bga=home_newarrivals_w10&gal=pos14";
+    //TAG
+    var gaTag = "GA_home_newarrivals";
+
+    // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
+    var FixHeights;
+    var realPos = pos-1;
+    window.onresize = function(e) {
+        clearTimeout(FixHeights);
+        FixHeights = setTimeout(function() {
+        // console.log('yay it works!');
+        AdClassAll_Single(realPos, gaType);
+        }, 100);
+    };
+
+    $('.product-grid li:nth-of-type('+ realPos +')').after(
+        '<li class="product-grid__cell product-grid__cell--' + gaType + ' jmrv-product-grid__cell--' + gaType + '">'+
+        '<div class="product-grid-content-block" style="background-image: url('+ urlIMG +');">'+
+        '<div class="product-grid-content-block__image"></div>'+
+        '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
+        '<div class="content-block-content__container content-block-content__container--center">'+
+        '<div class="content-block-content__message content-block-content__message--light">'+
+        // '<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag + '" class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '</div>'+
+        '</div>'+
+        '</div>'+
+        '</div>'+
+        '</li>'
+    );
+
+    AdClassAll_Single(realPos, gaType);
+
+}
+// END BEAUTY 14 - FREE GIFTS + FREE SHIPPING
 
 
 
