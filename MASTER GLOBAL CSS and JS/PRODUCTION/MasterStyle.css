@@ -39,7 +39,8 @@ END SHIPPING */
 }
 
 /* GWP BANNERS */
-.jm-GWP{
+.jm-GWP, 
+.jm-GWP header{
     text-align: center;    
 }
 /* END GWP BANNERS */
