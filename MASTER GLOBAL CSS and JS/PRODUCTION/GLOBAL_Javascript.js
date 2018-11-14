@@ -1,4 +1,4 @@
-// JS PROD MASTER - W41A BGA - JMRV- 11.07.18
+// JS PROD MASTER - W42A BGA - JMRV- 11.14.18
 // PAST: beauty gift down - centurycash down, new arrivals back up - &- W35D ligthbox fix -&- varsity style -&- BGA FALL REFRESH UPDATE - JMRV- 10.09.18
 // jrios@c21stores.com
 
@@ -1644,15 +1644,17 @@ function allSiteGA14() {
     //console.log('top nav: ' + breacrumb2);
     //console.log('top nav2: ' + breacrumb3);
     //GRID AD TYPE:  enter 1 or 2
-    var gaType = 1;
+    var gaType = 2;
     //POSITION
     var pos = 14;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTAvMjYvMTIvMTcvMzAvOTIxLzEwV2VlZWs0X0JHQV9HSUZUTU9SRV8yLmpwZyJdXQ/10Weeek4_BGA_GIFTMORE_2.jpg?sha=65772cd4c378dc15";
+    //var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTAvMjYvMTIvMTcvMzAvOTIxLzEwV2VlZWs0X0JHQV9HSUZUTU9SRV8yLmpwZyJdXQ/10Weeek4_BGA_GIFTMORE_2.jpg?sha=65772cd4c378dc15";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTEvMTQvMTIvNTUvNDgvMTk1LzAxXzExV2VlazNfQkdBX0NZQkVSU1BFQ0lBTFMuanBnIl1d/01_11Week3_BGA_CYBERSPECIALS.jpg?sha=7b7a67e85b0328c1";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/pages/gifts?bga=gifts2018_from_"+ jm_cat_slug + "_w39&gal=pos14";
+    //var urlLINK = "https://www.c21stores.com/pages/gifts?bga=gifts2018_from_"+ jm_cat_slug + "_w39&gal=pos14";
+    var urlLINK = "https://www.c21stores.com/pages/cyber-specials?bga=cyber-specials2018_from_"+ jm_cat_slug + "_w42&gal=pos14";
     var gaTag = "GA_gifts_2018";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
@@ -2771,7 +2773,7 @@ function promo_Code_custom_productLevel(){
 // LIVE CHAT CUSTOM MESSAGE
 function live_chat_message(){
     setTimeout(function(){
-        $('#livechat-full').prepend("<div class='jm-livechat-message'>Our Call Center will be closed on Wednesday, 07/04/18 in observance of Fourth of July.</div>");
+        $('#livechat-full').prepend("<div class='jm-livechat-message'>Our Call Center will be closed on Thursday, 11/22/18 in observance of Thanksgiving Day.</div>");
     }, 1000);
 }
 // END LIVE CHAT CUSTOM MESSAGE
