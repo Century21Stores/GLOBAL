@@ -1,4 +1,4 @@
-// JS PROD MASTER - afer W42C live chat and BGA - JMRV- 11.19.18
+// JS PROD MASTER - afer W43A Cyber Monday - JMRV- 11.21.18
 // PAST: beauty gift down - centurycash down, new arrivals back up - &- W35D ligthbox fix -&- varsity style -&- BGA FALL REFRESH UPDATE - JMRV- 10.09.18
 // jrios@c21stores.com
 
@@ -24,7 +24,7 @@ document.addEventListener( "DOMContentLoaded", show_banner_when_not_blank, false
 document.addEventListener( "DOMContentLoaded", seoCopyLineFooter, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom_productLevel, false );
-document.addEventListener( "DOMContentLoaded", live_chat_message, false );
+//document.addEventListener( "DOMContentLoaded", live_chat_message, false );
 //document.addEventListener( "DOMContentLoaded", Hover_message_Button, false );
 
 
