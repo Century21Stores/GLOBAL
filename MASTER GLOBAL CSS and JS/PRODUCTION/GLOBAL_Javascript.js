@@ -1700,12 +1700,12 @@ function allSiteGA28() {
     var pos = 29;
     //IMAGE URL 370x552
     //var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTEvMDEvMTIvMTcvNDcvMjkyLzExV2VlZWsxX0JHQV9HSUZUQ0FSRFNfMi5qcGciXV0/11Weeek1_BGA_GIFTCARDS_2.jpg?sha=75c9a94cb9088d78";
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTEvMTQvMTMvMTYvMDkvMzgvT00xOF9CbGFja2ZyaWRheV9CR0FfcHJvbW9iLmpwZyJdXQ/OM18_Blackfriday_BGA_promob.jpg?sha=68b54e21e7c5f94f";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTEvMjEvMTMvNTAvNTMvMzA3L09NMThfQ1lCRVJNT05fQkdBX3Byb21vYi5qcGciXV0/OM18_CYBERMON_BGA_promob.jpg?sha=0f10a318c2c03e49";
     //LINK TEXT
     var textLink = "SIGN UP: IT'S FREE!";
     //LINK URL
     //var urlLINK = "https://www.c21stores.com/categories/gift-card?bga=gift_cards_2018_from_"+ jm_cat_slug + "_w40&gal=pos28";
-    var urlLINK = "https://www.c21stores.com/users/account/edit?edit_section=c21status&bga=bga_centurycash_2018_from_"+ jm_cat_slug + "_w42&gal=pos28";
+    var urlLINK = "https://www.c21stores.com/users/account/edit?edit_section=c21status&bga=bga_centurycash_2018_from_"+ jm_cat_slug + "_w43&gal=pos28";
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
     var realPos = pos-1;
@@ -1724,7 +1724,7 @@ function allSiteGA28() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--dark">'+
-        '<p class="content-block-content__action content-block-content__action--light-text"><a style="color:white;border-color: white;font-size: 1.8em;letter-spacing: 0;line-height: 1.2;padding: 0;" target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--light-text" style="margin:0;"><span style="color: white; font-weight: bold; font-size: 1.3em;">NOT A LOYALTY MEMBER?</span><a style="color:white;border-color: white;font-size: 1.3em;letter-spacing: 0;line-height: 1.2;padding: 0;" target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         //'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
