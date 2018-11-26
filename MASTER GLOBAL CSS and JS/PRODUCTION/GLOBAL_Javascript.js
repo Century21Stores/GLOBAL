@@ -1,4 +1,4 @@
-// JS PROD MASTER - afer W43A Cyber Monday - JMRV- 11.21.18
+// JS PROD MASTER - afer W43B END Cyber Monday - JMRV- 11.26.18
 // PAST: beauty gift down - centurycash down, new arrivals back up - &- W35D ligthbox fix -&- varsity style -&- BGA FALL REFRESH UPDATE - JMRV- 10.09.18
 // jrios@c21stores.com
 
@@ -1644,17 +1644,17 @@ function allSiteGA14() {
     //console.log('top nav: ' + breacrumb2);
     //console.log('top nav2: ' + breacrumb3);
     //GRID AD TYPE:  enter 1 or 2
-    var gaType = 2;
+    var gaType = 1;
     //POSITION
     var pos = 14;
     //IMAGE URL 370x552
-    //var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTAvMjYvMTIvMTcvMzAvOTIxLzEwV2VlZWs0X0JHQV9HSUZUTU9SRV8yLmpwZyJdXQ/10Weeek4_BGA_GIFTMORE_2.jpg?sha=65772cd4c378dc15";
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTEvMTkvMTMvMTkvMzQvNzM0LzAxXzExV2VlazNfQkdBX0NZQkVSU1BFQ0lBTFMuanBnIl1d/01_11Week3_BGA_CYBERSPECIALS.jpg?sha=2628e79df020172f";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTAvMjYvMTIvMTcvMzAvOTIxLzEwV2VlZWs0X0JHQV9HSUZUTU9SRV8yLmpwZyJdXQ/10Weeek4_BGA_GIFTMORE_2.jpg?sha=65772cd4c378dc15";
+    //var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTEvMTkvMTMvMTkvMzQvNzM0LzAxXzExV2VlazNfQkdBX0NZQkVSU1BFQ0lBTFMuanBnIl1d/01_11Week3_BGA_CYBERSPECIALS.jpg?sha=2628e79df020172f";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    //var urlLINK = "https://www.c21stores.com/pages/gifts?bga=gifts2018_from_"+ jm_cat_slug + "_w39&gal=pos14";
-    var urlLINK = "https://www.c21stores.com/pages/cyber-specials?bga=cyber-specials2018_from_"+ jm_cat_slug + "_w42&gal=pos14";
+    var urlLINK = "https://www.c21stores.com/pages/gifts?bga=gifts2018_from_"+ jm_cat_slug + "_w39&gal=pos14";
+    //var urlLINK = "https://www.c21stores.com/pages/cyber-specials?bga=cyber-specials2018_from_"+ jm_cat_slug + "_w42&gal=pos14";
     var gaTag = "GA_gifts_2018";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
@@ -1675,9 +1675,9 @@ function allSiteGA14() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--dark">'+
-        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        //'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         //'<p class="content-block-content__action content-block-content__action--light-text"><a style="color:white;border-color: white;font-size: 1.8em;letter-spacing: 0;line-height: 1.2;padding: 0;" target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
-        // '<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag +'" class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag +'" class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
@@ -1699,13 +1699,13 @@ function allSiteGA28() {
     //POSITION
     var pos = 29;
     //IMAGE URL 370x552
-    //var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTEvMDEvMTIvMTcvNDcvMjkyLzExV2VlZWsxX0JHQV9HSUZUQ0FSRFNfMi5qcGciXV0/11Weeek1_BGA_GIFTCARDS_2.jpg?sha=75c9a94cb9088d78";
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTEvMjEvMTMvNTAvNTMvMzA3L09NMThfQ1lCRVJNT05fQkdBX3Byb21vYi5qcGciXV0/OM18_CYBERMON_BGA_promob.jpg?sha=0f10a318c2c03e49";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTEvMDEvMTIvMTcvNDcvMjkyLzExV2VlZWsxX0JHQV9HSUZUQ0FSRFNfMi5qcGciXV0/11Weeek1_BGA_GIFTCARDS_2.jpg?sha=75c9a94cb9088d78";
+    //var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTEvMjEvMTMvNTAvNTMvMzA3L09NMThfQ1lCRVJNT05fQkdBX3Byb21vYi5qcGciXV0/OM18_CYBERMON_BGA_promob.jpg?sha=0f10a318c2c03e49";
     //LINK TEXT
-    var textLink = "SIGN UP: IT'S FREE!";
+    var textLink = "SHOP NOW";
     //LINK URL
-    //var urlLINK = "https://www.c21stores.com/categories/gift-card?bga=gift_cards_2018_from_"+ jm_cat_slug + "_w40&gal=pos28";
-    var urlLINK = "https://www.c21stores.com/users/account/edit?edit_section=c21status&bga=bga_centurycash_2018_from_"+ jm_cat_slug + "_w43&gal=pos28";
+    var urlLINK = "https://www.c21stores.com/categories/gift-card?bga=gift_cards_2018_from_"+ jm_cat_slug + "_w40&gal=pos28";
+    //var urlLINK = "https://www.c21stores.com/users/account/edit?edit_section=c21status&bga=bga_centurycash_2018_from_"+ jm_cat_slug + "_w43&gal=pos28";
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
     var realPos = pos-1;
@@ -1724,8 +1724,8 @@ function allSiteGA28() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--dark">'+
-        '<p class="content-block-content__action content-block-content__action--light-text" style="margin:0;"><span style="color: white; font-weight: bold; font-size: 1.3em;">NOT A LOYALTY MEMBER?</span><a style="color:white;border-color: white;font-size: 1.3em;letter-spacing: 0;line-height: 1.2;padding: 0;" target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
-        //'<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        //'<p class="content-block-content__action content-block-content__action--light-text" style="margin:0;"><span style="color: white; font-weight: bold; font-size: 1.3em;">NOT A LOYALTY MEMBER?</span><a style="color:white;border-color: white;font-size: 1.3em;letter-spacing: 0;line-height: 1.2;padding: 0;" target="_blank" class="text" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+

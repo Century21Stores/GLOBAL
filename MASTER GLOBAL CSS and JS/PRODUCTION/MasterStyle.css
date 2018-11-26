@@ -1,16 +1,16 @@
-/* PROD CSS -  W42C Cyber Week - 11.19.18 JMRV */
+/* PROD CSS -  W43B OFF Cyber Week - 11.26.18 JMRV */
 /* PAST: Global Split Banner ON W39A  -&- Trademark -&- GWP fix mobile aligmnet -&- Shipping options update W32D - 09.27.18 JMRV */
 
 /* CSS MASTER STYLE JMRV  */
 /*@import "https://www.c21stores.com/media/W1siZiIsIjIwMTUvMDkvMTgvMDgvNTYvNTEvNjg4L01hc3RlclN0eWxlM19MYW5kaW5nUGFnZTA3MTUuY3NzIl1d/MasterStyle3_LandingPage0715.css?sha=5a57837dcb4befbf";*/
 @import "https://www.c21stores.com/media/W1siZiIsIjIwMTYvMDEvMTMvMTIvNDQvMTAvODUzL01hc3RlclN0eWxlUmFpbHN2MS5jc3MiXV0/MasterStyleRailsv1.css?sha=f040002bd75aca28";
 
-/* Turning off PLCC split banner*/
+/* Turning off PLCC split banner
 .branded-card-header,
 .jm-shipping-plcc-solo{
     display:none !important;
 }
-
+*/
 
 /* ..................... OVERWRITES .....................*/
 /* SHIPPING
