@@ -714,10 +714,10 @@ $(window).load(function() {
         }
     }
     else if((jm_cat === "Women") || (urlEwomensHidden)){
-            allSiteGA28();
+            //allSiteGA28();
             allSiteGA14();
-         if(!urlEmwomens2){        
-             //womenGA30();   WARM AND COZY
+         if(!urlEmwomens2){
+             womenGA30();
          }
         if(!urlEmwomens){
              //womenGA14();
@@ -930,7 +930,7 @@ function womenGA14() {
 
 
 
-// WOMENS 30 - WARM & COZY
+// WOMENS 30 - SHINE & SHIMMER
 function womenGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
@@ -938,11 +938,11 @@ function womenGA30() {
     //POSITION
     var pos = 28;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTAvMTgvMTQvMTYvMjUvODg5LzEwV2VlazNfQkdBX3dhcm1hbmRjb3p5XzIuanBnIl1d/10Week3_BGA_warmandcozy_2.jpg?sha=898cf186601808c5";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTEvMjYvMTUvNDQvMjYvMTI5LzAxXzExV2VlazRfQkdBX1NISU5FU0hJTU1FUi5qcGciXV0/01_11Week4_BGA_SHINESHIMMER.jpg?sha=7326b4bbc8707ec4";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL    
-    var urlLINK = "https://www.c21stores.com/categories/new-now-warm-cozy?bga=home_warm_and_cozy_from_"+ jm_cat_slug + "_w38&gal=pos28";
+    var urlLINK = "https://www.c21stores.com/categories/new-now-shine-shimmer?bga=shine_shimmer_from_"+ jm_cat_slug + "_w43B&gal=pos28";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
@@ -962,7 +962,7 @@ function womenGA30() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--light">'+
-        '<p class="content-block-content__action content-block-content__action--button"><a style="background: white; color:black !important" class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
