@@ -1,4 +1,4 @@
-// JS PROD MASTER - afer W43B END Cyber Monday - JMRV- 11.26.18
+// JS PROD MASTER - W43E PLCC 20% - JMRV- 11.27.18
 // PAST: beauty gift down - centurycash down, new arrivals back up - &- W35D ligthbox fix -&- varsity style -&- BGA FALL REFRESH UPDATE - JMRV- 10.09.18
 // jrios@c21stores.com
 
@@ -1748,13 +1748,13 @@ function acquisitionGA() {
     //POSITION
     var pos = 46;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTAvMDYvMTYvMDAvNDQvMTUyLzA5V2VlazRfUExDQ19HcmlkX0lNRy5qcGciXV0/09Week4_PLCC_Grid_IMG.jpg?sha=db1dd8d42c58d407";
-    //var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDgvMjIvMTAvMTQvMTEvNjIxLzAxXzA4V2VlazRfQkcuanBnIl1d/01_08Week4_BG.jpg?sha=d27aebaf35983486";
+    //var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTAvMDYvMTYvMDAvNDQvMTUyLzA5V2VlazRfUExDQ19HcmlkX0lNRy5qcGciXV0/09Week4_PLCC_Grid_IMG.jpg?sha=db1dd8d42c58d407";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTEvMjcvMTIvMjAvMjkvMjA0LzAxXzExV2VlazRfQkcuanBnIl1d/01_11Week4_BG.jpg?sha=822fe46318f7fcfc";
     //LINK TEXT
     var textLink = "APPLY NOW";
     // var textLink = "LEARN MORE";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/instant_credit/apply?bga=acquisition_plcc_w31B&gal=pos45";
+    var urlLINK = "https://www.c21stores.com/instant_credit/apply?bga=acquisition_plcc20_w43E&gal=pos45";
     //var urlLINK = "https://www.c21stores.com/instant_credit?bga=acquisition_xtra20_plcc_w30D&gal=pos45";
 
 
@@ -1779,7 +1779,7 @@ function acquisitionGA() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--dark">'+
-        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
