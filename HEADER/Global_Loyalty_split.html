@@ -29,6 +29,56 @@
 .jm-3-columns div{
 	width: 100%;
 }
+
+.slideDown{
+	animation: slideDown 8.5s linear infinite 0s;
+	-ms-animation: slideDown 8.5s linear infinite 0s;
+	-webkit-animation: slideDown 8.5s linear infinite 0s;
+	visibility: visible !important;
+	transition-delay: 1s;
+}
+
+@keyframes slideDown {
+	0% { opacity: 0; }
+	5% { opacity: 0; transform: translateY(-50px); }
+	10% { opacity: 1; transform: translateY(0px); }
+	25% { opacity: 1; transform: translateY(0px); }
+	30% { opacity: 0; transform: translateY(50px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-moz-keyframes slideDown{
+	0% { opacity: 0; }
+	5% { opacity: 0; -moz-transform: translateY(-50px); }
+	10% { opacity: 1; -moz-transform: translateY(0px); }
+	25% { opacity: 1; -moz-transform: translateY(0px); }
+	30% { opacity: 0; -moz-transform: translateY(50px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-webkit-keyframes slideDown{
+	0% { opacity: 0; }
+	5% { opacity: 0; -webkit-transform: translateY(-50px); }
+	10% { opacity: 1; -webkit-transform: translateY(0px); }
+	25% { opacity: 1; -webkit-transform: translateY(0px); }
+	30% { opacity: 0; -webkit-transform: translateY(50px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-ms-keyframes slideDown{
+	0% { opacity: 0; }
+	5% { opacity: 0; -ms-transform: translateY(-50px); }
+	10% { opacity: 1; -ms-transform: translateY(0px); }
+	25% { opacity: 1; -ms-transform: translateY(0px); }
+	30% { opacity: 0; -ms-transform: translateY(50px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+.slideDown{
+	position: relative;
+}
+
+
 @media (min-width:700px) {
 .jmrv-desktop-global-banner{
     display:block;
@@ -159,7 +209,7 @@ function showGlobalBanner(){
 			'<section class="jm-3-columns jm-initial-message-wrap">'+
 			'<a class="jm-anchor-promo" href="https://www.c21stores.com/instant_credit?bga=CenturyCash_redemtion_w43E&gal=gb_mobile">&nbsp;</a>'+
 				'<div>'+
-					'<h3>EARN CENTURYCASH? REDEEM BY 12/24</h3>'+
+					'<h3>EARNED CENTURYCASH? REDEEM BY 12/24</h3>'+
 				'</div>'+
 				'<div>'+					
 					'<h3>BECOME A LOYALTY MEMBER &amp; NEVER MISS OUT</h3>'+					
@@ -172,7 +222,7 @@ function showGlobalBanner(){
 			'<div class="jm-promopage">'+
 			'<section class="jm-3-columns jm-initial-message-wrap">'+
 				'<div>'+
-					'<h3>EARN CENTURYCASH? REDEEM BY 12/24</h3>'+
+					'<h3>EARNED CENTURYCASH? REDEEM BY 12/24</h3>'+
 				'</div>'+
 				'<div>'+
 				'<a class="jm-anchor-promo" href="https://www.c21stores.com/instant_credit?bga=CenturyCash_redemtion_w43E&gal=gb_desktop">&nbsp;</a>'+
@@ -204,7 +254,7 @@ function global_rotating_message(){
         '</section>',
 		'<section class="jm-3-columns slideDown">'+
             '<div>'+
-				'<h3>EARN CENTURYCASH? REDEEM BY 12/24</h3>'+
+				'<h3>EARNED CENTURYCASH? REDEEM BY 12/24</h3>'+
 			'</div>'+
 			'<div>'+
 			'<a class="jm-anchor-promo" href="https://www.c21stores.com/instant_credit?bga=CenturyCash_redemtion_w43E&gal=gb_desktop">&nbsp;</a>'+
