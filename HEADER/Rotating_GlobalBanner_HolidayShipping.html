@@ -1,5 +1,12 @@
 <!-- ROTATING LOYALTY and SHIPPING 1 GLOBAL BANNER - JuanMa - 11.29.18 -->
 <style>
+.jm-cta-all{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 .jm-anchor-promo{
     position: absolute;
     top: 0;
@@ -126,8 +133,15 @@
 .jm-promopage section{
     font-size: 1.1vw;
 }
-
+section.jm-3-columns div.jm-full-banner{
+    width: 100%;
+    background-image: url('https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTEvMzAvMDkvNDMvMDUvOTk2LzAxXzEyV2VlazJfR2xvYmFsQWRfRXhwZWRpdGVkU2hpcHBpbmcuanBnIl1d/01_12Week2_GlobalAd_ExpeditedShipping.jpg?sha=e7d9bc8fd7a1ee1b');
+    background-size: cover;
+    background-position: 50% 0;
+    position: relative;    
 }
+
+
 
 @media (min-width:1100px) {
 .jm-promopage section{
@@ -221,13 +235,19 @@ function showGlobalBanner(){
         '<div class="jmrv-desktop jmrv-desktop-global-banner">'+
             '<div class="jm-promopage">'+
             '<section class="jm-3-columns jm-initial-message-wrap">'+
-                '<div>'+
-                    '<h3>EARNED CENTURYCASH? REDEEM BY 12/24</h3>'+
-                '</div>'+
-                '<div>'+
-                '<a class="jm-anchor-promo" href="https://www.c21stores.com/instant_credit?bga=CenturyCash_redemtion_w43E&gal=gb_desktop">&nbsp;</a>'+
-                    '<h3>BECOME A LOYALTY MEMBER &amp; NEVER MISS OUT</h3>'+
-                '</div>'+
+                // '<div>'+
+                //     '<h3>EARNED CENTURYCASH? REDEEM BY 12/24</h3>'+
+                // '</div>'+
+                // '<div>'+
+                // '<a class="jm-anchor-promo" href="https://www.c21stores.com/instant_credit?bga=CenturyCash_redemtion_w43E&gal=gb_desktop">&nbsp;</a>'+
+                //     '<h3>BECOME A LOYALTY MEMBER &amp; NEVER MISS OUT</h3>'+
+                // '</div>'+
+            '<div class="jm-full-banner">'+
+                '<a class="jm-cta-all" href="https://www.c21stores.com/pages/shipping-information">&nbsp;</a>'+
+                '<h3>Last Day 12/19 for Expedited Shipping!</h3>'+
+                '<h3>Order by 12pm EST. Dates vary by location</h3>'+
+                '<a class="jm-cta-text" href="https://www.c21stores.com/pages/shipping-information">LEARN MORE</a>'+
+            '</div>'+                
             '</section>'+
             '</div>'+
         '</div>'
@@ -244,12 +264,11 @@ function global_rotating_message(){
 
     var rotatingMessages = [
         '<section class="jm-3-columns slideDown">'+
-            '<div>'+
-                '<h3> BY 12/24</h3>'+
-            '</div>'+
-            '<div>'+
-            '<a class="jm-anchor-promo" href="https://www.c21stores.com/instant_credit?bga=CenturyCash_redemtion_w43E&gal=gb_desktop">&nbsp;</a>'+
-                '<h3> &amp; NEVER MISS OUT</h3>'+
+            '<div class="jm-full-banner">'+
+                '<a class="jm-cta-all" href="https://www.c21stores.com/pages/shipping-information">&nbsp;</a>'+
+                '<h3>Last Day 12/19 for Expedited Shipping!</h3>'+
+                '<h3>Order by 12pm EST. Dates vary by location</h3>'+
+                '<a class="jm-cta-text" href="https://www.c21stores.com/pages/shipping-information">LEARN MORE</a>'+
             '</div>'+
         '</section>',
         '<section class="jm-3-columns slideDown">'+
@@ -318,7 +337,7 @@ function global_rotating_message_mobile(){
 
         var jmtimer = setInterval( rotatingMessage, 2300);
 
-}//global_rotating_message_mobile();
+}global_rotating_message_mobile();
 
 
 //END GLOBAL HEADER ROTATING MESSAGE MOBILE
