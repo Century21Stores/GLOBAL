@@ -1,11 +1,29 @@
-<!-- ROTATING LOYALTY and SHIPPING 1 GLOBAL BANNER - JuanMa - 11.29.18 -->
+<!-- ROTATING LOYALTY and SHIPPING (1) GLOBAL BANNER - JuanMa - 11.30.18 -->
 <style>
+/*.jm-promopage:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}*/
 .jm-cta-all{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+}
+.jm-turninto-cta{
+    border-bottom: solid 2px; 
+}
+.jm-cta-text{
+    border-bottom: solid 1px;
+    font-size: 0.73em;
+    color: white;
+    margin: 0.5em 0 0;
+    display: inline-block;
 }
 .jm-anchor-promo{
     position: absolute;
@@ -33,16 +51,26 @@
     text-rendering: optimizeLegibility;
      -webkit-font-smoothing: antialiased;   
 }
+.jm-promopage{
+    cursor: pointer;
+}
 .jm-3-columns div{
     width: 100%;
 }
 
 .slideDown{
-    animation: slideDown 8.5s linear infinite 0s;
-    -ms-animation: slideDown 8.5s linear infinite 0s;
-    -webkit-animation: slideDown 8.5s linear infinite 0s;
+    animation: slideDown 3s linear infinite 0s;
+    -ms-animation: slideDown 3s linear infinite 0s;
+    -webkit-animation: slideDown 3s ease-in infinite 0s;
+    -moz-animation: slideDown 1s ease-in infinite 0s;
     visibility: visible !important;
+    -ms-visibility: visible !important;
+    -webkit-visibility: visible !important;
+    -moz-visibility: visible !important;
     transition-delay: 1s;
+    -ms-transition-delay: 1s;
+    -webkit-transition-delay: 1s;
+    -moz-transition-delay: 1s;
 }
 
 @keyframes slideDown {
@@ -50,8 +78,8 @@
     5% { opacity: 0; transform: translateY(-50px); }
     10% { opacity: 1; transform: translateY(0px); }
     25% { opacity: 1; transform: translateY(0px); }
-    30% { opacity: 0; transform: translateY(50px); }
-    80% { opacity: 0; }
+    30% { opacity: 1; transform: translateY(0px); }
+    80% { opacity: 1; transform: translateY(0px); }
     100% { opacity: 0; }
 }
 @-moz-keyframes slideDown{
@@ -59,8 +87,8 @@
     5% { opacity: 0; -moz-transform: translateY(-50px); }
     10% { opacity: 1; -moz-transform: translateY(0px); }
     25% { opacity: 1; -moz-transform: translateY(0px); }
-    30% { opacity: 0; -moz-transform: translateY(50px); }
-    80% { opacity: 0; }
+    30% { opacity: 1; -moz-transform: translateY(0px); }
+    80% { opacity: 0; -moz-transform: translateY(50px); }
     100% { opacity: 0; }
 }
 @-webkit-keyframes slideDown{
@@ -68,8 +96,8 @@
     5% { opacity: 0; -webkit-transform: translateY(-50px); }
     10% { opacity: 1; -webkit-transform: translateY(0px); }
     25% { opacity: 1; -webkit-transform: translateY(0px); }
-    30% { opacity: 0; -webkit-transform: translateY(50px); }
-    80% { opacity: 0; }
+    30% { opacity: 1; -webkit-transform: translateY(0px); }
+    80% { opacity: 0; -webkit-transform: translateY(50px); }
     100% { opacity: 0; }
 }
 @-ms-keyframes slideDown{
@@ -77,8 +105,8 @@
     5% { opacity: 0; -ms-transform: translateY(-50px); }
     10% { opacity: 1; -ms-transform: translateY(0px); }
     25% { opacity: 1; -ms-transform: translateY(0px); }
-    30% { opacity: 0; -ms-transform: translateY(50px); }
-    80% { opacity: 0; }
+    30% { opacity: 1; -ms-transform: translateY(0px); }
+    80% { opacity: 0; -ms-transform: translateY(50px); }
     100% { opacity: 0; }
 }
 .slideDown{
@@ -87,6 +115,9 @@
 
 
 @media (min-width:700px) {
+.jmrv-mobile{
+    display: none;
+}
 .jmrv-desktop-global-banner{
     display:block;
 }
@@ -96,12 +127,18 @@
 
 .jm-promopage h3{
     font-weight: bold;
-    font-size: 1.4em;
+    font-size: 1.3em;
 }
 .jm-3-columns div{
     display: inline-block;
     width: 50%;
-    border-right: solid 1px white; 
+    border-right: solid 1px white;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .jm-3-columns div:last-of-type{
@@ -132,6 +169,12 @@
 }
 .jm-promopage section{
     font-size: 1.1vw;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    height: 5em;
+    width: 100%;
 }
 section.jm-3-columns div.jm-full-banner{
     width: 100%;
@@ -141,7 +184,7 @@ section.jm-3-columns div.jm-full-banner{
     position: relative;    
 }
 
-
+}
 
 @media (min-width:1100px) {
 .jm-promopage section{
@@ -157,20 +200,31 @@ section.jm-3-columns div.jm-full-banner{
 .jm-shipping-plcc-retention-mobile{
     display:none;
 }
-.jmrv-mobile-globalBanner{
+
+.jm-shipping-msg-mobile{
     display: block;
     position: absolute;
     right: 0;
     width: 75%;
     text-align: center;
-    z-index: 99999;
+    z-index: 99999;    
+    top: 1.89em;
+    padding: 0.23em 0; 
+    /*background: #e53b43;*/
+    background: #04220a;       
 }
-.jm-promopage {
+.jmrv-mobile-globalBanner .jm-promopage{
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 99999;    
     position: relative;
-    background-image: url('https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTEvMjkvMTYvMzUvMzcvMzA4LzAyXzEyV2VlazJfR2xvYmFsQWRfQ2VudHJ1eUNhc2guanBnIl1d/02_12Week2_GlobalAd_CentruyCash.jpg?sha=2611aa258accce44');
+    background-image: url('https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTEvMzAvMDkvNDMvMDUvOTk2LzAxXzEyV2VlazJfR2xvYmFsQWRfRXhwZWRpdGVkU2hpcHBpbmcuanBnIl1d/01_12Week2_GlobalAd_ExpeditedShipping.jpg?sha=e7d9bc8fd7a1ee1b');
     background-size: cover;
-    background-position: 50% 0;
-    padding: 0.6em 0;
+    background-position: 50% 0;    
+    padding: 0.3em 0;
 }
 .jm-promopage *{
     text-rendering: optimizeLegibility;
@@ -185,7 +239,11 @@ section.jm-3-columns div.jm-full-banner{
     display: block;
 }
 .jm-promopage h3{
-        font-size: 0.7em;
+    font-size: 0.95em;
+    text-align: center;
+}
+br{
+    display: block;
 }
 
 }
@@ -197,6 +255,9 @@ section.jm-3-columns div.jm-full-banner{
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script>
+
+
+
 $(window).load(function() {
 
  if((window.location.href == "https://www.c21stores.com/#jmlb #jmdetails") || (window.location.href == "https://www.c21stores.com/pages/memday2017") || (window.location.href == "https://www.c21stores.com/pages/springpromo17#") || (window.location.href.indexOf("https://www.c21stores.com/?") > -1)){
@@ -209,46 +270,45 @@ $(window).load(function() {
  $('.jm-top-free').hide();
  $('.jm-promopage').show();
  $('.branded-card-header--active').addClass('jm-branded-card-header--active-hide');
- }
+ };
 
-$("#jm-details, .jm-promopage h3, .jmrv-close-mobile, .jm-promopage p").click(function() {
-    showDetails();
-    $(".jm-promopage p").slideToggle();
-});
+
 function showGlobalBanner(){
     $('.branded-card-header').after(
 
+        '<div class="jmrv-mobile jm-shipping-msg-mobile">'+
+            '<div class="jm-promopage">'+
+                    '<a class="jm-cta-all" href="https://www.c21stores.com/pages/shipping-information">&nbsp;</a>'+
+                    '<h3>Holiday Shipping Deadlines. <br/>Dates Vary by Location'+
+                '</h3>'+
+            '</div>'+
+        '</div>'+
+
         '<div class="jmrv-mobile jmrv-mobile-globalBanner">'+
             '<div class="jm-promopage">'+
-            '<section class="jm-3-columns jm-initial-message-wrap">'+
-            '<a class="jm-anchor-promo" href="https://www.c21stores.com/instant_credit?bga=CenturyCash_redemtion_w43E&gal=gb_mobile">&nbsp;</a>'+
-                '<div>'+
-                    '<h3>EARNED CENTURYCASH? REDEEM BY 12/24</h3>'+
-                '</div>'+
-                '<div>'+                    
-                    '<h3>BECOME A LOYALTY MEMBER &amp; NEVER MISS OUT</h3>'+                    
-                '</div>'+
-            '</section>'+
+            '<h3 class="jm-mobile-promos slideDown"><b>EARNED CENTURYCASH? REDEEM BY 12/24</b></h3>'+
             '</div>'+
         '</div>'+
 
         '<div class="jmrv-desktop jmrv-desktop-global-banner">'+
             '<div class="jm-promopage">'+
             '<section class="jm-3-columns jm-initial-message-wrap">'+
-                // '<div>'+
-                //     '<h3>EARNED CENTURYCASH? REDEEM BY 12/24</h3>'+
-                // '</div>'+
-                // '<div>'+
-                // '<a class="jm-anchor-promo" href="https://www.c21stores.com/instant_credit?bga=CenturyCash_redemtion_w43E&gal=gb_desktop">&nbsp;</a>'+
-                //     '<h3>BECOME A LOYALTY MEMBER &amp; NEVER MISS OUT</h3>'+
-                // '</div>'+
-            '<div class="jm-full-banner">'+
-                '<a class="jm-cta-all" href="https://www.c21stores.com/pages/shipping-information">&nbsp;</a>'+
-                '<h3>Last Day 12/19 for Expedited Shipping!</h3>'+
-                '<h3>Order by 12pm EST. Dates vary by location</h3>'+
-                '<a class="jm-cta-text" href="https://www.c21stores.com/pages/shipping-information">LEARN MORE</a>'+
-            '</div>'+                
+                '<div>'+
+                    '<h3>EARNED CENTURYCASH? REDEEM BY 12/24</h3>'+
+                '</div>'+
+                '<div>'+
+                '<a class="jm-anchor-promo" href="https://www.c21stores.com/instant_credit?bga=CenturyCash_redemtion_w43E&gal=gb_desktop">&nbsp;</a>'+
+                    '<h3><span class="jm-turninto-cta">BECOME A LOYALTY MEMBER &amp; NEVER MISS OUT</span></h3>'+
+                '</div>'+
             '</section>'+
+            // '<section class="jm-3-columns jm-initial-message-wrap">'+
+            // '<div class="jm-full-banner">'+
+            //     '<a class="jm-cta-all" href="https://www.c21stores.com/pages/shipping-information">&nbsp;</a>'+
+            //     '<h3>Last Day 12/19 for Expedited Shipping! Order by 12pm EST. Dates vary by location<br/>'+
+            //         '<a class="jm-cta-text" href="https://www.c21stores.com/pages/shipping-information">LEARN MORE</a>'+
+            //     '</h3>'+
+            // '</div>'+                
+            // '</section>'+            
             '</div>'+
         '</div>'
     );
@@ -266,9 +326,9 @@ function global_rotating_message(){
         '<section class="jm-3-columns slideDown">'+
             '<div class="jm-full-banner">'+
                 '<a class="jm-cta-all" href="https://www.c21stores.com/pages/shipping-information">&nbsp;</a>'+
-                '<h3>Last Day 12/19 for Expedited Shipping!</h3>'+
-                '<h3>Order by 12pm EST. Dates vary by location</h3>'+
-                '<a class="jm-cta-text" href="https://www.c21stores.com/pages/shipping-information">LEARN MORE</a>'+
+                '<h3>Holiday Shipping Deadlines. Dates vary by location<br/>'+
+                    '<a class="jm-cta-text" href="https://www.c21stores.com/pages/shipping-information">LEARN MORE</a>'+
+                '</h3>'+
             '</div>'+
         '</section>',
         '<section class="jm-3-columns slideDown">'+
@@ -277,7 +337,7 @@ function global_rotating_message(){
             '</div>'+
             '<div>'+
             '<a class="jm-anchor-promo" href="https://www.c21stores.com/instant_credit?bga=CenturyCash_redemtion_w43E&gal=gb_desktop">&nbsp;</a>'+
-                '<h3>BECOME A LOYALTY MEMBER &amp; NEVER MISS OUT</h3>'+
+                '<h3><span class="jm-turninto-cta">BECOME A LOYALTY MEMBER &amp; NEVER MISS OUT</span></h3>'+
             '</div>'+
         '</section>',
     ];
@@ -292,19 +352,20 @@ function global_rotating_message(){
 
         $(".jmrv-desktop-global-banner section").html(msg);
 
-                $('.jm-shipping-plcc-acquisition a').hover(function(e){
+                $('.jm-promopage a').hover(function(e){
                     //$('a.Shoes').css('background','red');
-                        clearInterval(jmtimer);
+                    clearInterval(jmtimer);
+                    $('.slideDown').css('webkit-animation', '0');
                 }, function(e){
                     //$('a.Shoes').css('background','blue');
-                        jmtimer = setInterval( rotatingMessage, 2300);
+                    jmtimer = setInterval( rotatingMessage, 3000);
                 });
 
         };
 
-        var jmtimer = setInterval( rotatingMessage, 2300);
+        var jmtimer = setInterval( rotatingMessage, 3000);
 
-}//global_rotating_message();
+}global_rotating_message();
 
 
 //END GLOBAL HEADER ROTATING MESSAGE DESKTOP
@@ -313,9 +374,9 @@ function global_rotating_message(){
 // GLOBAL HEADER ROTATING MESSAGE MOBILE
 function global_rotating_message_mobile(){
 
-    var rotatingMessages = [
-        '<h3 class="jm-mobile-promos slideDown"><b>$30 OFF</b> $150 PURCHASE | <b>$40 OFF</b> $200 PURCHASE<span class="jm-asterisk">*</span></h3>',
-        '<h3 class="jm-mobile-promos slideDown"><b>$50 OFF</b> $250 PURCHASE | <b>$100 OFF</b> $500 PURCHASE<span class="jm-asterisk">*</span></h3>',
+    var rotatingMessages = [        
+        '<h3 class="jm-mobile-promos slideDown"><b>BECOME A LOYALTY MEMBER &amp; NEVER MISS OUT</b></h3>',
+        '<h3 class="jm-mobile-promos slideDown"><b>EARNED CENTURYCASH? REDEEM BY 12/24</b></h3>',
     ];
 
         function rotatingMessage(e) {
@@ -327,15 +388,16 @@ function global_rotating_message_mobile(){
 
                 $('.jm-shipping-plcc-acquisition a').hover(function(e){
                     //$('a.Shoes').css('background','red');
-                        clearInterval(jmtimer);
+                    clearInterval(jmtimer);
+                    $('.slideDown').css('webkit-animation', '0');
                 }, function(e){
                     //$('a.Shoes').css('background','blue');
-                        jmtimer = setInterval( rotatingMessage, 2300);
+                    jmtimer = setInterval( rotatingMessage, 3000);
                 });
 
         };
 
-        var jmtimer = setInterval( rotatingMessage, 2300);
+        var jmtimer = setInterval( rotatingMessage, 3000);
 
 }global_rotating_message_mobile();
 
@@ -343,10 +405,6 @@ function global_rotating_message_mobile(){
 //END GLOBAL HEADER ROTATING MESSAGE MOBILE
 
 
-
-function showDetails(){
-    $("#jm-details img").toggleClass("IsGoingDown");
-}
 
 });
 </script>
