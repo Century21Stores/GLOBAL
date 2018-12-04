@@ -1,4 +1,4 @@
-// JS PROD MASTER - W44A BGA Duplicate Images - JMRV- 12.03.18
+// JS PROD MASTER - W44A BGA Duplicate Images - JMRV- 12.04.18
 // PAST: W43E PLCC 20% - JMRV- 11.27.18
 // jrios@c21stores.com
 
@@ -2575,8 +2575,8 @@ function thumbnails_duplicat_fix(){
     for (var i = 0; i < arrayimgsrc.length - 1; i++) {
         if (arrayimgsrc[i + 1] == arrayimgsrc[i]) {
             results.push(arrayimgsrc[i] + " posicion " +i);
-                    actual_position = i +1;
-                    $('.product-details__alternate-image-group > div .slick-track div:nth-of-type('+ actual_position +')').hide();
+            actual_position = i +1;
+            $('.product-details__alternate-image-group > div .slick-track div:nth-of-type('+ actual_position +')').hide().css('height','0');
         }
     }
 
