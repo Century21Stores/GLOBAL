@@ -1,4 +1,4 @@
-// JS PROD MASTER - W44A BGA - JMRV- 11.28.18
+// JS PROD MASTER - W44A BGA Duplicate Images - JMRV- 12.03.18
 // PAST: W43E PLCC 20% - JMRV- 11.27.18
 // jrios@c21stores.com
 
@@ -368,17 +368,23 @@ function sortingSizes(numberSizes) {
             $(currentElement).closest('li').attr('id', value);
             //console.log(newvalue);
         });
-
+        //console.log(this);
         sortingTheList(this);
 
     });
 
+    //SORTING 2
+    function sortingTheList2(listToSort){
+    
+    }
+    //END SORTING 2
+
 
     //SORTING
     function sortingTheList(listToSort){
-        //console.log(listToSort);
+        console.log(listToSort);
         var itemsList = $(listToSort).children();
-        //console.log(itemsList);
+        console.log(itemsList);
 
         itemsList.sort(function (a, b) {
             return parseFloat(a.id) > parseFloat(b.id);
@@ -1648,7 +1654,7 @@ function allSiteGA14() {
     //POSITION
     var pos = 14;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTEvMjkvMTAvNTMvMTgvNTQ4LzAxXzEyV2VlZWsxX0JHQV9FR0lGVENBUkRTLmpwZyJdXQ/01_12Weeek1_BGA_EGIFTCARDS.jpg?sha=e33cddce0a09653c";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTIvMDMvMTIvNTIvMTUvMzM2LzAxXzEyV2VlZWsxX0JHQV9FR0lGVENBUkRTLmpwZyJdXQ/01_12Weeek1_BGA_EGIFTCARDS.jpg?sha=d0c3bc23cdabcec9";
     //var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTAvMjYvMTIvMTcvMzAvOTIxLzEwV2VlZWs0X0JHQV9HSUZUTU9SRV8yLmpwZyJdXQ/10Weeek4_BGA_GIFTMORE_2.jpg?sha=65772cd4c378dc15";
     //var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTEvMTkvMTMvMTkvMzQvNzM0LzAxXzExV2VlazNfQkdBX0NZQkVSU1BFQ0lBTFMuanBnIl1d/01_11Week3_BGA_CYBERSPECIALS.jpg?sha=2628e79df020172f";
     //LINK TEXT
@@ -2554,9 +2560,12 @@ function Curalate_PDP(){
 function thumbnails_duplicat_fix(){
     arrayimgsrc = [];
     $( ".product-details__alternate-image-button-image" ).each(function( index ) {
-        URLs = $( this ).attr('src').split("/")[6];
+        var URLs = $( this ).attr('src'),
+            parts = URLs.split("/"),
+            last_part = parts[parts.length-1];
+        //console.log( index + ": " + last_part);
+        //URLs = $( this ).attr('src').split("/")[6];
         arrayimgsrc.push(URLs);
-      //console.log( index + ": " + URLs);
     });
     //console.log(arrayimgsrc);
 
