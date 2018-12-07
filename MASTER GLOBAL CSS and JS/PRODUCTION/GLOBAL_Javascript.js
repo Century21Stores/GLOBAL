@@ -2758,7 +2758,17 @@ function seoCopyLineFooter(){
 
 // PROMO CODE HELP MESSAGE
 function promo_Code_custom(){
-    $("div.cart-prices__label, .table__price").each(function(){
+    $(".cart__main div.cart-prices__label, .table__price").each(function(){
+        if ($(this).text().indexOf('{') > -1){
+            var s = $(this).text();
+            s = s.substring(0, s.indexOf('{'));
+            $(this).html(s);
+            $(this).parent().css('display','table-cell');
+            //console.log($(this).text());
+            //console.log(s);
+        }
+    });
+    $(".cart__aside div.cart-prices__label, .table__price").each(function(){
         if ($(this).text().indexOf('{') > -1){
             var s = $(this).text();
             s = s.substring(0, s.indexOf('{'));
@@ -2767,7 +2777,7 @@ function promo_Code_custom(){
             //console.log($(this).text());
             //console.log(s);
         }
-    });
+    });    
 }
 // END PROMO CODE HELP MESSAGE
 
