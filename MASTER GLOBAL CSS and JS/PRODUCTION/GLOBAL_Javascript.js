@@ -1,4 +1,4 @@
-// JS PROD MASTER - W44A BGA -&- e-gift BGA removed -&- Helpful promo  message -&- Duplicate Images - JMRV- 12.04.18
+// JS PROD MASTER - W45A BGA -&- e-gift BGA removed -&- Helpful promo  message -&- Duplicate Images - JMRV- 12.04.18
 // PAST: W43E PLCC 20% - JMRV- 11.27.18
 // jrios@c21stores.com
 
