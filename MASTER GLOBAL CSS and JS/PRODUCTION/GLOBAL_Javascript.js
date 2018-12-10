@@ -1,4 +1,4 @@
-// JS PROD MASTER - W44A BGA Duplicate Images - JMRV- 12.04.18
+// JS PROD MASTER - W44A BGA -&- e-gift BGA removed -&- Helpful promo  message -&- Duplicate Images - JMRV- 12.04.18
 // PAST: W43E PLCC 20% - JMRV- 11.27.18
 // jrios@c21stores.com
 
@@ -665,26 +665,26 @@ $(window).load(function() {
 
     if(jm_cat === "Tech"){
         allSiteGA28();
-        allSiteGA14();
+        //allSiteGA14();
         if(!urlEtech){
 //          WishiWankaGA();
         }
     }
     else if(jm_cat === "New + Now"){
             allSiteGA28();
-            allSiteGA14();
+            //allSiteGA14();
     }
     else if(jm_cat === "Beauty"){        
         if(!urlEbeauty){            
             beautyGA30();
-            allSiteGA14();
+            //allSiteGA14();
         }
         else{            
             beautyGA14();
         }
     }
     else if(jm_cat === "Shoes"){            
-            allSiteGA14();
+            //allSiteGA14();
          if(!urlEshoes){
            //allSiteGA28();
          }
@@ -695,7 +695,7 @@ $(window).load(function() {
     }
     else if(jm_cat === "Handbags &amp; Accessories"){
             allSiteGA28();
-            allSiteGA14();
+            //allSiteGA14();
     //     if(!urlEhandbags){
     
       //   }
@@ -705,7 +705,7 @@ $(window).load(function() {
     }
     else if(jm_cat === "Kids"){
             allSiteGA28();
-            allSiteGA14();
+            //allSiteGA14();
         // if(!urlEkids2){
         //     kidsGA30();
         // }
@@ -721,7 +721,7 @@ $(window).load(function() {
     }
     else if((jm_cat === "Women") || (urlEwomensHidden)){
             //allSiteGA28();
-            allSiteGA14();
+            //allSiteGA14();
          if(!urlEmwomens2){
              womenGA30();
          }
@@ -740,7 +740,7 @@ $(window).load(function() {
     }
     else if((jm_cat === "Men") || (urlEmensHidden)){
             allSiteGA28();
-            allSiteGA14();
+            //allSiteGA14();
         //if(!urlEmens2){
              //menGA30();
         //}
@@ -760,7 +760,7 @@ $(window).load(function() {
     else if(jm_cat === "Home"){
             allSiteGA28();
             //allSiteGA14();
-            allSiteGA14();
+            //allSiteGA14();
          //if(!urlEhome){
                 //homeGA14();
             //if(!urlEhome2){
