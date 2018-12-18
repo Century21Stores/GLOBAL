@@ -1,4 +1,4 @@
-// JS PROD MASTER - W47C BGA Clearance -&- PLCC back to 15% -&- Helpful promo  message -&- Duplicate Images - JMRV- 12.18.18
+// JS PROD MASTER - W47B Live Chat -&- PLCC back to 15% -&- Helpful promo  message -&- Duplicate Images - JMRV- 12.18.18
 // PAST: W43E PLCC 20% - JMRV- 11.27.18
 // jrios@c21stores.com
 
@@ -24,7 +24,7 @@ document.addEventListener( "DOMContentLoaded", show_banner_when_not_blank, false
 document.addEventListener( "DOMContentLoaded", seoCopyLineFooter, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom_productLevel, false );
-//document.addEventListener( "DOMContentLoaded", live_chat_message, false );
+document.addEventListener( "DOMContentLoaded", live_chat_message, false );
 //document.addEventListener( "DOMContentLoaded", Hover_message_Button, false );
 
 
@@ -665,26 +665,26 @@ $(window).load(function() {
 
     if(jm_cat === "Tech"){
         allSiteGA28();
-        allSiteGA14();
+        //allSiteGA14();
         if(!urlEtech){
 //          WishiWankaGA();
         }
     }
     else if(jm_cat === "New + Now"){
             allSiteGA28();
-            allSiteGA14();
+            //allSiteGA14();
     }
     else if(jm_cat === "Beauty"){        
         if(!urlEbeauty){            
             beautyGA30();
-            allSiteGA14();
+            //allSiteGA14();
         }
         else{            
             beautyGA14();
         }
     }
     else if(jm_cat === "Shoes"){            
-            allSiteGA14();
+            //allSiteGA14();
          if(!urlEshoes){
            //allSiteGA28();
          }
@@ -695,7 +695,7 @@ $(window).load(function() {
     }
     else if(jm_cat === "Handbags &amp; Accessories"){
             allSiteGA28();
-            allSiteGA14();
+            //allSiteGA14();
     //     if(!urlEhandbags){
     
       //   }
@@ -705,11 +705,11 @@ $(window).load(function() {
     }
     else if(jm_cat === "Kids"){
             allSiteGA28();
-            allSiteGA14();
+            //allSiteGA14();
         // if(!urlEkids2){
         //     kidsGA30();
         // }
-        //allSiteGA14();
+        ////allSiteGA14();
         if(!urlEkids){
             //kidsGA30();
         }
@@ -721,7 +721,7 @@ $(window).load(function() {
     }
     else if((jm_cat === "Women") || (urlEwomensHidden)){
             //allSiteGA28();
-            allSiteGA14();
+            //allSiteGA14();
          if(!urlEmwomens2){
              womenGA30();
          }
@@ -740,11 +740,11 @@ $(window).load(function() {
     }
     else if((jm_cat === "Men") || (urlEmensHidden)){
             allSiteGA28();
-            allSiteGA14();
+            //allSiteGA14();
         //if(!urlEmens2){
              //menGA30();
         //}
-        allSiteGA14();
+        //allSiteGA14();
          if(!urlEmens){
              //menGA14(); 
             //if(urlEjeansmensHidden){
@@ -759,7 +759,7 @@ $(window).load(function() {
     }
     else if(jm_cat === "Home"){
             allSiteGA28();
-            allSiteGA14();
+            //allSiteGA14();
          //if(!urlEhome){
                 //homeGA14();
             //if(!urlEhome2){
@@ -2796,7 +2796,7 @@ function promo_Code_custom_productLevel(){
 // LIVE CHAT CUSTOM MESSAGE
 function live_chat_message(){
     setTimeout(function(){
-        $('#livechat-full').prepend("<div class='jm-livechat-message'>Our Call Center will be closed on Thursday, 11/22/18 in observance of Thanksgiving Day.</div>");
+        $('#livechat-full').prepend("<div class='jm-livechat-message'>Our Call Center will be closed on Tuesday, 12/25/18 in observance of Christmas Day.</div>");
     }, 1000);
 }
 // END LIVE CHAT CUSTOM MESSAGE
