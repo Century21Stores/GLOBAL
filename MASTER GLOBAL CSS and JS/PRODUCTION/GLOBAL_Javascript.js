@@ -1,4 +1,4 @@
-// JS PROD MASTER - W47B Live Chat -&- PLCC back to 15% -&- Helpful promo  message -&- Duplicate Images - JMRV- 12.18.18
+// JS PROD MASTER - W47B Live Chat -&- Large+1 mulitple CTA -&- PLCC back to 15% -&- Helpful promo  message -&- Duplicate Images - JMRV- 12.24.18
 // PAST: W43E PLCC 20% - JMRV- 11.27.18
 // jrios@c21stores.com
 
@@ -2100,7 +2100,7 @@ function pdpVideos(){
 
 
 // MULTIPLE CTAS CONTENT BLOCKS
-$('.hero-content-block, .banner-content-block, .jm-make-ligthbox, .two-column-square-content-block__container').each(function(index){
+$('.hero-content-block, .banner-content-block, .jm-make-ligthbox, .two-column-square-content-block__container, .large-square-plus-one-content-block__container').each(function(index){
     thereIsCTAs = $(this).find('a').text();
     //console.log('ctas????' + $(this).find('a').text());
     //console.log(thereIsCTAs);
