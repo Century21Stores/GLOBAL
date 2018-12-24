@@ -1,4 +1,4 @@
-/* PROD CSS - W43E OFF PLCC banner- 11.29.18 JMRV */
+/* PROD CSS -  LARGE + 1 Multiple CTA Content Block -&- W43E OFF PLCC banner- 12.24.18 JMRV */
 /* PAST: Global Split Banner ON W39A  -&- Trademark -&- GWP fix mobile aligmnet -&- Shipping options update W32D - 09.27.18 JMRV */
 
 /* CSS MASTER STYLE JMRV  */
@@ -1524,6 +1524,12 @@ div.hero-content-block .content-block-content--left {
 }
 .jm-multipleCTA-space2 a{
     margin: 0% 1.5% 0%;
+}
+.large-square-plus-one-content-block__container .jm-multipleCTA-space2 a{
+    margin: 0% 1% 0%;
+}
+.large-square-plus-one-content-block__container .jm-multipleCTA-space2 a:last-of-type{
+    margin-right: 0%;
 }
 .hero-content-block .content-block-content__container--center .jm-multipleCTA-space a{
     margin: 0% 1% 0%;
