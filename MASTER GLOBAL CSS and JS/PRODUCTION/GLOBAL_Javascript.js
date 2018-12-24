@@ -1,4 +1,4 @@
-// JS PROD MASTER - W47C BGA Clearance -&- PLCC back to 15% -&- Helpful promo  message -&- Duplicate Images - JMRV- 12.24.18
+// JS PROD MASTER - W47E BGA Clearance -&- PLCC back to 15% -&- Helpful promo  message -&- Duplicate Images - JMRV- 12.24.18
 // PAST: W43E PLCC 20% - JMRV- 11.27.18
 // jrios@c21stores.com
 
@@ -1652,8 +1652,8 @@ function allSiteGA14() {
     //POSITION
     var pos = 14;
     //IMAGE URL 370x552
-    //var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTIvMTcvMDkvMDgvMjUvNjMwLzEyV2VlZWs0X0JHQV9DTEVBUkFOQ0VfVjJfMi5qcGciXV0/12Weeek4_BGA_CLEARANCE_V2_2.jpg?sha=e655c354528ddfbd";
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTIvMTcvMDkvMDgvMTEvODE3LzEyV2VlZWs0X0JHQV9DTEVBUkFOQ0VfVjFfMi5qcGciXV0/12Weeek4_BGA_CLEARANCE_V1_2.jpg?sha=2ee60b2695a81f40";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTIvMTcvMDkvMDgvMjUvNjMwLzEyV2VlZWs0X0JHQV9DTEVBUkFOQ0VfVjJfMi5qcGciXV0/12Weeek4_BGA_CLEARANCE_V2_2.jpg?sha=e655c354528ddfbd";
+    //var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTIvMTcvMDkvMDgvMTEvODE3LzEyV2VlZWs0X0JHQV9DTEVBUkFOQ0VfVjFfMi5qcGciXV0/12Weeek4_BGA_CLEARANCE_V1_2.jpg?sha=2ee60b2695a81f40";
     //var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTEvMTkvMTMvMTkvMzQvNzM0LzAxXzExV2VlazNfQkdBX0NZQkVSU1BFQ0lBTFMuanBnIl1d/01_11Week3_BGA_CYBERSPECIALS.jpg?sha=2628e79df020172f";
     //LINK TEXT
     var textLink = "SHOP NOW";
@@ -2912,4 +2912,4 @@ $(document).ready(function() {
 
 $(window).load(function() {
     console.log("Time until everything loaded: ", (Date.now()-timerStart)/1000);
-});    
+});
