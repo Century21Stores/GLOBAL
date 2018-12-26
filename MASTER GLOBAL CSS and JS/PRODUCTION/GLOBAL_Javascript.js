@@ -2504,34 +2504,15 @@ function Curalate_PDP(){
 
         thisproductID = digitalData.product[0].productInfo.productID;
         //  console.log(thisproductID);
-        
-        //LOADING SCRIPT
-        // jQuery.loadScript = function (url, callback) {
-        //     jQuery.ajax({
-        //         url: url,
-        //         dataType: 'script',
-        //         success: callback,
-        //         async: true
-        //     });
-        // }
-
-
-        //Loading Script
-        //$.loadScript('//d116tqlcqfmz3v.cloudfront.net/pizza-40/gallery.js', function(){
-        //$.loadScript('//d116tqlcqfmz3v.cloudfront.net/century21-1169/carousel.js', function(){
-            //Call after script loaded
-            //Curalate.FanReels.Gallery.init({ code: "pizza" });
-          //  Curalate.FanReels.Carousel.init({ code: "century21",  productId: thisproductID});
-        //});
 
         //NEW FRAMEWORK
         var CRL8_SITENAME = 'century21stores-nzvwxr'; !function(){var e=window.crl8=window.crl8||{},n=!1,i=[];e.ready=function(e){n?e():i.push(e)},e.pixel=e.pixel||function(){e.pixel.q.push(arguments)},e.pixel.q=e.pixel.q||[];var t=window.document,o=t.createElement("script"),c=e.debug||-1!==t.location.search.indexOf("crl8-debug=true")?"js":"min.js";o.src=t.location.protocol+"//cdn.curalate.com/sites/"+CRL8_SITENAME+"/site/latest/site."+c,o.onload=function(){n=!0,i.forEach(function(e){e()})};var r=t.getElementsByTagName("script")[0];r.parentNode.insertBefore(o,r.nextSibling)}();
 
 
         $('.page-content__wrapper').after(
-            //'<h2 class="jm-curalate-pdp-title">#C21STYLE</h2>'+
-            //'<p class="jm-curalate-pdp-sub-copy">Shop our Instagram and show us your latest loves.</p>'+
-            '<div data-crl8-container-id="product" data-crl8-filter="productId:thisproductID"></div>'
+            '<h2 class="jm-curalate-pdp-title">#C21STYLE</h2>'+
+            '<p class="jm-curalate-pdp-sub-copy">Shop our Instagram and show us your latest loves.</p>'+
+            '<div data-crl8-container-id="product" data-crl8-filter="productId:'+ thisproductID +'"></div>'
         );
 
 
@@ -2540,7 +2521,7 @@ function Curalate_PDP(){
         //  window.onload = function () { console.log('este es:' + $('.curalate-thumbs').children().length);}
             $(window).load(function() {
                 //console.log('# of Instagram posts link to this product: ' + $('.curalate-thumbs').children().length);
-                if($('.curalate-thumbs').children().length >= 1){
+                if($('.curalate-thumbs').children().length >= 5){
                     $('.page-content__wrapper').after(
                         '<h2 class="jm-curalate-pdp-title">#C21STORES</h2>'+
                         '<p class="jm-curalate-pdp-sub-copy">Shop our Instagram and show us your latest loves.</p>'
