@@ -2510,8 +2510,8 @@ function Curalate_PDP(){
 
 
         $('.page-content__wrapper').after(
-            '<h2 class="jm-curalate-pdp-title">#C21STYLE</h2>'+
-            '<p class="jm-curalate-pdp-sub-copy">Shop our Instagram and show us your latest loves.</p>'+
+            //'<h2 class="jm-curalate-pdp-title">#C21STYLE</h2>'+
+            //'<p class="jm-curalate-pdp-sub-copy">Shop our Instagram and show us your latest loves.</p>'+
             '<div data-crl8-container-id="product" data-crl8-filter="productId:'+ thisproductID +'"></div>'
         );
 
