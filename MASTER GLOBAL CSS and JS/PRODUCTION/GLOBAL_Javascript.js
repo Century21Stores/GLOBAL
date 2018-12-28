@@ -1,4 +1,4 @@
-// JS PROD MASTER - W47E BGA Clearance -&- PLCC back to 15% -&- Helpful promo  message -&- Duplicate Images - JMRV- 12.24.18
+// JS PROD MASTER - W48B live chat clossing -&- PLCC back to 15% -&- Helpful promo  message -&- Duplicate Images - JMRV- 12.24.18
 // PAST: W43E PLCC 20% - JMRV- 11.27.18
 // jrios@c21stores.com
 
@@ -24,7 +24,7 @@ document.addEventListener( "DOMContentLoaded", show_banner_when_not_blank, false
 document.addEventListener( "DOMContentLoaded", seoCopyLineFooter, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom_productLevel, false );
-//document.addEventListener( "DOMContentLoaded", live_chat_message, false );
+document.addEventListener( "DOMContentLoaded", live_chat_message, false );
 //document.addEventListener( "DOMContentLoaded", Hover_message_Button, false );
 
 
@@ -2776,7 +2776,7 @@ function promo_Code_custom_productLevel(){
 // LIVE CHAT CUSTOM MESSAGE
 function live_chat_message(){
     setTimeout(function(){
-        $('#livechat-full').prepend("<div class='jm-livechat-message'>Our Call Center will be closed on Thursday, 11/22/18 in observance of Thanksgiving Day.</div>");
+        $('#livechat-full').prepend("<div class='jm-livechat-message'>Our Call Center will be closed on Tuesday, 01/01/19 in observance of New Year's Day.</div>");
     }, 1000);
 }
 // END LIVE CHAT CUSTOM MESSAGE
