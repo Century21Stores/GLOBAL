@@ -556,8 +556,13 @@ $(window).load(function() {
         (window.location.href.indexOf("7alcw") > -1)
     );
     var urlEhandbags2 = (
-        //(window.location.href.indexOf("luxury") > -1) ||
-        (window.location.href.indexOf("handbags-accessories-backpacks") > -1)
+        (window.location.href.indexOf("handbags-accessories-clutches") > -1) ||
+        (window.location.href.indexOf("handbags-accessories-crossbodies") > -1) ||
+        (window.location.href.indexOf("handbags-accessories-hobos") > -1) ||
+        (window.location.href.indexOf("handbags-accessories-satchels") > -1) ||
+        (window.location.href.indexOf("handbags-accessories-totes") > -1) ||
+        (window.location.href.indexOf("handbags-accessories-waist-bags") > -1) ||
+        (window.location.href.indexOf("handbags-accessories-shop-all-handbags") > -1)
     );    
     var urlEkids = (
         (window.location.href.indexOf("arrivals") > -1) ||
@@ -699,7 +704,7 @@ $(window).load(function() {
     //     if(!urlEhandbags){
     
       //   }
-        if(!urlEhandbags2){
+        if(urlEhandbags2){
             hbGA30();
         }
     }
