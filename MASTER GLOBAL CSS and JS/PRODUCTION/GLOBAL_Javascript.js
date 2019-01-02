@@ -1,4 +1,4 @@
-// JS PROD MASTER - W48B live chat clossing -&- PLCC back to 15% -&- Helpful promo  message -&- Duplicate Images - JMRV- 12.24.18
+// JS PROD MASTER - W49A BGA -&- PLCC back to 15% -&- Helpful promo  message -&- Duplicate Images - JMRV- 12.24.18
 // PAST: W43E PLCC 20% - JMRV- 11.27.18
 // jrios@c21stores.com
 
@@ -24,7 +24,7 @@ document.addEventListener( "DOMContentLoaded", show_banner_when_not_blank, false
 document.addEventListener( "DOMContentLoaded", seoCopyLineFooter, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom_productLevel, false );
-document.addEventListener( "DOMContentLoaded", live_chat_message, false );
+//document.addEventListener( "DOMContentLoaded", live_chat_message, false );
 //document.addEventListener( "DOMContentLoaded", Hover_message_Button, false );
 
 
@@ -546,7 +546,7 @@ $(window).load(function() {
         (window.location.href.indexOf("7arsw") > -1)
     );
     var urlEshoes2 = (
-        (window.location.href.indexOf("shoes-boots") > -1) ||
+        //(window.location.href.indexOf("shoes-boots") > -1) ||
         //(window.location.href.indexOf("shoes-luxury-designer") > -1) ||        
         //(window.location.href.indexOf("edit") > -1) ||
         (window.location.href.indexOf("sneakers") > -1)
@@ -556,8 +556,8 @@ $(window).load(function() {
         (window.location.href.indexOf("7alcw") > -1)
     );
     var urlEhandbags2 = (
-        (window.location.href.indexOf("luxury") > -1) ||
-        (window.location.href.indexOf("sunglasses") > -1)
+        //(window.location.href.indexOf("luxury") > -1) ||
+        (window.location.href.indexOf("handbags-accessories-backpacks") > -1)
     );    
     var urlEkids = (
         (window.location.href.indexOf("arrivals") > -1) ||
@@ -578,9 +578,9 @@ $(window).load(function() {
         (window.location.href.indexOf("testmen-shop-all-accessories") > -1)
     );
     var urlEmens2 = (
-        (window.location.href.indexOf("men-coats-jackets") > -1) ||
-        (window.location.href.indexOf("men-dress-shirts") > -1) ||
-        (window.location.href.indexOf("men-jeans") > -1)
+        //(window.location.href.indexOf("men-coats-jackets") > -1) ||
+        //(window.location.href.indexOf("men-dress-shirts") > -1) ||
+        (window.location.href.indexOf("men-active") > -1)
     );
     var urlEcontemporary = (
         (window.location.href.indexOf("arrivals") > -1) ||
@@ -616,10 +616,10 @@ $(window).load(function() {
         (window.location.href.indexOf("7atnw") > -1)
     );
     var urlEmwomens2 = (
-        (window.location.href.indexOf("women-coats") > -1) ||
-        (window.location.href.indexOf("women-jeans") > -1) ||
+        //(window.location.href.indexOf("women-coats") > -1) ||
+        //(window.location.href.indexOf("women-jeans") > -1) ||
         //(window.location.href.indexOf("women-swimsuits-cover-ups") > -1) ||
-        (window.location.href.indexOf("women-sweaters") > -1)
+        (window.location.href.indexOf("women-active") > -1)
     );    
     var urlEhome = (
         (window.location.href.indexOf("home-fall-harvest") > -1) ||
@@ -664,14 +664,14 @@ $(window).load(function() {
     //console.log(urlEshoes);
 
     if(jm_cat === "Tech"){
-        allSiteGA28();
+        //allSiteGA28();
         allSiteGA14();
         if(!urlEtech){
 //          WishiWankaGA();
         }
     }
     else if(jm_cat === "New + Now"){
-            allSiteGA28();
+            //allSiteGA28();
             allSiteGA14();
     }
     else if(jm_cat === "Beauty"){        
@@ -689,22 +689,22 @@ $(window).load(function() {
            //allSiteGA28();
          }
          if(!urlEshoes2){
-           allSiteGA28();
-           //shoesGA30(); //BIKER CHICS
+           //allSiteGA28();
+           shoesGA30(); 
          }
     }
     else if(jm_cat === "Handbags &amp; Accessories"){
-            allSiteGA28();
+            //allSiteGA28();
             allSiteGA14();
     //     if(!urlEhandbags){
     
       //   }
-        //if(!urlEhandbags2){
-            //hbGA30();
-        //}
+        if(!urlEhandbags2){
+            hbGA30();
+        }
     }
     else if(jm_cat === "Kids"){
-            allSiteGA28();
+            //allSiteGA28();
             allSiteGA14();
         // if(!urlEkids2){
         //     kidsGA30();
@@ -722,11 +722,12 @@ $(window).load(function() {
     else if((jm_cat === "Women") || (urlEwomensHidden)){
             //allSiteGA28();
             allSiteGA14();
-         if(!urlEmwomens2){
-             womenGA30();
-         }
-        if(!urlEmwomens){
+         //if(!urlEmwomens){
+             //womenGA30();
+         //}
+        if(!urlEmwomens2){
              //womenGA14();
+             womenGA30();
         
             //if(urlEcoatswomensHidden){
                // allSiteGA28();
@@ -739,12 +740,12 @@ $(window).load(function() {
         }
     }
     else if((jm_cat === "Men") || (urlEmensHidden)){
-            allSiteGA28();
+            //allSiteGA28();
             allSiteGA14();
-        //if(!urlEmens2){
-             //menGA30();
-        //}
-         if(!urlEmens){
+        if(!urlEmens2){
+             menGA30();
+        }
+         //if(!urlEmens){
              //menGA14(); 
             //if(urlEjeansmensHidden){
                 //menjeansHGA30(); //KNIT LIST
@@ -754,10 +755,10 @@ $(window).load(function() {
                 //allSiteGA28();
                 //mencoatsHGA30();  // COOL ELEMENTS
             //}            
-         }        
+         //}        
     }
     else if(jm_cat === "Home"){
-            allSiteGA28();
+            //allSiteGA28();
             allSiteGA14();
          //if(!urlEhome){
                 //homeGA14();
@@ -934,19 +935,19 @@ function womenGA14() {
 
 
 
-// WOMENS 30 - SHINE & SHIMMER
+// WOMENS 30 - WOMEN ACTIVE
 function womenGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
-    var gaType = 2;
+    var gaType = 1;
     //POSITION
     var pos = 28;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTEvMjYvMTUvNDQvMjYvMTI5LzAxXzExV2VlazRfQkdBX1NISU5FU0hJTU1FUi5qcGciXV0/01_11Week4_BGA_SHINESHIMMER.jpg?sha=7326b4bbc8707ec4";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTkvMDEvMDIvMTMvMTQvNTMvMTkzLzAxXzFXZWVla19CR0FfQWN0aXZlX1cuanBnIl1d/01_1Weeek_BGA_Active_W.jpg?sha=f517985203a12ea7";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL    
-    var urlLINK = "https://www.c21stores.com/categories/new-now-shine-shimmer?bga=shine_shimmer_from_"+ jm_cat_slug + "_w43B&gal=pos28";
+    var urlLINK = "https://www.c21stores.com/categories/women-active?bga=women_get_active_from_"+ jm_cat_slug + "_w49A&gal=pos28";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
@@ -1029,19 +1030,19 @@ function menGA14() {
 
 
 
-// MENS 30
+// MENS 30: Men Active
 function menGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
-    var gaType = 2;
+    var gaType = 1;
     //POSITION
     var pos = 28;
     //IMAGE URL 370x552
-    var urlIMG = "https://www.c21stores.com/media/W1siZiIsIjIwMTgvMDkvMjAvMTQvMTIvNTAvNzMxLzA5V2VlazRfQkdBX1JldHJvX1JlcGxheV8yLmpwZyJdXQ/09Week4_BGA_Retro-Replay_2.jpg?sha=7718648527e9dc24";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTkvMDEvMDIvMTMvMjQvMzEvOTY5LzAxXzFXZWVla19CR0FfQWN0aXZlX00uanBnIl1d/01_1Weeek_BGA_Active_M.jpg?sha=05733186beb423c5";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/categories/new-now-retro-replay?bga=men_newnow_retro_replay_from_"+ jm_cat_slug + "_w34&gal=pos28";
+    var urlLINK = "https://www.c21stores.com/categories/men-active?bga=men_get_active_from_"+ jm_cat_slug + "_w49&gal=pos28";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
@@ -1061,7 +1062,7 @@ function menGA30() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--light">'+
-        '<p class="content-block-content__action content-block-content__action--button"><a style="background:white; color:black !important" class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
@@ -1307,19 +1308,19 @@ function shoesGA14() {
 // END SHOES 14
 
 
-// SHOES SHOES 30 - BIKER CHIC
+// SHOES SHOES 30 - SNEAKERS
 function shoesGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
-    var gaType = 2;
+    var gaType = 1;
     //POSITION
     var pos = 28;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTAvMTIvMTAvNTEvNTQvNTkyLzAxXzEwV2VlazJfQkdBX0JJS0VSQ0hJQ19XLmpwZyJdXQ/01_10Week2_BGA_BIKERCHIC_W.jpg?sha=4089c8d7df22d278";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTkvMDEvMDIvMTMvMzIvMzQvMzcvMDFfMVdlZWVrX0JHQV9BY3RpdmVfU25lYWtlcnMuanBnIl1d/01_1Weeek_BGA_Active_Sneakers.jpg?sha=d763ff996bf3856c";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/categories/new-now-biker-chic?bga=new_now_biker_chick_from_"+ jm_cat_slug + "_w37&gal=pos28";
+    var urlLINK = "https://www.c21stores.com/categories/shoes-sneakers?sneakers_type%5B%5D=athletic&bga=shoes_sneakers_from_"+ jm_cat_slug + "_w49&gal=pos28";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
@@ -1339,7 +1340,7 @@ function shoesGA30() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--light">'+
-        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
@@ -1400,19 +1401,19 @@ function hbGA14() {
 
 
 
-// HB 30
+// HB 30 - Active Bags
 function hbGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
-    var gaType = 2;
+    var gaType = 1;
     //POSITION
     var pos = 28;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDQvMTkvMTYvMjQvMTIvNjc5LzAxXzA0V2VlazNfQkdBX1dhaXN0QmFncy5qcGciXV0/01_04Week3_BGA_WaistBags.jpg?sha=a14d19db3a512b50";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTkvMDEvMDIvMTMvMzcvMTEvNDY5LzAxXzFXZWVla19CR0FfQWN0aXZlX0JhZ3MuanBnIl1d/01_1Weeek_BGA_Active_Bags.jpg?sha=f23637732ffa3a98";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/categories/new-now-the-waist-pack?bga=hb_waist_pack_W12&gal=pos30";
+    var urlLINK = "https://www.c21stores.com/categories/handbags-accessories-backpacks?backpack_type%5B%5D=athletic&bga=hb_waist_pack__from_"+ jm_cat_slug + "_w49&gal=pos14";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
@@ -1432,7 +1433,7 @@ function hbGA30() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--light">'+
-        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
