@@ -1,4 +1,4 @@
-// JS PROD MASTER - W49A BGA -&- PLCC back to 15% -&- Helpful promo  message -&- Duplicate Images - JMRV- 12.24.18
+// JS PROD MASTER - W50 BGA -&- PLCC back to 15% -&- Helpful promo  message -&- Duplicate Images - JMRV- 01.10.18
 // PAST: W43E PLCC 20% - JMRV- 11.27.18
 // jrios@c21stores.com
 
@@ -764,6 +764,7 @@ $(window).load(function() {
     }
     else if(jm_cat === "Home"){
             //allSiteGA28();
+            homeGA30();
             allSiteGA14();
          //if(!urlEhome){
                 //homeGA14();
@@ -1500,7 +1501,7 @@ function homeGA14() {
 // END HOME 14
 
 
-// HOME 30 -
+// HOME 30 - Black White
 function homeGA30() {
 
     //GRID AD TYPE:  enter 1 or 2
@@ -1508,11 +1509,11 @@ function homeGA30() {
     //POSITION
     var pos = 28;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDkvMjYvMTEvMjkvNTAvNTI0LzA5V2VlazVfQkdBX0Zhcm1ob3VzZV8yLmpwZyJdXQ/09Week5_BGA_Farmhouse_2.jpg?sha=ee90e79b522c5cb2";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTkvMDEvMTAvMTMvMjcvMDUvMTA0LzAxXzAxV2VlazJfQkdBX0JfVy5qcGciXV0/01_01Week2_BGA_B%26W.jpg?sha=71a2bf5a3456b048";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/categories/new-now-modern-farmhouse?bga=modern_farmhouse_from_"+ jm_cat_slug + "_w35&gal=pos28";
+    var urlLINK = "https://www.c21stores.com/categories/new-now-black-and-white?bga=home_black_white_from_"+ jm_cat_slug + "_w50&gal=pos28";
     //TAG
     var gaTag = "GA_new_on_campus-w29_18";
 
@@ -1534,7 +1535,7 @@ function homeGA30() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--light">'+
-        '<p class="content-block-content__action content-block-content__action--button"><a name="' + gaTag + '" class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a style="color: black; border-color:black !important; background: white;" name="' + gaTag + '" class="button button--alt-inverse button--wide button--large" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
@@ -1658,13 +1659,13 @@ function allSiteGA14() {
     //POSITION
     var pos = 14;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTIvMTcvMDkvMDgvMjUvNjMwLzEyV2VlZWs0X0JHQV9DTEVBUkFOQ0VfVjJfMi5qcGciXV0/12Weeek4_BGA_CLEARANCE_V2_2.jpg?sha=e655c354528ddfbd";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTkvMDEvMTAvMTMvMjIvMjUvNzI1LzAxXzAxV2VlazAyX0JHQV8yLmpwZyJdXQ/01_01Week02_BGA_2.jpg?sha=ac55f2f5b189d418";
     //var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTIvMTcvMDkvMDgvMTEvODE3LzEyV2VlZWs0X0JHQV9DTEVBUkFOQ0VfVjFfMi5qcGciXV0/12Weeek4_BGA_CLEARANCE_V1_2.jpg?sha=2ee60b2695a81f40";
     //var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTEvMTkvMTMvMTkvMzQvNzM0LzAxXzExV2VlazNfQkdBX0NZQkVSU1BFQ0lBTFMuanBnIl1d/01_11Week3_BGA_CYBERSPECIALS.jpg?sha=2628e79df020172f";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/pages/clearance?bga=clearance75_from_"+ jm_cat_slug + "_w47&gal=pos14";
+    var urlLINK = "https://www.c21stores.com/pages/clearance?bga=clearance_xtra20_from_"+ jm_cat_slug + "_w50&gal=pos14";
     //var urlLINK = "https://www.c21stores.com/pages/gifts?bga=gifts2018_from_"+ jm_cat_slug + "_w39&gal=pos14";
     //var urlLINK = "https://www.c21stores.com/pages/cyber-specials?bga=cyber-specials2018_from_"+ jm_cat_slug + "_w42&gal=pos14";
     var gaTag = "GA_gifts_2018";
