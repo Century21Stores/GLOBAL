@@ -1,4 +1,4 @@
-// JS PROD MASTER - W50 BGA -&- PLCC back to 15% -&- Helpful promo  message -&- Duplicate Images - JMRV- 01.10.18
+// JS PROD MASTER - W51B BGA -&- PLCC back to 15% -&- Helpful promo  message -&- Duplicate Images - JMRV- 01.17.19
 // PAST: W43E PLCC 20% - JMRV- 11.27.18
 // jrios@c21stores.com
 
