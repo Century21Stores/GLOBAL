@@ -1,4 +1,4 @@
-// JS PROD MASTER - W51B BGA -&- PLCC back to 15% -&- Helpful promo  message -&- Duplicate Images - JMRV- 01.17.19
+// JS PROD MASTER - W51D BGA -&- PLCC back to 15% -&- Helpful promo  message -&- Duplicate Images - JMRV- 01.17.19
 // PAST: W43E PLCC 20% - JMRV- 11.27.18
 // jrios@c21stores.com
 
@@ -24,8 +24,9 @@ document.addEventListener( "DOMContentLoaded", show_banner_when_not_blank, false
 document.addEventListener( "DOMContentLoaded", seoCopyLineFooter, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom_productLevel, false );
+document.addEventListener( "DOMContentLoaded", Hover_message_Button, false );
 //document.addEventListener( "DOMContentLoaded", live_chat_message, false );
-//document.addEventListener( "DOMContentLoaded", Hover_message_Button, false );
+
 
 
 
@@ -44,7 +45,7 @@ else if (window.location.href.indexOf("/users/account/edit") > -1){
 // FIREING FUNCTIONS ON QUICK VIEW
 $(document).on( 'click', '.product-summary__quickview a', function(){
     setTimeout(function() {   //calls click event after a certain time
-        //Hover_message_Button();
+        Hover_message_Button();
     }, 1000);
 });
 
@@ -1659,16 +1660,16 @@ function allSiteGA14() {
     //POSITION
     var pos = 14;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTkvMDEvMTAvMTMvMjIvMjUvNzI1LzAxXzAxV2VlazAyX0JHQV8yLmpwZyJdXQ/01_01Week02_BGA_2.jpg?sha=ac55f2f5b189d418";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTkvMDEvMTcvMTEvNDcvNTEvMzc0LzAxXzEyV2VlZWs0X0JHQV9DTEVBUkFOQ0VfVjIuanBnIl1d/01_12Weeek4_BGA_CLEARANCE_V2.jpg?sha=1539cd7ce76f3f59";
     //var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTIvMTcvMDkvMDgvMTEvODE3LzEyV2VlZWs0X0JHQV9DTEVBUkFOQ0VfVjFfMi5qcGciXV0/12Weeek4_BGA_CLEARANCE_V1_2.jpg?sha=2ee60b2695a81f40";
     //var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTEvMTkvMTMvMTkvMzQvNzM0LzAxXzExV2VlazNfQkdBX0NZQkVSU1BFQ0lBTFMuanBnIl1d/01_11Week3_BGA_CYBERSPECIALS.jpg?sha=2628e79df020172f";
     //LINK TEXT
     var textLink = "SHOP NOW";
     //LINK URL
-    var urlLINK = "https://www.c21stores.com/pages/clearance?bga=clearance_xtra20_from_"+ jm_cat_slug + "_w50&gal=pos14";
+    var urlLINK = "https://www.c21stores.com/pages/clearance?bga=clearance_85_from_"+ jm_cat_slug + "_w51&gal=pos14";
     //var urlLINK = "https://www.c21stores.com/pages/gifts?bga=gifts2018_from_"+ jm_cat_slug + "_w39&gal=pos14";
     //var urlLINK = "https://www.c21stores.com/pages/cyber-specials?bga=cyber-specials2018_from_"+ jm_cat_slug + "_w42&gal=pos14";
-    var gaTag = "GA_gifts_2018";
+    var gaTag = "GA_clearance_2019";
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
     var FixHeights;
@@ -2793,12 +2794,12 @@ function live_chat_message(){
 
 
 function Hover_message_Button(){
-
-        $('.product-details__add-to-cart-form > section').after(
-            '<div class="jm_button_message" style="display:none; font-size: 14px; color: #e21f26; padding: 0 0 5%; text-rendering: optimizeLegibility; -webkit-transition: width 2s; transition: width 2s;">' +
-            '<b>SHIPPING NOTICE:</b> This Item Will Ship By <b>2/11</b>' +
-            '</div>'
-        );
+console.log('add to bag message');
+    $('.product-details__add-to-cart-form > .html-content-block > section').after(
+        '<div class="jm_button_message" style="display:none; font-size: 14px; color: #e21f26; padding: 0 0 5%; text-rendering: optimizeLegibility; -webkit-transition: width 2s; transition: width 2s;">' +
+        '<b>SHIPPING NOTICE:</b> This Item Will Ship By <b>2/8</b>' +
+        '</div>'
+    );
 
 
 if ($(window).width() >= 1000){
