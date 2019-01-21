@@ -1,5 +1,8 @@
 <style>
 /* ------- GENERAL ------- */
+.jm_remove{
+    display: none !important;
+}
 .jm-desktop{
 	display: none;
 }
@@ -167,7 +170,7 @@ header ~ .container .jm-bcop a:not(.btn-primary):not(.btn-outline-primary){
 .jm-cta-button{
     font-size: 0.83rem;
     border: solid 1px;
-    min-width: 203px;
+    min-width: 193px;
 }
 /* END CTA */
 /* ------- END COPY ------- */
@@ -215,3 +218,22 @@ header ~ .container .jm-bcop a:not(.btn-primary):not(.btn-outline-primary){
 	    <a class="icon-youtube-play" title="Go to YouTube" href="https://youtube.com/century21stores" target="_blank"></a>
 	</li>
 </ul>
+
+
+<!-- MINIMIZED HEADER -->
+<script>
+window.onscroll = function() {on_Scroll_Hide()};
+
+function on_Scroll_Hide() {
+
+jm_list = document .getElementsByTagName("header")[0].childNodes[1].childNodes[1];
+console.log(jm_list);
+
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    jm_list.classList.add('jm_remove');
+  } else {
+    jm_list.classList.remove('jm_remove');
+  }
+}
+</script>
+<!-- END MINIMIZED HEADER -->
