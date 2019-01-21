@@ -1,5 +1,8 @@
 <style>
 /* ------- GENERAL ------- */
+.jm-desktop{
+	display: none;
+}
 .jm-landing-page{
     margin: 15% 0 3%;
 }
@@ -21,6 +24,78 @@
 	height: auto;
 }
 /* ------- END GENERAL ------- */
+
+/* ------ COPY ------- */
+
+/* CTA */
+.jm-cta-button{
+    font-size: 0.7em;
+    letter-spacing: 0.2em;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    padding: 0.63em 2em;
+    border: solid 1px;
+    min-width: 213px;
+    cursor: pointer;
+    background: none;    
+}
+.jm-cta-button-dark,
+.page div.container a.jm-cta-button-dark,
+span.jm-cta-button-dark{
+	color: black;
+}
+.jm-cta-button-dark:hover,
+.page div.container a.jm-cta-button-dark:hover,
+span.jm-cta-button-dark:hover{
+    background: black;
+    color:white !important;
+    border-color: white;
+}
+.jm-cta-button-soliddark,
+.page div.container a.jm-cta-button-soliddark,
+span.jm-cta-button-soliddark{
+	color: white;
+	background: black;
+	border-color: black;
+}
+.jm-cta-button-soliddark:hover,
+.page div.container a.jm-cta-button-soliddark:hover,
+span.jm-cta-button-soliddark:hover{
+    background: none;
+    color:black !important;
+    border-color: black;
+}
+.jm-cta-button-light,
+.page div.container a.jm-cta-button-light,
+span.jm-cta-button-light{
+	color: white;
+}
+.jm-cta-button-light:hover,
+.page div.container a.jm-cta-button-light:hover,
+span.jm-cta-button-light:hover{
+    background: white;
+    color:black !important;
+    border-color: white;
+}
+.jm-cta-button-solidlight,
+.page div.container a.jm-cta-button-solidlight,
+span.jm-cta-button-solidlight{
+	color: black;
+	background: white;
+	border-color: white;
+}
+.jm-cta-button-solidlight:hover,
+.page div.container a.jm-cta-button-solidlight:hover,
+span.jm-cta-button-solidlight:hover{
+    background: none;
+    color:white !important;
+    border-color: white;
+}
+/* END CTA */
+
+/* ------ END COPY ------- */
+
 
 /* ------ BCOP ------- */
 .jm-bcop-page section{
@@ -46,7 +121,7 @@
     padding: 0;
     display: block;
 }
-header ~ .container .jm-landing-page a:not(.btn-primary):not(.btn-outline-primary){
+header ~ .container .jm-bcop a:not(.btn-primary):not(.btn-outline-primary){
   	color:blue;
 }
 .jm-bcop-table tr td{
@@ -75,4 +150,68 @@ header ~ .container .jm-landing-page a:not(.btn-primary):not(.btn-outline-primar
 }
 /* ------ END BCOP ------- */
 
+
+
+@media screen and (min-width: 769px){
+/* ------- GENERAL ------- */
+.jm-mobile{
+	display: none;
+}
+.jm-desktop{
+	display: block;
+}
+/* ------- END GENERAL ------- */
+
+/* ------- COPY ------- */
+/* CTA */
+.jm-cta-button{
+    font-size: 0.83em;
+    border: solid 1px;
+    min-width: 203px;
+}
+/* END CTA */
+/* ------- END COPY ------- */
+
+}
+
+
+@media screen and (min-width: 1280px){
+
+/* ------- COPY ------- */
+/* CTA */
+.jm-cta-button{
+    font-size: 0.93em;
+    border: solid 2px;
+    min-width: 213px;
+}
+/* END CTA */
+
+
+}
 </style>
+
+
+
+
+
+<p><a href="$url('Home-Show')$" title="Century 21"><img alt="Century 21" class="footer-logo" src="Footer/c21-logo.svg?$staticlink$" /> </a></p>
+
+<h3>Stay connected</h3>
+
+<ul class="social-links">
+	<li>
+		<a class="icon-facebook" title="Go to Facebook" href="https://www.facebook.com/century21stores" target="_blank"></a>
+	</li>
+	<li>
+		<a class="icon-instagram" title="Go to Instagram" href="https://www.instagram.com/century21stores" target="_blank"></a>
+	</li>
+	<li>
+		<a class="icon-pinterest" title="Go to Pinterest" href="https://www.pinterest.com/century21stores" target="_blank"></a>
+	</li>
+	<li>
+		<a class="icon-twitter" title="Go to Twitter" href="https://twitter.com/century21stores" target="_blank"></a>
+	</li>
+	<li>
+	    <a class="icon-youtube-play" title="Go to YouTube" href="https://youtube.com/century21stores" target="_blank"></a>
+	</li>
+</ul>
