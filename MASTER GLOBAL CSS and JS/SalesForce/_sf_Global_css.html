@@ -28,6 +28,11 @@
 }
 /* ------- END GENERAL ------- */
 
+/* ------ OVERWRITE ------ */
+.content-asset-container{
+    padding: 0;
+    max-width: 100%;
+}
 
 /*  PRODUCT TILE CONTENT BLOCKS  */
 .carousel-product-tiles{
@@ -54,6 +59,9 @@
 }
 
 /*  END PRODUCT TILE CONTENT BLOCKS  */
+
+/* ------ END OVERWRITE ------ */
+
 /* ------ COPY ------- */
 
 /* CTA */
@@ -78,7 +86,7 @@ span.jm-cta-button-dark{
 .page div.container a.jm-cta-button-dark:hover,
 span.jm-cta-button-dark:hover{
     background: black;
-    color:white !important;
+    color:white;
     border-color: black;
 }
 .jm-cta-button-soliddark,
@@ -263,6 +271,40 @@ header ~ .container .jm-bcop a:not(.btn-primary):not(.btn-outline-primary){
 
 
 }
+
+
+@media screen and (max-width: 769px){
+/*  COPY  */
+.jm-content-block a{
+    min-width: 154px;
+    margin: 1% 0;
+    background: none !important;
+    color:black !important;
+    border-color: black !important;
+}
+div.jm-one-column-hero-multiple article a{
+	margin: 0;
+}
+.jm-content-block{
+	padding: 0;
+}
+.jm-content-block h3{
+	font-size: 4.3vw;
+    letter-spacing: 0.05em;
+}
+.jm-content-block h2{
+	font-size: 9.3vw;
+}
+.jm-one-column-hero .jm-content-block article{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: white;
+}
+
+/*  END COPY  */
+
+}
 </style>
 
 
@@ -299,7 +341,6 @@ window.onscroll = function() {on_Scroll_Hide()};
 function on_Scroll_Hide() {
 
 jm_list = document .getElementsByTagName("header")[0].childNodes[1].childNodes[1];
-console.log(jm_list);
 
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     jm_list.classList.add('jm_remove');
