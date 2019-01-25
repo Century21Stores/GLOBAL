@@ -2852,8 +2852,8 @@ else{
 // SHIPPING MESSAGE SHOPPING CART
 
 function shipping_Message(){
-    var jmprice = $('.cart-prices__group--subtotal > .cart-prices__value').html().replace("$", "");
-    //console.log(jmprice);
+    var jmprice = $('.cart-prices__group--subtotal > .cart-prices__value').html().replace("$", "").replace(",", "");
+    // console.log(jmprice);
     // if($('.checkout-step-summary div:nth-of-type(1) > h2').text() == "Shipping Options"){
         if(jmprice >= 500){
             $('#estimate_shipping_form').after(
