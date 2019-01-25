@@ -1,5 +1,8 @@
 <style>
 /* ------- GENERAL ------- */
+figure{
+	margin: 0;
+}
 .jm_remove{
     display: none !important;
 }
@@ -16,16 +19,49 @@
 	text-rendering: optimizeLegibility;
 }
 /* breadcrumnbs */
-.jm-landing-page h1{
+.jm-landing-page h1,
+.jm-clp-header h1,
+.jm-content-block-page h1{
     font-family: BauerBodoniBT, Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
     font-size: 1em;
     font-weight: bold;
-    margin: 0 0 3%
+    margin: 13rem 0 1rem;
 }
 /* Footer */
 .menu-footer li.jm-height-auto {
 	height: auto;
 }
+
+/* Shop by category */
+.jm-byCategory-wrap{
+    text-align: center;
+}
+#jm-byCategory{
+    margin: 5.3% 0 0;
+}
+#jm-byCategory h2{
+    font-family: 'Bodoni MT', Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+    border: solid 1px #7F8184;
+    text-align: center;
+    padding: 2% 8%;
+    margin: 0 auto;
+    background: white;
+    display: inline-block;
+}
+.jm-byCategory-wrap figure{
+    margin: 2% 0 4.3%;
+}
+/* end shop by category */
+
+/* shop by department */
+.shop-by-department{
+	text-align: center;
+}
+/* end shop by department */
+
 /* ------- END GENERAL ------- */
 
 /* ------ OVERWRITE ------ */
@@ -75,7 +111,10 @@
     border: solid 1px;
     min-width: 213px;
     cursor: pointer;
-    background: none;    
+    background: none;
+    position: relative;
+    z-index: 9;
+    margin: 3% 0 0;
 }
 .jm-cta-button-dark,
 .page div.container a.jm-cta-button-dark,
@@ -132,7 +171,7 @@ span.jm-cta-button-solidlight:hover{
 /* END CTA */
 
 
-/* CURALATE */
+/* curalate */
 .jm-curalate-wrapper .jm-cta-wrapper{
     text-align: center;
 }
@@ -167,7 +206,24 @@ span.jm-cta-button-solidlight:hover{
 #curalate-fan-reel-wrapper{
     margin: 3% 0;
 }
-/* END CURALATE */
+/* end curalate */
+
+/*   copy blocks   */
+.jm-copy-block p{
+    font-size: 0.83rem;
+    margin: 2% 0;
+}
+.jm-copy-block div h3{
+    text-align: center;
+    font-size: 0.84em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.jm-copy-block{
+	width: 94%;
+	margin: 0 auto;
+}
+/*   end copy blocks   */
 
 /* ------ END COPY ------- */
 
@@ -226,8 +282,41 @@ header ~ .container .jm-bcop a:not(.btn-primary):not(.btn-outline-primary){
 /* ------ END BCOP ------- */
 
 
+/*----- TWO COLUMN CONTENT BLOCK -----*/
+.jm-two-column{
+    overflow: auto;
+    text-align: center;
+    margin: 0 auto;
+}
+.jm-two-column > div{
+    position: relative;
+}
+.jm-two-column > div > a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.jm-two-column figure{
+    background-size: cover !important;
+    background-position: 50% 0 !important;
+    padding-top: calc((1321% / 1267) * 100) !important;
+}
+.jm-two-column article{
+    padding: 2rem 0;
+    font-size: 3vw;
+}
+.jm-two-column article h2,
+.jm-two-column article h3{
+	font-weight: normal;
+    line-height: 0.87;
+}
 
-@media screen and (min-width: 769px){
+/*----- END TWO COLUMN CONTENT BLOCK -----*/
+
+
+@media screen and (min-width: 700px){
 /* ------- GENERAL ------- */
 .jm-mobile{
 	display: none;
@@ -235,6 +324,17 @@ header ~ .container .jm-bcop a:not(.btn-primary):not(.btn-outline-primary){
 .jm-desktop{
 	display: block;
 }
+
+/* shop by category */
+#jm-byCategory h2{
+    padding: 1% 4%;
+}
+#jm-byCategory h2{
+    font-size: 22px;
+}
+/* end shop by category */
+
+
 /* ------- END GENERAL ------- */
 
 /* ------- COPY ------- */
@@ -253,12 +353,47 @@ header ~ .container .jm-bcop a:not(.btn-primary):not(.btn-outline-primary){
 }
 /* END CURALATE */
 
+/*   copy blocks   */
+.jm-copy-block{
+	width: 100%;	
+    max-width: 1500px;
+}
+.jm-copy-block div{
+    overflow: auto;
+}
+.jm-copy-block div h3{
+    width: 33%;
+    float: left;
+    text-align: center;
+    font-size: 0.84em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+/*   end copy blocks   */
+
+
 /* ------- END COPY ------- */
+
+/*----- TWO COLUMN CONTENT BLOCK -----*/
+
+.jm-two-column > div{
+	width: 49.5%;
+	float: left;
+}
+.jm-two-column .jm-left{
+	margin-right: 1%;
+}
+.jm-two-column article{
+    font-size: 0.8em;
+    padding: 2em 0;    
+}
+
+/*----- END TWO COLUMN CONTENT BLOCK -----*/
 
 }
 
 
-@media screen and (min-width: 1280px){
+@media screen and (min-width: 1200px){
 
 /* ------- COPY ------- */
 /* CTA */
@@ -269,6 +404,12 @@ header ~ .container .jm-bcop a:not(.btn-primary):not(.btn-outline-primary){
 }
 /* END CTA */
 
+/*----- TWO COLUMN CONTENT BLOCK -----*/
+.jm-two-column article{
+    font-size: 1em;
+    padding: 3em 0;    
+}
+/*----- END TWO COLUMN CONTENT BLOCK -----*/
 
 }
 

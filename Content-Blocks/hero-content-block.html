@@ -2,9 +2,9 @@
 
 <style>
 
-
+@media screen and (min-width: 769px){
+    
 /* GENERAL */
-
 .jm-content-block{
     position: absolute;
     top: 0;
@@ -117,9 +117,9 @@ article.jm-textalign-left{
     position: relative;
     text-align: left;
 }
-article.jm-textalign-left a:nth-of-type(odd){
+/*article.jm-textalign-left a:nth-of-type(odd){
     margin-left: 0;
-}
+}*/
 article.jm-textalign-center{
     position: relative;
     text-align: center;
@@ -149,7 +149,7 @@ article.jm-textalign-right a:last-of-type{
     color: #ffffff;
 }
 .jm-one-column-hero{
-    margin:1% 03rem;
+    margin:1% 0 3rem;
     position: relative;
 }
 .jm-one-column-hero-restrict-area{
@@ -161,36 +161,17 @@ article.jm-textalign-right a:last-of-type{
     padding: 0 0 55.5555555556%;
     margin: 0 auto; 
 }
-.jm-one-column-hero-Wxx{
-    background: url("/Transparencies/Mobile_3.png?$staticlink$");   
-    background-size: cover;
-    background-position: 50% 0;
-    padding-top: calc((1050% / 700) * 100);
-}
+
 .jm-one-column-hero-Wxx2 article{
     left: initial;
 }
-.btn:hover{
-    background: black;
-    color: white;
-}
-.one-column-hero .btn:hover{
-    color: black;    
-}
-/* END HERO CONTENT BLOCK */
 
-@media screen and (min-width: 769px){
+/* END HERO CONTENT BLOCK */
+  
+/*  HERO CONTENT BLOCK */
 .jm-one-column-hero{
     margin:1% 0;
-}    
-.jm-one-column-hero-Wxx{
-    background: url("/Transparencies/992_Hero.jpg?$staticlink$");
-    background-size: cover;
-    background-position: 50% 0;
-    padding-top: 0;
-}
-
-/*  HERO CONTENT BLOCK */
+}  
 
 /* Middle */
 .jm-one-column-hero-multiple .jm-content-block-middle-center,
@@ -216,6 +197,35 @@ article.jm-textalign-right a:last-of-type{
 
 }
 
+
+
+</style>
+
+
+<style>
+
+/* MOBILE */
+
+.jm-one-column-hero-Wxx{
+    background: url("/Transparencies/Mobile_3.png?$staticlink$");   
+    background-size: cover;
+    background-position: 50% 0;
+    padding-top: calc((1050% / 700) * 100);
+}
+
+
+/* TABLET */
+@media screen and (min-width: 769px){    
+.jm-one-column-hero-Wxx{
+    background: url("/Transparencies/992_Hero.jpg?$staticlink$");
+    background-size: cover;
+    background-position: 50% 0;
+    padding-top: 0;
+}
+
+}
+
+/* DESKTOP */
 @media screen and (min-width: 992px){
 .jm-one-column-hero-Wxx{
     background: url("/Transparencies/Hero_FullBleed.png?$staticlink$");
@@ -225,8 +235,8 @@ article.jm-textalign-right a:last-of-type{
 
 }
 
-</style>
 
+</style>
 
 
 <!-- REGULAR HERO -->
@@ -265,25 +275,3 @@ article.jm-textalign-right a:last-of-type{
         </div>
     </div>
 </div>
-
-
-
-
-
-<!-- MINIMIZED HEADER -->
-<!-- <script>
-window.onscroll = function() {on_Scroll_Hide()};
-
-function on_Scroll_Hide() {
-
-jm_list = document .getElementsByTagName("header")[0].childNodes[1].childNodes[1];
-console.log(jm_list);
-
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    jm_list.classList.add('jm_remove');
-  } else {
-    jm_list.classList.remove('jm_remove');
-  }
-}
-</script> -->
-<!-- END MINIMIZED HEADER -->
