@@ -2,41 +2,6 @@
 
 <style>
 
-/*----- THREE COLUMN CONTENT BLOCK -----*/
-.jm-three-column{
-    overflow: auto;
-    text-align: center;
-    margin: 0 auto;
-}
-.jm-three-column > div{
-    position: relative;
-}
-.jm-three-column > div > a{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-.jm-three-column figure{
-    background-size: cover !important;
-    background-position: 50% 0 !important;
-    padding-top: calc((754% / 700) * 100) !important;
-}
-.jm-three-column article{
-    padding: 2rem 0;
-    font-size: 3vw;
-}
-.jm-three-column article h2,
-.jm-three-column article h3{
-	font-weight: normal;
-    line-height: 0.87;
-}
-
-/*----- END THREE COLUMN CONTENT BLOCK -----*/
-
-
-
 /*  left image - all devices - 700x754 */
 .jm-three-column-WXXXX-msgX .jm-left figure{
     background: url("Test/three-columns-example-700x754.jpg?$staticlink$");
@@ -64,26 +29,7 @@
 }
 
 
-
-
 @media screen and (min-width: 700px){
-/*----- THREE COLUMN CONTENT BLOCK -----*/
-
-.jm-three-column > div{
-	width: 32.65%;
-	float: left;
-}
-.jm-three-column .jm-middle{
-	margin: 0 1%;
-}
-.jm-three-column article{
-    font-size: 0.55em;
-    padding: 2em 0;    
-}
-
-/*----- END THREE COLUMN CONTENT BLOCK -----*/
-
-
 
 /*  width of content block  */
 .jm-three-column{
@@ -101,18 +47,6 @@
 
 }
 
-@media screen and (min-width: 1050px){
-
-/*----- THREE COLUMN CONTENT BLOCK -----*/
-.jm-three-column article{
-    font-size: 1em;
-    padding: 3em 0;    
-}
-/*----- END THREE COLUMN CONTENT BLOCK -----*/
-
-
-
-}
 
 </style>
 
@@ -125,27 +59,33 @@
 	<a href="#1" aria-hidden="true"></a>	
 		<figure></figure>
 		<article>
+		<div>
 	        <h2 id="messageDescription_1">THREE COLUMNS 1</h2>
 	        <h3>Over <b>60% OFF</b></h3>
 	        <a href="#2" class="btn jm-cta-button jm-cta-button-soliddark">SHOP NOW</a>
+	    </div>    
 		</article>
 	</div>
 	<div class="jm-middle">
 	<a href="#2" aria-hidden="true"></a>	
 		<figure></figure>
 		<article>
-	        <h2 id="messageDescription_1">THREE COLUMNS 2</h2>
+		<div>
+	        <h2 id="messageDescription_1"> COLUMNS 2</h2>
 	        <h3>Over <b>60% OFF</b></h3>
 	        <a href="#2" class="btn jm-cta-button jm-cta-button-soliddark">SHOP NOW</a>			
+	    </div>    
 		</article>
 	</div>
 	<div class="jm-right">
 	<a href="#2" aria-hidden="true"></a>	
 		<figure></figure>
 		<article>
+		<div>	
 	        <h2 id="messageDescription_1">THREE COLUMNS 3</h2>
 	        <h3>Desktop Image <b>700x754</b></h3>
 	        <a href="#2" class="btn jm-cta-button jm-cta-button-soliddark">SHOP NOW</a>			
+	    </div>    
 		</article>
 	</div>
 

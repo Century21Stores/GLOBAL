@@ -10,23 +10,27 @@ figure{
 	display: none;
 }
 .jm-landing-page{
-    margin: 15% 0 3%;
+    margin: 14rem 0 3rem;
 }
 .jm-landing-page h2,
 .jm-landing-page h3,
 .jm-landing-page h4,
-.jm-landing-page p{
-	text-rendering: optimizeLegibility;
+.jm-landing-page p,
+.jm-clp-header h1,
+.jm-clp-header h2{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 /* breadcrumnbs */
 .jm-landing-page h1,
-.jm-clp-header h1,
 .jm-content-block-page h1{
     font-family: BauerBodoniBT, Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
     font-size: 1em;
     font-weight: bold;
     margin: 13rem 0 1rem;
 }
+
 /* Footer */
 .menu-footer li.jm-height-auto {
 	height: auto;
@@ -229,6 +233,11 @@ span.jm-cta-button-solidlight:hover{
 
 
 /* ------ BCOP ------- */
+.jm-bcop-page{
+    max-width: 1460px;
+    margin: 0 auto;
+    padding: 0 20px;	
+}
 .jm-bcop-page section{
 	margin: 0 0 4%;
 }
@@ -282,16 +291,21 @@ header ~ .container .jm-bcop a:not(.btn-primary):not(.btn-outline-primary){
 /* ------ END BCOP ------- */
 
 
-/*----- TWO COLUMN CONTENT BLOCK -----*/
-.jm-two-column{
+
+
+/*----- TWO & THREE COLUMN CONTENT BLOCK -----*/
+.jm-two-column,
+.jm-three-column{
     overflow: auto;
     text-align: center;
     margin: 0 auto;
 }
-.jm-two-column > div{
+.jm-two-column > div,
+.jm-three-column > div{
     position: relative;
 }
-.jm-two-column > div > a{
+.jm-two-column > div > a,
+.jm-three-column > div > a{
     position: absolute;
     top: 0;
     left: 0;
@@ -303,17 +317,25 @@ header ~ .container .jm-bcop a:not(.btn-primary):not(.btn-outline-primary){
     background-position: 50% 0 !important;
     padding-top: calc((1321% / 1267) * 100) !important;
 }
-.jm-two-column article{
+.jm-three-column figure{
+    background-size: cover !important;
+    background-position: 50% 0 !important;
+    padding-top: calc((754% / 700) * 100) !important;
+}
+.jm-two-column article,
+.jm-three-column article{
     padding: 2rem 0;
     font-size: 3vw;
 }
 .jm-two-column article h2,
-.jm-two-column article h3{
+.jm-two-column article h3,
+.jm-three-column article h2,
+.jm-three-column article h3{
 	font-weight: normal;
     line-height: 0.87;
 }
 
-/*----- END TWO COLUMN CONTENT BLOCK -----*/
+/*----- END TWO & THREE COLUMN CONTENT BLOCK -----*/
 
 
 @media screen and (min-width: 700px){
@@ -374,21 +396,29 @@ header ~ .container .jm-bcop a:not(.btn-primary):not(.btn-outline-primary){
 
 /* ------- END COPY ------- */
 
-/*----- TWO COLUMN CONTENT BLOCK -----*/
+/*----- TWO & THREE COLUMN CONTENT BLOCK -----*/
 
 .jm-two-column > div{
 	width: 49.5%;
 	float: left;
 }
+.jm-three-column > div{
+	width: 32.65%;
+	float: left;
+}
 .jm-two-column .jm-left{
 	margin-right: 1%;
 }
-.jm-two-column article{
+.jm-three-column .jm-middle{
+	margin: 0 1%;
+}
+.jm-two-column article,
+.jm-three-column article{
     font-size: 0.55em;
     padding: 2em 0;    
 }
 
-/*----- END TWO COLUMN CONTENT BLOCK -----*/
+/*----- END TWO & THREE COLUMN CONTENT BLOCK -----*/
 
 }
 
@@ -404,12 +434,13 @@ header ~ .container .jm-bcop a:not(.btn-primary):not(.btn-outline-primary){
 }
 /* END CTA */
 
-/*----- TWO COLUMN CONTENT BLOCK -----*/
-.jm-two-column article{
+/*----- TWO & THREE COLUMN CONTENT BLOCK -----*/
+.jm-two-column article,
+.jm-three-column article{
     font-size: 1em;
-    padding: 3em 0;    
+    padding: 3em 1em;
 }
-/*----- END TWO COLUMN CONTENT BLOCK -----*/
+/*----- END TWO & THREE COLUMN CONTENT BLOCK -----*/
 
 }
 
