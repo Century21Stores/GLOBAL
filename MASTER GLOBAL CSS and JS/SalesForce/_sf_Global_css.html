@@ -229,6 +229,9 @@ span.jm-cta-button-solidlight:hover{
 }
 /*   end copy blocks   */
 
+.jm-copy-block a{
+	color: blue;
+}
 /* ------ END COPY ------- */
 
 
@@ -335,7 +338,18 @@ header ~ .container .jm-bcop a:not(.btn-primary):not(.btn-outline-primary){
     line-height: 0.87;
 }
 
-/*----- END TWO & THREE COLUMN CONTENT BLOCK -----*/
+/* ----- END TWO & THREE COLUMN CONTENT BLOCK -----*/
+
+/* ----- GENERAL REG HERO CONTENT BLOCK ----- */
+.jm-one-column-hero a.jm-clickable-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;    
+}
+/* ----- END GENERAL REG HERO CONTENT BLOCK ----- */
 
 
 @media screen and (min-width: 700px){
@@ -420,6 +434,186 @@ header ~ .container .jm-bcop a:not(.btn-primary):not(.btn-outline-primary){
 
 /*----- END TWO & THREE COLUMN CONTENT BLOCK -----*/
 
+
+/* ------ GENERAL REG HERO ------ */
+.jm-one-column-hero .jm-content-block{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size:0;
+}
+.jm-one-column-hero article{
+    position: absolute;
+    color: #000000;
+    text-align: center;
+}
+
+/* Middle*/
+.jm-content-block-middle-center,
+.jm-content-block-top-center,
+.jm-content-block-bottom-center{
+    width: 45%;
+    margin: 0 auto;    
+}
+.jm-one-column-hero-multiple .jm-content-block-middle-center,
+.jm-one-column-hero-multiple  .jm-content-block-top-center,
+.jm-one-column-hero-multiple  .jm-content-block-bottom-center{
+    width: 100%;
+}
+.jm-content-block-top-center{
+    padding-top: 5%;
+}
+.jm-content-block-bottom-center{
+    padding-bottom: 5%;
+    top: inherit;
+}
+.jm-content-block-middle-center article,
+.jm-content-block-middle-left article,
+.jm-content-block-middle-right article{
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    width: 100%;    
+}
+/* End Middle */
+
+
+/* Left */
+.jm-content-block-top-left{
+    padding: 5% 0 0 5%;
+}
+.jm-content-block-bottom-left{
+    padding: 0 0 5% 5%;
+    top: inherit;
+}
+.jm-content-block-middle-left{
+    padding: 0 0 0 5%;
+}
+/* End Left */
+
+/* Right */
+.jm-content-block-top-right{
+    padding: 5% 5% 0 0;
+}
+.jm-content-block-bottom-right{
+    padding: 0 5% 5% 0;
+    top: inherit;
+}
+.jm-content-block-middle-right{
+    padding: 0 5% 0 0;
+}
+/* End Right */
+
+
+/* Top Center */
+
+
+/* End Top Center */
+
+.jm-content-block-middle-center:before,
+.jm-content-block-middle-left:before,
+.jm-content-block-middle-right:before{
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+    content: '';
+}
+/* END GENERAL HERO */
+
+/* CTA */
+.jm-one-column-hero article a{
+    margin: 0.6em 0.3em 0;
+    z-index: 3;
+    position: relative;
+}
+.jm-one-column-hero-multiple .jm-content-block-middle-center article a,
+.jm-one-column-hero-multiple  .jm-content-block-top-center article a,
+.jm-one-column-hero-multiple  .jm-content-block-bottom-center article a{
+    margin: 0 0.3em 0.8em;
+}
+.jm-one-column-hero-multiple .jm-content-block-middle-center article a:first-of-type,
+.jm-one-column-hero-multiple  .jm-content-block-top-center article a:first-of-type,
+.jm-one-column-hero-multiple  .jm-content-block-bottom-center article a:first-of-type{
+    margin-left: 0
+}
+.jm-one-column-hero-multiple .jm-content-block-middle-center article a:last-of-type,
+.jm-one-column-hero-multiple  .jm-content-block-top-center article a:last-of-type,
+.jm-one-column-hero-multiple  .jm-content-block-bottom-center article a:last-of-type{
+    margin-right: 0
+}
+article.jm-textalign-left{
+    position: relative;
+    text-align: left;
+}
+/*article.jm-textalign-left a:nth-of-type(odd){
+    margin-left: 0;
+}*/
+article.jm-textalign-center{
+    position: relative;
+    text-align: center;
+}
+article.jm-textalign-right{
+    position: relative;
+    text-align: right;
+}
+article.jm-textalign-right a:nth-of-type(even),
+article.jm-textalign-right a:last-of-type{
+    margin-right: 0;
+}
+/* END CTA */
+
+
+.jm-content-block-light h3,
+.jm-content-block-light h2{
+    color: #ffffff;
+}
+.jm-one-column-hero{
+    margin:1% 0 3rem;
+    position: relative;
+}
+.jm-one-column-hero-restrict-area{
+    position: relative;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+.jm-one-column-hero-image{
+    padding: 0 0 55.5555555556%;
+    margin: 0 auto; 
+}
+
+  
+/* END MULTIPLE HERO CONTENT BLOCK REG HERO CONTENT BLOCK */
+.jm-one-column-hero{
+    margin:1% 0;
+}  
+
+/* Middle */
+.jm-one-column-hero-multiple .jm-content-block-middle-center,
+.jm-one-column-hero-multiple  .jm-content-block-top-center,
+.jm-one-column-hero-multiple  .jm-content-block-bottom-center{
+    width: 90%;
+}
+
+/* Left */
+.jm-content-block-middle-left,
+.jm-content-block-top-left,
+.jm-content-block-bottom-left{
+    width: 50%;
+}
+/* Right */
+.jm-content-block-middle-right,
+.jm-content-block-top-right,
+.jm-content-block-bottom-right{
+    width: 50%;
+    margin: 0 0 0 auto;
+}
+/* END MULTIPLE REG HERO CONTENT BLOCK */
+
+/* ------- END REG HERO CONTENT BLOCK ------- */
+
 }
 
 
@@ -455,7 +649,7 @@ header ~ .container .jm-bcop a:not(.btn-primary):not(.btn-outline-primary){
     border-color: black !important;
 }
 div.jm-one-column-hero-multiple article a{
-	margin: 0;
+	margin: 0 0 2%;
 }
 .jm-content-block{
 	padding: 0;
@@ -463,6 +657,7 @@ div.jm-one-column-hero-multiple article a{
 .jm-content-block h3{
 	font-size: 4.3vw;
     letter-spacing: 0.05em;
+    margin: 0.3rem 0 1.3rem;
 }
 .jm-content-block h2{
 	font-size: 9.3vw;
@@ -475,7 +670,9 @@ div.jm-one-column-hero-multiple article a{
 }*/
 .jm-content-block article{
 	text-align: center;
+	padding: 5% 0 16%;
 }
+
 /*  END COPY  */
 
 }
