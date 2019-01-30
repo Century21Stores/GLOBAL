@@ -1,4 +1,4 @@
-// JS PROD MASTER - W52C clearance BGA -&- PLCC back to 15% -&- Helpful promo  message -&- Duplicate Images - JMRV- 01.17.19
+// JS PROD MASTER - W01 shipping message off -&- PLCC back to 15% -&- Helpful promo  message -&- Duplicate Images - JMRV- 01.30.19
 // PAST: W43E PLCC 20% - JMRV- 11.27.18
 // jrios@c21stores.com
 
@@ -24,7 +24,7 @@ document.addEventListener( "DOMContentLoaded", show_banner_when_not_blank, false
 document.addEventListener( "DOMContentLoaded", seoCopyLineFooter, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom, false );
 document.addEventListener( "DOMContentLoaded", promo_Code_custom_productLevel, false );
-document.addEventListener( "DOMContentLoaded", Hover_message_Button, false );
+// document.addEventListener( "DOMContentLoaded", Hover_message_Button, false );
 //document.addEventListener( "DOMContentLoaded", live_chat_message, false );
 
 
