@@ -17,7 +17,9 @@ figure{
 .jm-landing-page h4,
 .jm-landing-page p,
 .jm-clp-header h1,
-.jm-clp-header h2{
+.jm-clp-header h2,
+.jm-content-block h2,
+.jm-content-block h3{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -163,14 +165,14 @@ span.jm-cta-button-light:hover{
 span.jm-cta-button-solidlight{
 	color: black;
 	background: white;
-	border-color: white;
+	border-color: white !important;
 }
 .jm-cta-button-solidlight:hover,
 .page div.container a.jm-cta-button-solidlight:hover,
 span.jm-cta-button-solidlight:hover{
-    background: none;
+    background: black;
     color:white !important;
-    border-color: white;
+    border-color: black !important;
 }
 /* END CTA */
 
@@ -328,7 +330,7 @@ header ~ .container .jm-bcop a:not(.btn-primary):not(.btn-outline-primary){
 .jm-two-column article,
 .jm-three-column article{
     padding: 2rem 0;
-    font-size: 3vw;
+    /*font-size: 3vw;*/
 }
 .jm-two-column article h2,
 .jm-two-column article h3,
@@ -336,12 +338,14 @@ header ~ .container .jm-bcop a:not(.btn-primary):not(.btn-outline-primary){
 .jm-three-column article h3{
 	font-weight: normal;
     line-height: 0.87;
+    letter-spacing: 0.05em;
 }
 
 /* ----- END TWO & THREE COLUMN CONTENT BLOCK -----*/
 
 /* ----- GENERAL REG HERO CONTENT BLOCK ----- */
-.jm-one-column-hero a.jm-clickable-image{
+.jm-one-column-hero a.jm-clickable-image,
+.jm-hero-content-block-all a.jm-clickable-image{
     position: absolute;
     top: 0;
     left: 0;
@@ -428,7 +432,7 @@ header ~ .container .jm-bcop a:not(.btn-primary):not(.btn-outline-primary){
 }
 .jm-two-column article,
 .jm-three-column article{
-    font-size: 0.55em;
+    /*font-size: 0.55em;*/
     padding: 2em 0;    
 }
 
@@ -631,7 +635,7 @@ article.jm-textalign-right a:last-of-type{
 /*----- TWO & THREE COLUMN CONTENT BLOCK -----*/
 .jm-two-column article,
 .jm-three-column article{
-    font-size: 1em;
+/*    font-size: 1em;*/
     padding: 3em 1em;
 }
 /*----- END TWO & THREE COLUMN CONTENT BLOCK -----*/
@@ -641,7 +645,12 @@ article.jm-textalign-right a:last-of-type{
 
 @media screen and (max-width: 700px){
 /*  COPY  */
-.jm-content-block a{
+.jm-hero-content-block-all article a,
+/*.jm-content-block a,*/
+.jm-product-large-container a,
+.jm-product-large-container a:hover,
+.jm-hero-content-block-all article a:hover{
+/*.jm-content-block a:hover*/
     min-width: 154px;
     margin: 1% 0;
     background: none !important;
@@ -654,13 +663,21 @@ div.jm-one-column-hero-multiple article a{
 .jm-content-block{
 	padding: 0;
 }
-.jm-content-block h3{
+.jm-content-block h3,
+.jm-hero-content-block-all article h3,
+.jm-product-large-container article h3,
+section.jm-two-column article h3{
 	font-size: 4.3vw;
     letter-spacing: 0.05em;
     margin: 0.3rem 0 1.3rem;
+    color:black !important;
 }
-.jm-content-block h2{
+.jm-content-block h2,
+.jm-hero-content-block-all article h2,
+.jm-product-large-container article h2,
+section.jm-two-column article h2{
 	font-size: 9.3vw;
+    color:black !important;
 }
 /*.jm-one-column-hero .jm-content-block article{
     position: absolute;
@@ -668,7 +685,9 @@ div.jm-one-column-hero-multiple article a{
     width: 100%;
     background: white;
 }*/
-.jm-content-block article{
+.jm-content-block article,
+.jm-hero-content-block-all article,
+.jm-product-large-container article{
 	text-align: center;
 	padding: 5% 0 16%;
 }
