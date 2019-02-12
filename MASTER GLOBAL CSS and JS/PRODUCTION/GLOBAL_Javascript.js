@@ -1,4 +1,4 @@
-// JS PROD MASTER - W02A clearance 85% back -&- PLCC back to 15% -&- Helpful promo  message -&- Duplicate Images - JMRV- 01.30.19
+// JS PROD MASTER - W02A PLCC 20% -&- Helpful promo  message -&- Duplicate Images - JMRV- 01.30.19
 // PAST: W43E PLCC 20% - JMRV- 11.27.18
 // jrios@c21stores.com
 
@@ -1760,14 +1760,14 @@ function acquisitionGA() {
     //POSITION
     var pos = 46;
     //IMAGE URL 370x552
-    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTAvMDYvMTYvMDAvNDQvMTUyLzA5V2VlazRfUExDQ19HcmlkX0lNRy5qcGciXV0/09Week4_PLCC_Grid_IMG.jpg?sha=db1dd8d42c58d407";
-    //var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTEvMjcvMTIvMjAvMjkvMjA0LzAxXzExV2VlazRfQkcuanBnIl1d/01_11Week4_BG.jpg?sha=822fe46318f7fcfc";
+    //var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTAvMDYvMTYvMDAvNDQvMTUyLzA5V2VlazRfUExDQ19HcmlkX0lNRy5qcGciXV0/09Week4_PLCC_Grid_IMG.jpg?sha=db1dd8d42c58d407";
+    var urlIMG = "https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTkvMDIvMTIvMTUvMDMvMTcvNzgxLzAxXzAyV2VlazJfQkdBX1BMQ0MuanBnIl1d/01_02Week2_BGA_PLCC.jpg?sha=5cfe8f717cffba45";
     //LINK TEXT
     var textLink = "APPLY NOW";
     // var textLink = "LEARN MORE";
     //LINK URL
     //var urlLINK = "https://www.c21stores.com/instant_credit/apply?bga=acquisition_plcc20_w43E&gal=pos45";
-    var urlLINK = "https://www.c21stores.com/instant_credit?bga=acquisition_xtra20_plcc_w30D&gal=pos45";
+    var urlLINK = "https://www.c21stores.com/instant_credit?bga=acquisition_xtra20_plcc_w02D&gal=pos45";
 
 
     // WHEN FINISH RESIZING WINDOWS MATCH HEIGHT
@@ -1791,7 +1791,7 @@ function acquisitionGA() {
         '<div class="content-block-content content-block-content--center content-block-content--bottom">'+
         '<div class="content-block-content__container content-block-content__container--center">'+
         '<div class="content-block-content__message content-block-content__message--dark">'+
-        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
+        '<p class="content-block-content__action content-block-content__action--button"><a class="button button--alt-inverse button--wide" href="'+ urlLINK + '">' + textLink + '</a></p>' +
         '</div>'+
         '</div>'+
         '</div>'+
