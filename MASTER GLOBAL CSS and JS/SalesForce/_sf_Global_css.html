@@ -13,7 +13,7 @@ figure{
     display: none;
 }
 .jm-landing-page{
-    margin: 14rem 0 3rem;
+    margin: 12rem 0 3rem;
 }
 .jm-landing-page h2,
 .jm-landing-page h3,
@@ -33,7 +33,7 @@ figure{
     font-family: BauerBodoniBT, Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
     font-size: 1em;
     font-weight: bold;
-    margin: 13rem 0 1rem;
+    margin: 0 0 1rem;
 }
 
 /* Footer */
@@ -222,7 +222,7 @@ span.jm-cta-button-solidlight:hover{
     font-size: 0.83rem;
     margin: 2% 0;
 }
-.jm-copy-block div h3{
+.jm-copy-block div .jm-header-3{
     text-align: center;
     font-size: 0.84em;
     font-weight: bold;
@@ -341,7 +341,7 @@ header ~ .container .jm-bcop a:not(.btn-primary):not(.btn-outline-primary){
 .jm-two-column article h3,
 .jm-three-column article h2,
 .jm-three-column article h3{
-    font-weight: normal;
+    font-weight: bold;
     line-height: 0.87;
     letter-spacing: 0.05em;
 }
@@ -359,6 +359,33 @@ header ~ .container .jm-bcop a:not(.btn-primary):not(.btn-outline-primary){
     z-index: 2;    
 }
 /* ----- END GENERAL REG HERO CONTENT BLOCK ----- */
+
+
+/* ----- SIZE CHARTS ----- */
+.jm-pdp-size-chart > div{
+    margin: 0 0 5%; 
+}
+.jm-abrakadabra-lightbox{
+    display: block !important;
+}
+aside.jm-pdp-size-chart table thead tr{
+    background: black;
+    color: white;
+}
+aside.jm-pdp-size-chart table tbody tr:nth-child(even) {
+    background:#d6d6d6;;
+}
+aside.jm-pdp-size-chart table tbody tr:nth-child(odd) {
+    background:#e8e8e8;
+}
+aside.jm-pdp-size-chart table th,
+aside.jm-pdp-size-chart table td{
+    padding: 1vw 2vw;
+    text-align: center;
+    border: solid 1px white;
+    white-space: nowrap;
+}
+/* ----- END SIZE CHARTS ----- */
 
 
 @media screen and (min-width: 700px){
@@ -406,7 +433,7 @@ header ~ .container .jm-bcop a:not(.btn-primary):not(.btn-outline-primary){
 .jm-copy-block div{
     overflow: auto;
 }
-.jm-copy-block div h3{
+.jm-copy-block div .jm-header-3{
     width: 33%;
     float: left;
     text-align: center;
@@ -647,6 +674,16 @@ article.jm-textalign-right a:last-of-type{
 
 }
 
+@media screen and (min-width: 1600px){
+/* ----- SIZE CHARTS ----- */   
+aside.jm-pdp-size-chart table th,
+aside.jm-pdp-size-chart table td{
+    padding: 1% 3em;
+}
+/* ----- END SIZE CHARTS ----- */
+}
+
+
 
 @media screen and (max-width: 700px){
 /*  COPY  */
@@ -698,6 +735,15 @@ section.jm-two-column article h2{
 }
 
 /*  END COPY  */
+
+/* ----- SIZE CHARTS ----- */
+aside.jm-pdp-size-chart table th,
+aside.jm-pdp-size-chart table td{
+    padding: 1vw 1vw;
+    font-size: 2.3vw;
+}
+/* ----- END SIZE CHARTS ----- */
+
 
 }
 </style>
