@@ -1,4 +1,4 @@
-/* PROD CSS -  W51D shipping removed- 01.17.19 JMRV */
+/* PROD CSS -  W2D shipping back on - 02.13.19 JMRV */
 /* PAST: Global Split Banner ON W39A  -&- Trademark -&- GWP fix mobile aligmnet -&- Shipping options update W32D - 09.27.18 JMRV */
 
 /* CSS MASTER STYLE JMRV  */
@@ -14,13 +14,13 @@
 
 /* ..................... OVERWRITES .....................*/
 /* SHIPPING */
-#shipping_method_id{
+/*#shipping_method_id{
   pointer-events: none
 }
 #shipping_method_id option:nth-of-type(2)
 #shipping_method_id option:nth-of-type(3){
 display:none !important;
-}
+}*/
 /* END SHIPPING */
 
 primary-nav__nav-menu > .primary-nav__menu-item .Gifts, .Gifts{
