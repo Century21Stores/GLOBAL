@@ -41,11 +41,11 @@ else if (window.location.href.indexOf("/users/account/edit") > -1){
 };
 
 // FIREING FUNCTIONS ON QUICK VIEW
-$(document).on( 'click', '.product-summary__quickview a', function(){
-    setTimeout(function() {   //calls click event after a certain time
-        Hover_message_Button();
-    }, 1000);
-});
+// $(document).on( 'click', '.product-summary__quickview a', function(){
+//     setTimeout(function() {   //calls click event after a certain time
+//         Hover_message_Button();
+//     }, 1000);
+// });
 
 var PROP65_POPUP = Object.freeze({
   "ceramic": '<img src="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMDIvMDUvMTUvMDQvNDMvNjAzL1BPUFVQNjVfY2VyYW1pYy5qcGciXV0/POPUP65_ceramic.jpg?sha=2b607f152ba38a35">',
@@ -669,26 +669,26 @@ $(window).load(function() {
 
     if(jm_cat === "Tech"){
         //allSiteGA28();
-        allSiteGA14();
+        //allSiteGA14();
         if(!urlEtech){
 //          WishiWankaGA();
         }
     }
     else if(jm_cat === "New + Now"){
             //allSiteGA28();
-            allSiteGA14();
+            //allSiteGA14();
     }
     else if(jm_cat === "Beauty"){        
         if(!urlEbeauty){            
             beautyGA30();
-            allSiteGA14();
+            //allSiteGA14();
         }
         else{            
             beautyGA14();
         }
     }
     else if(jm_cat === "Shoes"){            
-            allSiteGA14();
+            //allSiteGA14();
          if(!urlEshoes){
            //allSiteGA28();
          }
@@ -699,7 +699,7 @@ $(window).load(function() {
     }
     else if(jm_cat === "Handbags &amp; Accessories"){
             //allSiteGA28();
-            allSiteGA14();
+            //allSiteGA14();
     //     if(!urlEhandbags){
     
       //   }
@@ -709,11 +709,11 @@ $(window).load(function() {
     }
     else if(jm_cat === "Kids"){
             //allSiteGA28();
-            allSiteGA14();
+            //allSiteGA14();
         // if(!urlEkids2){
         //     kidsGA30();
         // }
-        //allSiteGA14();
+        ////allSiteGA14();
         if(!urlEkids){
             //kidsGA30();
         }
@@ -725,7 +725,7 @@ $(window).load(function() {
     }
     else if((jm_cat === "Women") || (urlEwomensHidden)){
             //allSiteGA28();
-            allSiteGA14();
+            //allSiteGA14();
          //if(!urlEmwomens){
              //womenGA30();
          //}
@@ -745,7 +745,7 @@ $(window).load(function() {
     }
     else if((jm_cat === "Men") || (urlEmensHidden)){
             //allSiteGA28();
-            allSiteGA14();
+            //allSiteGA14();
         if(!urlEmens2){
              menGA30();
         }
@@ -764,7 +764,7 @@ $(window).load(function() {
     else if(jm_cat === "Home"){
             //allSiteGA28();
             homeGA30();
-            allSiteGA14();
+            //allSiteGA14();
          //if(!urlEhome){
                 //homeGA14();
             //if(!urlEhome2){
