@@ -127,6 +127,15 @@ footer .rewards{
 /* ------ END OVERWRITE ------ */
 
 /* ------ COPY ------- */
+.jm-clp-header h1{
+    font-weight: bold;
+}
+article h2.jm-header-2,
+article p.jm-header-3,
+.jm-clp-header h1{
+    font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;    
+    letter-spacing: 0.05em;
+}
 
 /* CTA */
 .jm-cta-button{
@@ -203,11 +212,11 @@ span.jm-cta-button-solidlight:hover{
 .jm-curalate-wrapper .jm-cta-wrapper{
     text-align: center;
 }
-.jm-curalate-wrapper h2{
+.jm-curalate-wrapper h2.jm-header-2{
     text-align: center;
-    font-family: BauerBodoniBT, Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
-    font-size: 4.1em;
-    font-weight: normal;
+    font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-size: 3em;
+    font-weight: bold;
     letter-spacing: 0.05em;
     margin: 2% 0 0;
     line-height: 1;
@@ -246,6 +255,9 @@ span.jm-cta-button-solidlight:hover{
     font-size: 0.84em;
     font-weight: bold;
     letter-spacing: 0.05em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility    
 }
 .jm-copy-block{
     width: 94%;
@@ -255,6 +267,20 @@ span.jm-cta-button-solidlight:hover{
 
 .jm-copy-block a{
     color: blue;
+}
+.jm-clp-header h1{
+   font-weight: bold;
+   font-size: 2.6rem;
+   margin: 0 0 2%;
+   padding: 0;
+}
+.jm-clp-header p.jm-header-4{
+   font-size: 1.3em;
+   letter-spacing: 0.05em;
+   margin: 0;
+   font-weight: normal;
+   letter-spacing: 0.05em;
+   text-transform: none;
 }
 /* ------ END COPY ------- */
 
@@ -455,7 +481,7 @@ aside.jm-pdp-size-chart table td{
 
 /* CURALATE */
 .jm-curalate-wrapper{
-    margin: 5% 0 9%;
+    margin: 9% 0;
     font-size: 1em;
 }
 /* END CURALATE */
@@ -463,7 +489,7 @@ aside.jm-pdp-size-chart table td{
 /*   copy blocks   */
 .jm-copy-block{
     width: 100%;    
-    max-width: 1500px;
+    max-width: 1330px;
 }
 .jm-copy-block div{
     overflow: auto;
@@ -685,6 +711,13 @@ article.jm-textalign-right a:last-of-type{
 
 /* ------- END REG HERO CONTENT BLOCK ------- */
 
+/* ------- FLEX HERO 3 CONTENT BLOCK ------- */
+.jm-one-column-hero-3{
+    position: relative;
+    margin-bottom: 1%;
+}
+/* ------- END FLEX HERO 3 CONTENT BLOCK ------- */
+
 /* ----- LARGE PLUS ONE CONTENT BLOCK ----- */
 .jm-large-plus-one{
     overflow: auto;
@@ -827,12 +860,18 @@ section.jm-two-column article h2{
     padding: 5% 0 16%;
 }
 .jm-content-block-all article h2.jm-header-2{
-    font-size: 7.3vw;    
+    font-size: 8.3vw;    
     color: black !important;
 }
 .jm-content-block-all article p.jm-header-3{
-    font-size: 3.5vw;    
+    font-size: 4.5vw;    
     color: black !important;
+}
+.jm-copy-block > p{
+    margin: 6% 0 7%;    
+}
+.jm-clp-header p.jm-header-4{
+    font-size: 0.8rem;
 }
 /*  END COPY  */
 
