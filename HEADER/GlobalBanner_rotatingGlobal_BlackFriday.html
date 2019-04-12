@@ -340,7 +340,7 @@ $("#jm-details, .jm-promopage h3, .jmrv-close-mobile, .jm-promopage p").click(fu
     $(".jm-promopage p").slideToggle();
 });
 function showGlobalBanner(){
-	$('.branded-card-header').after(
+	$('.header-banner .html-slot-container').prepend(
 
 		'<div class="jmrv-mobile jmrv-mobile-globalBanner">'+
 			'<div class="jm-promopage">'+
@@ -368,20 +368,6 @@ function showGlobalBanner(){
 				'<div>'+
 					'<h3><b class="jm-xxoff">$40 OFF</b> YOUR $200+ PURCHASE<span class="jm-asterisk jm-asterisk">*</span></h3>'+
 				'</div>'+
-//
-// 				'<div>'+
- //					'<h3><b>4</b> POINTS/$1</h3>'+
- //					'<h3 class="jm-subheader">PREMIER CARDHOLDERS</h3>'+
- //				'</div>'+
-				// '<div>'+
-				// 	'<h3><b class="jm-xxoff">$50 OFF</b></h3>'+
-				// 	'<h3 class="jm-subheader">YOUR $250+ PURCHASE<span class="jm-asterisk jm-asterisk">*</span></h3>'+
-				// '</div>'+
-
-				// '<div>'+
-				// 	'<h3><b class="jm-xxoff">$100 OFF</b></h3>'+
-				// 	'<h3 class="jm-subheader">YOUR $500+ PURCHASE<span class="jm-asterisk jm-asterisk">*</span></h3>'+
-				// '</div>'+
 			'</section>'+
 			'<h3 class="jm-free-shipping"><b>+ FREE SHIPPING</b></h3>'+
 			'<div id="jm-details"><img alt="info and exclisions" src="https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTYvMTEvMTQvMTIvNDgvMzcvNDQxL2Fycm93LnBuZyJdXQ/arrow.png?sha=faf8101d40a0af30"/></div>'+
@@ -410,9 +396,9 @@ function global_rotating_message(){
  		function rotatingMessage(e) {
 
 				var msg = rotatingMessages.shift();
-        rotatingMessages.push(msg);
+                rotatingMessages.push(msg);
 
-        $(".jmrv-desktop-global-banner section").html(msg);
+                $(".jmrv-desktop-global-banner section").html(msg);
 
 				$('.jm-shipping-plcc-acquisition a').hover(function(e){
 					//$('a.Shoes').css('background','red');
