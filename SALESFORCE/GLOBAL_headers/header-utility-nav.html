@@ -1,4 +1,4 @@
-<!-- UTIITY NAV - Master CSS - JuanMa - 04.17.19 -->
+<!-- UTIITY NAV - Master CSS - JuanMa - 04.23.19 -->
 
 <style>
 /* ------- GENERAL ------- */
@@ -251,6 +251,11 @@ span.jm-cta-button-solidlight:hover{
 header ~ .container .jm-landing-page a.jm-text-cta-light:not(.btn-primary):not(.btn-outline-primary){
     color: white;
     border-bottom: solid 1px;
+}
+.jm-text-cta:hover{
+    text-decoration: none;
+    border-bottom: solid 2px;
+    font-weight: bold;
 }
 .jm-text-cta-light:hover{
     color: white;
@@ -810,6 +815,7 @@ article.jm-textalign-right a:last-of-type{
 a.jm-text-cta,
 a.jm-text-cta-light{
     font-size: 1.3em;
+    letter-spacing: 0.05em;
     border-bottom: solid 1px;
     z-index: 3;
     position: relative;
@@ -877,6 +883,25 @@ a.jm-text-cta-light{
 a.jm-text-cta-light{
     color: white;    
 }
+/* MEGA MENUS */
+.jm-megamenu{
+    text-align: center;
+    overflow: auto;
+    font-size: 1vw;
+    letter-spacing: 0.05em;
+}
+.jm-megamenu div{
+    width: 50%;
+    float: left;
+}
+.jm-megamenu .jm-mm-l img{
+    width: 96.3%;    
+}
+.jm-megamenu .jm-mm-s img{
+    width: 95%;    
+}
+
+/* END MEGA MENUS */
 
 }
 
@@ -892,6 +917,20 @@ a.jm-text-cta-light{
 .store-locator-bottom{
     max-width: 100%;
 }
+
+/*  FLYOUT NAVIGATION  */
+.menu-area > li > a{
+    border-bottom: solid 1px #dedede;
+    font-weight: bold;
+    width: 90% !important;
+}
+.dropdown-menu > div > ul.menu-area > li {
+    padding: 0 0 2em;
+}
+.menu-area > li > ul li{
+    padding: 0.4em 0 !important;    
+}
+/*  END FLYOUT NAVIGATION  */
 
 }
 
@@ -927,6 +966,15 @@ aside.jm-pdp-size-chart table td{
 .jm-content-block-all article{
     font-size: 1em;
 }
+
+}
+
+@media screen and (min-width: 1440px){
+/* MEGA MENUS */
+.jm-megamenu{
+    font-size: 0.853em;
+}
+/* END MEGA MENUS */
 
 }
 
