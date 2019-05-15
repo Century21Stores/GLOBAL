@@ -1,4 +1,4 @@
-<!-- w10-gb-authenticated-premier-loyal-contest - CONTEST - ROTATING - JuanMa - 06.01.19 -->
+<!-- w10-gb-premier-contest - CONTEST - ROTATING - JuanMa - 05.15.19 -->
 
 <style>
  /* OVERWRITE */
@@ -292,7 +292,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function showGlobalBanner(){
-    $('.header-banner .html-slot-container').prepend(
+    $('.header-banner .content').prepend(
 
 
         '<div class="jm-mobile jm-mobile-globalBanner">'+
@@ -314,7 +314,7 @@ function showGlobalBanner(){
                '<div class="jm-left">'+
                     '<a class="jm-cta-hover" href="/shipping-information.html">'+
                     '<div>'+
-                        '<p>Free shipping on orders over $75+</p>'+
+                        '<p>Free shipping on all orders</p>'+
                     '</div>'+
                     '</a>'+
                 '</div>'+
@@ -342,11 +342,19 @@ function global_rotating_message(){
 
     var rotatingMessages = [
         '<section class="jm-gb-rotating-wraper slideDown">'+
+            '<div class="jm-full-banner jm-banner-2">'+
+                '<a class="jm-cta-all" href="/categories/c21finds-contest" aria-hidden="true" role="none" tabindex="-1"></a>'+
+                '<p>SHOW OFF YOUR SAVINGS | WIN A $500 GIFT CARD<br/>'+
+                    '<a class="jm-cta-text jm-cta-hover" href="/categories/c21finds-contest">LEARN MORE</a>'+
+                '</p>'+
+            '</div>'+
+        '</section>',
+        '<section class="jm-gb-rotating-wraper slideDown">'+
             '<div class="jm-global-splitted-banner">'+            
                '<div class="jm-left">'+
                     '<a class="jm-cta-hover" href="/shipping-information.html">'+
                     '<div>'+
-                        '<p>Free shipping on orders over $50+</p>'+
+                        '<p>Free shipping on all orders</p>'+
                     '</div>'+
                     '</a>'+
                 '</div>'+
@@ -357,14 +365,6 @@ function global_rotating_message(){
                     '</div>'+
                     '</a>'+
                 '</div>'+
-            '</div>'+
-        '</section>',
-        '<section class="jm-gb-rotating-wraper slideDown">'+
-            '<div class="jm-full-banner jm-banner-2">'+
-                '<a class="jm-cta-all" href="/categories/c21finds-contest" aria-hidden="true" role="none" tabindex="-1"></a>'+
-                '<p>SHOW OFF YOUR SAVINGS | WIN A $500 GIFT CARD<br/>'+
-                    '<a class="jm-cta-text jm-cta-hover" href="/categories/c21finds-contest">LEARN MORE</a>'+
-                '</p>'+
             '</div>'+
         '</section>',
     ];
@@ -411,7 +411,7 @@ function global_rotating_message_mobile(){
     var rotatingMessages = [        
         '<p class="jm-mobile-gb-h3 jm-banner-1-mob slideDownMob"><b>'+
         '<a class="jm-cta-hover" href="/shipping-information.html">'+
-            'FREE SHIPPING <br/>ON ORDERS OVER $50+</b>'+
+            'FREE SHIPPING <br/>ON ALL ORDERS</b>'+
         '</a>'+
         '</p>',                
         '<p class="jm-mobile-gb-h3 jm-banner-2-mob slideDownMob">'+
