@@ -1,0 +1,136 @@
+<!-- standard-gb-registered-premier - JuanMa - 02.10.19 -->
+
+<style>
+
+.jm-global-banner .jm-right{
+    border-left: solid 1px;
+}
+
+.jm-global-banner p{
+	margin: 0;
+	letter-spacing: 0.09em;
+	font-size: 3vw;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+.jm-global-banner a{
+	width: 100%;
+	color:white;
+	padding: 1em 0;
+}
+.jm-clickable-text{
+    border-bottom: solid 1px;
+    padding: 0.3% 0;
+    vertical-align: text-bottom;
+    margin: 0 0 0 3%;	
+}
+.jm-global-banner .jm-right{
+	display: none
+}
+.jm-global-banner-mobile .jm-left-mobile div{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+  	display: -moz-box;
+  	display: -webkit-flex;
+  	display: -ms-flexbox;
+  	display: flex;
+  	align-items: center;
+	justify-content: center;	
+}
+p.jm-swap-item{
+	display: none;
+	width: 80%;
+}
+
+@media screen and (min-width: 700px){
+.jm-global-banner{
+	overflow: auto;
+	display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.jm-global-banner .jm-left,
+.jm-global-banner .jm-right{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jm-global-banner .jm-left,
+.jm-global-banner .jm-right{
+	width: 50%;
+    float: left;
+}
+.jm-global-banner p{
+	font-size: 0.7em;
+    text-transform: uppercase;
+}
+
+}
+@media screen and (max-width: 700px){
+.header-banner .col-12{
+	padding: 0 3px;
+	margin: 0;
+}
+}
+</style>
+
+<div class="jm-global-banner jm-global-banner-mobile jm-mobile">
+	<div class="jm-left-mobile">		
+		<div>
+			<p class="jm-swap-item">
+				<a href="$url('Page-Show','cid','shipping-information')$">Free shipping on orders over $50+</a>
+			</p>
+			<p class="jm-swap-item">
+				<a href="$url('Page-Show','cid','shipping-information')$">Earn 2 points per $1 or $10 for every $250 spent</a>
+			</p>
+		</div>
+	</div>
+</div>
+<div class="jm-global-banner jm-desktop">
+	<div class="jm-left">
+		<a href="$url('Page-Show','cid','shipping-information')$">	
+		<div>
+			<p>Free shipping on orders $75+</p>
+		</div>
+		</a>
+	</div>
+	<div class="jm-right">
+		<a href="$url('Page-Show','cid','c21status')$">	
+		<div>
+			<p>Earn 2 points per $1 or $10 for every $250 spent</p>
+		</div>
+		</a>
+	</div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+if ($(window).width() <= 700){	
+	(function() {
+
+    var quotes = $(".jm-global-banner .jm-swap-item");
+    var quoteIndex = -1;
+    
+    function showNextQuote() {
+        ++quoteIndex;
+        quotes.eq(quoteIndex % quotes.length)
+            .fadeIn(2000)
+            .delay(2000)
+            .fadeOut(2000, showNextQuote);
+    }
+    
+    showNextQuote();
+    
+})();
+}	
+});
+</script>
