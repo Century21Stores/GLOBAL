@@ -1,4 +1,4 @@
-<!-- UTIITY NAV - Master CSS - JuanMa - 05.02.19 -->
+<!-- UTIITY NAV - Master CSS - JuanMa - 05.17.19 -->
 
 <style>
 /* ------- GENERAL ------- */
@@ -975,6 +975,21 @@ a.jm-text-cta-light{
 
 /* END DROP v2  */
 
+/*  HALF HERO  */
+.jm-half-hero-content-block{
+    overflow: auto;
+}
+.jm-half-hero-content-block article{
+    position: absolute;
+    height: 100%;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+}
+/*  END HALF HERO  */
 
 }
 
@@ -1113,6 +1128,7 @@ section.jm-two-column article h2{
     background: white;
 }*/
 .jm-content-block article,
+.jm-content-block-all article,
 .jm-hero-content-block-all article,
 .jm-product-large-container article,
 .jm-large-plus-one-l article,
@@ -1122,12 +1138,15 @@ section.jm-two-column article h2{
 }
 .jm-content-block-all article h2.jm-header-2{
     font-size: 8.3vw;    
-    /*color: black !important;*/
+    font-weight: bold;
+    font-weight: 600;
     color: black;
 }
-.jm-content-block-all article p.jm-header-3{
+.jm-content-block-all article p.jm-header-3,
+.jm-content-block-all article .jm-header-3{
     font-size: 4.5vw;    
-    /*color: black !important;*/
+    font-weight: normal;
+    font-weight: 500;
     color: black;
 }
 
