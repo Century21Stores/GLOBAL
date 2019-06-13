@@ -1,4 +1,4 @@
-<!-- gb-premier-default - DEFAULT PREMIER GB - JuanMa - 06.13.19 -->
+<!-- w20d-gb-denied-clearance - CLEARANCE DENIED GB - JuanMa - 06.13.19 -->
 
 <style>
  /* OVERWRITE */
@@ -213,17 +213,21 @@
 
 .jm-gb-rotating-wraper div.jm-banner-2{
   width: 100%;
-  background: linear-gradient(
+  background: #b31e34;
+/*  background: linear-gradient(
     to right, 
     #7fb88b 0%, 
     #7fb88b 50%, 
     #63b6d4 50%, 
     #63b6d4 100%
-  );
+  );*/
 }
 .jm-gb-rotating-wraper div.jm-banner-2 a,
 .jm-gb-rotating-wraper div.jm-banner-2 p{
-    color:#000000;
+    color:#ffffff;
+}
+.jm-gb-rotating-wraper div.jm-banner-2 p{
+    width: 100%;
 }
 /* ....... END BANNERS ....... */
 
@@ -233,12 +237,22 @@
 .jm-gb-rotating-wraper div.jm-full-banner p{
     margin: 0;
 }
+a.jm-cta-button-gb{
+    display: initial;
+    margin: 0 0 0 3%;
+    padding: 0.5% 2%;
+    font-size: 1em;
+}
 
 }
 
 @media (min-width:1100px) {
 .jm-gb-wrapper section{
     font-size: 1em;
+}
+a.jm-cta-button-gb{
+    font-size: 0.53em;
+    padding: 0.5% 1%;
 }
 
 }
@@ -289,13 +303,14 @@
 
 }
 .jm-banner-2-mob{
-    background: linear-gradient(
+    background: #b31e34;
+/*    background: linear-gradient(
     to right, 
     #7fb88b 0%, 
     #7fb88b 50%, 
     #63b6d4 50%, 
     #63b6d4 100%
-  );
+  );*/
 }
 .jm-gb-wrapper *{
     text-rendering: optimizeLegibility;
@@ -321,7 +336,7 @@ p.jm-banner-1-mob a{
     color:black;
 }
 p.jm-banner-2-mob a{
-    color:black;
+    color:#ffffff;
 }
 .jm-gb-wrapper p span.jm-smaller{
     font-size: 3vw;
@@ -354,11 +369,12 @@ document.addEventListener("DOMContentLoaded", function() {
 //    global_rotating_message();
   //  global_rotating_message_mobile();
 
-if((window.location.href == "https://development.c21stores.com/home") || (window.location.href == "https://staging-na01-century21.demandware.net/s/C21/home") || (window.location.href == "https://www.c21stores.com/") || (window.location.href == "https://www.c21stores.com") || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/?") > -1)  || (window.location.href.indexOf("c21stores.com/home") > -1) || (window.location.href.indexOf("/C21/home") > -1) || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/#") > -1) || (window.location.href.indexOf("https://www.c21stores.com/?") > -1) || (window.location.href.indexOf("https://www.c21stores.com#") > -1) || (window.location.href.indexOf("sunglasses-drop-designer") > -1)){
+if((window.location.href == "https://development.c21stores.com/home") || (window.location.href == "https://staging-na01-century21.demandware.net/s/C21/home") || (window.location.href == "https://www.c21stores.com/") || (window.location.href == "https://www.c21stores.com") || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/?") > -1)  || (window.location.href.indexOf("c21stores.com/home") > -1) || (window.location.href.indexOf("/C21/home") > -1) || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/#") > -1) || (window.location.href.indexOf("https://www.c21stores.com/?") > -1) || (window.location.href.indexOf("https://www.c21stores.com#") > -1) || (window.location.href.indexOf("clearance") > -1)){
     //global_rotating_message();
     global_rotating_message_mobile();
     showGlobalBanner();
 }else{
+    global_rotating_message();
     showGlobalBanner();
     global_rotating_message_mobile();
     //showGlobalBanner_week();
@@ -411,8 +427,8 @@ function showGlobalBanner(){
             '<div class="jm-gb-wrapper">'+
             '<section class="jm-gb-rotating-wraper slideDownMob">'+
                 '<p class="jm-mobile-gb-h3 jm-banner-1-mob slideDownMob"><b>'+
-                    '<a class="jm-cta-hover" href="/c21status.html?imc=plcc_premier&imccat=default_gb_c21status">'+
-                    'EARN 2 POINTS PER $1 <br/>OR $10 FOR EVERY $250 SPENT'+
+                    '<a class="jm-cta-hover" href="/c21status.html?imc=plcc_denied&imccat=default_gb_c21status">'+
+                    'EARN 1 POINTS PER $1 <br/>OR $10 FOR EVERY $500 SPENT'+
                     '</a>'+
                 '</p>',
             '</section>'+
@@ -424,16 +440,16 @@ function showGlobalBanner(){
             '<section class="jm-gb-rotating-wraper slideDown">'+
             '<div class="jm-global-splitted-banner">'+            
                '<div class="jm-left">'+
-                    '<a class="jm-cta-hover" href="/shipping-information.html?imc=plcc_premier&imccat=default_gb_shipping">'+
+                    '<a class="jm-cta-hover" href="/shipping-information.html?imc=plcc_denied&imccat=default_gb_shipping">'+
                     '<div>'+
-                        '<p>Free shipping on all orders</p>'+
+                        '<p>Free shipping on orders over $75+</p>'+
                     '</div>'+
                     '</a>'+
                 '</div>'+
                 '<div class="jm-right">'+
-                    '<a class="jm-cta-hover" href="/c21status.html?imc=plcc_premier&imccat=default_gb_c21status">'+
+                    '<a class="jm-cta-hover" href="/c21status.html?imc=plcc_denied&imccat=default_gb_c21status">'+
                     '<div>'+
-                        '<p>EARN 2 POINTS PER $1 OR $10 FOR EVERY $250 SPENT</p>'+
+                        '<p>EARN 1 POINTS PER $1 OR $10 FOR EVERY $500 SPENT</p>'+
                     '</div>'+
                     '</a>'+
                 '</div>'+
@@ -455,25 +471,25 @@ function global_rotating_message(){
     var rotatingMessages = [
         '<section class="jm-gb-rotating-wraper slideDown">'+
             '<div class="jm-full-banner jm-banner-2">'+
-                '<a class="jm-cta-all" href="/categories/c21finds-contest" aria-hidden="true" role="none" tabindex="-1"></a>'+
-                '<p>SHOW OFF YOUR SAVINGS | WIN A $500 GIFT CARD<br/>'+
-                    '<a class="jm-cta-text jm-cta-hover" href="/categories/c21finds-contest">LEARN MORE</a>'+
+                '<a class="jm-cta-all" href="/categories/clearance?imc=plcc_denied&imccat=w2019d_gb_clearance" aria-hidden="true" role="none" tabindex="-1"></a>'+
+                '<p>SEMI-ANUAL CLEARANCE EVENT UP TO 75% OFF'+
+                    '<a class="btn jm-cta-button jm-cta-button-gb jm-cta-button-solidlight" href="/categories/clearance?imc=plcc_denied&imccat=w2019d_gb_clearance">SHOP NOW</a>'+
                 '</p>'+
             '</div>'+
         '</section>',
         '<section class="jm-gb-rotating-wraper slideDown">'+
             '<div class="jm-global-splitted-banner">'+            
                '<div class="jm-left">'+
-                    '<a class="jm-cta-hover" href="/shipping-information.html?imc=plcc_premier&imccat=default_gb_shipping">'+
+                    '<a class="jm-cta-hover" href="/shipping-information.html">'+
                     '<div>'+
-                        '<p>Free shipping on orders $50+</p>'+
+                        '<p>Free shipping on orders $75+</p>'+
                     '</div>'+
                     '</a>'+
                 '</div>'+
                 '<div class="jm-right">'+
                     '<a class="jm-cta-hover" href="/c21status.html">'+
                     '<div>'+
-                        '<p><img class="jm-credit-card-img" alt="C21STATUS credit card" src="Global/global-banner/c21status-credit-card.png?$staticlink$"/><span>Save 15%</span> on your purchase if approved today*</p>'+
+                        '<p>EARN 1 POINTS PER $1 OR $10 FOR EVERY $500 SPENT</p>'+
                     '</div>'+
                     '</a>'+
                 '</div>'+
@@ -522,18 +538,18 @@ function global_rotating_message_mobile(){
 
     var rotatingMessages = [        
         '<p class="jm-mobile-gb-h3 jm-banner-1-mob slideDownMob"><b>'+
-        '<a class="jm-cta-hover" href="/shipping-information.html?imc=plcc_premier&imccat=default_gb_shipping">'+
-            'FREE SHIPPING <br>ON ORDERS $50+</b>'+
+        '<a class="jm-cta-hover" href="/shipping-information.html?imc=plcc_denied&imccat=default_gb_shipping">'+
+            'FREE SHIPPING <br>ON ORDERS $75+</b>'+
         '</a>'+
         '</p>',                
-        // '<p class="jm-mobile-gb-h3 jm-banner-2-mob slideDownMob">'+
-        // '<a class="jm-cta-hover" href="/categories/c21finds-contest">'+
-        //     '<b>SHOW OFF YOUR SAVINGS<br/>WIN A $500 GIFT CARD</b>'+
-        // '</a>'+
-        // '</p>',
+        '<p class="jm-mobile-gb-h3 jm-banner-2-mob slideDownMob">'+
+        '<a class="jm-cta-hover" href="/categories/clearance?imc=plcc_denied&imccat=w2019d_gb_clearance">'+
+            '<b>SEMI-ANNUAL CLEARANCE EVENT<br/>UP TO 75% OFF</b>'+
+        '</a>'+
+        '</p>',
         '<p class="jm-mobile-gb-h3 jm-banner-1-mob slideDownMob"><b>'+
-        '<a class="jm-cta-hover" href="/c21status.html?imc=plcc_premier&imccat=default_gb_c21status">'+
-            'EARN 2 POINTS PER $1 <br/>OR $10 FOR EVERY $250 SPENT'+
+        '<a class="jm-cta-hover" href="/c21status.html?imc=plcc_denied&imccat=default_gb_c21status">'+
+            'EARN 1 POINT PER $1 <br/>OR $10 FOR EVERY $500 SPENT'+
         '</a>'+
         '</p>',
     ];
