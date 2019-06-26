@@ -1,4 +1,4 @@
-<!-- w20d-gb-plcc15-clearance - CLEARANCE plcc15 GB - JuanMa - 06.18.19 -->
+<!-- w21d-gb-plcc15-drop-longchamp - CLEARANCE plcc15 and Drop - JuanMa - 06.26.19 -->
 
 <style>
  /* OVERWRITE */
@@ -65,7 +65,7 @@
     background: #f6f4f5;
 }
 .jm-global-splitted-banner-week{
-    background: #2e541a;
+    background: #b2e9fe;
 }
 .jm-global-splitted-banner-week span{
     margin: 0 3%;
@@ -149,7 +149,7 @@
 }
 .jm-global-splitted-banner-week p,
 .jm-global-splitted-banner-week a{
-    color: #ffffff;    
+    color: #000000;    
 }
 
 .jm-gb-rotating-wraper div.jm-banner-2{
@@ -214,7 +214,7 @@ a.jm-cta-button-gb{
     background: #f6f4f5;
 }
 .jm-mobile-globalBanner-week .jm-gb-wrapper-week{
-    background: #2e541a;
+    background: #b2e9fe;
 }
 .jm-mobile-globalBanner-week .jm-gb-wrapper-week p{
     overflow: auto;
@@ -290,6 +290,19 @@ p.jm-banner-2-mob a{
     left: 0;
     z-index: 99;
 }
+.jm-thisweek-global-banner p{
+    letter-spacing: 0.09em;
+    font-size: 0.87em;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
+}
+.jm-mobile-globalBanner-week a,
+.jm-mobile-globalBanner-week span{
+    color: #000000;
+}
 /*.header-banner .close-button{
     display: block;
 }
@@ -316,22 +329,23 @@ if((window.location.href == "https://development.c21stores.com/home") || (window
     global_rotating_message();
     showGlobalBanner();
 }else{    
-    showGlobalBanner();
-    global_rotating_message();
-    global_rotating_message_mobile();
-    //showGlobalBanner_week();
+    //showGlobalBanner();
+    //global_rotating_message();
+    //global_rotating_message_mobile();
+    showGlobalBanner_week();
 }
 
 function showGlobalBanner_week(){
     $('.header-banner .content').prepend(
 
         '<div class="jm-mobile jm-mobile-globalBanner jm-mobile-globalBanner-week">'+
-        '<a class="jm-cta-hover" href="/categories/sunglasses-drop-designer?imc=thedrop&imccat=w1819_gb_tomford"></a>'+
+        '<a class="jm-cta-hover" href="/categories/handbags-drop-longchamp?imc=gb_thedrop&imccat=w21-19-d_handbags-drop-longchamp"></a>'+
             '<div class="jm-gb-wrapper jm-gb-wrapper-week">'+
             '<section class="jm-gb-rotating-wraper slideDownMob">'+
                 '<p>'+
-                    '<span><img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small.png?$staticlink$"></span>'+
-                    '<span>TOM FORD + MORE SUN <br/>UP TO 70% OFF</span>'+ 
+                    // '<span><img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small.png?$staticlink$"></span>'+
+                    '<span><img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small_black.png?$staticlink$"></span>'+
+                    '<span>LONGCHAMP <br/>OVER 30% OFF</span>'+ 
                     // '<span>TOM FORD + MORE SUN <br/>UP TO 70% OFF - <span class="jm-text-cta">SHOP NOW</span></span>'+ 
                     // '<span class="jm-text-cta">SHOP NOW</span>'+
                 '</p>'+
@@ -344,11 +358,12 @@ function showGlobalBanner_week(){
             '<section class="jm-gb-rotating-wraper slideDown">'+
             '<div class="jm-global-splitted-banner jm-global-splitted-banner-week">'+
                '<div>'+
-                    '<a class="jm-cta-hover" href="/categories/sunglasses-drop-designer?imc=thedrop&imccat=w1819_gb_tomford">'+
+                    '<a class="jm-cta-hover" href="/categories/handbags-drop-longchamp?imc=gb_thedrop&imccat=w21-19-d_handbags-drop-longchamp">'+
                     '<div>'+
                         '<p>'+
-                            '<span><img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small.png?$staticlink$"></span>'+
-                            '<span>TOM FORD + MORE SUN UP TO 70% OFF</span>'+ 
+                            // '<span><img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small.png?$staticlink$"></span>'+
+                            '<span><img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small_black.png?$staticlink$"></span>'+
+                            '<span>LONGCHAMP | OVER 30% OFF</span>'+ 
                             '<span class="jm-text-cta">SHOP NOW</span>'+
                         '</p>'+
                     '</div>'+

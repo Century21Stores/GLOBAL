@@ -1,9 +1,34 @@
-<!-- UTIITY NAV - Master CSS - JuanMa - 06.18.19 -->
+<!-- UTIITY NAV - Master CSS - JuanMa - 06.26.19 -->
 
 <style>
 .fit-predictor{
     display: none;
 }
+
+/*  CLOCK  */
+@-webkit-keyframes jm-background-animation {
+    0%     {background-color:#ff9191;color:white;}
+    50.0%  {background-color:#fab4b4;}
+    100.0%  {background-color:none;}
+}
+.jm-highlight{  
+      -webkit-animation-name: jm-background-animation;
+    -webkit-animation-duration: 0.3s;
+    -webkit-animation-timing-function: ease-in-out;
+    
+    animation-name: jm-background-animation;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+}
+#jm_announce{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;  
+}
+/*  END CLOCK  */
+
 /* ------- GENERAL ------- */
 figure{
     margin: 0;
@@ -486,6 +511,9 @@ header ~ .container .instant-credit-landing-page .terms-and-conditions a:not(.bt
 .jm-reveal-two-column{
     width: 96%;
     margin: 2% auto;
+}
+.jm-three-column article{
+    font-size: 1vw;
 }
 /* ----- END TWO & THREE COLUMN CONTENT BLOCK -----*/
 
@@ -985,7 +1013,7 @@ a.jm-text-cta-light{
 /* ----- END LARGE PLUS ONE CONTENT BLOCK ----- */
 .jm-content-block-all article{
     /*font-size: 1.13vw;*/
-    font-size: 1.1vw;
+    font-size: 0.9vw;
 }
 
 
@@ -1130,6 +1158,9 @@ aside.jm-pdp-size-chart table td{
 .jm-content-block-all article{
     font-size: 1em;
 }
+.jm-three-column article{
+    font-size: 1vw;
+}
 .jm-drop-v2{
     padding: 3% 0;
 }
@@ -1155,6 +1186,10 @@ aside.jm-pdp-size-chart table td{
     padding: 1% 3em;
 }
 /* ----- END SIZE CHARTS ----- */
+.jm-three-column article{
+    font-size: 1em;
+}
+
 }
 
 
@@ -1287,8 +1322,13 @@ aside.jm-pdp-size-chart table td{
 }
 /* END DROP V2 */
 
+
+.jm-three-column article{
+    font-size: 3vw;
+}
+
 /* FILTER OVERWRITE */
-.plp-wrapper .tile-box.filter-area{
+/*.plp-wrapper .tile-box.filter-area{
     background: white;
     z-index: 3 !important;
     width: 96% !important;
@@ -1298,7 +1338,7 @@ aside.jm-pdp-size-chart table td{
 .plp-wrapper .static-filter-area{
     width: 100% !important;
     z-index: 9 !important;
-}
+}*/
 /* END FILTER OVERWRITE */
 
 }

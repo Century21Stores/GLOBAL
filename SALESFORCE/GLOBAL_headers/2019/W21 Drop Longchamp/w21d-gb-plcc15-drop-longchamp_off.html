@@ -1,4 +1,4 @@
-<!-- w20d-gb-plcc15-clearance - CLEARANCE plcc15 GB - JuanMa - 06.18.19 -->
+<!-- w21d-gb-plcc15-drop-longchamp - CLEARANCE plcc15 and Drop - JuanMa - 06.26.19 -->
 
 <style>
  /* OVERWRITE */
@@ -65,7 +65,7 @@
     background: #f6f4f5;
 }
 .jm-global-splitted-banner-week{
-    background: #2e541a;
+    background: #b2e9fe;
 }
 .jm-global-splitted-banner-week span{
     margin: 0 3%;
@@ -80,7 +80,16 @@
 /* end splited banner */
 
 
+.jm-thisweek-global-banner span.jm-text-cta,
+.jm-thisweek-global-banner a{
+    display: none;
+}
+
 @media (min-width:700px) {
+a.jm-available,
+.jm-thisweek-global-banner span.jm-available{
+    display:inline-block;
+}
 
 .jm-gb-wrapper p{
     font-weight: bold;
@@ -149,7 +158,7 @@
 }
 .jm-global-splitted-banner-week p,
 .jm-global-splitted-banner-week a{
-    color: #ffffff;    
+    color: #000000;    
 }
 
 .jm-gb-rotating-wraper div.jm-banner-2{
@@ -184,6 +193,9 @@ a.jm-cta-button-gb{
     padding: 0.5% 2%;
     font-size: 1em;
 }
+.jm_countdownContainer{
+    display: inline-block;
+}
 
 }
 
@@ -214,7 +226,7 @@ a.jm-cta-button-gb{
     background: #f6f4f5;
 }
 .jm-mobile-globalBanner-week .jm-gb-wrapper-week{
-    background: #2e541a;
+    background: #b2e9fe;
 }
 .jm-mobile-globalBanner-week .jm-gb-wrapper-week p{
     overflow: auto;
@@ -290,12 +302,51 @@ p.jm-banner-2-mob a{
     left: 0;
     z-index: 99;
 }
+.jm-thisweek-global-banner p{
+    letter-spacing: 0.09em;
+    font-size: 0.87em;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
+}
+.jm-mobile-globalBanner-week a,
+.jm-mobile-globalBanner-week span{
+    color: #000000;
+}
+.jm-thisweek-global-banner a,
+.jm-thisweek-global-banner p,
+.jm-thisweek-global-banner span{
+    color: #000000;   
+}
+
+.jm-thisweek-global-banner{
+    font-size: 3.7vw;
+}
+.jm-thisweek-global-banner img{
+    width: 26%;
+}
+.jm_countdownContainer{
+    display: block;
+    /* width: 73%; */
+    margin: 2% 0 0% auto !important;
+    line-height: 1;
+    background: #ffffffa3;
+    padding: 1% 0;   
+}
+.jm-global-splitted-banner-week{
+    padding: 2% 0%;
+}
 /*.header-banner .close-button{
     display: block;
 }
 .header-banner .close{
     color: black;
 }*/
+a.jm-available{
+    display:block;
+}
 
 }
 
@@ -316,43 +367,45 @@ if((window.location.href == "https://development.c21stores.com/home") || (window
     global_rotating_message();
     showGlobalBanner();
 }else{    
-    showGlobalBanner();
-    global_rotating_message();
-    global_rotating_message_mobile();
-    //showGlobalBanner_week();
+    //showGlobalBanner();
+    //global_rotating_message();
+    //global_rotating_message_mobile();
+    showGlobalBanner_week();
 }
 
 function showGlobalBanner_week(){
     $('.header-banner .content').prepend(
 
-        '<div class="jm-mobile jm-mobile-globalBanner jm-mobile-globalBanner-week">'+
-        '<a class="jm-cta-hover" href="/categories/sunglasses-drop-designer?imc=thedrop&imccat=w1819_gb_tomford"></a>'+
-            '<div class="jm-gb-wrapper jm-gb-wrapper-week">'+
-            '<section class="jm-gb-rotating-wraper slideDownMob">'+
-                '<p>'+
-                    '<span><img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small.png?$staticlink$"></span>'+
-                    '<span>TOM FORD + MORE SUN <br/>UP TO 70% OFF</span>'+ 
-                    // '<span>TOM FORD + MORE SUN <br/>UP TO 70% OFF - <span class="jm-text-cta">SHOP NOW</span></span>'+ 
-                    // '<span class="jm-text-cta">SHOP NOW</span>'+
-                '</p>'+
-            '</section>'+
-            '</div>'+
-        '</div>'+
+        // '<div class="jm-mobile jm-mobile-globalBanner jm-thisweek-global-banner jm-mobile-globalBanner-week">'+
+        // '<a class="jm-cta-hover" href="/categories/sunglasses-drop-designer?imc=thedrop&imccat=w1819_gb_tomford"></a>'+
+        //     '<div class="jm-gb-wrapper jm-gb-wrapper-week">'+
+        //     '<section class="jm-gb-rotating-wraper slideDownMob">'+
+        //         '<p>'+
+        //             // '<span><img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small.png?$staticlink$"></span>'+
+        //             '<span><img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small_black.png?$staticlink$"></span>'+
+        //             '<span>LONGCHAMP <br/>UP TO 70% OFF</span>'+ 
+        //             // '<span>TOM FORD + MORE SUN <br/>UP TO 70% OFF - <span class="jm-text-cta">SHOP NOW</span></span>'+ 
+        //             '<span class="jm-text-cta-mob">SHOP NOW</span>'+
+        //         '</p>'+
+        //     '</section>'+
+        //     '</div>'+
+        // '</div>'+
 
-        '<div class="jmrv-desktop jm-desktop">'+
-            '<div class="jm-gb-wrapper">'+
+        // '<div class="jmrv-desktop jm-desktop">'+
+        '<div>'+
+            '<div class="jm-gb-wrapper jm-thisweek-global-banner">'+
             '<section class="jm-gb-rotating-wraper slideDown">'+
             '<div class="jm-global-splitted-banner jm-global-splitted-banner-week">'+
                '<div>'+
-                    '<a class="jm-cta-hover" href="/categories/sunglasses-drop-designer?imc=thedrop&imccat=w1819_gb_tomford">'+
+                    '<a class="jm-cta-hover jm-clickable-image" aria-hidden="true" role="none" tabindex="-1" href="/categories/handbags-drop-longchamp?imc=gb_thedrop&imccat=w21-19-d_handbags-drop-longchamp"></a>'+
                     '<div>'+
                         '<p>'+
-                            '<span><img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small.png?$staticlink$"></span>'+
-                            '<span>TOM FORD + MORE SUN UP TO 70% OFF</span>'+ 
+                            // '<span><img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small.png?$staticlink$"></span>'+
+                            '<span><img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small_black.png?$staticlink$"></span>'+
+                            '<span>LONGCHAMP | OVER 30% OFF</span>'+ 
                             '<span class="jm-text-cta">SHOP NOW</span>'+
                         '</p>'+
                     '</div>'+
-                    '</a>'+
                 '</div>'+
             '</div>'+
             '</section>'+
@@ -518,4 +571,176 @@ function global_rotating_message_mobile(){
 //END GLOBAL HEADER ROTATING MESSAGE MOBILE
 
 });
+</script>
+
+
+<script>
+count_down_drop();
+
+function count_down_drop(){
+
+// END CLOCK
+window.addEventListener("DOMContentLoaded", function(){
+
+// COUNT DOWN
+$('.jm-thisweek-global-banner span.jm-text-cta').before(
+'<span class="jm_countdownContainer">'+
+      '<div>'+
+        '<p>AVAILABLE IN:</p>'+
+      '</div>'+
+      '<div id="dialogheader" class="jm_counter">'+
+        // '<span id="hours">00</span>'+
+        // '<span class="jm-dots">:</span>'+
+        // '<span id="minutes">00</span>'+
+        // '<span class="jm-dots">:</span>'+
+        // '<span id="seconds">00</span>'+
+        '<span id="jm_whole_clock" role="timer">00:00:00</span>'+
+        '<div id="jm_announce" aria-live="assertive"></div>'+
+      //'<span class="jm-dots">:</span>'+
+    '</div>'+
+'</span>'
+)
+// END COUNT DOWN
+
+
+  var dd = new Date();
+  //console.log(dd);
+  var targetDate = "Jun 27 2019";
+  var hh = dd.getHours();
+  var utchh = dd.getUTCHours();
+  //console.log(utchh);
+  //console.log(hh);  
+  var mm = dd.getUTCMinutes();
+  var nn = dd.getDay();
+  //console.log('Date: '+ dd);
+  //console.log(String(dd).indexOf(targetDate));
+  if ((String(dd).indexOf(targetDate) === -1) || ( utchh < 14)) {
+    countdown();
+    console.log("not 10am yet");
+  }
+  else{
+    console.log("It is 10am!");
+    endCountDown();
+  };
+// END END CLOCK
+
+});
+
+// COUNT DOWN
+
+function countdown() {
+  let now = new Date();
+  let evenDate = new Date(2019, 6, 27);
+  let actualTime = now.getTime();
+  let eventTime = evenDate.getTime();
+  let remTime = eventTime - actualTime;  
+
+  let s = Math.floor(remTime / 1000);
+  let m = Math.floor(s / 60);
+  let h = Math.floor(m / 60)+10;  
+//  let d = Math.floor(h / 24);
+
+  theCenturyDrop = "The Century Drop: Longchamp: ";
+  
+  h %= 24;
+  m %= 60;
+  s %= 60;
+
+  h = h < 10 ? '0' + h : h;
+  m = m < 10 ? '0' + m : m;
+  s = s < 10 ? '0' + s : s;
+
+  jm_timer_annoucer_more_1 = theCenturyDrop + h + " hours " + m + " minutes " + s + " seconds remaining";
+  jm_timer_annoucer_str_more_1 = String(jm_timer_annoucer_more_1)
+  
+  jm_timer_annoucer_less_1 = theCenturyDrop + m + " minutes " + s + " seconds remaining";
+  jm_timer_annoucer_str_less_1 = String(jm_timer_annoucer_less_1)
+
+  jm_timer_annoucer_less_1m = theCenturyDrop + s + " seconds remaining";
+  jm_timer_annoucer_str_less_1m = String(jm_timer_annoucer_less_1m)
+  
+  jm_timer_annoucer_less_10s = s + " seconds";
+  jm_timer_annoucer_str_less_10s = String(jm_timer_annoucer_less_10s)  
+
+  //document.querySelector('#days').textContent = d;
+  //document.querySelector('#hours').textContent = h;
+  // document.querySelector('#minutes').textContent = m;
+  // document.querySelector('#seconds').textContent = s;
+  document.querySelector('#jm_whole_clock').textContent = h + ":" + m + ":" + s;
+  // console.log('eventTime: '+ eventTime);
+  // console.log('remTime: '+ remTime);
+  // console.log('actualTime: '+ actualTime);
+  if((s != '00') || (m != '00') || (h != '00')){
+    setTimeout(countdown, 1000);
+    
+    if((h == '00') && (m == '00')){
+      //less than a minute
+      console.log("less than 1 minute remaining");
+      
+      if(s > 10){
+      //more than 10 seconds
+        if(s % 10 === 0){
+          console.log(jm_timer_annoucer_str_less_1m);
+          document.querySelector('#jm_announce').textContent = jm_timer_annoucer_str_less_1m;
+          $('.jm_countdownContainer').addClass("jm-highlight");
+        }
+        else{
+          $('.jm_countdownContainer').removeClass("jm-highlight");
+        }
+      }
+      //less than 10 seconds
+      else{
+          console.log(jm_timer_annoucer_str_less_10s);
+          document.querySelector('#jm_announce').textContent = jm_timer_annoucer_str_less_10s;
+          // $('.jm_countdownContainer').addClass("jm-highlight");
+          $('.jm_countdownContainer').addClass("jm-highlight").delay(500).queue(function(){
+              $(this).removeClass("jm-highlight").dequeue();
+          });          
+      }
+    }
+    else if((h == '00') && (m != '00')){
+      //less than an hour
+       console.log("less than 1 hour remaining");
+      if(s % 20 === 0){
+        console.log(jm_timer_annoucer_str_less_1);
+        document.querySelector('#jm_announce').textContent = jm_timer_annoucer_str_less_1;
+        $('.jm_countdownContainer').addClass("jm-highlight");
+      }
+      else{
+        $('.jm_countdownContainer').removeClass("jm-highlight");
+      }
+    }
+    else{
+      //more than an hour
+      if(s % 30 === 0){
+        console.log(jm_timer_annoucer_more_1);
+        document.querySelector('#jm_announce').textContent = jm_timer_annoucer_more_1;
+        $('.jm_countdownContainer').addClass("jm-highlight");
+      }
+      else{
+        $('.jm_countdownContainer').removeClass("jm-highlight");
+      }
+    }
+
+  }
+  else{
+    endCountDown();
+  }
+
+
+};
+
+
+
+function endCountDown(){
+  $('.jm-thisweek-global-banner span.jm-text-cta').addClass('jm-available');
+  $('.jm-thisweek-global-banner a').addClass('jm-available');
+  // $('.jm-drop-v2').addClass('jm-opacity-1');
+  $('.jm_countdownContainer').fadeOut('slow');
+
+}
+
+
+}
+
 </script>
