@@ -1,4 +1,4 @@
-<!-- w21d-gb-plcc15-drop-longchamp - CLEARANCE plcc15 and Drop - JuanMa - 06.26.19 -->
+<!-- w23d-gb-plcc15-drop-dolcegabanna - CLEARANCE plcc15 and Drop - JuanMa - 07.05.19 -->
 
 <style>
  /* OVERWRITE */
@@ -20,8 +20,7 @@
 /* END OVERWRITE */
 
 .jm-cta-all{
-    position: absolute;
-    top: 0;
+    position: absolutes
     left: 0;
     width: 100%;
     height: 100%;
@@ -64,23 +63,45 @@
 .jm-global-splitted-banner{
     background: #f6f4f5;
 }
-.jm-global-splitted-banner-week{
-    background: #b2e9fe;
-}
-.jm-global-splitted-banner-week span{
-    margin: 0 3%;
-}
 .jm-credit-card-img{
     width: 10%;
     margin: 0 7% 0 0;    
 }
-.jm-global-splitted-banner-week img{
-    width: 15%;
-}
+
 /* end splited banner */
 
-
-.jm-thisweek-global-banner span.jm-text-cta,
+/* Weekly global banner */
+.jm-global-splitted-banner-week{
+    background: #000000;
+}
+.jm-global-splitted-banner-week p > span{
+    margin: 0 3%;
+    display: inline-block;
+}
+.jm-global-splitted-banner-week img{
+    width: 100%;
+}
+.jm-gb-info-holder > div:nth-of-type(1){
+    width: 7%;
+}
+.jm-gb-info-holder > div:nth-of-type(2){
+    width: 33em;
+}
+.jm-gb-info-holder > div:nth-of-type(2) > span{
+    display: block;
+    line-height: 1;
+}
+.jm-gb-info-holder > div:nth-of-type(2) > span span.jm-text-cta{
+    font-size: 0.78em;    
+}
+.jm-global-splitted-banner-week .jm-gb-info-holder div,
+.jm-global-splitted-banner-week .jm-gb-info-holder p{
+    color: white;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    font-weight: 600;    
+}
+.jm-thisweek-global-banner div.jm-text-cta-abrakadabra,
 .jm-thisweek-global-banner a{
     display: none;
 }
@@ -99,7 +120,7 @@ a.jm-available,
     font-size: 0.73em;
     letter-spacing: 0.05em;
 }
-.jm-gb-rotating-wraper div{
+.jm-gb-rotating-wraper > div{
     display: inline-block;
     width: 50%;
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -134,6 +155,13 @@ a.jm-available,
 .jm-gb-rotating-wraper div{
     position: relative;
     width: 100%;
+}
+.jm-global-splitted-banner-week{
+    width: 100%;    
+}
+.jm-gb-info-holder > div{
+    display: inline-block;
+    width: auto; 
 }
 
 /* ....... BANNERS ....... */
@@ -196,6 +224,14 @@ a.jm-cta-button-gb{
 .jm_countdownContainer{
     display: inline-block;
 }
+.jm-gb-info-holder{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 }
 
@@ -237,19 +273,19 @@ a.jm-cta-button-gb{
     width: 82%;
     margin: 0 auto;
 }
-.jm-gb-wrapper-week p > span:nth-of-type(1){
+.jm-gb-wrapper-week p > div:nth-of-type(1){
     width: 38%;
     display: block;
     float: left;
 }
-.jm-gb-wrapper-week p > span:nth-of-type(2){
+.jm-gb-wrapper-week p > div:nth-of-type(2){
     width: 54%;
     display: block;
     float: left;    
     font-weight: bold;
     font-weight: 600;
 }
-.jm-gb-wrapper-week p > span:nth-of-type(3){
+.jm-gb-wrapper-week p > div:nth-of-type(3){
     display: none;
 }
 .jm-mobile-globalBanner-week span{
@@ -347,6 +383,13 @@ p.jm-banner-2-mob a{
 a.jm-available{
     display:block;
 }
+.jm-global-splitted-banner-week .jm-gb-info-holder > div{
+    width: 100%;
+}
+
+.jm-global-splitted-banner-week .jm-text-cta-shop{
+    display: none;
+}
 
 }
 
@@ -398,12 +441,12 @@ function showGlobalBanner_week(){
             '<div class="jm-global-splitted-banner jm-global-splitted-banner-week">'+
                '<div>'+
                     '<a class="jm-cta-hover jm-clickable-image" aria-hidden="true" role="none" tabindex="-1" href="/categories/handbags-drop-longchamp?imc=gb_thedrop&imccat=w21-19-d_handbags-drop-longchamp"></a>'+
-                    '<div>'+
+                    '<div class="jm-gb-info-holder"'+
                         '<p>'+
                             // '<span><img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small.png?$staticlink$"></span>'+
-                            '<span><img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small_black.png?$staticlink$"></span>'+
-                            '<span>DOLCE&GABBANA | UP TO 60% OFF</span>'+ 
-                            '<span class="jm-text-cta">SHOP NOW</span>'+
+                            '<div><img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small_white-2.png?$staticlink$"></div>'+
+                            '<div>DOLCE&GABBANA | UP TO 60% OFF <span><span class="jm-text-cta jm-text-cta-shop">SHOP NOW</span></span></div>'+ 
+                            '<div class="jm-text-cta jm-text-cta-abrakadabra">SHOP NOW</div>'+
                         '</p>'+
                     '</div>'+
                 '</div>'+
@@ -583,29 +626,24 @@ function count_down_drop(){
 window.addEventListener("DOMContentLoaded", function(){
 
 // COUNT DOWN
-$('.jm-thisweek-global-banner span.jm-text-cta').before(
-'<span class="jm_countdownContainer">'+
+$('.jm-thisweek-global-banner div.jm-text-cta-abrakadabra').before(
+'<div class="jm_countdownContainer">'+
       '<div>'+
-        '<p>AVAILABLE IN:</p>'+
+        '<p>ENDS IN:</p>'+
       '</div>'+
       '<div id="dialogheader" class="jm_counter">'+
-        // '<span id="hours">00</span>'+
-        // '<span class="jm-dots">:</span>'+
-        // '<span id="minutes">00</span>'+
-        // '<span class="jm-dots">:</span>'+
-        // '<span id="seconds">00</span>'+
         '<span id="jm_whole_clock" role="timer">00:00:00</span>'+
         '<div id="jm_announce" aria-live="assertive"></div>'+
       //'<span class="jm-dots">:</span>'+
     '</div>'+
-'</span>'
+'</div>'
 )
 // END COUNT DOWN
 
 
   var dd = new Date();
   console.log(dd);
-  var targetDate = "Jul 06 2019";
+  var targetDate = "Jul 07 2019";
   var hh = dd.getHours();
   var utchh = dd.getUTCHours();
   //console.log(utchh);
@@ -614,12 +652,12 @@ $('.jm-thisweek-global-banner span.jm-text-cta').before(
   var nn = dd.getDay();
   //console.log('Date: '+ dd);
   //console.log(String(dd).indexOf(targetDate));
-  if ((String(dd).indexOf(targetDate) === -1) || ( utchh < 14)) {
+  if ((String(dd).indexOf(targetDate) === -1) || ( utchh < 0)) {
     countdown();
-    console.log("not 10am yet");
+    console.log("not midnight yet");
   }
   else{
-    console.log("It is 10am!");
+    console.log("It is Midnight!");
     endCountDown();
   };
 // END END CLOCK
@@ -630,19 +668,26 @@ $('.jm-thisweek-global-banner span.jm-text-cta').before(
 
 function countdown() {
   let now = new Date();
-  let evenDate = new Date(2019, 7, 6);
+  // let evenDate = new Date(2019, 7, 5);
+  let evenDate = new Date("2019-07-07T04:00:00Z"); // UTC time
+  console.log(evenDate);
   let actualTime = now.getTime();
   let eventTime = evenDate.getTime();
   let remTime = eventTime - actualTime;  
 
   let s = Math.floor(remTime / 1000);
   let m = Math.floor(s / 60);
-  let h = Math.floor(m / 60)+10;  
-//  let d = Math.floor(h / 24);
+  let hraw = Math.floor(m / 60);
+  let h = Math.floor(m / 60);
+  let d = Math.floor(hraw / 24);
+    // console.log(actualTime);
+    // console.log(eventTime);
+    // console.log(hraw);
+    // console.log(d);
 
   theCenturyDrop = "The Century Drop: Longchamp: ";
   
-  h %= 24;
+  h %= 48;
   m %= 60;
   s %= 60;
 
@@ -733,7 +778,7 @@ function countdown() {
 
 
 function endCountDown(){
-  $('.jm-thisweek-global-banner span.jm-text-cta').addClass('jm-available');
+  $('.jm-thisweek-global-banner span.jm-text-cta-abrakadabra').addClass('jm-available');
   $('.jm-thisweek-global-banner a').addClass('jm-available');
   // $('.jm-drop-v2').addClass('jm-opacity-1');
   $('.jm_countdownContainer').fadeOut('slow');
