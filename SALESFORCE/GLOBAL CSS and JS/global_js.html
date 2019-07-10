@@ -21,19 +21,30 @@ window.addEventListener("DOMContentLoaded", function(){
     jm_Designer_Header_PDP();
     
   }
+  //SEARCH ONLY
   else if(window.location.href.indexOf("/search") > -1){    
+    //ROOT
     if(window.location.href.indexOf("/search?cgid=root") > -1){
       console.log("In Root Catalog");
       jm_H1_root_catalog(); 
     }
-    else{
+    //SEARCH
+    else{      
       console.log("In Search"); 
+      var searc_title = $('.result-title').text().replace(/(\r\n|\n|\r)/gm,"");
+      
+      if(searc_title.indexOf("Search results for") > -1){
+        console.log("In Search with results"); 
+      }
+      else{
+        console.log("In Search NO results");  
+      }
     }
     
   }
-  
+  //CATEGORIES
   else if(window.location.href.indexOf("/categories/") > -1){
-    console.log("In categories");
+    console.log("In Categories");
     
   };
 
@@ -47,11 +58,11 @@ function jm_Designer_Header_PDP(){
   var jm_brands_exceptions = ['Aimee Kestenberg','Age of Wisdom','Armani','Armani Exchange','Ben Sherman','Billionaire Boys Club','Botkier','Burberry','Calvin Klein','Calvin Klein Jeans','Carters','Champion','Christian Siriano','Citizen','Coach','DKNY','Dolce&Gabbana','Dooney & Bourke','Fossil','Frye','Furla','Gucci','Heritage','Hot Sox','Hugo Boss','Hunter','Kappa','Karl Lagerfeld','Kate Spade','Katy Perry','Kenneth Cole','Kenneth Cole Reaction','Lacoste','Lauren','Lauren Ralph Lauren','Mackage','Marc Jacobs','Marc New York','Max Mara','Members Only','Michael Michael Kors','Michael Kors','Miu Miu','Movado','Nautica','Nike','Nine West','North Face','Peace Love World','Polo Ralph Lauren','Prada','Prada Sport','Ralph Lauren','Reebok','Saint Laurent','Sam.','Skagen','Tahari','Ted Baker','Theory','Timberland','Tommy Hilfiger','Tory Burch','Versace','Zac Zac Posen'];
 
   if($('.product-set-detail').length == 0){
-    console.log('not a product set');
+    console.log('Not a product set');
     designer_brand_raw = $('.product-details-area .product-brand').text();
   }
   else{
-    console.log('product set');
+    console.log('Product set');
     designer_brand_raw = $('.product-set-detail .product-brand').text();
   };
 
@@ -64,19 +75,18 @@ function jm_Designer_Header_PDP(){
       designer_pdp_parameter_details = "?imc=pdp_details&imccat=designer-suppressed_" + designer_pdp_name;
 
 
-  console.log(jm_brands_exceptions.includes(designer_brand_raw));
-  console.log(designer_brand_raw);
+  //console.log(jm_brands_exceptions.includes(designer_brand_raw));
+  //console.log(designer_brand_raw);
 
   
   if((jm_brands_exceptions.includes(designer_brand_raw)) && (window.location.href.indexOf("/products/") > -1)){
-    console.log('supressed designer');
+    console.log('Supressed designer');
     $(".product-brand").wrap("<a href=/search?cgid=root&prefn1=brand&prefv1=" + designer_brand + designer_pdp_parameter_header_filter);
     $('#jm_designer_anchor').attr("href", designer_anchor_url + designer_pdp_parameter_details);
     // $('.plp-page-title').text(designer_brand_raw);
   }
   else{
-    console.log('no supressed designer');
-    console.log(designer_brand);
+    console.log('No supressed designer');
     $(".product-brand").wrap("<a href='/search?prefn1=brand&searchType=designers&prefv1=" + designer_brand + designer_pdp_parameter_header_filter);
 
   };
