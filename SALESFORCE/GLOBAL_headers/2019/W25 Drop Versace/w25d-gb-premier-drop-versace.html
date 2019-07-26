@@ -428,13 +428,14 @@ document.addEventListener("DOMContentLoaded", function() {
 //    global_rotating_message();
   //  global_rotating_message_mobile();
 
-if((window.location.href == "https://development.c21stores.com/home") || (window.location.href == "https://staging-na01-century21.demandware.net/s/C21/home") || (window.location.href == "https://www.c21stores.com/") || (window.location.href == "https://www.c21stores.com") || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/?") > -1)  || (window.location.href.indexOf("c21stores.com/home") > -1) || (window.location.href.indexOf("/C21/home") > -1) || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/#") > -1) || (window.location.href.indexOf("https://www.c21stores.com/?") > -1) || (window.location.href.indexOf("https://www.c21stores.com#") > -1) || (window.location.href.indexOf("clearance") > -1) || (window.location.href.indexOf("cart") > -1)){
-    global_rotating_message();
-    global_rotating_message_mobile();
-    showGlobalBanner();
-}else{
+if((window.location.href == "https://development.c21stores.com/home") || (window.location.href == "https://staging-na01-century21.demandware.net/s/C21/home") || (window.location.href == "https://www.c21stores.com/") || (window.location.href == "https://www.c21stores.com") || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/?") > -1)  || (window.location.href.indexOf("c21stores.com/home") > -1) || (window.location.href.indexOf("/C21/home") > -1) || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/#") > -1) || (window.location.href.indexOf("https://www.c21stores.com/?") > -1) || (window.location.href.indexOf("/categories/drop-versace") > -1) || (window.location.href.indexOf("https://www.c21stores.com#") > -1) || (window.location.href.indexOf("the-century-drop.html") > -1) || (window.location.href.indexOf("cart") > -1)){
     //global_rotating_message();
+    global_rotating_message_mobile();
+    global_rotating_message();
+    showGlobalBanner();
+}else{    
     //showGlobalBanner();
+    //global_rotating_message();
     //global_rotating_message_mobile();
     showGlobalBanner_week();
 }
