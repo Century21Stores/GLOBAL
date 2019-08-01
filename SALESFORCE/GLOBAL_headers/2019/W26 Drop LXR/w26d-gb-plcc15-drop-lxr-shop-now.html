@@ -395,7 +395,7 @@ a.jm-available{
 document.addEventListener("DOMContentLoaded", function() {
 //    global_rotating_message();
   //  global_rotating_message_mobile();
-if((window.location.href == "https://development.c21stores.com/home") || (window.location.href == "https://staging-na01-century21.demandware.net/s/C21/home") || (window.location.href == "https://www.c21stores.com/") || (window.location.href == "https://www.c21stores.com") || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/?") > -1)  || (window.location.href.indexOf("c21stores.com/home") > -1) || (window.location.href.indexOf("/C21/home") > -1) || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/#") > -1) || (window.location.href.indexOf("https://www.c21stores.com/?") > -1) || (window.location.href.indexOf("https://www.c21stores.com#") > -1) || (window.location.href.indexOf("the-century-drop.html") > -1) || (window.location.href.indexOf("cart") > -1)){
+if((window.location.href == "https://development.c21stores.com/home") || (window.location.href == "https://staging-na01-century21.demandware.net/s/C21/home") || (window.location.href == "https://www.c21stores.com/") || (window.location.href == "https://www.c21stores.com") || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/?") > -1)  || (window.location.href.indexOf("c21stores.com/home") > -1) || (window.location.href.indexOf("/C21/home") > -1) || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/#") > -1) || (window.location.href.indexOf("https://www.c21stores.com/?") > -1) || (window.location.href.indexOf("https://www.c21stores.com#") > -1) || (window.location.href.indexOf("/categories/handbags-drop-lxr") > -1) || (window.location.href.indexOf("cart") > -1)){
     //global_rotating_message();
     global_rotating_message_mobile();
     global_rotating_message();
@@ -428,12 +428,12 @@ function showGlobalBanner_week(){
             '<section class="jm-gb-rotating-wraper slideDown">'+
             '<div class="jm-global-splitted-banner jm-global-splitted-banner-week">'+
                '<div>'+
-                    '<a class="jm-cta-hover jm-clickable-image" aria-hidden="true" role="none" tabindex="-1" href="/categories/shoes-drop-dolce-gabbana?imc=gb_thedrop&imccat=w23-19-d_shoes-drop-dolce-gabbana"></a>'+
+                    '<a class="jm-cta-hover jm-clickable-image" aria-hidden="true" role="none" tabindex="-1" href="/categories/handbags-drop-lxr?imc=gb_thedrop&imccat=w26-19-d_handbags-drop-lxr"></a>'+
                     '<div class="jm-gb-info-holder"'+
                         '<p>'+
                             // '<span><img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small.png?$staticlink$"></span>'+
                             '<div><img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small_white-2.png?$staticlink$"></div>'+
-                            '<div>DOLCE&GABBANA | UP TO 60% OFF <span><span class="jm-text-cta jm-text-cta-shop">SHOP NOW</span></span></div>'+                             
+                            '<div>VINTAGE LOUIS VUITTON <span><span class="jm-text-cta jm-text-cta-shop">SHOP NOW</span></span></div>'+                             
                         '</p>'+
                     '</div>'+
                 '</div>'+
@@ -593,14 +593,14 @@ $('.jm-thisweek-global-banner .jm-gb-info-holder p').prepend(
   var dd = new Date();
   console.log("Today's date and time is : ");
   console.log(dd);
-  var targetDate = "Jul 28 2019";
+  var targetDate = "Aug 03 2019";
   var hh = dd.getHours();
   var utchh = dd.getUTCHours();
   //console.log(utchh);
   //console.log(hh);  
   var mm = dd.getUTCMinutes();
   var nn = dd.getDay();
-  //console.log('Date: '+ dd);
+  // console.log('Date: '+ dd);
   //console.log(String(dd).indexOf(targetDate));
   if ((String(dd).indexOf(targetDate) === -1) || ( utchh < 0)) {
     countdown();
@@ -616,9 +616,9 @@ $('.jm-thisweek-global-banner .jm-gb-info-holder p').prepend(
 function countdown() {
   let now = new Date();
   // let evenDate = new Date(2019, 7, 5);
-  let evenDate = new Date("2019-07-29T04:00:00Z"); // TEST
+  let evenDate = new Date("2019-08-03T04:00:00Z"); // TEST
   //let evenDate = new Date("2019-07-10T04:00:00Z"); // UTC time
-  console.log(evenDate);
+  // console.log(evenDate);
   let actualTime = now.getTime();
   let eventTime = evenDate.getTime();
   let remTime = eventTime - actualTime;  
@@ -632,7 +632,7 @@ function countdown() {
     // console.log(eventTime);
     // console.log(hraw);
     // console.log(d);
-  theCenturyDrop = "The Century Drop: Longchamp: ";
+  theCenturyDrop = "The Century Drop: VINTAGE LOUIS VUITTON: ";
   
   h %= 96;
   m %= 60;
@@ -668,7 +668,7 @@ function countdown() {
       if(s > 10){
       //more than 10 seconds
         if(s % 10 === 0){
-          console.log(jm_timer_annoucer_str_less_1m);
+          // console.log(jm_timer_annoucer_str_less_1m);
           document.querySelector('#jm_announce').textContent = jm_timer_annoucer_str_less_1m;
           $('.jm_countdownContainer').addClass("jm-highlight");
         }
