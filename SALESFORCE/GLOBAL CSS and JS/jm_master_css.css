@@ -1,9 +1,100 @@
-/* OVERWRITE */
-.jm-landing-page header{
-	position: initial;
+/* -------- GENERAL ---------- */
+figure{
+    margin: 0 auto;
 }
-.jm-landing-page img{
-	display: block;
-	width: 100%;
+header ~ .container .jm-landing-page a.jm-text-cta-light:not(.btn-primary):not(.btn-outline-primary){
+    color: white;
+    border-bottom: solid 1px;
 }
-/* END OVERWRITE */
+header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outline-primary){
+    color: white;
+}
+
+/* ------- END GENERAL ------- */
+
+/* --------- ALL CONTENT BLOCKS --------- */
+.jmr-all-cb{
+	position: relative;
+}
+.jmr-all-wrapper article{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;   
+}
+.jmr-all-wrapper article > div{
+    width: 100%;	
+}
+.jmr-all-wrapper article h2,
+.jmr-all-wrapper article h3,
+.jmr-all-wrapper article p{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;    
+    letter-spacing: 0.05em;
+    line-height: 1;
+    margin: 0;
+}
+/* ------- END ALL CONTENT BLOCKS ------- */
+
+
+/* ------- BB ------- */
+#jm-bb-disclaimer:target {
+    outline: 2px solid #51aeff;
+}
+.jm-bb-disclaimer{
+    font-size: 0.23em;
+    width: 94%;
+    margin: 0 auto;
+    letter-spacing: 0;
+    line-height: 1.5;
+    text-align: left;
+}
+.jmr-bb-wrapper{
+    background-size: cover;
+    background-position: 50% 0;
+    position:relative;
+    text-align:center;    
+}
+.plp-wrapper .product-search-wrapper > div.search-banner{
+    width: 100%;
+    -ms-flex-order: -1;
+    order: -1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    display: block !important;
+    height: 100% !important;
+    padding: 0;
+}
+.jmr-bb-ctas{
+	height: 100%;
+    display: inherit;
+    margin: 3% 0 0;
+}
+/* ----- END BB ----- */
+
+
+@media screen and (min-width: 700px){
+
+
+}
+
+
+@media screen and (min-width: 769px){
+
+/* ------- BB ------- */
+.plp-wrapper .product-search-wrapper > div.search-banner{
+    padding: 0 1.5em;
+}
+/* ----- END BB ----- */
+}
