@@ -1,5 +1,4 @@
-<!-- w27d-gb-denied-drop-prada - xtra40 & Drop CLOCK - JuanMa - 08.07.19 -->
-
+<!-- w27d-gb-denied-drop-prada - xtra40 & Drop NO CLOCK - JuanMa - 08.07.19 -->
 
 <style>
  /* OVERWRITE */
@@ -95,6 +94,9 @@
     letter-spacing: 0.05em;
     font-weight: bold;
     font-weight: 600;    
+}
+.jm-global-splitted-banner-week .jm-text-cta-shop{
+    font-size: 0.87em;
 }
 /*.jm-thisweek-global-banner div.jm-text-cta-abrakadabra,
 .jm-thisweek-global-banner a{
@@ -229,9 +231,12 @@ a.jm-cta-button-gb{
 /* End Weekly global banner */
 p.jm-gb-disclarimer-wrapper{
     font-size: 0.5em;
-    padding: 0 8% 0 0;	
+    padding: 0 8% 0 0;  
 }
-
+.jm-cta-text-gb{
+    position: relative;
+    z-index: 99;
+}
 
 }
 @media (min-width:1100px) {
@@ -370,13 +375,13 @@ p.jm-banner-2-mob a{
     font-weight: bold;
     margin: 1% 0;    
 }
-.jm-global-splitted-banner-week .jm-text-cta-shop{
+/*.jm-global-splitted-banner-week .jm-text-cta-shop{
     display: none;
-}
+}*/
 .jm-mobile-gb-h3 .jm-text-cta{
     font-size: 2vw;
     display: inline-block;
-    margin: 0 0 0 4%;	
+    margin: 0 0 0 4%;   
 }
 /* End Weekly global banner */
 .jm_countdownContainer{
@@ -396,11 +401,12 @@ p.jm-banner-2-mob a{
 a.jm-available{
     display:block;
 }
+.jm-thisweek-global-banner .jm-gb-info-holder > div:nth-of-type(2){
+    width: 100%;
+}
+
 }
 </style>
-
-
-
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -439,12 +445,11 @@ function showGlobalBanner_week(){
             '<div class="jm-global-splitted-banner jm-global-splitted-banner-week">'+
                '<div>'+
                     '<a class="jm-cta-hover jm-clickable-image" aria-hidden="true" role="none" tabindex="-1" href="/categories/handbags-drop-prada?imc=gb_thedrop&imccat=w27-19-d_handbags-drop-prada"></a>'+
-                    '<div class="jm-gb-info-holder"'+
-                        '<p>'+
-                            // '<span><img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small.png?$staticlink$"></span>'+
-                            '<div><img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small_white-2.png?$staticlink$"></div>'+
-                            '<div>PRADA | UP TO 50% OFF <span><span class="jm-text-cta jm-text-cta-shop">SHOP NOW</span></span></div>'+                             
-                        '</p>'+
+                    '<div class="jm-gb-info-holder">'+
+                             // '<span><img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small.png?$staticlink$"></span>'+
+                            '<div><img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small_white-2.png?$staticlink$"/></div>'+
+                            '<div>PRADA | UP TO 50% OFF </div>'+
+                            '<div><span><span class="jm-text-cta jm-text-cta-shop">SHOP NOW</span></span></div>'+
                     '</div>'+
                 '</div>'+
             '</div>'+
@@ -594,7 +599,7 @@ function global_rotating_message_mobile(){
 
 
 <script>
-count_down_drop();
+//count_down_drop();
 function count_down_drop(){
 // END CLOCK
 window.addEventListener("DOMContentLoaded", function(){

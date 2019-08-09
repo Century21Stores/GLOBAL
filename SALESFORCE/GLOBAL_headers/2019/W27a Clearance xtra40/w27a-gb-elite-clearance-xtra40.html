@@ -1,4 +1,4 @@
-<!-- w27a-gb-elite-clearance-xtra40 - CLEARANCE ELITE GB - JuanMa - 08.02.19 -->
+<!-- w27a-gb-elite-clearance-xtra40 - CLEARANCE ELITE GB - JuanMa - 08.08.19 -->
 
 <style>
  /* OVERWRITE */
@@ -13,15 +13,12 @@
     line-height: 0em;
     margin: 0;
 }
-
 .header-banner .col-12{
     padding: 0;
 }
 /* END OVERWRITE */
-
 .jm-cta-all{
     position: absolute;
-    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -33,7 +30,6 @@
     margin: 0.5em 0 0;
     display: inline-block;
 }
-
 .jm-gb-wrapper{
     position: relative;
     text-align: center;
@@ -54,7 +50,6 @@
 .jm-gb-wrapper p span.jm-smaller{
     font-size: 1.3em;
 }
-
 /* splited banner */
 .jm-global-splitted-banner a{
     width: 100%;
@@ -64,30 +59,55 @@
 .jm-global-splitted-banner{
     background: #f6f4f5;
 }
-.jm-global-splitted-banner-week{
-    background: #2e541a;
-}
-.jm-global-splitted-banner-week span{
-    margin: 0 3%;
-}
 .jm-credit-card-img{
-    width: 10%;
-    margin: 0 7% 0 0;    
-}
-.jm-global-splitted-banner-week img{
-    width: 15%;
+    width: 7%;
+    margin: 0 6% 0 0;    
 }
 /* end splited banner */
-.jm-cta-text-gb{
-    font-size: 0.5em;
-    margin: 0 0 0 3%;
-    padding: 0;
-    position: relative;
-    z-index: 999;
+/* Weekly global banner */
+.jm-global-splitted-banner-week{
+    background: #000000;
 }
-
+.jm-global-splitted-banner-week p > span{
+    margin: 0 3%;
+    display: inline-block;
+}
+.jm-global-splitted-banner-week img{
+    width: 100%;
+}
+.jm-thisweek-global-banner .jm-gb-info-holder > div:nth-of-type(1){
+    width: 7%;
+}
+.jm-thisweek-global-banner .jm-gb-info-holder > div:nth-of-type(2){
+    width: 33em;
+}
+.jm-thisweek-global-banner .jm-gb-info-holder > div:nth-of-type(2) > span{
+    display: block;
+    line-height: 1;
+}
+.jm-thisweek-global-banner .jm-gb-info-holder > div:nth-of-type(2) > span span.jm-text-cta{
+    font-size: 0.78em;    
+}
+.jm-global-splitted-banner-week .jm-gb-info-holder div,
+.jm-global-splitted-banner-week .jm-gb-info-holder p{
+    color: white;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    font-weight: 600;    
+}
+.jm-global-splitted-banner-week .jm-text-cta-shop{
+    font-size: 0.87em;
+}
+/*.jm-thisweek-global-banner div.jm-text-cta-abrakadabra,
+.jm-thisweek-global-banner a{
+    display: none;
+}*/
+/* End Weekly global banner */
 @media (min-width:700px) {
-
+a.jm-available,
+.jm-thisweek-global-banner span.jm-available{
+    display:inline-block;
+}
 .jm-gb-wrapper p{
     font-weight: bold;
     font-size: 1.3em;
@@ -96,7 +116,7 @@
     font-size: 0.73em;
     letter-spacing: 0.05em;
 }
-.jm-gb-rotating-wraper div{
+.jm-gb-rotating-wraper > div{
     display: inline-block;
     width: 50%;
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -109,16 +129,9 @@
 .jm-gb-rotating-wraper div.jm-left{
     border-right: solid 1px white;
 }
-/*.jm-gb-rotating-wraper div:first-of-type{
-    background: red;
-    background-image: url('https://c21stores-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMTEvMjkvMTYvMzQvMzMvNDczLzAxXzEyV2VlazJfR2xvYmFsQWRfQ2VudHJ1eUNhc2guanBnIl1d/01_12Week2_GlobalAd_CentruyCash.jpg?sha=32aa666305f848d8');
-    background-size: cover;
-    background-position: 50% 0;
-}*/
 .jm-gb-rotating-wraper div p{
-    line-height: 1;
+    line-height: 1.3;
 }
-
 .jm-gb-wrapper section{
     font-size: 1.1vw;
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -129,15 +142,20 @@
     width: 100%;
 }
 .jm-gb-rotating-wraper div{
-    position: relative;
+/*    position: relative;*/
     width: 100%;
 }
-
+.jm-global-splitted-banner-week{
+    width: 100%;    
+}
+.jm-gb-info-holder > div{
+    display: inline-block;
+    width: auto; 
+}
 /* ....... BANNERS ....... */
 .jm-gb-rotating-wraper div.jm-banner-1{
     background: #000000;
 }
-
 .jm-gb-rotating-wraper div.jm-banner-1 p,
 .jm-global-splitted-banner p{
     color: #ffffff;
@@ -155,9 +173,8 @@
 }
 .jm-global-splitted-banner-week p,
 .jm-global-splitted-banner-week a{
-    color: #ffffff;    
+    color: #000000;    
 }
-
 .jm-gb-rotating-wraper div.jm-banner-2{
   width: 100%;
   background: #b31e34;
@@ -177,7 +194,6 @@
     width: 100%;
 }
 /* ....... END BANNERS ....... */
-
 .jm-gb-rotating-wraper div.jm-full-banner{
     width: 100%;
 }
@@ -188,23 +204,51 @@ a.jm-cta-button-gb{
     display: initial;
     margin: 0 0 0 3%;
     padding: 0.5% 2%;
-    font-size: 1em;
+    font-size: 0.7em;
+}
+/* Counter Clock */
+.jm_countdownContainer{
+    position: relative;
+    display: inline-block;
+    padding: 0 1em 1.33em;
+}
+.jm-gb-info-holder{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* End Counter Clock */
+/* Weekly global banner */
+.jm-thisweek-global-banner div.jm_counter{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;    
+}
+/* End Weekly global banner */
+p.jm-gb-disclarimer-wrapper{
+    font-size: 0.5em;
+    padding: 0 8% 0 0;  
+}
+.jm-cta-text-gb{
+    position: relative;
+    z-index: 99;
 }
 
 }
-
 @media (min-width:1100px) {
 .jm-gb-wrapper section{
     font-size: 1em;
 }
 a.jm-cta-button-gb{
     font-size: 0.53em;
-    padding: 0.5% 1%;
+    padding: 0.3% 1%;
 }
-
 }
 /* .......... BIGGER SCREENS .......... */
-
 @media (max-width:700px) {
 .jm-mobile-globalBanner .jm-gb-wrapper{
     display: block;
@@ -218,36 +262,6 @@ a.jm-cta-button-gb{
 }
 .jm-banner-1-mob {
     background: #f6f4f5;
-}
-.jm-mobile-globalBanner-week .jm-gb-wrapper-week{
-    background: #2e541a;
-}
-.jm-mobile-globalBanner-week .jm-gb-wrapper-week p{
-    overflow: auto;
-    padding: 2% 0 3%;    
-}
-
-.jm-gb-wrapper-week img{
-    width: 82%;
-    margin: 0 auto;
-}
-.jm-gb-wrapper-week p > span:nth-of-type(1){
-    width: 38%;
-    display: block;
-    float: left;
-}
-.jm-gb-wrapper-week p > span:nth-of-type(2){
-    width: 54%;
-    display: block;
-    float: left;    
-    font-weight: bold;
-    font-weight: 600;
-}
-.jm-gb-wrapper-week p > span:nth-of-type(3){
-    display: none;
-}
-.jm-mobile-globalBanner-week span{
-
 }
 .jm-banner-2-mob{
     background: #b31e34;
@@ -296,16 +310,104 @@ p.jm-banner-2-mob a{
     left: 0;
     z-index: 99;
 }
-.header-banner .close-button{
+/* Weekly global banner */
+.jm-mobile-globalBanner-week .jm-gb-wrapper-week{
+    background: #b2e9fe;
+}
+.jm-mobile-globalBanner-week .jm-gb-wrapper-week p{
+    overflow: auto;
+    padding: 2% 0 3%;    
+}
+.jm-gb-wrapper-week img{
+    width: 82%;
+    margin: 0 auto;
+}
+.jm-gb-wrapper-week p > div:nth-of-type(1){
+    width: 38%;
+    display: block;
+    float: left;
+}
+.jm-gb-wrapper-week p > div:nth-of-type(2){
+    width: 54%;
+    display: block;
+    float: left;    
+    font-weight: bold;
+    font-weight: 600;
+}
+.jm-gb-wrapper-week p > div:nth-of-type(3){
+    display: none;
+}
+.jm-thisweek-global-banner p{
+    letter-spacing: 0.09em;
+    font-size: 0.87em;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
+}
+.jm-mobile-globalBanner-week a,
+.jm-mobile-globalBanner-week span{
+    color: #000000;
+}
+.jm-thisweek-global-banner a,
+.jm-thisweek-global-banner p,
+.jm-thisweek-global-banner span{
+    color: #ffffff;   
+}
+.jm-thisweek-global-banner{
+    font-size: 3.7vw;
+}
+.jm-thisweek-global-banner .jm-gb-info-holder > div:nth-of-type(1){
+    width: 100%;
+}
+.jm-thisweek-global-banner img{
+    width: 29%;
+}
+.jm-global-splitted-banner-week{
+    padding: 2% 0%;
+}
+.jm-global-splitted-banner-week .jm-gb-info-holder > div{
+    width: 100%;
+}
+.jm-thisweek-global-banner .jm-gb-info-holder > div:nth-of-type(2){
+    font-size: 0.9em;
+    font-weight: bold;
+    margin: 1% 0;    
+}
+/*.jm-global-splitted-banner-week .jm-text-cta-shop{
+    display: none;
+}*/
+.jm-mobile-gb-h3 .jm-text-cta{
+    font-size: 2vw;
+    display: inline-block;
+    margin: 0 0 0 4%;   
+}
+/* End Weekly global banner */
+.jm_countdownContainer{
+    display: block;
+    /* width: 73%; */
+    margin: 2% 0 0% auto !important;
+    line-height: 1;
+    background: #4c4c4ca3;
+    padding: 1% 0;   
+}
+/*.header-banner .close-button{
     display: block;
 }
 .header-banner .close{
     color: black;
+}*/
+a.jm-available{
+    display:block;
+}
+.jm-thisweek-global-banner .jm-gb-info-holder > div:nth-of-type(2){
+    width: 100%;
 }
 
 }
-
 </style>
+
 
 
 
@@ -414,12 +516,17 @@ function showGlobalBanner(){
 function global_rotating_message(){
 
     var rotatingMessages = [
-       '<section class="jm-gb-rotating-wraper slideDown">'+
+        '<section class="jm-gb-rotating-wraper slideDown">'+
             '<div class="jm-full-banner jm-banner-2">'+
-                '<a class="jm-cta-all" href="/clearance?imc=gb_elite&imccat=w27-19-a_clearance40" aria-hidden="true" role="none" tabindex="-1"></a>'+
-                '<p>SEMI-ANNUAL CLEARANCE EVENT | TAKE AN EXTRA 40% OFF*'+
-                    '<a id="jm_clearance_xtra40" class="btn jm-cta-text jm-cta-text-gb" href="#">INFO/EXCLUSIONS</a>'+
+             '<div>'+
+                '<a class="jm-cta-all" href="/clearance?imc=gb_plcc15&imccat=w27-19-d_clearance40" aria-hidden="true" role="none" tabindex="-1"></a>'+
+                '<p>SEMI-ANNUAL CLEARANCE EVENT | TAKE AN EXTRA 40% OFF<a aria-label="Exlusions apply" id="jm_clearance_xtra40" href="#">*</a>'+
+                    '<a class="btn jm-cta-button jm-cta-button-gb jm-cta-button-solidlight" href="/clearance?imc=gb_plcc15&imccat=w27-19-d_clearance40">SHOP NOW</a>'+
                 '</p>'+
+                '<p class="jm-gb-disclarimer-wrapper">'+
+                    '<a id="jm_clearance_xtra40" class="jm-cta-text jm-cta-text-gb" href="#">INFO/EXCLUSIONS</a>'+
+                '</p>'+
+            '</div>'+
             '</div>'+
         '</section>',
         '<section class="jm-gb-rotating-wraper slideDown">'+
@@ -488,8 +595,9 @@ function global_rotating_message_mobile(){
         '</a>'+
         '</p>',                
         '<p class="jm-mobile-gb-h3 jm-banner-2-mob slideDownMob">'+
-        '<a class="jm-cta-hover" href="/clearance?imc=gb_plcc-elite&imccat=w27-19-a_clearance40">'+
-            '<b>SEMI-ANNUAL CLEARANCE EVENT<br/>TAKE AN EXTRA 40% OFF*</b>'+
+        '<a class="jm-cta-hover" href="/clearance?imc=gb_plcc15&imccat=w27-19-d_clearance40">'+
+            '<b>SEMI-ANNUAL CLEARANCE EVENT <br/>TAKE AN EXTRA 40% OFF<a aria-label="Exlusions apply" id="jm_clearance_xtra40" href="#">*</a>'+
+            '<span class="jm-text-cta jm-text-cta-shop">SHOP NOW</span></b>'+
         '</a>'+
         '</p>',
         '<p class="jm-mobile-gb-h3 jm-banner-1-mob slideDownMob"><b>'+

@@ -13,6 +13,9 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
 /* ------- END GENERAL ------- */
 
 /* --------- ALL CONTENT BLOCKS --------- */
+.jmr-all-cb img{
+	width: 100%;
+}
 .jmr-all-cb{
 	position: relative;
 }
@@ -34,6 +37,7 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
 .jmr-all-wrapper article > div{
     width: 100%;	
 }
+/*  COPY  */
 .jmr-all-wrapper article h2,
 .jmr-all-wrapper article h3,
 .jmr-all-wrapper article p{
@@ -44,10 +48,22 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     line-height: 1;
     margin: 0;
 }
+.jmr-disclaimer{
+    font-size: 0.8em;	
+}
+.jmr-all-wrapper h2.jmrv-header-2,
+.jmrv-header-2{
+    margin: 2% 0 0;
+}
+/* END COPY  */
+
 /* ------- END ALL CONTENT BLOCKS ------- */
 
 
 /* ------- BB ------- */
+.jmr-bb-wrapper{
+    padding-top: calc((190em / 1410) * 100);
+}
 #jm-bb-disclaimer:target {
     outline: 2px solid #51aeff;
 }
@@ -79,13 +95,41 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
 .jmr-bb-ctas{
 	height: 100%;
     display: inherit;
-    margin: 3% 0 0;
+    margin: 2% 0 0;
+}
+.jmr-bb-wrapper article{
+    font-size: 1.88vw;
+}
+.jmr-bb-wrapper article p{
+    margin: 1% 0;
+}
+.jmr-bb-subheader sup{
+    font-size: 1em;
+    top:-0.1em;
+    color: white;
+}
+.jmr-bb-ctas a{
+    font-size: 0.55rem;
+    margin: 1% 1%;
+    min-width: 230px;
+    border: solid 1px;
+}
+.jm-bb-disclaimer{
+    font-size: 0.23em;
+    text-align: left;
 }
 /* ----- END BB ----- */
 
 
 @media screen and (min-width: 700px){
-
+/* ------- BB ------- */
+.jmr-bb-wrapper article{
+    font-size: 1.3vw;
+}
+.jmr-bb-wrapper .jm-bb-disclaimer{
+    font-size: 0.53em;
+}
+/* ----- END BB ----- */
 
 }
 
@@ -97,4 +141,74 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     padding: 0 1.5em;
 }
 /* ----- END BB ----- */
+}
+
+
+
+@media screen and (min-width: 1100px){
+/* ------- BB ------- */
+.jmr-bb-wrapper article{
+    font-size: 0.73em;
+}
+.jmr-bb-ctas{
+    padding: 0 5vw;
+}
+.jmr-bb-ctas a{
+    font-size: 0.9vw;
+    min-width: 21vw;
+    margin: 1% 0.3vw;
+}
+/* ----- END BB ----- */
+
+}
+
+
+@media screen and (min-width: 1300px){
+/* ------- BB ------- */
+.jmr-bb-wrapper{
+    padding-top: calc((250% / 1410) * 100);
+}
+.jmr-bb-ctas{
+    padding: 0 1vw;
+}
+.jmr-bb  .jm-bb-disclaimer{
+    font-size: 0.63em;
+}
+.jmr-bb-ctas a{
+    font-size: 0.64vw;
+    min-width: 15vw;
+}
+/* ----- END BB ----- */
+
+}
+
+@media screen and (min-width: 1500px){
+/* ------- BB ------- */
+.jmr-bb-ctas{
+    padding: 0 2em;
+}
+.jmr-bb-ctas a{
+    font-size: 0.6vw;
+    min-width: 14.5vw;
+}
+.jmr-bb  .jm-bb-disclaimer{
+    font-size: 0.73em;
+}
+/* ----- END BB ----- */
+
+}
+
+@media screen and (min-width: 1700px){
+/* ------- BB ------- */
+.jmr-bb-ctas a{
+    font-size: 0.93em;
+    min-width: 23.5em;
+}
+.jmr-bb-ctas a{
+    font-size: 0.93em;
+    min-width: 23.5em;
+    margin: 1%;
+}
+/* ----- END BB ----- */
+
 }
