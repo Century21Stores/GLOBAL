@@ -1,18 +1,16 @@
-<!-- SPECIAL CHARACTERS LIST
-
-(none)              /search?prefn1=brand&searchType=designers&prefv1=Adesso
-(space)             %20
-('47 Brand)         %27
-(Addie & Tate)      %26
-(2(x)IST)           2%28x%29
-(Amanda + Chelsea)  %2B
-(Playtek, LLC)      %2C
-(Re:Named)          %3A
-(Zak!)              %21
- 
- -->
-
 <script>
+// Global JS - JuanMa - 8.13.19
+
+// (none)              /search?prefn1=brand&searchType=designers&prefv1=Adesso
+// (space)             %20
+// ('47 Brand)         %27
+// (Addie & Tate)      %26
+// (2(x)IST)           2%28x%29
+// (Amanda + Chelsea)  %2B
+// (Playtek, LLC)      %2C
+// (Re:Named)          %3A
+// (Zak!)              %21
+
 window.addEventListener("DOMContentLoaded", function(){
 
   //PDP ONLY
@@ -51,7 +49,7 @@ window.addEventListener("DOMContentLoaded", function(){
 });
 
 
-// DESIGNER HEADER
+// [START] Designer Header
 function jm_Designer_Header_PDP(){
 
   //exceptions
@@ -93,12 +91,33 @@ function jm_Designer_Header_PDP(){
 
 }
 
+
 function jm_H1_root_catalog(){
   var jm_brand_name = $('.filter-area .filter-bar ul.clearfix li:nth-of-type(2) a > .refinement-name')[0].innerText;
   $('h1').text(jm_brand_name);
 }
 
-// END DESIGNER HEADER
+// [END] Designer Header
+
+
+// [START] Scrolling disclaimer browse banner
+function jm_scroll_bb_disclaimer(this_id){
+    if ($(window).width() < 700) {
+        jm_offset = 200;
+    }
+    else{
+        jm_offset = 543;
+    }    
+        console.log(this_id);
+        $('body, html').animate({
+            scrollTop: $('#jm-bb-disclaimer').offset().top - jm_offset
+        },1000);
+}
+function jm_scroll_bb_disclaimer_back(this_class){
+    $('#jm_drop_main').focus();    
+}
+// [END] Scrolling disclaimer browse banner
+
 </script>
 
 <!-- https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&srule=top-sellers&prefv1=Billionaire%20Boys%20Club -->
