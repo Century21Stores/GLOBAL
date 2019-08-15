@@ -1,4 +1,3 @@
-<script>
 // Global JS - JuanMa - 8.13.19
 
 // (none)              /search?prefn1=brand&searchType=designers&prefv1=Adesso
@@ -11,6 +10,8 @@
 // (Re:Named)          %3A
 // (Zak!)              %21
 
+
+// [START] Calls
 window.addEventListener("DOMContentLoaded", function(){
 
   //PDP ONLY
@@ -47,7 +48,7 @@ window.addEventListener("DOMContentLoaded", function(){
   };
 
 });
-
+// [END] Calls
 
 // [START] Designer Header
 function jm_Designer_Header_PDP(){
@@ -118,11 +119,10 @@ function jm_scroll_bb_disclaimer_back(this_class){
 }
 // [END] Scrolling disclaimer browse banner
 
-</script>
+// https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&srule=top-sellers&prefv1=Billionaire%20Boys%20Club
+// https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&prefv1=Billionaire%20Boys%20Club
+// https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&prefv1=Billionaire%20Boys%20Club
+// https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&prefv1=Billionaire%20Boys%20Club
+// https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&prefn2=divisionCode&srule=top-sellers&prefv1=Calvin%20Klein&prefv2=Men
+// https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&prefn2=divisionCode&srule=top-sellers&prefv1=Calvin%20Klein&prefv2=Women
 
-<!-- https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&srule=top-sellers&prefv1=Billionaire%20Boys%20Club -->
-<!-- https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&prefv1=Billionaire%20Boys%20Club -->
-<!-- https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&prefv1=Billionaire%20Boys%20Club -->
-<!-- https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&prefv1=Billionaire%20Boys%20Club -->
-<!-- https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&prefn2=divisionCode&srule=top-sellers&prefv1=Calvin%20Klein&prefv2=Men
-https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&prefn2=divisionCode&srule=top-sellers&prefv1=Calvin%20Klein&prefv2=Women -->

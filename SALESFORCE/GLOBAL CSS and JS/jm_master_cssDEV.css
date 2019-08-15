@@ -19,14 +19,6 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
 .jmr-all-cb{
 	position: relative;
 }
-.jmr-clickable-image{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;    
-}
 .jmr-all-wrapper article{
     position: absolute;
     width: 100%;
@@ -47,9 +39,9 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
 }
 
 /* [START] COPY  */
-.jmr-all-cb article h2,
-.jmr-all-cb article h3,
-.jmr-all-cb article p{
+.jmr-all-wrapper article h2,
+.jmr-all-wrapper article h3,
+.jmr-all-wrapper article p{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;    
@@ -67,93 +59,27 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
 /* [END] COPY  */
 
 /* [START] CTAs  */
-
-.jmr-ctas .jmr-cta-button,
-.jmr-ctas .jmr-cta-button{
+span.jmr-ctas .jmr-cta-button{
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;    
     font-size: 0.83em;
-    min-width: 206px;
+    min-width: 213px;
     font-weight: bold;
     font-weight: 700;
     letter-spacing: 0.1em;
+    font-weight: bold;
     padding: 0.63em 2em;
     border: solid 2px;
+    background: none;
     position: relative;
     z-index: 2;        
 }
 
-.jmr-cta-button-dark,
-header ~ .jmr-ctas span.jmr-cta-button-dark,
-header ~ .jmr-ctas a.jmr-cta-button-dark{
-    background: none;
-    color:#000000 !important;
-    border-color: #000000;
-}
-.jmr-cta-button-dark:hover,
-.jmr-cta-button-dark:focus,
-header ~ div.container span.jmr-cta-button-dark:hover,
-header ~ div.container a.jmr-cta-button-dark:hover,
-header ~ div.container span.jmr-cta-button-dark:focus,
-header ~ div.container a.jmr-cta-button-dark:focus{
-    background: #000000;
-    color:#ffffff !important;
-    border-color: #000000;
-}
-.jmr-cta-button-soliddark,
-header ~ .jmr-ctas span.jmr-cta-button-soliddark,
-header ~ .jmr-ctas a.jmr-cta-button-soliddark{
-    background: #000000;
-    color:#ffffff !important;
-    border-color: #000000 !important;
-}
-.jmr-cta-button-soliddark:hover,
-.jmr-cta-button-dark:focus,
-header ~ div.container span.jmr-cta-button-soliddark:hover,
-header ~ div.container a.jmr-cta-button-soliddark:hover,
-header ~ div.container span.jmr-cta-button-soliddark:focus,
-header ~ div.container a.jmr-cta-button-soliddark:focus{
-    background: #ffffff;
-    color:#000000 !important;
-    border-color: #000000 !important;
-}
-
-header ~ div.container span.jmr-cta-button-light,
-header ~ div.container a.jmr-cta-button-light,
-span.jmr-cta-button-light,
-a.jmr-cta-button-light{
-    background: none;
-    color:#ffffff !important;
-    border-color: #ffffff;
-}
-.jmr-cta-button-light:hover,
-.jmr-cta-button-light:focus,
-header ~ div.container span.jmr-cta-button-light:hover,
-header ~ div.container a.jmr-cta-button-light:hover,
-header ~ div.container span.jmr-cta-button-light:focus,
-header ~ div.container a.jmr-cta-button-light:focus{
-    background: #ffffff;
-    color:#000000 !important;
-    border-color: #ffffff;
-}
-.jmr-cta-button-solidlight,
-header ~ div.container span.jmr-cta-button-solidlight,
-header ~ div.container a.jmr-cta-button-solidlight,
-a.jmr-cta-button-solidlight{
-    background: #ffffff;
-    color:#000000 !important;
-    border-color: #ffffff !important;
-}
-.jmr-cta-button-solidlight:hover,
-.jmr-cta-button-solidlight:focus,
-header ~ div.container span.jmr-cta-button-solidlight:hover,
-header ~ div.container a.jmr-cta-button-solidlight:hover,
-header ~ div.container span.jmr-cta-button-solidlight:focus,
-header ~ div.container a.jmr-cta-button-solidlight:focus{
-    background: #000000;
-    color:#ffffff !important;
-    border-color: #ffffff !important;
+header ~ .container span.jmr-cta-button-dark:hover,
+header ~ .container a.jmr-cta-button-dark:hover{
+    background: black;
+    color:white;
+    border-color: black;
 }
 
 /* [END] CTAs  */
@@ -162,17 +88,6 @@ header ~ div.container a.jmr-cta-button-solidlight:focus{
 
 
 /* --------- [START] Browse Banners --------- */
-.plp-wrapper .product-search-wrapper > div.search-banner{
-    width: 100%;
-    -ms-flex-order: -1;
-    order: -1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    max-width: 100%;
-    display: block !important;
-    height: 100% !important;
-    padding: 0;
-}
 .jmr-bb-wrapper{
     padding-top: calc((190em / 1410) * 100);
 }
@@ -192,6 +107,17 @@ header ~ div.container a.jmr-cta-button-solidlight:focus{
     background-position: 50% 0;
     position:relative;
     text-align:center;    
+}
+.plp-wrapper .product-search-wrapper > div.search-banner{
+    width: 100%;
+    -ms-flex-order: -1;
+    order: -1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    display: block !important;
+    height: 100% !important;
+    padding: 0;
 }
 .jmr-bb-ctas{
 	height: 100%;
@@ -214,32 +140,9 @@ header ~ div.container a.jmr-cta-button-solidlight:focus{
     margin: 1% 1%;
     min-width: 230px;
     border: solid 1px;
-    font-weight: bold;
-    font-weight: 700;
 }
 /* --------- [END] Browse Banners --------- */
 
-
-/* --------- [START] HERO --------- */
-.jmr-hero-cb .jmr-ctas{
-    margin: 5% 0 0;
-    display: block;
-}
-
-.jmr-hero-cb article .jm-header-2{
-    font-size: 3em;
-    font-weight: bold;
-    font-weight: 600;
-    line-height: 1;
-    letter-spacing: 0.05em;
-}
-.jmr-hero-cb article .jm-header-3{
-    font-size: 1.4em;
-    font-weight: normal;
-    font-weight: 500;
-    margin: 1% 0 0;
-}
-/* --------- [END] HERO --------- */
 
 @media screen and (min-width: 700px){
 /* --------- [START] Browse Banners --------- */
@@ -335,39 +238,4 @@ header ~ div.container a.jmr-cta-button-solidlight:focus{
 }
 /* --------- [END] Browse Banners --------- */
 
-}
-
-
-@media screen and (max-width: 700px){
-
-/* [START] CTAs  */
-.jmr-all-cb{
-    margin: 0 0 8%;
-}
-.jmr-all-cb article{
-    font-size: 2.6vw;
-    text-align: center;
-    margin: 3% 0 0;
-}
-.jmr-ctas{
-    text-align: center;
-}
-.jmr-ctas a.jmr-cta-button,
-.jmr-ctas span.jmr-cta-button{
-    border-color: #000000 !important;
-    color: #000000 !important;
-    background: #ffffff !important;
-    min-width: 45%;
-    font-size: 2.7vw;
-}
-
-.jmr-ctas a:hover,
-.jmr-ctas a:focus,
-.jmr-ctas span:hover,
-.jmr-ctas span:focus{
-    border-color: #000000 !important;
-    color: #ffffff !important;
-    background: #000000 !important;
-}
-/* [END] CTAs  */
 }
