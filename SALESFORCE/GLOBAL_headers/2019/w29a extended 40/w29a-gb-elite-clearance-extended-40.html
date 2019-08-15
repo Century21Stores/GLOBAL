@@ -1,5 +1,4 @@
-<!-- w28f-gb-denied-clearance-40-last-chance - CLEARANCE40 CLOCK - JuanMa - 08.13.19 -->
-
+<!-- w29a-gb-elite-clearance-extended-40 - ELITE GB - JuanMa - 08.15.19 -->
 
 <style>
  /* OVERWRITE */
@@ -122,8 +121,8 @@
     padding: 1.3% 1%;
     margin: 0;
 }
-.jm-global-splitted-banner-week div.jmr-add-clock{
-    font-size: 1.93em;
+.jmr-add-clock{
+    font-size: 1.3em;
 }
 .jm-global-splitted-banner-week .jm-gb-info-holder{
     line-height: 1;
@@ -238,8 +237,7 @@ a.jm-cta-button-gb{
 .jm_countdownContainer{
     position: relative;
     display: inline-block;
-    padding: 0 0 0.9em;
-    margin: 1% 0 0;
+    padding: 0 1em 1.33em;
 }
 .jm-gb-info-holder{
     display: -webkit-box;
@@ -430,7 +428,7 @@ p.jm-banner-2-mob a{
 .jm_countdownContainer{
     display: block;
     /* width: 73%; */
-    margin: 1% 0 0% auto !important;
+    margin: 2% 0 0% auto !important;
     line-height: 1;
     padding: 1% 0;   
 }
@@ -451,9 +449,8 @@ a.jm-available{
     width: 32%;    
 }
 .jmr-add-clock{
-    text-align: center;
-    margin: 0;
-    font-size: 6vw;
+    text-align: left;
+    margin-left: 11%;
 }
 .jm-message-w29-19{
     display: block;    
@@ -506,9 +503,11 @@ function showGlobalBanner_week(){
                     '<a class="jm-cta-hover jm-clickable-image" aria-hidden="true" role="none" tabindex="-1" href="/clearance?imc=gb_denied&imccat=w27-19-d_clearance40"></a>'+
                     '<div class="jm-gb-info-holder"'+
                         '<div>'+
-                            '<div class="jmr-left-info">SEMI-ANNUAL CLEARANCE EVENT | TAKE AN EXTRA 40% OFF<a aria-label="Exlusions apply" id="jm_clearance_xtra40" href="#">*</a><span>'+
-                                '<div class="jmr-add-clock"></div>'+
-                            '</span></div>'+
+                            '<div class="jmr-left-info"><span class="jm-message-w29-19">NOW EXTENDED!</span>SEMI-ANNUAL CLEARANCE EVENT | TAKE AN EXTRA 40% OFF<a aria-label="Exlusions apply" id="jm_clearance_xtra40" href="#">*</a>'+
+                            // '<span>'+
+                            //     '<div class="jmr-add-clock"></div>'+
+                            // '</span>'+
+                            '</div>'+
                             '<div class="jmr-right-cta"><a href="/clearance?imc=gb_denied&imccat=w27-19-d_clearance40" class="btn jm-cta-button jm-cta-button-solidlight">SHOP NOW</a></div>'+
                         '</div>'+
                     '</div>'+
@@ -522,32 +521,35 @@ function showGlobalBanner_week(){
 
 function showGlobalBanner(){
     $('.header-banner .content').prepend(
+
+
         '<div class="jm-mobile jm-mobile-globalBanner">'+
             '<div class="jm-gb-wrapper">'+
             '<section class="jm-gb-rotating-wraper slideDownMob">'+
                 '<p class="jm-mobile-gb-h3 jm-banner-1-mob slideDownMob"><b>'+
-                    '<a class="jm-cta-hover" href="/c21status.html?imc=gb_denied&imccat=default_c21status-lp">'+
-                    'EARN 1 POINT PER $1 <br/>OR $10 FOR EVERY $500 SPENT'+
+                    '<a class="jm-cta-hover" href="/c21status.html?imc=gb_plcc-elite&imccat=default_c21status-lp">'+
+                    'EARN 4 POINTS PER $1 <br/>OR $10 FOR EVERY $125 SPENT'+
                     '</a>'+
                 '</p>',
             '</section>'+
             '</div>'+
         '</div>'+
+
         '<div class="jmrv-desktop jm-desktop">'+
             '<div class="jm-gb-wrapper">'+
             '<section class="jm-gb-rotating-wraper slideDown">'+
             '<div class="jm-global-splitted-banner">'+            
                '<div class="jm-left">'+
-                    '<a class="jm-cta-hover" href="/shipping-information.html?imc=gb_denied&imccat=default_shipping-lp">'+
+                    '<a class="jm-cta-hover" href="/shipping-information.html?imc=gb_plcc-elite&imccat=default_shipping-lp">'+
                     '<div>'+
-                        '<p>Free shipping on orders $75+</p>'+
+                        '<p>Free shipping on all orders</p>'+
                     '</div>'+
                     '</a>'+
                 '</div>'+
                 '<div class="jm-right">'+
-                    '<a class="jm-cta-hover" href="/c21status.html?imc=gb_denied&imccat=default_c21status-lp">'+
+                    '<a class="jm-cta-hover" href="/c21status.html?imc=gb_plcc-elite&imccat=default_c21status-lp">'+
                     '<div>'+
-                        '<p>EARN 1 POINTS PER $1 OR $10 FOR EVERY $500 SPENT</p>'+
+                        '<p>EARN 4 POINTS PER $1 OR $10 FOR EVERY $125 SPENT</p>'+
                     '</div>'+
                     '</a>'+
                 '</div>'+
@@ -557,30 +559,37 @@ function showGlobalBanner(){
         '</div>'
     );
 }
+
+
 // GLOBAL HEADER ROTATING MESSAGE DESKTOP
 function global_rotating_message(){
     var rotatingMessages = [
         '<section class="jm-gb-rotating-wraper slideDown">'+
             '<div class="jm-full-banner jm-banner-2">'+
-                '<a class="jm-cta-all" href="/clearance?imc=gb_denied&imccat=w22-19-c_clearance85" aria-hidden="true" role="none" tabindex="-1"></a>'+
-                '<p>SEMI-ANNUAL CLEARANCE EVENT UP TO 85% OFF'+
-                    '<a class="btn jm-cta-button jm-cta-button-gb jm-cta-button-solidlight" href="/clearance?imc=gb_denied&imccat=w22-19-c_clearance85">SHOP NOW</a>'+
+             '<div>'+
+                '<a class="jm-cta-all" href="/clearance?imc=gb_elite&imccat=w27-19-d_clearance40" aria-hidden="true" role="none" tabindex="-1"></a>'+
+                '<p>SEMI-ANNUAL CLEARANCE EVENT | TAKE AN EXTRA 40% OFF<a aria-label="Exlusions apply" id="jm_clearance_xtra40" href="#">*</a>'+
+                    '<a class="btn jm-cta-button jm-cta-button-gb jm-cta-button-solidlight" href="/clearance?imc=gb_elite&imccat=w27-19-d_clearance40">SHOP NOW</a>'+
                 '</p>'+
+                '<p class="jm-gb-disclarimer-wrapper">'+
+                	'<a id="jm_clearance_xtra40" class="jm-cta-text jm-cta-text-gb" href="#">INFO/EXCLUSIONS</a>'+
+                '</p>'+
+            '</div>'+
             '</div>'+
         '</section>',
         '<section class="jm-gb-rotating-wraper slideDown">'+
             '<div class="jm-global-splitted-banner">'+            
                '<div class="jm-left">'+
-                    '<a class="jm-cta-hover" href="/shipping-information.html?imc=gb_denied&imccat=default_shipping-lp">'+
+                    '<a class="jm-cta-hover" href="/shipping-information.html?imc=gb_plcc-elite&imccat=default_shipping-lp">'+
                     '<div>'+
-                        '<p>Free shipping on orders $75+</p>'+
+                        '<p>Free shipping on all orders</p>'+
                     '</div>'+
                     '</a>'+
                 '</div>'+
                 '<div class="jm-right">'+
-                    '<a class="jm-cta-hover" href="/c21status.html?imc=gb_denied&imccat=default_c21status-lp">'+
+                    '<a class="jm-cta-hover" href="/c21status.html?imc=gb_plcc-elite&imccat=default_c21status-lp">'+
                     '<div>'+
-                        '<p><img class="jm-credit-card-img" alt="C21STATUS credit card" src="Global/global-banner/c21status-credit-card.png?$staticlink$"/><span>Save 15%</span> on your purchase if approved today*</p>'+
+                        '<p>EARN 4 POINTS PER $1 OR $10 FOR EVERY $125 SPENT</p>'+
                     '</div>'+
                     '</a>'+
                 '</div>'+
@@ -615,19 +624,19 @@ function global_rotating_message(){
 function global_rotating_message_mobile(){
     var rotatingMessages = [        
         '<p class="jm-mobile-gb-h3 jm-banner-1-mob slideDownMob"><b>'+
-        '<a class="jm-cta-hover" href="/shipping-information.html?imc=gb_plccdenied&imccat=default_shipping">'+
-            'FREE SHIPPING <br>ON ORDERS $75+</b>'+
+        '<a class="jm-cta-hover" href="/shipping-information.html?imc=gb_plcc-elite&imccat=default_shipping-lp">'+
+            'FREE SHIPPING <br>ON ALL ORDERS</b>'+
         '</a>'+
         '</p>',                
         // '<p class="jm-mobile-gb-h3 jm-banner-2-mob slideDownMob">'+
-        // '<a class="jm-cta-hover" href="/clearance?imc=gb_plcc15&imccat=w27-19-d_clearance40">'+
+        // '<a class="jm-cta-hover" href="/clearance?imc=gb_elite&imccat=w27-19-d_clearance40">'+
         //     '<b>SEMI-ANNUAL CLEARANCE EVENT <br/>TAKE AN EXTRA 40% OFF<a aria-label="Exlusions apply" id="jm_clearance_xtra40" href="#">*</a>'+
         //     '<span class="jm-text-cta jm-text-cta-shop">SHOP NOW</span></b>'+
         // '</a>'+
         // '</p>',
         '<p class="jm-mobile-gb-h3 jm-banner-1-mob slideDownMob"><b>'+
-        '<a class="jm-cta-hover" href="/c21status.html?imc=gb_plcc-denied&imccat=default_c21status-lp">'+
-            'EARN 1 POINT PER $1 <br/>OR $10 FOR EVERY $500 SPENT'+
+        '<a class="jm-cta-hover" href="/c21status.html?imc=gb_plcc-elite&imccat=default_c21status-lp">'+
+            'EARN 4 POINTS PER $1 <br/>OR $10 FOR EVERY $125 SPENT'+
         '</a>'+
         '</p>',
     ];
@@ -800,4 +809,4 @@ function endCountDown(){
   $('.jm-text-cta-shop').fadeOut('slow');
 }
 }
-</script>   
+</script>      

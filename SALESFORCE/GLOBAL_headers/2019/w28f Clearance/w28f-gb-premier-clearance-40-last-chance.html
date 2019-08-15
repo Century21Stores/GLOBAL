@@ -3,6 +3,12 @@
 
 <style>
  /* OVERWRITE */
+ .jm-message-w29-19{
+    font-size: 1.4em;
+    margin: 0 0 0.6%;
+    font-weight: bold;
+    font-weight: 700;    
+ }
 .header-banner .close-button{
     z-index: 999999999999;
     position: absolute;
@@ -100,9 +106,11 @@
 .jm-global-splitted-banner-week .jm-gb-info-holder div,
 .jm-global-splitted-banner-week .jm-gb-info-holder p{
     color: white;
-    letter-spacing: 0.05em;
+    /*letter-spacing: 0.05em;*/
     font-weight: bold;
-    font-weight: 600;    
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    font-size: 0.87em;       
 }
 
 .jm-global-splitted-banner-week .jm-gb-info-holder a.jm-cta-button{
@@ -114,8 +122,8 @@
     padding: 1.3% 1%;
     margin: 0;
 }
-.jmr-add-clock{
-    font-size: 1.3em;
+.jm-global-splitted-banner-week div.jmr-add-clock{
+    font-size: 1.93em;
 }
 .jm-global-splitted-banner-week .jm-gb-info-holder{
     line-height: 1;
@@ -230,7 +238,8 @@ a.jm-cta-button-gb{
 .jm_countdownContainer{
     position: relative;
     display: inline-block;
-    padding: 0 1em 1.33em;
+    padding: 0 0 0.9em;
+    margin: 1% 0 0;
 }
 .jm-gb-info-holder{
     display: -webkit-box;
@@ -393,7 +402,7 @@ p.jm-banner-2-mob a{
 }
 .jm-thisweek-global-banner .jm-gb-info-holder > div:nth-of-type(1){
     width: 100%;
-    font-size: 2.6vw;
+    font-size: 2.4vw;
 }
 .jm-thisweek-global-banner img{
     width: 29%;
@@ -421,7 +430,7 @@ p.jm-banner-2-mob a{
 .jm_countdownContainer{
     display: block;
     /* width: 73%; */
-    margin: 2% 0 0% auto !important;
+    margin: 1% 0 0% auto !important;
     line-height: 1;
     padding: 1% 0;   
 }
@@ -433,17 +442,21 @@ a.jm-available{
 }
 .jm-thisweek-global-banner .jm-gb-info-holder > div:nth-of-type(2){
     width: 100%;
-    position: absolute;
+/*    position: absolute;
     bottom: 5%;
-    right: 12%;
-    text-align: right;    
+    right: 12%;*/
+    text-align: center;    
 }
 .jm-global-splitted-banner-week .jm-gb-info-holder a.jm-cta-button{
     width: 32%;    
 }
 .jmr-add-clock{
-    text-align: left;
-    margin-left: 11%;
+    text-align: center;
+    margin: 0;
+    font-size: 6vw;
+}
+.jm-message-w29-19{
+    display: block;    
 }
 
 
@@ -455,11 +468,11 @@ a.jm-available{
 <script>
 document.addEventListener("DOMContentLoaded", function() {
 
-if((window.location.href == "https://development.c21stores.com/home") || (window.location.href == "https://staging-na01-century21.demandware.net/s/C21/home") || (window.location.href == "https://www.c21stores.com/") || (window.location.href == "https://www.c21stores.com") || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/?") > -1)  || (window.location.href.indexOf("c21stores.com/home") > -1) || (window.location.href.indexOf("/C21/home") > -1) || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/#") > -1) || (window.location.href.indexOf("https://www.c21stores.com/?") > -1) || (window.location.href.indexOf("https://www.c21stores.com#") > -1) || (window.location.href.indexOf("/categories/clearance") > -1) || (window.location.href.indexOf("cart") > -1)){
-    //global_rotating_message_mobile();
+if((window.location.href == "https://development.c21stores.com/homeNO") || (window.location.href == "https://staging-na01-century21.demandware.net/s/C21/homeNO") || (window.location.href == "https://www.c21stores.com/NO") || (window.location.href == "https://www.c21stores.comNO") || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/homeNO/?") > -1)  || (window.location.href.indexOf("c21stores.com/homeNO") > -1) || (window.location.href.indexOf("/C21/homeNO") > -1) || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/#NO") > -1) || (window.location.href.indexOf("https://www.c21stores.comNO/?") > -1) || (window.location.href.indexOf("https://www.c21stores.comNO#") > -1) || (window.location.href.indexOf("/clearance") > -1) || (window.location.href.indexOf("cart") > -1)){
+    global_rotating_message_mobile();
     //global_rotating_message();
-    //showGlobalBanner();
-    showGlobalBanner_week();    
+    showGlobalBanner();
+    //showGlobalBanner_week();
 }else{    
     //showGlobalBanner();
     //global_rotating_message();
@@ -615,12 +628,12 @@ function global_rotating_message_mobile(){
             'FREE SHIPPING <br>ON ORDERS $50+</b>'+
         '</a>'+
         '</p>',                 
-        '<p class="jm-mobile-gb-h3 jm-banner-2-mob slideDownMob">'+
-        '<a class="jm-cta-hover" href="/clearance?imc=gb_premier&imccat=w27-19-d_clearance40">'+
-            '<b>SEMI-ANNUAL CLEARANCE EVENT <br/>TAKE AN EXTRA 40% OFF<a aria-label="Exlusions apply" id="jm_clearance_xtra40" href="#">*</a>'+
-            '<span class="jm-text-cta jm-text-cta-shop">SHOP NOW</span></b>'+
-        '</a>'+
-        '</p>',
+        // '<p class="jm-mobile-gb-h3 jm-banner-2-mob slideDownMob">'+
+        // '<a class="jm-cta-hover" href="/clearance?imc=gb_premier&imccat=w27-19-d_clearance40">'+
+        //     '<b>SEMI-ANNUAL CLEARANCE EVENT <br/>TAKE AN EXTRA 40% OFF<a aria-label="Exlusions apply" id="jm_clearance_xtra40" href="#">*</a>'+
+        //     '<span class="jm-text-cta jm-text-cta-shop">SHOP NOW</span></b>'+
+        // '</a>'+
+        // '</p>',
         '<p class="jm-mobile-gb-h3 jm-banner-1-mob slideDownMob"><b>'+
         '<a class="jm-cta-hover" href="/c21status.html?imc=gb_plcc-premier&imccat=default_c21status-lp">'+
             'EARN 2 POINTS PER $1 <br/>OR $10 FOR EVERY $250 SPENT'+
