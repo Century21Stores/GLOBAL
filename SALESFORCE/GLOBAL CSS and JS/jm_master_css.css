@@ -9,7 +9,12 @@ header ~ .container .jm-landing-page a.jm-text-cta-light:not(.btn-primary):not(.
 header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outline-primary){
     color: white;
 }
-
+.jmr-mobile{
+    display: block;
+}
+.jmr-desktop{
+    display: none;
+}
 /* -------- [END] General ---------- */
 
 /* --------- [START] All Content Blocks --------- */
@@ -63,6 +68,22 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
 .jmr-all-wrapper h2.jmrv-header-2,
 .jmrv-header-2{
     margin: 2% 0 0;
+}
+.jmr-all-cb article .jm-new-header-2{
+    font-size: 3em;
+    font-weight: bold;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.05em;    
+}
+.jmr-all-cb article .jm-new-header-3{
+    font-size: 1.4em;
+    font-weight: normal;
+    font-weight: 500;
+    margin: 1% 0 0;
+}
+.jmr-red{
+    color:#e2342c;
 }
 /* [END] COPY  */
 
@@ -204,10 +225,12 @@ header ~ div.container a.jmr-cta-button-solidlight:focus{
 .jmr-bb-wrapper article p{
     margin: 1% 0;
 }
-.jmr-bb-subheader sup{
-    font-size: 1em;
+.jmr-bb-subheader sup,
+.jmr-bb-header sup{
+    font-size: 0.75em;
     top:-0.1em;
     color: white;
+    top:-.35em;
 }
 .jmr-bb-ctas a{
     font-size: 0.55rem;
@@ -242,6 +265,15 @@ header ~ div.container a.jmr-cta-button-solidlight:focus{
 /* --------- [END] HERO --------- */
 
 @media screen and (min-width: 700px){
+/* -------- [START] General ---------- */
+.jmr-mobile{
+    display: none;
+}
+.jmr-desktop{
+    display: block;
+}
+/* -------- [END] General ---------- */
+
 /* --------- [START] Browse Banners --------- */
 .jmr-bb-wrapper article{
     font-size: 1.3vw;

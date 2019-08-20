@@ -1,8 +1,7 @@
-<!-- w29a-gb-plcc15-clearance-extended-40 - PLCC 15 GB - JuanMa - 08.15.19 -->
-
+<!-- w30a-gb-denied-default-no-rotating - Denied GB - JuanMa - 08.19.19 -->
 
 <style>
- /* OVERWRITE */
+/* -------- [START] Overwrite ---------- */
  .jm-message-w29-19{
     font-size: 1.4em;
     margin: 0 0 0.6%;
@@ -23,42 +22,19 @@
 .header-banner .col-12{
     padding: 0;
 }
-/* END OVERWRITE */
-.jm-cta-all{
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-.jm-cta-text{
-    border-bottom: solid 1px;
-    font-size: 1.33em;
-    letter-spacing: 0.05em;
-    color: white;
-    margin: 0.5em 0 0;
-    display: inline-block;
-}
+/* -------- [END] Overwrite ---------- */
+
+/* -------- [START] General Banner ---------- */
 .jm-gb-wrapper{
     position: relative;
     text-align: center;
     cursor: pointer;
+    border-bottom: solid 1px;
 }
 .jm-gb-wrapper a:hover{
     text-decoration: none !important;
     font-weight: bold;
 }
-.jm-gb-wrapper p{
-    color:white;
-    margin: 0;
-    line-height: 1.5;
-    font-size: 1.6em;
-    text-rendering: optimizeLegibility;
-     -webkit-font-smoothing: antialiased;   
-}
-.jm-gb-wrapper p span.jm-smaller{
-    font-size: 1.3em;
-}
-/* splited banner */
 .jm-global-splitted-banner a{
     width: 100%;
     color:black;
@@ -71,11 +47,12 @@
     background: #f6f4f5;
 }
 .jm-credit-card-img{
-    width: 7%;
-    margin: 0 6% 0 0;    
+    width: 5.7%;
+    margin: 0 2% 0 0;    
 }
-/* end splited banner */
-/* Weekly global banner */
+/* -------- [END] General Banner ---------- */
+
+/* -------- [START] WEEKLY BANNER ---------- */
 .jm-global-splitted-banner-week{
     background: #b31f34;
 }
@@ -128,21 +105,15 @@
 .jm-global-splitted-banner-week .jm-gb-info-holder{
     line-height: 1;
 }
-/* End Weekly global banner */
+/* -------- [END] WEEKLY BANNER ---------- */
 
 
 @media (min-width:700px) {
+
+/* -------- [START] General Banner ---------- */    
 a.jm-available,
 .jm-thisweek-global-banner span.jm-available{
     display:inline-block;
-}
-.jm-gb-wrapper p{
-    font-weight: bold;
-    font-size: 1.3em;
-}
-.jm-gb-wrapper p span.jm-smaller{
-    font-size: 0.73em;
-    letter-spacing: 0.05em;
 }
 .jm-gb-rotating-wraper > div{
     display: inline-block;
@@ -170,17 +141,15 @@ a.jm-available,
     width: 100%;
 }
 .jm-gb-rotating-wraper div{
-/*    position: relative;*/
     width: 100%;
 }
-.jm-global-splitted-banner-week{
-    width: 100%;    
-}
+
+
 .jm-gb-info-holder > div{
     display: inline-block;
     width: auto; 
 }
-/* ....... BANNERS ....... */
+
 .jm-gb-rotating-wraper div.jm-banner-1{
     background: #000000;
 }
@@ -188,7 +157,7 @@ a.jm-available,
 .jm-global-splitted-banner p{
     color: #ffffff;
     letter-spacing: 0.09em;
-    font-size: 0.87em;
+    font-size: 0.83em;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -221,7 +190,7 @@ a.jm-available,
 .jm-gb-rotating-wraper div.jm-banner-2 p{
     width: 100%;
 }
-/* ....... END BANNERS ....... */
+
 .jm-gb-rotating-wraper div.jm-full-banner{
     width: 100%;
 }
@@ -234,7 +203,50 @@ a.jm-cta-button-gb{
     padding: 0.5% 2%;
     font-size: 1em;
 }
-/* Counter Clock */
+p.jm-gb-disclarimer-wrapper{
+    font-size: 0.5em;
+    padding: 0 8% 0 0;  
+}
+.jm-cta-text-gb{
+    position: relative;
+    z-index: 99;
+}
+.jm-gb-wrapper .jm-left,
+.jm-gb-wrapper .jm-right{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;    
+}
+.jm-gb-wrapper .jm-left{
+    border-right: solid 2px white;
+}
+/* -------- [END] General Banner ---------- */
+
+
+/* -------- [START] WEEKLY BANNER ---------- */
+.jm-global-splitted-banner-week{
+    width: 100%;    
+}
+.jm-thisweek-global-banner div.jm_counter{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;    
+}
+#jm_clearance_xtra40{
+   color: white;
+}
+.jm-thisweek-global-banner .jmr-left-info > span{
+   display: block;
+}
+/* -------- [END] WEEKLY BANNER ---------- */
+
+
+/* -------- [START] CLOCK COUNTER ---------- */
 .jm_countdownContainer{
     position: relative;
     display: inline-block;
@@ -249,33 +261,11 @@ a.jm-cta-button-gb{
     align-items: center;
     justify-content: center;
 }
-/* End Counter Clock */
-/* Weekly global banner */
-.jm-thisweek-global-banner div.jm_counter{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;    
-}
 .jm_counter .jm-ends-in{
     font-weight: 500;
     font-size: 0.8em;
 }
-.jmr-left-info > span{
-   display: block;
-}
-#jm_clearance_xtra40{
-   color: white;
-}
-/* End Weekly global banner */
-p.jm-gb-disclarimer-wrapper{
-    font-size: 0.5em;
-    padding: 0 8% 0 0;  
-}
-.jm-cta-text-gb{
-    position: relative;
-    z-index: 99;
-}
+/* -------- [START] CLOCK COUNTER ---------- */
 
 
 }
@@ -307,7 +297,7 @@ a.jm-cta-button-gb{
     position: relative;
     background: #f6f4f5;
 }
-.jm-banner-1-mob {
+.jm-bg-nr-mob {
     background: #f6f4f5;
 }
 .jm-banner-2-mob{
@@ -327,27 +317,23 @@ a.jm-cta-button-gb{
 .jm-gb-rotating-wraper{
     width: 100%;
     display: block;
+    height: 100%;
 }
-/*.jm-gb-rotating-wraper span{
-    width: 100%;
-    display: block;
-}*/
+
 .jm-gb-wrapper p{
-    font-size: 3.5vw;
+    font-size: 3vw;
     text-align: center;
     letter-spacing: 0.05em;
+    margin: 0;
 }
 .jm-mobile-gb-h3{
     padding: 0.53em 0;
 }
-p.jm-banner-1-mob a{
+p.jm-bg-nr-mob a{
     color:black;
 }
 p.jm-banner-2-mob a{
     color:#ffffff;
-}
-.jm-gb-wrapper p span.jm-smaller{
-    font-size: 3vw;
 }
 .jm-mobile-globalBanner-week .jm-cta-hover{
     position: absolute;
@@ -386,7 +372,7 @@ p.jm-banner-2-mob a{
 }
 .jm-thisweek-global-banner p{
     letter-spacing: 0.09em;
-    font-size: 0.87em;
+    font-size: 0.83em;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -442,9 +428,6 @@ a.jm-available{
 }
 .jm-thisweek-global-banner .jm-gb-info-holder > div:nth-of-type(2){
     width: 100%;
-/*    position: absolute;
-    bottom: 5%;
-    right: 12%;*/
     text-align: center;    
 }
 .jm-global-splitted-banner-week .jm-gb-info-holder a.jm-cta-button{
@@ -467,38 +450,24 @@ a.jm-cta-button{
 
 
 
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
 
-if((window.location.href == "https://development.c21stores.com/homeNO") || (window.location.href == "https://staging-na01-century21.demandware.net/s/C21/homeNO") || (window.location.href == "https://www.c21stores.com/NO") || (window.location.href == "https://www.c21stores.comNO") || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/homeNO/?") > -1)  || (window.location.href.indexOf("c21stores.com/homeNO") > -1) || (window.location.href.indexOf("/C21/homeNO") > -1) || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/#NO") > -1) || (window.location.href.indexOf("https://www.c21stores.comNO/?") > -1) || (window.location.href.indexOf("https://www.c21stores.comNO#") > -1) || (window.location.href.indexOf("/clearance") > -1) || (window.location.href.indexOf("cart") > -1)){
+if((window.location.href == "https://development.c21stores.com/home") || (window.location.href == "https://staging-na01-century21.demandware.net/s/C21/home") || (window.location.href == "https://www.c21stores.com/") || (window.location.href == "https://www.c21stores.com") || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/?") > -1)  || (window.location.href.indexOf("c21stores.com/home") > -1) || (window.location.href.indexOf("/C21/home") > -1) || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/#") > -1) || (window.location.href.indexOf("https://www.c21stores.com/?") > -1) || (window.location.href.indexOf("https://www.c21stores.com#") > -1) || (window.location.href.indexOf("/categories/handbags-drop-lxr") > -1) || (window.location.href.indexOf("cart") > -1)){
     global_rotating_message_mobile();
     //global_rotating_message();
     showGlobalBanner();
-    //showGlobalBanner_week();
 }else{    
-    //showGlobalBanner();
+    showGlobalBanner();
     //global_rotating_message();
-    //global_rotating_message_mobile();
-    showGlobalBanner_week();
+    global_rotating_message_mobile();
+    //showGlobalBanner_week();
 }
+
 
 function showGlobalBanner_week(){
     $('.header-banner .content').prepend(
-        // '<div class="jm-mobile jm-mobile-globalBanner jm-thisweek-global-banner jm-mobile-globalBanner-week">'+
-        // '<a class="jm-cta-hover" href="/categories/sunglasses-drop-designer?imc=thedrop&imccat=w1819_gb_tomford"></a>'+
-        //     '<div class="jm-gb-wrapper jm-gb-wrapper-week">'+
-        //     '<section class="jm-gb-rotating-wraper slideDownMob">'+
-        //         '<p>'+
-        //             // '<span><img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small.png?$staticlink$"></span>'+
-        //             '<span><img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small_black.png?$staticlink$"></span>'+
-        //             '<span>LONGCHAMP <br/>UP TO 70% OFF</span>'+ 
-        //             // '<span>TOM FORD + MORE SUN <br/>UP TO 70% OFF - <span class="jm-text-cta">SHOP NOW</span></span>'+ 
-        //             '<span class="jm-text-cta-mob">SHOP NOW</span>'+
-        //         '</p>'+
-        //     '</section>'+
-        //     '</div>'+
-        // '</div>'+
-        // '<div class="jmrv-desktop jm-desktop">'+
         '<div>'+
             '<div class="jm-gb-wrapper jm-thisweek-global-banner">'+
             '<section class="jm-gb-rotating-wraper slideDown">'+
@@ -523,34 +492,38 @@ function showGlobalBanner_week(){
     );
 }
 
+
 function showGlobalBanner(){
     $('.header-banner .content').prepend(
+
+
         '<div class="jm-mobile jm-mobile-globalBanner">'+
             '<div class="jm-gb-wrapper">'+
             '<section class="jm-gb-rotating-wraper slideDownMob">'+
                 '<p class="jm-mobile-gb-h3 jm-banner-1-mob slideDownMob"><b>'+
-                    '<a class="jm-cta-hover" href="/c21status.html?imc=gb_plcc15&imccat=default_c21status-lp">'+
-                    '<span>SAVE 15%</span> WITH A NEW C21STATUS <br>CREDIT CARD IF APPROVED TODAY*'+
+                    '<a class="jm-cta-hover" href="/c21status.html?imc=gb_plcc-denied&imccat=default_c21status-lp">'+
+                    'EARN 1 POINTS PER $1 <br/>OR $10 FOR EVERY $500 SPENT'+
                     '</a>'+
                 '</p>',
             '</section>'+
             '</div>'+
         '</div>'+
+
         '<div class="jmrv-desktop jm-desktop">'+
             '<div class="jm-gb-wrapper">'+
             '<section class="jm-gb-rotating-wraper slideDown">'+
             '<div class="jm-global-splitted-banner">'+            
                '<div class="jm-left">'+
-                    '<a class="jm-cta-hover" href="/shipping-information.html?imc=gb_plcc15&imccat=default_shipping-lp">'+
+                    '<a class="jm-cta-hover" href="/shipping-information.html?imc=gb_plcc-denied&imccat=default_shipping-lp">'+
                     '<div>'+
-                        '<p>Free shipping on orders $75+</p>'+
+                        '<p>Free shipping on orders over $75+</p>'+
                     '</div>'+
                     '</a>'+
                 '</div>'+
                 '<div class="jm-right">'+
-                    '<a class="jm-cta-hover" href="/c21status.html?imc=gb_plcc15&imccat=default_c21status-lp">'+
+                    '<a class="jm-cta-hover" href="/c21status.html?imc=gb_plcc-denied&imccat=default_c21status-lp">'+
                     '<div>'+
-                        '<p><img class="jm-credit-card-img" alt="C21STATUS credit card" src="Global/global-banner/c21status-credit-card.png?$staticlink$"/><span>Save 15%</span> on your purchase if approved today*</p>'+
+                        '<p>EARN 1 POINTS PER $1 OR $10 FOR EVERY $500 SPENT</p>'+
                     '</div>'+
                     '</a>'+
                 '</div>'+
@@ -561,45 +534,42 @@ function showGlobalBanner(){
     );
 }
 
+
 // GLOBAL HEADER ROTATING MESSAGE DESKTOP
 function global_rotating_message(){
     var rotatingMessages = [
         '<section class="jm-gb-rotating-wraper slideDown">'+
             '<div class="jm-full-banner jm-banner-2">'+
-             '<div>'+
-                '<a class="jm-cta-all" href="/clearance?imc=gb_plcc15&imccat=w27-19-d_clearance40" aria-hidden="true" role="none" tabindex="-1"></a>'+
-                '<p>SEMI-ANNUAL CLEARANCE EVENT | TAKE AN EXTRA 40% OFF<a aria-label="Exlusions apply" id="jm_clearance_xtra40" href="#">*</a>'+
-                    '<a class="btn jm-cta-button jm-cta-button-gb jm-cta-button-solidlight" href="/clearance?imc=gb_plcc15&imccat=w27-19-d_clearance40">SHOP NOW</a>'+
+                '<a class="jmr-clickable-image" href="/clearance?imc=gb_plcc-denied&imccat=w22-19-c_clearance85" aria-hidden="true" role="none" tabindex="-1"></a>'+
+                '<p>SEMI-ANNUAL CLEARANCE EVENT UP TO 85% OFF'+
+                    '<a class="btn jm-cta-button jm-cta-button-gb jm-cta-button-solidlight" href="/clearance?imc=gb_plcc-denied&imccat=w22-19-c_clearance85">SHOP NOW</a>'+
                 '</p>'+
-                '<p class="jm-gb-disclarimer-wrapper">'+
-                    '<a id="jm_clearance_xtra40" class="jm-cta-text jm-cta-text-gb" href="#">INFO/EXCLUSIONS</a>'+
-                '</p>'+
-            '</div>'+
             '</div>'+
         '</section>',
         '<section class="jm-gb-rotating-wraper slideDown">'+
             '<div class="jm-global-splitted-banner">'+            
                '<div class="jm-left">'+
-                    '<a class="jm-cta-hover" href="/shipping-information.html?imc=gb_plcc15&imccat=default_shipping-lp">'+
+                    '<a class="jm-cta-hover" href="/shipping-information.html?imc=gb_plcc-denied&imccat=default_shipping-lp">'+
                     '<div>'+
                         '<p>Free shipping on orders $75+</p>'+
                     '</div>'+
                     '</a>'+
                 '</div>'+
                 '<div class="jm-right">'+
-                    '<a class="jm-cta-hover" href="/c21status.html?imc=gb_plcc15&imccat=default_c21status-lp">'+
+                    '<a class="jm-cta-hover" href="/c21status.html?imc=gb_plcc-denied&imccat=default_c21status-lp">'+
                     '<div>'+
-                        '<p><img class="jm-credit-card-img" alt="C21STATUS credit card" src="Global/global-banner/c21status-credit-card.png?$staticlink$"/><span>Save 15%</span> on your purchase if approved today*</p>'+
+                        '<p>EARN 1 POINTS PER $1 OR $10 FOR EVERY $500 SPENT</p>'+
                     '</div>'+
                     '</a>'+
                 '</div>'+
             '</div>'+
         '</section>',
     ];
+
     function rotatingMessage(e) {
         var msg = rotatingMessages.shift();
         rotatingMessages.push(msg);
-        $(".jm-desktop section").html(msg);
+        $(".jmr-desktop section").html(msg);
         $('.jm-gb-wrapper a').hover(function(e){
             clearInterval(jmtimer);
             $('.slideDown').css('webkit-animation', '0');           
@@ -617,26 +587,29 @@ function global_rotating_message(){
         // End Keyboard focus for ADA
             
     };
+
     var jmtimer = setInterval( rotatingMessage, 4000);
+
 }
 //END GLOBAL HEADER ROTATING MESSAGE DESKTOP
+
+
 // GLOBAL HEADER ROTATING MESSAGE MOBILE
 function global_rotating_message_mobile(){
     var rotatingMessages = [        
-        '<p class="jm-mobile-gb-h3 jm-banner-1-mob slideDownMob"><b>'+
-        '<a class="jm-cta-hover" href="/shipping-information.html?imc=gb_plcc15&imccat=default_shipping-lp">'+
+        '<p class="jm-mobile-gb-h3 jm-bg-nr-mob slideDownMob"><b>'+
+        '<a class="jm-cta-hover" href="/shipping-information.html?imc=gb_plcc-denied&imccat=default_shipping-lp">'+
             'FREE SHIPPING <br>ON ORDERS $75+</b>'+
         '</a>'+
         '</p>',                
         // '<p class="jm-mobile-gb-h3 jm-banner-2-mob slideDownMob">'+
-        // '<a class="jm-cta-hover" href="/clearance?imc=gb_plcc15&imccat=w27-19-d_clearance40">'+
-        //     '<b>SEMI-ANNUAL CLEARANCE EVENT <br/>TAKE AN EXTRA 40% OFF<a aria-label="Exlusions apply" id="jm_clearance_xtra40" href="#">*</a>'+
-        //     '<span class="jm-text-cta jm-text-cta-shop">SHOP NOW</span></b>'+
+        // '<a class="jm-cta-hover" href="/clearance?imc=gb_plcc-denied&imccat=w22-19-c_clearance85">'+
+        //     '<b>SEMI-ANNUAL CLEARANCE EVENT<br/>UP TO 85% OFF</b>'+
         // '</a>'+
         // '</p>',
-        '<p class="jm-mobile-gb-h3 jm-banner-1-mob slideDownMob"><b>'+
-        '<a class="jm-cta-hover" href="/c21status.html?imc=gb_plcc15&imccat=default_c21status-lp">'+
-            '<span>SAVE 15%</span> WITH A NEW C21STATUS <br>CREDIT CARD IF APPROVED TODAY*'+
+        '<p class="jm-mobile-gb-h3 jm-bg-nr-mob slideDownMob"><b>'+
+        '<a class="jm-cta-hover" href="/c21status.html?imc=gb_plcc-denied&imccat=default_c21status-lp">'+
+            'EARN 1 POINT PER $1 <br/>OR $10 FOR EVERY $500 SPENT'+
         '</a>'+
         '</p>',
     ];
@@ -657,9 +630,8 @@ function global_rotating_message_mobile(){
 });
 </script>
 
-
 <script>
-count_down_drop();
+//count_down_drop();
 function count_down_drop(){
 // END CLOCK
 window.addEventListener("DOMContentLoaded", function(){
@@ -678,7 +650,7 @@ $('.jm-thisweek-global-banner .jm-gb-info-holder .jmr-add-clock').prepend(
   var dd = new Date();
   console.log("Today's date and time is : ");
   console.log(dd);
-  var targetDate = "Aug 19 2019";
+  var targetDate = "Aug 25 2019";
   var hh = dd.getHours();
   var utchh = dd.getUTCHours();
   //console.log(utchh);
@@ -703,7 +675,7 @@ $('.jm-thisweek-global-banner .jm-gb-info-holder .jmr-add-clock').prepend(
 function countdown() {
   let now = new Date();
   // let evenDate = new Date(2019, 7, 5);
-  let evenDate = new Date("2019-08-19T04:00:00Z"); // TEST
+  let evenDate = new Date("2019-08-25T04:00:00Z"); // TEST
   //let evenDate = new Date("2019-07-10T04:00:00Z"); // UTC time
   // console.log(evenDate);
   let actualTime = now.getTime();
