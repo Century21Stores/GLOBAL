@@ -1,5 +1,10 @@
-<!-- cart-plcc-20-default - JuanMa - 05.14.19  -->
+<!-- default-cart-plcc-15-plcc20 - JuanMa - 08.20.19  -->
+
 <style>
+.jm-plcc{
+  height: 100%;  
+  position: relative;
+}
 .jm-minicart-plcc p.save{
     font-weight: 700;
     font-style: normal;
@@ -21,12 +26,15 @@
 }
 .jm-plcc .jm-text-cta{
     font-size: 1.1em;
+    z-index: 99;
+    position: relative;
 }
 </style>
 
 <section class="jm-plcc creditCard-box d-flex flex-column align-items-start">
+<a class="jm-clickable-image" href="$url('Page-Show','cid','c21status')$?imc=cart_plcc-15&imccat=w30-19-a_c21status" aria-hidden="true" role="none" tabindex="-1" target="_blank"></a>  
     <small class="text-uppercase">save</small>
     <div class="potential-earning">20%</div>
-    <p>with a new C21STATUS Credit Card once approved!*</p>
-    <a class="jm-text-cta" href="$url('Page-Show','cid','c21status')$" target="_blank">Learn more</a>
+    <p>today with a new C21STATUS Credit Card if approved!<a id="plcc_15_cart_cta" href="#">*</a></p>
+    <a class="jm-text-cta" href="$url('Page-Show','cid','c21status')$?imc=cart_plcc-15&imccat=w30-19-a_c21status" target="_blank">Learn more</a>
 </section>
