@@ -94,8 +94,8 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;    
-    font-size: 0.83em;
-    min-width: 206px;
+    font-size: 0.76em;
+    min-width: 193px;
     font-weight: bold;
     font-weight: 700;
     letter-spacing: 0.1em;
