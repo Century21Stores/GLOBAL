@@ -1,4 +1,4 @@
-// Global JS - JuanMa - 8.13.19
+// Global JS - JuanMa - GWP added - 8.27.19
 
 // (none)              /search?prefn1=brand&searchType=designers&prefv1=Adesso
 // (space)             %20
@@ -18,7 +18,8 @@ window.addEventListener("DOMContentLoaded", function(){
   if(window.location.href.indexOf("/products/") > -1){
     console.log("In PDP");
     jm_Designer_Header_PDP();
-    
+    jm_GWP_PDP();
+ 
   }
   //SEARCH ONLY
   else if(window.location.href.indexOf("/search") > -1){    
@@ -100,6 +101,15 @@ function jm_H1_root_catalog(){
 
 // [END] Designer Header
 
+// [START] GWP
+function jm_GWP_PDP(){
+  if($('.jmr_gwp_link').length == 1){
+    var gwp_id = $('.jmr_gwp_link').attr('id');
+    console.log(gwp_id);
+    $('.product-details-area .level-discount .callout').wrapInner('<a href="#" id="'+gwp_id+'_callout"></a>');
+  }
+}
+// [END] GWP
 
 // [START] Scrolling disclaimer browse banner
 function jm_scroll_bb_disclaimer(this_id){
