@@ -1,3 +1,9 @@
+/* -------- [START] Overwrite ---------- */
+.product-details-area > a{
+    display: block;
+}
+/* -------- [END] Overwrite ---------- */
+
 /* -------- [START] General ---------- */
 figure{
     margin: 0 auto;
@@ -23,6 +29,7 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
 }
 .jmr-all-cb{
 	position: relative;
+    margin: 0 auto;
 }
 .jmr-clickable-image{
     position: absolute;
@@ -69,14 +76,14 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
 .jmrv-header-2{
     margin: 2% 0 0;
 }
-.jmr-all-cb article .jm-new-header-2{
+.jmr-all-cb article .jmr-header-2{
     font-size: 3em;
     font-weight: bold;
     font-weight: 600;
     line-height: 1;
     letter-spacing: 0.05em;    
 }
-.jmr-all-cb article .jm-new-header-3{
+.jmr-all-cb article .jmr-header-3{
     font-size: 1.4em;
     font-weight: normal;
     font-weight: 500;
@@ -89,20 +96,23 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
 
 /* [START] CTAs  */
 
-.jmr-ctas .jmr-cta-button,
 .jmr-ctas .jmr-cta-button{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;    
     font-size: 0.76em;
-    min-width: 193px;
+    min-width: auto;
     font-weight: bold;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.13em;
     padding: 0.63em 2em;
-    border: solid 2px;
+    border: solid 1px;
     position: relative;
-    z-index: 2;        
+    z-index: 2;
+    margin-left: 1%;   
+}
+.jmr-ctas a:first-of-type{
+    margin-left: 0%;
 }
 
 .jmr-cta-button-dark,
@@ -245,7 +255,7 @@ header ~ div.container a.jmr-cta-button-solidlight:focus{
 
 /* --------- [START] HERO --------- */
 .jmr-hero-cb .jmr-ctas{
-    margin: 5% 0 0;
+    margin: 2em 0 0;
     display: block;
 }
 
@@ -274,6 +284,14 @@ header ~ div.container a.jmr-cta-button-solidlight:focus{
 }
 /* -------- [END] General ---------- */
 
+/* --------- [START] Hero --------- */
+.jmr-hero-cb article{
+    font-size: 1vw;
+    width: 50%;
+}
+/* --------- [END] Hero --------- */
+
+
 /* --------- [START] Browse Banners --------- */
 .jmr-bb-wrapper article{
     font-size: 1.3vw;
@@ -282,6 +300,29 @@ header ~ div.container a.jmr-cta-button-solidlight:focus{
     font-size: 0.53em;
 }
 /* --------- [END] Browse Banners --------- */
+
+/* --------- [START] Half Hero --------- */
+.jmr-half-hero-content-block{
+    overflow: auto;
+}
+.jmr-half-hero-content-block article{
+    position: absolute;
+    height: 100%;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+}
+.jmr-half-hero-content-block article > div{
+    width: 100%;    
+}
+.jmr-half-hero-content-block figure{
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* --------- [END] Half Hero --------- */
 
 }
 
@@ -298,6 +339,13 @@ header ~ div.container a.jmr-cta-button-solidlight:focus{
 
 
 @media screen and (min-width: 1100px){
+/* [START] CTAs  */
+.jmr-ctas .jmr-cta-button,
+.jmr-ctas .jmr-cta-button{
+    min-width: 163px;
+}
+/* [END] CTAs  */
+
 /* --------- [START] Browse Banners --------- */
 .jmr-bb-wrapper article{
     font-size: 0.6vw;
@@ -312,10 +360,18 @@ header ~ div.container a.jmr-cta-button-solidlight:focus{
 }
 /* --------- [END] Browse Banners --------- */
 
+
 }
 
 
 @media screen and (min-width: 1300px){
+/* [START] CTAs  */
+.jmr-ctas .jmr-cta-button,
+.jmr-ctas .jmr-cta-button{
+    min-width: 193px;
+}
+/* [END] CTAs  */
+
 /* --------- [START] Browse Banners --------- */
 .jmr-bb-wrapper{
     padding-top: calc((250% / 1410) * 100);
@@ -351,6 +407,14 @@ header ~ div.container a.jmr-cta-button-solidlight:focus{
 
 }
 
+@media screen and (min-width: 1600px){
+/* --------- [START] Hero --------- */
+.jmr-hero-cb article{
+    font-size: 1em;
+}
+/* --------- [END] Hero --------- */
+}
+
 @media screen and (min-width: 1700px){
 /* --------- [START] Browse Banners --------- */
 .jmr-bb-ctas a{
@@ -372,6 +436,21 @@ header ~ div.container a.jmr-cta-button-solidlight:focus{
 
 @media screen and (max-width: 700px){
 
+/* [START] Copy  */
+.jmr-all-cb article .jmr-header-2{
+    font-weight: bold;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;    
+}
+.jmr-all-cb .jmr-header-3{
+    line-height: 1.3;
+}
+.jmr-all-cb .jmr-header-3 strong{
+    display: block;
+}
+/* [END] Copy  */
+
 /* [START] CTAs  */
 .jmr-all-cb{
     margin: 0 0 8%;
@@ -386,7 +465,7 @@ header ~ div.container a.jmr-cta-button-solidlight:focus{
 }
 .jmr-ctas a.jmr-cta-button,
 .jmr-ctas span.jmr-cta-button{
-    border-color: #000000 !important;
+    border: solid 1px #000000 !important;
     color: #000000 !important;
     background: #ffffff !important;
     min-width: 45%;
