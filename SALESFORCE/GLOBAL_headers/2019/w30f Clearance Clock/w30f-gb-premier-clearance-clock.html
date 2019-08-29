@@ -1,4 +1,4 @@
-<!-- w30f-gb-premier-clearance-clock - Premier GB - JuanMa - 08.23.19 -->
+<!-- w30f-gb-premier-clearance-clock - Premier GB - JuanMa - 08.29.19 -->
 
 <style>
 /* -------- [START] Overwrite ---------- */
@@ -195,6 +195,10 @@ a.jm-cta-button-gb{
 .jm-thisweek-global-banner .jm-gb-info-holder > div{
     width: auto; 
 }
+.jm-thisweek-global-banner strong{
+    font-weight: bold;
+    font-weight: 700;
+}
 /* -------- [END] WEEKLY BANNER ---------- */
 
 
@@ -313,6 +317,10 @@ a.jm-available{
     border-bottom: solid 1px white;
     display: initial;
 }
+.jm-thisweek-global-banner a.jmr-force-cta-text{
+    background: none !important;
+    color: white !important;
+}
 /* -------- [END] WEEKLY BANNER ---------- */
 
 
@@ -355,21 +363,21 @@ function showGlobalBanner_week(){
             '<section class="jm-gb-rotating-wraper slideDown">'+
             '<div class="jm-global-splitted-banner jm-global-splitted-banner-week">'+
                '<div>'+
-                    '<a class="jm-clickable-image jm-cta-hover" aria-hidden="true" role="none" tabindex="-1" href="/categories/shoes-drop-christian-louboutin?imc=gb_thedrop&imccat=w30-19-d_shoes-drop-christian-louboutin"></a>'+
+                    '<a class="jm-clickable-image jm-cta-hover" aria-hidden="true" role="none" tabindex="-1" href="/clearance?imc=gb_premier&imccat=w27-19-d_clearance40"></a>'+
                     '<div class="jm-gb-info-holder"'+
                         '<div>'+
                             // '<div class="jmr-left-image">'+
                             //     '<img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small_white-2.png?$staticlink$"/>'+
                             // '</div>'+
                             '<div class="jmr-center-info" id="jm-bg-weekly-header">'+
-                                '<span class="jm-message-w29-19">NOW EXTENDED!</span>'+
-                                'SEMI-ANNUAL CLEARANCE EVENT | TAKE AN EXTRA 40% OFF'+
-                                // '<span>'+
-                                //     '<div class="jmr-add-clock"></div>'+
-                                // '</span>'+
+                                // '<span class="jm-message-w29-19">NOW EXTENDED!</span>'+
+                                'SEMI-ANNUAL CLEARANCE EVENT <span class="jmr-desktop-inline">|</span> <strong class="jmr-break-on-mobile">TAKE AN EXTRA 40% OFF</strong>'+
+                                '<span>'+
+                                    '<div class="jmr-add-clock"></div>'+
+                                '</span>'+
                             '</div>'+
                             '<div class="jmr-right-cta">'+
-                                '<a href="/categories/shoes-drop-christian-louboutin?imc=gb_thedrop&imccat=w30-19-d_shoes-drop-christian-louboutin" class="btn jm-cta-button-gb jm-cta-button jm-cta-button-solidlight jm-cta-hover" id="jm-bg-weekly-cta" aria-labelledby="jm-bg-weekly-cta jm-bg-weekly-header">SHOP NOW</a>'+
+                                '<a href="/clearance?imc=gb_premier&imccat=w27-19-d_clearance40" class="jmr-force-cta-text btn jm-cta-button-gb jm-cta-button jm-cta-button-solidlight jm-cta-hover" id="jm-bg-weekly-cta" aria-labelledby="jm-bg-weekly-cta jm-bg-weekly-header">SHOP NOW</a>'+
                             '</div>'+
                         '</div>'+
                     '</div>'+
@@ -584,7 +592,7 @@ function global_rotating_message_mobile_default(){
 </script>
 
 <script>
-//count_down_drop();
+count_down_drop();
 function count_down_drop(){
 // END CLOCK
 window.addEventListener("DOMContentLoaded", function(){
@@ -603,7 +611,7 @@ $('.jm-thisweek-global-banner .jm-gb-info-holder .jmr-add-clock').prepend(
   var dd = new Date();
   console.log("Today's date and time is : ");
   console.log(dd);
-  var targetDate = "Aug 25 2019";
+  var targetDate = "Sep 03 2019";
   var hh = dd.getHours();
   var utchh = dd.getUTCHours();
   //console.log(utchh);
@@ -628,7 +636,7 @@ $('.jm-thisweek-global-banner .jm-gb-info-holder .jmr-add-clock').prepend(
 function countdown() {
   let now = new Date();
   // let evenDate = new Date(2019, 7, 5);
-  let evenDate = new Date("2019-08-25T04:00:00Z"); // TEST
+  let evenDate = new Date("2019-09-03T04:00:00Z"); // TEST
   //let evenDate = new Date("2019-07-10T04:00:00Z"); // UTC time
   // console.log(evenDate);
   let actualTime = now.getTime();
