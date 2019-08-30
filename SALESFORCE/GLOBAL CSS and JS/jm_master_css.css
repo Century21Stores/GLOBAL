@@ -114,6 +114,9 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     z-index: 2;
     margin-left: 1%;   
 }
+a.jmr-cta-text{
+    border-bottom: solid 1px;
+}
 .jmr-ctas a:first-of-type{
     margin-left: 0%;
 }
@@ -189,7 +192,10 @@ header ~ div.container a.jmr-cta-button-solidlight:focus{
     color:#ffffff !important;
     border-color: #ffffff !important;
 }
-
+strong.jmr-break-on-mobile{
+    font-weight: bold;
+    font-weight: 700;
+}
 /* [END] CTAs  */
 
 /* --------- [END] All Content Blocks --------- */

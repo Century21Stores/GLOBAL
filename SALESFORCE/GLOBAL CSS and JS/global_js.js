@@ -103,8 +103,8 @@ function jm_H1_root_catalog(){
 
 // [START] GWP
 function jm_GWP_PDP(){
-  if($('.jmr_gwp_link').length == 1){
-    var gwp_id = $('.jmr_gwp_link').attr('id');
+  if($('.jmr-gwp-pdp').length == 1){
+    var gwp_id = $('.jmr-gwp-pdp > a').attr('id');
     console.log(gwp_id);
     $('.product-details-area .level-discount .callout').wrapInner('<a href="#" id="'+gwp_id+'_callout"></a>');
   }
