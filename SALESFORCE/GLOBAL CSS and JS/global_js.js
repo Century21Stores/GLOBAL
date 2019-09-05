@@ -46,6 +46,11 @@ window.addEventListener("DOMContentLoaded", function(){
   else if(window.location.href.indexOf("/categories/") > -1){
     console.log("In Categories");
     
+  }
+
+  //NO CATEGORIES OR PDP
+  else{
+    jm_carousel_modification();
   };
 
 });
@@ -126,6 +131,18 @@ function jm_scroll_bb_disclaimer(this_id){
 }
 function jm_scroll_bb_disclaimer_back(this_class){
     $('#jm_drop_main').focus();    
+}
+function jm_carousel_modification(){
+  console.log("carousel script");
+  if($('.carousel-product-tiles').length != 0){
+    $( ".carousel-product-tiles .one-slide" ).each(function(index) {
+      $(this).parent().addClass("jmr-large-carousel");
+    });
+    $( ".carousel-product-tiles .four-slides" ).each(function(index) {
+      $(this).parent().addClass("jmr-small-carousel");
+    });
+  }  
+
 }
 // [END] Scrolling disclaimer browse banner
 

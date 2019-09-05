@@ -2,6 +2,10 @@
 .product-details-area > a{
     display: block;
 }
+div.jmr-large-carousel{
+    width: 75%;
+    margin: 0 auto 3%;    
+}
 /* -------- [END] Overwrite ---------- */
 
 /* -------- [START] General ---------- */
@@ -263,7 +267,7 @@ strong.jmr-break-on-mobile{
 
 
 /* --------- [START] HERO --------- */
-.jmr-hero-cb .jmr-ctas{
+.jmr-all-cb .jmr-ctas{
     margin: 2em 0 0;
     display: block;
 }
