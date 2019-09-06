@@ -3,7 +3,6 @@
     display: block;
 }
 div.jmr-large-carousel{
-    width: 75%;
     margin: 0 auto 3%;    
 }
 /* -------- [END] Overwrite ---------- */
@@ -272,14 +271,14 @@ strong.jmr-break-on-mobile{
     display: block;
 }
 
-.jmr-hero-cb article .jm-header-2{
+.jmr-all-cb article .jm-header-2{
     font-size: 3em;
     font-weight: bold;
     font-weight: 600;
     line-height: 1;
     letter-spacing: 0.05em;
 }
-.jmr-hero-cb article .jm-header-3{
+.jmr-all-cb article .jm-header-3{
     font-size: 1.4em;
     font-weight: normal;
     font-weight: 500;
@@ -288,6 +287,13 @@ strong.jmr-break-on-mobile{
 /* --------- [END] HERO --------- */
 
 @media screen and (min-width: 700px){
+
+/* -------- [START] Overwrite ---------- */
+div.jmr-large-carousel{
+    width: 96%;
+}
+/* -------- [END] Overwrite ---------- */
+
 /* -------- [START] General ---------- */
 .jmr-mobile{
     display: none;
@@ -301,8 +307,10 @@ strong.jmr-break-on-mobile{
 /* -------- [END] General ---------- */
 
 /* --------- [START] Hero --------- */
-.jmr-hero-cb article{
+.jmr-all-cb article{
     font-size: 1vw;
+}
+.jmr-hero-cb article{
     width: 50%;
 }
 /* --------- [END] Hero --------- */
@@ -381,6 +389,13 @@ strong.jmr-break-on-mobile{
 
 
 @media screen and (min-width: 1300px){
+
+/* -------- [START] Overwrite ---------- */
+div.jmr-large-carousel{
+    width: 75%;
+}
+/* -------- [END] Overwrite ---------- */
+
 /* [START] CTAs  */
 .jmr-ctas .jmr-cta-button,
 .jmr-ctas .jmr-cta-button{
@@ -425,7 +440,7 @@ strong.jmr-break-on-mobile{
 
 @media screen and (min-width: 1600px){
 /* --------- [START] Hero --------- */
-.jmr-hero-cb article{
+.jmr-all-cb article{
     font-size: 1em;
 }
 /* --------- [END] Hero --------- */
