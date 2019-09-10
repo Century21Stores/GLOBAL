@@ -2,9 +2,6 @@
 .product-details-area > a{
     display: block;
 }
-div.jmr-large-carousel{
-    margin: 0 auto 3%;    
-}
 /* -------- [END] Overwrite ---------- */
 
 /* -------- [START] General ---------- */
@@ -44,6 +41,12 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     width: 100%;
     height: 100%;
     z-index: 2;    
+}
+.jmr-two-column figure{
+    background-size: contain !important;
+    background-position: 50% 0 !important;
+    background-repeat: no-repeat;
+    padding-top: calc((1232% / 1368) * 100) !important;
 }
 .jmr-all-wrapper article{
     position: absolute;
@@ -271,14 +274,14 @@ strong.jmr-break-on-mobile{
     display: block;
 }
 
-.jmr-all-cb article .jm-header-2{
+.jmr-all-cb article .jmr-header-2{
     font-size: 3em;
     font-weight: bold;
     font-weight: 600;
     line-height: 1;
     letter-spacing: 0.05em;
 }
-.jmr-all-cb article .jm-header-3{
+.jmr-all-cb article .jmr-header-3{
     font-size: 1.4em;
     font-weight: normal;
     font-weight: 500;
@@ -286,11 +289,43 @@ strong.jmr-break-on-mobile{
 }
 /* --------- [END] HERO --------- */
 
+/* --------- [START] TWO & THREE COLUMNS --------- */
+.jmr-two-column,
+.jmr-three-column{
+    overflow: auto;
+    text-align: center;
+    margin: 0 auto;
+}
+.jmr-two-column > div,
+.jmr-three-column > div{
+    position: relative;
+}
+/* --------- [END] TWO & THREE COLUMNS --------- */
+
+
+/* --------- [START] LARGE CAROUSEL --------- */
+.jmr-product-large-container{
+    position: relative;
+}
+div.jmr-large-carousel{
+    margin: 0 auto 3%;    
+}
+.jmr-large-carousel article{
+    padding: 0.8em 0;
+}
+.jmr-product-large-container figure{
+    background-size: 100% !important;
+    background-position: 50% 0 !important;
+    padding-top: calc((1232% / 1368) * 100) !important;
+    background-repeat: no-repeat !important;
+}
+/* --------- [END] LARGE CAROUSEL --------- */
+
 @media screen and (min-width: 700px){
 
 /* -------- [START] Overwrite ---------- */
 div.jmr-large-carousel{
-    width: 96%;
+    max-width: 96%;
 }
 /* -------- [END] Overwrite ---------- */
 
@@ -315,6 +350,30 @@ div.jmr-large-carousel{
 }
 /* --------- [END] Hero --------- */
 
+/* --------- [START] TWO & THREE COLUMNS --------- */
+.jmr-two-column{
+    max-width: 96%;    
+}
+.jmr-two-column > div{
+    width: 49.5%;
+    float: left;
+}
+.jmr-three-column > div{
+    width: 32.65%;
+    float: left;
+}
+.jmr-two-column .jmr-left{
+    margin-right: 1%;
+}
+.jmr-three-column .jmr-middle{
+    margin: 0 1%;
+}
+.jmr-two-column article,
+.jmr-three-column article{
+    padding: 0.8em 0;    
+}
+
+/* --------- [END] TWO & THREE COLUMNS --------- */
 
 /* --------- [START] Browse Banners --------- */
 .jmr-bb-wrapper article{
@@ -360,9 +419,21 @@ div.jmr-large-carousel{
 /* --------- [END] Browse Banners --------- */
 }
 
-
+@media screen and (min-width: 992px){
+/* -------- [START] Overwrite ---------- */
+.menu-group ul .nav-item {
+    font-size: .683em;
+}
+/* -------- [END] Overwrite ---------- */
+}
 
 @media screen and (min-width: 1100px){
+/* -------- [START] Overwrite ---------- */
+.menu-group ul .nav-item {
+    font-size: .75em;
+}
+/* -------- [END] Overwrite ---------- */
+
 /* [START] CTAs  */
 .jmr-ctas .jmr-cta-button,
 .jmr-ctas .jmr-cta-button{
@@ -392,7 +463,7 @@ div.jmr-large-carousel{
 
 /* -------- [START] Overwrite ---------- */
 div.jmr-large-carousel{
-    width: 75%;
+    max-width: 75%;
 }
 /* -------- [END] Overwrite ---------- */
 
@@ -418,6 +489,22 @@ div.jmr-large-carousel{
     min-width: 15vw;
 }
 /* --------- [END] Browse Banners --------- */
+
+/* --------- [START] TWO & THREE COLUMNS --------- */
+.jmr-two-column{
+    max-width: 75%;
+}
+/* --------- [END] TWO & THREE COLUMNS --------- */
+
+
+}
+
+
+@media screen and (min-width: 1440px){
+.menu-group ul .nav-item {
+    font-size: .8125em;
+}
+/* -------- [END] Overwrite ---------- */
 
 }
 
@@ -518,4 +605,15 @@ div.jmr-large-carousel{
     background: #000000 !important;
 }
 /* [END] CTAs  */
+
+
+/* --------- [START] TWO & THREE COLUMNS --------- */
+.jmr-left,
+.jmr-center{
+    margin: 0 0 8%;
+}
+/* --------- [END] TWO & THREE COLUMNS --------- */
+
+
+
 }
