@@ -1,4 +1,4 @@
-// Global JS - JuanMa - GWP added - 8.27.19
+// Global JS - JuanMa - GWP added - 9.11.19
 
 // (none)              /search?prefn1=brand&searchType=designers&prefv1=Adesso
 // (space)             %20
@@ -42,11 +42,20 @@ window.addEventListener("DOMContentLoaded", function(){
     }
     
   }
+  //LANDING PAGES
+  else if((window.location.href.indexOf("/categories/men") > -1) || (window.location.href.indexOf("/categories/women") > -1) || (window.location.href.indexOf("/categories/shoes") > -1) || (window.location.href.indexOf("/categories/beauty") > -1) || (window.location.href.indexOf("/categories/kids") > -1) || (window.location.href.indexOf("/categories/home") > -1) || (window.location.href.indexOf("/categories/handbags-accessories") > -1)){
+    jm_carousel_modification();
+    console.log("In Landing Pages");
+    
+  }
+
   //CATEGORIES
   else if(window.location.href.indexOf("/categories/") > -1){
     console.log("In Categories");
     
   }
+
+
 
   //NO CATEGORIES OR PDP
   else{
