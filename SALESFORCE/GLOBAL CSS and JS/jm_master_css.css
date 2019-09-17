@@ -1,3 +1,14 @@
+/* Adi Dabu - remove Bloomreach widget visually */
+.bloomreach-widget { display: none }
+
+
+/* -------- [START] Only Production ---------- */
+.product-badge.badge-inventory {
+    display: none !important;
+}
+/* -------- [END] Only Production ---------- */
+
+
 /* -------- [START] Overwrite ---------- */
 .product-details-area > a{
     display: block;
@@ -24,14 +35,17 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
 .jmr-desktop-inline{
     display: none;   
 }
+.jmr-add-outline{
+    outline: 4px solid #3eb0fc;
+}
 /* -------- [END] General ---------- */
 
 /* --------- [START] All Content Blocks --------- */
 .jmr-all-cb img{
-	width: 100%;
+    width: 100%;
 }
 .jmr-all-cb{
-	position: relative;
+    position: relative;
     margin: 0 auto;
 }
 .jmr-clickable-image{
@@ -41,12 +55,6 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     width: 100%;
     height: 100%;
     z-index: 2;    
-}
-.jmr-two-column figure{
-    background-size: contain !important;
-    background-position: 50% 0 !important;
-    background-repeat: no-repeat;
-    padding-top: calc((1232% / 1368) * 100) !important;
 }
 .jmr-all-wrapper article{
     position: absolute;
@@ -64,7 +72,7 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     text-align: center;   
 }
 .jmr-all-wrapper article > div{
-    width: 100%;	
+    width: 100%;    
 }
 
 /* [START] COPY  */
@@ -79,7 +87,7 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     margin: 0;
 }
 .jmr-disclaimer{
-    font-size: 0.8em;	
+    font-size: 0.8em;   
 }
 .jmr-all-wrapper h2.jmrv-header-2,
 .jmrv-header-2{
@@ -97,6 +105,10 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     font-weight: normal;
     font-weight: 500;
     margin: 1% 0 0;
+}
+.jmr-all-cb article .jmr-header-4{
+    font-size: 1.23em;
+    line-height: 1.2;
 }
 .jmr-red{
     color:#e2342c;
@@ -240,7 +252,7 @@ strong.jmr-break-on-mobile{
     text-align:center;    
 }
 .jmr-bb-ctas{
-	height: 100%;
+    height: 100%;
     display: inherit;
     margin: 2% 0 0;
 }
@@ -300,6 +312,26 @@ strong.jmr-break-on-mobile{
 .jmr-three-column > div{
     position: relative;
 }
+.jmr-two-column figure{
+    position: relative;
+    background-size: contain !important;
+    background-position: 50% 0 !important;
+    background-repeat: no-repeat;
+    padding-top: calc((1232% / 1368) * 100) !important;
+}
+.jmr-three-column figure{
+    position: relative;
+    background-repeat: no-repeat !important; 
+    background-size: contain !important;
+    background-position: 50% 0 !important;
+    padding-top: calc((754% / 700) * 100) !important;
+}
+.jmr-three-column figcaption{
+    font-size: 3vw;    
+}
+.jmr-three-column{
+    width: 93%;   
+}
 /* --------- [END] TWO & THREE COLUMNS --------- */
 
 
@@ -355,25 +387,33 @@ div.jmr-large-carousel{
     max-width: 96%;    
 }
 .jmr-two-column > div{
-    width: 49.5%;
+    width: 48%;
     float: left;
 }
 .jmr-three-column > div{
-    width: 32.65%;
+    width: 32.45%;
     float: left;
 }
 .jmr-two-column .jmr-left{
-    margin-right: 1%;
+    margin-right: 4%;
 }
 .jmr-three-column .jmr-middle{
-    margin: 0 1%;
+    margin: 0 1.3%;
 }
-.jmr-two-column article,
-.jmr-three-column article{
+.jmr-two-column article{
     padding: 0.8em 0;    
 }
-
+.jmr-three-column article{
+    padding: 1.3em 0;    
+}
+.jmr-three-column article{
+    font-size: 0.86vw;
+}
+.jmr-three-column figcaption{
+    font-size: 1vw;
+}
 /* --------- [END] TWO & THREE COLUMNS --------- */
+
 
 /* --------- [START] Browse Banners --------- */
 .jmr-bb-wrapper article{
@@ -421,8 +461,8 @@ div.jmr-large-carousel{
 
 @media screen and (min-width: 992px){
 /* -------- [START] Overwrite ---------- */
-.menu-group ul .nav-item {
-    font-size: .683em;
+div.menu-group ul .nav-item {
+    font-size: .63em;
 }
 /* -------- [END] Overwrite ---------- */
 }
@@ -458,6 +498,15 @@ div.jmr-large-carousel{
 
 }
 
+
+@media screen and (min-width: 1200px){
+/* -------- [START] Overwrite ---------- */
+div.menu-group ul .nav-item {
+    font-size: .8125em;
+}
+/* -------- [END] Overwrite ---------- */
+
+}
 
 @media screen and (min-width: 1300px){
 
@@ -501,10 +550,7 @@ div.jmr-large-carousel{
 
 
 @media screen and (min-width: 1440px){
-.menu-group ul .nav-item {
-    font-size: .8125em;
-}
-/* -------- [END] Overwrite ---------- */
+
 
 }
 
@@ -531,6 +577,16 @@ div.jmr-large-carousel{
     font-size: 1em;
 }
 /* --------- [END] Hero --------- */
+
+/* --------- [START] THREE COLUMNS --------- */
+.jmr-three-column article{
+    font-size: 0.86vw;
+}
+.jmr-three-column figcaption{
+    font-size: 1vw;
+}
+/* --------- [END] THREE COLUMNS --------- */
+
 }
 
 @media screen and (min-width: 1700px){
@@ -539,7 +595,7 @@ div.jmr-large-carousel{
     font-size: 0.93em;
     min-width: 23.5em;
 }
-.jmr-bb-ctas a{
+.jmr-bb-ctas a{1
     font-size: 0.93em;
     min-width: 23.5em;
     margin: 1%;
@@ -549,6 +605,15 @@ div.jmr-large-carousel{
 }
 /* --------- [END] Browse Banners --------- */
 
+}
+
+
+@media screen and (min-width: 1900px){
+/* --------- [START] THREE COLUMNS --------- */
+.jmr-three-column article{
+    font-size: 1em;
+}
+/* --------- [END] THREE COLUMNS --------- */
 }
 
 
@@ -609,7 +674,7 @@ div.jmr-large-carousel{
 
 /* --------- [START] TWO & THREE COLUMNS --------- */
 .jmr-left,
-.jmr-center{
+.jmr-middle{
     margin: 0 0 8%;
 }
 /* --------- [END] TWO & THREE COLUMNS --------- */
