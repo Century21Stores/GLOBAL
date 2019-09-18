@@ -3,9 +3,7 @@
 
 
 /* -------- [START] Only Production ---------- */
-.product-badge.badge-inventory {
-    display: none !important;
-}
+
 /* -------- [END] Only Production ---------- */
 
 
@@ -668,6 +666,25 @@ div.jmr-large-carousel{
     border-color: #000000 !important;
     color: #ffffff !important;
     background: #000000 !important;
+}
+.jmr-bb article{
+    margin: 0;   
+}
+.jmr-bb article a{
+    min-width: auto;
+    min-height: 35px;
+    vertical-align: middle;
+    width: 43%;
+    display: -webkit-inline-box;
+    display: -moz-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.98em;
+}    
 }
 /* [END] CTAs  */
 
