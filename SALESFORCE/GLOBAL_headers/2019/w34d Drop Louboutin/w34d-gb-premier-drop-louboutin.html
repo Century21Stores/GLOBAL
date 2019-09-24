@@ -1,4 +1,4 @@
-<!-- w30a-gb-plcc15-default-no-rotating - PLCC 15 GB - JuanMa - 09.24.19 -->
+<!-- w34d-gb-premier-drop-louboutin - Premier GB - JuanMa - 9.24.19 -->
 
 <style>
 /* -------- [START] Overwrite ---------- */
@@ -81,7 +81,7 @@ a.jm-cta-button-gb{
 
 /* -------- [START] WEEKLY BANNER ---------- */
 .jm-thisweek-global-banner .jm-global-splitted-banner{
-/*    background: #b31f34;*/
+    /*background: #b31f34;*/
     background: #000000;
 }
 .jm-thisweek-global-banner img{
@@ -114,7 +114,8 @@ a.jm-cta-button-gb{
 
 /* -------- [START] CLOCK COUNTER ---------- */
 .jm-global-splitted-banner-week div.jmr-add-clock{
-    font-size: 1.93em;
+    font-size: 1.8em;
+    line-height: 1;
 }
 /* -------- [END] CLOCK COUNTER ---------- */
 
@@ -194,6 +195,13 @@ a.jm-cta-button-gb{
 .jm-thisweek-global-banner .jm-gb-info-holder > div{
     width: auto; 
 }
+.jm-thisweek-global-banner strong{
+    font-weight: bold;
+    font-weight: 700;
+}
+.jm-thisweek-global-banner .jm-gb-info-holder > div.jmr-center-info{
+    width: 23%;    
+}
 /* -------- [END] WEEKLY BANNER ---------- */
 
 
@@ -212,7 +220,6 @@ a.jm-available,
     position: relative;
     display: inline-block;
     padding: 0 0 0.9em;
-    margin: 1% 0 0;
 }
 .jm-gb-info-holder{
     display: -webkit-box;
@@ -313,6 +320,10 @@ a.jm-available{
     border-bottom: solid 1px white;
     display: initial;
 }
+.jm-thisweek-global-banner a.jmr-force-cta-text{
+    background: none !important;
+    color: white !important;
+}
 /* -------- [END] WEEKLY BANNER ---------- */
 
 
@@ -325,51 +336,63 @@ p.jm-banner-2-mob{
     display: block;
     margin: 0 auto;
 }
-
+.jm-drop-thisweek-global-banner .jm-gb-info-holder > div.jmr-left-image{
+    position: absolute;
+    top: 34%;
+    left: 5%;
+    width: 26%;
+}
+.jm-drop-thisweek-global-banner .jm-gb-info-holder > div.jmr-right-cta,
+.jm-drop-thisweek-global-banner .jm-gb-info-holder > div.jmr-center-info{
+    width: 72%;
+    margin: 0 0 0 auto;
+}
 
 }
 </style>
 
 
 
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
 
-if((window.location.href == "https://development.c21stores.com/home") || (window.location.href == "https://staging-na01-century21.demandware.net/s/C21/home") || (window.location.href == "https://www.c21stores.com/") || (window.location.href == "https://www.c21stores.com") || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/?") > -1)  || (window.location.href.indexOf("c21stores.com/home") > -1) || (window.location.href.indexOf("/C21/home") > -1) || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/#") > -1) || (window.location.href.indexOf("https://www.c21stores.com/?") > -1) || (window.location.href.indexOf("https://www.c21stores.com#") > -1) || (window.location.href.indexOf("/categories/handbags-drop-lxr") > -1) || (window.location.href.indexOf("cart") > -1)){
+if((window.location.href == "https://development.c21stores.com/home") || (window.location.href == "https://staging-na01-century21.demandware.net/s/C21/home") || (window.location.href == "https://www.c21stores.com/") || (window.location.href == "https://www.c21stores.com") || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/?") > -1)  || (window.location.href.indexOf("c21stores.com/home") > -1) || (window.location.href.indexOf("/C21/home") > -1) || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/#") > -1) || (window.location.href.indexOf("https://www.c21stores.com/?") > -1) || (window.location.href.indexOf("https://www.c21stores.com#") > -1) || (window.location.href.indexOf("shoes-drop-christian-louboutin") > -1) || (window.location.href.indexOf("cart") > -1)){
     global_rotating_message_mobile_default();
     //global_rotating_message();
     showGlobalBanner();
 }else{    
-    showGlobalBanner();
+    //showGlobalBanner();
     //global_rotating_message();
-    global_rotating_message_mobile_default();
+    //global_rotating_message_mobile_default();
     //global_rotating_message_mobile();
-    //showGlobalBanner_week();
+    showGlobalBanner_week();
 }
 
 
 function showGlobalBanner_week(){
     $('.header-banner .content').prepend(
         '<div>'+
-            '<div class="jm-gb-wrapper jm-thisweek-global-banner">'+
+            '<div class="jm-drop-thisweek-global-banner jm-gb-wrapper jm-thisweek-global-banner">'+
             '<section class="jm-gb-rotating-wraper slideDown">'+
             '<div class="jm-global-splitted-banner jm-global-splitted-banner-week">'+
                '<div>'+
-                    '<a class="jm-clickable-image jm-cta-hover" aria-hidden="true" role="none" tabindex="-1" href="/categories/shoes-drop-christian-louboutin?imc=gb_thedrop&imccat=w30-19-d_shoes-drop-christian-louboutin"></a>'+
+                    '<a class="jm-clickable-image jm-cta-hover" aria-hidden="true" role="none" tabindex="-1" href="/categories/shoes-drop-christian-louboutin?imc=gb_premier&imccat=w33-19-d_shoes-drop-christian-louboutin"></a>'+
                     '<div class="jm-gb-info-holder"'+
                         '<div>'+
                             '<div class="jmr-left-image">'+
                                 '<img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small_white-2.png?$staticlink$"/>'+
                             '</div>'+
                             '<div class="jmr-center-info" id="jm-bg-weekly-header">'+
-                                //'<span class="jm-message-w29-19">NOW EXTENDED!</span>'+
-                                'CHRISTIAN LOUBOUTIN | UP TO 50% OFF'+
-                                // '<span>'+
-                                //     '<div class="jmr-add-clock"></div>'+
-                                // '</span>'+
+                                // '<span class="jm-message-w29-19">NOW EXTENDED!</span>'+
+                                // 'SEMI-ANNUAL CLEARANCE EVENT <span class="jmr-desktop-inline">|</span> <strong class="jmr-break-on-mobile">TAKE AN EXTRA 40% OFF</strong>'+
+                                'CHRISTIAN LOUBOUTIN | <strong>OVER 40% OFF</strong>'+
+                                '<span>'+
+                                    '<div class="jmr-add-clock"></div>'+
+                                '</span>'+
                             '</div>'+
                             '<div class="jmr-right-cta">'+
-                                '<a href="/categories/shoes-drop-christian-louboutin?imc=gb_thedrop&imccat=w30-19-d_shoes-drop-christian-louboutin" class="btn jm-cta-button-gb jm-cta-button jm-cta-button-light jm-cta-hover" id="jm-bg-weekly-cta" aria-labelledby="jm-bg-weekly-cta jm-bg-weekly-header">SHOP NOW</a>'+
+                                '<a href="/categories/shoes-drop-christian-louboutin?imc=gb_premier&imccat=w33-19-d_shoes-drop-christian-louboutin" class="jmr-force-cta-text btn jm-cta-button-gb jm-cta-button jmr-cta-button-light jm-cta-hover" id="jm-bg-weekly-cta" aria-labelledby="jm-bg-weekly-cta jm-bg-weekly-header">SHOP NOW</a>'+
                             '</div>'+
                         '</div>'+
                     '</div>'+
@@ -388,10 +411,10 @@ function showGlobalBanner(){
             '<div class="jm-gb-wrapper">'+
             '<section class="jm-gb-rotating-wraper slideDownMob">'+
                 '<p class="jm-mobile-gb-h3 jm-bg-nr-mob slideDownMob">'+
-                    '<a class="jmr-clickable-image jm-cta-hover" href="/c21status.html?imc=gb_plcc15&imccat=default_c21status" aria-hidden="true" role="none" tabindex="-1"></a>'+
+                    '<a class="jmr-clickable-image jm-cta-hover" href="/c21status.html?imc=gb_premier&imccat=default_c21status" aria-hidden="true" role="none" tabindex="-1"></a>'+
                     // '<img class="jm-credit-card-img" alt="C21STATUS credit card" src="Global/global-banner/c21status-credit-card.png?$staticlink$"/>'+
-                    '<span id="jm-bg-nr-mob-header"><b><span class="jmr-black">SAVE 15%</span>  WITH A NEW <br/>C21STATUS CREDIT CARD ONCE APPROVED<a id="plcc_20_gb_cta_mob" href="#" aria-label="See Info and Exclusions">*</a></b></span>'+
-                    '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_plcc15&imccat=default_c21status" id="jm-bg-nr-mob-cta" class="btn jmr-cta-text jm-cta-hover" aria-labelledby="jm-bg-nr-mob-cta jm-bg-nr-mob-header">LEARN MORE</a></span>'+
+                    '<span id="jm-bg-nr-mob-header"><b>EARN 2 POINTS PER $1 <br/>OR $10 FOR EVERY $250 SPENT</b></span>'+
+                    '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_premier&imccat=default_c21status" id="jm-bg-nr-mob-cta" class="btn jmr-cta-text jm-cta-hover" aria-labelledby="jm-bg-nr-mob-cta jm-bg-nr-mob-header">LEARN MORE</a></span>'+
                 '</p>',
             '</section>'+
             '</div>'+
@@ -401,21 +424,21 @@ function showGlobalBanner(){
             '<section class="jm-gb-rotating-wraper slideDown">'+
             '<div class="jm-global-splitted-banner">'+            
                '<div class="jm-left">'+
-                    '<a class="jmr-clickable-image jm-cta-hover" href="/categories/dresses-occasion-shop-all?imc=gb_plcc15&imccat=dresses-occasion-shop-all" aria-hidden="true" role="none" tabindex="-1"></a>'+
+                    '<a class="jmr-clickable-image jm-cta-hover" href="/categories/dresses-occasion-shop-all?imc=gb_premier&imccat=dresses-occasion-shop-all" aria-hidden="true" role="none" tabindex="-1"></a>'+
                     '<div>'+
                         '<p>'+
-                            'Free shipping on orders $75+'+
-                            '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/dresses-occasion-shop-all?imc=gb_plcc15&imccat=dresses-occasion-shop-all" class="btn jmr-cta-text jm-cta-hover">SHOP DRESSES</a></span>'+
+                            'FREE SHIPPING ON ORDERS $50+'+
+                            '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/dresses-occasion-shop-all?imc=gb_premier&imccat=dresses-occasion-shop-all" class="btn jmr-cta-text jm-cta-hover">SHOP DRESSES</a></span>'+
                         '</p>'+
                     '</div>'+
                 '</div>'+
                 '<div class="jm-right">'+
-                    '<a class="jmr-clickable-image jm-cta-hover" href="/c21status.html?imc=gb_plcc15&imccat=default_c21status" aria-hidden="true" role="none" tabindex="-1"></a>'+
+                    '<a class="jmr-clickable-image jm-cta-hover" href="/c21status.html?imc=gb_premier&imccat=default_c21status-lp" aria-hidden="true" role="none" tabindex="-1"></a>'+
                     '<div>'+
                         '<p>'+
                             // '<img class="jm-credit-card-img" alt="C21STATUS credit card" src="Global/global-banner/c21status-credit-card.png?$staticlink$"/>'+
-                            '<span id="jm-bg-nr-b-header"><span class="jmr-black">SAVE 15%</span> WITH A NEW C21STATUS CREDIT CARD ONCE APPROVED<a id="plcc_20_gb_cta" href="#" aria-label="See Info and Exclusions">*</a></span>'+
-                            '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_plcc15&imccat=default_c21status" id="jm-bg-nr-b-cta" class="btn jmr-cta-text jm-cta-hover" aria-labelledby="jm-bg-nr-b-cta jm-bg-nr-b-header">LEARN MORE</a></span>'+
+                            '<span id="jm-bg-nr-b-header">EARN 2 POINTS PER $1 OR $10 FOR EVERY $250 SPENT</span>'+
+                            '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_premier&imccat=default_c21status" id="jm-bg-nr-b-cta" class="btn jmr-cta-text jm-cta-hover" aria-labelledby="jm-bg-nr-b-cta jm-bg-nr-b-header">LEARN MORE</a></span>'+
                         '</p>'+
                     '</div>'+
                     // '</a>'+
@@ -460,21 +483,21 @@ function global_rotating_message(){
         '<section class="jm-gb-rotating-wraper slideDown jm-banner-2">'+
             '<div class="jm-global-splitted-banner">'+            
                '<div class="jm-left">'+
-                    '<a class="jmr-clickable-image jm-cta-hover" href="/categories/dresses-occasion-shop-all?imc=gb_plcc15&imccat=dresses-occasion-shop-all" aria-hidden="true" role="none" tabindex="-1"></a>'+
+                    '<a class="jmr-clickable-image jm-cta-hover" href="/categories/dresses-occasion-shop-all?imc=gb_premier&imccat=dresses-occasion-shop-all" aria-hidden="true" role="none" tabindex="-1"></a>'+
                     '<div>'+
                         '<p>'+
-                            'Free shipping on orders $75+'+
-                            '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/dresses-occasion-shop-all?imc=gb_plcc15&imccat=dresses-occasion-shop-all" class="btn jmr-cta-text jm-cta-hover">SHOP DRESSES</a></span>'+
+                            'FREE SHIPPING ON ORDERS $50+'+
+                            '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/dresses-occasion-shop-all?imc=gb_premier&imccat=dresses-occasion-shop-all" class="btn jmr-cta-text jm-cta-hover">SHOP DRESSES</a></span>'+
                         '</p>'+
                     '</div>'+
                 '</div>'+
                 '<div class="jm-right">'+
-                    '<a class="jmr-clickable-image jm-cta-hover" href="/c21status.html?imc=gb_plcc15&imccat=default_c21status" aria-hidden="true" role="none" tabindex="-1"></a>'+
+                    '<a class="jmr-clickable-image jm-cta-hover" href="/c21status.html?imc=gb_premier&imccat=default_c21status-lp" aria-hidden="true" role="none" tabindex="-1"></a>'+
                     '<div>'+
                         '<p>'+
                             // '<img class="jm-credit-card-img" alt="C21STATUS credit card" src="Global/global-banner/c21status-credit-card.png?$staticlink$"/>'+
-                            '<span id="jm-bg-r2-b-header"><span class="jmr-black">SAVE 15%</span> WITH A NEW C21STATUS CREDIT CARD ONCE APPROVED<a id="plcc_20_gb_cta_r" href="#">*</a></span>'+
-                            '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_plcc15&imccat=default_c21status" id="jm-bg-r2-b-cta" class="btn jmr-cta-text jm-cta-hover" aria-labelledby="jm-bg-r2-b-cta jm-bg-r2-b-header">LEARN MORE</a></span>'+
+                            '<span id="jm-bg-nr-b-header">EARN 2 POINTS PER $1 OR $10 FOR EVERY $250 SPENT</span>'+
+                            '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_premier&imccat=default_c21status" id="jm-bg-r2-b-cta" class="btn jmr-cta-text jm-cta-hover" aria-labelledby="jm-bg-r2-b-cta jm-bg-r2-b-header">LEARN MORE</a></span>'+
                         '</p>'+
                     '</div>'+
                     // '</a>'+
@@ -520,15 +543,15 @@ function global_rotating_message_mobile(){
             '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/shoes-drop-christian-louboutin?imc=gb_thedrop&imccat=w30-19-d_shoes-drop-christian-louboutin" class="btn jmr-cta-text jm-cta-hover" id="jm-bg-mob1-cta" aria-labelledby="jm-bg-mob1-cta jm-bg-mob1-header">SHOP NOW</a></span>'+
         '</p>',
         // '<p class="jm-mobile-gb-h3 jm-bg-nr-mob slideDownMob jm-banner-1-mob">'+
-        //     '<a class="jmr-clickable-image jm-cta-hover" href="/categories/dresses-occasion-shop-all?imc=gb_plcc15&imccat=dresses-occasion-shop-all" aria-hidden="true" role="none" tabindex="-1"></a>'+
-        //     '<b>FREE SHIPPING <br>ON ORDERS $75+</b>'+
-        //     '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/dresses-occasion-shop-all?imc=gb_plcc15&imccat=dresses-occasion-shop-all" class="btn jmr-cta-text jm-cta-hover">SHOP DRESSES</a></span>'+
+        //     '<a class="jmr-clickable-image jm-cta-hover" href="/categories/dresses-occasion-shop-all?imc=gb_premier&imccat=dresses-occasion-shop-all" aria-hidden="true" role="none" tabindex="-1"></a>'+
+        //     '<b>FREE SHIPPING <br>ON ORDERS $50+</b>'+
+        //     '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/dresses-occasion-shop-all?imc=gb_premier&imccat=dresses-occasion-shop-all" class="btn jmr-cta-text jm-cta-hover">SHOP DRESSES</a></span>'+
         // '</p>',
         '<p class="jm-mobile-gb-h3 jm-bg-nr-mob slideDownMob jm-banner-3-mob">'+
-            '<a class="jmr-clickable-image" href="/c21status.html?imc=gb_plcc15&imccat=default_c21status" aria-hidden="true" role="none" tabindex="-1"></a>'+
+            '<a class="jmr-clickable-image" href="/c21status.html?imc=gb_premier&imccat=default_c21status-lp" aria-hidden="true" role="none" tabindex="-1"></a>'+
             // '<img class="jm-credit-card-img" alt="C21STATUS credit card" src="Global/global-banner/c21status-credit-card.png?$staticlink$"/>'+
-            '<span id="jm-bg-mob3-header"><b><span class="jmr-black">SAVE 15%</span> WITH A NEW <br/>C21STATUS CREDIT CARD ONCE APPROVED<a id="plcc_20_gb_cta_mob_r" href="#" aria-label="See Info and Exclusions">*</a></b></span>'+
-            '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_plcc15&imccat=default_c21status" id="jm-bg-mob3-cta" class="btn jmr-cta-text" aria-labelledby="jm-bg-mob3-cta jm-bg-mob3-header">LEARN MORE</a></span>'+
+            '<span id="jm-bg-mob2-header"><b>EARN 2 POINTS PER $1 <br/>OR $10 FOR EVERY $250 SPENT</b></span>'+
+            '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_premier&imccat=default_c21status" id="jm-bg-mob3-cta" class="btn jmr-cta-text" aria-labelledby="jm-bg-mob3-cta jm-bg-mob3-header">LEARN MORE</a></span>'+
         '</p>',
     ];
         function rotatingMessage(e) {
@@ -551,15 +574,15 @@ function global_rotating_message_mobile(){
 function global_rotating_message_mobile_default(){
     var rotatingMessages = [        
         '<p class="jm-mobile-gb-h3 jm-bg-nr-mob slideDownMob jm-banner-1-mob">'+
-            '<a class="jmr-clickable-image jm-cta-hover" href="/categories/dresses-occasion-shop-all?imc=gb_plcc15&imccat=dresses-occasion-shop-all" aria-hidden="true" role="none" tabindex="-1"></a>'+
-            '<b>FREE SHIPPING <br>ON ORDERS $75+</b>'+
-            '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/dresses-occasion-shop-all?imc=gb_plcc15&imccat=dresses-occasion-shop-all" class="btn jmr-cta-text jm-cta-hover">SHOP DRESSES</a></span>'+
+            '<a class="jmr-clickable-image jm-cta-hover" href="/categories/dresses-occasion-shop-all?imc=gb_premier&imccat=dresses-occasion-shop-all" aria-hidden="true" role="none" tabindex="-1"></a>'+
+            '<b>FREE SHIPPING <br>ON ORDERS $50+</b>'+
+            '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/dresses-occasion-shop-all?imc=gb_premier&imccat=dresses-occasion-shop-all" class="btn jmr-cta-text jm-cta-hover">SHOP DRESSES</a></span>'+
         '</p>',
         '<p class="jm-mobile-gb-h3 jm-bg-nr-mob slideDownMob jm-banner-3-mob">'+
-            '<a class="jmr-clickable-image" href="/c21status.html?imc=gb_plcc15&imccat=default_c21status" aria-hidden="true" role="none" tabindex="-1"></a>'+
+            '<a class="jmr-clickable-image" href="/c21status.html?imc=gb_premier&imccat=default_c21status-lp" aria-hidden="true" role="none" tabindex="-1"></a>'+
             // '<img class="jm-credit-card-img" alt="C21STATUS credit card" src="Global/global-banner/c21status-credit-card.png?$staticlink$"/>'+
-            '<span id="jm-bg-mob2-header"><b><span class="jmr-black">SAVE 15%</span> WITH A NEW <br/>C21STATUS CREDIT CARD ONCE APPROVED<a id="plcc_20_gb_cta_mob_r" href="#" aria-label="See Info and Exclusions">*</a></b></span>'+
-            '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_plcc15&imccat=default_c21status" id="jm-bg-mob2-cta" class="btn jmr-cta-text" aria-labelledby="jm-bg-mob2-cta jm-bg-mob2-header">LEARN MORE</a></span>'+
+            '<span id="jm-bg-mob2-header"><b>EARN 2 POINTS PER $1 <br/>OR $10 FOR EVERY $250 SPENT</b></span>'+
+            '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_premier&imccat=default_c21status" id="jm-bg-mob2-cta" class="btn jmr-cta-text" aria-labelledby="jm-bg-mob2-cta jm-bg-mob2-header">LEARN MORE</a></span>'+
         '</p>',
     ];
         function rotatingMessage(e) {
@@ -603,7 +626,7 @@ $('.jm-thisweek-global-banner .jm-gb-info-holder .jmr-add-clock').prepend(
   var dd = new Date();
   console.log("Today's date and time is : ");
   console.log(dd);
-  var targetDate = "Aug 25 2019";
+  var targetDate = "Sep 07 2019";
   var hh = dd.getHours();
   var utchh = dd.getUTCHours();
   //console.log(utchh);
@@ -628,7 +651,7 @@ $('.jm-thisweek-global-banner .jm-gb-info-holder .jmr-add-clock').prepend(
 function countdown() {
   let now = new Date();
   // let evenDate = new Date(2019, 7, 5);
-  let evenDate = new Date("2019-08-25T04:00:00Z"); // TEST
+  let evenDate = new Date("2019-09-07T04:00:00Z"); // TEST
   //let evenDate = new Date("2019-07-10T04:00:00Z"); // UTC time
   // console.log(evenDate);
   let actualTime = now.getTime();
@@ -644,7 +667,7 @@ function countdown() {
     // console.log(eventTime);
     // console.log(hraw);
     // console.log(d);
-  theCenturyDrop = "SEMI-ANNUAL CLEARANCE EVENT. TAKE AN EXTRA 40% OFF: ";
+  theCenturyDrop = "CHRISTIAN LOUBOUTIN, OVER 40% OFF: ";
   
   h %= 96;
   m %= 60;
