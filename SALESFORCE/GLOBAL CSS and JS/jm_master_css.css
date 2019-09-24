@@ -351,6 +351,23 @@ div.jmr-large-carousel{
 }
 /* --------- [END] LARGE CAROUSEL --------- */
 
+
+/* --------- [START] CURALATE --------- */
+.jmr-curalate-wrapper{
+    text-align: center;
+    margin: 6% auto;
+}
+.jmr-curalate-wrapper article .jmr-header-2{
+    font-weight: bold;
+    font-weight: 700;
+}
+.jmr-curalate-wrapper #crl8-campaign-carousel,
+.jmr-curalate-wrapper #crl8-homepage-carousel{
+    margin: 2% 0 0;
+}
+/* --------- [END] CURALATE --------- */
+
+
 @media screen and (min-width: 700px){
 
 /* -------- [START] Overwrite ---------- */
@@ -441,7 +458,7 @@ div.jmr-large-carousel{
 }
 .jmr-half-hero-content-block figure{
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat !important;
 }
 /* --------- [END] Half Hero --------- */
 
