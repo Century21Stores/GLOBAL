@@ -1,4 +1,4 @@
-<!-- w35e-gb-elite-centurycash-redemption - Elite GB - JuanMa - 9.24.19 -->
+<!-- w35e-gb-denied-centurycash-redemption - Denied GB - JuanMa - 9.27.19 -->
 
 <style>
 /* -------- [START] Overwrite ---------- */
@@ -111,7 +111,7 @@ a.jm-cta-button-gb{
     width: 8%;
 }
 .jm-thisweek-global-banner .jm-gb-info-holder > div.jmr-center-info{
-    margin: 0 4%;
+    /*margin: 0 4%;*/
 }
 .jm-thisweek-global-banner .jm-gb-info-holder > div.jmr-right-cta{
     text-align: center;
@@ -122,8 +122,10 @@ a.jm-cta-button-gb{
     color: white;
     font-weight: bold;
     font-weight: 600;
-    letter-spacing: 0.09em;
-    font-size: 0.87em;       
+    /*letter-spacing: 0.09em;
+    font-size: 0.87em;       */
+    letter-spacing: 0.1em;
+    font-size: 1em;
 }
 .jm-thisweek-global-banner .jmr-center-info a{
     color: white;
@@ -220,7 +222,8 @@ a.jm-cta-button-gb{
     font-weight: 700;
 }
 .jm-thisweek-global-banner .jm-gb-info-holder > div.jmr-center-info{
-    width: 55%;    
+    /*width: 55%;*/
+    width: 38%;
 }
 /* -------- [END] WEEKLY BANNER ---------- */
 
@@ -257,9 +260,16 @@ a.jm-available,
 
 
 }
+
+
+
 @media (min-width:1100px) {
 .jm-gb-wrapper section{
     font-size: 1.2vw;
+}
+a.jm-cta-button-gb{
+    /*min-width: 133px;*/
+    min-width: 200px;
 }
 }
 
@@ -393,15 +403,14 @@ p.jm-banner-2-mob{
 
 
 
-
-
 <script>
 document.addEventListener("DOMContentLoaded", function() {
 
-if((window.location.href == "https://development.c21stores.com/home") || (window.location.href == "https://staging-na01-century21.demandware.net/s/C21/home") || (window.location.href == "https://www.c21stores.com/") || (window.location.href == "https://www.c21stores.com") || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/?") > -1)  || (window.location.href.indexOf("c21stores.com/home") > -1) || (window.location.href.indexOf("/C21/home") > -1) || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/#") > -1) || (window.location.href.indexOf("https://www.c21stores.com/?") > -1) || (window.location.href.indexOf("https://www.c21stores.com#") > -1) || (window.location.href.indexOf("home-special-shops-tumi-drop") > -1) || (window.location.href.indexOf("cart") > -1)){ 
-    global_rotating_message_mobile_default();
+if((window.location.href == "https://development.c21stores.com/home") || (window.location.href == "https://staging-na01-century21.demandware.net/s/C21/home") || (window.location.href == "https://www.c21stores.com/") || (window.location.href == "https://www.c21stores.com") || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/?") > -1)  || (window.location.href.indexOf("c21stores.com/home") > -1) || (window.location.href.indexOf("/C21/home") > -1) || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/#") > -1) || (window.location.href.indexOf("https://www.c21stores.com/?") > -1) || (window.location.href.indexOf("https://www.c21stores.com#") > -1) || (window.location.href.indexOf("denim-promo") > -1) || (window.location.href.indexOf("cart") > -1)){
+     global_rotating_message_mobile_default();
     //global_rotating_message();
-    showGlobalBanner();
+    // showGlobalBanner();
+    showGlobalBanner_week();
 }else{    
     //showGlobalBanner();
     //global_rotating_message();
@@ -411,7 +420,6 @@ if((window.location.href == "https://development.c21stores.com/home") || (window
 }
 
 
-
 function showGlobalBanner_week(){
     $('.header-banner .content').prepend(
         '<div>'+
@@ -419,7 +427,7 @@ function showGlobalBanner_week(){
             '<section class="jm-gb-rotating-wraper slideDown">'+
             '<div class="jm-global-splitted-banner jm-global-splitted-banner-week">'+
                '<div>'+
-                    '<a class="jm-clickable-image jm-cta-hover" aria-hidden="true" role="none" tabindex="-1" href="/categories/new-arrivals-shop-all?imc=gb_elite&imccat=w35-19-d_new-arrivals-shop-all"></a>'+
+                    '<a class="jm-clickable-image jm-cta-hover" aria-hidden="true" role="none" tabindex="-1" href="/categories/new-arrivals-shop-all?imc=gb_denied&imccat=w35-19-e_new-arrivals-shop-all"></a>'+
                     '<div class="jm-gb-info-holder"'+
                         '<div>'+
                             // '<div class="jmr-left-image">'+
@@ -429,14 +437,14 @@ function showGlobalBanner_week(){
                                 // '<span class="jmr-online-store">9/19-9/23 | ONLINE & IN-STORE</span>'+
                                 // 'SEMI-ANNUAL CLEARANCE EVENT <span class="jmr-desktop-inline">|</span> <strong class="jmr-break-on-mobile">TAKE AN EXTRA 40% OFF</strong>'+
                                 // 'TODAY ONLY <strong class="jmr-desktop-inline">|</strong> <strong class="jmr-break-on-mobile">BUY ONE, GET ONE 50% OFF<sup><a href="#" id="ju_gb_denim_event">*</a></sup></strong> <strong class="jmr-desktop-inline">|</strong> SELECT DENIM STYLES'+
-                                '<strong>EARN CENTURYCASH? REDEEM BY 10/21</strong>'+
-                                // '<span class="jmr-gb-info-exclusions"><span><a href="/centurycash.html?imc=gb_elite&imccat=w33-19-d_centurycash-html" target="_blank">INFO/EXCLUSIONS</a></span></span>'+
+                                '<strong>EARNED CENTURYCASH? REDEEM BY 10/21</strong>'+
+                                // '<span class="jmr-gb-info-exclusions"><span><a href="/centurycash.html?imc=gb_denied&imccat=w33-19-d_centurycash-html" target="_blank">INFO/EXCLUSIONS</a></span></span>'+
                                 // '<span>'+
                                 //     '<div class="jmr-add-clock"></div>'+
                                 // '</span>'+
                             '</div>'+
                             '<div class="jmr-right-cta">'+
-                                '<a href="/categories/new-arrivals-shop-all?imc=gb_elite&imccat=w35-19-d_new-arrivals-shop-all" class="jmr-force-cta-text btn jm-cta-button-gb jm-cta-button jmr-cta-button-solidlight jm-cta-hover" id="jm-bg-weekly-cta" aria-labelledby="jm-bg-weekly-cta jm-bg-weekly-header">NEW ARRIVALS</a>'+
+                                '<a href="/categories/new-arrivals-shop-all?imc=gb_denied&imccat=w35-19-e_new-arrivals-shop-all" class="jmr-force-cta-text btn jm-cta-button-gb jm-cta-button jmr-cta-button-solidlight jm-cta-hover" id="jm-bg-weekly-cta" aria-labelledby="jm-bg-weekly-cta jm-bg-weekly-header">SHOP NEW ARRIVALS</a>'+
                             '</div>'+
                         '</div>'+
                     '</div>'+
@@ -455,10 +463,10 @@ function showGlobalBanner(){
             '<div class="jm-gb-wrapper">'+
             '<section class="jm-gb-rotating-wraper slideDownMob">'+
                 '<p class="jm-mobile-gb-h3 jm-bg-nr-mob slideDownMob">'+
-                    '<a class="jmr-clickable-image jm-cta-hover" href="/c21status.html?imc=gb_elite&imccat=default_c21status" aria-hidden="true" role="none" tabindex="-1"></a>'+
+                    '<a class="jmr-clickable-image jm-cta-hover" href="/c21status.html?imc=gb_denied&imccat=default_c21status" aria-hidden="true" role="none" tabindex="-1"></a>'+
                     // '<img class="jm-credit-card-img" alt="C21STATUS credit card" src="Global/global-banner/c21status-credit-card.png?$staticlink$"/>'+
-                    '<span id="jm-bg-nr-mob-header"><b>EARN 4 POINTS PER $1 <br/>OR $10 FOR EVERY $125 SPENT</b></span>'+
-                    '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_elite&imccat=default_c21status" id="jm-bg-nr-mob-cta" class="btn jmr-cta-text jm-cta-hover" aria-labelledby="jm-bg-nr-mob-cta jm-bg-nr-mob-header">LEARN MORE</a></span>'+
+                    '<span id="jm-bg-nr-mob-header"><b>EARN 1 POINTS PER $1 <br/>OR $10 FOR EVERY $500 SPENT</b></span>'+
+                    '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_denied&imccat=default_c21status" id="jm-bg-nr-mob-cta" class="btn jmr-cta-text jm-cta-hover" aria-labelledby="jm-bg-nr-mob-cta jm-bg-nr-mob-header">LEARN MORE</a></span>'+
                 '</p>',
             '</section>'+
             '</div>'+
@@ -468,21 +476,21 @@ function showGlobalBanner(){
             '<section class="jm-gb-rotating-wraper slideDown">'+
             '<div class="jm-global-splitted-banner">'+            
                '<div class="jm-left">'+
-                    '<a class="jmr-clickable-image jm-cta-hover" href="/categories/dresses-occasion-shop-all?imc=gb_elite&imccat=dresses-occasion-shop-all" aria-hidden="true" role="none" tabindex="-1"></a>'+
+                    '<a class="jmr-clickable-image jm-cta-hover" href="/categories/dresses-occasion-shop-all?imc=gb_denied&imccat=dresses-occasion-shop-all" aria-hidden="true" role="none" tabindex="-1"></a>'+
                     '<div>'+
                         '<p>'+
-                            'FREE SHIPPING ON ALL ORDERS'+
-                            '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/dresses-occasion-shop-all?imc=gb_elite&imccat=dresses-occasion-shop-all" class="btn jmr-cta-text jm-cta-hover">SHOP DRESSES</a></span>'+
+                            'FREE SHIPPING ON ORDERS OVER $75+'+
+                            '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/dresses-occasion-shop-all?imc=gb_denied&imccat=dresses-occasion-shop-all" class="btn jmr-cta-text jm-cta-hover">SHOP DRESSES</a></span>'+
                         '</p>'+
                     '</div>'+
                 '</div>'+
                 '<div class="jm-right">'+
-                    '<a class="jmr-clickable-image jm-cta-hover" href="/c21status.html?imc=gb_elite&imccat=default_c21status" aria-hidden="true" role="none" tabindex="-1"></a>'+
+                    '<a class="jmr-clickable-image jm-cta-hover" href="/c21status.html?imc=gb_denied&imccat=default_c21status" aria-hidden="true" role="none" tabindex="-1"></a>'+
                     '<div>'+
                         '<p>'+
                             // '<img class="jm-credit-card-img" alt="C21STATUS credit card" src="Global/global-banner/c21status-credit-card.png?$staticlink$"/>'+
-                            '<span id="jm-bg-nr-b-header">EARN 4 POINTS PER $1 OR $10 FOR EVERY $125 SPENT</span>'+
-                            '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_elite&imccat=default_c21status" id="jm-bg-nr-b-cta" class="btn jmr-cta-text jm-cta-hover" aria-labelledby="jm-bg-nr-b-cta jm-bg-nr-b-header">LEARN MORE</a></span>'+
+                            '<span id="jm-bg-nr-b-header">EARN 1 POINTS PER $1 OR $10 FOR EVERY $500 SPENT</span>'+
+                            '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_denied&imccat=default_c21status" id="jm-bg-nr-b-cta" class="btn jmr-cta-text jm-cta-hover" aria-labelledby="jm-bg-nr-b-cta jm-bg-nr-b-header">LEARN MORE</a></span>'+
                         '</p>'+
                     '</div>'+
                     // '</a>'+
@@ -527,21 +535,21 @@ function global_rotating_message(){
         '<section class="jm-gb-rotating-wraper slideDown jm-banner-2">'+
             '<div class="jm-global-splitted-banner">'+            
                '<div class="jm-left">'+
-                    '<a class="jmr-clickable-image jm-cta-hover" href="/categories/dresses-occasion-shop-all?imc=gb_elite&imccat=dresses-occasion-shop-all" aria-hidden="true" role="none" tabindex="-1"></a>'+
+                    '<a class="jmr-clickable-image jm-cta-hover" href="/categories/dresses-occasion-shop-all?imc=gb_denied&imccat=dresses-occasion-shop-all" aria-hidden="true" role="none" tabindex="-1"></a>'+
                     '<div>'+
                         '<p>'+
-                            'FREE SHIPPING ON ALL ORDERS'+
-                            '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/dresses-occasion-shop-all?imc=gb_elite&imccat=dresses-occasion-shop-all" class="btn jmr-cta-text jm-cta-hover">SHOP DRESSES</a></span>'+
+                            'FREE SHIPPING ON ORDERS OVER $75+'+
+                            '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/dresses-occasion-shop-all?imc=gb_denied&imccat=dresses-occasion-shop-all" class="btn jmr-cta-text jm-cta-hover">SHOP DRESSES</a></span>'+
                         '</p>'+
                     '</div>'+
                 '</div>'+
                 '<div class="jm-right">'+
-                    '<a class="jmr-clickable-image jm-cta-hover" href="/c21status.html?imc=gb_elite&imccat=default_c21status" aria-hidden="true" role="none" tabindex="-1"></a>'+
+                    '<a class="jmr-clickable-image jm-cta-hover" href="/c21status.html?imc=gb_denied&imccat=default_c21status" aria-hidden="true" role="none" tabindex="-1"></a>'+
                     '<div>'+
                         '<p>'+
                             // '<img class="jm-credit-card-img" alt="C21STATUS credit card" src="Global/global-banner/c21status-credit-card.png?$staticlink$"/>'+
-                            '<span id="jm-bg-nr-b-header">EARN 4 POINTS PER $1 OR $10 FOR EVERY $125 SPENT</span>'+
-                            '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_elite&imccat=default_c21status" id="jm-bg-r2-b-cta" class="btn jmr-cta-text jm-cta-hover" aria-labelledby="jm-bg-r2-b-cta jm-bg-r2-b-header">LEARN MORE</a></span>'+
+                            '<span id="jm-bg-nr-b-header">EARN 1 POINTS PER $1 OR $10 FOR EVERY $500 SPENT</span>'+
+                            '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_denied&imccat=default_c21status" id="jm-bg-r2-b-cta" class="btn jmr-cta-text jm-cta-hover" aria-labelledby="jm-bg-r2-b-cta jm-bg-r2-b-header">LEARN MORE</a></span>'+
                         '</p>'+
                     '</div>'+
                     // '</a>'+
@@ -587,15 +595,15 @@ function global_rotating_message_mobile(){
             '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/shoes-drop-christian-louboutin?imc=gb_thedrop&imccat=w30-19-d_shoes-drop-christian-louboutin" class="btn jmr-cta-text jm-cta-hover" id="jm-bg-mob1-cta" aria-labelledby="jm-bg-mob1-cta jm-bg-mob1-header">SHOP NOW</a></span>'+
         '</p>',
         // '<p class="jm-mobile-gb-h3 jm-bg-nr-mob slideDownMob jm-banner-1-mob">'+
-        //     '<a class="jmr-clickable-image jm-cta-hover" href="/categories/dresses-occasion-shop-all?imc=gb_elite&imccat=dresses-occasion-shop-all" aria-hidden="true" role="none" tabindex="-1"></a>'+
-        //     '<b>FREE SHIPPING <br>ON ALL ORDERS</b>'+
-        //     '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/dresses-occasion-shop-all?imc=gb_elite&imccat=dresses-occasion-shop-all" class="btn jmr-cta-text jm-cta-hover">SHOP DRESSES</a></span>'+
+        //     '<a class="jmr-clickable-image jm-cta-hover" href="/categories/dresses-occasion-shop-all?imc=gb_denied&imccat=dresses-occasion-shop-all" aria-hidden="true" role="none" tabindex="-1"></a>'+
+        //     '<b>FREE SHIPPING <br>ON ORDERS OVER $75+</b>'+
+        //     '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/dresses-occasion-shop-all?imc=gb_denied&imccat=dresses-occasion-shop-all" class="btn jmr-cta-text jm-cta-hover">SHOP DRESSES</a></span>'+
         // '</p>',
         '<p class="jm-mobile-gb-h3 jm-bg-nr-mob slideDownMob jm-banner-3-mob">'+
-            '<a class="jmr-clickable-image" href="/c21status.html?imc=gb_elite&imccat=default_c21status" aria-hidden="true" role="none" tabindex="-1"></a>'+
+            '<a class="jmr-clickable-image" href="/c21status.html?imc=gb_denied&imccat=default_c21status" aria-hidden="true" role="none" tabindex="-1"></a>'+
             // '<img class="jm-credit-card-img" alt="C21STATUS credit card" src="Global/global-banner/c21status-credit-card.png?$staticlink$"/>'+
-            '<span id="jm-bg-mob2-header"><b>EARN 4 POINTS PER $1 <br/>OR $10 FOR EVERY $125 SPENT</b></span>'+
-            '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_elite&imccat=default_c21status" id="jm-bg-mob3-cta" class="btn jmr-cta-text" aria-labelledby="jm-bg-mob3-cta jm-bg-mob3-header">LEARN MORE</a></span>'+
+            '<span id="jm-bg-mob2-header"><b>EARN 1 POINTS PER $1 <br/>OR $10 FOR EVERY $500 SPENT</b></span>'+
+            '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_denied&imccat=default_c21status" id="jm-bg-mob3-cta" class="btn jmr-cta-text" aria-labelledby="jm-bg-mob3-cta jm-bg-mob3-header">LEARN MORE</a></span>'+
         '</p>',
     ];
         function rotatingMessage(e) {
@@ -618,15 +626,15 @@ function global_rotating_message_mobile(){
 function global_rotating_message_mobile_default(){
     var rotatingMessages = [        
         '<p class="jm-mobile-gb-h3 jm-bg-nr-mob slideDownMob jm-banner-1-mob">'+
-            '<a class="jmr-clickable-image jm-cta-hover" href="/categories/dresses-occasion-shop-all?imc=gb_elite&imccat=dresses-occasion-shop-all" aria-hidden="true" role="none" tabindex="-1"></a>'+
-            '<b>FREE SHIPPING <br>ON ALL ORDERS</b>'+
-            '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/dresses-occasion-shop-all?imc=gb_elite&imccat=dresses-occasion-shop-all" class="btn jmr-cta-text jm-cta-hover">SHOP DRESSES</a></span>'+
+            '<a class="jmr-clickable-image jm-cta-hover" href="/categories/dresses-occasion-shop-all?imc=gb_denied&imccat=dresses-occasion-shop-all" aria-hidden="true" role="none" tabindex="-1"></a>'+
+            '<b>FREE SHIPPING <br>ON ORDERS OVER $75+</b>'+
+            '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/dresses-occasion-shop-all?imc=gb_denied&imccat=dresses-occasion-shop-all" class="btn jmr-cta-text jm-cta-hover">SHOP DRESSES</a></span>'+
         '</p>',
         '<p class="jm-mobile-gb-h3 jm-bg-nr-mob slideDownMob jm-banner-3-mob">'+
-            '<a class="jmr-clickable-image" href="/c21status.html?imc=gb_elite&imccat=default_c21status" aria-hidden="true" role="none" tabindex="-1"></a>'+
+            '<a class="jmr-clickable-image" href="/c21status.html?imc=gb_denied&imccat=default_c21status" aria-hidden="true" role="none" tabindex="-1"></a>'+
             // '<img class="jm-credit-card-img" alt="C21STATUS credit card" src="Global/global-banner/c21status-credit-card.png?$staticlink$"/>'+
-            '<span id="jm-bg-mob2-header"><b>EARN 4 POINTS PER $1 <br/>OR $10 FOR EVERY $125 SPENT</b></span>'+
-            '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_elite&imccat=default_c21status" id="jm-bg-mob2-cta" class="btn jmr-cta-text" aria-labelledby="jm-bg-mob2-cta jm-bg-mob2-header">LEARN MORE</a></span>'+
+            '<span id="jm-bg-mob2-header"><b>EARN 1 POINTS PER $1 <br/>OR $10 FOR EVERY $500 SPENT</b></span>'+
+            '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_denied&imccat=default_c21status" id="jm-bg-mob2-cta" class="btn jmr-cta-text" aria-labelledby="jm-bg-mob2-cta jm-bg-mob2-header">LEARN MORE</a></span>'+
         '</p>',
     ];
         function rotatingMessage(e) {
