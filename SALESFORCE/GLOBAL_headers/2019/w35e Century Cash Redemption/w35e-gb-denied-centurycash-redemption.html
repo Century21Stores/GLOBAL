@@ -1,4 +1,4 @@
-<!-- w35e-gb-denied-centurycash-redemption - Denied GB - JuanMa - 9.27.19 -->
+<!-- w35e-gb-denied-centurycash-redemption - Denied GB - JuanMa - 10.4.19 -->
 
 <style>
 /* -------- [START] Overwrite ---------- */
@@ -406,11 +406,12 @@ p.jm-banner-2-mob{
 <script>
 document.addEventListener("DOMContentLoaded", function() {
 
-if((window.location.href == "https://development.c21stores.com/home") || (window.location.href == "https://staging-na01-century21.demandware.net/s/C21/home") || (window.location.href == "https://www.c21stores.com/") || (window.location.href == "https://www.c21stores.com") || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/?") > -1)  || (window.location.href.indexOf("c21stores.com/home") > -1) || (window.location.href.indexOf("/C21/home") > -1) || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/#") > -1) || (window.location.href.indexOf("https://www.c21stores.com/?") > -1) || (window.location.href.indexOf("https://www.c21stores.com#") > -1) || (window.location.href.indexOf("denim-promo") > -1) || (window.location.href.indexOf("cart") > -1)){
+// if((window.location.href == "https://development.c21stores.com/home") || (window.location.href == "https://staging-na01-century21.demandware.net/s/C21/home") || (window.location.href == "https://www.c21stores.com/") || (window.location.href == "https://www.c21stores.com") || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/?") > -1)  || (window.location.href.indexOf("c21stores.com/home") > -1) || (window.location.href.indexOf("/C21/home") > -1) || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/#") > -1) || (window.location.href.indexOf("https://www.c21stores.com/?") > -1) || (window.location.href.indexOf("https://www.c21stores.com#") > -1) || (window.location.href.indexOf("denim-promo") > -1) || (window.location.href.indexOf("cart") > -1)){
+if(window.location.href.indexOf("cart") > -1){    
      global_rotating_message_mobile_default();
     //global_rotating_message();
-    // showGlobalBanner();
-    showGlobalBanner_week();
+    showGlobalBanner();
+    //showGlobalBanner_week();
 }else{    
     //showGlobalBanner();
     //global_rotating_message();
@@ -465,7 +466,7 @@ function showGlobalBanner(){
                 '<p class="jm-mobile-gb-h3 jm-bg-nr-mob slideDownMob">'+
                     '<a class="jmr-clickable-image jm-cta-hover" href="/c21status.html?imc=gb_denied&imccat=default_c21status" aria-hidden="true" role="none" tabindex="-1"></a>'+
                     // '<img class="jm-credit-card-img" alt="C21STATUS credit card" src="Global/global-banner/c21status-credit-card.png?$staticlink$"/>'+
-                    '<span id="jm-bg-nr-mob-header"><b>EARN 1 POINTS PER $1 <br/>OR $10 FOR EVERY $500 SPENT</b></span>'+
+                    '<span id="jm-bg-nr-mob-header"><b>EARN 1 POINT PER $1 <br/>OR $10 FOR EVERY $500 SPENT</b></span>'+
                     '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_denied&imccat=default_c21status" id="jm-bg-nr-mob-cta" class="btn jmr-cta-text jm-cta-hover" aria-labelledby="jm-bg-nr-mob-cta jm-bg-nr-mob-header">LEARN MORE</a></span>'+
                 '</p>',
             '</section>'+
@@ -489,7 +490,7 @@ function showGlobalBanner(){
                     '<div>'+
                         '<p>'+
                             // '<img class="jm-credit-card-img" alt="C21STATUS credit card" src="Global/global-banner/c21status-credit-card.png?$staticlink$"/>'+
-                            '<span id="jm-bg-nr-b-header">EARN 1 POINTS PER $1 OR $10 FOR EVERY $500 SPENT</span>'+
+                            '<span id="jm-bg-nr-b-header">EARN 1 POINT PER $1 OR $10 FOR EVERY $500 SPENT</span>'+
                             '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_denied&imccat=default_c21status" id="jm-bg-nr-b-cta" class="btn jmr-cta-text jm-cta-hover" aria-labelledby="jm-bg-nr-b-cta jm-bg-nr-b-header">LEARN MORE</a></span>'+
                         '</p>'+
                     '</div>'+
@@ -548,7 +549,7 @@ function global_rotating_message(){
                     '<div>'+
                         '<p>'+
                             // '<img class="jm-credit-card-img" alt="C21STATUS credit card" src="Global/global-banner/c21status-credit-card.png?$staticlink$"/>'+
-                            '<span id="jm-bg-nr-b-header">EARN 1 POINTS PER $1 OR $10 FOR EVERY $500 SPENT</span>'+
+                            '<span id="jm-bg-nr-b-header">EARN 1 POINT PER $1 OR $10 FOR EVERY $500 SPENT</span>'+
                             '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_denied&imccat=default_c21status" id="jm-bg-r2-b-cta" class="btn jmr-cta-text jm-cta-hover" aria-labelledby="jm-bg-r2-b-cta jm-bg-r2-b-header">LEARN MORE</a></span>'+
                         '</p>'+
                     '</div>'+
@@ -602,7 +603,7 @@ function global_rotating_message_mobile(){
         '<p class="jm-mobile-gb-h3 jm-bg-nr-mob slideDownMob jm-banner-3-mob">'+
             '<a class="jmr-clickable-image" href="/c21status.html?imc=gb_denied&imccat=default_c21status" aria-hidden="true" role="none" tabindex="-1"></a>'+
             // '<img class="jm-credit-card-img" alt="C21STATUS credit card" src="Global/global-banner/c21status-credit-card.png?$staticlink$"/>'+
-            '<span id="jm-bg-mob2-header"><b>EARN 1 POINTS PER $1 <br/>OR $10 FOR EVERY $500 SPENT</b></span>'+
+            '<span id="jm-bg-mob2-header"><b>EARN 1 POINT PER $1 <br/>OR $10 FOR EVERY $500 SPENT</b></span>'+
             '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_denied&imccat=default_c21status" id="jm-bg-mob3-cta" class="btn jmr-cta-text" aria-labelledby="jm-bg-mob3-cta jm-bg-mob3-header">LEARN MORE</a></span>'+
         '</p>',
     ];
@@ -633,7 +634,7 @@ function global_rotating_message_mobile_default(){
         '<p class="jm-mobile-gb-h3 jm-bg-nr-mob slideDownMob jm-banner-3-mob">'+
             '<a class="jmr-clickable-image" href="/c21status.html?imc=gb_denied&imccat=default_c21status" aria-hidden="true" role="none" tabindex="-1"></a>'+
             // '<img class="jm-credit-card-img" alt="C21STATUS credit card" src="Global/global-banner/c21status-credit-card.png?$staticlink$"/>'+
-            '<span id="jm-bg-mob2-header"><b>EARN 1 POINTS PER $1 <br/>OR $10 FOR EVERY $500 SPENT</b></span>'+
+            '<span id="jm-bg-mob2-header"><b>EARN 1 POINT PER $1 <br/>OR $10 FOR EVERY $500 SPENT</b></span>'+
             '<span class="jmr-gb-cta jmr-ctas"><a href="/c21status.html?imc=gb_denied&imccat=default_c21status" id="jm-bg-mob2-cta" class="btn jmr-cta-text" aria-labelledby="jm-bg-mob2-cta jm-bg-mob2-header">LEARN MORE</a></span>'+
         '</p>',
     ];

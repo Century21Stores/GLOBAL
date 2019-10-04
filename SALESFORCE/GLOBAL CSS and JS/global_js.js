@@ -1,4 +1,4 @@
-// Global JS - JuanMa - GWP added - 9.11.19
+// Global JS - JuanMa - GWP added - 10.01.19
 
 // (none)              /search?prefn1=brand&searchType=designers&prefv1=Adesso
 // (space)             %20
@@ -13,6 +13,8 @@
 
 // [START] Calls
 window.addEventListener("DOMContentLoaded", function(){
+
+  //jm_Global_Alert_ad();
 
   //PDP ONLY
   if(window.location.href.indexOf("/products/") > -1){
@@ -153,6 +155,14 @@ function jm_carousel_modification(){
   }  
 
 }
+
+function jm_Global_Alert_ad(){
+  console.log('alert global banner');
+  $('.header-banner').prepend(
+    '<p class="jmr-alert-gb" role="alert"><a href="/contact"><span>Our phones are temporarily down. Questions? <span role="button" class="jmr-text-cta">EMAIL US</span></span></a></p>'
+  )
+
+}
 // [END] Scrolling disclaimer browse banner
 
 // https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&srule=top-sellers&prefv1=Billionaire%20Boys%20Club
@@ -161,4 +171,3 @@ function jm_carousel_modification(){
 // https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&prefv1=Billionaire%20Boys%20Club
 // https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&prefn2=divisionCode&srule=top-sellers&prefv1=Calvin%20Klein&prefv2=Men
 // https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&prefn2=divisionCode&srule=top-sellers&prefv1=Calvin%20Klein&prefv2=Women
-
