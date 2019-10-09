@@ -401,6 +401,32 @@ div.jmr-large-carousel{
 /* --------- [END] CURALATE --------- */
 
 
+/* --------- [START] RECOMMENDER HEADERS --------- */
+.jmr-recommender-wrap{
+    width: 90%;
+    margin: 0 auto;
+    position: relative; 
+}
+.jmr-recommender-wrap-line{
+    border-bottom: solid 1px gray;
+    position: absolute;
+    bottom: 41%;
+    width: 100%;
+}
+.jmr-recommender-wrap-header{
+    margin: 0;
+    display: inline-block;
+    background: white;
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    font-weight: 600;
+    position: relative;
+    padding: 0 4%;  
+}
+/* --------- [END] RECOMMENDER HEADERS --------- */
+
+
 @media screen and (min-width: 700px){
 
 /* -------- [START] Overwrite ---------- */
