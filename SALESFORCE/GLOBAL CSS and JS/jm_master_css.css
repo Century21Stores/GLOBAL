@@ -706,6 +706,12 @@ div.jmr-large-carousel{
 }
 /* -------- [END] General ---------- */
 
+/* [START] CTAs  */
+.jmr-ctas .jmr-cta-button{
+    margin-bottom: 3%;
+}
+/* [END] CTAs  */
+
 /* [START] Copy  */
 .jmr-all-cb article .jmr-header-2{
     font-weight: bold;
