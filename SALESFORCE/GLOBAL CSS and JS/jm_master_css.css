@@ -1,4 +1,4 @@
-/*Global CSS - JuanMa - 10.01.19 */
+/* Global CSS - JuanMa - 10.29.19 */
 
 /* Adi Dabu - remove Bloomreach widget visually */
 .bloomreach-widget { display: none }
@@ -12,6 +12,12 @@
 /* -------- [START] Overwrite ---------- */
 .product-details-area > a{
     display: block;
+}
+.cart-policies{
+    margin: 6% auto;
+}
+.cart-policies h2{
+    letter-spacing: 0.05em;    
 }
 /* -------- [END] Overwrite ---------- */
 
@@ -420,7 +426,7 @@ div.jmr-large-carousel{
     font-size: 0.8em;
     letter-spacing: 0.05em;
     font-weight: bold;
-    font-weight: 600;
+    font-weight: 700;
     position: relative;
     padding: 0 4%;  
 }
@@ -729,7 +735,7 @@ div.jmr-large-carousel{
 
 /* [START] CTAs  */
 .jmr-all-cb{
-    margin: 0 0 8%;
+    margin: 0 auto 8%;
 }
 .jmr-all-cb article{
     font-size: 2.6vw;

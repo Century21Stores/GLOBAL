@@ -1,4 +1,4 @@
-// Global JS - JuanMa - GWP added - 10.01.19
+// Global JS - JuanMa - GWP added - 10.29.19
 
 // (none)              /search?prefn1=brand&searchType=designers&prefv1=Adesso
 // (space)             %20
@@ -57,7 +57,19 @@ window.addEventListener("DOMContentLoaded", function(){
     
   }
 
+  //CART
+  else if(window.location.href.indexOf("/cart") > -1){
+    console.log("In Cart");
+    jm_centurycash_message();
+    doSwap();
+    
+  }  
 
+  //MY ACCOUNT
+  else if(window.location.href.indexOf("/account") > -1){
+    console.log("My Account");
+    // jm_loading_messages_from_cart();
+  } 
 
   //NO CATEGORIES OR PDP
   else{
@@ -165,9 +177,30 @@ function jm_Global_Alert_ad(){
 }
 // [END] Scrolling disclaimer browse banner
 
+// [START] Scrolling disclaimer browse banner
+function jm_centurycash_message(){
+var subtotal = $('.cart-page .order-total-summary .subtotal-item .sub-total');
+  if(subtotal){
+    var subtotal_number = subtotal.text();
+    console.log(subtotal_number);
+  }
+}
+// [END] Scrolling disclaimer browse banner
+
+// [START] Swappping elements cart
+function doSwap() {
+  objeto = document.querySelector('.cart-policies');
+  $('.footer-email-signup').before(objeto);
+}
+// [END] Swappping elements cart
+
 // https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&srule=top-sellers&prefv1=Billionaire%20Boys%20Club
 // https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&prefv1=Billionaire%20Boys%20Club
 // https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&prefv1=Billionaire%20Boys%20Club
 // https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&prefv1=Billionaire%20Boys%20Club
 // https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&prefn2=divisionCode&srule=top-sellers&prefv1=Calvin%20Klein&prefv2=Men
 // https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&prefn2=divisionCode&srule=top-sellers&prefv1=Calvin%20Klein&prefv2=Women
+
+
+
+
