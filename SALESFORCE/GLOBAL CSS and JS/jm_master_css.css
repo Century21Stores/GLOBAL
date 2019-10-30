@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 10.29.19 */
+/* Global CSS - JuanMa - 10.30.19 */
 
 /* Adi Dabu - remove Bloomreach widget visually */
 .bloomreach-widget { display: none }
@@ -70,7 +70,8 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     outline: 4px solid #3eb0fc;
 }
 .jmr-alert-gb .jmr-text-cta{
-    margin: 0 0 0 1%;    
+    margin: 0 0 0 1%;
+    font-size: 0.77em;
 }
 
 /* END GLOBAL BANNER */

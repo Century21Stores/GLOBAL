@@ -1,4 +1,4 @@
-// Global JS - JuanMa - GWP added - 10.29.19
+// Global JS - JuanMa - GWP added - 10.30.19
 
 // (none)              /search?prefn1=brand&searchType=designers&prefv1=Adesso
 // (space)             %20
@@ -14,7 +14,7 @@
 // [START] Calls
 window.addEventListener("DOMContentLoaded", function(){
 
-  //jm_Global_Alert_ad();
+  jm_Global_Alert_ad();
 
   //PDP ONLY
   if(window.location.href.indexOf("/products/") > -1){
@@ -60,7 +60,7 @@ window.addEventListener("DOMContentLoaded", function(){
   //CART
   else if(window.location.href.indexOf("/cart") > -1){
     console.log("In Cart");
-    jm_centurycash_message();
+    //jm_centurycash_message();
     doSwap();
     
   }  
@@ -171,7 +171,7 @@ function jm_carousel_modification(){
 function jm_Global_Alert_ad(){
   console.log('alert global banner');
   $('.header-banner').prepend(
-    '<p class="jmr-alert-gb" role="alert"><a href="/contact"><span>Our phones are temporarily down. Questions? <span role="button" class="jmr-text-cta">EMAIL US</span></span></a></p>'
+    '<p class="jmr-alert-gb" role="alert"><a target="_blank" href="/categories/herald-square-holiday-store?imc=gb_alert&imccat=herald-square-holiday-store"><span>Herald Square Holiday Pop-up Now Open! <span role="button" class="jmr-text-cta">Learn More</span></span></a></p>'
   )
 
 }
@@ -200,7 +200,3 @@ function doSwap() {
 // https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&prefv1=Billionaire%20Boys%20Club
 // https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&prefn2=divisionCode&srule=top-sellers&prefv1=Calvin%20Klein&prefv2=Men
 // https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&prefn2=divisionCode&srule=top-sellers&prefv1=Calvin%20Klein&prefv2=Women
-
-
-
-
