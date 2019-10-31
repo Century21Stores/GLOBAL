@@ -1,8 +1,5 @@
 /* Global CSS - JuanMa - 10.30.19 */
 
-/* Adi Dabu - remove Bloomreach widget visually */
-.bloomreach-widget { display: none }
-
 
 /* -------- [START] Only Production ---------- */
 
@@ -51,6 +48,7 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
 .jmr-alert-gb {
     margin: 0;
     background: #e1261b;
+    background: #000000;
     text-transform: uppercase;
     font-size: 0.8em;
     letter-spacing: 0.05em;
