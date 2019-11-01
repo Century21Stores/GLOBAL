@@ -1,4 +1,4 @@
-// Global JS - JuanMa - GWP added - 10.30.19
+// Global JS - JuanMa - GWP added - 10.31.19
 
 // (none)              /search?prefn1=brand&searchType=designers&prefv1=Adesso
 // (space)             %20
@@ -20,6 +20,7 @@ window.addEventListener("DOMContentLoaded", function(){
   if(window.location.href.indexOf("/products/") > -1){
     console.log("In PDP");
     jm_Designer_Header_PDP();
+    jmr_temporary_fix_recommender();
     jm_GWP_PDP();
  
   }
@@ -47,20 +48,21 @@ window.addEventListener("DOMContentLoaded", function(){
   //LANDING PAGES
   else if((window.location.href.indexOf("/categories/men") > -1) || (window.location.href.indexOf("/categories/women") > -1) || (window.location.href.indexOf("/categories/shoes") > -1) || (window.location.href.indexOf("/categories/beauty") > -1) || (window.location.href.indexOf("/categories/kids") > -1) || (window.location.href.indexOf("/categories/home") > -1) || (window.location.href.indexOf("/categories/handbags-accessories") > -1)){
     jm_carousel_modification();
+    jmr_temporary_fix_recommender();
     console.log("In Landing Pages");
-    
   }
 
   //CATEGORIES
   else if(window.location.href.indexOf("/categories/") > -1){
     console.log("In Categories");
+    jmr_temporary_fix_recommender();
     
   }
 
   //CART
   else if(window.location.href.indexOf("/cart") > -1){
     console.log("In Cart");
-    //jm_centurycash_message();
+    jm_centurycash_message();
     doSwap();
     
   }  
@@ -164,28 +166,98 @@ function jm_carousel_modification(){
     $( ".carousel-product-tiles .four-slides" ).each(function(index) {
       $(this).parent().addClass("jmr-small-carousel");
     });
-  }  
-
+  }
 }
 
 function jm_Global_Alert_ad(){
   console.log('alert global banner');
   $('.header-banner').prepend(
-    '<p class="jmr-alert-gb" role="alert"><a target="_blank" href="/categories/herald-square-holiday-store?imc=gb_alert&imccat=herald-square-holiday-store"><span>Herald Square Holiday Pop-up Now Open! <span role="button" class="jmr-text-cta">Learn More</span></span></a></p>'
+    '<p class="jmr-alert-gb" role="alert"><a target="_blank" href="/categories/herald-square-holiday-store?imc=gb_alert&imccat=w39-19-e_herald-square-holiday-store"><span>Herald Square Holiday Pop-up Now Open! <span role="button" class="jmr-text-cta">Learn More</span></span></a></p>'
   )
 
 }
 // [END] Scrolling disclaimer browse banner
 
-// [START] Scrolling disclaimer browse banner
+// [START] CENTURYCASH message cart
 function jm_centurycash_message(){
 var subtotal = $('.cart-page .order-total-summary .subtotal-item .sub-total');
   if(subtotal){
-    var subtotal_number = subtotal.text();
+    var subtotal_number = Number(subtotal.text().replace(",","").replace("$",""));
     console.log(subtotal_number);
+    var message;
+    switch (true) {
+      case (subtotal_number >80 && subtotal_number <100):
+        message = "Spend $" + (100 - subtotal_number).toFixed(2) + " more, recieve $21 CENTURYCASH!";
+        build_centurycash_banner(message,subtotal_number);
+        break;
+      case (subtotal_number >180 && subtotal_number <200):
+        message = "Spend $" + (200 - subtotal_number).toFixed(2) + " more, recieve an extra $21 CENTURYCASH!";
+        build_centurycash_banner(message,subtotal_number);
+        break;
+      case (subtotal_number >280 && subtotal_number <300):
+        message = "Spend $" + (300 - subtotal_number).toFixed(2) + " more, recieve an extra $21 CENTURYCASH!";
+        build_centurycash_banner(message,subtotal_number);
+        break;
+      case (subtotal_number >380 && subtotal_number <400):
+        message = "Spend $" + (400 - subtotal_number).toFixed(2) + " more, recieve an extra $21 CENTURYCASH!";
+        build_centurycash_banner(message,subtotal_number);
+        break;
+      case (subtotal_number >480 && subtotal_number <500):
+        message = "Spend $" + (500 - subtotal_number).toFixed(2) + " more, recieve an extra $21 CENTURYCASH!";
+        build_centurycash_banner(message,subtotal_number);
+        break;
+      case (subtotal_number >580 && subtotal_number <600):
+        message = "Spend $" + (600 - subtotal_number).toFixed(2) + " more, recieve an extra $21 CENTURYCASH!";
+        build_centurycash_banner(message,subtotal_number);
+        break;
+      case (subtotal_number >680 && subtotal_number <700):
+        message = "Spend $" + (700 - subtotal_number).toFixed(2) + " more, recieve an extra $21 CENTURYCASH!";
+        build_centurycash_banner(message,subtotal_number);
+        break;
+      case (subtotal_number >780 && subtotal_number <800):
+        message = "Spend $" + (800 - subtotal_number).toFixed(2) + " more, recieve an extra $21 CENTURYCASH!";
+        build_centurycash_banner(message,subtotal_number);
+        break;
+      case (subtotal_number >880 && subtotal_number <900):
+        message = "Spend $" + (900 - subtotal_number).toFixed(2) + " more, recieve an extra $21 CENTURYCASH!";
+        build_centurycash_banner(message,subtotal_number);
+        break;
+      case (subtotal_number >980 && subtotal_number <1000):
+        message = "Spend $" + (1000 - subtotal_number).toFixed(2) + " more, recieve an extra $21 CENTURYCASH!";
+    }    
+
+    
+    console.log(message);
+    
+    function build_centurycash_banner(message,subtotal_number){
+    if(subtotal_number >80 && subtotal_number <1000){
+      $('.cart-wrapper .cart-list').before(
+        '<aside class="jmr-all-cb jmr-cartb jmr-cartb-defaultmessage">'+
+        '<div class="jmr-all-wrapper jmr-cartb-wrapper">'+
+          '<a href="/categories/new-arrivals-shop-all?imc=cart-bb_img&imccat=w42-b_new-arrivals-shop-all" class="jm-clickable-image" aria-hidden="true" role="none" tabindex="-1"></a>'+
+          '<article>'+
+            '<div>'+
+            '<p>'+message+'</p>'+
+            '<span class="jmr-ctas">'+
+                '<a href="/categories/new-arrivals-shop-all?imc=cart-bb_img&imccat=w42-b_new-arrivals-shop-all" class="btn jmr-cta-button jmr-cta-button-solidlight">SHOP NEW ARRIVALS</a>'+
+            '</span>'+
+            '</div>'+
+          '</article>'+
+        '</div>'+
+        '</aside>'
+        );
+    }
+    }
+
   }
 }
-// [END] Scrolling disclaimer browse banner
+// [END] CENTURYCASH message cart
+
+// [START] Recommenders Temporary Fix
+function jmr_temporary_fix_recommender(){
+  $('[id*=cq_recomm_slot]').addClass('container');
+}
+// [END] Recommenders Temporary Fix
 
 // [START] Swappping elements cart
 function doSwap() {

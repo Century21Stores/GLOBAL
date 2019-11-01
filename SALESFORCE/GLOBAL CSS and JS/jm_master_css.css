@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 10.30.19 */
+/* Global CSS - JuanMa - 10.31.19 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -47,8 +47,8 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
 /* GLOBAL BANNER */
 .jmr-alert-gb {
     margin: 0;
-    background: #e1261b;
-    background: #000000;
+    background: #E1261c;
+    /*background: #000000;*/
     text-transform: uppercase;
     font-size: 0.8em;
     letter-spacing: 0.05em;
@@ -316,6 +316,25 @@ strong.jmr-break-on-mobile{
 /* --------- [END] Browse Banners --------- */
 
 
+/* --------- [START] Cart Banners --------- */
+.jmr-cartb-defaultmessage .jmr-cartb-wrapper{
+    padding: 7% 0;
+    background: black;
+    color: white;    
+}
+.jmr-cartb-defaultmessage .jmr-cartb-wrapper .jmr-ctas{
+    margin: 1em 0 0;    
+}
+.jmr-cartb-defaultmessage .jmr-cartb-wrapper p{
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.93em;    
+}
+/* --------- [END] Cart Banners --------- */
+
+
 /* --------- [START] HERO --------- */
 .jmr-all-cb .jmr-ctas{
     margin: 2em 0 0;
@@ -411,6 +430,7 @@ div.jmr-large-carousel{
     width: 90%;
     margin: 0 auto;
     position: relative; 
+    z-index: 0;
 }
 .jmr-recommender-wrap-line{
     border-bottom: solid 1px gray;
@@ -427,7 +447,7 @@ div.jmr-large-carousel{
     font-weight: bold;
     font-weight: 700;
     position: relative;
-    padding: 0 4%;  
+    padding: 0 4%;    
 }
 /* --------- [END] RECOMMENDER HEADERS --------- */
 
@@ -778,8 +798,7 @@ div.jmr-large-carousel{
     justify-content: center;
     text-align: center;
     font-size: 0.98em;
-}    
-}
+} 
 /* [END] CTAs  */
 
 
@@ -791,5 +810,10 @@ div.jmr-large-carousel{
 /* --------- [END] TWO & THREE COLUMNS --------- */
 
 
+/* --------- [START] Cart Banners --------- */
+.jmr-cartb-defaultmessage .jmr-cartb-wrapper{
+    padding: 17% 0;
+}
+/* --------- [END] Cart Banners --------- */
 
 }
