@@ -1,4 +1,4 @@
-// Global JS - JuanMa - GWP added - 10.31.19
+// Global JS - JuanMa - GWP added - 11.4.19
 
 // (none)              /search?prefn1=brand&searchType=designers&prefv1=Adesso
 // (space)             %20
@@ -47,9 +47,9 @@ window.addEventListener("DOMContentLoaded", function(){
   }
   //LANDING PAGES
   else if((window.location.href.indexOf("/categories/men") > -1) || (window.location.href.indexOf("/categories/women") > -1) || (window.location.href.indexOf("/categories/shoes") > -1) || (window.location.href.indexOf("/categories/beauty") > -1) || (window.location.href.indexOf("/categories/kids") > -1) || (window.location.href.indexOf("/categories/home") > -1) || (window.location.href.indexOf("/categories/handbags-accessories") > -1)){
+    console.log("In Landing Pages");
     jm_carousel_modification();
     jmr_temporary_fix_recommender();
-    console.log("In Landing Pages");
   }
 
   //CATEGORIES
@@ -73,7 +73,7 @@ window.addEventListener("DOMContentLoaded", function(){
     // jm_loading_messages_from_cart();
   } 
 
-  //NO CATEGORIES OR PDP
+  //OTHER PAGES
   else{
     jm_carousel_modification();
   };
@@ -81,11 +81,12 @@ window.addEventListener("DOMContentLoaded", function(){
 });
 // [END] Calls
 
+
 // [START] Designer Header
 function jm_Designer_Header_PDP(){
 
   //exceptions
-  var jm_brands_exceptions = ['Aimee Kestenberg','Age of Wisdom','Armani','Armani Exchange','Ben Sherman','Billionaire Boys Club','Botkier','Burberry','Calvin Klein','Calvin Klein Jeans','Carters','Champion','Christian Siriano','Citizen','Coach','DKNY','Dolce&Gabbana','Dooney & Bourke','Fossil','Frye','Furla','Gucci','Heritage','Hot Sox','Hugo Boss','Hunter','Kappa','Karl Lagerfeld','Kate Spade','Katy Perry','Kenneth Cole','Kenneth Cole Reaction','Lacoste','Lauren','Lauren Ralph Lauren','Mackage','Marc Jacobs','Marc New York','Max Mara','Members Only','Michael Michael Kors','Michael Kors','Miu Miu','Movado','Nautica','Nike','Nine West','North Face','Peace Love World','Polo Ralph Lauren','Prada','Prada Sport','Ralph Lauren','Reebok','Saint Laurent','Sam.','Skagen','Tahari','Ted Baker','Theory','Timberland','Tommy Hilfiger','Tory Burch','Versace','Zac Zac Posen'];
+  var jm_brands_exceptions = ['Aimee Kestenberg','Age of Wisdom','Armani','Armani Exchange','Ben Sherman','Billionaire Boys Club','Botkier','Burberry','Calvin Klein','Stuart Weitzman','Calvin Klein Jeans','Carters','Champion','Christian Siriano','Citizen','Coach','DKNY','Dolce&Gabbana','Dooney & Bourke','Fossil','Frye','Furla','Gucci','Heritage','Hot Sox','Hugo Boss','Hunter','Kappa','Karl Lagerfeld','Kate Spade','Katy Perry','Kenneth Cole','Kenneth Cole Reaction','Lacoste','Lauren','Lauren Ralph Lauren','Mackage','Marc Jacobs','Marc New York','Max Mara','Members Only','Michael Michael Kors','Michael Kors','Miu Miu','Movado','Nautica','Nike','Nine West','North Face','Peace Love World','Polo Ralph Lauren','Prada','Prada Sport','Ralph Lauren','Reebok','Saint Laurent','Sam.','Skagen','Tahari','Ted Baker','Theory','Timberland','Tommy Hilfiger','Tory Burch','Versace','Zac Zac Posen'];
 
   if($('.product-set-detail').length == 0){
     console.log('Not a product set');
@@ -122,7 +123,6 @@ function jm_Designer_Header_PDP(){
   };
 
 }
-
 
 function jm_H1_root_catalog(){
   var jm_brand_name = $('.filter-area .filter-bar ul.clearfix li:nth-of-type(2) a > .refinement-name')[0].innerText;
@@ -171,10 +171,11 @@ function jm_carousel_modification(){
 
 function jm_Global_Alert_ad(){
   console.log('alert global banner');
-  $('.header-banner').prepend(
-    '<p class="jmr-alert-gb" role="alert"><a target="_blank" href="/categories/herald-square-holiday-store?imc=gb_alert&imccat=w39-19-e_herald-square-holiday-store"><span>Herald Square Holiday Pop-up Now Open! <span role="button" class="jmr-text-cta">Learn More</span></span></a></p>'
-  )
-
+  if (window.location.href.indexOf("/categories/herald-square-holiday-store") == -1) {
+    $('.header-banner').prepend(
+      '<p class="jmr-alert-gb" role="alert"><a target="_blank" href="/categories/herald-square-holiday-store?imc=gb_alert&imccat=w39-19-e_herald-square-holiday-store"><span>Herald Square Holiday Pop-up Now Open! <span role="button" class="jmr-text-cta">Learn More</span></span></a></p>'
+    )
+  };
 }
 // [END] Scrolling disclaimer browse banner
 
@@ -187,43 +188,43 @@ var subtotal = $('.cart-page .order-total-summary .subtotal-item .sub-total');
     var message;
     switch (true) {
       case (subtotal_number >80 && subtotal_number <100):
-        message = "Spend $" + (100 - subtotal_number).toFixed(2) + " more, recieve $21 CENTURYCASH!";
+        message = "Spend $" + (100 - subtotal_number).toFixed(2) + " more, receive $21 CENTURYCASH!";
         build_centurycash_banner(message,subtotal_number);
         break;
       case (subtotal_number >180 && subtotal_number <200):
-        message = "Spend $" + (200 - subtotal_number).toFixed(2) + " more, recieve an extra $21 CENTURYCASH!";
+        message = "Spend $" + (200 - subtotal_number).toFixed(2) + " more, receive an extra $21 CENTURYCASH!";
         build_centurycash_banner(message,subtotal_number);
         break;
       case (subtotal_number >280 && subtotal_number <300):
-        message = "Spend $" + (300 - subtotal_number).toFixed(2) + " more, recieve an extra $21 CENTURYCASH!";
+        message = "Spend $" + (300 - subtotal_number).toFixed(2) + " more, receive an extra $21 CENTURYCASH!";
         build_centurycash_banner(message,subtotal_number);
         break;
       case (subtotal_number >380 && subtotal_number <400):
-        message = "Spend $" + (400 - subtotal_number).toFixed(2) + " more, recieve an extra $21 CENTURYCASH!";
+        message = "Spend $" + (400 - subtotal_number).toFixed(2) + " more, receive an extra $21 CENTURYCASH!";
         build_centurycash_banner(message,subtotal_number);
         break;
       case (subtotal_number >480 && subtotal_number <500):
-        message = "Spend $" + (500 - subtotal_number).toFixed(2) + " more, recieve an extra $21 CENTURYCASH!";
+        message = "Spend $" + (500 - subtotal_number).toFixed(2) + " more, receive an extra $21 CENTURYCASH!";
         build_centurycash_banner(message,subtotal_number);
         break;
       case (subtotal_number >580 && subtotal_number <600):
-        message = "Spend $" + (600 - subtotal_number).toFixed(2) + " more, recieve an extra $21 CENTURYCASH!";
+        message = "Spend $" + (600 - subtotal_number).toFixed(2) + " more, receive an extra $21 CENTURYCASH!";
         build_centurycash_banner(message,subtotal_number);
         break;
       case (subtotal_number >680 && subtotal_number <700):
-        message = "Spend $" + (700 - subtotal_number).toFixed(2) + " more, recieve an extra $21 CENTURYCASH!";
+        message = "Spend $" + (700 - subtotal_number).toFixed(2) + " more, receive an extra $21 CENTURYCASH!";
         build_centurycash_banner(message,subtotal_number);
         break;
       case (subtotal_number >780 && subtotal_number <800):
-        message = "Spend $" + (800 - subtotal_number).toFixed(2) + " more, recieve an extra $21 CENTURYCASH!";
+        message = "Spend $" + (800 - subtotal_number).toFixed(2) + " more, receive an extra $21 CENTURYCASH!";
         build_centurycash_banner(message,subtotal_number);
         break;
       case (subtotal_number >880 && subtotal_number <900):
-        message = "Spend $" + (900 - subtotal_number).toFixed(2) + " more, recieve an extra $21 CENTURYCASH!";
+        message = "Spend $" + (900 - subtotal_number).toFixed(2) + " more, receive an extra $21 CENTURYCASH!";
         build_centurycash_banner(message,subtotal_number);
         break;
       case (subtotal_number >980 && subtotal_number <1000):
-        message = "Spend $" + (1000 - subtotal_number).toFixed(2) + " more, recieve an extra $21 CENTURYCASH!";
+        message = "Spend $" + (1000 - subtotal_number).toFixed(2) + " more, receive an extra $21 CENTURYCASH!";
     }    
 
     
