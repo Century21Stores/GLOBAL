@@ -1,4 +1,4 @@
-// Global JS - JuanMa - GWP added - 11.4.19
+// Global JS - JuanMa - GWP added - 11.22.19
 
 // (none)              /search?prefn1=brand&searchType=designers&prefv1=Adesso
 // (space)             %20
@@ -14,7 +14,7 @@
 // [START] Calls
 window.addEventListener("DOMContentLoaded", function(){
 
-  jm_Global_Alert_ad();
+  //jm_Global_Alert_ad();
 
   //PDP ONLY
   if(window.location.href.indexOf("/products/") > -1){
@@ -133,10 +133,10 @@ function jm_H1_root_catalog(){
 
 // [START] GWP
 function jm_GWP_PDP(){
-  if($('.jmr-gwp-pdp').length == 1){
-    var gwp_id = $('.jmr-gwp-pdp > a').attr('id');
-    console.log(gwp_id);
-    $('.product-details-area .level-discount .callout').wrapInner('<a href="#" id="'+gwp_id+'_callout"></a>');
+  if($('.jmr-gwp-pdp-description').length == 1){
+    var gwp_id = $('.jmr-gwp-pdp-description > a').attr('id');
+    // console.log(gwp_id);
+    $('.product-details-area .level-discount > div[title|="Free Gift With Purchase"]').wrapInner('<a href="#" id="'+gwp_id+'_callout"></a>');
   }
 }
 // [END] GWP
@@ -232,16 +232,16 @@ var subtotal = $('.cart-page .order-total-summary .subtotal-item .sub-total');
     
     function build_centurycash_banner(message,subtotal_number){
     if(subtotal_number >80 && subtotal_number <1000){
-      $('.cart-wrapper .cart-list').before(
-        '<aside class="jmr-all-cb jmr-cartb jmr-cartb-defaultmessage">'+
+      $('.cart-wrapper .totals > div.d-block').append(
+        '<aside class="jmr-all-cb jmr-cartb jmr-cartb-about-to-get-message">'+
         '<div class="jmr-all-wrapper jmr-cartb-wrapper">'+
           '<a href="/categories/new-arrivals-shop-all?imc=cart-bb_img&imccat=w42-b_new-arrivals-shop-all" class="jm-clickable-image" aria-hidden="true" role="none" tabindex="-1"></a>'+
           '<article>'+
             '<div>'+
             '<p>'+message+'</p>'+
-            '<span class="jmr-ctas">'+
-                '<a href="/categories/new-arrivals-shop-all?imc=cart-bb_img&imccat=w42-b_new-arrivals-shop-all" class="btn jmr-cta-button jmr-cta-button-solidlight">SHOP NEW ARRIVALS</a>'+
-            '</span>'+
+            // '<span class="jmr-ctas">'+
+            //     '<a href="/categories/new-arrivals-shop-all?imc=cart-bb_img&imccat=w42-b_new-arrivals-shop-all" class="btn jmr-cta-button jmr-cta-button-solidlight">SHOP NEW ARRIVALS</a>'+
+            // '</span>'+
             '</div>'+
           '</article>'+
         '</div>'+

@@ -1,12 +1,126 @@
-/* Global CSS - JuanMa - 10.31.19 */
+/* Global CSS - JuanMa - 11.22.19 */
 
 
 /* -------- [START] Only Production ---------- */
 
 /* -------- [END] Only Production ---------- */
 
+/* -------- [START] Temporary ---------- */
+span.jmr-gb-cta a.jmr-cta-text{
+    z-index: 4;
+}
+/* -------- [END] Temporary ---------- */
 
 /* -------- [START] Overwrite ---------- */
+/*#menuitem-women-boutiques-deals,
+#menuitem-men-special-shops-deals,
+#our-best-deals{
+    color: #e1261d;
+    font-weight: bold;
+    font-weight: 600;
+
+}*/
+
+.product-detail .product-details-area div[title="Free Gift With Purchase"]{
+    font-weight: 700;
+    padding: 0;
+    border-bottom: solid 1px;
+    display: inline-block;
+    margin: 1% 0;    
+}
+
+/* [start] centurycash */
+div[data-br-pid="CENTURYCASH-21"] .final-discount,
+div[data-br-pid="CENTURYCASH-21"] .product-line-item-details,
+div[data-br-pid="CENTURYCASH-21"] .price,
+.cart-page div[data-pid="CENTURYCASH-21"] .line-item-promo > div.level-discount,
+.cart-page div[data-pid="CENTURYCASH-21"] > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(2),
+.cart-page div[data-pid="CENTURYCASH-21"] > div:first-of-type .item-attributes .line-item-attributes,
+div[data-br-pid="CENTURYCASH-42"] .final-discount,
+div[data-br-pid="CENTURYCASH-42"] .product-line-item-details,
+div[data-br-pid="CENTURYCASH-42"] .price,
+.cart-page div[data-pid="CENTURYCASH-42"] .line-item-promo > div,
+.cart-page div[data-pid="CENTURYCASH-42"] > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(2),
+.cart-page div[data-pid="CENTURYCASH-42"] > div:first-of-type .item-attributes,
+div[data-br-pid="CENTURYCASH-63"] .final-discount,
+div[data-br-pid="CENTURYCASH-63"] .product-line-item-details,
+div[data-br-pid="CENTURYCASH-63"] .price,
+.cart-page div[data-pid="CENTURYCASH-63"] .line-item-promo > div,
+.cart-page div[data-pid="CENTURYCASH-63"] > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(2),
+.cart-page div[data-pid="CENTURYCASH-63"] > div:first-of-type .item-attributes,
+div[data-br-pid="CENTURYCASH-84"] .final-discount,
+div[data-br-pid="CENTURYCASH-84"] .product-line-item-details,
+div[data-br-pid="CENTURYCASH-84"] .price,
+.cart-page div[data-pid="CENTURYCASH-84"] .line-item-promo > div,
+.cart-page div[data-pid="CENTURYCASH-84"] > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(2),
+.cart-page div[data-pid="CENTURYCASH-84"] > div:first-of-type .item-attributes,
+div[data-br-pid="CENTURYCASH-105"] .final-discount,
+div[data-br-pid="CENTURYCASH-105"] .product-line-item-details,
+div[data-br-pid="CENTURYCASH-105"] .price,
+.cart-page div[data-pid="CENTURYCASH-105"] .line-item-promo > div,
+.cart-page div[data-pid="CENTURYCASH-105"] > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(2),
+.cart-page div[data-pid="CENTURYCASH-105"] > div:first-of-type .item-attributes,
+div[data-br-pid="CENTURYCASH-126"] .final-discount,
+div[data-br-pid="CENTURYCASH-126"] .product-line-item-details,
+div[data-br-pid="CENTURYCASH-126"] .price,
+.cart-page div[data-pid="CENTURYCASH-126"] .line-item-promo > div,
+.cart-page div[data-pid="CENTURYCASH-126"] > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(2),
+.cart-page div[data-pid="CENTURYCASH-126"] > div:first-of-type .item-attributes,
+div[data-br-pid="CENTURYCASH-147"] .final-discount,
+div[data-br-pid="CENTURYCASH-147"] .product-line-item-details,
+div[data-br-pid="CENTURYCASH-147"] .price,
+.cart-page div[data-pid="CENTURYCASH-147"] .line-item-promo > div,
+.cart-page div[data-pid="CENTURYCASH-147"] > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(2),
+.cart-page div[data-pid="CENTURYCASH-147"] > div:first-of-type .item-attributes,
+div[data-br-pid="CENTURYCASH-168"] .final-discount,
+div[data-br-pid="CENTURYCASH-168"] .product-line-item-details,
+div[data-br-pid="CENTURYCASH-168"] .price,
+.cart-page div[data-pid="CENTURYCASH-168"] .line-item-promo > div,
+.cart-page div[data-pid="CENTURYCASH-168"] > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(2),
+.cart-page div[data-pid="CENTURYCASH-168"] > div:first-of-type .item-attributes,
+div[data-br-pid="CENTURYCASH-189"] .final-discount,
+div[data-br-pid="CENTURYCASH-189"] .product-line-item-details,
+div[data-br-pid="CENTURYCASH-189"] .price,
+.cart-page div[data-pid="CENTURYCASH-189"] .line-item-promo > div,
+.cart-page div[data-pid="CENTURYCASH-189"] > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(2),
+.cart-page div[data-pid="CENTURYCASH-189"] > div:first-of-type .item-attributes,
+div[data-br-pid="CENTURYCASH-210"] .final-discount,
+div[data-br-pid="CENTURYCASH-210"] .product-line-item-details,
+div[data-br-pid="CENTURYCASH-210"] .price,
+.cart-page div[data-pid="CENTURYCASH-210"] .line-item-promo > div,
+.cart-page div[data-pid="CENTURYCASH-210"] > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(2),
+.cart-page div[data-pid="CENTURYCASH-210"] > div:first-of-type .item-attributes{
+    display: none !important;
+}
+.cart-page div[data-pid="CENTURYCASH-21"] > div:first-of-type > div:nth-of-type(2),
+.cart-page div[data-pid="CENTURYCASH-42"] > div:first-of-type > div:nth-of-type(2),
+.cart-page div[data-pid="CENTURYCASH-63"] > div:first-of-type > div:nth-of-type(2),
+.cart-page div[data-pid="CENTURYCASH-84"] > div:first-of-type > div:nth-of-type(2),
+.cart-page div[data-pid="CENTURYCASH-105"] > div:first-of-type > div:nth-of-type(2),
+.cart-page div[data-pid="CENTURYCASH-126"] > div:first-of-type > div:nth-of-type(2),
+.cart-page div[data-pid="CENTURYCASH-147"] > div:first-of-type > div:nth-of-type(2),
+.cart-page div[data-pid="CENTURYCASH-168"] > div:first-of-type > div:nth-of-type(2),
+.cart-page div[data-pid="CENTURYCASH-188"] > div:first-of-type > div:nth-of-type(2),
+.cart-page div[data-pid="CENTURYCASH-210"] > div:first-of-type > div:nth-of-type(2){
+    padding: 2% 0 0;
+}
+div[data-br-pid="CENTURYCASH-21"] .line-item-header,
+div[data-br-pid="CENTURYCASH-42"] .line-item-header,
+div[data-br-pid="CENTURYCASH-63"] .line-item-header,
+div[data-br-pid="CENTURYCASH-84"] .line-item-header,
+div[data-br-pid="CENTURYCASH-105"] .line-item-header,
+div[data-br-pid="CENTURYCASH-126"] .line-item-header,
+div[data-br-pid="CENTURYCASH-147"] .line-item-header,
+div[data-br-pid="CENTURYCASH-168"] .line-item-header,
+div[data-br-pid="CENTURYCASH-189"] .line-item-header,
+div[data-br-pid="CENTURYCASH-210"] .line-item-header{
+    padding: 8% 0 0;
+}
+.cart-page div[data-pid="CENTURYCASH-21"] > div:first-of-type > div:nth-of-type(2) > div.line-item-header{
+    display: block !important;
+}
+
+/* [end] centurycash */
 .product-details-area > a{
     display: block;
 }
@@ -71,10 +185,85 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     margin: 0 0 0 1%;
     font-size: 0.77em;
 }
-
 /* END GLOBAL BANNER */
 
+/*  BRAND TAGGING */
+.jmr-brand-tag{
+    position: absolute;
+    color: black;
+    text-align: left;
+    margin: 0;    
+}
+/*  END BRAND TAGGING */
+
+
 /* -------- [END] General ---------- */
+
+
+/* -------- [START] Owl Carousel ---------- */  
+/* fix blank or flashing items on carousel */
+.owl-carousel .owl-item {
+    position: relative;
+    z-index: 100; 
+    -webkit-backface-visibility: hidden;
+    
+}
+/* end fix */
+.owl-carousel .owl-stage-outer{
+    z-index: 2; 
+}
+.owl-carousel .owl-stage{
+    padding: 1% 0;
+}
+.carousel-wrap {
+  margin: 3% auto;
+  padding: 0 5%;
+  width: 80%;
+  position: relative;
+  padding: 1% 0;
+}
+.owl-carousel a{
+    display: block;
+}
+.owl-carousel a:focus{
+    outline: 4px solid #3eb0fc; 
+}
+.owl-nav{
+    position: absolute;
+    top: 33%;
+    margin: 0;
+    width: 100%;
+}
+.owl-nav span {
+  font-size: 2.5em;
+}
+.owl-nav .owl-prev {
+    float: left;
+    left: -40px;
+    position: relative;
+    top: 0;
+}
+.owl-nav .owl-next {
+    float: right;
+    right: -40px;
+    position: relative;
+    top: 0;
+}   
+.fa-caret-left:before{
+    content: "\2039";   
+}
+.fa-caret-right:before{
+    content: "\203A";   
+}
+/* -------- [END] Owl Carousel ---------- */    
+
+/* -------- [START] PDPs ---------- */
+.jmr-gwp-pdp-description{
+    margin: 0 0 1em 1.75em;
+    font-weight: bold;
+    font-weight: 700;
+}
+/* -------- [END] PDPs ---------- */    
 
 /* --------- [START] All Content Blocks --------- */
 .jmr-all-cb img{
@@ -317,20 +506,20 @@ strong.jmr-break-on-mobile{
 
 
 /* --------- [START] Cart Banners --------- */
-.jmr-cartb-defaultmessage .jmr-cartb-wrapper{
+.jmr-cartb-about-to-get-message .jmr-cartb-wrapper{
     padding: 7% 0;
-    background: black;
-    color: white;    
+    background: #ececec;
+    color: #e1251c;
 }
-.jmr-cartb-defaultmessage .jmr-cartb-wrapper .jmr-ctas{
+.jmr-cartb-about-to-get-message .jmr-cartb-wrapper .jmr-ctas{
     margin: 1em 0 0;    
 }
-.jmr-cartb-defaultmessage .jmr-cartb-wrapper p{
+.jmr-cartb-about-to-get-message .jmr-cartb-wrapper p{
     letter-spacing: 0.1em;
     font-weight: bold;
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 0.93em;    
+    font-size: 0.7em;    
 }
 /* --------- [END] Cart Banners --------- */
 
@@ -470,6 +659,13 @@ div.jmr-large-carousel{
 .jmr-desktop-inline{
     display: inline-block;
 }
+/*  BRAND TAGGING */
+.jmr-brand-tag{
+    bottom: 3%;
+    left: 3%;
+}
+/*  END BRAND TAGGING */
+
 /* -------- [END] General ---------- */
 
 /* --------- [START] Hero --------- */
@@ -729,6 +925,12 @@ div.jmr-large-carousel{
 .jmr-alert-gb a{
     padding: 1% 0;    
 }
+/*  BRAND TAGGING */
+.jmr-brand-tag{
+    top: 3%;
+    right: 3%;
+}
+/*  END BRAND TAGGING */
 /* -------- [END] General ---------- */
 
 /* [START] CTAs  */
@@ -760,6 +962,7 @@ div.jmr-large-carousel{
     font-size: 2.6vw;
     text-align: center;
     margin: 3% 0 0;
+    padding: 0 3%;
 }
 .jmr-ctas{
     text-align: center;
@@ -811,7 +1014,7 @@ div.jmr-large-carousel{
 
 
 /* --------- [START] Cart Banners --------- */
-.jmr-cartb-defaultmessage .jmr-cartb-wrapper{
+.jmr-cartb-about-to-get-message .jmr-cartb-wrapper{
     padding: 17% 0;
 }
 /* --------- [END] Cart Banners --------- */
