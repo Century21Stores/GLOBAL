@@ -1,0 +1,22 @@
+<script>
+window.addEventListener("DOMContentLoaded", function(){
+	console.log('zero load tc');
+    if (localStorage.getItem("hasCodeRunBefore") === null) {
+        // console.log('first load tc');
+		$(".checkout-btn").hover(function(){
+			Tuesday_Children_Dialog();
+		}, function(){
+			Tuesday_Children_Dialog();
+		});        
+        localStorage.setItem("hasCodeRunBefore", true);
+    }
+    else{
+    	console.log('AFTER first load TUESDAY CHILDREN');
+    }
+});
+
+function Tuesday_Children_Dialog(){
+	console.log('first load TUESDAY CHILDREN')
+}
+
+</script>
