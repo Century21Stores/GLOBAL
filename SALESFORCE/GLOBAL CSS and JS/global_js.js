@@ -1,4 +1,4 @@
-// Global JS - JuanMa - GWP added - 11.22.19
+// Global JS - JuanMa - GWP added - 12.02.19
 
 // (none)              /search?prefn1=brand&searchType=designers&prefv1=Adesso
 // (space)             %20
@@ -62,7 +62,7 @@ window.addEventListener("DOMContentLoaded", function(){
   //CART
   else if(window.location.href.indexOf("/cart") > -1){
     console.log("In Cart");
-    jm_centurycash_message();
+    //jm_centurycash_message();
     doSwap();
     
   }  
