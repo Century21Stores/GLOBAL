@@ -1,6 +1,6 @@
-<!-- cart-tuesday-children-w44-19 - JuanMa - 11.26.19  -->
+<!-- cart-tuesday-children-w44-19 - JuanMa - 12.02.19  -->
 
-<style>    
+<style>
 .jmr-tc-no-thankyou{
     display: inline-block;
     margin: 2% 0 0;
@@ -137,18 +137,42 @@
 
 }
 
-@media screen and (max-width: 1100px){
-
-}
 
 @media screen and (max-width: 700px){
 .jm-cart-banner{
     background-image: url('special/tuesday-children/tcbackground_v2.jpg?$staticlink$') !important;
     background-repeat: no-repeat;    
-    padding-top: calc((100em / 700) * 100);
+    /*padding-top: calc((100em / 700) * 100);*/
     background-size: cover;  
     width: 100%;
     position: relative;
+    text-align: center;
+}
+.jmr-tc-no-thankyou{
+    text-align: center;
+    margin: 0 auto 7%;
+    color: white !important;
+}
+.jmr-full-dialog-mobile{
+    margin: 0 0 7%;    
+}
+.jmr-full-dialog-mobile a{
+    min-width: 21vw;
+    margin: 0 2vw 3vw;
+}
+.jmr-full-dialog-mobile .jm-cart-banner-title{
+    color: white;
+    font-size: 3vw;
+    font-weight: 600;
+    margin: 5% 0;
+    letter-spacing: 0.05em;
+}
+.jm-cart-banner-logo-img-mobile{
+    text-align: center;
+    padding: 0 3vw;
+}
+.content-block-content__action_mobile{
+    text-align: center;    
 }
 .jm-cart-banner-logo-img{
     position: absolute;
@@ -160,8 +184,8 @@
 .jm-cart-banner-logo-img div{
     width: 70%;
 }
-.jm_default_message{
-    display: none;
+.jm-cart-banner-title, .jm_default_message, .jm_thank_you_message{
+    color: white;
 }
 .jm-cart-banner .content-block-content__action a{
     padding: 0.75em 1.5em;
@@ -176,13 +200,29 @@
     font-size: 3vw;    
 }
 .jm-shorter{
-    padding-top: calc((55em / 700) * 100);    
+    padding: 5% 0;
 }
 .jm-cart-banner .content-block-content__action a{
     /*max-width: 79px;*/
     padding: 0.75em 0em;
     margin: 0.5em 0.4em;
     min-width: 123px;  
+}
+.jmr-full-dialog{
+    position: relative;
+    margin: 0 0 7%;   
+}
+.jmr-close-dialog{
+    display: none;
+}
+.jm_thank_you_message_mobile{
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+.jmr-mobile-arrow{
+    transform: rotate(90deg);
+    display: inline-block;
 }
 
 }
@@ -209,9 +249,6 @@ function openWin40() {
     setTimeout(function(){location.reload();}, 4000);    
 }
 function openWin20() {
-    //myWindow = window.open("myWindow", '_blank', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,left=90000, top=90000, width=1, height=1, visible=none', '');
-    //myWindow.document.write("<p>This is 'myWindow'</p>");
-    //myWindow.location.replace("https://www.c21stores.com/products/charitydonation-20#thankyouforyourdonation");
     document.getElementById("ifr").src="/products/tuesday%27s-children/%2420-donation/9899-9939000.html?imc=tuesday_children_20&imccat=w1619_cart_top_plcc20#thankyouforyourdonation";
     $('#jm_progress_bar').css('display','block');
     move_pb();
@@ -304,7 +341,7 @@ if (window.location.href.indexOf("/cart") > -1){
             console.log('after first load tc desktop');
             $(".checkout-btn").one("click mouseover",function(){
                 console.log("hover1");
-                Tuesday_Children_Dialog();
+                //Tuesday_Children_Dialog();
             });
         } else {
             console.log('after first load tc mobile');
@@ -320,10 +357,10 @@ document.onkeydown = function(evt) {
 };
 
 
-
 }
 
 function Tuesday_Children_Dialog(){
+    console.log('desktop tuesday children');
     $('.cart-page').after(
         '<div role="dialog" class="jmr-full-dialog">'+
         '<a class="jmr-close-dialog jmr-clickable-image" aria-hidden="true" role="none" tabindex="-1" onclick="jmr_close_dialog()"></a>'+
@@ -361,32 +398,34 @@ function Tuesday_Children_Dialog(){
 }
 
 function Tuesday_Children_Mobile(){
-    $('.cart-page').after(
-        '<div role="dialog" class="jmr-full-dialog">'+
-        '<a class="jmr-close-dialog jmr-clickable-image" aria-hidden="true" role="none" tabindex="-1"></a>'+
+    console.log('mobile tuesday children');
+    $('.summary-area .card').after(
+        '<div class="jmr-full-dialog-mobile">'+
+        // '<a class="jmr-close-dialog jmr-clickable-image" aria-hidden="true" role="none" tabindex="-1"></a>'+
         '<div class="jm-cart-banner">'+
         '<div>'+
-            '<div class="jm-cart-banner-logo-img">'+
+            '<div class="jm-cart-banner-logo-img-mobile">'+
                 '<img src="special/tuesday-children-logo.png?$staticlink$"/>'+
                 '<div>'+
-                    '<h2 class="jm-cart-banner-title">TOGETHER, WE CAN MAKE A DIFFERENCE</h2>'+
+                    '<h2 class="jm-cart-banner-title">GIVE GIFTS, GIVE BACK</h2>'+
                     '<p class="jm-cart-banner-subcopy">'+
                         "<span  class='jm_default_message'>This holiday season, support the charity Tuesday's Children. This organization, founded after 9/11, helps families recover after traumatic loss.</span>"+
-                        "<span  class='jm_default_message_2 jm_default_message'>Choose a donation amount.</span>"+
-                        "<span class='jm_thank_you_message' style='display:none'>Thank you for your donation! We are adding it to your cart."+   
+                        "<span  class='jm_default_message_2 jm_default_message'>Choose a donation amount</span>"+
+                        "<span class='jm_thank_you_message' style='display:none'>We are adding it to your cart.</span>"+ 
+                        "<span class='jm_thank_you_message_mobile' style='display:none'>Thank you for your donation! <span class='jmr-mobile-arrow' onclick='jmr_check_donation_mobile()' >&#8624;</span></span>"+ 
                         // "<a id='jm_gptw_main' class='jm_thank_you_message_arrow' href='#jm_donation_id' onclick='jm_scroll_banner(this.id);' onkeypress='jm_scroll_banner(this.id);'> &#8595;</a></span>"+
                         '<span id="jm_progress_bar"></span>'+
                     '</p>'+
                 '</div>'+   
             '</div>'+
-            '<p class="content-block-content__action content-block-content__action--button">'+
+            '<p class="content-block-content__action_mobile content-block-content__action--button">'+
                 '<a href="#jm_donation_id" class="jmr-cta-button-soliddark jmr-cta-button btn" onclick="openWin1()">$1</a>'+
                 '<a href="#jm_donation_id" class="jmr-cta-button-soliddark jmr-cta-button btn" onclick="openWin5(); jm_scroll_banner(this.id)" onkeypress="jm_scroll_banner(this.id);">$5</a>'+
                 '<a href="#jm_donation_id" class="jmr-cta-button-soliddark jmr-cta-button btn" onclick="openWin10()">$10</a>'+
-                '<a href="#jm_donation_id" class="jmr-cta-button-soliddark jmr-cta-button btn" onclick="openWin20()">$20</a>'+          
+                '<a href="#jm_donation_id" class="jmr-cta-button-soliddark jmr-cta-button btn" onclick="openWin20()">$20</a>'+
                 '<a href="#jm_donation_id" class="jmr-cta-button-soliddark jmr-cta-button btn" onclick="openWin40()">$40</a>'+
             '</p>'+
-            '<a class="jmr-tc-no-thankyou" href="/checkout/login">No Thanks, Continue to Checkout</a>'+          
+            // '<span onclick="jmr_close_dialog_mobile()" role="button" class="jmr-thank-you-mobile jmr-tc-no-thankyou" href="">No Thanks, Continue to Checkout</span>'+
         '</div>'+
         '<iframe rel="nofollow" style="display:none; opacity:0;" id="ifr" frameborder="0" src="#" scrolling="no" width="0" height="0">'+
         '</div>'+
@@ -400,9 +439,13 @@ $('.cart-wrapper .card .line-item-name').each(function(i){
     if($(this).text().match('Donate')) {
         $(this).closest('.quantity-info').attr('id', 'jm_donation_id');
         // $(this).closest('.quantity-info').append('<a class="jm-going-back" onclick="jm_scroll_gptw_back(this.id);" onkeypress="jm_scroll_gptw_back(this.id);" href="#" aria-label="Back to main">↵</a>');
-        $('.jm-cart-banner .content-block-content__action').fadeOut('fast');
+        $('.jm-cart-banner .content-block-content__action, .content-block-content__action_mobile, .jmr-thank-you-mobile').fadeOut('fast');
         $('.jm_default_message').fadeOut('fast');        
         $('.jm-cart-banner').addClass('jm-shorter');
+        const jmr_mq = window.matchMedia( "(max-width: 700px)" );
+        if (jmr_mq.matches) {
+            $('.jm_thank_you_message_mobile').fadeIn();
+        }
     }       
 });
 
@@ -412,6 +455,17 @@ $('.cart-wrapper .card .line-item-name').each(function(i){
 
 function jmr_close_dialog(){
     $('.jmr-full-dialog').remove();
+}
+function jmr_close_dialog_mobile(){
+    $('.jmr-full-dialog-mobile').remove();
+}
+
+function jmr_check_donation_mobile(){
+    console.log('up!!');
+    $('html, body').animate({
+        scrollTop: $("div[data-name='Donate Now']").offset().top -100
+    }, 1000);    
+    
 }
 
 // SCROLLING
