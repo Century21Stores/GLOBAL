@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 11.22.19 */
+/* Global CSS - JuanMa - 12.10.19 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -130,6 +130,9 @@ div[data-br-pid="CENTURYCASH-210"] .line-item-header{
 .cart-policies h2{
     letter-spacing: 0.05em;    
 }
+.product-detail .full-gallery{
+    z-index: 9999999;
+}
 /* -------- [END] Overwrite ---------- */
 
 /* -------- [START] General ---------- */
@@ -156,7 +159,16 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     outline: 4px solid #3eb0fc;
 }
 .jmr-text-cta{
-    border-bottom: solid 1px white;    
+    border-bottom: solid 1px;    
+    font-weight: bold;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+}
+.jmr-text-cta-light{
+    border-color: white;
+}
+.jmr-text-cta-dark{
+    border-color: black;
 }
 /* GLOBAL BANNER */
 .jmr-alert-gb {
@@ -560,7 +572,7 @@ strong.jmr-break-on-mobile{
     position: relative;
     background-size: contain !important;
     background-position: 50% 0 !important;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat !important; 
     padding-top: calc((1232% / 1368) * 100) !important;
 }
 .jmr-three-column figure{
@@ -936,6 +948,9 @@ div.jmr-large-carousel{
 /* [START] CTAs  */
 .jmr-ctas .jmr-cta-button{
     margin-bottom: 3%;
+}
+.jmr-ctas .jmr-text-cta{
+    font-size: 4vw;
 }
 /* [END] CTAs  */
 
