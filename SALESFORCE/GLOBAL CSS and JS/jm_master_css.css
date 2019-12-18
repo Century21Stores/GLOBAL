@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 12.10.19 */
+/* Global CSS - JuanMa - 12.16.19 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -163,6 +163,8 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     font-weight: bold;
     font-weight: 600;
     letter-spacing: 0.15em;
+    position: relative;
+    z-index: 3;
 }
 .jmr-text-cta-light{
     border-color: white;
@@ -207,7 +209,9 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     margin: 0;    
 }
 /*  END BRAND TAGGING */
-
+.jmr-font-2{
+    font-family: serif;
+}
 
 /* -------- [END] General ---------- */
 
@@ -370,7 +374,7 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     margin-left: 1%;   
 }
 a.jmr-cta-text{
-    border-bottom: solid 1px;
+    border-bottom: solid 1px;    
 }
 .jmr-ctas a:first-of-type{
     margin-left: 0%;
@@ -724,7 +728,7 @@ div.jmr-large-carousel{
 
 /* --------- [START] Browse Banners --------- */
 .jmr-bb-wrapper article{
-    font-size: 1.3vw;
+    font-size: 1vw;
 }
 .jmr-bb-wrapper .jm-bb-disclaimer{
     font-size: 0.53em;
@@ -957,12 +961,15 @@ div.jmr-large-carousel{
 /* [START] Copy  */
 .jmr-all-cb article .jmr-header-2{
     font-weight: bold;
-    font-weight: 700;
+    /*font-weight: 700;*/
+    font-weight: 600;
     line-height: 1;
-    letter-spacing: 0;    
+    letter-spacing: 0;
+    color: black;    
 }
 .jmr-all-cb .jmr-header-3{
     line-height: 1.3;
+    color: black;
 }
 .jmr-all-cb .jmr-header-3 strong{
     display: block;
