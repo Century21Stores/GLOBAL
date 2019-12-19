@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 12.16.19 */
+/* Global CSS - JuanMa - 12.19.19 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -167,6 +167,7 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     z-index: 3;
 }
 .jmr-text-cta-light{
+    color: white !important;
     border-color: white;
 }
 .jmr-text-cta-dark{
@@ -447,6 +448,24 @@ header ~ div.container span.jmr-cta-button-solidlight:hover,
 header ~ div.container a.jmr-cta-button-solidlight:hover,
 header ~ div.container span.jmr-cta-button-solidlight:focus,
 header ~ div.container a.jmr-cta-button-solidlight:focus{
+    background: #000000;
+    color:#ffffff !important;
+    border-color: #ffffff !important;
+}
+.jmr-cta-button-solidlight-red,
+header ~ div.container span.jmr-cta-button-solidlight-red,
+header ~ div.container a.jmr-cta-button-solidlight-red,
+a.jmr-cta-button-solidlight-red{
+    background: #ffffff;
+    color:#c71515 !important;
+    border-color: #ffffff !important;
+}
+.jmr-cta-button-solidlight-red:hover,
+.jmr-cta-button-solidlight-red:focus,
+header ~ div.container span.jmr-cta-button-solidlight-red:hover,
+header ~ div.container a.jmr-cta-button-solidlight-red:hover,
+header ~ div.container span.jmr-cta-button-solidlight-red:focus,
+header ~ div.container a.jmr-cta-button-solidlight-red:focus{
     background: #000000;
     color:#ffffff !important;
     border-color: #ffffff !important;

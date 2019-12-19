@@ -419,18 +419,21 @@ p.jm-banner-2-mob{
 <script>
 document.addEventListener("DOMContentLoaded", function() {
 
-if(window.location.href.indexOf("/login") > -1){
+if(window.location.href.indexOf("/categories/loyalty-preview") > -1){
     //global_rotating_message_mobile_default();
     //global_rotating_message();
     //showGlobalBanner();
-    showGlobalBanner_week();
-    showGlobalBanner_week_remove_cta();
-}else{    
+    //showGlobalBanner_week();
+    showGlobalBanner_week_remove_banner();
+}else{        
     //showGlobalBanner();
     //global_rotating_message();
     //global_rotating_message_mobile_default();
     //global_rotating_message_mobile();
     showGlobalBanner_week();
+    if(window.location.href.indexOf("/login") > -1){
+        showGlobalBanner_week_remove_cta();
+    }
 }
 
 
@@ -459,7 +462,7 @@ function showGlobalBanner_week(){
                                 '</span>'+
                             '</div>'+
                             '<div class="jmr-right-cta">'+
-                                '<a href="https://www.c21stores.com/login?imc=gb_clearance_previewimccat=w46-19-d_login" class="jmr-text-cta" id="jm-bg-weekly-cta" aria-labelledby="jm-bg-weekly-cta jm-bg-weekly-header">SING UP</a>'+
+                                '<a href="https://www.c21stores.com/login?imc=gb_clearance_previewimccat=w46-19-d_login" class="jmr-text-cta" id="jm-bg-weekly-cta" aria-labelledby="jm-bg-weekly-cta jm-bg-weekly-header">SIGN UP</a>'+
                                 '<a href="https://www.c21stores.com/login?imc=gb_clearance_previewimccat=w46-19-d_login" class="jmr-text-cta" id="jm-bg-weekly-cta" aria-labelledby="jm-bg-weekly-cta jm-bg-weekly-header">LOG IN</a>'+
                             '</div>'+
                         '</div>'+
@@ -476,7 +479,10 @@ function showGlobalBanner_week_remove_cta(){
     $('.jm-drop-thisweek-global-banner .jmr-right-cta').remove();
     $('.jm-global-splitted-banner-week > div > a').remove();
     $('.jm-drop-thisweek-global-banner').css('cursor','text');
+}
 
+function showGlobalBanner_week_remove_banner(){
+    $('div.header-banner').remove();
 }
 
 function showGlobalBanner(){
@@ -785,7 +791,7 @@ function countdown() {
           $('.jm_countdownContainer').removeClass("jm-highlight");
         }
       }
-      //less than 10 seconds
+      //less than 10 [seconds]
       else{
           console.log(jm_timer_annoucer_str_less_10s);
           document.querySelector('#jm_announce').textContent = jm_timer_annoucer_str_less_10s;
