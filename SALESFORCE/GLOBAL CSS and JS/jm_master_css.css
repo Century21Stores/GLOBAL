@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 12.19.19 */
+/* Global CSS - JuanMa - 12.20.19 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -375,7 +375,9 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     margin-left: 1%;   
 }
 a.jmr-cta-text{
-    border-bottom: solid 1px;    
+    border-bottom: solid 1px;
+    position: relative;
+    z-index: 2;
 }
 .jmr-ctas a:first-of-type{
     margin-left: 0%;
@@ -1048,7 +1050,8 @@ div.jmr-large-carousel{
 
 /* --------- [START] TWO & THREE COLUMNS --------- */
 .jmr-left,
-.jmr-middle{
+.jmr-middle,
+.jmr-right{
     margin: 0 0 8%;
 }
 /* --------- [END] TWO & THREE COLUMNS --------- */
