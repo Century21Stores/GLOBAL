@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 12.20.19 */
+/* Global CSS - JuanMa - 12.26.19 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -325,7 +325,7 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;    
     letter-spacing: 0.05em;
-    line-height: 1;
+    line-height: 1.3;
     margin: 0;
 }
 .jmr-disclaimer{
@@ -695,6 +695,9 @@ div.jmr-large-carousel{
 }
 .jmr-desktop-inline{
     display: inline-block;
+}
+.jmr-break-on-desktop{
+    display: block;   
 }
 /*  BRAND TAGGING */
 .jmr-brand-tag{
