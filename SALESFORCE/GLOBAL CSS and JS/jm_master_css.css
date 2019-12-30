@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 12.26.19 */
+/* Global CSS - JuanMa - 12.30.19 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -372,16 +372,17 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     border: solid 1px;
     position: relative;
     z-index: 2;
-    margin-left: 1%;   
+    margin-left: 1%;
+    margin-bottom: 2%;   
 }
 a.jmr-cta-text{
     border-bottom: solid 1px;
     position: relative;
     z-index: 2;
 }
-.jmr-ctas a:first-of-type{
+/*.jmr-ctas a:first-of-type{
     margin-left: 0%;
-}
+}*/
 
 .jmr-cta-button-dark,
 header ~ .jmr-ctas span.jmr-cta-button-dark,
