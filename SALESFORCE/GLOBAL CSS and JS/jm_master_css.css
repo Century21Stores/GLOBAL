@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 12.30.19 */
+/* Global CSS - JuanMa - 01.07.19 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -27,6 +27,9 @@ span.jmr-gb-cta a.jmr-cta-text{
     border-bottom: solid 1px;
     display: inline-block;
     margin: 1% 0;    
+}
+.modal-dialog, #sizeGuideModal .modal-dialog .modal-content .modal-body{
+    -ms-overflow-style: none;
 }
 
 /* [start] centurycash */
@@ -165,10 +168,6 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     letter-spacing: 0.15em;
     position: relative;
     z-index: 3;
-}
-.jmr-text-cta-light{
-    color: white !important;
-    border-color: white;
 }
 .jmr-text-cta-dark{
     border-color: black;
@@ -700,6 +699,12 @@ div.jmr-large-carousel{
 .jmr-break-on-desktop{
     display: block;   
 }
+.jmr-text-cta-light,
+.jmr-text-cta-light:hover{
+    color: white;
+    border-color: white;
+}
+
 /*  BRAND TAGGING */
 .jmr-brand-tag{
     bottom: 3%;
@@ -710,7 +715,8 @@ div.jmr-large-carousel{
 /* -------- [END] General ---------- */
 
 /* --------- [START] Hero --------- */
-.jmr-all-cb article{
+.jmr-all-cb article,
+.jmr-all-cb div > aside{
     font-size: 1vw;
 }
 .jmr-hero-cb article{
@@ -909,7 +915,8 @@ div.jmr-large-carousel{
 
 @media screen and (min-width: 1600px){
 /* --------- [START] Hero --------- */
-.jmr-all-cb article{
+.jmr-all-cb article,
+.jmr-all-cb div > aside{
     font-size: 1em;
 }
 /* --------- [END] Hero --------- */
