@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 01.07.19 */
+/* Global CSS - JuanMa - 01.09.19 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -136,13 +136,29 @@ div[data-br-pid="CENTURYCASH-210"] .line-item-header{
 .product-detail .full-gallery{
     z-index: 9999999;
 }
+
+.designers-page h1,
+.storelocator-wrapper h1.page-title{
+    font-weight: bold;
+    font-size: 1.17rem;
+    margin: 1% 0;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;    
+}
+.fit-predictor{
+    align-self: normal;
+    text-align: right;    
+}
+
 /* -------- [END] Overwrite ---------- */
 
 /* -------- [START] General ---------- */
 figure{
     margin: 0 auto;
 }
-header ~ .container .jm-landing-page a.jm-text-cta-light:not(.btn-primary):not(.btn-outline-primary){
+header ~ .container .jm-landing-page a.jmr-text-cta-light:not(.btn-primary):not(.btn-outline-primary),
+header ~ .container .jmr-text-cta-light:not(.btn-primary):not(.btn-outline-primary){
     color: white;
     border-bottom: solid 1px;
 }
@@ -699,8 +715,8 @@ div.jmr-large-carousel{
 .jmr-break-on-desktop{
     display: block;   
 }
-.jmr-text-cta-light,
-.jmr-text-cta-light:hover{
+a.jmr-text-cta-light,
+a.jmr-text-cta-light:hover{
     color: white;
     border-color: white;
 }
