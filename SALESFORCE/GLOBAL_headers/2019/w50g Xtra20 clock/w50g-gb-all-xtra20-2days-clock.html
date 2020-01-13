@@ -1,4 +1,4 @@
-<!-- w50e-gb-all-xtra20-drop-4days - DROP Longchamp & Clearance Preview All GB - JuanMa - 01.13.20 -->
+<!-- w50g-gb-all-xtra20-2days-clock - Clearance 20% All GB - JuanMa - 01.13.20 -->
 
 <style>
 /* -------- [START] Overwrite ---------- */
@@ -549,7 +549,7 @@ if((window.location.href.indexOf("/clearance") > -1) || (window.location.href ==
     //global_rotating_message();
     //global_rotating_message_mobile_default();
     //global_rotating_message_mobile();
-    showGlobalBanner_week();
+    showGlobalBanner_week_2();
 }
 
 
@@ -569,9 +569,9 @@ function showGlobalBanner_week(){
                             '<div class="jmr-center-info" id="jm-bg-weekly-header">'+
                                 // '<span class="jm-message-w43d-19"><span>ONLINE & SELECT STORES</span></span>'+
                                 'LONGCHAMP | <span>OVER 20% OFF</span>'+
-                                '<span>'+
-                                    '<div class="jmr-add-clock"></div>'+
-                                '</span>'+
+                                // '<span>'+
+                                //     '<div class="jmr-add-clock"></div>'+
+                                // '</span>'+
                             '</div>'+
                             '<div class="jmr-right-cta">'+
                             '<span>'+
@@ -595,7 +595,7 @@ function showGlobalBanner_week_2(){
             '<section class="jm-gb-rotating-wraper slideDown">'+
             '<div class="jm-global-splitted-banner jm-2-week-global-splitted-banner">'+
                '<div>'+
-                    '<a class="jm-clickable-image jm-cta-hover" aria-hidden="true" role="none" tabindex="-1" href="/clearance?imc=gb_all&imccat=w50-19-e_clearance"></a>'+
+                    '<a class="jm-clickable-image jm-cta-hover" aria-hidden="true" role="none" tabindex="-1" href="/clearance?imc=gb_all&imccat=w50-19-g_clearance"></a>'+
                     '<div class="jm-gb-info-holder"'+
                         '<div>'+
                             // '<div class="jmr-left-image">'+
@@ -607,12 +607,12 @@ function showGlobalBanner_week_2(){
                                 '<span class="jmr-line-1">SEMI-ANNUAL CLEARANCE EVENT<span class="jmr-font-2"> TAKE AN EXTRA 20% OFF</span><sup>*</sup></span>'+                                
                                 // '<span class="jmr-gb-info-exclusions"><span><a href="/centurycash.html?imc=gb_premier&imccat=w33-19-d_centurycash-html" target="_blank">INFO/EXCLUSIONS</a></span></span>'+
                                 '<span>'+
-                                    '<span class="jmr-online-store">Ends in 4 Days</span>'+
-                                    // '<div class="jmr-add-clock"></div>'+
+                                    // '<span class="jmr-online-store">Ends in 3 Days</span>'+
+                                    '<div class="jmr-add-clock"></div>'+
                                 '</span>'+
                             '</div>'+
                             '<div class="jmr-right-cta">'+
-                                '<a href="/clearance?imc=gb_all&imccat=w50-19-e_clearance" class="jmr-force-cta-text btn jm-cta-button-gb jm-cta-button jmr-cta-button-solidlight jm-cta-hover" id="jm-bg-weekly-cta" aria-labelledby="jm-bg-weekly-cta jm-bg-weekly-header">SHOP NOW</a>'+
+                                '<a href="/clearance?imc=gb_all&imccat=w50-19-g_clearance" class="jmr-force-cta-text btn jm-cta-button-gb jm-cta-button jmr-cta-button-solidlight jm-cta-hover" id="jm-bg-weekly-cta" aria-labelledby="jm-bg-weekly-cta jm-bg-weekly-header">SHOP NOW</a>'+
                             '</div>'+
                         '</div>'+
                     '</div>'+
@@ -838,7 +838,7 @@ function global_rotating_message_mobile_default(){
 </script>
 
 <script>
-//count_down_drop();
+count_down_drop();
 function count_down_drop(){
 // END CLOCK
 window.addEventListener("DOMContentLoaded", function(){
@@ -857,7 +857,7 @@ $('.jm-2-thisweek-global-banner .jm-gb-info-holder .jmr-add-clock').prepend(
   var dd = new Date();
   console.log("Today's date and time is : ");
   console.log(dd);
-  var targetDate = "Dec 23 2019";
+  var targetDate = "Jan 21 2020";
   var hh = dd.getHours();
   var utchh = dd.getUTCHours();
   //console.log(utchh);
@@ -882,7 +882,7 @@ $('.jm-2-thisweek-global-banner .jm-gb-info-holder .jmr-add-clock').prepend(
 function countdown() {
   let now = new Date();
   // let evenDate = new Date(2019, 7, 5);
-  let evenDate = new Date("2019-12-23T04:00:00Z"); // TEST
+  let evenDate = new Date("2020-01-21T05:00:00Z"); // TEST
   //let evenDate = new Date("2019-07-10T04:00:00Z"); // UTC time
   // console.log(evenDate);
   let actualTime = now.getTime();
