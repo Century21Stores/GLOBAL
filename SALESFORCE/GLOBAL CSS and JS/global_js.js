@@ -1,4 +1,4 @@
-// Global JS - JuanMa - GWP added - 12.02.19
+// Global JS - JuanMa - GWP added - 12.31.19
 
 // (none)              /search?prefn1=brand&searchType=designers&prefv1=Adesso
 // (space)             %20
@@ -14,7 +14,7 @@
 // [START] Calls
 window.addEventListener("DOMContentLoaded", function(){
 
-  //jm_Global_Alert_ad();
+jm_Global_Alert_ad();
 
   //PDP ONLY
   if(window.location.href.indexOf("/products/") > -1){
