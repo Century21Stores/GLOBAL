@@ -703,6 +703,29 @@ div.jmr-large-carousel{
 /* --------- [END] RECOMMENDER HEADERS --------- */
 
 
+/*   [START] COPY BLOCKS   */
+.jmr-copy-block p{
+    font-size: 0.83rem;
+    margin: 2% 0 0;
+}
+.jmr-copy-block div .jm-header-3{
+    text-align: center;
+    font-size: 0.84em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility    
+}
+.jmr-copy-block{
+    width: 94%;
+    margin: 3em auto 0;
+}
+.jmr-copy-block a{
+    color: blue;
+}
+/*   [END] COPY BLOCKS   */
+
 @media screen and (min-width: 700px){
 
 /* -------- [START] Overwrite ---------- */
@@ -814,6 +837,25 @@ a.jmr-text-cta-light:hover{
     background-repeat: no-repeat !important;
 }
 /* --------- [END] Half Hero --------- */
+
+
+/*   [START] COPY BLOCKS  */
+.jmr-copy-block{
+    width: 100%;    
+    max-width: 1330px;
+}
+.jmr-copy-block div{
+    overflow: auto;
+}
+.jmr-copy-block div .jmr-header-3{
+    width: 33%;
+    float: left;
+    text-align: center;
+    font-size: 0.84em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+/*   [END] COPY BLOCKS  */
 
 }
 
@@ -1012,7 +1054,7 @@ div.jmr-large-carousel{
 /* [START] CTAs  */
 .jmr-ctas .jmr-cta-button{
     margin-bottom: 3%;
-}
+}1
 .jmr-ctas .jmr-text-cta{
     font-size: 4vw;
 }
@@ -1101,5 +1143,11 @@ div.jmr-large-carousel{
     padding: 17% 0;
 }
 /* --------- [END] Cart Banners --------- */
+
+/* --------- [START] COPY BLOCKS --------- */
+.jmr-copy-block > p{
+    margin: 6% 0 7%;    
+}
+/* --------- [END] COPY BLOCKS --------- */
 
 }
