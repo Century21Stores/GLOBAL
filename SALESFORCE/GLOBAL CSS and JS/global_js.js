@@ -1,4 +1,4 @@
-// Global JS - JuanMa - GWP added - 12.31.19
+// Global JS - JuanMa - GWP added - 2.5.20
 
 // (none)              /search?prefn1=brand&searchType=designers&prefv1=Adesso
 // (space)             %20
@@ -171,9 +171,9 @@ function jm_carousel_modification(){
 
 function jm_Global_Alert_ad(){
   console.log('alert global banner');
-  if (window.location.href.indexOf("/categories/herald-square-holiday-store") == -1) {
-    $('.header-banner').prepend(
-      '<p class="jmr-alert-gb" role="alert"><a target="_blank" href="/categories/herald-square-holiday-store?imc=gb_alert&imccat=w39-19-e_herald-square-holiday-store"><span>Herald Square Holiday Pop-up Now Open! <span role="button" class="jmr-text-cta">Learn More</span></span></a></p>'
+  if (window.location.href.indexOf("/returns.html") == -1) {
+    $('header').prepend(
+      '<p class="jmr-alert-gb" role="alert"><a target="_blank" href="/returns.html?imc=gb_alert&imccat=w01-20-a_returns"><span>FREE IN-STORE RETURNS! <span role="button" class="jmr-text-cta">Learn More</span></span></a></p>'
     )
   };
 }

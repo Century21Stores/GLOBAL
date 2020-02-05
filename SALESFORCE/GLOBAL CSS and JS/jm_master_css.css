@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 01.30.20 */
+/* Global CSS - JuanMa - 2.5.20 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -150,7 +150,10 @@ div[data-br-pid="CENTURYCASH-210"] .line-item-header{
     align-self: normal;
     text-align: right;    
 }
-
+.embeddedServiceHelpButton .helpButton .uiButton:focus,
+.embeddedServiceSidebarMinimizedDefaultUI.minimizedContainer:focus {
+    outline: 4px solid #3eb0fc !important;
+}
 /* -------- [END] Overwrite ---------- */
 
 /* -------- [START] General ---------- */
@@ -188,11 +191,17 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
 .jmr-text-cta-dark{
     border-color: black;
 }
+
 /* GLOBAL BANNER */
 .jmr-alert-gb {
-    margin: 0;
-    background: #E1261c;
+    /*background: #E1261c;*/
     /*background: #000000;*/
+    background-image: url("refresh/refresh-2020/w0120/GLOBALAD/ECOM20_BORISGlobalAd.jpg?$staticlink$");
+    background-size: cover;
+}
+.jmr-alert-gb {
+    margin: 0;
+    text-align: center;
     text-transform: uppercase;
     font-size: 0.8em;
     letter-spacing: 0.05em;
@@ -698,7 +707,8 @@ div.jmr-large-carousel{
 
 /* -------- [START] Overwrite ---------- */
 div.jmr-large-carousel{
-    max-width: 96%;
+    /*max-width: 96%;*/
+    padding: 0 2% 2%;
 }
 /* -------- [END] Overwrite ---------- */
 
@@ -870,7 +880,8 @@ div.menu-group ul .nav-item {
 
 /* -------- [START] Overwrite ---------- */
 div.jmr-large-carousel{
-    max-width: 75%;
+    /*max-width: 75%;*/
+    padding: 0 10.5% 2%;
 }
 /* -------- [END] Overwrite ---------- */
 
@@ -985,6 +996,7 @@ div.jmr-large-carousel{
 /* GLOBAL BANNER */
 .jmr-alert-gb {
     font-size: 3.3vw;
+    background-position: 50% 100%;
 }
 .jmr-alert-gb a{
     padding: 1% 0;    
