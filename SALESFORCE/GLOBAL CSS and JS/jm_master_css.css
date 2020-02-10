@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 2.5.20 */
+/* Global CSS - JuanMa - 2.10.20 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -500,6 +500,9 @@ header ~ div.container a.jmr-cta-button-solidlight-red:focus{
 strong.jmr-break-on-mobile{
     font-weight: bold;
     font-weight: 700;
+}
+.jmr-ctas-2 a:nth-of-type(1){
+    margin-right: 2em;     
 }
 /* [END] CTAs  */
 
