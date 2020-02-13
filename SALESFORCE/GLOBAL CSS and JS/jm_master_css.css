@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 2.10.20 */
+/* Global CSS - JuanMa - 2.13.20 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -238,6 +238,27 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     font-family: serif;
 }
 
+/* LANDING PAGES */
+.jmr-landing-page h1{
+    font-family: "Gotham","Arial",sans-serif,serif;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0 0 1rem;
+}
+
+
+/* END LANDING PAGES */
+
+/* BCOP */
+.jmr-bcop-page,
+.jm-bcop-page{
+    max-width: 1460px;
+    margin: 2% auto 0;
+    padding: 0 20px;    
+}
+
+/* END BCOP */
+
 /* -------- [END] General ---------- */
 
 
@@ -376,7 +397,8 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     font-size: 1.23em;
     line-height: 1.2;
 }
-.jmr-red{
+.jmr-red,
+.jmr-color-red{
     color:#e2342c;
 }
 /* [END] COPY  */
