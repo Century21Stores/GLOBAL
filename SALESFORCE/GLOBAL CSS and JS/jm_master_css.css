@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 2.13.20 */
+/* Global CSS - JuanMa - 2.14.20 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -365,6 +365,7 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
 /* [START] COPY  */
 .jmr-all-cb article h2,
 .jmr-all-cb article h3,
+.jmr-all-cb figcaption h3,
 .jmr-all-cb article p{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -377,6 +378,7 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     font-size: 0.8em;   
 }
 .jmr-all-wrapper h2.jmrv-header-2,
+.jmr-all-wrapper h3.jmrv-header-2,
 .jmrv-header-2{
     margin: 2% 0 0;
 }
@@ -393,9 +395,10 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     font-weight: 500;
     margin: 1% 0 0;
 }
-.jmr-all-cb article .jmr-header-4{
+.jmr-all-cb article .jmr-header-4,
+.jmr-all-cb figcaption .jmr-header-4{
     font-size: 1.23em;
-    line-height: 1.2;
+    line-height: 1.3;
 }
 .jmr-red,
 .jmr-color-red{
