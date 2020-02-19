@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 2.14.20 */
+/* Global CSS - JuanMa - 2.18.20 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -168,15 +168,7 @@ header ~ .container .jmr-text-cta-light:not(.btn-primary):not(.btn-outline-prima
 header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outline-primary){
     color: white;
 }
-.jmr-mobile{
-    display: block;
-}
-.jmr-desktop{
-    display: none;
-}
-.jmr-desktop-inline{
-    display: none;   
-}
+
 .jmr-add-outline{
     outline: 4px solid #3eb0fc;
 }
@@ -754,6 +746,17 @@ div.jmr-large-carousel{
 }
 /*   [END] COPY BLOCKS   */
 
+.jmr-mobile{
+    display: block;
+}
+.jmr-desktop{
+    display: none;
+}
+.jmr-desktop-inline{
+    display: none;   
+}
+
+
 @media screen and (min-width: 700px){
 
 /* -------- [START] Overwrite ---------- */
@@ -765,7 +768,7 @@ div.jmr-large-carousel{
 
 /* -------- [START] General ---------- */
 .jmr-mobile{
-    display: none;
+    display: none !important;
 }
 .jmr-desktop{
     display: block;
@@ -793,6 +796,7 @@ a.jmr-text-cta-light:hover{
 
 /* --------- [START] Hero --------- */
 .jmr-all-cb article,
+.jmr-all-cb figure,
 .jmr-all-cb div > aside{
     font-size: 1vw;
 }
@@ -1013,6 +1017,7 @@ div.jmr-large-carousel{
 @media screen and (min-width: 1600px){
 /* --------- [START] Hero --------- */
 .jmr-all-cb article,
+.jmr-all-cb figure,
 .jmr-all-cb div > aside{
     font-size: 1em;
 }
