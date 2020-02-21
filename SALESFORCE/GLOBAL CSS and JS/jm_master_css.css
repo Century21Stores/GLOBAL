@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 2.20.20 */
+/* Global CSS - JuanMa - 2.21.20 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -555,7 +555,7 @@ strong.jmr-break-on-mobile{
 .jm-bb-disclaimer{
     font-size: 8px;
     width: 94%;
-    margin: 0 auto;
+    margin: 0.5em auto 0;
     letter-spacing: 0;
     line-height: 1.5;
     text-align: left;
@@ -857,10 +857,14 @@ a.jmr-text-cta-light:hover{
     width: 48%;
     float: left;
 }
-.jmr-three-column > div,
-.jmr-three-column-2 > div{
+.jmr-three-column > div{
     width: 32.45%;
     float: left;
+}
+.jmr-three-column-2 > div{
+    width: 27.3%;
+    float: left;
+    margin: 0 3%;
 }
 .jmr-two-column .jmr-left{
     margin-right: 4%;
