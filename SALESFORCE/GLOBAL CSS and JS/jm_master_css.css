@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 2.21.20 */
+/* Global CSS - JuanMa - 2.27.20 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -175,12 +175,16 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     outline: 4px solid #3eb0fc;
 }
 .jmr-text-cta{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
     border-bottom: solid 1px;    
-    font-weight: normal;
-    font-weight: 500;
-    letter-spacing: 0.15em;
+    font-weight: bold;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    font-size: 0.76em;
     position: relative;
-    z-index: 3;
+    z-index: 3; 
 }
 .jmr-text-cta-dark{
     border-color: black;
@@ -252,7 +256,9 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
 }
 
 /* END BCOP */
-
+.jmr-bg-red{
+    background: #E51E25;
+}
 /* -------- [END] General ---------- */
 
 
@@ -376,14 +382,7 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
 .jmrv-header-2{
     margin: 2% 0 0;
 }
-.jmr-all-cb article .jmr-header-2{
-    font-size: 3em;
-    font-weight: bold;
-    font-weight: 600;
-    line-height: 1;
-    /*letter-spacing: 0.05em;*/
 
-    font-size: 1.4em;}
 .jmr-all-cb article .jmr-header-3{
     font-weight: normal;
     font-weight: 500;
@@ -391,7 +390,7 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
 }
 .jmr-all-cb article .jmr-header-4,
 .jmr-all-cb figcaption .jmr-header-4{
-    font-size: 1.03em;
+    font-size: 1em;
     line-height: 1.3;
     letter-spacing: 0.05em;
 }
@@ -417,7 +416,8 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     position: relative;
     z-index: 2;
     margin-left: 1%;
-    margin-bottom: 2%;   
+    margin-bottom: 2%;
+    text-transform: none;
 }
 a.jmr-cta-text{
     border-bottom: solid 1px;
@@ -504,7 +504,7 @@ header ~ div.container span.jmr-cta-button-solidlight-red,
 header ~ div.container a.jmr-cta-button-solidlight-red,
 a.jmr-cta-button-solidlight-red{
     background: #ffffff;
-    color:#c71515 !important;
+    color:#E51E25 !important;
     border-color: #ffffff !important;
 }
 .jmr-cta-button-solidlight-red:hover,
@@ -513,7 +513,7 @@ header ~ div.container span.jmr-cta-button-solidlight-red:hover,
 header ~ div.container a.jmr-cta-button-solidlight-red:hover,
 header ~ div.container span.jmr-cta-button-solidlight-red:focus,
 header ~ div.container a.jmr-cta-button-solidlight-red:focus{
-    background: #000000;
+    background: #E51E25;
     color:#ffffff !important;
     border-color: #ffffff !important;
 }
@@ -526,7 +526,8 @@ strong.jmr-break-on-mobile{
 }
 /* [END] CTAs  */
 
-.jmr-all-cb .jmr-1440{
+.jmr-all-cb .jmr-1440,
+.jmr-1440{
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -625,6 +626,7 @@ strong.jmr-break-on-mobile{
     font-weight: bold;
     font-weight: 600;
     line-height: 1;
+    margin: 0 0 1rem;
     /*letter-spacing: 0.05em;*/
 }
 .jmr-all-cb article .jmr-header-3{
@@ -642,6 +644,11 @@ strong.jmr-break-on-mobile{
     text-align: center;
     margin: 0 auto;
 }
+.jmr-two-column-2{
+    overflow: auto;
+    text-align: left;
+    margin: 0 auto;   
+}
 .jmr-three-column-2{
     overflow: auto;
     text-align: left;
@@ -657,7 +664,8 @@ strong.jmr-break-on-mobile{
     background-size: contain !important;
     background-position: 50% 0 !important;
     background-repeat: no-repeat !important; 
-    padding-top: calc((1232% / 1368) * 100) !important;
+    /*padding-top: calc((1232% / 1368) * 100) !important;*/
+    padding-top: calc((466% / 518) * 100) !important;
 }
 
 .jmr-three-column figure{
@@ -682,6 +690,9 @@ strong.jmr-break-on-mobile{
     width: 93%;   
 }
 .jmr-three-column-2{
+    max-width: 1440px;
+}
+.jmr-two-column{
     max-width: 1440px;
 }
 /* --------- [END] TWO & THREE COLUMNS --------- */
@@ -779,11 +790,7 @@ div.jmr-large-carousel{
     font-weight: bold;
     font-weight: 700;
 }
-.jmr-curalate-wrapper-2 article .jmr-header-2{
-    font-weight: bold;
-    font-weight: 600;
-    margin: 0 0 0.3em;
-}
+
 .jmr-curalate-wrapper-2 #crl8-homepage-carousel .dqwPDi,
 .jmr-curalate-wrapper-2 #crl8-homepage-carousel .jZvfHJ,
 .jmr-curalate-wrapper-2 #crl8-homepage-carousel .QkMRD{
@@ -806,7 +813,7 @@ section.jmr-curalate-wrapper-2 article{
 /* -------- [START] Overwrite ---------- */
 div.jmr-large-carousel{
     /*max-width: 96%;*/
-    padding: 0 2% 2%;
+    padding: 0 4% 2%;
 }
 /* -------- [END] Overwrite ---------- */
 
@@ -842,7 +849,8 @@ a.jmr-text-cta-light:hover{
 .jmr-all-cb article,
 .jmr-all-cb figure,
 .jmr-all-cb div > aside{
-    font-size: 1vw;
+    /*font-size: 1.3vw;*/
+    font-size: 1.1vw;
 }
 .jmr-hero-cb article{
     width: 50%;
@@ -850,25 +858,28 @@ a.jmr-text-cta-light:hover{
 /* --------- [END] Hero --------- */
 
 /* --------- [START] TWO & THREE COLUMNS --------- */
-.jmr-two-column{
-    max-width: 96%;    
-}
 .jmr-two-column > div{
-    width: 48%;
+    width: 49%;
     float: left;
+}
+.jmr-two-column-2 > div{
+    width: 42%;
+    float: left;
+    margin: 0 4%;
 }
 .jmr-three-column > div{
     width: 32.45%;
     float: left;
 }
+
 .jmr-three-column-2 > div{
-    width: 27.3%;
+    width: 28.4%;
     float: left;
     margin: 0 3%;
 }
-.jmr-two-column .jmr-left{
-    margin-right: 4%;
-}
+/*.jmr-two-column .jmr-left{
+    margin-right: 2%;
+}*/
 .jmr-three-column .jmr-middle{
     margin: 0 1.3%;
 }
@@ -888,10 +899,13 @@ a.jmr-text-cta-light:hover{
     font-size: 0.86vw;
 }
 .jmr-three-column-2 article{
-    font-size: 0.86vw;
+    font-size: 1.14vw;
 }
 .jmr-three-column figcaption{
     font-size: 1vw;
+}
+.jmr-three-column-2 figcaption{
+    font-size: 1.4vw;    
 }
 /* --------- [END] TWO & THREE COLUMNS --------- */
 
@@ -965,6 +979,7 @@ div.menu-group ul .nav-item {
     font-size: .63em;
 }
 /* -------- [END] Overwrite ---------- */
+
 }
 
 @media screen and (min-width: 1100px){
@@ -995,6 +1010,9 @@ div.menu-group ul .nav-item {
 }
 /* --------- [END] Browse Banners --------- */
 
+.jmr-all-cb article .jmr-header-4, .jmr-all-cb figcaption .jmr-header-4{
+    font-size: 0.77em;    
+}
 
 }
 
@@ -1013,7 +1031,8 @@ div.menu-group ul .nav-item {
 /* -------- [START] Overwrite ---------- */
 div.jmr-large-carousel{
     /*max-width: 75%;*/
-    padding: 0 10.5% 2%;
+    /*padding: 0 10.5% 2%;*/
+    padding: 0 15.5% 2%;
 }
 /* -------- [END] Overwrite ---------- */
 
@@ -1040,11 +1059,6 @@ div.jmr-large-carousel{
 }
 /* --------- [END] Browse Banners --------- */
 
-/* --------- [START] TWO & THREE COLUMNS --------- */
-.jmr-two-column{
-    max-width: 75%;
-}
-/* --------- [END] TWO & THREE COLUMNS --------- */
 
 
 }
@@ -1136,6 +1150,13 @@ section.jmr-curalate-wrapper-2 article{
 
 @media screen and (max-width: 700px){
 
+/* -------- [START] Overwrite ---------- */
+.jmr-large-carousel > div{
+    padding: 0;
+}
+
+/* -------- [END] Overwrite ---------- */
+
 /* -------- [START] General ---------- */
 .jmr-break-on-mobile{
     display: block;
@@ -1161,7 +1182,7 @@ section.jmr-curalate-wrapper-2 article{
     margin-bottom: 3%;
 }
 .jmr-ctas a.jmr-text-cta{
-    font-size: 1.3em;
+    font-size: 3.3vw;
 }
 /* [END] CTAs  */
 
@@ -1181,19 +1202,25 @@ section.jmr-curalate-wrapper-2 article{
 .jmr-all-cb .jmr-header-3 strong{
     display: block;
 }
+.jmr-all-cb article .jmr-header-4, .jmr-all-cb figcaption .jmr-header-4{
+    font-size: 1em;    
+}
 /* [END] Copy  */
 
 /* [START] CTAs  */
 .jmr-all-cb{
-    margin: 0 auto 8%;
+    margin: 0 auto 4em;
 }
 .jmr-all-cb article{
-    font-size: 2.6vw;
-    text-align: center;
-    margin: 3% 0 0;
-    padding: 0 3%;
+    font-size: 3.6vw;
+    text-align: left;
+    margin: 5% 0 0;
+    padding: 0 5%;
 }
 .jmr-ctas{
+    text-align: left;
+}
+.header-banner .jmr-ctas{
     text-align: center;
 }
 .jmr-ctas a.jmr-cta-button,
@@ -1202,7 +1229,7 @@ section.jmr-curalate-wrapper-2 article{
     color: #000000 !important;
     background: #ffffff !important;
     min-width: 45%;
-    font-size: 2.7vw;
+    font-size: 3.3vw;
 }
 
 .jmr-ctas a:hover,
@@ -1236,10 +1263,16 @@ section.jmr-curalate-wrapper-2 article{
 
 /* --------- [START] TWO & THREE COLUMNS --------- */
 .jmr-left,
-.jmr-middle,
-.jmr-right{
-    margin: 0 0 8%;
+.jmr-middle
+/*.jmr-right*/{
+    margin: 0 0 4em;
 }
+/*.jmr-three-column-2{
+    padding-top: 5.3em; 
+}*/
+/*.jmr-three-column-2 .jmr-right{
+    padding: 0 0 4em; 
+}*/
 /* --------- [END] TWO & THREE COLUMNS --------- */
 
 
