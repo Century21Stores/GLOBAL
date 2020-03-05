@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 3.2.20 */
+/* Global CSS - JuanMa - 3.3.20 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -1209,7 +1209,8 @@ section.jmr-curalate-wrapper-2 article{
 
 /* [START] CTAs  */
 .jmr-all-cb{
-    margin: 0 auto 4em;
+/*    margin: 0 auto 4em;*/
+    margin: 0 auto 0;
 }
 .jmr-all-cb article{
     font-size: 3.6vw;
