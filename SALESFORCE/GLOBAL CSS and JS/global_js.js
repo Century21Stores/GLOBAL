@@ -1,4 +1,4 @@
-// Global JS - JuanMa - GWP added - 2.5.20
+// Global JS - JuanMa - GWP added - 2.20.20
 
 // (none)              /search?prefn1=brand&searchType=designers&prefv1=Adesso
 // (space)             %20
@@ -14,7 +14,7 @@
 // [START] Calls
 window.addEventListener("DOMContentLoaded", function(){
 
-jm_Global_Alert_ad();
+//jm_Global_Alert_ad();
 
   //PDP ONLY
   if(window.location.href.indexOf("/products/") > -1){
@@ -22,28 +22,28 @@ jm_Global_Alert_ad();
     jm_Designer_Header_PDP();
     jmr_temporary_fix_recommender();
     jm_GWP_PDP();
- 
+
   }
   //SEARCH ONLY
-  else if(window.location.href.indexOf("/search") > -1){    
+  else if(window.location.href.indexOf("/search") > -1){
     //ROOT
     if(window.location.href.indexOf("/search?cgid=root") > -1){
       console.log("In Root Catalog");
-      jm_H1_root_catalog(); 
+      jm_H1_root_catalog();
     }
     //SEARCH
-    else{      
-      console.log("In Search"); 
+    else{
+      console.log("In Search");
       var searc_title = $('.result-title').text().replace(/(\r\n|\n|\r)/gm,"");
-      
+
       if(searc_title.indexOf("Search results for") > -1){
-        console.log("In Search with results"); 
+        console.log("In Search with results");
       }
       else{
-        console.log("In Search NO results");  
+        console.log("In Search NO results");
       }
     }
-    
+
   }
   //LANDING PAGES
   else if((window.location.href.indexOf("/categories/men") > -1) || (window.location.href.indexOf("/categories/women") > -1) || (window.location.href.indexOf("/categories/shoes") > -1) || (window.location.href.indexOf("/categories/beauty") > -1) || (window.location.href.indexOf("/categories/kids") > -1) || (window.location.href.indexOf("/categories/home") > -1) || (window.location.href.indexOf("/categories/handbags-accessories") > -1)){
@@ -56,7 +56,7 @@ jm_Global_Alert_ad();
   else if(window.location.href.indexOf("/categories/") > -1){
     console.log("In Categories");
     jmr_temporary_fix_recommender();
-    
+
   }
 
   //CART
@@ -64,14 +64,14 @@ jm_Global_Alert_ad();
     console.log("In Cart");
     //jm_centurycash_message();
     doSwap();
-    
-  }  
+
+  }
 
   //MY ACCOUNT
   else if(window.location.href.indexOf("/account") > -1){
     console.log("My Account");
     // jm_loading_messages_from_cart();
-  } 
+  }
 
   //OTHER PAGES
   else{
@@ -97,7 +97,7 @@ function jm_Designer_Header_PDP(){
     designer_brand_raw = $('.product-set-detail .product-brand').text();
   };
 
-  var is_there_designer_anchor = $('#jm_designer_anchor').length,      
+  var is_there_designer_anchor = $('#jm_designer_anchor').length,
       designer_brand = designer_brand_raw.replace(/ /g,'%20').replace(/'/g,'%27').replace(/&/g,'%26').replace(/\(/g,'%28').replace(/\)/g,'%29').replace(/&/g,'%26').replace(/\+/g,'%2B').replace(/,/g,'%2C').replace(/:/g,'%3A').replace(/!/g,'%21'),
       designer_anchor_url = $('#jm_designer_anchor').attr('href'),
       designer_pdp_name = $('.product-detail .product-brand').text().toLowerCase().replace(/ /g,'-').replace(/'/g,'%27').replace(/&/g,'%26').replace(/\(/g,'%28').replace(/\)/g,'%29').replace(/&/g,'%26').replace(/\+/g,'%2B').replace(/,/g,'%2C').replace(/:/g,'%3A').replace(/!/g,'%21'),
@@ -109,7 +109,7 @@ function jm_Designer_Header_PDP(){
   //console.log(jm_brands_exceptions.includes(designer_brand_raw));
   //console.log(designer_brand_raw);
 
-  
+
   if((jm_brands_exceptions.includes(designer_brand_raw)) && (window.location.href.indexOf("/products/") > -1)){
     console.log('Supressed designer');
     $(".product-brand").wrap("<a href=/search?cgid=root&prefn1=brand&prefv1=" + designer_brand + designer_pdp_parameter_header_filter);
@@ -148,14 +148,14 @@ function jm_scroll_bb_disclaimer(this_id){
     }
     else{
         jm_offset = 543;
-    }    
+    }
         console.log(this_id);
         $('body, html').animate({
             scrollTop: $('#jm-bb-disclaimer').offset().top - jm_offset
         },1000);
 }
 function jm_scroll_bb_disclaimer_back(this_class){
-    $('#jm_drop_main').focus();    
+    $('#jm_drop_main').focus();
 }
 function jm_carousel_modification(){
   console.log("carousel script");
@@ -169,11 +169,14 @@ function jm_carousel_modification(){
   }
 }
 
-function jm_Global_Alert_ad(){
-  console.log('alert global banner');
-  if (window.location.href.indexOf("/returns.html") == -1) {
+function jm_Global_Alert_ad(){  
+  if ((window.location.href.indexOf("/checkout") != -1) || (window.location.href.indexOf("/returns.html") != -1)) {
+    console.log('DO NOT alert global banner');
+  
+  }else{
+    console.log('show alert global banner');
     $('header').prepend(
-      '<p class="jmr-alert-gb" role="alert"><a target="_blank" href="/returns.html?imc=gb_alert&imccat=w01-20-a_returns"><span>FREE IN-STORE RETURNS! <span role="button" class="jmr-text-cta">Learn More</span></span></a></p>'
+      '<p class="jmr-alert-gb" role="alert"><a target="_blank" href="/returns.html#to-in-store-returns?imc=gb_alert&imccat=w01-20-a_returns"><span>FREE IN-STORE RETURNS! <span role="button" class="jmr-text-cta">Learn More</span></span></a></p>'
     )
   };
 }
@@ -225,11 +228,11 @@ var subtotal = $('.cart-page .order-total-summary .subtotal-item .sub-total');
         break;
       case (subtotal_number >980 && subtotal_number <1000):
         message = "Spend $" + (1000 - subtotal_number).toFixed(2) + " more, receive an extra $21 CENTURYCASH!";
-    }    
+    }
 
-    
+
     console.log(message);
-    
+
     function build_centurycash_banner(message,subtotal_number){
     if(subtotal_number >80 && subtotal_number <1000){
       $('.cart-wrapper .totals > div.d-block').append(
