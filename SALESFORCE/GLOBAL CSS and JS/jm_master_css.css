@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 3.3.20 */
+/* Global CSS - JuanMa - 3.9.20 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -911,8 +911,8 @@ a.jmr-text-cta-light:hover{
 
 
 /* --------- [START] Browse Banners --------- */
-.jmr-bb-wrapper article{
-    font-size: 1vw;
+div.jmr-bb-wrapper article{
+    font-size: .5vw;
 }
 .jmr-bb-wrapper .jm-bb-disclaimer{
     font-size: 0.53em;
@@ -997,8 +997,8 @@ div.menu-group ul .nav-item {
 /* [END] CTAs  */
 
 /* --------- [START] Browse Banners --------- */
-.jmr-bb-wrapper article{
-    font-size: 0.6vw;
+div.jmr-bb-wrapper article{
+    font-size: 0.45vw;
 }
 .jmr-bb-ctas{
     padding: 0 5vw;
@@ -1066,7 +1066,6 @@ div.jmr-large-carousel{
 
 @media screen and (min-width: 1440px){
 
-
 }
 
 @media screen and (min-width: 1500px){
@@ -1122,15 +1121,11 @@ section.jmr-curalate-wrapper-2 article{
 @media screen and (min-width: 1700px){
 /* --------- [START] Browse Banners --------- */
 .jmr-bb-ctas a{
-    font-size: 0.93em;
-    min-width: 23.5em;
-}
-.jmr-bb-ctas a{
-    font-size: 0.93em;
+    font-size: 0.76em;
     min-width: 23.5em;
     margin: 1%;
 }
-.jmr-bb-wrapper article{
+div.jmr-bb-wrapper article{
     font-size: 0.73em;
 }
 /* --------- [END] Browse Banners --------- */
@@ -1259,6 +1254,9 @@ section.jmr-curalate-wrapper-2 article{
     text-align: center;
     font-size: 0.98em;
 } 
+.jmr-bb-ctas a{
+    border:none !important;
+}
 /* [END] CTAs  */
 
 
