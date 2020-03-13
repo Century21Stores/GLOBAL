@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 3.9.20 */
+/* Global CSS - JuanMa - 3.12.20 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -193,8 +193,8 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
 /* GLOBAL BANNER */
 .jmr-alert-gb {
     /*background: #E1261c;*/
-    /*background: #000000;*/
-    background-image: url("refresh/refresh-2020/w0120/GLOBALAD/ECOM20_BORISGlobalAd.jpg?$staticlink$");
+    background: #2c40a3; /*blue*/
+    /*background-image: url("refresh/refresh-2020/w0120/GLOBALAD/ECOM20_BORISGlobalAd.jpg?$staticlink$");*/
     background-size: cover;
 }
 .jmr-alert-gb {
@@ -258,6 +258,13 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
 /* END BCOP */
 .jmr-bg-red{
     background: #E51E25;
+}
+.jmr-bg-blue{
+    background: #30439B;
+    padding: 5% 0 1%;
+}
+.jmr-bg-magenta{
+    background: #C51D84;
 }
 /* -------- [END] General ---------- */
 
@@ -531,7 +538,11 @@ strong.jmr-break-on-mobile{
     max-width: 1440px;
     margin: 0 auto;
 }
-
+.jmr-all-cb .jmr-1920,
+.jmr-1920{
+    max-width: 1920px;
+    margin: 0 auto;
+}
 /* --------- [END] All Content Blocks --------- */
 
 
@@ -1204,8 +1215,8 @@ div.jmr-bb-wrapper article{
 
 /* [START] CTAs  */
 .jmr-all-cb{
-/*    margin: 0 auto 4em;*/
-    margin: 0 auto 0;
+    margin: 0 auto 4em;
+    /*margin: 0 auto 0;*/
 }
 .jmr-all-cb article{
     font-size: 3.6vw;

@@ -1,4 +1,4 @@
-// Global JS - JuanMa - GWP added - 2.20.20
+// Global JS - JuanMa - GWP added - 3.13.20
 
 // (none)              /search?prefn1=brand&searchType=designers&prefv1=Adesso
 // (space)             %20
@@ -14,7 +14,7 @@
 // [START] Calls
 window.addEventListener("DOMContentLoaded", function(){
 
-//jm_Global_Alert_ad();
+jm_Global_Alert_ad();
 
   //PDP ONLY
   if(window.location.href.indexOf("/products/") > -1){
@@ -176,7 +176,7 @@ function jm_Global_Alert_ad(){
   }else{
     console.log('show alert global banner');
     $('header').prepend(
-      '<p class="jmr-alert-gb" role="alert"><a target="_blank" href="/returns.html#to-in-store-returns?imc=gb_alert&imccat=w01-20-a_returns"><span>FREE IN-STORE RETURNS! <span role="button" class="jmr-text-cta">Learn More</span></span></a></p>'
+      '<p class="jmr-alert-gb" role="alert"><a target="_blank" href="/stores?imc=gb_alert&imccat=w07-20-a_stores"><span>WE‘RE OPEN IN AMERICAN DREAM! <span role="button" class="jmr-text-cta">Store Address</span></span></a></p>'
     )
   };
 }
