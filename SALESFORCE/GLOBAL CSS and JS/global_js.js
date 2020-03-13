@@ -176,7 +176,7 @@ function jm_Global_Alert_ad(){
   }else{
     console.log('show alert global banner');
     $('header').prepend(
-      '<p class="jmr-alert-gb" role="alert"><a target="_blank" href="/stores?imc=gb_alert&imccat=w07-20-a_stores"><span>WE‘RE OPEN IN AMERICAN DREAM! <span role="button" class="jmr-text-cta">Store Address</span></span></a></p>'
+      '<p class="jmr-alert-gb" role="alert"><a target="_blank" href="/stores?imc=gb_alert&imccat=w07-20-a_stores"><span>WE’RE OPEN IN AMERICAN DREAM! <span role="button" class="jmr-text-cta">Store Address</span></span></a></p>'
     )
   };
 }

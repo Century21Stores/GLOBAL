@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 3.12.20 */
+/* Global CSS - JuanMa - 3.13.20 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -824,7 +824,7 @@ section.jmr-curalate-wrapper-2 article{
 /* -------- [START] Overwrite ---------- */
 div.jmr-large-carousel{
     /*max-width: 96%;*/
-    padding: 0 4% 2%;
+    padding: 0 4% 0;
 }
 /* -------- [END] Overwrite ---------- */
 
@@ -1043,7 +1043,7 @@ div.menu-group ul .nav-item {
 div.jmr-large-carousel{
     /*max-width: 75%;*/
     /*padding: 0 10.5% 2%;*/
-    padding: 0 15.5% 2%;
+    padding: 0 15.5% 0%;
 }
 /* -------- [END] Overwrite ---------- */
 
