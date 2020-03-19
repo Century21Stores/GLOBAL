@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 3.13.20 */
+/* Global CSS - JuanMa - 3.19.20 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -261,6 +261,10 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
 }
 .jmr-bg-blue{
     background: #30439B;
+    padding: 5% 0 1%;
+}
+.jmr-bg-beige{
+    background: #f3eae1;
     padding: 5% 0 1%;
 }
 .jmr-bg-magenta{
@@ -916,7 +920,7 @@ a.jmr-text-cta-light:hover{
     font-size: 1vw;
 }
 .jmr-three-column-2 figcaption{
-    font-size: 1.4vw;    
+    font-size: 1.2vw;    
 }
 /* --------- [END] TWO & THREE COLUMNS --------- */
 
