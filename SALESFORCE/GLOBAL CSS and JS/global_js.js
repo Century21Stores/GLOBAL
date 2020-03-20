@@ -1,4 +1,4 @@
-// Global JS - JuanMa - GWP added - 3.13.20
+// Global JS - JuanMa - GWP added - 3.19.20
 
 // (none)              /search?prefn1=brand&searchType=designers&prefv1=Adesso
 // (space)             %20
@@ -170,13 +170,13 @@ function jm_carousel_modification(){
 }
 
 function jm_Global_Alert_ad(){  
-  if ((window.location.href.indexOf("/checkout") != -1) || (window.location.href.indexOf("/returns.html") != -1)) {
+  if ((window.location.href.indexOf("/checkout") != -1) || (window.location.href.indexOf("/long-form-statement.html") != -1)) {
     console.log('DO NOT alert global banner');
   
   }else{
     console.log('show alert global banner');
     $('header').prepend(
-      '<p class="jmr-alert-gb" role="alert"><a target="_blank" href="/stores?imc=gb_alert&imccat=w07-20-a_stores"><span>WE’RE OPEN IN AMERICAN DREAM! <span role="button" class="jmr-text-cta">Store Address</span></span></a></p>'
+      '<p class="jmr-alert-gb" role="alert"><a target="_blank" href="/long-form-statement.html?imc=gb_alert&imccat=w07-20-a_long-form-statement"><span>We’re committed to the health and safety of our customers, employees and communities. <span class="jmr-break-on-mobile"><span role="button" class="jmr-text-cta">Read about</span> our response to COVID-19.</span></span></a></p>'
     )
   };
 }
