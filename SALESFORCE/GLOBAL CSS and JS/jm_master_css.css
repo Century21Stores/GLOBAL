@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 3.19.20 */
+/* Global CSS - JuanMa - 4.2.20 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -263,8 +263,16 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     background: #30439B;
     padding: 5% 0 1%;
 }
+.jmr-bg-blue-2{
+    background: #a6aed3;
+    padding: 5% 0 1%;
+}
 .jmr-bg-beige{
     background: #f3eae1;
+    padding: 5% 0 1%;
+}
+.jmr-bg-gray{
+    background: #F3F3F3;
     padding: 5% 0 1%;
 }
 .jmr-bg-magenta{
@@ -527,6 +535,24 @@ header ~ div.container a.jmr-cta-button-solidlight-red:focus{
     background: #E51E25;
     color:#ffffff !important;
     border-color: #ffffff !important;
+}
+.jmr-cta-button-soliddark-red,
+header ~ div.container span.jmr-cta-button-soliddark-red,
+header ~ div.container a.jmr-cta-button-soliddark-red,
+a.jmr-cta-button-soliddark-red{
+    background: #E51E25;
+    color:#ffffff !important;
+    border-color: #E51E25 !important;
+}
+.jmr-cta-button-soliddark-red:hover,
+.jmr-cta-button-soliddark-red:focus,
+header ~ div.container span.jmr-cta-button-soliddark-red:hover,
+header ~ div.container a.jmr-cta-button-soliddark-red:hover,
+header ~ div.container span.jmr-cta-button-soliddark-red:focus,
+header ~ div.container a.jmr-cta-button-soliddark-red:focus{
+    background: #ffffff;
+    color:#E51E25 !important;
+    border-color: #E51E25 !important;
 }
 strong.jmr-break-on-mobile{
     font-weight: bold;
