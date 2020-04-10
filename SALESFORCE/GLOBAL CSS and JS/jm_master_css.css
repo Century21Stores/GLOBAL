@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 4.2.20 */
+/* Global CSS - JuanMa - 4.10.20 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -875,6 +875,11 @@ a.jmr-text-cta-light,
 a.jmr-text-cta-light:hover{
     color: white;
     border-color: white;
+}
+a.jmr-text-cta-blue,
+a.jmr-text-cta-blue:hover{
+    color: #2f4399;
+    border-color: #2f4399;
 }
 
 /*  BRAND TAGGING */
