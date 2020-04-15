@@ -229,7 +229,7 @@
 
 
 </style>
-
+<!-- 9899-4913000 , $20 9899-4913000 and  $40 9899-2287000 -->
 
 <script>
 console.log('tuesday children Banner');
@@ -246,7 +246,7 @@ function openWin40() {
     move_pb();
     $('.jm_default_message_2').fadeOut(300);
     $('.jm_thank_you_message').fadeIn(1300);    
-    setTimeout(function(){location.reload();}, 4000);    
+    setTimeout(function(){location.reload();}, 4500);    
 }
 function openWin20() {
     document.getElementById("ifr").src="/products/tuesday%27s-children/%2420-donation/9899-9939000.html?imc=tuesday_children_20&imccat=w1619_cart_top_plcc20#thankyouforyourdonation";
@@ -254,7 +254,7 @@ function openWin20() {
     move_pb();
     $('.jm_default_message_2').fadeOut(300);
     $('.jm_thank_you_message').fadeIn(1300);    
-    setTimeout(function(){location.reload();}, 4000);    
+    setTimeout(function(){location.reload();}, 4500);    
 }
 function openWin10() {
     //myWindow = window.open("myWindow", '_blank', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,left=90000, top=90000, width=1, height=1, visible=none', '');
@@ -265,7 +265,7 @@ function openWin10() {
     move_pb();
     $('.jm_default_message_2').fadeOut(300);
     $('.jm_thank_you_message').fadeIn(1300);
-    setTimeout(function(){location.reload();}, 4000);    
+    setTimeout(function(){location.reload();}, 4500);    
 }
 function openWin5() {
     //myWindow = window.open("myWindow", '_blank', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,left=90000, top=90000, width=1, height=1, visible=none', '');
@@ -340,8 +340,8 @@ if (window.location.href.indexOf("/cart") > -1){
         if (jmr_mq.matches) {
             console.log('after first load tc desktop');
             $(".checkout-btn").one("click mouseover",function(){
-                console.log("hover1");
-                //Tuesday_Children_Dialog();
+                console.log("hover2");
+                Tuesday_Children_Dialog();
             });
         } else {
             console.log('after first load tc mobile');
@@ -380,8 +380,8 @@ function Tuesday_Children_Dialog(){
                     '<span id="jm_progress_bar"></span>'+
                 '</p>'+
                 '<p class="content-block-content__action content-block-content__action--button">'+
-                    '<a href="#jm_donation_id" class="btn jm-cta-button jm-cta-button-dark" onclick="openWin1()">$1</a>'+
-                    '<a href="#jm_donation_id" class="btn jm-cta-button jm-cta-button-dark" onclick="openWin5(); jm_scroll_banner(this.id)" onkeypress="jm_scroll_banner(this.id);">$5</a>'+
+                    // '<a href="#jm_donation_id" class="btn jm-cta-button jm-cta-button-dark" onclick="openWin1()">$1</a>'+
+                    // '<a href="#jm_donation_id" class="btn jm-cta-button jm-cta-button-dark" onclick="openWin5(); jm_scroll_banner(this.id)" onkeypress="jm_scroll_banner(this.id);">$5</a>'+
                     '<a href="#jm_donation_id" id="jmr_donate_1" class="btn jm-cta-button jm-cta-button-dark" onclick="openWin10()">$10</a>'+
                     '<a href="#jm_donation_id" class="btn jm-cta-button jm-cta-button-dark" onclick="openWin20()">$20</a>'+          
                     '<a href="#jm_donation_id" class="btn jm-cta-button jm-cta-button-dark" onclick="openWin40()">$40</a>'+
