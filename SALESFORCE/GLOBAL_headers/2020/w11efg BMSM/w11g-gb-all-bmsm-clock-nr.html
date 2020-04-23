@@ -1,4 +1,4 @@
-<!-- w11d-gb-all-tops999-clock - TOPS $9.99 All GB - JuanMa - 4.15.20 -->
+<!-- w11g-gb-all-bmsm-clock-nr - BMSM All GB - JuanMa - 4.18.20 -->
 
 <style>
 /*.header-banner{
@@ -6,14 +6,15 @@
 }*/
 /* -------- [START] Overwrite ---------- */
 .jmr-center-info a{
-    color: white;
+    color: black;
     z-index: 99;
     position: relative;
 
 }
 a#jm-gb-discount-a-2{
     font-size: 0.6em;
-    border-bottom: solid 1px white;
+    border-bottom: solid 1px black;
+    margin: 0 0 0 12%;
 }
 .jmr-code{
     font-size: 0.7em;
@@ -57,10 +58,10 @@ a#jm-gb-discount-a-2{
 
 /* -------- [START] General Banner ---------- */
 .jm-global-splitted-banner{
-    background: #f6f4f5;
+    background: #e51d25;
 }
 .jm-right{
-    background: #f5f5f5;
+    background: #e51d25;
 }
 .jm-credit-card-img{
     width: 3.1%;
@@ -110,9 +111,10 @@ a.jm-cta-button-gb{
 }
 /* -------- [END] General Banner ---------- */
 
-/* -------- [START] WEEKLY BANNER ---------- */
+/* -------- [START] WEEKLY BANNER ---------- */   
 .jm-2-thisweek-global-banner .jm-global-splitted-banner{
-    background: #e51d25;
+    /*background: #e51d25;*/ /*red*/
+    background: #f6f2ec; /*badge*/
     /*background: #000000;*/
 }
 .jm-2-thisweek-global-banner img{
@@ -135,17 +137,22 @@ a.jm-cta-button-gb{
     line-height: 1.2;
 }
 .jm-2-thisweek-global-banner .jm-gb-info-holder div{
-    color: white;
+    color: black;
     font-weight: bold;
     font-weight: 600;
     letter-spacing: 0.09em;
     /*font-size: 0.87em;*/
-    font-size: 0.93em;
+    font-size: 0.78em;
 }
 .jm-2-thisweek-global-banner .jmr-line-1{
     letter-spacing: 0;
-    font-size: 1.3em;
-    line-height: 1;    
+    font-size: 1em;
+    line-height: 1;
+    font-weight: 500;    
+}
+.jm-2-thisweek-global-banner .jmr-line-1 b{
+    font-weight: bold;
+    font-weight: 700;
 }
 .jm-2-thisweek-global-banner .jmr-online-store{
     display: block;
@@ -179,7 +186,7 @@ a.jm-cta-button-gb{
     line-height: 1.2;
 }
 .jm-drop-global-banner .jm-gb-info-holder div{
-    color: white;
+    color: black;
     font-weight: bold;
     font-weight: 600;
     letter-spacing: 0.09em;
@@ -194,8 +201,8 @@ a.jmr-force-cta-text{
 
 /* -------- [START] CLOCK COUNTER ---------- */
 .jm-2-week-global-splitted-banner div.jmr-add-clock{
-    font-size: 1.5em;
-    line-height: 1;
+    font-size: 1.7em;
+    line-height: 0;
 }
 .jm-2-week-global-splitted-banner div.jmr-add-clock .jm_countdownContainer{
     line-height: 1;
@@ -312,8 +319,16 @@ a.jmr-force-cta-text{
 }
 .jm-2-thisweek-global-banner .jmr-right-cta{
     position: absolute;
-    /*right: 8vw;*/
-    right: 20vw;  
+    /*right: 8vw;  */
+    right: 20vw;
+}
+.jm-2-thisweek-global-banner .jmr-line-1 > span{
+    display: inline-block;
+}
+.jm-2-thisweek-global-banner .jmr-line-1 > span:nth-of-type(2){
+    border-right: solid 1px black;
+    border-left: solid 1px black;
+    padding: 0 4%;
 }
 /* -------- [END] WEEKLY BANNER ---------- */
 
@@ -413,6 +428,9 @@ a.jm-available,
 }
 /* -------- [END] CLOCK COUNTER ---------- */
 
+.jm-2-thisweek-global-banner .jmr-line-1{
+    padding: 0.5% 0;
+}
 
 }
 @media (min-width:1100px) {
@@ -499,7 +517,7 @@ a.jm-available{
     z-index: 99;
     position: relative;
     border: none;
-    border-bottom: solid 1px white;
+    border-bottom: solid 1px black;
     display: initial;
 }
 .jm-2-thisweek-global-banner .jmr-left-image img{
@@ -537,11 +555,9 @@ a.jm-available{
 }
 /* -------- [END] DROP WEEKLY BANNER ---------- */
 
-
-
 .jm-banner-2-mob a,
 p.jm-banner-2-mob{
-    color: white;
+    color: black;
 }
 .jm-banner-2-mob img{
     width: 25%;
@@ -550,6 +566,20 @@ p.jm-banner-2-mob{
 }
 .jmr-mobile-inline{
     display: inline-block;
+}
+.jmr-gb-info-exclusions{
+    position: absolute;
+    left: 8%;
+    bottom: 6%;
+    font-size: 5vw;
+}
+.jm-2-thisweek-global-banner .jm-gb-info-holder > div.jmr-right-cta{
+    text-align: center;
+    font-size: 1.23em;
+    line-height: 1.2;
+}
+.jm-2-thisweek-global-banner a.jmr-text-cta{
+    color: black !important;
 }
 
 }
@@ -563,7 +593,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // showGlobalBanner_week_2();
 
 
-if((window.location.href.indexOf("new-and-now-tops-sale") > -1) || (window.location.href.indexOf("women-boutiques-bold-and-bright") > -1) || (window.location.href.indexOf("women-boutiques-modern-utility") > -1) || (window.location.href.indexOf("women-boutiques-puff-pieces") > -1) || (window.location.href.indexOf("women-boutiques-tie-dye") > -1) || (window.location.href.indexOf("men-special-shops-utility-man") > -1) || (window.location.href.indexOf("kids-special-shops-sunshine-rainbows") > -1) || (window.location.href.indexOf("spring-trends-bold-bright") > -1) || (window.location.href.indexOf("spring-trends-fresh-florals") > -1) || (window.location.href.indexOf("spring-trends-kids-sunshine-rainbows") > -1) || (window.location.href.indexOf("spring-trends-puff-pieces") > -1) || (window.location.href.indexOf("spring-trends-tie-dye") > -1) || (window.location.href.indexOf("spring-trends-modern-utility") > -1)) {
+if((window.location.href == "https://development.c21stores.com/home") || (window.location.href == "https://staging-na01-century21.demandware.net/s/C21/home") || (window.location.href == "https://www.c21stores.com/") || (window.location.href == "https://www.c21stores.com") || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/?") > -1)  || (window.location.href.indexOf("c21stores.com/home") > -1) || (window.location.href.indexOf("/C21/home") > -1) || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/#") > -1) || (window.location.href.indexOf("https://www.c21stores.com/?") > -1) || (window.location.href.indexOf("https://www.c21stores.com#") > -1) || (window.location.href.indexOf("new-and-now-tops-sale") > -1) || (window.location.href.indexOf("women-boutiques-bold-and-bright") > -1) || (window.location.href.indexOf("women-boutiques-modern-utility") > -1) || (window.location.href.indexOf("women-boutiques-puff-pieces") > -1) || (window.location.href.indexOf("women-boutiques-tie-dye") > -1) || (window.location.href.indexOf("men-special-shops-utility-man") > -1) || (window.location.href.indexOf("kids-special-shops-sunshine-rainbows") > -1) || (window.location.href.indexOf("spring-trends-bold-bright") > -1) || (window.location.href.indexOf("spring-trends-fresh-florals") > -1) || (window.location.href.indexOf("spring-trends-kids-sunshine-rainbows") > -1) || (window.location.href.indexOf("spring-trends-puff-pieces") > -1) || (window.location.href.indexOf("spring-trends-tie-dye") > -1) || (window.location.href.indexOf("spring-trends-modern-utility") > -1)) {
     //global_rotating_message_mobile_default();
     //global_rotating_message();
     // showGlobalBanner();    
@@ -616,13 +646,13 @@ function showGlobalBanner_week(){
 }
 
 function showGlobalBanner_week_2(){
-    $('.header-banner .content').prepend(
+   $('.header-banner .content').prepend(
         '<div>'+
             '<div class="jm-2-thisweek-global-banner jm-gb-wrapper jm-2-thisweek-global-banner">'+
             '<section class="jm-gb-rotating-wraper slideDown">'+
             '<div class="jm-global-splitted-banner jm-2-week-global-splitted-banner">'+
                '<div>'+
-                    '<a class="jm-clickable-image jm-cta-hover" aria-hidden="true" role="none" tabindex="-1" href="/categories/new-and-now-tops-sale?imc=gb_all&imccat=w11-20-c_new-and-now-tops-sale"></a>'+
+                    '<a class="jm-clickable-image jm-cta-hover" aria-hidden="true" role="none" tabindex="-1" href="/categories/women-boutiques-new-arrivals?imc=gb_all&imccat=w11-20-c_women-boutiques-new-arrivals"></a>'+
                     '<div class="jm-gb-info-holder"'+
                         '<div>'+
                             // '<div class="jmr-left-image">'+
@@ -631,17 +661,25 @@ function showGlobalBanner_week_2(){
                             '<div class="jmr-center-info" id="jm-bg-weekly-header">'+                                
                                 // 'SEMI-ANNUAL CLEARANCE EVENT <span class="jmr-desktop-inline">|</span> <strong class="jmr-break-on-mobile">TAKE AN EXTRA 40% OFF</strong>'+
                                 // 'TODAY ONLY <strong class="jmr-desktop-inline">|</strong> <strong class="jmr-break-on-mobile">BUY ONE, GET ONE 50% OFF<sup><a href="#" id="ju_gb_denim_event">*</a></sup></strong> <strong class="jmr-desktop-inline">|</strong> SELECT DENIM STYLES'+
-                                '<span class="jmr-online-store">2-DAY FLASH SALE!</span>'+
+                                // '<span class="jmr-online-store">ENDS SUNDAY!</span>'+
                                     // '<span class="jmr-gb-info-exclusions"><span></span></span>'+
                                 '<span>'+
-                                '<span class="jmr-line-1">1750+ TOPS ALL $9.99<sup><a id="jm-gb-discount-a-4" href="#">*</a></sup></span>'+
-                                // '<span class="jmr-online-store">USE CODE EXTRA30</span>'+
-                                    // '<span class="jmr-gb-info-exclusions"><span><a id="jm-gb-discount-a-2" href="#">INFO/EXCLUSIONS</a></span></span>'+
-                                    '<div class="jmr-add-clock"></div>'+
+
+                                '<span class="jmr-line-1 jmr-desktop">'+
+                                    ' <span><b>SAVE $60</b><br/>SPEND $250</span>'+
+                                    ' <span><b>SAVE $40</b><br/>SPEND $210</span>'+
+                                    ' <span><b>SAVE $20</b><br/>SPEND $120</span>'+
+                                    '<sup><a id="jm-gb-discount-a-1" href="#">*</a></sup>'+
                                 '</span>'+
+
+                                '<span class="jmr-line-1 jmr-mobile"><span id="jmr_rotating_output"><b>SAVE $60</b> WHEN YOU SPEND $250</span><sup><a id="jm-gb-discount-a-1" href="#">*</a></sup></span>'+
+                                '<span class="jmr-online-store">USE CODE SAVEMORE<a id="jm-gb-discount-a-2" href="#">INFO/EXCLUSIONS</a></span>'+
+                                '<div class="jmr-add-clock"></div>'+
+                                // '<span class="jmr-gb-info-exclusions"><span></span></span>'+                            
+                                '</span>'+  
                             '</div>'+
                             '<div class="jmr-right-cta">'+
-                                '<a href="/categories/new-and-now-tops-sale?imc=gb_all&imccat=w11-20-c_new-and-now-tops-sale" class="jmr-force-cta-text jmr-text-cta-light jmr-text-cta" id="jm-bg-weekly-cta" aria-labelledby="jm-bg-weekly-cta jm-bg-weekly-header">SHOP NOW</a>'+
+                                '<a href="/categories/women-boutiques-new-arrivals?imc=gb_all&imccat=w11-20-c_women-boutiques-new-arrivals" class="jmr-force-cta-text jmr-text-cta-dark jmr-text-cta" id="jm-bg-weekly-cta" aria-labelledby="jm-bg-weekly-cta jm-bg-weekly-header">SHOP NOW</a>'+
                             '</div>'+
                         '</div>'+
                     '</div>'+
@@ -651,6 +689,16 @@ function showGlobalBanner_week_2(){
             '</div>'+
         '</div>'
     );
+
+
+    var rotatingMessages = ['<b>SAVE $40</b> WHEN YOU SPEND $210', '<b>SAVE $20</b> WHEN YOU SPEND $120', '<b>SAVE $60</b> WHEN YOU SPEND $250'];
+    // $(document).ready(function () {
+    setInterval(function(){ 
+            var msg = rotatingMessages.shift();
+            rotatingMessages.push(msg);
+            $("span#jmr_rotating_output").html(msg);
+    }, 3000);        
+    // });
 }
 
 
@@ -886,7 +934,7 @@ $('.jm-2-thisweek-global-banner .jm-gb-info-holder .jmr-add-clock').prepend(
   var dd = new Date();
   console.log("Today's date and time is : ");
   console.log(dd);
-  var targetDate = "Abr 17 2020";
+  var targetDate = "Abr 20 2020";
   var hh = dd.getHours();
   var utchh = dd.getUTCHours();
   //console.log(utchh);
@@ -912,7 +960,7 @@ function countdown() {
   let now = new Date();
   // let evenDate = new Date(2019, 7, 5);
   // let evenDate = new Date("2020,04,15");
-  let evenDate = new Date("2020/04/17"); // TEST
+  let evenDate = new Date("2020/04/20"); // TEST
   // let evenDate = new Date("2020-04-09T04:00:00Z"); // TEST
   //let evenDate = new Date("2019-07-10T04:00:00Z"); // UTC time
   // console.log(evenDate);

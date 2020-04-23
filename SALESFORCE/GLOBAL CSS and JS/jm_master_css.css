@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 4.10.20 */
+/* Global CSS - JuanMa - 4.20.20 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -375,7 +375,7 @@ header ~ .container .jmr-all-cb a.jm-cta-light:not(.btn-primary):not(.btn-outlin
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;   
+    text-align: center;
 }
 .jmr-all-wrapper article > div{
     width: 100%;    
@@ -442,6 +442,9 @@ a.jmr-cta-text{
     border-bottom: solid 1px;
     position: relative;
     z-index: 2;
+}
+.jmr-ctas a:first-of-type{
+    margin-left: 0 !important;
 }
 /*.jmr-ctas a:first-of-type{
     margin-left: 0%;
@@ -554,6 +557,43 @@ header ~ div.container a.jmr-cta-button-soliddark-red:focus{
     color:#E51E25 !important;
     border-color: #E51E25 !important;
 }
+.jmr-cta-button-solidlight-blue,
+header ~ div.container span.jmr-cta-button-solidlight-blue,
+header ~ div.container a.jmr-cta-button-solidlight-blue,
+a.jmr-cta-button-solidlight-blue{
+    background: #ffffff;
+    color:#2f4399 !important;
+    border-color: #ffffff !important;
+}
+.jmr-cta-button-solidlight-blue:hover,
+.jmr-cta-button-solidlight-blue:focus,
+header ~ div.container span.jmr-cta-button-solidlight-blue:hover,
+header ~ div.container a.jmr-cta-button-solidlight-blue:hover,
+header ~ div.container span.jmr-cta-button-solidlight-blue:focus,
+header ~ div.container a.jmr-cta-button-solidlight-blue:focus{
+    background: #2f4399;
+    color:#ffffff !important;
+    border-color: #ffffff !important;
+}
+.jmr-cta-button-soliddark-blue,
+header ~ div.container span.jmr-cta-button-soliddark-blue,
+header ~ div.container a.jmr-cta-button-soliddark-blue,
+a.jmr-cta-button-soliddark-red{
+    background: #E51E25;
+    color:#ffffff !important;
+    border-color: #E51E25 !important;
+}
+.jmr-cta-button-soliddark-blue:hover,
+.jmr-cta-button-soliddark-blue:focus,
+header ~ div.container span.jmr-cta-button-soliddark-blue:hover,
+header ~ div.container a.jmr-cta-button-soliddark-blue:hover,
+header ~ div.container span.jmr-cta-button-soliddark-blue:focus,
+header ~ div.container a.jmr-cta-button-soliddark-blue:focus{
+    background: #ffffff;
+    color:#E51E25 !important;
+    border-color: #E51E25 !important;
+}
+
 strong.jmr-break-on-mobile{
     font-weight: bold;
     font-weight: 700;
@@ -945,7 +985,7 @@ a.jmr-text-cta-blue:hover{
     font-size: 0.86vw;
 }
 .jmr-three-column-2 article{
-    font-size: 1.14vw;
+    font-size: 1.09vw;
 }
 .jmr-three-column figcaption{
     font-size: 1vw;

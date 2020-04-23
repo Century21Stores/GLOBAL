@@ -1,4 +1,4 @@
-// Global JS - JuanMa - GWP added - 3.19.20
+// Global JS - JuanMa - GWP added - 4.17.20
 
 // (none)              /search?prefn1=brand&searchType=designers&prefv1=Adesso
 // (space)             %20
@@ -170,13 +170,13 @@ function jm_carousel_modification(){
 }
 
 function jm_Global_Alert_ad(){  
-  if ((window.location.href.indexOf("/checkout") != -1) || (window.location.href.indexOf("/long-form-statement.html") != -1)) {
+  if ((window.location.href == "https://development.c21stores.com/home") || (window.location.href == "https://staging-na01-century21.demandware.net/s/C21/home") || (window.location.href == "https://www.c21stores.com/") || (window.location.href == "https://www.c21stores.com") || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/?") > -1)  || (window.location.href.indexOf("c21stores.com/home") > -1) || (window.location.href.indexOf("/C21/home") > -1) || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/#") > -1) || (window.location.href.indexOf("https://www.c21stores.com/?") > -1) || (window.location.href.indexOf("https://www.c21stores.com#") > -1) || (window.location.href.indexOf("/checkout") != -1) || (window.location.href.indexOf("/covid-19-response") != -1)) {
     console.log('DO NOT alert global banner');
   
   }else{
     console.log('show alert global banner');
     $('header').prepend(
-      '<p class="jmr-alert-gb" role="alert"><a target="_blank" href="/long-form-statement.html?imc=gb_alert&imccat=w07-20-a_long-form-statement"><span>We’re committed to the health and safety of our customers, employees and communities. <span class="jmr-break-on-mobile"><span role="button" class="jmr-text-cta">Read about</span> our response to COVID-19.</span></span></a></p>'
+      '<p class="jmr-alert-gb" role="alert"><a target="_blank" href="/covid-19-response.html?imc=gb_alert&imccat=w12-20-a_covid-19-response"><span>Together We Can Help | Read our response to COVID-19 and help us support NYC Health + Hospitals. <span class="jmr-break-on-mobile"><span role="button" class="jmr-text-cta">Learn More</span></span></span></a></p>'
     )
   };
 }
