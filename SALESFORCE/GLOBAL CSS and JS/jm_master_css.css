@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 4.20.20 */
+/* Global CSS - JuanMa - 5.15.20 */
 
 
 /* -------- [START] Only Production ---------- */
@@ -578,10 +578,10 @@ header ~ div.container a.jmr-cta-button-solidlight-blue:focus{
 .jmr-cta-button-soliddark-blue,
 header ~ div.container span.jmr-cta-button-soliddark-blue,
 header ~ div.container a.jmr-cta-button-soliddark-blue,
-a.jmr-cta-button-soliddark-red{
-    background: #E51E25;
+a.jmr-cta-button-soliddark-blue{
+    background: #2f4399;
     color:#ffffff !important;
-    border-color: #E51E25 !important;
+    border-color: #2f4399 !important;
 }
 .jmr-cta-button-soliddark-blue:hover,
 .jmr-cta-button-soliddark-blue:focus,
@@ -590,8 +590,26 @@ header ~ div.container a.jmr-cta-button-soliddark-blue:hover,
 header ~ div.container span.jmr-cta-button-soliddark-blue:focus,
 header ~ div.container a.jmr-cta-button-soliddark-blue:focus{
     background: #ffffff;
-    color:#E51E25 !important;
-    border-color: #E51E25 !important;
+    color:#2f4399 !important;
+    border-color: #2f4399 !important;
+}
+.jmr-cta-button-soliddark-purple,
+header ~ div.container span.jmr-cta-button-soliddark-purple,
+header ~ div.container a.jmr-cta-button-soliddark-purple,
+a.jmr-cta-button-soliddark-purple{
+    background: #c51d84;
+    color:#ffffff !important;
+    border-color: #c51d84 !important;
+}
+.jmr-cta-button-soliddark-purple:hover,
+.jmr-cta-button-soliddark-purple:focus,
+header ~ div.container span.jmr-cta-button-soliddark-purple:hover,
+header ~ div.container a.jmr-cta-button-soliddark-purple:hover,
+header ~ div.container span.jmr-cta-button-soliddark-purple:focus,
+header ~ div.container a.jmr-cta-button-soliddark-purple:focus{
+    background: #ffffff;
+    color:#c51d84 !important;
+    border-color: #c51d84 !important;
 }
 
 strong.jmr-break-on-mobile{
@@ -912,7 +930,9 @@ div.jmr-large-carousel{
     display: block;   
 }
 a.jmr-text-cta-light,
-a.jmr-text-cta-light:hover{
+span.jmr-text-cta-light,
+a.jmr-text-cta-light:hover,
+span.jmr-text-cta-light:hover{
     color: white;
     border-color: white;
 }
@@ -920,6 +940,11 @@ a.jmr-text-cta-blue,
 a.jmr-text-cta-blue:hover{
     color: #2f4399;
     border-color: #2f4399;
+}
+a.jmr-text-cta-purple,
+a.jmr-text-cta-purple:hover{
+    color: #c51d84;
+    border-color: #c51d84;
 }
 
 /*  BRAND TAGGING */

@@ -1,4 +1,4 @@
-// Global JS - JuanMa - GWP added - 4.17.20
+// Global JS - JuanMa - GWP added - 5.18.20
 
 // (none)              /search?prefn1=brand&searchType=designers&prefv1=Adesso
 // (space)             %20
@@ -72,7 +72,11 @@ jm_Global_Alert_ad();
     console.log("My Account");
     // jm_loading_messages_from_cart();
   }
-
+  
+  else if(window.location.href.indexOf("/stores") > -1){
+    console.log("Store Locator");
+    jmr_store_locator_covid();
+  }
   //OTHER PAGES
   else{
     jm_carousel_modification();
@@ -176,7 +180,7 @@ function jm_Global_Alert_ad(){
   }else{
     console.log('show alert global banner');
     $('header').prepend(
-      '<p class="jmr-alert-gb" role="alert"><a target="_blank" href="/covid-19-response.html?imc=gb_alert&imccat=w12-20-a_covid-19-response"><span>Together We Can Help | Read our response to COVID-19 and help us support NYC Health + Hospitals. <span class="jmr-break-on-mobile"><span role="button" class="jmr-text-cta">Learn More</span></span></span></a></p>'
+      '<p class="jmr-alert-gb" role="alert"><a target="_blank" href="/covid-19-response-reopening.html?imc=gb_alert&imccat=w12-20-a_covid-19-response-reopening"><span>ROAD TO REOPENING | SEE WHAT WE’RE DOING TO HELP KEEP YOU SAFE IN STORES <span class="jmr-break-on-mobile"><span role="button" class="jmr-text-cta jmr-text-cta-light">Learn More</span></span></span></a></p>'
     )
   };
 }
@@ -269,6 +273,20 @@ function doSwap() {
   $('.footer-email-signup').before(objeto);
 }
 // [END] Swappping elements cart
+
+
+// [START] Store Locator COVID
+function jmr_store_locator_covid(){
+$(".results .store-name .col-10 strong").each(function(){
+  if($(this).text() == 'SAWGRASS MILLS'){
+  console.log($(this).text());
+  //$(this).parent().parent().parent().parent().hide();
+  $(this).parent().parent().parent().parent().prependTo('.results');
+  console.log('found!');
+  }         
+});
+}
+// [END] Store Locator COVID
 
 // https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&srule=top-sellers&prefv1=Billionaire%20Boys%20Club
 // https://staging-na01-century21.demandware.net/s/C21/search?cgid=root&prefn1=brand&prefv1=Billionaire%20Boys%20Club
