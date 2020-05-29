@@ -1,14 +1,11 @@
-/* Global CSS - JuanMa - 5.15.20 */
-
+/* Global CSS - JuanMa - 5.29.20 */
 
 /* -------- [START] Only Production ---------- */
 
 /* -------- [END] Only Production ---------- */
 
 /* -------- [START] Temporary ---------- */
-span.jmr-gb-cta a.jmr-cta-text{
-    z-index: 4;
-}
+
 /* -------- [END] Temporary ---------- */
 
 /* -------- [START] Overwrite ---------- */
@@ -20,6 +17,9 @@ span.jmr-gb-cta a.jmr-cta-text{
     font-weight: 600;
 
 }*/
+span.jmr-gb-cta a.jmr-cta-text{
+    z-index: 4;
+}
 .jm-megamenu img{
     max-width: 100%;
 }
@@ -571,7 +571,25 @@ header ~ div.container span.jmr-cta-button-solidlight-blue:hover,
 header ~ div.container a.jmr-cta-button-solidlight-blue:hover,
 header ~ div.container span.jmr-cta-button-solidlight-blue:focus,
 header ~ div.container a.jmr-cta-button-solidlight-blue:focus{
-    background: #2f4399;
+    background: #000000;
+    color:#ffffff !important;
+    border-color: #ffffff !important;
+}
+.jmr-cta-button-solidlight-green,
+header ~ div.container span.jmr-cta-button-solidlight-green,
+header ~ div.container a.jmr-cta-button-solidlight-green,
+a.jmr-cta-button-solidlight-green{
+    background: #ffffff;
+    color:#527f52 !important;
+    border-color: #ffffff !important;
+}
+.jmr-cta-button-solidlight-green:hover,
+.jmr-cta-button-solidlight-green:focus,
+header ~ div.container span.jmr-cta-button-solidlight-green:hover,
+header ~ div.container a.jmr-cta-button-solidlight-green:hover,
+header ~ div.container span.jmr-cta-button-solidlight-green:focus,
+header ~ div.container a.jmr-cta-button-solidlight-green:focus{
+    background: #000000;
     color:#ffffff !important;
     border-color: #ffffff !important;
 }
@@ -909,12 +927,39 @@ section.jmr-curalate-wrapper-2 article{
 
 @media screen and (min-width: 700px){
 
+
 /* -------- [START] Overwrite ---------- */
 div.jmr-large-carousel{
     /*max-width: 96%;*/
     padding: 0 4% 0;
 }
 /* -------- [END] Overwrite ---------- */
+
+/* -------- [START] Temporary ---------- */
+.menu-group > ul > li:nth-of-type(3) .subcat-menu{
+    border: solid 3px #e2342d;
+}
+.menu-group > ul > li:nth-of-type(3) a#sale-of-the-century{
+    width: 70%;
+    text-align: center;
+    line-height: 1;
+    white-space: normal !important;
+    margin: 0 auto;
+    background: #e2342c !important;
+}
+.menu-group > ul > li:nth-of-type(3){
+    display: inherit;
+}
+.badge-red-dot{
+    background: red;
+    color: white;
+    line-height: initial;
+    font-weight: 600;
+}
+/* -------- [END] Temporary ---------- */
+
+
+
 
 /* -------- [START] General ---------- */
 .jmr-mobile{
@@ -940,6 +985,11 @@ a.jmr-text-cta-blue,
 a.jmr-text-cta-blue:hover{
     color: #2f4399;
     border-color: #2f4399;
+}
+a.jmr-text-cta-green,
+a.jmr-text-cta-green:hover{
+    color: #528052;
+    border-color: #528052;
 }
 a.jmr-text-cta-purple,
 a.jmr-text-cta-purple:hover{
@@ -1397,5 +1447,11 @@ div.jmr-bb-wrapper article{
     margin: 6% 0 7%;    
 }
 /* --------- [END] COPY BLOCKS --------- */
+
+/* -------- [START] Temporary ---------- */
+.menu-group > ul > li:nth-of-type(3) a#sale-of-the-century{
+    color: red !important;
+}
+/* -------- [END] Temporary ---------- */
 
 }
