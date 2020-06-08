@@ -17,6 +17,13 @@
     font-weight: 600;
 
 }*/
+.badge-red-dot{
+    background: red;
+    color: white;
+    line-height: initial;
+    font-weight: 600;
+}
+
 span.jmr-gb-cta a.jmr-cta-text{
     z-index: 4;
 }
@@ -925,6 +932,7 @@ section.jmr-curalate-wrapper-2 article{
 /* --------- [END] CURALATE --------- */
 
 
+
 @media screen and (min-width: 700px){
 
 
@@ -949,12 +957,6 @@ div.jmr-large-carousel{
 }
 .menu-group > ul > li:nth-of-type(3){
     display: inherit;
-}
-.badge-red-dot{
-    background: red;
-    color: white;
-    line-height: initial;
-    font-weight: 600;
 }
 /* -------- [END] Temporary ---------- */
 

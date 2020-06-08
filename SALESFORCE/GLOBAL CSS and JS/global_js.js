@@ -1,4 +1,4 @@
-// Global JS - JuanMa - GWP added - 5.18.20
+// Global JS - JuanMa - GWP added - 6.1.20
 
 // (none)              /search?prefn1=brand&searchType=designers&prefv1=Adesso
 // (space)             %20
@@ -277,11 +277,11 @@ function doSwap() {
 
 // [START] Store Locator COVID
 function jmr_store_locator_covid(){
-$(".results .store-name .col-10 strong").each(function(){
-  if($(this).text() == 'SAWGRASS MILLS'){
+$(".results .store-details .col-lg-4 .store-hours strong").each(function(){
+  if(($(this).text() == 'NOW OPEN!') || ($(this).text() == 'OPENING SOON!')){
   console.log($(this).text());
   //$(this).parent().parent().parent().parent().hide();
-  $(this).parent().parent().parent().parent().prependTo('.results');
+  $(this).parent().parent().parent().parent().parent().prependTo('.results');
   console.log('found!');
   }         
 });
