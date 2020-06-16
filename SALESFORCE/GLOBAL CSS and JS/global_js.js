@@ -1,4 +1,4 @@
-// Global JS - JuanMa - GWP added - 6.1.20
+// Global JS - JuanMa - GWP added - 6.11.20
 
 // (none)              /search?prefn1=brand&searchType=designers&prefv1=Adesso
 // (space)             %20
@@ -274,11 +274,11 @@ function doSwap() {
 }
 // [END] Swappping elements cart
 
-
 // [START] Store Locator COVID
 function jmr_store_locator_covid(){
 $(".results .store-details .col-lg-4 .store-hours strong").each(function(){
-  if(($(this).text() == 'NOW OPEN!') || ($(this).text() == 'OPENING SOON!')){
+  if(($(this).text() == 'NOW OPEN!') || ($(this).text() == 'OPENING JUNE 15')){
+  // if(($(this).text() == 'NOW OPEN!') || ($(this).has('OPENING'))){
   console.log($(this).text());
   //$(this).parent().parent().parent().parent().hide();
   $(this).parent().parent().parent().parent().parent().prependTo('.results');

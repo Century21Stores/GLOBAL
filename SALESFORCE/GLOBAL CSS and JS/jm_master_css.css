@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 5.29.20 */
+/* Global CSS - JuanMa - 6.9.20 */
 
 /* -------- [START] Only Production ---------- */
 
@@ -17,6 +17,9 @@
     font-weight: 600;
 
 }*/
+.footer-email-signup .field label span{
+    color:#4D4D4D;
+}
 .badge-red-dot{
     background: red;
     color: white;
