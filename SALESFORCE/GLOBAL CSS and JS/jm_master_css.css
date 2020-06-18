@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 6.9.20 */
+/* Global CSS - JuanMa - 6.18.20 */
 
 /* -------- [START] Only Production ---------- */
 
@@ -1144,6 +1144,9 @@ div.jmr-bb-wrapper article{
 div.menu-group ul .nav-item {
     font-size: .63em;
 }
+.storelocator-wrapper .store-locator-bottom .results-container .store-details{
+    font-size: 0.89vw;
+}
 /* -------- [END] Overwrite ---------- */
 
 }
@@ -1194,11 +1197,15 @@ div.menu-group ul .nav-item {
 
 @media screen and (min-width: 1300px){
 
+
 /* -------- [START] Overwrite ---------- */
 div.jmr-large-carousel{
     /*max-width: 75%;*/
     /*padding: 0 10.5% 2%;*/
     padding: 0 15.5% 0%;
+}
+.storelocator-wrapper .store-locator-bottom .results-container .store-details{
+    font-size: 0.73em;
 }
 /* -------- [END] Overwrite ---------- */
 
