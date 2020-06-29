@@ -1,17 +1,15 @@
-<!-- w20a-gb-all-live - LIVE SALE All GB - JuanMa - 6.17.20 -->
+<!-- w21b-gb-all-live-now - LIVE SALE All GB - JuanMa - 6.22.20 -->
 
-<style>
+    <style>
 /*.header-banner{
     display: none !important;
 }*/
 /* -------- [START] Overwrite ---------- */
 .jmr-center-info a{
-    color: #e51e25;
+    color: white;
     z-index: 99;
     position: relative;
-}
-.jmr-text-cta-red{
-    color: #e51e25 !important;
+
 }
 /*a#jm-gb-discount-a-2{
     font-size: 0.6em;
@@ -111,7 +109,7 @@ a.jm-cta-button-gb{
 
 /* -------- [START] WEEKLY BANNER ---------- */
 .jm-2-thisweek-global-banner .jm-global-splitted-banner{
-    background: #f5c1c3;
+    background: #e51e25;
     /*background: #000000;*/
 }
 .jm-2-thisweek-global-banner img{
@@ -134,7 +132,7 @@ a.jm-cta-button-gb{
     line-height: 1.2;
 }
 .jm-2-thisweek-global-banner .jm-gb-info-holder div{
-    color: #e51e25;
+    color: white;
     font-weight: bold;
     font-weight: 600;
     letter-spacing: 0.09em;
@@ -178,7 +176,7 @@ a.jm-cta-button-gb{
     line-height: 1.2;
 }
 .jm-drop-global-banner .jm-gb-info-holder div{
-    color: #e51e25;
+    color: white;
     font-weight: bold;
     font-weight: 600;
     letter-spacing: 0.09em;
@@ -202,8 +200,16 @@ a.jmr-force-cta-text{
 }
 /* -------- [END] CLOCK COUNTER ---------- */
 
-
-
+.jm-3-thisweek-global-banner .jm-global-splitted-banner{
+    background: #f5c1c3 !important;
+}
+.jm-3-thisweek-global-banner .jm-gb-info-holder div{
+    color: #e51e25;
+}
+.jm-3-thisweek-global-banner a.jmr-text-cta-red{
+    color: #e51e25 !important;
+    border-color: #e51e25 !important;
+}
 @media (min-width:700px) {
 
 /* -------- [START] General Banner ---------- */ 
@@ -506,7 +512,7 @@ a.jm-available{
 }
 .jm-2-week-global-splitted-banner .jmr-right-cta a{
     background: no-repeat;
-    /*color: white !important;*/
+    color: white !important;
     font-size: 4vw;    
 }
 /* -------- [END] WEEKLY BANNER ---------- */
@@ -540,7 +546,7 @@ a.jm-available{
 
 .jm-banner-2-mob a,
 p.jm-banner-2-mob{
-    color: #e51e25;
+    color: white;
 }
 .jm-banner-2-mob img{
     width: 25%;
@@ -550,11 +556,10 @@ p.jm-banner-2-mob{
 .jmr-mobile-inline{
     display: inline-block;
 }
-a.jmr-text-cta-red{
+.jm-3-thisweek-global-banner a.jmr-text-cta-red{
     color: #e51e25 !important;
     border-color: #e51e25 !important;
 }
-
 
 }
 </style>
@@ -569,8 +574,8 @@ document.addEventListener("DOMContentLoaded", function() {
 if((window.location.href.indexOf("sale-of-the-century") > -1) || (window.location.href == "https://development.c21stores.com/home") || (window.location.href == "https://staging-na01-century21.demandware.net/s/C21/home") || (window.location.href == "https://www.c21stores.com/") || (window.location.href == "https://www.c21stores.com") || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/?") > -1)  || (window.location.href.indexOf("c21stores.com/home") > -1) || (window.location.href.indexOf("/C21/home") > -1) || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/#") > -1) || (window.location.href.indexOf("https://www.c21stores.com/?") > -1) || (window.location.href.indexOf("https://www.c21stores.com#") > -1) || (window.location.href.indexOf("handbags-drop-gucci") > -1) || (window.location.href.indexOf("cart") > -1)){
     //global_rotating_message_mobile_default();
     //global_rotating_message();
-    // showGlobalBanner();
-    showGlobalBanner_week_2();    
+    // showGlobalBanner(); 
+    showGlobalBanner_week();   
 }else{    
     //showGlobalBanner();
     //global_rotating_message();
@@ -589,44 +594,11 @@ if((window.location.href.indexOf("sale-of-the-century") > -1) || (window.locatio
 function showGlobalBanner_week(){
     $('.header-banner .content').prepend(
         '<div>'+
-            '<div class="jm-gb-wrapper jm-thisweek-global-banner">'+
-            '<section class="jm-gb-rotating-wraper slideDown">'+
-            '<div class="jm-global-splitted-banner jm-global-splitted-banner-week">'+
-               '<div>'+
-                    '<a class="jm-clickable-image jm-cta-hover" aria-hidden="true" role="none" tabindex="-1" href="/categories/shoes-drop-christian-louboutin?imc=gb_thedrop&imccat=w30-19-d_shoes-drop-christian-louboutin"></a>'+
-                    '<div class="jm-gb-info-holder"'+
-                        '<div>'+
-                            '<div class="jmr-left-image">'+
-                                '<img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small_white-2.png?$staticlink$"/>'+
-                            '</div>'+
-                            '<div class="jmr-center-info" id="jm-bg-weekly-header">'+
-                                //'<span class="jm-message-w29-19">NOW EXTENDED!</span>'+
-                                'CHRISTIAN LOUBOUTIN | UP TO 50% OFF'+
-                                // '<span>'+
-                                //     '<div class="jmr-add-clock"></div>'+
-                                // '</span>'+
-                            '</div>'+
-                            '<div class="jmr-right-cta">'+
-                                '<a href="/categories/shoes-drop-christian-louboutin?imc=gb_thedrop&imccat=w30-19-d_shoes-drop-christian-louboutin" class="btn jm-cta-button-gb jm-cta-button jm-cta-button-light jm-cta-hover" id="jm-bg-weekly-cta" aria-labelledby="jm-bg-weekly-cta jm-bg-weekly-header">SHOP NOW</a>'+
-                            '</div>'+
-                        '</div>'+
-                    '</div>'+
-                '</div>'+
-            '</div>'+
-            '</section>'+
-            '</div>'+
-        '</div>'
-    );
-}
-
-function showGlobalBanner_week_2(){
-    $('.header-banner .content').prepend(
-        '<div>'+
-            '<div class="jm-2-thisweek-global-banner jm-gb-wrapper jm-2-thisweek-global-banner">'+
+            '<div class="jm-3-thisweek-global-banner jm-2-thisweek-global-banner jm-gb-wrapper">'+
             '<section class="jm-gb-rotating-wraper slideDown">'+
             '<div class="jm-global-splitted-banner jm-2-week-global-splitted-banner">'+
                '<div>'+
-                    '<a class="jm-clickable-image jm-cta-hover" aria-hidden="true" role="none" tabindex="-1" href="https://c21stores.commentsold.com/"></a>'+
+                    '<a target="_blank" class="jm-clickable-image jm-cta-hover" aria-hidden="true" role="none" tabindex="-1" href="https://www.facebook.com/century21stores"></a>'+
                     '<div class="jm-gb-info-holder"'+
                         '<div>'+
                             // '<div class="jmr-left-image">'+
@@ -638,15 +610,58 @@ function showGlobalBanner_week_2(){
                                 // '<span class="jmr-online-store">Ends Monday!</span>'+
                                     // '<span class="jmr-gb-info-exclusions"><span></span></span>'+
                                 '<span>'+
-                                '<span class="jmr-line-1">Shop with us Live!</span>'+
+                                '<span id="jmr_blink" class="jmr-line-1">We\’re Live!</span>'+
                                 '<span class="jmr-online-store">Join us on Facebook for in-store exclusives you won’t see online!</span>'+
-                                '<span class="jmr-online-store">June 23, 12PM EST</span>'+
+                                // '<span class="jmr-online-store">June 23, 12PM EST</span>'+
                                     // '<span class="jmr-gb-info-exclusions"><span><a id="jm-gb-discount-a-2" href="#">INFO/EXCLUSIONS</a></span></span>'+
                                     // '<div class="jmr-add-clock"></div>'+
                                 '</span>'+
                             '</div>'+
                             '<div class="jmr-right-cta">'+
-                                '<a href="https://c21stores.commentsold.com/" class="jmr-force-cta-text jmr-text-cta-red jmr-text-cta" id="jm-bg-weekly-cta" aria-labelledby="jm-bg-weekly-cta jm-bg-weekly-header">Sign Up Now</a>'+
+                                '<a target="_blank" href="https://www.facebook.com/century21stores" class="jmr-force-cta-text jmr-text-cta-red jmr-text-cta" id="jm-bg-weekly-cta" aria-labelledby="jm-bg-weekly-cta jm-bg-weekly-header">Shop Now</a>'+
+                            '</div>'+
+                        '</div>'+
+                    '</div>'+
+                '</div>'+
+            '</div>'+
+            '</section>'+
+            '</div>'+
+        '</div>'
+    );
+
+        var jmr_blink = document.getElementById('jmr_blink');
+      setInterval(function() {
+        jmr_blink.style.opacity = (jmr_blink.style.opacity == 0 ? 1 : 0);
+      }, 800);
+}
+
+function showGlobalBanner_week_2(){
+    $('.header-banner .content').prepend(
+        '<div>'+
+            '<div class="jm-2-thisweek-global-banner jm-gb-wrapper jm-2-thisweek-global-banner">'+
+            '<section class="jm-gb-rotating-wraper slideDown">'+
+            '<div class="jm-global-splitted-banner jm-2-week-global-splitted-banner">'+
+               '<div>'+
+                    '<a class="jm-clickable-image jm-cta-hover" aria-hidden="true" role="none" tabindex="-1" href="/categories/sale-of-the-century?imc=gb_all&imccat=w28-20-a_sale-of-the-century"></a>'+
+                    '<div class="jm-gb-info-holder"'+
+                        '<div>'+
+                            // '<div class="jmr-left-image">'+
+                            //     '<img alt="The Century Drop" src="/Global/global-banner/TheDrop_Logo_small_white-2.png?$staticlink$"/>'+
+                            // '</div>'+
+                            '<div class="jmr-center-info" id="jm-bg-weekly-header">'+                                
+                                // 'SEMI-ANNUAL CLEARANCE EVENT <span class="jmr-desktop-inline">|</span> <strong class="jmr-break-on-mobile">TAKE AN EXTRA 40% OFF</strong>'+
+                                // 'TODAY ONLY <strong class="jmr-desktop-inline">|</strong> <strong class="jmr-break-on-mobile">BUY ONE, GET ONE 50% OFF<sup><a href="#" id="ju_gb_denim_event">*</a></sup></strong> <strong class="jmr-desktop-inline">|</strong> SELECT DENIM STYLES'+
+                                // '<span class="jmr-online-store">Ends Monday!</span>'+
+                                    // '<span class="jmr-gb-info-exclusions"><span></span></span>'+
+                                '<span>'+
+                                '<span class="jmr-line-1">THE SALE OF THE CENTURY</span>'+
+                                '<span class="jmr-online-store">Take an extra 50% off red-dot styles<sup><a id="jm-gb-discount-a-3" href="#">*</a></sup></span>'+
+                                    // '<span class="jmr-gb-info-exclusions"><span><a id="jm-gb-discount-a-2" href="#">INFO/EXCLUSIONS</a></span></span>'+
+                                    // '<div class="jmr-add-clock"></div>'+
+                                '</span>'+
+                            '</div>'+
+                            '<div class="jmr-right-cta">'+
+                                '<a href="/categories/sale-of-the-century?imc=gb_all&imccat=w28-20-a_sale-of-the-century" class="jmr-force-cta-text jmr-text-cta-light jmr-text-cta" id="jm-bg-weekly-cta" aria-labelledby="jm-bg-weekly-cta jm-bg-weekly-header">SHOP NOW</a>'+
                             '</div>'+
                         '</div>'+
                     '</div>'+
@@ -1024,4 +1039,6 @@ function endCountDown(){
   $('.jm-text-cta-shop').fadeOut('slow');
 }
 }
+
+
 </script>

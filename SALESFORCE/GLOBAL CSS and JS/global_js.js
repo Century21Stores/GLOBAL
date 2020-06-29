@@ -1,4 +1,4 @@
-// Global JS - JuanMa - GWP added - 6.18.20
+// Global JS - JuanMa - GWP added - 6.24.20
 
 // (none)              /search?prefn1=brand&searchType=designers&prefv1=Adesso
 // (space)             %20
@@ -180,7 +180,7 @@ function jm_Global_Alert_ad(){
   }else{
     console.log('show alert global banner');
     $('header').prepend(
-      '<p class="jmr-alert-gb" role="alert"><a href="/covid-19-response-reopening.html?imc=gb_alert&imccat=w12-20-a_covid-19-response-reopening"><span>ROAD TO REOPENING | SEE WHAT WE’RE DOING TO HELP KEEP YOU SAFE IN STORES <span class="jmr-break-on-mobile"><span role="button" class="jmr-text-cta jmr-text-cta-light">Learn More</span></span></span></a></p>'
+      '<p class="jmr-alert-gb" role="alert"><a href="/stores?imc=gb_alert&imccat=w21-20-c_stores"><span>New York City Stores NOW OPEN | See our temporary hours of operation. <span class="jmr-break-on-mobile"><span role="button" class="jmr-text-cta jmr-text-cta-light">Find a Store</span></span></span></a></p>'
     )
   };
 }
@@ -277,7 +277,7 @@ function doSwap() {
 // [START] Store Locator COVID
 function jmr_store_locator_covid(){
 $(".results .store-details .col-lg-4 .store-hours strong").each(function(){
-  if(($(this).text() == 'NOW OPEN!') || ($(this).text() == 'OPENING JUNE 15')){
+  if(($(this).text() == 'NOW OPEN!') || ($(this).text() == 'OPENING JUNE 24')){
   // if(($(this).text() == 'NOW OPEN!') || ($(this).has('OPENING'))){
   console.log($(this).text());
   //$(this).parent().parent().parent().parent().hide();
