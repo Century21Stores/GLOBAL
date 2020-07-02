@@ -1,4 +1,4 @@
-<!-- w21b-gb-all-live-now - LIVE SALE All GB - JuanMa - 7.1.20 -->
+<!-- w22d-gb-all-live-clock - LIVE SALE CLOCK All GB - JuanMa - 7.1.20 -->
 
     <style>
 /*.header-banner{
@@ -598,7 +598,7 @@ function showGlobalBanner_week(){
             '<section class="jm-gb-rotating-wraper slideDown">'+
             '<div class="jm-global-splitted-banner jm-2-week-global-splitted-banner">'+
                '<div>'+
-                    '<a target="_blank" class="jm-clickable-image jm-cta-hover" aria-hidden="true" role="none" tabindex="-1" href="https://www.facebook.com/century21stores"></a>'+
+                    '<a target="_blank" class="jm-clickable-image jm-cta-hover" aria-hidden="true" role="none" tabindex="-1" href="https://c21stores.commentsold.com/"></a>'+
                     '<div class="jm-gb-info-holder"'+
                         '<div>'+
                             // '<div class="jmr-left-image">'+
@@ -610,15 +610,15 @@ function showGlobalBanner_week(){
                                 // '<span class="jmr-online-store">Ends Monday!</span>'+
                                     // '<span class="jmr-gb-info-exclusions"><span></span></span>'+
                                 '<span>'+
-                                '<span id="jmr_blink" class="jmr-line-1">We\’re Live!</span>'+
+                                '<span class="jmr-line-1">Shop with us Live!</span>'+
                                 '<span class="jmr-online-store">Join us on Facebook for in-store exclusives you won’t see online!</span>'+
                                 // '<span class="jmr-online-store">June 23, 12PM EST</span>'+
                                     // '<span class="jmr-gb-info-exclusions"><span><a id="jm-gb-discount-a-2" href="#">INFO/EXCLUSIONS</a></span></span>'+
-                                    // '<div class="jmr-add-clock"></div>'+
+                                    '<div class="jmr-add-clock"></div>'+
                                 '</span>'+
                             '</div>'+
                             '<div class="jmr-right-cta">'+
-                                '<a target="_blank" href="https://www.facebook.com/century21stores" class="jmr-force-cta-text jmr-text-cta-red jmr-text-cta" id="jm-bg-weekly-cta" aria-labelledby="jm-bg-weekly-cta jm-bg-weekly-header">Shop Now</a>'+
+                                '<a target="_blank" href="https://c21stores.commentsold.com/" class="jmr-force-cta-text jmr-text-cta-red jmr-text-cta" id="jm-bg-weekly-cta" aria-labelledby="jm-bg-weekly-cta jm-bg-weekly-header">Sign Up Now</a>'+
                             '</div>'+
                         '</div>'+
                     '</div>'+
@@ -628,11 +628,6 @@ function showGlobalBanner_week(){
             '</div>'+
         '</div>'
     );
-
-        var jmr_blink = document.getElementById('jmr_blink');
-      setInterval(function() {
-        jmr_blink.style.opacity = (jmr_blink.style.opacity == 0 ? 1 : 0);
-      }, 800);
 }
 
 function showGlobalBanner_week_2(){
@@ -887,7 +882,7 @@ function global_rotating_message_mobile_default(){
 </script>
 
 <script>
-// count_down_drop();
+count_down_drop();
 function count_down_drop(){
 // END CLOCK
 window.addEventListener("DOMContentLoaded", function(){
@@ -895,7 +890,7 @@ window.addEventListener("DOMContentLoaded", function(){
 $('.jm-2-thisweek-global-banner .jm-gb-info-holder .jmr-add-clock').prepend(
 '<div class="jm_countdownContainer">'+
       '<div id="dialogheader" class="jm_counter">'+
-        '<span class="jm-ends-in">ENDS IN: </span>'+
+        '<span class="jm-ends-in">STARTS IN: </span>'+
         '<span id="jm_whole_clock" role="timer">00:00:00</span>'+
         '<div id="jm_announce" aria-live="assertive"></div>'+
       //'<span class="jm-dots">:</span>'+
@@ -906,7 +901,7 @@ $('.jm-2-thisweek-global-banner .jm-gb-info-holder .jmr-add-clock').prepend(
   var dd = new Date();
   console.log("Today's date and time is : ");
   console.log(dd);
-  var targetDate = "May 4 2020";
+  var targetDate = "Jul 2 2020";
   var hh = dd.getHours();
   var utchh = dd.getUTCHours();
   //console.log(utchh);
@@ -932,9 +927,9 @@ function countdown() {
   let now = new Date();
   // let evenDate = new Date(2019, 7, 5);
   // let evenDate = new Date("2020,04,15");
-  let evenDate = new Date("2020/05/04"); // TEST
+  // let evenDate = new Date("2020/06/23"); // TEST
   // let evenDate = new Date("2020-04-09T04:00:00Z"); // TEST
-  //let evenDate = new Date("2019-07-10T04:00:00Z"); // UTC time
+  let evenDate = new Date("2020-07-02T16:00:00Z"); // UTC time
   // console.log(evenDate);
   let actualTime = now.getTime();
   let eventTime = evenDate.getTime();
@@ -1039,6 +1034,4 @@ function endCountDown(){
   $('.jm-text-cta-shop').fadeOut('slow');
 }
 }
-
-
 </script>
