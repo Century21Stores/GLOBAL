@@ -77,6 +77,10 @@ jm_Global_Alert_ad();
     console.log("Store Locator");
     jmr_store_locator_covid();
   }
+  // else if(window.location.href.indexOf("-drop-") > -1){
+  //   console.log("Drop");
+  //   jmr_drop_sold_out();
+  // }
   //OTHER PAGES
   else{
     jm_carousel_modification();
