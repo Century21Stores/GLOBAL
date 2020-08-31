@@ -1,4 +1,4 @@
-<!-- w29a-gb-all-luggage-rotating-soc75-paypal - SALE OF THE CENTURY PROMO All GB  - JuanMa - 8.13.20 -->
+<!-- w30a-gb-all-luggage-handbags-paypal-rotating - SALE OF THE CENTURY PROMO All GB  - JuanMa - 8.19.20 -->
 
 <style>
 /*.header-banner{
@@ -74,6 +74,9 @@
 }
 .jm-global-background-black{
     background: #000000;
+}
+.jm-global-background-white{
+    background: #ffffff;
 }
 .jm-credit-card-img{
     width: 3.1%;
@@ -229,7 +232,10 @@ a.jmr-force-cta-text{
 .jm-3-thisweek-global-banner .jm-global-splitted-banner{
     background: #ffffff;   
 }
-
+.jm-global-splitted-banner-white p,
+.jm-global-splitted-banner-white a{
+    color: #ffffff;
+}
 
 @media (min-width:700px) {
 
@@ -258,10 +264,10 @@ a.jmr-force-cta-text{
     width: 100%;
 }*/
 .jm-gb-rotating-wraper div.jm-left{
-    border-right: solid 1px #e2e2e2;
+    /*border-right: solid 1px #e2e2e2;*/
 }
 .jm-global-splitted-banner p{
-    letter-spacing: 0.09em;
+    letter-spacing: 0.053em;
     font-size: 0.83em;
     font-weight: bold;
     font-weight: 700;
@@ -270,7 +276,7 @@ a.jmr-force-cta-text{
 }
 
 .jm-global-splitted-banner p{
-    color: #000000;    
+    color: #ffffff;    
 }
 .jm-gb-rotating-wraper div.jm-banner-2{
 /*  width: 100%;*/
@@ -603,7 +609,22 @@ p.jm-banner-3-mob{
 .jm-3-thisweek-global-banner{
     border: solid #ececec 1px;
 }
-
+.jm-global-background-white img{
+    width: 20%;
+}
+.jm-global-background-white b{
+    color: #000000;
+}
+.jm-global-background-white a.jmr-cta-text{
+    color: #000000 !important;
+    border-bottom: solid 1px black;
+}
+.jm-global-background-white{
+   padding: 5% 0;
+}
+.jm-global-background-white a.jmr-cta-text:hover{
+    color:#ffffff !important;
+}
 
 }
 </style>
@@ -615,10 +636,10 @@ document.addEventListener("DOMContentLoaded", function() {
 // showGlobalBanner_week_2();
 
 if((window.location.href.indexOf("sale-of-the-century") > -1) || (window.location.href == "https://development.c21stores.com/home") || (window.location.href == "https://staging-na01-century21.demandware.net/s/C21/home") || (window.location.href == "https://www.c21stores.com/") || (window.location.href == "https://www.c21stores.com") || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/?") > -1)  || (window.location.href.indexOf("c21stores.com/home") > -1) || (window.location.href.indexOf("/C21/home") > -1) || (window.location.href.indexOf("https://staging-na01-century21.demandware.net/s/C21/home/#") > -1) || (window.location.href.indexOf("https://www.c21stores.com/?") > -1) || (window.location.href.indexOf("https://www.c21stores.com#") > -1) || (window.location.href.indexOf("handbags-drop-gucci") > -1) || (window.location.href.indexOf("cart") > -1)){
-    // global_rotating_message_mobile_default();
-    // global_rotating_message();
-    // showGlobalBanner();
-    showGlobalBanner_week_3();
+    showGlobalBanner();
+    global_rotating_message();
+    global_rotating_message_mobile_default();
+    // showGlobalBanner_week_3();
 }else{    
     showGlobalBanner();
     global_rotating_message();
@@ -726,25 +747,29 @@ function showGlobalBanner(){
         '</div>'+
         '<div class="jmr-desktop">'+
             '<div class="jm-gb-wrapper">'+
-            '<section class="jm-gb-rotating-wraper slideDown">'+
-            '<div class="jm-global-splitted-banner jm-2-week-global-splitted-banner">'+
-               '<div>'+
-                    '<a class="jm-clickable-image jm-cta-hover" aria-hidden="true" role="none" tabindex="-1" href="/categories/handbags-special-promo?imc=gb_all&imccat=w27-20-b_handbags-special-promo"></a>'+
-                    '<div class="jm-gb-info-holder"'+
-                        '<div>'+                            
-                            '<div class="jmr-center-info" id="jm-bg-weekly-header">'+
-                                '<span>'+
-                                '<span class="jmr-line-1">TAKE AN EXTRA 30% OFF SELECT HANDBAGS*</span>'+
-                                // '<span class="jmr-online-store">Take an extra 75% off red-dot styles<sup><a id="jm-gb-discount-a-3" href="#">*</a></sup></span>'+
-                                // '</span>'+
-                            '</div>'+
-                            '<div class="jmr-right-cta jmr-right-cta-long">'+
-                                '<a href="/categories/handbags-special-promo?imc=gb_all&imccat=w27-20-b_handbags-special-promo" class="jmr-force-cta-text jmr-text-cta-light jmr-text-cta" id="jm-bg-weekly-cta" aria-labelledby="jm-bg-weekly-cta jm-bg-weekly-header">SHOP NOW</a>'+
-                            '</div>'+
+            '<section class="jm-gb-rotating-wraper slideDown jm-banner-2">'+
+                '<div class="jm-global-splitted-banner-white jm-global-splitted-banner">'+            
+                   '<div class="jm-global-background-black jm-left">'+
+                        '<a class="jmr-clickable-image jm-cta-hover" href="/categories/home-luggage-promo?imc=gb_all&imccat=w30-20-a_home-luggage-promo" aria-hidden="true" role="none" tabindex="-1"></a>'+
+                        '<div>'+
+                            '<p>'+
+                                'TAKE AN EXTRA 30% OFF SELECT LUGGAGE*'+
+                                '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/home-luggage-promo?imc=gb_all&imccat=w30-20-a_home-luggage-promo" class="btn jmr-cta-text jm-cta-hover">SHOP NOW</a></span>'+
+                            '</p>'+
                         '</div>'+
                     '</div>'+
+                    '<div class="jm-right">'+
+                        '<a class="jmr-clickable-image jm-cta-hover" href="/categories/handbags-special-promo?imc=gb_all&imccat=w30-20-a_handbags-special-promo" aria-hidden="true" role="none" tabindex="-1"></a>'+
+                        '<div>'+
+                            '<p>'+
+                                // '<img class="jm-credit-card-img" alt="C21STATUS credit card" src="Global/global-banner/c21status-credit-card.png?$staticlink$"/>'+
+                                '<span id="jm-bg-nr-b-header">TAKE AN EXTRA 30% OFF SELECT HANDBAGS**</span>'+
+                                '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/handbags-special-promo?imc=gb_all&imccat=w30-20-a_handbags-special-promo" id="jm-bg-r2-b-cta" class="btn jmr-cta-text jm-cta-hover" aria-labelledby="jm-bg-r2-b-cta jm-bg-r2-b-header">SHOP NOW</a></span>'+
+                            '</p>'+
+                        '</div>'+
+                        // '</a>'+
+                    '</div>'+
                 '</div>'+
-            '</div>'+
             '</section>'+
             '</div>'+
         '</div>'
@@ -775,47 +800,53 @@ function global_rotating_message(){
         //             '</div>'+
         //         '</div>'+
         //     '</div>'+
-        // '</section>',
+        // '</section>',        
+        '<section class="jm-3-thisweek-global-banner jm-gb-rotating-wraper slideDown jm-banner-2">'+
+            '<div class="jm-global-splitted-banner">'+
+               '<div>'+
+                    '<a class="jm-clickable-image jm-cta-hover" aria-hidden="true" role="none" tabindex="-1" href="/categories/new-arrivals?imc=gb_all&imccat=w29-20-a_new-arrivals"></a>'+
+                    '<div class="jm-gb-info-holder"'+
+                        '<div>'+                            
+                            '<div class="jmr-center-info" id="jm-bg-weekly-header">'+
+                                '<span>'+
+                                '<span class="jmr-line-1 tiempos-headline-medium">Now Accepting</span>'+
+                                '<span>'+
+                                    '<img alt="Paypal" src="refresh/refresh-2020/w2920/GB/paypal-seeklogo.com2.png?$staticlink$"/>'+
+                                '</span>'+
+                                '</span>'+
+                            '</div>'+
+                            '<div class="jmr-right-cta jmr-right-cta-long">'+
+                                '<a href="/categories/new-arrivals?imc=gb_all&imccat=w29-20-a_new-arrivals" class="jmr-force-cta-text jmr-text-cta jmr-text-cta" id="jm-bg-weekly-cta" aria-labelledby="jm-bg-weekly-cta jm-bg-weekly-header">Shop New Arrivals</a>'+
+                            '</div>'+
+                        '</div>'+
+                    '</div>'+
+                '</div>'+
+            '</div>'+
+        '</section>',
         '<section class="jm-gb-rotating-wraper slideDown jm-banner-2">'+
-            '<div class="jm-global-background-black jm-global-splitted-banner jm-2-week-global-splitted-banner">'+
-               '<div>'+
-                    '<a class="jm-clickable-image jm-cta-hover" aria-hidden="true" role="none" tabindex="-1" href="/categories/home-luggage-promo?imc=gb_all&imccat=w23-20-e_home-luggage-promo"></a>'+
-                    '<div class="jm-gb-info-holder"'+
-                        '<div>'+                            
-                            '<div class="jmr-center-info" id="jm-bg-weekly-header">'+
-                                '<span>'+
-                                '<span class="jmr-line-1">TAKE AN EXTRA 30% OFF SELECT LUGGAGE*</span>'+
-                                // '<span class="jmr-online-store">Take an extra 75% off red-dot styles<sup><a id="jm-gb-discount-a-3" href="#">*</a></sup></span>'+
-                                // '</span>'+
-                            '</div>'+
-                            '<div class="jmr-right-cta jmr-right-cta-long">'+
-                                '<a href="/categories/home-luggage-promo?imc=gb_all&imccat=w23-20-e_home-luggage-promo" class="jmr-force-cta-text jmr-text-cta-light jmr-text-cta" id="jm-bg-weekly-cta" aria-labelledby="jm-bg-weekly-cta jm-bg-weekly-header">SHOP NOW</a>'+
-                            '</div>'+
+                '<div class="jm-global-splitted-banner-white jm-global-splitted-banner">'+            
+                   '<div class="jm-global-background-black jm-left">'+
+                        '<a class="jmr-clickable-image jm-cta-hover" href="/categories/home-luggage-promo?imc=gb_all&imccat=w30-20-a_home-luggage-promo" aria-hidden="true" role="none" tabindex="-1"></a>'+
+                        '<div>'+
+                            '<p>'+
+                                'TAKE AN EXTRA 30% OFF SELECT LUGGAGE*'+
+                                '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/home-luggage-promo?imc=gb_all&imccat=w30-20-a_home-luggage-promo" class="btn jmr-cta-text jm-cta-hover">SHOP NOW</a></span>'+
+                            '</p>'+
                         '</div>'+
                     '</div>'+
-                '</div>'+
-            '</div>'+
-        '</section>',
-        '<section class="jm-gb-rotating-wraper slideDown jm-banner-3">'+
-            '<div class="jm-global-background-black jm-global-splitted-banner jm-2-week-global-splitted-banner">'+
-               '<div>'+
-                    '<a class="jm-clickable-image jm-cta-hover" aria-hidden="true" role="none" tabindex="-1" href="/categories/handbags-special-promo?imc=gb_all&imccat=w27-20-b_handbags-special-promo"></a>'+
-                    '<div class="jm-gb-info-holder"'+
-                        '<div>'+                            
-                            '<div class="jmr-center-info" id="jm-bg-weekly-header">'+
-                                '<span>'+
-                                '<span class="jmr-line-1">TAKE AN EXTRA 30% OFF SELECT HANDBAGS*</span>'+
-                                // '<span class="jmr-online-store">Take an extra 75% off red-dot styles<sup><a id="jm-gb-discount-a-3" href="#">*</a></sup></span>'+
-                                // '</span>'+
-                            '</div>'+
-                            '<div class="jmr-right-cta jmr-right-cta-long">'+
-                                '<a href="/categories/handbags-special-promo?imc=gb_all&imccat=w27-20-b_handbags-special-promo" class="jmr-force-cta-text jmr-text-cta-light jmr-text-cta" id="jm-bg-weekly-cta" aria-labelledby="jm-bg-weekly-cta jm-bg-weekly-header">SHOP NOW</a>'+
-                            '</div>'+
+                    '<div class="jm-right">'+
+                        '<a class="jmr-clickable-image jm-cta-hover" href="/categories/handbags-special-promo?imc=gb_all&imccat=w30-20-a_handbags-special-promo" aria-hidden="true" role="none" tabindex="-1"></a>'+
+                        '<div>'+
+                            '<p>'+
+                                // '<img class="jm-credit-card-img" alt="C21STATUS credit card" src="Global/global-banner/c21status-credit-card.png?$staticlink$"/>'+
+                                '<span id="jm-bg-nr-b-header">TAKE AN EXTRA 30% OFF SELECT HANDBAGS**</span>'+
+                                '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/handbags-special-promo?imc=gb_all&imccat=w30-20-a_handbags-special-promo" id="jm-bg-r2-b-cta" class="btn jmr-cta-text jm-cta-hover" aria-labelledby="jm-bg-r2-b-cta jm-bg-r2-b-header">SHOP NOW</a></span>'+
+                            '</p>'+
                         '</div>'+
+                        // '</a>'+
                     '</div>'+
                 '</div>'+
-            '</div>'+
-        '</section>',
+            '</section>',
     ];
 
     function rotatingMessage(e) {
@@ -880,17 +911,17 @@ function global_rotating_message_mobile(){
 
 // GLOBAL HEADER ROTATING MESSAGE MOBILE 2
 function global_rotating_message_mobile_default(){
-    var rotatingMessages = [        
-        // '<p class="jm-global-background-red jm-mobile-gb-h3 jm-bg-nr-mob slideDownMob jm-banner-1-mob">'+
-        //     '<a class="jmr-clickable-image jm-cta-hover" href="/categories/sale-of-the-century?imc=gb_all&imccat=w23-20-e_sale-of-the-century" aria-hidden="true" role="none" tabindex="-1"></a>'+
-        //     '<b>THE SALE OF THE CENTURY<span>Take an extra 75% off red-dot styles<sup><a id="jm-gb-discount-a-4" href="#">*</a></sup></span></b>'+
-        //     '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/sale-of-the-century?imc=gb_all&imccat=w23-20-e_sale-of-the-century" class="btn jmr-cta-text jm-cta-hover">SHOP NOW</a></span>'+
-        // '</p>',
+    var rotatingMessages = [                
         '<p class="jm-global-background-black jm-mobile-gb-h3 jm-bg-nr-mob slideDownMob jm-banner-2-mob">'+
             '<a class="jmr-clickable-image jm-cta-hover" href="/categories/home-luggage-promo?imc=gb_all&imccat=w23-20-e_home-luggage-promo" aria-hidden="true" role="none" tabindex="-1"></a>'+
             '<b>TAKE AN EXTRA 30% OFF SELECT LUGGAGE*</b>'+
             '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/home-luggage-promo?imc=gb_all&imccat=w23-20-e_home-luggage-promo" class="btn jmr-cta-text jm-cta-hover">SHOP NOW</a></span>'+
             '<span>&nbsp;</span>'+
+        '</p>',
+        '<p class="jm-global-background-white jm-mobile-gb-h3 jm-bg-nr-mob slideDownMob jm-banner-1-mob">'+
+            '<a class="jmr-clickable-image jm-cta-hover" href="/categories/new-arrivals?imc=gb_all&imccat=w29-20-a_new-arrivals" aria-hidden="true" role="none" tabindex="-1"></a>'+
+            '<b>NOW ACCEPTING <img alt="Paypal" src="refresh/refresh-2020/w2920/GB/paypal-seeklogo.com2.png?$staticlink$"/></b>'+
+            '<span class="jmr-gb-cta jmr-ctas"><a href="/categories/new-arrivals?imc=gb_all&imccat=w29-20-a_new-arrivals" class="btn jmr-cta-text jm-cta-hover">SHOP NEW ARRIVALS</a></span>'+
         '</p>',
         '<p class="jm-global-background-black jm-mobile-gb-h3 jm-bg-nr-mob slideDownMob jm-banner-3-mob">'+
             '<a class="jmr-clickable-image jm-cta-hover" href="/categories/handbags-special-promo?imc=gb_all&imccat=w27-20-b_handbags-special-promo" aria-hidden="true" role="none" tabindex="-1"></a>'+

@@ -1,4 +1,4 @@
-/* Global CSS - JuanMa - 6.18.20 */
+/* Global CSS - JuanMa - 8.31.20 */
 
 /* -------- [START] Only Production ---------- */
 
@@ -947,7 +947,7 @@ div.jmr-large-carousel{
 /* -------- [END] Overwrite ---------- */
 
 /* -------- [START] Temporary ---------- */
-.menu-group > ul > li:nth-of-type(3) .subcat-menu{
+/*.menu-group > ul > li:nth-of-type(3) .subcat-menu{
     border: solid 3px #e2342d;
 }
 .menu-group > ul > li:nth-of-type(3) a#sale-of-the-century{
@@ -960,7 +960,7 @@ div.jmr-large-carousel{
 }
 .menu-group > ul > li:nth-of-type(3){
     display: inherit;
-}
+}*/
 /* -------- [END] Temporary ---------- */
 
 
@@ -1000,6 +1000,11 @@ a.jmr-text-cta-purple,
 a.jmr-text-cta-purple:hover{
     color: #c51d84;
     border-color: #c51d84;
+}
+a.jmr-text-cta-red,
+a.jmr-text-cta-red:hover{
+    color: #E51E25;
+    border-color: #E51E25;
 }
 
 /*  BRAND TAGGING */
@@ -1180,7 +1185,8 @@ div.jmr-bb-wrapper article{
 /* --------- [END] Browse Banners --------- */
 
 .jmr-all-cb article .jmr-header-4, .jmr-all-cb figcaption .jmr-header-4{
-    font-size: 0.77em;    
+    /*font-size: 0.77em;*/ 
+    font-size: 0.9em;
 }
 
 }
@@ -1397,7 +1403,7 @@ div.jmr-bb-wrapper article{
     border: solid 1px #000000 !important;
     color: #000000 !important;
     background: #ffffff !important;
-    min-width: 45%;
+    min-width: 48%;
     font-size: 3.3vw;
 }
 
