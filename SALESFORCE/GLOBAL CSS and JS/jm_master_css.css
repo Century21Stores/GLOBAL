@@ -949,16 +949,17 @@ div.jmr-large-carousel{
 /* -------- [START] Temporary ---------- */
 /*.menu-group > ul > li:nth-of-type(3) .subcat-menu{
     border: solid 3px #e2342d;
-}
-.menu-group > ul > li:nth-of-type(3) a#sale-of-the-century{
+}*/
+.menu-group > ul > li:nth-of-type(11) a#sale-of-the-century{
     width: 70%;
     text-align: center;
     line-height: 1;
     white-space: normal !important;
     margin: 0 auto;
-    background: #e2342c !important;
+    font-size: 0.9em;
+/*    background: #e2342c !important;*/
 }
-.menu-group > ul > li:nth-of-type(3){
+/*.menu-group > ul > li:nth-of-type(3){
     display: inherit;
 }*/
 /* -------- [END] Temporary ---------- */
